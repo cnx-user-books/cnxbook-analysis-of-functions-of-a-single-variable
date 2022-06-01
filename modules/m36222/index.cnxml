@@ -1,0 +1,862 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML">
+  <title>Extending the Definition of Integrability</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m36222</md:content-id>
+  <md:title>Extending the Definition of Integrability</md:title>
+  <md:abstract>We now wish to extend the definition of the integral to a wider class of functions,
+namely to some that are unbounded and Others whose domains are not closed and bounded intervals.
+This extended definition is somewhat ad hoc, and these integrals are sometimes called
+“improper integrals.”</md:abstract>
+  <md:uuid>89ef4650-78c2-484d-be18-3f724d994640</md:uuid>
+</metadata>
+
+<content>
+    <para id="id282182">We now wish to extend the definition of the integral to a wider class of functions,
+namely to some that are unbounded and Others whose domains are not closed and bounded intervals.
+This extended definition is somewhat ad hoc, and these integrals are sometimes called
+“improper integrals.”</para>
+<definition id="fs-id1164262140243"><term/><meaning id="fs-id1164261502082">
+    <para id="id282192"> Let <m:math overflow="scroll"><m:mi>f</m:mi></m:math> be a real or complex-valued function on the open interval <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo></m:mrow></m:math>
+where <m:math overflow="scroll"><m:mi>a</m:mi></m:math> is possibly <m:math overflow="scroll"><m:mrow><m:mo>-</m:mo><m:mi>∞</m:mi></m:mrow></m:math> and <m:math overflow="scroll"><m:mi>b</m:mi></m:math> is possibly <m:math overflow="scroll"><m:mrow><m:mo>+</m:mo><m:mi>∞</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+We say that <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is <emphasis effect="italics">improperly-integrable</emphasis> on <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo></m:mrow></m:math> if it is integrable on
+each closed and bounded subinterval <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>[</m:mo><m:msup><m:mi>a</m:mi><m:mo>'</m:mo></m:msup><m:mo>,</m:mo><m:msup><m:mi>b</m:mi><m:mo>'</m:mo></m:msup><m:mo>]</m:mo></m:mrow><m:mo>⊂</m:mo><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> and
+for each point <m:math overflow="scroll"><m:mrow><m:mi>c</m:mi><m:mo>∈</m:mo><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo></m:mrow></m:math> we have that
+the two limits
+<m:math overflow="scroll"><m:mrow><m:mo movablelimits="true" form="prefix">lim</m:mo><m:mrow><m:msup><m:mi>b</m:mi><m:mo>'</m:mo></m:msup><m:mo>→</m:mo><m:mi>b</m:mi><m:mo>-</m:mo><m:mn>0</m:mn></m:mrow><m:msubsup><m:mo>∫</m:mo><m:mi>c</m:mi><m:msup><m:mi>b</m:mi><m:mo>'</m:mo></m:msup></m:msubsup><m:mi>f</m:mi></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:msub><m:mo movablelimits="true" form="prefix">lim</m:mo><m:mrow><m:msup><m:mi>a</m:mi><m:mo>'</m:mo></m:msup><m:mo>→</m:mo><m:mi>a</m:mi><m:mo>+</m:mo><m:mn>0</m:mn></m:mrow></m:msub><m:msubsup><m:mo>∫</m:mo><m:mrow><m:msup><m:mi>a</m:mi><m:mo>'</m:mo></m:msup></m:mrow><m:mi>c</m:mi></m:msubsup><m:mi>f</m:mi></m:mrow></m:math> exist.</para>
+    <para id="id282802">More generally, We say that a real or complex-valued function <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>,</m:mo></m:mrow></m:math> not necessarily
+defined on all of the open interval <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math> is
+<emphasis effect="italics">improperly-integrable</emphasis> on <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo></m:mrow></m:math> if there exists a partition <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>x</m:mi><m:mi>i</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> of <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow></m:math> such that <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is defined and improperly-integrable
+on each open interval <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:msub><m:mi>x</m:mi><m:mrow><m:mi>i</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mi>i</m:mi></m:msub><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math></para>
+    <para id="id282939">We denote the set of all functions <m:math overflow="scroll"><m:mi>f</m:mi></m:math> that are improperly-integrable on
+an open interval <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo></m:mrow></m:math> by <m:math overflow="scroll"><m:mrow><m:msub><m:mi>I</m:mi><m:mi>i</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></para>
+</meaning></definition>
+    <para id="id282151">Analogous definitions are made for a function's being integrable on
+half-open intervals <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>.</m:mo></m:mrow></m:math></para>
+    <para id="id283220">Note that, in order for <m:math overflow="scroll"><m:mi>f</m:mi></m:math> to be improperly-integrable on an open interval,
+we only require <m:math overflow="scroll"><m:mi>f</m:mi></m:math> to be defined at almost all the points of the interval,
+i.e., at every point except the endpoints of some partition.</para>
+<exercise id="fs-id1164272774987"><problem id="fs-id1164267431383">
+    <list id="id283251" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid1"> Let <m:math overflow="scroll"><m:mi>f</m:mi></m:math> be defined and improperly-integrable on the open interval <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Show that
+<m:math overflow="scroll"><m:mrow><m:msub><m:mo movablelimits="true" form="prefix">lim</m:mo><m:mrow><m:msup><m:mi>a</m:mi><m:mo>'</m:mo></m:msup><m:mo>→</m:mo><m:mi>a</m:mi><m:mo>+</m:mo><m:mn>0</m:mn></m:mrow></m:msub><m:msubsup><m:mo>∫</m:mo><m:mrow><m:msup><m:mi>a</m:mi><m:mo>'</m:mo></m:msup></m:mrow><m:mi>c</m:mi></m:msubsup><m:mi>f</m:mi><m:mo>+</m:mo><m:msub><m:mo movablelimits="true" form="prefix">lim</m:mo><m:mrow><m:msup><m:mi>b</m:mi><m:mo>'</m:mo></m:msup><m:mo>→</m:mo><m:mi>b</m:mi><m:mo>-</m:mo><m:mn>0</m:mn></m:mrow></m:msub><m:msubsup><m:mo>∫</m:mo><m:mi>c</m:mi><m:msup><m:mi>b</m:mi><m:mo>'</m:mo></m:msup></m:msubsup><m:mi>f</m:mi></m:mrow></m:math>
+is the same for all <m:math overflow="scroll"><m:mrow><m:mi>c</m:mi><m:mo>∈</m:mo><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid2"> Define a function <m:math overflow="scroll"><m:mi>f</m:mi></m:math> on <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>1</m:mn><m:mo>)</m:mo></m:mrow></m:math> by
+<m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mrow><m:mo>(</m:mo><m:mn>1</m:mn><m:mo>-</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mrow><m:mo>-</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mn>2</m:mn></m:mrow></m:msup><m:mo>.</m:mo></m:mrow></m:math> Show that <m:math overflow="scroll"><m:mi>f</m:mi></m:math>
+is improperly-integrable on <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>1</m:mn><m:mo>)</m:mo></m:mrow></m:math> and that <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is <emphasis effect="bold">not</emphasis> bounded.
+(Compare this with part (1) of <link target-id="fs-id1170765950456" document="m36209"/>.)
+</item>
+      <item id="uid3"> Define a function <m:math overflow="scroll"><m:mi>g</m:mi></m:math> on <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>1</m:mn><m:mo>)</m:mo></m:mrow></m:math> by <m:math overflow="scroll"><m:mrow><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mrow><m:mo>(</m:mo><m:mn>1</m:mn><m:mo>-</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mrow><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msup><m:mo>.</m:mo></m:mrow></m:math>
+Show that <m:math overflow="scroll"><m:mi>g</m:mi></m:math> is <emphasis effect="bold">not</emphasis> improperly-integrable on <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>1</m:mn><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math>
+and, using part (b), conclude that the product of improperly-integrable functions
+on <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>1</m:mn><m:mo>)</m:mo></m:mrow></m:math> need not itself be improperly-integrable.
+(Compare this with part (3) of <link target-id="fs-id1170765950456" document="m36209"/>.)
+</item>
+      <item id="uid4"> Define <m:math overflow="scroll"><m:mi>h</m:mi></m:math> to be the function on <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mi>∞</m:mi><m:mo>)</m:mo></m:mrow></m:math> given by <m:math overflow="scroll"><m:mrow><m:mi>h</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mn>1</m:mn></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Show that <m:math overflow="scroll"><m:mi>h</m:mi></m:math> is not improperly-integrable on <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mi>∞</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+(Compare this with parts (4) and (5) of <link target-id="fs-id1170765950456" document="m36209"/>.)
+</item>
+    </list>
+</problem></exercise>
+    <para id="id283764">Part (a) of the preceding exercise is just the consistency condition
+we need in order to make a definition of the integral of an improperly-integrable function over an open interval.</para>
+<definition id="fs-id1164272639423"><term/><meaning id="fs-id1164272472100">
+    <para id="id283769">
+Let <m:math overflow="scroll"><m:mi>f</m:mi></m:math> be defined and improperly-integrable on an open interval <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+We define the <emphasis effect="italics">integral</emphasis> of <m:math overflow="scroll"><m:mi>f</m:mi></m:math> over the interval <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math>
+and denote it by <m:math overflow="scroll"><m:mrow><m:msubsup><m:mo>∫</m:mo><m:mi>a</m:mi><m:mi>b</m:mi></m:msubsup><m:mi>f</m:mi><m:mo>,</m:mo></m:mrow></m:math> by</para>
+    <equation id="id283859">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:msubsup>
+            <m:mo>∫</m:mo>
+            <m:mi>a</m:mi>
+            <m:mi>b</m:mi>
+          </m:msubsup>
+          <m:mi>f</m:mi>
+          <m:mo>=</m:mo>
+          <m:munder>
+            <m:mo movablelimits="true" form="prefix">lim</m:mo>
+            <m:mrow>
+              <m:msup>
+                <m:mi>a</m:mi>
+                <m:mo>'</m:mo>
+              </m:msup>
+              <m:mo>→</m:mo>
+              <m:mi>a</m:mi>
+              <m:mo>+</m:mo>
+              <m:mn>0</m:mn>
+            </m:mrow>
+          </m:munder>
+          <m:msubsup>
+            <m:mo>∫</m:mo>
+            <m:mrow>
+              <m:msup>
+                <m:mi>a</m:mi>
+                <m:mo>'</m:mo>
+              </m:msup>
+            </m:mrow>
+            <m:mi>c</m:mi>
+          </m:msubsup>
+          <m:mi>f</m:mi>
+          <m:mo>+</m:mo>
+          <m:munder>
+            <m:mo movablelimits="true" form="prefix">lim</m:mo>
+            <m:mrow>
+              <m:msup>
+                <m:mi>b</m:mi>
+                <m:mo>'</m:mo>
+              </m:msup>
+              <m:mo>→</m:mo>
+              <m:mi>b</m:mi>
+              <m:mo>-</m:mo>
+              <m:mn>0</m:mn>
+            </m:mrow>
+          </m:munder>
+          <m:msubsup>
+            <m:mo>∫</m:mo>
+            <m:mi>c</m:mi>
+            <m:msup>
+              <m:mi>b</m:mi>
+              <m:mo>'</m:mo>
+            </m:msup>
+          </m:msubsup>
+          <m:mi>f</m:mi>
+          <m:mo>.</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id283977">In general, if <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is improperly-integrable over an open interval, i.e., <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is defined and improperly-integrable over
+each subinterval of <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo></m:mrow></m:math> determined by a partition <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>x</m:mi><m:mi>i</m:mi></m:msub><m:mo>}</m:mo><m:mo>,</m:mo></m:mrow></m:math> then
+we define the <emphasis effect="italics">integral</emphasis> of <m:math overflow="scroll"><m:mi>f</m:mi></m:math> over the interval <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo></m:mrow></m:math> by</para>
+    <equation id="id284066">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:msubsup>
+            <m:mo>∫</m:mo>
+            <m:mi>a</m:mi>
+            <m:mi>b</m:mi>
+          </m:msubsup>
+          <m:mi>f</m:mi>
+          <m:mo>=</m:mo>
+          <m:munderover>
+            <m:mo>∑</m:mo>
+            <m:mrow>
+              <m:mi>i</m:mi>
+              <m:mo>=</m:mo>
+              <m:mn>1</m:mn>
+            </m:mrow>
+            <m:mi>n</m:mi>
+          </m:munderover>
+          <m:msubsup>
+            <m:mo>∫</m:mo>
+            <m:mrow>
+              <m:msub>
+                <m:mi>x</m:mi>
+                <m:mrow>
+                  <m:mi>i</m:mi>
+                  <m:mo>-</m:mo>
+                  <m:mn>1</m:mn>
+                </m:mrow>
+              </m:msub>
+            </m:mrow>
+            <m:msub>
+              <m:mi>x</m:mi>
+              <m:mi>i</m:mi>
+            </m:msub>
+          </m:msubsup>
+          <m:mi>f</m:mi>
+          <m:mo>.</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+</meaning></definition>
+<rule id="fs-id1164271133781" type="theorem"><statement id="fs-id1164278614782">
+    <para id="id284137"> Let <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo></m:mrow></m:math> be a fixed open interval (with <m:math overflow="scroll"><m:mi>a</m:mi></m:math> possibly
+equal to <m:math overflow="scroll"><m:mrow><m:mo>-</m:mo><m:mi>∞</m:mi></m:mrow></m:math> and <m:math overflow="scroll"><m:mi>b</m:mi></m:math>
+possibly equal to <m:math overflow="scroll"><m:mrow><m:mo>+</m:mo><m:mi>∞</m:mi><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math>
+and let <m:math overflow="scroll"><m:mrow><m:msub><m:mi>I</m:mi><m:mi>i</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> denote the set of improperly-integrable functions on <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math> Then:</para>
+    <list id="id284256" display="block" list-type="enumerated">
+      <item id="uid5"> <m:math overflow="scroll"><m:mrow><m:msub><m:mi>I</m:mi><m:mi>i</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> is a vector space of functions.
+</item>
+      <item id="uid6"> (Linearity) <m:math overflow="scroll"><m:mrow><m:msubsup><m:mo>∫</m:mo><m:mi>a</m:mi><m:mi>b</m:mi></m:msubsup><m:mrow><m:mo>(</m:mo><m:mi>α</m:mi><m:mi>f</m:mi><m:mo>+</m:mo><m:mi>β</m:mi><m:mi>g</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>α</m:mi><m:msubsup><m:mo>∫</m:mo><m:mi>a</m:mi><m:mi>b</m:mi></m:msubsup><m:mi>f</m:mi><m:mo>+</m:mo><m:mi>β</m:mi><m:msubsup><m:mo>∫</m:mo><m:mi>a</m:mi><m:mi>b</m:mi></m:msubsup><m:mi>g</m:mi></m:mrow></m:math> for all
+<m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>,</m:mo><m:mi>g</m:mi><m:mo>∈</m:mo><m:msub><m:mi>I</m:mi><m:mi>i</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math>and <m:math overflow="scroll"><m:mrow><m:mi>α</m:mi><m:mo>,</m:mo><m:mi>β</m:mi><m:mo>∈</m:mo><m:mi>C</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid7"> (Positivity) If <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>≥</m:mo><m:mn>0</m:mn></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math> then <m:math overflow="scroll"><m:mrow><m:msubsup><m:mo>∫</m:mo><m:mi>a</m:mi><m:mi>b</m:mi></m:msubsup><m:mi>f</m:mi><m:mo>≥</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid8"> (Order-preserving) If <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>,</m:mo><m:mi>g</m:mi><m:mo>∈</m:mo><m:msub><m:mi>I</m:mi><m:mi>i</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>≤</m:mo><m:mi>g</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math>
+then <m:math overflow="scroll"><m:mrow><m:msubsup><m:mo>∫</m:mo><m:mi>a</m:mi><m:mi>b</m:mi></m:msubsup><m:mi>f</m:mi><m:mo>≤</m:mo><m:msubsup><m:mo>∫</m:mo><m:mi>a</m:mi><m:mi>b</m:mi></m:msubsup><m:mi>g</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+    </list>
+</statement></rule>
+<exercise id="fs-id1164267204474"><problem id="fs-id1164277589358">
+    <list id="id284694" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid9"> Use <link target-id="fs-id1170765950456" document="m36209"/>, <link target-id="fs-id1170767945547" document="m36209"/>, <link target-id="fs-id1170766971850" document="m36209"/>, and
+properties of limits to prove the preceding theorem.
+</item>
+      <item id="uid10"> Let <m:math overflow="scroll"><m:mi>f</m:mi></m:math> be defined and improperly-integrable on <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Show that, given an <m:math overflow="scroll"><m:mrow><m:mi>ϵ</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> there exists a <m:math overflow="scroll"><m:mrow><m:mi>δ</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn></m:mrow></m:math> such that
+for any <m:math overflow="scroll"><m:mrow><m:mi>a</m:mi><m:mo>&lt;</m:mo><m:msup><m:mi>a</m:mi><m:mo>'</m:mo></m:msup><m:mo>&lt;</m:mo><m:mi>a</m:mi><m:mo>+</m:mo><m:mi>δ</m:mi></m:mrow></m:math> and any <m:math overflow="scroll"><m:mrow><m:mi>b</m:mi><m:mo>-</m:mo><m:mi>δ</m:mi><m:mo>&lt;</m:mo><m:msup><m:mi>b</m:mi><m:mo>'</m:mo></m:msup><m:mo>&lt;</m:mo><m:mi>b</m:mi></m:mrow></m:math> we have
+<m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msubsup><m:mo>∫</m:mo><m:mi>a</m:mi><m:msup><m:mi>a</m:mi><m:mo>'</m:mo></m:msup></m:msubsup><m:mrow><m:mi>f</m:mi><m:mo>|</m:mo><m:mo>+</m:mo><m:mo>|</m:mo></m:mrow><m:msubsup><m:mo>∫</m:mo><m:mrow><m:msup><m:mi>b</m:mi><m:mo>'</m:mo></m:msup></m:mrow><m:mi>b</m:mi></m:msubsup><m:mrow><m:mi>f</m:mi><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mi>ϵ</m:mi><m:mo>.</m:mo></m:mrow></m:mrow></m:math></item>
+      <item id="uid11"> Let <m:math overflow="scroll"><m:mi>f</m:mi></m:math> be improperly-integrable on an open interval <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Show that, given an <m:math overflow="scroll"><m:mrow><m:mi>ϵ</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> there exists a <m:math overflow="scroll"><m:mrow><m:mi>δ</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn></m:mrow></m:math>
+such that if <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>,</m:mo><m:mi>d</m:mi><m:mo>)</m:mo></m:mrow></m:math> is any open subinterval of <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo></m:mrow></m:math> for which <m:math overflow="scroll"><m:mrow><m:mi>d</m:mi><m:mo>-</m:mo><m:mi>c</m:mi><m:mo>&lt;</m:mo><m:mi>δ</m:mi><m:mo>,</m:mo></m:mrow></m:math> then
+<m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msubsup><m:mo>∫</m:mo><m:mi>c</m:mi><m:mi>d</m:mi></m:msubsup><m:mrow><m:mi>f</m:mi><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mi>ϵ</m:mi><m:mo>.</m:mo></m:mrow></m:mrow></m:math>
+HINT: Let <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>x</m:mi><m:mi>i</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> be a partition of <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow></m:math> such that <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is defined and improperly-integrable
+on each subinterval <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:msub><m:mi>x</m:mi><m:mrow><m:mi>i</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mi>i</m:mi></m:msub><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math> For each <m:math overflow="scroll"><m:mrow><m:mi>i</m:mi><m:mo>,</m:mo></m:mrow></m:math> choose a
+<m:math overflow="scroll"><m:msub><m:mi>δ</m:mi><m:mi>i</m:mi></m:msub></m:math> using part (b).
+Now <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is bounded by <m:math overflow="scroll"><m:mi>M</m:mi></m:math> on all the intervals <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:msub><m:mi>x</m:mi><m:mrow><m:mi>i</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>+</m:mo><m:msub><m:mi>δ</m:mi><m:mi>i</m:mi></m:msub><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mi>i</m:mi></m:msub><m:mo>-</m:mo><m:msub><m:mi>δ</m:mi><m:mi>i</m:mi></m:msub><m:mo>]</m:mo><m:mo>,</m:mo></m:mrow></m:math>
+so <m:math overflow="scroll"><m:mrow><m:mi>δ</m:mi><m:mo>=</m:mo><m:mi>ϵ</m:mi><m:mo>/</m:mo><m:mi>M</m:mi></m:mrow></m:math> should work there.
+</item>
+      <item id="uid12"> Suppose <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is a continuous function on a closed bounded interval <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow></m:math>
+and is continuously differentiable on the open interval <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Prove that <m:math overflow="scroll"><m:msup><m:mi>f</m:mi><m:mo>'</m:mo></m:msup></m:math> is improperly-integrable on <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math>
+and evaluate <m:math overflow="scroll"><m:mrow><m:msubsup><m:mo>∫</m:mo><m:mi>a</m:mi><m:mi>b</m:mi></m:msubsup><m:msup><m:mi>f</m:mi><m:mo>'</m:mo></m:msup><m:mo>.</m:mo></m:mrow></m:math>
+HINT: Fix a point <m:math overflow="scroll"><m:mrow><m:mi>c</m:mi><m:mo>∈</m:mo><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math> and use the Fundamental Theorem of Calculus
+to show that the two limits exist.
+</item>
+      <item id="uid13"> (Integration by substitution again.)
+Let <m:math overflow="scroll"><m:mrow><m:mi>g</m:mi><m:mo>:</m:mo><m:mo>[</m:mo><m:mi>c</m:mi><m:mo>,</m:mo><m:mi>d</m:mi><m:mo>]</m:mo><m:mo>→</m:mo><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow></m:math> be continuous on <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>c</m:mi><m:mo>,</m:mo><m:mi>d</m:mi><m:mo>]</m:mo></m:mrow></m:math>
+and satisfy <m:math overflow="scroll"><m:mrow><m:mi>g</m:mi><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mi>a</m:mi></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>g</m:mi><m:mo>(</m:mo><m:mi>d</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mi>b</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Suppose there exists a partition <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub><m:mo>&lt;</m:mo><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>&lt;</m:mo><m:mo>...</m:mo><m:mo>&lt;</m:mo><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> of the interval <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>c</m:mi><m:mo>,</m:mo><m:mi>d</m:mi><m:mo>]</m:mo></m:mrow></m:math>
+such that <m:math overflow="scroll"><m:mi>g</m:mi></m:math> is continuously differentiable on each subinterval <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:msub><m:mi>x</m:mi><m:mrow><m:mi>i</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mi>i</m:mi></m:msub><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Prove that <m:math overflow="scroll"><m:msup><m:mi>g</m:mi><m:mo>'</m:mo></m:msup></m:math> is improperly-integrable on the open interval <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>,</m:mo><m:mi>d</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Show also that if <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is continuous on <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>,</m:mo></m:mrow></m:math> we have that
+<equation id="id285718"><m:math overflow="scroll" mode="display"><m:mrow><m:msubsup><m:mo>∫</m:mo><m:mi>a</m:mi><m:mi>b</m:mi></m:msubsup><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mspace width="0.166667em"/><m:mi>d</m:mi><m:mi>t</m:mi><m:mo>=</m:mo><m:msubsup><m:mo>∫</m:mo><m:mi>c</m:mi><m:mi>d</m:mi></m:msubsup><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>s</m:mi><m:mo>)</m:mo></m:mrow><m:mo>)</m:mo></m:mrow><m:msup><m:mi>g</m:mi><m:mo>'</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>s</m:mi><m:mo>)</m:mo></m:mrow><m:mspace width="0.166667em"/><m:mi>d</m:mi><m:mi>s</m:mi><m:mo>.</m:mo></m:mrow></m:math></equation>
+HINT: Integrate over the subintervals <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:msub><m:mi>x</m:mi><m:mrow><m:mi>i</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mi>i</m:mi></m:msub><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math> and use part (d).
+</item>
+    </list>
+</problem></exercise>
+<rule id="fs-id1164277085760"><label/><statement id="fs-id1164281168249">
+    <para id="id285855"><emphasis effect="bold">REMARK</emphasis> Note that there are parts of <link target-id="fs-id1170765950456" document="m36209"/> and <link target-id="fs-id1170767945547" document="m36209"/>
+that are not asserted in <link target-id="fs-id1164271133781"/>.
+The point is that these other properties do not hold for
+improperly-integrable functions on open intervals.
+See the following exercise.</para>
+</statement></rule>
+<exercise id="fs-id1164270841665"><problem id="fs-id1164276875271">
+    <list id="id285875" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid14"> Define <m:math overflow="scroll"><m:mi>f</m:mi></m:math> to be the function on <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mn>1</m:mn><m:mo>,</m:mo><m:mi>∞</m:mi><m:mo>)</m:mo></m:mrow></m:math> given by
+<m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mrow><m:mo>(</m:mo><m:mo>-</m:mo><m:mn>1</m:mn><m:mo>)</m:mo></m:mrow><m:mrow><m:mi>n</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msup><m:mo>/</m:mo><m:mi>n</m:mi></m:mrow></m:math> if <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>-</m:mo><m:mn>1</m:mn><m:mo>≤</m:mo><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mi>n</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Show that <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is improperly-integrable on <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mn>1</m:mn><m:mo>,</m:mo><m:mi>∞</m:mi><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math> but that <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>f</m:mi><m:mo>|</m:mo></m:mrow></m:math> is not
+improperly-integrable on <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mn>1</m:mn><m:mo>,</m:mo><m:mi>∞</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+(Compare this with part (4) of <link target-id="fs-id1170767945547" document="m36209"/>.)
+HINT: Verify that <m:math overflow="scroll"><m:mrow><m:msubsup><m:mo>∫</m:mo><m:mn>1</m:mn><m:mi>N</m:mi></m:msubsup><m:mi>f</m:mi></m:mrow></m:math> is a partial sum of a convergent infinite series,
+and then verify that <m:math overflow="scroll"><m:mrow><m:msubsup><m:mo>∫</m:mo><m:mn>1</m:mn><m:mi>N</m:mi></m:msubsup><m:mrow><m:mo>|</m:mo><m:mi>f</m:mi><m:mo>|</m:mo></m:mrow></m:mrow></m:math> is a partial sum of a divergent infinite series.
+</item>
+      <item id="uid15"> Define the function <m:math overflow="scroll"><m:mi>f</m:mi></m:math> on <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mn>1</m:mn><m:mo>,</m:mo><m:mi>∞</m:mi><m:mo>)</m:mo></m:mrow></m:math> by <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>x</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+For each positive integer <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>,</m:mo></m:mrow></m:math> define the function <m:math overflow="scroll"><m:msub><m:mi>f</m:mi><m:mi>n</m:mi></m:msub></m:math> on <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mn>1</m:mn><m:mo>,</m:mo><m:mi>∞</m:mi><m:mo>)</m:mo></m:mrow></m:math> by
+<m:math overflow="scroll"><m:mrow><m:msub><m:mi>f</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>x</m:mi></m:mrow></m:math> if <m:math overflow="scroll"><m:mrow><m:mn>1</m:mn><m:mo>&lt;</m:mo><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mi>n</m:mi></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:msub><m:mi>f</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math> otherwise.
+Show that each <m:math overflow="scroll"><m:msub><m:mi>f</m:mi><m:mi>n</m:mi></m:msub></m:math> is improperly-integrable on <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mn>1</m:mn><m:mo>,</m:mo><m:mi>∞</m:mi><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math> that <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is the uniform limit
+of the sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>f</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo><m:mo>,</m:mo></m:mrow></m:math> but that <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is not improperly-integrable on <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mn>1</m:mn><m:mo>,</m:mo><m:mi>∞</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+(Compare this with part (5) of Theorem 5.6.)
+</item>
+      <item id="uid16"> Suppose <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is a nonnegative real-valued function on the
+half-open interval <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>∞</m:mi><m:mo>)</m:mo></m:mrow></m:math> that is integrable on every closed bounded subinterval
+<m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:msup><m:mi>b</m:mi><m:mo>'</m:mo></m:msup><m:mo>]</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+For each positive integer <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>≥</m:mo><m:mi>a</m:mi><m:mo>,</m:mo></m:mrow></m:math> define <m:math overflow="scroll"><m:mrow><m:msub><m:mi>y</m:mi><m:mi>n</m:mi></m:msub><m:mo>=</m:mo><m:msubsup><m:mo>∫</m:mo><m:mi>a</m:mi><m:mi>n</m:mi></m:msubsup><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mspace width="0.166667em"/><m:mi>d</m:mi><m:mi>x</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Prove that <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is improperly-integrable on <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>∞</m:mi><m:mo>)</m:mo></m:mrow></m:math> if and only if the sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>y</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math>
+is convergent. In that case, show that <m:math overflow="scroll"><m:mrow><m:msubsup><m:mo>∫</m:mo><m:mi>a</m:mi><m:mi>∞</m:mi></m:msubsup><m:mi>f</m:mi><m:mo>=</m:mo><m:mo movablelimits="true" form="prefix">lim</m:mo><m:msub><m:mi>y</m:mi><m:mi>n</m:mi></m:msub><m:mo>.</m:mo></m:mrow></m:math></item>
+    </list>
+</problem></exercise>
+    <para id="id286609">We are now able to prove an important result relating
+integrals over infinite intervals and convergence of infinite series.</para>
+<rule id="fs-id1164271286297" type="theorem"><statement id="fs-id1164275642965">
+    <para id="id286613">
+Let <m:math overflow="scroll"><m:mi>f</m:mi></m:math> be a positive function on <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mn>1</m:mn><m:mo>,</m:mo><m:mi>∞</m:mi><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math> assume that <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is
+integrable on every closed bounded interval <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mn>1</m:mn><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>,</m:mo></m:mrow></m:math> and suppose that
+<m:math overflow="scroll"><m:mi>f</m:mi></m:math> is nonincreasing; i.e., if <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mi>y</m:mi></m:mrow></m:math> then <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>≥</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>y</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+For each positive integer <m:math overflow="scroll"><m:mrow><m:mi>i</m:mi><m:mo>,</m:mo></m:mrow></m:math> set <m:math overflow="scroll"><m:mrow><m:msub><m:mi>a</m:mi><m:mi>i</m:mi></m:msub><m:mo>=</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>i</m:mi><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math>
+and let <m:math overflow="scroll"><m:msub><m:mi>S</m:mi><m:mi>N</m:mi></m:msub></m:math> denote the <m:math overflow="scroll"><m:mi>N</m:mi></m:math>th partial sum of the infinite series
+<m:math overflow="scroll"><m:mrow><m:mo>∑</m:mo><m:msub><m:mi>a</m:mi><m:mi>i</m:mi></m:msub><m:mo>:</m:mo></m:mrow></m:math><m:math overflow="scroll"><m:mrow><m:msub><m:mi>S</m:mi><m:mi>N</m:mi></m:msub><m:mo>=</m:mo><m:msubsup><m:mo>∑</m:mo><m:mrow><m:mi>i</m:mi><m:mo>=</m:mo><m:mn>1</m:mn></m:mrow><m:mi>N</m:mi></m:msubsup><m:msub><m:mi>a</m:mi><m:mi>i</m:mi></m:msub><m:mo>.</m:mo></m:mrow></m:math>
+Then:</para>
+    <list id="id286861" display="block" list-type="enumerated">
+      <item id="uid17">For each <m:math overflow="scroll"><m:mrow><m:mi>N</m:mi><m:mo>,</m:mo></m:mrow></m:math> we have
+<equation id="id286889"><m:math overflow="scroll" mode="display"><m:mrow><m:msub><m:mi>S</m:mi><m:mi>N</m:mi></m:msub><m:mo>-</m:mo><m:msub><m:mi>a</m:mi><m:mn>1</m:mn></m:msub><m:mo>≤</m:mo><m:msubsup><m:mo>∫</m:mo><m:mn>1</m:mn><m:mi>N</m:mi></m:msubsup><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mspace width="0.166667em"/><m:mi>d</m:mi><m:mi>x</m:mi><m:mo>≤</m:mo><m:msub><m:mi>S</m:mi><m:mrow><m:mi>N</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>.</m:mo></m:mrow></m:math></equation></item>
+      <item id="uid18">For each <m:math overflow="scroll"><m:mrow><m:mi>N</m:mi><m:mo>,</m:mo></m:mrow></m:math> we have that
+<equation id="id286988"><m:math overflow="scroll" mode="display"><m:mrow><m:msub><m:mi>S</m:mi><m:mrow><m:mi>N</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>-</m:mo><m:msubsup><m:mo>∫</m:mo><m:mn>1</m:mn><m:mi>N</m:mi></m:msubsup><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mspace width="0.166667em"/><m:mi>d</m:mi><m:mi>x</m:mi><m:mo>≤</m:mo><m:msub><m:mi>a</m:mi><m:mn>1</m:mn></m:msub><m:mo>-</m:mo><m:msub><m:mi>a</m:mi><m:mi>N</m:mi></m:msub><m:mo>≤</m:mo><m:msub><m:mi>a</m:mi><m:mn>1</m:mn></m:msub><m:mo>;</m:mo></m:mrow></m:math></equation>
+i.e., the sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>S</m:mi><m:mrow><m:mi>N</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>-</m:mo><m:msubsup><m:mo>∫</m:mo><m:mn>1</m:mn><m:mi>N</m:mi></m:msubsup><m:mi>f</m:mi><m:mo>}</m:mo></m:mrow></m:math> is bounded above.
+</item>
+      <item id="uid19">The sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>S</m:mi><m:mrow><m:mi>N</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>-</m:mo><m:msubsup><m:mo>∫</m:mo><m:mn>1</m:mn><m:mi>N</m:mi></m:msubsup><m:mi>f</m:mi><m:mo>}</m:mo></m:mrow></m:math> is nondecreasing.
+</item>
+      <item id="uid20"> (Integral Test)
+The infinite series <m:math overflow="scroll"><m:mrow><m:mo>∑</m:mo><m:msub><m:mi>a</m:mi><m:mi>i</m:mi></m:msub></m:mrow></m:math> converges if and only if
+the function <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is improperly-integrable on <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mn>1</m:mn><m:mo>,</m:mo><m:mi>∞</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math></item>
+    </list>
+</statement>
+<proof id="fs-id1164271742281">
+    <para id="id287230"> For each positive integer <m:math overflow="scroll"><m:mrow><m:mi>N</m:mi><m:mo>,</m:mo></m:mrow></m:math> define
+a step function <m:math overflow="scroll"><m:msub><m:mi>k</m:mi><m:mi>N</m:mi></m:msub></m:math> on the interval <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mn>1</m:mn><m:mo>,</m:mo><m:mi>N</m:mi><m:mo>]</m:mo></m:mrow></m:math> as follows.
+Let <m:math overflow="scroll"><m:mrow><m:mi>P</m:mi><m:mo>=</m:mo><m:mo>{</m:mo><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub><m:mo>&lt;</m:mo><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>&lt;</m:mo><m:mo>...</m:mo><m:mo>&lt;</m:mo><m:msub><m:mi>x</m:mi><m:mrow><m:mi>N</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>}</m:mo></m:mrow></m:math> be the partition of <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mn>1</m:mn><m:mo>,</m:mo><m:mi>N</m:mi><m:mo>]</m:mo></m:mrow></m:math>
+given by the points <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:mn>1</m:mn><m:mo>&lt;</m:mo><m:mn>2</m:mn><m:mo>&lt;</m:mo><m:mn>3</m:mn><m:mo>&lt;</m:mo><m:mo>...</m:mo><m:mo>&lt;</m:mo><m:mi>N</m:mi><m:mo>}</m:mo><m:mo>,</m:mo></m:mrow></m:math> i.e., <m:math overflow="scroll"><m:mrow><m:msub><m:mi>x</m:mi><m:mi>i</m:mi></m:msub><m:mo>=</m:mo><m:mi>i</m:mi><m:mo>+</m:mo><m:mn>1</m:mn><m:mo>.</m:mo></m:mrow></m:math>
+Define <m:math overflow="scroll"><m:mrow><m:msub><m:mi>k</m:mi><m:mi>N</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math>
+to be the constant <m:math overflow="scroll"><m:mrow><m:msub><m:mi>c</m:mi><m:mi>i</m:mi></m:msub><m:mo>=</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>i</m:mi><m:mo>+</m:mo><m:mn>1</m:mn><m:mo>)</m:mo></m:mrow></m:mrow></m:math> on the interval <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>[</m:mo><m:msub><m:mi>x</m:mi><m:mrow><m:mi>i</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mi>i</m:mi></m:msub><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mrow><m:mo>[</m:mo><m:mi>i</m:mi><m:mo>,</m:mo><m:mi>i</m:mi><m:mo>+</m:mo><m:mn>1</m:mn><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math>
+Complete the definition of <m:math overflow="scroll"><m:msub><m:mi>k</m:mi><m:mi>N</m:mi></m:msub></m:math> by setting <m:math overflow="scroll"><m:mrow><m:msub><m:mi>k</m:mi><m:mi>N</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>N</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>N</m:mi><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math>
+Then, because <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is nonincreasing, we have that <m:math overflow="scroll"><m:mrow><m:msub><m:mi>k</m:mi><m:mi>N</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>≤</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mo>[</m:mo><m:mn>1</m:mn><m:mo>,</m:mo><m:mi>N</m:mi><m:mo>]</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Also,</para>
+    <equation id="uid21">
+      <m:math overflow="scroll" mode="display">
+        <m:mtable displaystyle="true">
+          <m:mtr>
+            <m:mtd columnalign="right">
+              <m:mrow>
+                <m:msubsup>
+                  <m:mo>∫</m:mo>
+                  <m:mn>1</m:mn>
+                  <m:mi>N</m:mi>
+                </m:msubsup>
+                <m:msub>
+                  <m:mi>k</m:mi>
+                  <m:mi>N</m:mi>
+                </m:msub>
+              </m:mrow>
+            </m:mtd>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:munderover>
+                  <m:mo>∑</m:mo>
+                  <m:mrow>
+                    <m:mi>i</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                  <m:mrow>
+                    <m:mi>N</m:mi>
+                    <m:mo>-</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                </m:munderover>
+                <m:msub>
+                  <m:mi>c</m:mi>
+                  <m:mi>i</m:mi>
+                </m:msub>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:msub>
+                    <m:mi>x</m:mi>
+                    <m:mi>i</m:mi>
+                  </m:msub>
+                  <m:mo>-</m:mo>
+                  <m:msub>
+                    <m:mi>x</m:mi>
+                    <m:mrow>
+                      <m:mi>i</m:mi>
+                      <m:mo>-</m:mo>
+                      <m:mn>1</m:mn>
+                    </m:mrow>
+                  </m:msub>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:munderover>
+                  <m:mo>∑</m:mo>
+                  <m:mrow>
+                    <m:mi>i</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                  <m:mrow>
+                    <m:mi>N</m:mi>
+                    <m:mo>-</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                </m:munderover>
+                <m:mi>f</m:mi>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>i</m:mi>
+                  <m:mo>+</m:mo>
+                  <m:mn>1</m:mn>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:munderover>
+                  <m:mo>∑</m:mo>
+                  <m:mrow>
+                    <m:mi>i</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mn>2</m:mn>
+                  </m:mrow>
+                  <m:mi>N</m:mi>
+                </m:munderover>
+                <m:mi>f</m:mi>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>i</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:munderover>
+                  <m:mo>∑</m:mo>
+                  <m:mrow>
+                    <m:mi>i</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mn>2</m:mn>
+                  </m:mrow>
+                  <m:mi>N</m:mi>
+                </m:munderover>
+                <m:msub>
+                  <m:mi>a</m:mi>
+                  <m:mi>i</m:mi>
+                </m:msub>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:msub>
+                  <m:mi>S</m:mi>
+                  <m:mi>N</m:mi>
+                </m:msub>
+                <m:mo>-</m:mo>
+                <m:msub>
+                  <m:mi>a</m:mi>
+                  <m:mn>1</m:mn>
+                </m:msub>
+                <m:mo>,</m:mo>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+        </m:mtable>
+      </m:math>
+    </equation>
+    <para id="id287894">which then implies that</para>
+    <equation id="id287899">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:msub>
+            <m:mi>S</m:mi>
+            <m:mi>N</m:mi>
+          </m:msub>
+          <m:mo>-</m:mo>
+          <m:msub>
+            <m:mi>a</m:mi>
+            <m:mn>1</m:mn>
+          </m:msub>
+          <m:mo>=</m:mo>
+          <m:msubsup>
+            <m:mo>∫</m:mo>
+            <m:mn>1</m:mn>
+            <m:mi>N</m:mi>
+          </m:msubsup>
+          <m:msub>
+            <m:mi>k</m:mi>
+            <m:mi>N</m:mi>
+          </m:msub>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>x</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mspace width="0.166667em"/>
+          <m:mi>d</m:mi>
+          <m:mi>x</m:mi>
+          <m:mo>≤</m:mo>
+          <m:msubsup>
+            <m:mo>∫</m:mo>
+            <m:mn>1</m:mn>
+            <m:mi>N</m:mi>
+          </m:msubsup>
+          <m:mi>f</m:mi>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>x</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mspace width="0.166667em"/>
+          <m:mi>d</m:mi>
+          <m:mi>x</m:mi>
+          <m:mo>.</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id287994">This proves half of part (1).</para>
+    <para id="id288000">For each positive integer <m:math overflow="scroll"><m:mrow><m:mi>N</m:mi><m:mo>&gt;</m:mo><m:mn>1</m:mn></m:mrow></m:math> define another step function
+<m:math overflow="scroll"><m:mrow><m:msub><m:mi>l</m:mi><m:mi>N</m:mi></m:msub><m:mo>,</m:mo></m:mrow></m:math> using the same partition <m:math overflow="scroll"><m:mi>P</m:mi></m:math> as above,
+by setting <m:math overflow="scroll"><m:mrow><m:msub><m:mi>l</m:mi><m:mi>N</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>i</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> if <m:math overflow="scroll"><m:mrow><m:mi>i</m:mi><m:mo>≤</m:mo><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mi>i</m:mi><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow></m:math>
+for <m:math overflow="scroll"><m:mrow><m:mn>1</m:mn><m:mo>≤</m:mo><m:mi>i</m:mi><m:mo>&lt;</m:mo><m:mi>N</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+and complete the definition of <m:math overflow="scroll"><m:msub><m:mi>l</m:mi><m:mi>N</m:mi></m:msub></m:math> by setting <m:math overflow="scroll"><m:mrow><m:msub><m:mi>l</m:mi><m:mi>N</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>N</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>N</m:mi><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math>
+Again, because <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is nonincreasing, we have that <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>≤</m:mo><m:msub><m:mi>l</m:mi><m:mi>N</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math>
+for all <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mo>[</m:mo><m:mn>1</m:mn><m:mo>,</m:mo><m:mi>N</m:mi><m:mo>]</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Also</para>
+    <equation id="uid22">
+      <m:math overflow="scroll" mode="display">
+        <m:mtable displaystyle="true">
+          <m:mtr>
+            <m:mtd columnalign="right">
+              <m:mrow>
+                <m:msubsup>
+                  <m:mo>∫</m:mo>
+                  <m:mn>1</m:mn>
+                  <m:mi>N</m:mi>
+                </m:msubsup>
+                <m:msub>
+                  <m:mi>l</m:mi>
+                  <m:mi>N</m:mi>
+                </m:msub>
+              </m:mrow>
+            </m:mtd>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:munderover>
+                  <m:mo>∑</m:mo>
+                  <m:mrow>
+                    <m:mi>i</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                  <m:mrow>
+                    <m:mi>N</m:mi>
+                    <m:mo>-</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                </m:munderover>
+                <m:mi>f</m:mi>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>i</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:munderover>
+                  <m:mo>∑</m:mo>
+                  <m:mrow>
+                    <m:mi>i</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                  <m:mrow>
+                    <m:mi>N</m:mi>
+                    <m:mo>-</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                </m:munderover>
+                <m:msub>
+                  <m:mi>a</m:mi>
+                  <m:mi>i</m:mi>
+                </m:msub>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:msub>
+                  <m:mi>S</m:mi>
+                  <m:mrow>
+                    <m:mi>N</m:mi>
+                    <m:mo>-</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                </m:msub>
+                <m:mo>,</m:mo>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+        </m:mtable>
+      </m:math>
+    </equation>
+    <para id="id288385">which then implies that</para>
+    <equation id="id288391">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:msubsup>
+            <m:mo>∫</m:mo>
+            <m:mn>1</m:mn>
+            <m:mi>N</m:mi>
+          </m:msubsup>
+          <m:mi>f</m:mi>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>x</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mspace width="0.166667em"/>
+          <m:mi>d</m:mi>
+          <m:mi>x</m:mi>
+          <m:mo>≤</m:mo>
+          <m:msubsup>
+            <m:mo>∫</m:mo>
+            <m:mn>1</m:mn>
+            <m:mi>N</m:mi>
+          </m:msubsup>
+          <m:msub>
+            <m:mi>l</m:mi>
+            <m:mi>N</m:mi>
+          </m:msub>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>x</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mspace width="0.166667em"/>
+          <m:mi>d</m:mi>
+          <m:mi>x</m:mi>
+          <m:mo>=</m:mo>
+          <m:msub>
+            <m:mi>S</m:mi>
+            <m:mrow>
+              <m:mi>N</m:mi>
+              <m:mo>-</m:mo>
+              <m:mn>1</m:mn>
+            </m:mrow>
+          </m:msub>
+          <m:mo>,</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id288482">and this proves the other half of part (1).</para>
+    <para id="id288488">It follows from part (1) that</para>
+    <equation id="id288491">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:msub>
+            <m:mi>S</m:mi>
+            <m:mrow>
+              <m:mi>N</m:mi>
+              <m:mo>-</m:mo>
+              <m:mn>1</m:mn>
+            </m:mrow>
+          </m:msub>
+          <m:mo>-</m:mo>
+          <m:msubsup>
+            <m:mo>∫</m:mo>
+            <m:mn>1</m:mn>
+            <m:mi>N</m:mi>
+          </m:msubsup>
+          <m:mi>f</m:mi>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>x</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mspace width="0.166667em"/>
+          <m:mi>d</m:mi>
+          <m:mi>x</m:mi>
+          <m:mo>≤</m:mo>
+          <m:msub>
+            <m:mi>S</m:mi>
+            <m:mrow>
+              <m:mi>N</m:mi>
+              <m:mo>-</m:mo>
+              <m:mn>1</m:mn>
+            </m:mrow>
+          </m:msub>
+          <m:mo>-</m:mo>
+          <m:msub>
+            <m:mi>S</m:mi>
+            <m:mi>N</m:mi>
+          </m:msub>
+          <m:mo>+</m:mo>
+          <m:msub>
+            <m:mi>a</m:mi>
+            <m:mn>1</m:mn>
+          </m:msub>
+          <m:mo>=</m:mo>
+          <m:msub>
+            <m:mi>a</m:mi>
+            <m:mn>1</m:mn>
+          </m:msub>
+          <m:mo>-</m:mo>
+          <m:msub>
+            <m:mi>a</m:mi>
+            <m:mi>N</m:mi>
+          </m:msub>
+          <m:mo>,</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id288600">and this proves part (2).</para>
+    <para id="id288606">We see that the sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>S</m:mi><m:mrow><m:mi>N</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>-</m:mo><m:msubsup><m:mo>∫</m:mo><m:mn>1</m:mn><m:mi>N</m:mi></m:msubsup><m:mi>f</m:mi><m:mo>}</m:mo></m:mrow></m:math> is nondecreasing
+by observing that</para>
+    <equation id="uid23">
+      <m:math overflow="scroll" mode="display">
+        <m:mtable displaystyle="true">
+          <m:mtr>
+            <m:mtd columnalign="right">
+              <m:mrow>
+                <m:msub>
+                  <m:mi>S</m:mi>
+                  <m:mi>N</m:mi>
+                </m:msub>
+                <m:mo>-</m:mo>
+                <m:msubsup>
+                  <m:mo>∫</m:mo>
+                  <m:mn>1</m:mn>
+                  <m:mrow>
+                    <m:mi>N</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                </m:msubsup>
+                <m:mi>f</m:mi>
+                <m:mo>-</m:mo>
+                <m:msub>
+                  <m:mi>S</m:mi>
+                  <m:mrow>
+                    <m:mi>N</m:mi>
+                    <m:mo>-</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                </m:msub>
+                <m:mo>+</m:mo>
+                <m:msubsup>
+                  <m:mo>∫</m:mo>
+                  <m:mn>1</m:mn>
+                  <m:mi>N</m:mi>
+                </m:msubsup>
+                <m:mi>f</m:mi>
+              </m:mrow>
+            </m:mtd>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:msub>
+                  <m:mi>a</m:mi>
+                  <m:mi>N</m:mi>
+                </m:msub>
+                <m:mo>-</m:mo>
+                <m:msubsup>
+                  <m:mo>∫</m:mo>
+                  <m:mi>N</m:mi>
+                  <m:mrow>
+                    <m:mi>N</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                </m:msubsup>
+                <m:mi>f</m:mi>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mi>f</m:mi>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>N</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mo>-</m:mo>
+                <m:msubsup>
+                  <m:mo>∫</m:mo>
+                  <m:mi>N</m:mi>
+                  <m:mrow>
+                    <m:mi>N</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                </m:msubsup>
+                <m:mi>f</m:mi>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>≥</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mn>0</m:mn>
+                <m:mo>,</m:mo>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+        </m:mtable>
+      </m:math>
+    </equation>
+    <para id="id288820">because <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is nonincreasing.</para>
+    <para id="id288835">Finally, to prove part (4), note that both of the
+sequences <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>S</m:mi><m:mi>N</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msubsup><m:mo>∫</m:mo><m:mn>1</m:mn><m:mi>N</m:mi></m:msubsup><m:mi>f</m:mi><m:mo>}</m:mo></m:mrow></m:math> are nondecreasing.
+If <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is improperly-integrable on <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mn>1</m:mn><m:mo>,</m:mo><m:mi>∞</m:mi><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math> then
+<m:math overflow="scroll"><m:mrow><m:msub><m:mo movablelimits="true" form="prefix">lim</m:mo><m:mi>N</m:mi></m:msub><m:msubsup><m:mo>∫</m:mo><m:mn>1</m:mn><m:mi>N</m:mi></m:msubsup><m:mi>f</m:mi></m:mrow></m:math> exists, and
+<m:math overflow="scroll"><m:mrow><m:msub><m:mi>S</m:mi><m:mi>N</m:mi></m:msub><m:mo>≤</m:mo><m:msub><m:mi>a</m:mi><m:mn>1</m:mn></m:msub><m:mo>+</m:mo><m:msubsup><m:mo>∫</m:mo><m:mn>1</m:mn><m:mi>∞</m:mi></m:msubsup><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mspace width="0.166667em"/><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>N</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+which implies that <m:math overflow="scroll"><m:mrow><m:mo>∑</m:mo><m:msub><m:mi>a</m:mi><m:mi>i</m:mi></m:msub></m:mrow></m:math> converges by <link target-id="fs-id1172704678838" document="m36135"/>.
+Conversely, if <m:math overflow="scroll"><m:mrow><m:mo>∑</m:mo><m:msub><m:mi>a</m:mi><m:mi>i</m:mi></m:msub></m:mrow></m:math> converges, then <m:math overflow="scroll"><m:mrow><m:mo movablelimits="true" form="prefix">lim</m:mo><m:msub><m:mi>S</m:mi><m:mi>N</m:mi></m:msub></m:mrow></m:math> exists.
+Since <m:math overflow="scroll"><m:mrow><m:msubsup><m:mo>∫</m:mo><m:mn>1</m:mn><m:mi>N</m:mi></m:msubsup><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mspace width="0.166667em"/><m:mi>d</m:mi><m:mi>x</m:mi><m:mo>≤</m:mo><m:msub><m:mi>S</m:mi><m:mrow><m:mi>N</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>,</m:mo></m:mrow></m:math> it then follows, again from <link target-id="fs-id1172704678838" document="m36135"/>, that
+<m:math overflow="scroll"><m:mrow><m:msub><m:mo movablelimits="true" form="prefix">lim</m:mo><m:mi>N</m:mi></m:msub><m:msubsup><m:mo>∫</m:mo><m:mn>1</m:mn><m:mi>N</m:mi></m:msubsup><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mspace width="0.166667em"/><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:math> exists.
+So, by the preceding exercise, <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is improperly-integrable on <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mn>1</m:mn><m:mo>,</m:mo><m:mi>∞</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math></para>
+</proof></rule>
+    <para id="id289202">We may now resolve a question first raised in <link target-id="fs-id1172697343731" document="m36135"/>.
+That is, for <m:math overflow="scroll"><m:mrow><m:mn>1</m:mn><m:mo>&lt;</m:mo><m:mi>s</m:mi><m:mo>&lt;</m:mo><m:mn>2</m:mn><m:mo>,</m:mo></m:mrow></m:math> is the infinite series <m:math overflow="scroll"><m:mrow><m:mo>∑</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:msup><m:mi>n</m:mi><m:mi>s</m:mi></m:msup></m:mrow></m:math> convergent or divergent?
+We saw in that exercise that this series is convergent if <m:math overflow="scroll"><m:mi>s</m:mi></m:math> is a rational number.</para>
+<exercise id="fs-id1164276660591"><problem id="fs-id1164278355589">
+    <list id="id289269" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid24"> Let <m:math overflow="scroll"><m:mi>s</m:mi></m:math> be a real number.
+Use the Integral Test to
+prove that the infinite series <m:math overflow="scroll"><m:mrow><m:mo>∑</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:msup><m:mi>n</m:mi><m:mi>s</m:mi></m:msup></m:mrow></m:math> is convergent if and only if <m:math overflow="scroll"><m:mrow><m:mi>s</m:mi><m:mo>&gt;</m:mo><m:mn>1</m:mn><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid25"> Let <m:math overflow="scroll"><m:mi>s</m:mi></m:math> be a complex number <m:math overflow="scroll"><m:mrow><m:mi>s</m:mi><m:mo>=</m:mo><m:mi>a</m:mi><m:mo>+</m:mo><m:mi>b</m:mi><m:mi>i</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Prove that the infinite series <m:math overflow="scroll"><m:mrow><m:mo>∑</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:msup><m:mi>n</m:mi><m:mi>s</m:mi></m:msup></m:mrow></m:math> is absolutely convergent
+if and only if <m:math overflow="scroll"><m:mrow><m:mi>a</m:mi><m:mo>&gt;</m:mo><m:mn>1</m:mn><m:mo>.</m:mo></m:mrow></m:math></item>
+    </list>
+</problem></exercise>
+<exercise id="fs-id1164272540109"><problem id="fs-id1164267402336">
+    <para id="id289414"> Let <m:math overflow="scroll"><m:mi>f</m:mi></m:math> be the function on <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mn>1</m:mn><m:mo>,</m:mo><m:mi>∞</m:mi><m:mo>)</m:mo></m:mrow></m:math> defined by <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>x</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+    <list id="id289478" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid26"> Use <link target-id="fs-id1164271286297"/> to prove that the
+sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msubsup><m:mo>∑</m:mo><m:mrow><m:mi>i</m:mi><m:mo>=</m:mo><m:mn>1</m:mn></m:mrow><m:mi>N</m:mi></m:msubsup><m:mfrac><m:mn>1</m:mn><m:mi>i</m:mi></m:mfrac><m:mo>-</m:mo><m:mo form="prefix">ln</m:mo><m:mi>N</m:mi><m:mo>}</m:mo></m:mrow></m:math> converges to a positive number <m:math overflow="scroll"><m:mrow><m:mi>γ</m:mi><m:mo>≤</m:mo><m:mn>1</m:mn><m:mo>.</m:mo></m:mrow></m:math>
+(This number <m:math overflow="scroll"><m:mi>γ</m:mi></m:math> is called Euler's constant.)
+HINT: Show that this sequence is bounded above and nondecreasing.
+</item>
+      <item id="uid27"> Prove that
+<equation id="id289580"><m:math overflow="scroll" mode="display"><m:mrow><m:munderover><m:mo>∑</m:mo><m:mrow><m:mi>i</m:mi><m:mo>=</m:mo><m:mn>1</m:mn></m:mrow><m:mi>∞</m:mi></m:munderover><m:mfrac><m:msup><m:mrow><m:mo>(</m:mo><m:mo>-</m:mo><m:mn>1</m:mn><m:mo>)</m:mo></m:mrow><m:mrow><m:mi>i</m:mi><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow></m:msup><m:mi>i</m:mi></m:mfrac><m:mo>=</m:mo><m:mo form="prefix">ln</m:mo><m:mn>2</m:mn><m:mo>.</m:mo></m:mrow></m:math></equation>
+HINT: Write <m:math overflow="scroll"><m:msub><m:mi>S</m:mi><m:mrow><m:mn>2</m:mn><m:mi>N</m:mi></m:mrow></m:msub></m:math> for the <m:math overflow="scroll"><m:mrow><m:mn>2</m:mn><m:mi>N</m:mi></m:mrow></m:math>th partial sum of the series.
+Use the fact that
+<equation id="id289678"><m:math overflow="scroll" mode="display"><m:mrow><m:msub><m:mi>S</m:mi><m:mrow><m:mn>2</m:mn><m:mi>N</m:mi></m:mrow></m:msub><m:mo>=</m:mo><m:munderover><m:mo>∑</m:mo><m:mrow><m:mi>i</m:mi><m:mo>=</m:mo><m:mn>1</m:mn></m:mrow><m:mrow><m:mn>2</m:mn><m:mi>N</m:mi></m:mrow></m:munderover><m:mfrac><m:mn>1</m:mn><m:mi>i</m:mi></m:mfrac><m:mo>-</m:mo><m:mn>2</m:mn><m:munderover><m:mo>∑</m:mo><m:mrow><m:mi>i</m:mi><m:mo>=</m:mo><m:mn>1</m:mn></m:mrow><m:mi>N</m:mi></m:munderover><m:mfrac><m:mn>1</m:mn><m:mrow><m:mn>2</m:mn><m:mi>i</m:mi></m:mrow></m:mfrac><m:mo>.</m:mo></m:mrow></m:math></equation>
+Now add and subtract <m:math overflow="scroll"><m:mrow><m:mo form="prefix">ln</m:mo><m:mo>(</m:mo><m:mn>2</m:mn><m:mi>N</m:mi><m:mo>)</m:mo></m:mrow></m:math> and use part (a).
+</item>
+    </list>
+</problem></exercise>
+  </content>
+</document>

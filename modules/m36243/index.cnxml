@@ -1,0 +1,595 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML">
+  <title>Appendix: Existence and Uniqueness of a Complete Ordered Field</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m36243</md:content-id>
+  <md:title>Appendix: Existence and Uniqueness of a Complete Ordered Field</md:title>
+  <md:abstract>This appendix is devoted to the proofs of Theorems 1 and 2 in "The Real and Complex Numbers: The Real Numbers,"
+which together assert that there exists a unique complete ordered field.
+Our construction of this field will follow the ideas of Dedekind, which he presented in the late 1800's.</md:abstract>
+  <md:uuid>a0d5f606-4c15-47e0-a3ff-2ee0ec55fd81</md:uuid>
+</metadata>
+
+<content>
+    <para id="id62155">This appendix is devoted to the proofs of <link target-id="fs-id1163946669399" document="m36069"/> and <link target-id="fs-id1163942040469" document="m36069"/>,
+which together assert that there exists a unique complete ordered field.
+Our construction of this field will follow the ideas of Dedekind, which he presented in the late 1800's.</para>
+<definition id="fs-id1164766794080"><term/><meaning id="fs-id1164761556979">
+    <para id="id62160">
+By a <emphasis effect="italics">Dedekind cut,</emphasis> or simply a <emphasis effect="italics">cut,</emphasis> we will mean a
+pair <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>A</m:mi><m:mo>,</m:mo><m:mi>B</m:mi><m:mo>)</m:mo></m:mrow></m:math> of nonempty (not necessarily disjoint) subsets of the set <m:math overflow="scroll"><m:mi>Q</m:mi></m:math> of rational numbers for which
+the following two conditions hold.</para>
+    <list id="id62553" display="block" list-type="enumerated">
+      <item id="uid1"> <m:math overflow="scroll"><m:mrow><m:mi>A</m:mi><m:mo>∪</m:mo><m:mi>B</m:mi><m:mo>=</m:mo><m:mi>Q</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+That is, every rational number is in one or the other of these two sets.
+</item>
+      <item id="uid2">For every element <m:math overflow="scroll"><m:mrow><m:mi>a</m:mi><m:mo>∈</m:mo><m:mi>A</m:mi></m:mrow></m:math> and every element <m:math overflow="scroll"><m:mrow><m:mi>b</m:mi><m:mo>∈</m:mo><m:mi>B</m:mi><m:mo>,</m:mo></m:mrow></m:math><m:math overflow="scroll"><m:mrow><m:mi>A</m:mi><m:mo>≤</m:mo><m:mi>b</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+That is, every element of <m:math overflow="scroll"><m:mi>A</m:mi></m:math> is less than or equal to every element of <m:math overflow="scroll"><m:mrow><m:mi>B</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+    </list>
+</meaning></definition>
+    <para id="id62670">Recall that when we define the rational numbers as quotients (ordered pairs) of integers,
+we faced the problem that two different quotients determine the same rational number, e.g., <m:math overflow="scroll"><m:mrow><m:mn>2</m:mn><m:mo>/</m:mo><m:mn>3</m:mn><m:mo>≡</m:mo><m:mn>6</m:mn><m:mo>/</m:mo><m:mn>9</m:mn><m:mo>.</m:mo></m:mrow></m:math>
+There is a similar equivalence among Dedekind cuts.</para>
+<definition id="fs-id1164765954458"><term/><meaning id="fs-id5373066">
+    <para id="id62112">
+Two Dedekind cuts <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:msub><m:mi>A</m:mi><m:mn>1</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>b</m:mi><m:mn>1</m:mn></m:msub><m:mo>)</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:msub><m:mi>A</m:mi><m:mn>2</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>B</m:mi><m:mn>2</m:mn></m:msub><m:mo>)</m:mo></m:mrow></m:math>
+are called <emphasis effect="italics">equivalent</emphasis> if <m:math overflow="scroll"><m:mrow><m:msub><m:mi>a</m:mi><m:mn>1</m:mn></m:msub><m:mo>≤</m:mo><m:msub><m:mi>b</m:mi><m:mn>2</m:mn></m:msub></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:msub><m:mi>a</m:mi><m:mn>1</m:mn></m:msub><m:mo>∈</m:mo><m:msub><m:mi>A</m:mi><m:mn>1</m:mn></m:msub></m:mrow></m:math> and all <m:math overflow="scroll"><m:mrow><m:msub><m:mi>b</m:mi><m:mn>2</m:mn></m:msub><m:mo>∈</m:mo><m:msub><m:mi>B</m:mi><m:mn>2</m:mn></m:msub><m:mo>,</m:mo></m:mrow></m:math>
+and <m:math overflow="scroll"><m:mrow><m:msub><m:mi>a</m:mi><m:mn>2</m:mn></m:msub><m:mo>≤</m:mo><m:msub><m:mi>b</m:mi><m:mn>1</m:mn></m:msub></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:msub><m:mi>a</m:mi><m:mn>2</m:mn></m:msub><m:mo>∈</m:mo><m:msub><m:mi>A</m:mi><m:mn>2</m:mn></m:msub></m:mrow></m:math> and all <m:math overflow="scroll"><m:mrow><m:msub><m:mi>b</m:mi><m:mn>1</m:mn></m:msub><m:mo>∈</m:mo><m:msub><m:mi>B</m:mi><m:mn>1</m:mn></m:msub><m:mo>.</m:mo></m:mrow></m:math>
+In such a case, we write <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>(</m:mo><m:msub><m:mi>A</m:mi><m:mn>1</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>B</m:mi><m:mn>1</m:mn></m:msub><m:mo>)</m:mo></m:mrow><m:mo>≡</m:mo><m:mrow><m:mo>(</m:mo><m:msub><m:mi>A</m:mi><m:mn>2</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>B</m:mi><m:mn>2</m:mn></m:msub><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></para>
+</meaning></definition>
+<exercise id="fs-id1164763422735"><problem id="fs-id1164762478866">
+    <list id="id63157" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid3"> Show that every rational number <m:math overflow="scroll"><m:mi>r</m:mi></m:math> determines three distinct Dedekind cuts that are mutually equivalent.
+</item>
+      <item id="uid4"> Let <m:math overflow="scroll"><m:mi>B</m:mi></m:math> be the set of all positive rational numbers <m:math overflow="scroll"><m:mi>r</m:mi></m:math> whose square is greater than 2,
+and let <m:math overflow="scroll"><m:mi>A</m:mi></m:math> comprise all the rationals not in <m:math overflow="scroll"><m:mrow><m:mi>B</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Prove that the pair <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>A</m:mi><m:mo>,</m:mo><m:mi>B</m:mi><m:mo>)</m:mo></m:mrow></m:math> is a Dedekind cut.
+Do you think this cut is not equivalent to any cut determined by a
+rational number <m:math overflow="scroll"><m:mi>r</m:mi></m:math> as in part (a)? Can you prove this?
+</item>
+      <item id="uid5"> Prove that the definition of equivalence given above satisfies the three conditions
+of an equivalence relation.
+Namely, show that
+<list id="id63266" display="block" list-type="enumerated" number-style="lower-roman"><item id="uid6"> (Reflexivity) <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>A</m:mi><m:mo>,</m:mo><m:mi>B</m:mi><m:mo>)</m:mo></m:mrow></m:math> is equivalent to itself.
+</item><item id="uid7"> (Symmetry) If <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>(</m:mo><m:msub><m:mi>A</m:mi><m:mn>1</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>B</m:mi><m:mn>1</m:mn></m:msub><m:mo>)</m:mo></m:mrow><m:mo>≡</m:mo><m:mrow><m:mo>(</m:mo><m:msub><m:mi>A</m:mi><m:mn>2</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>B</m:mi><m:mn>2</m:mn></m:msub><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math>
+then <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>(</m:mo><m:msub><m:mi>A</m:mi><m:mn>2</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>B</m:mi><m:mn>2</m:mn></m:msub><m:mo>)</m:mo></m:mrow><m:mo>≡</m:mo><m:mrow><m:mo>(</m:mo><m:msub><m:mi>A</m:mi><m:mn>1</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>B</m:mi><m:mn>1</m:mn></m:msub><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></item><item id="uid8"> (Transitivity) If <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>(</m:mo><m:msub><m:mi>A</m:mi><m:mn>1</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>B</m:mi><m:mn>1</m:mn></m:msub><m:mo>)</m:mo></m:mrow><m:mo>≡</m:mo><m:mrow><m:mo>(</m:mo><m:msub><m:mi>A</m:mi><m:mn>2</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>B</m:mi><m:mn>2</m:mn></m:msub><m:mo>)</m:mo></m:mrow></m:mrow></m:math>
+and <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>(</m:mo><m:msub><m:mi>A</m:mi><m:mn>2</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>B</m:mi><m:mn>2</m:mn></m:msub><m:mo>)</m:mo></m:mrow><m:mo>≡</m:mo><m:mrow><m:mo>(</m:mo><m:msub><m:mi>A</m:mi><m:mn>3</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>B</m:mi><m:mn>3</m:mn></m:msub><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> then <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>(</m:mo><m:msub><m:mi>A</m:mi><m:mn>1</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>B</m:mi><m:mn>1</m:mn></m:msub><m:mo>)</m:mo></m:mrow><m:mo>≡</m:mo><m:mrow><m:mo>(</m:mo><m:msub><m:mi>A</m:mi><m:mn>3</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>B</m:mi><m:mn>3</m:mn></m:msub><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></item></list>
+</item>
+    </list>
+</problem></exercise>
+<para id="fs-id8111057">There are three relatively simple-sounding and believable properties
+of cuts, and we present them in the next theorem.
+It may be surprising that the proof seems to be more difficult than might have been expected.</para>
+<rule id="fs-id8205656" type="theorem"><statement id="fs-id8398892">
+    <para id="id63604">
+Let <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>A</m:mi><m:mo>,</m:mo><m:mi>B</m:mi><m:mo>)</m:mo></m:mrow></m:math> be a Dedekind cut. Then</para>
+    <list id="id63629" display="block" list-type="enumerated">
+      <item id="uid9">If <m:math overflow="scroll"><m:mrow><m:mi>a</m:mi><m:mo>∈</m:mo><m:mi>A</m:mi></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:msup><m:mi>a</m:mi><m:mo>'</m:mo></m:msup><m:mo>&lt;</m:mo><m:mi>a</m:mi><m:mo>,</m:mo></m:mrow></m:math> then <m:math overflow="scroll"><m:mrow><m:msup><m:mi>a</m:mi><m:mo>'</m:mo></m:msup><m:mo>∈</m:mo><m:mi>A</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid10">If <m:math overflow="scroll"><m:mrow><m:mi>b</m:mi><m:mo>∈</m:mo><m:mi>B</m:mi></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:msup><m:mi>b</m:mi><m:mo>'</m:mo></m:msup><m:mo>&gt;</m:mo><m:mi>b</m:mi><m:mo>,</m:mo></m:mrow></m:math> then <m:math overflow="scroll"><m:mrow><m:msup><m:mi>b</m:mi><m:mo>'</m:mo></m:msup><m:mo>∈</m:mo><m:mi>B</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid11">Let <m:math overflow="scroll"><m:mi>ϵ</m:mi></m:math> be a positive rational number. Then
+there exists an <m:math overflow="scroll"><m:mrow><m:mi>a</m:mi><m:mo>∈</m:mo><m:mi>A</m:mi></m:mrow></m:math> and a <m:math overflow="scroll"><m:mrow><m:mi>b</m:mi><m:mo>∈</m:mo><m:mi>B</m:mi></m:mrow></m:math> such that <m:math overflow="scroll"><m:mrow><m:mi>b</m:mi><m:mo>-</m:mo><m:mi>a</m:mi><m:mo>&lt;</m:mo><m:mi>ϵ</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+    </list>
+</statement>
+<proof id="fs-id1164766946250">
+    <para id="id63828">
+Suppose <m:math overflow="scroll"><m:mi>a</m:mi></m:math> is an element of <m:math overflow="scroll"><m:mrow><m:mi>A</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+and let <m:math overflow="scroll"><m:mrow><m:msup><m:mi>a</m:mi><m:mo>'</m:mo></m:msup><m:mo>&lt;</m:mo><m:mi>a</m:mi></m:mrow></m:math> be given.
+By way of contradiction suppose that <m:math overflow="scroll"><m:msup><m:mi>a</m:mi><m:mo>'</m:mo></m:msup></m:math> does not belong to <m:math overflow="scroll"><m:mrow><m:mi>A</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Then, by Condition (1) of the definition of a cut,
+it must be that <m:math overflow="scroll"><m:mrow><m:msup><m:mi>a</m:mi><m:mo>'</m:mo></m:msup><m:mo>∈</m:mo><m:mi>B</m:mi><m:mo>.</m:mo></m:mrow></m:math> But then, by Condition (2) of the definition of a cut,
+we must have that <m:math overflow="scroll"><m:mrow><m:mi>a</m:mi><m:mo>≤</m:mo><m:msup><m:mi>a</m:mi><m:mo>'</m:mo></m:msup><m:mo>,</m:mo></m:mrow></m:math> and this is a contradiction, because <m:math overflow="scroll"><m:mrow><m:msup><m:mi>a</m:mi><m:mo>'</m:mo></m:msup><m:mo>&lt;</m:mo><m:mi>a</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+This proves part (1).
+Part (2) is proved in a similar manner.</para>
+    <para id="id63961">To prove part (3), let the rational number <m:math overflow="scroll"><m:mrow><m:mi>ϵ</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn></m:mrow></m:math> be given, and set <m:math overflow="scroll"><m:mrow><m:mi>r</m:mi><m:mo>=</m:mo><m:mi>ϵ</m:mi><m:mo>/</m:mo><m:mn>2</m:mn><m:mo>.</m:mo></m:mrow></m:math>
+Choose an element <m:math overflow="scroll"><m:mrow><m:msub><m:mi>a</m:mi><m:mn>0</m:mn></m:msub><m:mo>∈</m:mo><m:mi>A</m:mi></m:mrow></m:math> and an element <m:math overflow="scroll"><m:mrow><m:msub><m:mi>b</m:mi><m:mn>0</m:mn></m:msub><m:mo>∈</m:mo><m:mi>B</m:mi><m:mo>.</m:mo></m:mrow></m:math> Such elements exist, because <m:math overflow="scroll"><m:mi>A</m:mi></m:math> and <m:math overflow="scroll"><m:mi>B</m:mi></m:math> are nonempty sets.
+Choose a natural number <m:math overflow="scroll"><m:mi>N</m:mi></m:math> such that <m:math overflow="scroll"><m:mrow><m:msub><m:mi>a</m:mi><m:mn>0</m:mn></m:msub><m:mo>+</m:mo><m:mi>N</m:mi><m:mi>r</m:mi><m:mo>&gt;</m:mo><m:msub><m:mi>b</m:mi><m:mn>0</m:mn></m:msub><m:mo>.</m:mo></m:mrow></m:math>
+Such a natural number <m:math overflow="scroll"><m:mi>N</m:mi></m:math> must exist. For instance, just choose <m:math overflow="scroll"><m:mi>N</m:mi></m:math> to be larger than
+the rational number <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:msub><m:mi>b</m:mi><m:mn>0</m:mn></m:msub><m:mo>-</m:mo><m:msub><m:mi>a</m:mi><m:mn>0</m:mn></m:msub><m:mo>)</m:mo><m:mo>/</m:mo><m:mi>r</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Now define a sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>a</m:mi><m:mi>k</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> of rational numbers by <m:math overflow="scroll"><m:mrow><m:msub><m:mi>a</m:mi><m:mi>k</m:mi></m:msub><m:mo>=</m:mo><m:msub><m:mi>a</m:mi><m:mn>0</m:mn></m:msub><m:mo>+</m:mo><m:mi>k</m:mi><m:mi>r</m:mi><m:mo>,</m:mo></m:mrow></m:math> and let <m:math overflow="scroll"><m:mi>K</m:mi></m:math> be the first natural number for which <m:math overflow="scroll"><m:mrow><m:msub><m:mi>a</m:mi><m:mi>K</m:mi></m:msub><m:mo>∈</m:mo><m:mi>B</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Obviously, such a number exists, and in fact <m:math overflow="scroll"><m:mi>K</m:mi></m:math> must be less than or equal to <m:math overflow="scroll"><m:mrow><m:mi>N</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Now, <m:math overflow="scroll"><m:msub><m:mi>a</m:mi><m:mrow><m:mi>K</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msub></m:math> is not in <m:math overflow="scroll"><m:mrow><m:mi>B</m:mi><m:mo>,</m:mo></m:mrow></m:math> so it must be in <m:math overflow="scroll"><m:mrow><m:mi>A</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Set <m:math overflow="scroll"><m:mrow><m:mi>a</m:mi><m:mo>=</m:mo><m:msub><m:mi>A</m:mi><m:mrow><m:mi>K</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msub></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>b</m:mi><m:mo>=</m:mo><m:msub><m:mi>A</m:mi><m:mi>K</m:mi></m:msub><m:mo>.</m:mo></m:mrow></m:math>
+Clearly, <m:math overflow="scroll"><m:mrow><m:mi>a</m:mi><m:mo>∈</m:mo><m:mi>A</m:mi><m:mo>,</m:mo></m:mrow></m:math><m:math overflow="scroll"><m:mrow><m:mi>b</m:mi><m:mo>∈</m:mo><m:mi>B</m:mi><m:mo>,</m:mo></m:mrow></m:math> and</para>
+    <equation id="id64368">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mi>b</m:mi>
+          <m:mo>-</m:mo>
+          <m:mi>a</m:mi>
+          <m:mo>=</m:mo>
+          <m:msub>
+            <m:mi>a</m:mi>
+            <m:mi>K</m:mi>
+          </m:msub>
+          <m:mo>-</m:mo>
+          <m:msub>
+            <m:mi>a</m:mi>
+            <m:mrow>
+              <m:mi>K</m:mi>
+              <m:mo>-</m:mo>
+              <m:mn>1</m:mn>
+            </m:mrow>
+          </m:msub>
+          <m:mo>=</m:mo>
+          <m:msub>
+            <m:mi>a</m:mi>
+            <m:mn>0</m:mn>
+          </m:msub>
+          <m:mo>+</m:mo>
+          <m:mi>K</m:mi>
+          <m:mi>r</m:mi>
+          <m:mo>-</m:mo>
+          <m:msub>
+            <m:mi>a</m:mi>
+            <m:mn>0</m:mn>
+          </m:msub>
+          <m:mo>-</m:mo>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>K</m:mi>
+            <m:mo>-</m:mo>
+            <m:mn>1</m:mn>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mi>r</m:mi>
+          <m:mo>=</m:mo>
+          <m:mi>r</m:mi>
+          <m:mo>=</m:mo>
+          <m:mfrac>
+            <m:mi>ϵ</m:mi>
+            <m:mn>2</m:mn>
+          </m:mfrac>
+          <m:mo>&lt;</m:mo>
+          <m:mi>ϵ</m:mi>
+          <m:mo>,</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id64470">and this proves part (3).</para>
+</proof></rule>
+    <para id="id64475">We will make a complete ordered field <m:math overflow="scroll"><m:mi>F</m:mi></m:math> whose elements are the set of equivalence classes of Dedekind cuts.
+We will call this field the <emphasis effect="italics">Dedekind field</emphasis>.
+To make this construction, we must define
+addition and multiplication of equivalence classes of cuts, and verify the six required field axioms.
+Then, we must define the set <m:math overflow="scroll"><m:mi>P</m:mi></m:math> that is to be the positive elements of the Dedekind field <m:math overflow="scroll"><m:mrow><m:mi>F</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+and then verify the required properties of an ordered field.
+Finally, we must prove that this field is a complete ordered field;
+i.e., that every nonempty set that is bounded above has a least upper bound.
+First things first.</para>
+<definition id="fs-id1164762383052"><term/><meaning id="fs-id1164763862661">
+    <para id="id64520">
+If <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:msub><m:mi>A</m:mi><m:mn>1</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>B</m:mi><m:mn>1</m:mn></m:msub><m:mo>)</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:msub><m:mi>A</m:mi><m:mn>2</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>B</m:mi><m:mn>2</m:mn></m:msub><m:mo>)</m:mo></m:mrow></m:math> are Dedekind cuts,
+define the <emphasis effect="italics">sum</emphasis> of <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:msub><m:mi>A</m:mi><m:mn>1</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>B</m:mi><m:mn>1</m:mn></m:msub><m:mo>)</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:msub><m:mi>A</m:mi><m:mn>2</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>B</m:mi><m:mn>2</m:mn></m:msub><m:mo>)</m:mo></m:mrow></m:math> to be the cut
+<m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:msub><m:mi>A</m:mi><m:mn>3</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>B</m:mi><m:mn>3</m:mn></m:msub><m:mo>)</m:mo></m:mrow></m:math>
+described as follows:
+<m:math overflow="scroll"><m:msub><m:mi>B</m:mi><m:mn>3</m:mn></m:msub></m:math> is the set of all rational numbers <m:math overflow="scroll"><m:msub><m:mi>b</m:mi><m:mn>3</m:mn></m:msub></m:math> that can be written as <m:math overflow="scroll"><m:mrow><m:msub><m:mi>b</m:mi><m:mn>1</m:mn></m:msub><m:mo>+</m:mo><m:msub><m:mi>b</m:mi><m:mn>2</m:mn></m:msub></m:mrow></m:math> for some <m:math overflow="scroll"><m:mrow><m:msub><m:mi>b</m:mi><m:mn>1</m:mn></m:msub><m:mo>∈</m:mo><m:msub><m:mi>B</m:mi><m:mn>1</m:mn></m:msub></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:msub><m:mi>b</m:mi><m:mn>2</m:mn></m:msub><m:mo>∈</m:mo><m:msub><m:mi>B</m:mi><m:mn>2</m:mn></m:msub><m:mo>,</m:mo></m:mrow></m:math>
+and <m:math overflow="scroll"><m:msub><m:mi>A</m:mi><m:mn>3</m:mn></m:msub></m:math> is the set of all rational numbers <m:math overflow="scroll"><m:mi>r</m:mi></m:math> such that <m:math overflow="scroll"><m:mrow><m:mi>r</m:mi><m:mo>&lt;</m:mo><m:msub><m:mi>b</m:mi><m:mn>3</m:mn></m:msub></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:msub><m:mi>b</m:mi><m:mn>3</m:mn></m:msub><m:mo>∈</m:mo><m:msub><m:mi>B</m:mi><m:mn>3</m:mn></m:msub><m:mo>.</m:mo></m:mrow></m:math></para>
+</meaning></definition>
+    <para id="id64853">Several things need to be checked.
+First of all, the pair <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:msub><m:mi>A</m:mi><m:mn>3</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>B</m:mi><m:mn>3</m:mn></m:msub><m:mo>)</m:mo></m:mrow></m:math> is again a Dedekind cut.
+Indeed, it is clear from the definition that every element of <m:math overflow="scroll"><m:msub><m:mi>A</m:mi><m:mn>3</m:mn></m:msub></m:math> is less than or equal to every element of <m:math overflow="scroll"><m:mrow><m:msub><m:mi>B</m:mi><m:mn>3</m:mn></m:msub><m:mo>,</m:mo></m:mrow></m:math>
+so that Condition (2) is satisfied.
+To see that Condition (1) holds, let <m:math overflow="scroll"><m:mi>r</m:mi></m:math> be a rational number, and suppose that it is not in <m:math overflow="scroll"><m:mrow><m:msub><m:mi>A</m:mi><m:mn>3</m:mn></m:msub><m:mo>.</m:mo></m:mrow></m:math>
+We must show that <m:math overflow="scroll"><m:mi>r</m:mi></m:math> belongs to <m:math overflow="scroll"><m:mrow><m:msub><m:mi>B</m:mi><m:mn>3</m:mn></m:msub><m:mo>.</m:mo></m:mrow></m:math>
+Now, since <m:math overflow="scroll"><m:mrow><m:mi>r</m:mi><m:mo>∉</m:mo><m:msub><m:mi>A</m:mi><m:mn>3</m:mn></m:msub><m:mo>,</m:mo></m:mrow></m:math> there must exist an element <m:math overflow="scroll"><m:mrow><m:msub><m:mi>b</m:mi><m:mn>3</m:mn></m:msub><m:mo>=</m:mo><m:msub><m:mi>b</m:mi><m:mn>1</m:mn></m:msub><m:mo>+</m:mo><m:msub><m:mi>b</m:mi><m:mn>2</m:mn></m:msub><m:mo>∈</m:mo><m:msub><m:mi>B</m:mi><m:mn>3</m:mn></m:msub></m:mrow></m:math>
+for which <m:math overflow="scroll"><m:mrow><m:mi>r</m:mi><m:mo>&gt;</m:mo><m:msub><m:mi>b</m:mi><m:mn>3</m:mn></m:msub><m:mo>.</m:mo></m:mrow></m:math>
+Otherwise, <m:math overflow="scroll"><m:mi>r</m:mi></m:math> would be in <m:math overflow="scroll"><m:mrow><m:msub><m:mi>A</m:mi><m:mn>3</m:mn></m:msub><m:mo>.</m:mo></m:mrow></m:math>
+But this means that <m:math overflow="scroll"><m:mrow><m:mi>r</m:mi><m:mo>-</m:mo><m:msub><m:mi>b</m:mi><m:mn>2</m:mn></m:msub><m:mo>&gt;</m:mo><m:msub><m:mi>b</m:mi><m:mn>1</m:mn></m:msub><m:mo>,</m:mo></m:mrow></m:math> and so by part (2) of <link target-id="fs-id8205656"/>,
+we have that <m:math overflow="scroll"><m:mrow><m:mi>r</m:mi><m:mo>-</m:mo><m:msub><m:mi>b</m:mi><m:mn>2</m:mn></m:msub></m:mrow></m:math> is an element <m:math overflow="scroll"><m:msubsup><m:mi>b</m:mi><m:mn>1</m:mn><m:mo>'</m:mo></m:msubsup></m:math> of <m:math overflow="scroll"><m:mrow><m:msub><m:mi>B</m:mi><m:mn>1</m:mn></m:msub><m:mo>.</m:mo></m:mrow></m:math>
+Therefore, <m:math overflow="scroll"><m:mrow><m:mi>r</m:mi><m:mo>=</m:mo><m:msubsup><m:mi>b</m:mi><m:mn>1</m:mn><m:mo>'</m:mo></m:msubsup><m:mo>+</m:mo><m:msub><m:mi>b</m:mi><m:mn>2</m:mn></m:msub><m:mo>,</m:mo></m:mrow></m:math> implying that <m:math overflow="scroll"><m:mrow><m:mi>r</m:mi><m:mo>∈</m:mo><m:msub><m:mi>B</m:mi><m:mn>3</m:mn></m:msub><m:mo>,</m:mo></m:mrow></m:math>
+as desired.</para>
+    <para id="id65228">We define the <emphasis effect="italics">0 cut</emphasis> to be the pair
+<m:math overflow="scroll"><m:mrow><m:msub><m:mi>A</m:mi><m:mn>0</m:mn></m:msub><m:mo>=</m:mo><m:mrow><m:mo>{</m:mo><m:mi>r</m:mi><m:mo>:</m:mo><m:mi>r</m:mi><m:mo>≤</m:mo><m:mn>0</m:mn><m:mo>}</m:mo></m:mrow></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:msub><m:mi>B</m:mi><m:mn>0</m:mn></m:msub><m:mo>=</m:mo><m:mrow><m:mo>{</m:mo><m:mi>r</m:mi><m:mo>:</m:mo><m:mi>r</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn><m:mo>}</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math>
+This cut is one of the three determined by the rational number 0.</para>
+<exercise id="fs-id5007597"><problem id="fs-id1164767408319">
+   
+    <list id="id65316" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid12"> Prove that addition of Dedekind cuts is commutative and associative.
+</item>
+      <item id="uid13"> Prove that if <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>(</m:mo><m:msub><m:mi>A</m:mi><m:mn>1</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>B</m:mi><m:mn>1</m:mn></m:msub><m:mo>)</m:mo></m:mrow><m:mo>≡</m:mo><m:mrow><m:mo>(</m:mo><m:msub><m:mi>C</m:mi><m:mn>1</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>D</m:mi><m:mn>1</m:mn></m:msub><m:mo>)</m:mo></m:mrow></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>(</m:mo><m:msub><m:mi>A</m:mi><m:mn>2</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>B</m:mi><m:mn>2</m:mn></m:msub><m:mo>)</m:mo></m:mrow><m:mo>≡</m:mo><m:mrow><m:mo>(</m:mo><m:msub><m:mi>C</m:mi><m:mn>2</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>D</m:mi><m:mn>2</m:mn></m:msub><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> then <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>(</m:mo><m:msub><m:mi>A</m:mi><m:mn>1</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>B</m:mi><m:mn>1</m:mn></m:msub><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mrow><m:mo>(</m:mo><m:msub><m:mi>A</m:mi><m:mn>2</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>B</m:mi><m:mn>2</m:mn></m:msub><m:mo>)</m:mo></m:mrow><m:mo>≡</m:mo><m:mrow><m:mo>(</m:mo><m:msub><m:mi>C</m:mi><m:mn>1</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>D</m:mi><m:mn>1</m:mn></m:msub><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mrow><m:mo>(</m:mo><m:msub><m:mi>C</m:mi><m:mn>2</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>D</m:mi><m:mn>2</m:mn></m:msub><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid14"> Find an example of a cut <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>A</m:mi><m:mo>,</m:mo><m:mi>B</m:mi><m:mo>)</m:mo></m:mrow></m:math> such that <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>A</m:mi><m:mo>,</m:mo><m:mi>B</m:mi><m:mo>)</m:mo><m:mo>+</m:mo><m:mn>0</m:mn><m:mo>≠</m:mo><m:mo>(</m:mo><m:mi>A</m:mi><m:mo>,</m:mo><m:mi>B</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid15"> Prove that <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>A</m:mi><m:mo>,</m:mo><m:mi>B</m:mi><m:mo>)</m:mo><m:mo>+</m:mo><m:mn>0</m:mn><m:mo>≡</m:mo><m:mo>(</m:mo><m:mi>A</m:mi><m:mo>,</m:mo><m:mi>B</m:mi><m:mo>)</m:mo></m:mrow></m:math> for every cut <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>A</m:mi><m:mo>,</m:mo><m:mi>B</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math></item>
+    </list>
+</problem></exercise>
+    <para id="id65698">We define addition in the set <m:math overflow="scroll"><m:mi>F</m:mi></m:math> of all equivalence classes of Dedekind cuts as follows:
+</para>
+<definition id="fs-id1164770984317"><term/><meaning id="fs-id1164764445348">
+<para id="fs-id1164764957948">
+If <m:math overflow="scroll"><m:mi>x</m:mi></m:math> is the equivalence class of a cut <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>A</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mi>y</m:mi></m:math> is the
+equivalence class of a cut <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>C</m:mi><m:mo>,</m:mo><m:mi>D</m:mi><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math> then <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>+</m:mo><m:mi>y</m:mi></m:mrow></m:math> is the equivalence class of the cut <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>A</m:mi><m:mo>,</m:mo><m:mi>B</m:mi><m:mo>)</m:mo><m:mo>+</m:mo><m:mo>(</m:mo><m:mi>C</m:mi><m:mo>,</m:mo><m:mi>D</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math></para>
+</meaning></definition>
+    <para id="id65820">It follows from the previous exercise, that addition in <m:math overflow="scroll"><m:mi>F</m:mi></m:math> is
+well-defined, commutative, and associative.
+We are on our way.</para>
+    <para id="id65833">We define the element 0 of <m:math overflow="scroll"><m:mi>F</m:mi></m:math> to be the equivalence class of the 0 cut.
+The next theorem establishes one of the important field axioms for <m:math overflow="scroll"><m:mrow><m:mi>F</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+namely, the existence of an additive inverse for each element of <m:math overflow="scroll"><m:mrow><m:mi>F</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+<rule id="fs-id1164764343589" type="theorem"><statement id="fs-id1164762906407">
+    <para id="id65869">
+If <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>A</m:mi><m:mo>,</m:mo><m:mi>B</m:mi><m:mo>)</m:mo></m:mrow></m:math> is a Dedekind cut, then there exists a cut <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:msup><m:mi>A</m:mi><m:mo>'</m:mo></m:msup><m:mo>,</m:mo><m:msup><m:mi>B</m:mi><m:mo>'</m:mo></m:msup><m:mo>)</m:mo></m:mrow></m:math>
+such that <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>(</m:mo><m:mi>A</m:mi><m:mo>,</m:mo><m:mi>B</m:mi><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mrow><m:mo>(</m:mo><m:msup><m:mi>A</m:mi><m:mo>'</m:mo></m:msup><m:mo>,</m:mo><m:msup><m:mi>B</m:mi><m:mo>'</m:mo></m:msup><m:mo>)</m:mo></m:mrow></m:mrow></m:math> is equivalent to the 0 cut.
+Therefore, if <m:math overflow="scroll"><m:mi>x</m:mi></m:math> is an element of <m:math overflow="scroll"><m:mrow><m:mi>F</m:mi><m:mo>,</m:mo></m:mrow></m:math> then there exists
+an element <m:math overflow="scroll"><m:mi>y</m:mi></m:math> of <m:math overflow="scroll"><m:mi>F</m:mi></m:math> such that <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>+</m:mo><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math></para>
+</statement>
+<proof id="fs-id1164767175493">
+    <para id="id66028">Let <m:math overflow="scroll"><m:mrow><m:msup><m:mi>A</m:mi><m:mo>'</m:mo></m:msup><m:mo>=</m:mo><m:mo>-</m:mo><m:mi>B</m:mi><m:mo>,</m:mo></m:mrow></m:math> i.e., the set of all the negatives of the elements of <m:math overflow="scroll"><m:mrow><m:mi>B</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+and let <m:math overflow="scroll"><m:mrow><m:msup><m:mi>B</m:mi><m:mo>'</m:mo></m:msup><m:mo>=</m:mo><m:mo>-</m:mo><m:mi>A</m:mi><m:mo>,</m:mo></m:mrow></m:math> i.e., the set of all the negatives of the elements of <m:math overflow="scroll"><m:mrow><m:mi>A</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+It is immediate that the pair <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:msup><m:mi>A</m:mi><m:mo>'</m:mo></m:msup><m:mo>,</m:mo><m:msup><m:mi>B</m:mi><m:mo>'</m:mo></m:msup><m:mo>)</m:mo></m:mrow></m:math> is a Dedekind cut.
+Let us show that <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>(</m:mo><m:mi>A</m:mi><m:mo>,</m:mo><m:mi>B</m:mi><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mrow><m:mo>(</m:mo><m:msup><m:mi>A</m:mi><m:mo>'</m:mo></m:msup><m:mo>,</m:mo><m:msup><m:mi>B</m:mi><m:mo>'</m:mo></m:msup><m:mo>)</m:mo></m:mrow></m:mrow></m:math> is equivalent to the zero cut.
+Let <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>(</m:mo><m:mi>C</m:mi><m:mo>,</m:mo><m:mi>D</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mrow><m:mo>(</m:mo><m:mi>A</m:mi><m:mo>,</m:mo><m:mi>B</m:mi><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mrow><m:mo>(</m:mo><m:msup><m:mi>A</m:mi><m:mo>'</m:mo></m:msup><m:mo>,</m:mo><m:msup><m:mi>B</m:mi><m:mo>'</m:mo></m:msup><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math>
+Then, by the definition of the sum of two cuts, we know that <m:math overflow="scroll"><m:mi>D</m:mi></m:math> consists of all the elements of the form
+<m:math overflow="scroll"><m:mrow><m:mi>d</m:mi><m:mo>=</m:mo><m:mi>b</m:mi><m:mo>+</m:mo><m:msup><m:mi>b</m:mi><m:mo>'</m:mo></m:msup><m:mo>=</m:mo><m:mi>b</m:mi><m:mo>-</m:mo><m:mi>a</m:mi><m:mo>,</m:mo></m:mrow></m:math> where <m:math overflow="scroll"><m:mrow><m:mi>b</m:mi><m:mo>∈</m:mo><m:mi>B</m:mi></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>a</m:mi><m:mo>∈</m:mo><m:mi>A</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Since <m:math overflow="scroll"><m:mrow><m:mi>a</m:mi><m:mo>≤</m:mo><m:mi>b</m:mi></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>a</m:mi><m:mo>∈</m:mo><m:mi>A</m:mi></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>b</m:mi><m:mo>∈</m:mo><m:mi>B</m:mi><m:mo>,</m:mo></m:mrow></m:math> we see then that the elements of <m:math overflow="scroll"><m:mi>D</m:mi></m:math> are all greater than or equal to 0.
+To see that <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>C</m:mi><m:mo>,</m:mo><m:mi>D</m:mi><m:mo>)</m:mo></m:mrow></m:math> is equivalent to the 0 cut,
+it will suffice to show that <m:math overflow="scroll"><m:mi>D</m:mi></m:math> contains all the positive rational numbers.
+(Why?)
+Hence, let <m:math overflow="scroll"><m:mrow><m:mi>ϵ</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn></m:mrow></m:math> be given,
+and choose an <m:math overflow="scroll"><m:mrow><m:mi>a</m:mi><m:mo>∈</m:mo><m:mi>A</m:mi></m:mrow></m:math> and a <m:math overflow="scroll"><m:mrow><m:mi>b</m:mi><m:mo>∈</m:mo><m:mi>B</m:mi></m:mrow></m:math> such that <m:math overflow="scroll"><m:mrow><m:mi>b</m:mi><m:mo>-</m:mo><m:mi>a</m:mi><m:mo>&lt;</m:mo><m:mi>ϵ</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+This can be done by Condition (3) of <link target-id="fs-id8205656"/>.
+Then, the number <m:math overflow="scroll"><m:mrow><m:mi>b</m:mi><m:mo>-</m:mo><m:mi>a</m:mi><m:mo>∈</m:mo><m:mi>D</m:mi><m:mo>,</m:mo></m:mrow></m:math> and hence, by part (2) of <link target-id="fs-id8205656"/>, <m:math overflow="scroll"><m:mrow><m:mi>ϵ</m:mi><m:mo>∈</m:mo><m:mi>D</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+It follows then that the cut <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>C</m:mi><m:mo>,</m:mo><m:mi>D</m:mi><m:mo>)</m:mo></m:mrow></m:math> is equivalent to the zero cut <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:msub><m:mi>A</m:mi><m:mn>0</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>B</m:mi><m:mn>0</m:mn></m:msub><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math> as desired.</para>
+</proof></rule>
+    <para id="id66554">We will write <m:math overflow="scroll"><m:mrow><m:mo>-</m:mo><m:mo>(</m:mo><m:mi>A</m:mi><m:mo>,</m:mo><m:mi>B</m:mi><m:mo>)</m:mo></m:mrow></m:math> for the cut <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:msup><m:mi>A</m:mi><m:mo>'</m:mo></m:msup><m:mo>,</m:mo><m:msup><m:mi>B</m:mi><m:mo>'</m:mo></m:msup><m:mo>)</m:mo></m:mrow></m:math> of the preceding proof.</para>
+<exercise id="fs-id1164762783490"><problem id="fs-id1164770609854">
+    <list id="id66615" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid16"> Suppose <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>A</m:mi><m:mo>,</m:mo><m:mi>B</m:mi><m:mo>)</m:mo></m:mrow></m:math> is a cut, and let <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>C</m:mi><m:mo>,</m:mo><m:mi>D</m:mi><m:mo>)</m:mo></m:mrow></m:math>
+be a cut for which <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>A</m:mi><m:mo>,</m:mo><m:mi>B</m:mi><m:mo>)</m:mo><m:mo>+</m:mo><m:mo>(</m:mo><m:mi>C</m:mi><m:mo>,</m:mo><m:mi>D</m:mi><m:mo>)</m:mo></m:mrow></m:math> is equivalent to the 0 cut.
+Show that <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>(</m:mo><m:mi>C</m:mi><m:mo>,</m:mo><m:mi>D</m:mi><m:mo>)</m:mo></m:mrow><m:mo>≡</m:mo><m:mrow><m:mo>(</m:mo><m:msup><m:mi>A</m:mi><m:mo>'</m:mo></m:msup><m:mo>,</m:mo><m:msup><m:mi>B</m:mi><m:mo>'</m:mo></m:msup><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mo>-</m:mo><m:mrow><m:mo>(</m:mo><m:mi>A</m:mi><m:mo>,</m:mo><m:mi>B</m:mi><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid17"> Prove that the additive inverse of an element <m:math overflow="scroll"><m:mi>x</m:mi></m:math> of the Dedekind field <m:math overflow="scroll"><m:mi>F</m:mi></m:math> is unique.
+</item>
+    </list>
+</problem></exercise>
+    <para id="id66792">The definition of multiplication of cuts, as well as multiplication in <m:math overflow="scroll"><m:mrow><m:mi>F</m:mi><m:mo>,</m:mo></m:mrow></m:math> is a bit more tricky.
+In fact, we will first introduce the notion of positivity among Dedekind cuts.</para>
+<definition id="fs-id1165208486634"><term/><meaning id="fs-id1165202840864"><para id="fs-id1165199070133">
+A Dedekind cut <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mo>(</m:mo><m:mi>A</m:mi><m:mo>,</m:mo><m:mi>B</m:mi><m:mo>)</m:mo></m:mrow></m:math> is called <emphasis effect="italics">positive</emphasis> if <m:math overflow="scroll"><m:mi>A</m:mi></m:math> contains at least one positive rational number.</para>
+</meaning></definition>
+
+<exercise id="fs-id1165201076814"><problem id="fs-id1165203051907">
+    
+    <list id="id66860" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid18"> Suppose <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>A</m:mi><m:mo>,</m:mo><m:mi>B</m:mi><m:mo>)</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>C</m:mi><m:mo>,</m:mo><m:mi>D</m:mi><m:mo>)</m:mo></m:mrow></m:math> are equivalent cuts, and assume
+that <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>A</m:mi><m:mo>,</m:mo><m:mi>B</m:mi><m:mo>)</m:mo></m:mrow></m:math> is positive. Prove that <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>C</m:mi><m:mo>,</m:mo><m:mi>D</m:mi><m:mo>)</m:mo></m:mrow></m:math> also is positive.
+Make the obvious definition of positivity in the set <m:math overflow="scroll"><m:mrow><m:mi>F</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid19"> Show that the sum of two positive cuts is positive.
+Conclude that the sum of two positive elements of <m:math overflow="scroll"><m:mrow><m:mi>F</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+i.e., the sum of two equivalence classes of positive cuts, is positive.
+</item>
+      <item id="uid20"> Let <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>A</m:mi><m:mo>,</m:mo><m:mi>B</m:mi><m:mo>)</m:mo></m:mrow></m:math> be a Dedekind cut.
+Show that one and only one of the following three properties holds
+for <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>A</m:mi><m:mo>,</m:mo><m:mi>B</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math> (i) <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>A</m:mi><m:mo>,</m:mo><m:mi>B</m:mi><m:mo>)</m:mo></m:mrow></m:math> is a positive cut,
+(ii) <m:math overflow="scroll"><m:mrow><m:mo>-</m:mo><m:mo>(</m:mo><m:mi>A</m:mi><m:mo>,</m:mo><m:mi>B</m:mi><m:mo>)</m:mo></m:mrow></m:math> is a positive cut, or (iii) <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>A</m:mi><m:mo>,</m:mo><m:mi>B</m:mi><m:mo>)</m:mo></m:mrow></m:math> is equivalent to the 0 cut.
+</item>
+      <item id="uid21"> Establish the law of tricotomy for <m:math overflow="scroll"><m:mrow><m:mi>F</m:mi><m:mo>:</m:mo></m:mrow></m:math> That is,
+show that one and only one of the following three properties holds for an element <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mi>F</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+(i) <m:math overflow="scroll"><m:mi>x</m:mi></m:math> is positive, (ii) <m:math overflow="scroll"><m:mrow><m:mo>-</m:mo><m:mi>x</m:mi></m:mrow></m:math> is positive, or (iii) <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math></item>
+    </list>
+</problem></exercise>
+    <para id="id67175">We first define multiplication of cuts when one of them is positive.</para>
+<definition id="fs-id1164763864968"><term/><meaning id="fs-id1164762737596">
+    <para id="id67178">
+Let <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:msub><m:mi>A</m:mi><m:mn>1</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>B</m:mi><m:mn>1</m:mn></m:msub><m:mo>)</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:msub><m:mi>A</m:mi><m:mn>2</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>B</m:mi><m:mn>2</m:mn></m:msub><m:mo>)</m:mo></m:mrow></m:math> be two Dedekind cuts,
+and suppose that one of these cuts is a positive cut.
+We define the <emphasis effect="italics">product</emphasis><m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:msub><m:mi>A</m:mi><m:mn>3</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>B</m:mi><m:mn>3</m:mn></m:msub><m:mo>)</m:mo></m:mrow></m:math> of <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:msub><m:mi>A</m:mi><m:mn>1</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>B</m:mi><m:mn>1</m:mn></m:msub><m:mo>)</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:msub><m:mi>A</m:mi><m:mn>2</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>B</m:mi><m:mn>2</m:mn></m:msub><m:mo>)</m:mo></m:mrow></m:math> as follows:
+Set <m:math overflow="scroll"><m:msub><m:mi>B</m:mi><m:mn>3</m:mn></m:msub></m:math> equal to the set of all <m:math overflow="scroll"><m:msub><m:mi>b</m:mi><m:mn>3</m:mn></m:msub></m:math> that can be written as <m:math overflow="scroll"><m:mrow><m:msub><m:mi>b</m:mi><m:mn>1</m:mn></m:msub><m:msub><m:mi>b</m:mi><m:mn>2</m:mn></m:msub></m:mrow></m:math> for some <m:math overflow="scroll"><m:mrow><m:msub><m:mi>b</m:mi><m:mn>1</m:mn></m:msub><m:mo>∈</m:mo><m:msub><m:mi>B</m:mi><m:mn>1</m:mn></m:msub></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:msub><m:mi>b</m:mi><m:mn>2</m:mn></m:msub><m:mo>∈</m:mo><m:msub><m:mi>B</m:mi><m:mn>2</m:mn></m:msub><m:mo>.</m:mo></m:mrow></m:math>
+Then set <m:math overflow="scroll"><m:msub><m:mi>A</m:mi><m:mn>3</m:mn></m:msub></m:math> to be all the rational numbers <m:math overflow="scroll"><m:mi>r</m:mi></m:math> for which <m:math overflow="scroll"><m:mrow><m:mi>r</m:mi><m:mo>&lt;</m:mo><m:msub><m:mi>b</m:mi><m:mn>3</m:mn></m:msub></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:msub><m:mi>b</m:mi><m:mn>3</m:mn></m:msub><m:mo>∈</m:mo><m:msub><m:mi>B</m:mi><m:mn>3</m:mn></m:msub><m:mo>.</m:mo></m:mrow></m:math></para>
+</meaning></definition>
+    <para id="id67510">Again, things need to be checked.</para>
+<exercise id="fs-id1164762798505"><problem id="fs-id1164770092895">
+  
+    <list id="id67521" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid22"> Show that the pair <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:msub><m:mi>A</m:mi><m:mn>3</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>B</m:mi><m:mn>3</m:mn></m:msub><m:mo>)</m:mo></m:mrow></m:math> of the preceding definition for the product of positive cuts is in fact
+a Dedekind cut.
+</item>
+      <item id="uid23"> Prove that multiplication of Dedekind cuts, when one of them is positive, is commutative.
+</item>
+      <item id="uid24"> Suppose <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:msub><m:mi>A</m:mi><m:mn>1</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>B</m:mi><m:mn>1</m:mn></m:msub><m:mo>)</m:mo></m:mrow></m:math> is a positive cut.
+Prove that
+<equation id="id67621"><m:math overflow="scroll" mode="display"><m:mrow><m:mrow><m:mo>(</m:mo><m:msub><m:mi>A</m:mi><m:mn>1</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>B</m:mi><m:mn>1</m:mn></m:msub><m:mo>)</m:mo></m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mo>(</m:mo><m:msub><m:mi>A</m:mi><m:mn>2</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>B</m:mi><m:mn>2</m:mn></m:msub><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mrow><m:mo>(</m:mo><m:msub><m:mi>A</m:mi><m:mn>3</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>B</m:mi><m:mn>3</m:mn></m:msub><m:mo>)</m:mo></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mrow><m:mo>(</m:mo><m:msub><m:mi>A</m:mi><m:mn>1</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>B</m:mi><m:mn>1</m:mn></m:msub><m:mo>)</m:mo></m:mrow><m:mrow><m:mo>(</m:mo><m:msub><m:mi>A</m:mi><m:mn>2</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>B</m:mi><m:mn>2</m:mn></m:msub><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mrow><m:mo>(</m:mo><m:msub><m:mi>A</m:mi><m:mn>1</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>B</m:mi><m:mn>1</m:mn></m:msub><m:mo>)</m:mo></m:mrow><m:mrow><m:mo>(</m:mo><m:msub><m:mi>A</m:mi><m:mn>3</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>B</m:mi><m:mn>3</m:mn></m:msub><m:mo>)</m:mo></m:mrow></m:mrow></m:math></equation>
+for any cuts <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:msub><m:mi>A</m:mi><m:mn>2</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>B</m:mi><m:mn>2</m:mn></m:msub><m:mo>)</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:msub><m:mi>A</m:mi><m:mn>3</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>B</m:mi><m:mn>3</m:mn></m:msub><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid25"> Show that, if <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>(</m:mo><m:msub><m:mi>A</m:mi><m:mn>1</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>B</m:mi><m:mn>1</m:mn></m:msub><m:mo>)</m:mo></m:mrow><m:mo>≡</m:mo><m:mrow><m:mo>(</m:mo><m:msub><m:mi>A</m:mi><m:mn>2</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>B</m:mi><m:mn>2</m:mn></m:msub><m:mo>)</m:mo></m:mrow></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>(</m:mo><m:msub><m:mi>C</m:mi><m:mn>1</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>D</m:mi><m:mn>1</m:mn></m:msub><m:mo>)</m:mo></m:mrow><m:mo>≡</m:mo><m:mrow><m:mo>(</m:mo><m:msub><m:mi>C</m:mi><m:mn>2</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>D</m:mi><m:mn>2</m:mn></m:msub><m:mo>)</m:mo></m:mrow></m:mrow></m:math>
+and <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:msub><m:mi>a</m:mi><m:mn>1</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>B</m:mi><m:mn>1</m:mn></m:msub><m:mo>)</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:msub><m:mi>A</m:mi><m:mn>2</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>B</m:mi><m:mn>2</m:mn></m:msub><m:mo>)</m:mo></m:mrow></m:math> are positive cuts,
+then <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>(</m:mo><m:msub><m:mi>A</m:mi><m:mn>1</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>B</m:mi><m:mn>1</m:mn></m:msub><m:mo>)</m:mo></m:mrow><m:mrow><m:mo>(</m:mo><m:msub><m:mi>C</m:mi><m:mn>1</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>D</m:mi><m:mn>1</m:mn></m:msub><m:mo>)</m:mo></m:mrow><m:mo>≡</m:mo><m:mrow><m:mo>(</m:mo><m:msub><m:mi>A</m:mi><m:mn>2</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>B</m:mi><m:mn>2</m:mn></m:msub><m:mo>)</m:mo></m:mrow><m:mrow><m:mo>(</m:mo><m:msub><m:mi>C</m:mi><m:mn>2</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>D</m:mi><m:mn>2</m:mn></m:msub><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid26"> Show that the product of two positive cuts is again a positive cut.
+</item>
+    </list>
+</problem></exercise>
+    <para id="id68158">We are ready to define multiplication in <m:math overflow="scroll"><m:mrow><m:mi>F</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+<definition id="fs-id1164762197581"><term/><meaning id="fs-id1164770505229">
+    <para id="id68173">
+Let <m:math overflow="scroll"><m:mi>x</m:mi></m:math> and <m:math overflow="scroll"><m:mi>y</m:mi></m:math> be elements of <m:math overflow="scroll"><m:mrow><m:mi>F</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+    <para id="id68210">If either <m:math overflow="scroll"><m:mi>x</m:mi></m:math> or <m:math overflow="scroll"><m:mi>y</m:mi></m:math> is positive, define the product <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>×</m:mo><m:mi>y</m:mi></m:mrow></m:math>
+to be the equivalence class of the cut <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>A</m:mi><m:mo>,</m:mo><m:mi>B</m:mi><m:mo>)</m:mo><m:mo>(</m:mo><m:mi>C</m:mi><m:mo>,</m:mo><m:mi>D</m:mi><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math> where <m:math overflow="scroll"><m:mi>x</m:mi></m:math> is the equivalence class
+of <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>A</m:mi><m:mo>,</m:mo><m:mi>B</m:mi><m:mo>)</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mi>y</m:mi></m:math> is the equivalence class of <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>C</m:mi><m:mo>,</m:mo><m:mi>D</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math></para>
+    <para id="id68331">If either <m:math overflow="scroll"><m:mi>x</m:mi></m:math> or <m:math overflow="scroll"><m:mi>y</m:mi></m:math> is 0, define <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>×</m:mo><m:mi>y</m:mi></m:mrow></m:math> to be 0.</para>
+    <para id="id68367">If both <m:math overflow="scroll"><m:mi>x</m:mi></m:math> and <m:math overflow="scroll"><m:mi>y</m:mi></m:math> are negative, i.e., both <m:math overflow="scroll"><m:mrow><m:mo>-</m:mo><m:mi>x</m:mi></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mo>-</m:mo><m:mi>y</m:mi></m:mrow></m:math> are positive,
+define <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>×</m:mo><m:mi>y</m:mi><m:mo>=</m:mo><m:mo>(</m:mo><m:mo>-</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>×</m:mo><m:mo>(</m:mo><m:mo>-</m:mo><m:mi>y</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math></para>
+</meaning></definition>
+    <para id="id68449">The next exercise is tedious. It amounts to
+checking a bunch of cases.</para>
+<exercise id="fs-id1164770295978"><problem id="fs-id1164772164766">
+    
+    <list id="id68460" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid27"> Prove that multiplication in <m:math overflow="scroll"><m:mi>F</m:mi></m:math> is commutative.
+</item>
+      <item id="uid28"> Prove that multiplication in <m:math overflow="scroll"><m:mi>F</m:mi></m:math> is associative.
+</item>
+      <item id="uid29"> Prove that multiplication in <m:math overflow="scroll"><m:mi>F</m:mi></m:math> is distributive over addition.
+</item>
+      <item id="uid30"> Prove that the product of two positive elements of <m:math overflow="scroll"><m:mi>F</m:mi></m:math> is again positive.
+</item>
+    </list>
+</problem></exercise>
+    <para id="id68550">We define the element 1 of <m:math overflow="scroll"><m:mi>F</m:mi></m:math> to be the equivalence class of the cut <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:msup><m:mi>A</m:mi><m:mn>1</m:mn></m:msup><m:mo>,</m:mo><m:msup><m:mi>B</m:mi><m:mn>1</m:mn></m:msup><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math> where
+<m:math overflow="scroll"><m:mrow><m:msup><m:mi>A</m:mi><m:mn>1</m:mn></m:msup><m:mo>=</m:mo><m:mrow><m:mo>{</m:mo><m:mi>r</m:mi><m:mo>:</m:mo><m:mi>r</m:mi><m:mo>≤</m:mo><m:mn>1</m:mn><m:mo>}</m:mo></m:mrow></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:msup><m:mi>B</m:mi><m:mn>1</m:mn></m:msup><m:mo>=</m:mo><m:mrow><m:mo>{</m:mo><m:mi>r</m:mi><m:mo>:</m:mo><m:mi>r</m:mi><m:mo>&gt;</m:mo><m:mn>1</m:mn><m:mo>}</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></para>
+<exercise id="fs-id8305058"><problem id="fs-id1164771663531">
+   
+    <list id="id68670" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid31"> Prove that the elements 0 and 1 of <m:math overflow="scroll"><m:mi>F</m:mi></m:math> are not equal.
+</item>
+      <item id="uid32"> Prove that <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>×</m:mo><m:mn>1</m:mn><m:mo>=</m:mo><m:mi>x</m:mi></m:mrow></m:math> for every element <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mi>F</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid33"> Use the associative law and part (b) to prove that
+if <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>1</m:mn></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mi>z</m:mi><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>,</m:mo></m:mrow></m:math> then <m:math overflow="scroll"><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mi>z</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+    </list>
+</problem></exercise>
+<rule id="fs-id1164763522376" type="theorem"><statement id="fs-id1164771097157">
+    <para id="id68805">
+With respect to the operations of addition and multiplication defined above, together with the definition of positive elements,
+<m:math overflow="scroll"><m:mi>F</m:mi></m:math> is an ordered field.</para>
+</statement>
+<proof id="fs-id1164761656096">
+    <para id="id68823">The first five axioms for a field, given in <link document="m36075"/>, have
+been established for <m:math overflow="scroll"><m:mi>F</m:mi></m:math> in the preceding exercises,
+so that we need only verify axiom 6 to complete the proof that <m:math overflow="scroll"><m:mi>F</m:mi></m:math> is a field.
+Thus, let <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mi>F</m:mi></m:mrow></m:math> be a nonzero element.
+We must show the existence of an element <m:math overflow="scroll"><m:mi>y</m:mi></m:math> of <m:math overflow="scroll"><m:mi>F</m:mi></m:math> for which <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>×</m:mo><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>.</m:mo></m:mrow></m:math>
+Suppose first that <m:math overflow="scroll"><m:mi>x</m:mi></m:math> is a positive element of <m:math overflow="scroll"><m:mrow><m:mi>F</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Then <m:math overflow="scroll"><m:mi>x</m:mi></m:math> is the equivalence class of a positive cut <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>A</m:mi><m:mo>,</m:mo><m:mi>B</m:mi><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math>
+and therefore <m:math overflow="scroll"><m:mi>A</m:mi></m:math> contains some positive rational numbers.
+Let <m:math overflow="scroll"><m:msub><m:mi>a</m:mi><m:mn>0</m:mn></m:msub></m:math> be a positive number that is contained in <m:math overflow="scroll"><m:mrow><m:mi>A</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+It follows then that every element of <m:math overflow="scroll"><m:mi>B</m:mi></m:math> is greater than or equal to <m:math overflow="scroll"><m:msub><m:mi>a</m:mi><m:mn>0</m:mn></m:msub></m:math> and hence is positive.
+Define <m:math overflow="scroll"><m:mover accent="true"><m:mi>B</m:mi><m:mo>^</m:mo></m:mover></m:math> to be the set of all rational numbers <m:math overflow="scroll"><m:mi>r</m:mi></m:math> for which <m:math overflow="scroll"><m:mrow><m:mi>r</m:mi><m:mo>≥</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>b</m:mi></m:mrow></m:math>
+for every <m:math overflow="scroll"><m:mrow><m:mi>b</m:mi><m:mo>∈</m:mo><m:mi>B</m:mi><m:mo>.</m:mo></m:mrow></m:math> Then define <m:math overflow="scroll"><m:mover accent="true"><m:mi>A</m:mi><m:mo>^</m:mo></m:mover></m:math>
+to be the set of all rationals <m:math overflow="scroll"><m:mi>r</m:mi></m:math> for which <m:math overflow="scroll"><m:mrow><m:mi>r</m:mi><m:mo>≤</m:mo><m:mover accent="true"><m:mi>b</m:mi><m:mo>^</m:mo></m:mover></m:mrow></m:math> for every <m:math overflow="scroll"><m:mrow><m:mover accent="true"><m:mi>b</m:mi><m:mo>^</m:mo></m:mover><m:mo>∈</m:mo><m:mover accent="true"><m:mi>B</m:mi><m:mo>^</m:mo></m:mover><m:mo>.</m:mo></m:mrow></m:math>
+It follows directly that the pair <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mover accent="true"><m:mi>A</m:mi><m:mo>^</m:mo></m:mover><m:mo>,</m:mo><m:mover accent="true"><m:mi>B</m:mi><m:mo>^</m:mo></m:mover><m:mo>)</m:mo></m:mrow></m:math> is a Dedekind cut.</para>
+    <para id="id69179">Let <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>(</m:mo><m:mi>C</m:mi><m:mo>,</m:mo><m:mi>D</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mrow><m:mo>(</m:mo><m:mi>A</m:mi><m:mo>,</m:mo><m:mi>B</m:mi><m:mo>)</m:mo></m:mrow><m:mo>×</m:mo><m:mrow><m:mo>(</m:mo><m:mover accent="true"><m:mi>A</m:mi><m:mo>^</m:mo></m:mover><m:mo>,</m:mo><m:mover accent="true"><m:mi>B</m:mi><m:mo>^</m:mo></m:mover><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math>
+and note that every element <m:math overflow="scroll"><m:mrow><m:mi>d</m:mi><m:mo>∈</m:mo><m:mi>D</m:mi></m:mrow></m:math> is of the form <m:math overflow="scroll"><m:mrow><m:mi>d</m:mi><m:mo>=</m:mo><m:mi>b</m:mi><m:mover accent="true"><m:mi>b</m:mi><m:mo>^</m:mo></m:mover><m:mo>,</m:mo></m:mrow></m:math> and hence is greater than or equal to 1.
+We claim that <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>C</m:mi><m:mo>,</m:mo><m:mi>D</m:mi><m:mo>)</m:mo></m:mrow></m:math> is equivalent to the cut <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:msup><m:mi>A</m:mi><m:mn>1</m:mn></m:msup><m:mo>,</m:mo><m:msup><m:mi>B</m:mi><m:mn>1</m:mn></m:msup><m:mo>)</m:mo></m:mrow></m:math> that determines the element 1 of <m:math overflow="scroll"><m:mrow><m:mi>F</m:mi><m:mo>.</m:mo></m:mrow></m:math> To see this
+we must verify that <m:math overflow="scroll"><m:mi>D</m:mi></m:math> contains every rational number <m:math overflow="scroll"><m:mi>r</m:mi></m:math> that is greater than 1.
+Thus, let <m:math overflow="scroll"><m:mrow><m:mi>r</m:mi><m:mo>&gt;</m:mo><m:mn>1</m:mn></m:mrow></m:math> be given,
+and set <m:math overflow="scroll"><m:mrow><m:mi>ϵ</m:mi><m:mo>=</m:mo><m:msub><m:mi>a</m:mi><m:mn>0</m:mn></m:msub><m:mrow><m:mo>(</m:mo><m:mi>r</m:mi><m:mo>-</m:mo><m:mn>1</m:mn><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math>
+From Condition (3) of <link target-id="fs-id8205656"/>, choose an <m:math overflow="scroll"><m:mrow><m:msup><m:mi>a</m:mi><m:mo>'</m:mo></m:msup><m:mo>∈</m:mo><m:mi>A</m:mi></m:mrow></m:math> and a <m:math overflow="scroll"><m:mrow><m:msup><m:mi>b</m:mi><m:mo>'</m:mo></m:msup><m:mo>∈</m:mo><m:mi>B</m:mi></m:mrow></m:math> such that <m:math overflow="scroll"><m:mrow><m:msup><m:mi>b</m:mi><m:mo>'</m:mo></m:msup><m:mo>-</m:mo><m:msup><m:mi>a</m:mi><m:mo>'</m:mo></m:msup><m:mo>&lt;</m:mo><m:mi>ϵ</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Without loss of generality, we may assume that <m:math overflow="scroll"><m:mrow><m:msup><m:mi>a</m:mi><m:mo>'</m:mo></m:msup><m:mo>≥</m:mo><m:msub><m:mi>a</m:mi><m:mn>0</m:mn></m:msub><m:mo>.</m:mo></m:mrow></m:math>
+Finally, set <m:math overflow="scroll"><m:mrow><m:mover accent="true"><m:mi>b</m:mi><m:mo>^</m:mo></m:mover><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:msup><m:mi>a</m:mi><m:mo>'</m:mo></m:msup><m:mo>.</m:mo></m:mrow></m:math>
+Clearly <m:math overflow="scroll"><m:mrow><m:mover accent="true"><m:mi>b</m:mi><m:mo>^</m:mo></m:mover><m:mo>≥</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>b</m:mi></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>b</m:mi><m:mo>∈</m:mo><m:mi>B</m:mi><m:mo>,</m:mo></m:mrow></m:math> so that <m:math overflow="scroll"><m:mrow><m:mover accent="true"><m:mi>b</m:mi><m:mo>^</m:mo></m:mover><m:mo>∈</m:mo><m:mover accent="true"><m:mi>B</m:mi><m:mo>^</m:mo></m:mover><m:mo>.</m:mo></m:mrow></m:math>
+Also <m:math overflow="scroll"><m:mrow><m:mi>d</m:mi><m:mo>=</m:mo><m:msup><m:mi>b</m:mi><m:mo>'</m:mo></m:msup><m:mover accent="true"><m:mi>b</m:mi><m:mo>^</m:mo></m:mover><m:mo>∈</m:mo><m:mi>D</m:mi><m:mo>,</m:mo></m:mrow></m:math> and</para>
+    <equation id="id69652">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mi>d</m:mi>
+          <m:mo>=</m:mo>
+          <m:msup>
+            <m:mi>b</m:mi>
+            <m:mo>'</m:mo>
+          </m:msup>
+          <m:mover accent="true">
+            <m:mi>b</m:mi>
+            <m:mo>^</m:mo>
+          </m:mover>
+          <m:mo>=</m:mo>
+          <m:mfrac>
+            <m:msup>
+              <m:mi>b</m:mi>
+              <m:mo>'</m:mo>
+            </m:msup>
+            <m:msup>
+              <m:mi>a</m:mi>
+              <m:mo>'</m:mo>
+            </m:msup>
+          </m:mfrac>
+          <m:mo>=</m:mo>
+          <m:mfrac>
+            <m:mrow>
+              <m:msup>
+                <m:mi>a</m:mi>
+                <m:mo>'</m:mo>
+              </m:msup>
+              <m:mo>+</m:mo>
+              <m:msup>
+                <m:mi>b</m:mi>
+                <m:mo>'</m:mo>
+              </m:msup>
+              <m:mo>-</m:mo>
+              <m:msup>
+                <m:mi>a</m:mi>
+                <m:mo>'</m:mo>
+              </m:msup>
+            </m:mrow>
+            <m:msup>
+              <m:mi>a</m:mi>
+              <m:mo>'</m:mo>
+            </m:msup>
+          </m:mfrac>
+          <m:mo>&lt;</m:mo>
+          <m:mn>1</m:mn>
+          <m:mo>+</m:mo>
+          <m:mfrac>
+            <m:mi>ϵ</m:mi>
+            <m:msup>
+              <m:mi>a</m:mi>
+              <m:mo>'</m:mo>
+            </m:msup>
+          </m:mfrac>
+          <m:mo>≤</m:mo>
+          <m:mn>1</m:mn>
+          <m:mo>+</m:mo>
+          <m:mfrac>
+            <m:mi>ϵ</m:mi>
+            <m:msub>
+              <m:mi>a</m:mi>
+              <m:mn>0</m:mn>
+            </m:msub>
+          </m:mfrac>
+          <m:mo>=</m:mo>
+          <m:mi>r</m:mi>
+          <m:mo>,</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id69787">implying that <m:math overflow="scroll"><m:mrow><m:mi>r</m:mi><m:mo>∈</m:mo><m:mi>D</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Therefore, <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>C</m:mi><m:mo>,</m:mo><m:mi>D</m:mi><m:mo>)</m:mo></m:mrow></m:math> is equivalent to the cut <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:msup><m:mi>A</m:mi><m:mn>1</m:mn></m:msup><m:mo>,</m:mo><m:msup><m:mi>B</m:mi><m:mn>1</m:mn></m:msup><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math> implying that
+<m:math overflow="scroll"><m:mrow><m:mrow><m:mo>(</m:mo><m:mi>A</m:mi><m:mo>,</m:mo><m:mi>B</m:mi><m:mo>)</m:mo></m:mrow><m:mo>×</m:mo><m:mrow><m:mo>(</m:mo><m:mover accent="true"><m:mi>A</m:mi><m:mo>^</m:mo></m:mover><m:mo>,</m:mo><m:mover accent="true"><m:mi>B</m:mi><m:mo>^</m:mo></m:mover><m:mo>)</m:mo></m:mrow></m:mrow></m:math> is equivalent to the cut <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:msup><m:mi>A</m:mi><m:mn>1</m:mn></m:msup><m:mo>,</m:mo><m:msup><m:mi>B</m:mi><m:mn>1</m:mn></m:msup><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Therefore, if <m:math overflow="scroll"><m:mi>y</m:mi></m:math> is the element of <m:math overflow="scroll"><m:mi>F</m:mi></m:math> that is the equivalence class of the cut <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mover accent="true"><m:mi>A</m:mi><m:mo>^</m:mo></m:mover><m:mo>,</m:mo><m:mover accent="true"><m:mi>B</m:mi><m:mo>^</m:mo></m:mover><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math>
+then <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>×</m:mo><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>,</m:mo></m:mrow></m:math> as desired.</para>
+    <para id="id70011">If <m:math overflow="scroll"><m:mi>x</m:mi></m:math> is negative, then <m:math overflow="scroll"><m:mrow><m:mo>-</m:mo><m:mi>x</m:mi></m:mrow></m:math> is positive. If we write <m:math overflow="scroll"><m:mi>z</m:mi></m:math>
+for the multiplicative inverse of the positive element <m:math overflow="scroll"><m:mrow><m:mo>-</m:mo><m:mi>x</m:mi><m:mo>,</m:mo></m:mrow></m:math> then <m:math overflow="scroll"><m:mrow><m:mo>-</m:mo><m:mi>z</m:mi></m:mrow></m:math> is the multiplicative inverse of the element <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Indeed, by the definition of the product of two negative elements of <m:math overflow="scroll"><m:mrow><m:mi>F</m:mi><m:mo>,</m:mo></m:mrow></m:math><m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>×</m:mo><m:mo>(</m:mo><m:mo>-</m:mo><m:mi>z</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mo>(</m:mo><m:mo>-</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>×</m:mo><m:mi>z</m:mi><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>.</m:mo></m:mrow></m:math></para>
+    <para id="id70136">The properties that guarantee that <m:math overflow="scroll"><m:mi>F</m:mi></m:math> is an ordered field also have been
+established in the preceding exercises,
+so that the proof of this theorem is complete.</para>
+</proof></rule>
+    <para id="id70150">So, the Dedekind field is an ordered field, but we have left
+to prove that it is complete.
+This means we must examine upper bounds of sets, and that requires us
+to understand when one cut is less than another one.
+We say that a cut <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>A</m:mi><m:mo>,</m:mo><m:mi>B</m:mi><m:mo>)</m:mo></m:mrow></m:math> is <emphasis effect="italics">less than or equal</emphasis> to a cut <m:math overflow="scroll"><m:mrow><m:mi>C</m:mi><m:mo>,</m:mo><m:mi>D</m:mi><m:mo>)</m:mo></m:mrow></m:math>
+if <m:math overflow="scroll"><m:mrow><m:mi>a</m:mi><m:mo>≤</m:mo><m:mi>d</m:mi></m:mrow></m:math> for every <m:math overflow="scroll"><m:mrow><m:mi>a</m:mi><m:mo>∈</m:mo><m:mi>A</m:mi></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>d</m:mi><m:mo>∈</m:mo><m:mi>D</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+We say that an element <m:math overflow="scroll"><m:mi>x</m:mi></m:math> in the ordered field <m:math overflow="scroll"><m:mi>F</m:mi></m:math> is <emphasis effect="italics">less than or equal</emphasis> to an element <m:math overflow="scroll"><m:mi>y</m:mi></m:math>
+if <m:math overflow="scroll"><m:mrow><m:mi>y</m:mi><m:mo>-</m:mo><m:mi>x</m:mi></m:mrow></m:math> is either positive or 0.</para>
+<rule id="fs-id1164762493310" type="theorem"><statement id="fs-id1164772490575">
+    <para id="id70288">
+Let <m:math overflow="scroll"><m:mi>x</m:mi></m:math> and <m:math overflow="scroll"><m:mi>y</m:mi></m:math> be elements of <m:math overflow="scroll"><m:mrow><m:mi>F</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+and suppose <m:math overflow="scroll"><m:mi>x</m:mi></m:math> is the equivalence class of the cut <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>A</m:mi><m:mo>,</m:mo><m:mi>B</m:mi><m:mo>(</m:mo><m:mo>)</m:mo></m:mrow></m:math> and
+<m:math overflow="scroll"><m:mi>y</m:mi></m:math> is the equivalence class of the cut <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>C</m:mi><m:mo>,</m:mo><m:mi>D</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Then <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>≤</m:mo><m:mi>y</m:mi></m:mrow></m:math> if and only if <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>A</m:mi><m:mo>,</m:mo><m:mi>B</m:mi><m:mo>)</m:mo><m:mo>≤</m:mo><m:mo>(</m:mo><m:mi>C</m:mi><m:mo>,</m:mo><m:mi>D</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math></para>
+</statement>
+<proof id="fs-id1164766961626">
+    <para id="id70431">
+We have that <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>≤</m:mo><m:mi>y</m:mi></m:mrow></m:math> if and only if the element <m:math overflow="scroll"><m:mrow><m:mi>y</m:mi><m:mo>-</m:mo><m:mi>x</m:mi><m:mo>=</m:mo><m:mi>y</m:mi><m:mo>+</m:mo><m:mo>-</m:mo><m:mi>x</m:mi></m:mrow></m:math> is positive or 0.
+Writing, as before, <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:msup><m:mi>A</m:mi><m:mo>'</m:mo></m:msup><m:mo>,</m:mo><m:msup><m:mi>B</m:mi><m:mo>'</m:mo></m:msup><m:mo>)</m:mo></m:mrow></m:math> for the cut <m:math overflow="scroll"><m:mrow><m:mo>-</m:mo><m:mo>(</m:mo><m:mi>A</m:mi><m:mo>,</m:mo><m:mi>B</m:mi><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math>
+we have that <m:math overflow="scroll"><m:mrow><m:mi>y</m:mi><m:mo>-</m:mo><m:mi>x</m:mi></m:mrow></m:math> is the equivalence class of the cut
+<m:math overflow="scroll"><m:mrow><m:mrow><m:mo>(</m:mo><m:mi>C</m:mi><m:mo>,</m:mo><m:mi>d</m:mi><m:mo>)</m:mo></m:mrow><m:mo>-</m:mo><m:mrow><m:mo>(</m:mo><m:mi>A</m:mi><m:mo>,</m:mo><m:mi>B</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mrow><m:mo>(</m:mo><m:mi>C</m:mi><m:mo>,</m:mo><m:mi>D</m:mi><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mrow><m:mo>(</m:mo><m:msup><m:mi>A</m:mi><m:mo>'</m:mo></m:msup><m:mo>,</m:mo><m:msup><m:mi>B</m:mi><m:mo>'</m:mo></m:msup><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math>
+so we need to determine when the cut <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>(</m:mo><m:mi>G</m:mi><m:mo>,</m:mo><m:mi>H</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mrow><m:mo>(</m:mo><m:mi>C</m:mi><m:mo>,</m:mo><m:mi>D</m:mi><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mrow><m:mo>(</m:mo><m:msup><m:mi>A</m:mi><m:mo>'</m:mo></m:msup><m:mo>,</m:mo><m:msup><m:mi>B</m:mi><m:mo>'</m:mo></m:msup><m:mo>)</m:mo></m:mrow></m:mrow></m:math> is
+a positive cut or the 0 cut;
+which is the case when the set <m:math overflow="scroll"><m:mi>H</m:mi></m:math> only contains nonnegative numbers.
+By definition of addition, the set <m:math overflow="scroll"><m:mi>H</m:mi></m:math> contains all numbers of the form <m:math overflow="scroll"><m:mrow><m:mi>h</m:mi><m:mo>=</m:mo><m:mi>d</m:mi><m:mo>+</m:mo><m:msup><m:mi>b</m:mi><m:mo>'</m:mo></m:msup></m:mrow></m:math>
+for some <m:math overflow="scroll"><m:mrow><m:mi>d</m:mi><m:mo>∈</m:mo><m:mi>D</m:mi></m:mrow></m:math> and some <m:math overflow="scroll"><m:mrow><m:msup><m:mi>b</m:mi><m:mo>'</m:mo></m:msup><m:mo>∈</m:mo><m:msup><m:mi>B</m:mi><m:mo>'</m:mo></m:msup><m:mo>.</m:mo></m:mrow></m:math>
+Since <m:math overflow="scroll"><m:mrow><m:msup><m:mi>B</m:mi><m:mo>'</m:mo></m:msup><m:mo>=</m:mo><m:mo>-</m:mo><m:mi>A</m:mi><m:mo>,</m:mo></m:mrow></m:math> this means that <m:math overflow="scroll"><m:mi>H</m:mi></m:math> consists of all elements of the form <m:math overflow="scroll"><m:mrow><m:mi>h</m:mi><m:mo>=</m:mo><m:mi>d</m:mi><m:mo>-</m:mo><m:mi>a</m:mi></m:mrow></m:math>
+for some <m:math overflow="scroll"><m:mrow><m:mi>d</m:mi><m:mo>∈</m:mo><m:mi>D</m:mi></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>a</m:mi><m:mo>∈</m:mo><m:mi>A</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Now these numbers <m:math overflow="scroll"><m:mi>h</m:mi></m:math> are all greater than or equal to 0 if and only if each <m:math overflow="scroll"><m:mrow><m:mi>a</m:mi><m:mo>∈</m:mo><m:mi>A</m:mi></m:mrow></m:math> is less than
+or equal to each <m:math overflow="scroll"><m:mrow><m:mi>d</m:mi><m:mo>∈</m:mo><m:mi>D</m:mi><m:mo>,</m:mo></m:mrow></m:math> i.e., if and only if <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>A</m:mi><m:mo>,</m:mo><m:mi>B</m:mi><m:mo>)</m:mo><m:mo>≤</m:mo><m:mo>(</m:mo><m:mi>C</m:mi><m:mo>,</m:mo><m:mi>D</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+This proves the theorem.</para>
+</proof>
+</rule>
+    <para id="id70920">We are now ready to present the first of the two main theorems of this appendix,
+that is <link target-id="fs-id1163946669399" document="m36069"/> in <link document="m36069"/>.</para>
+<rule id="fs-id1164772626527" type="theorem"><statement id="fs-id5699205">
+    <para id="id70924">
+There exists a complete ordered field.
+Indeed, the Dedekind field <m:math overflow="scroll"><m:mi>F</m:mi></m:math> is a complete ordered field.</para>
+</statement>
+<proof id="fs-id1164769885598">
+    <para id="id70942">
+Let <m:math overflow="scroll"><m:mi>S</m:mi></m:math> be a nonempty subset of <m:math overflow="scroll"><m:mrow><m:mi>F</m:mi><m:mo>,</m:mo></m:mrow></m:math> and suppose
+that there exists an upper bound for <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>;</m:mo></m:mrow></m:math> i.e., an element <m:math overflow="scroll"><m:mi>M</m:mi></m:math> of <m:math overflow="scroll"><m:mi>F</m:mi></m:math> such that
+<m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>≤</m:mo><m:mi>M</m:mi></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Write <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>A</m:mi><m:mo>,</m:mo><m:mi>B</m:mi><m:mo>)</m:mo></m:mrow></m:math> for a cut such that <m:math overflow="scroll"><m:mi>M</m:mi></m:math> is the equivalence class of <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>A</m:mi><m:mo>,</m:mo><m:mi>B</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+We must show that there exists a least upper bound for <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+    <para id="id71091">For each <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mi>S</m:mi><m:mo>,</m:mo></m:mrow></m:math> let <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:msub><m:mi>A</m:mi><m:mi>x</m:mi></m:msub><m:mo>,</m:mo><m:msub><m:mi>B</m:mi><m:mi>x</m:mi></m:msub><m:mo>)</m:mo></m:mrow></m:math> be a Dedekind cut
+for which <m:math overflow="scroll"><m:mi>x</m:mi></m:math> is the equivalence class of <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:msub><m:mi>A</m:mi><m:mi>x</m:mi></m:msub><m:mo>,</m:mo><m:msub><m:mi>B</m:mi><m:mi>x</m:mi></m:msub><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math> and
+note that <m:math overflow="scroll"><m:mrow><m:msub><m:mi>a</m:mi><m:mi>x</m:mi></m:msub><m:mo>≤</m:mo><m:mi>b</m:mi></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:msub><m:mi>a</m:mi><m:mi>x</m:mi></m:msub><m:mo>∈</m:mo><m:msub><m:mi>A</m:mi><m:mi>x</m:mi></m:msub></m:mrow></m:math> and all <m:math overflow="scroll"><m:mrow><m:mi>b</m:mi><m:mo>∈</m:mo><m:mi>B</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Let <m:math overflow="scroll"><m:msub><m:mi>A</m:mi><m:mn>0</m:mn></m:msub></m:math> be the union of all the sets <m:math overflow="scroll"><m:msub><m:mi>A</m:mi><m:mi>x</m:mi></m:msub></m:math> for <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Let <m:math overflow="scroll"><m:msub><m:mi>B</m:mi><m:mn>0</m:mn></m:msub></m:math> be the set of all rational numbers <m:math overflow="scroll"><m:mi>r</m:mi></m:math> for which <m:math overflow="scroll"><m:mrow><m:mi>r</m:mi><m:mo>≥</m:mo><m:msub><m:mi>a</m:mi><m:mn>0</m:mn></m:msub></m:mrow></m:math>
+for every <m:math overflow="scroll"><m:mrow><m:msub><m:mi>a</m:mi><m:mn>0</m:mn></m:msub><m:mo>∈</m:mo><m:msub><m:mi>A</m:mi><m:mn>0</m:mn></m:msub><m:mo>.</m:mo></m:mrow></m:math>
+we claim first that the pair <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:msub><m:mi>A</m:mi><m:mn>0</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>B</m:mi><m:mn>0</m:mn></m:msub><m:mo>)</m:mo></m:mrow></m:math> is a Dedekind cut.
+Both sets are nonempty; <m:math overflow="scroll"><m:msub><m:mi>A</m:mi><m:mn>0</m:mn></m:msub></m:math> because it is the union of nonempty sets, and
+<m:math overflow="scroll"><m:msub><m:mi>B</m:mi><m:mn>0</m:mn></m:msub></m:math> because it contains all the elements of the nonempty set <m:math overflow="scroll"><m:mrow><m:mi>B</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Clearly Condition (2) for a cut holds from the very definition of this pair.
+To see Condition (1), let <m:math overflow="scroll"><m:mi>r</m:mi></m:math> be a rational number that is not in <m:math overflow="scroll"><m:mrow><m:msub><m:mi>B</m:mi><m:mn>0</m:mn></m:msub><m:mo>.</m:mo></m:mrow></m:math>
+We must show that it is in <m:math overflow="scroll"><m:mrow><m:msub><m:mi>A</m:mi><m:mn>0</m:mn></m:msub><m:mo>.</m:mo></m:mrow></m:math> Now, since <m:math overflow="scroll"><m:mi>r</m:mi></m:math> is not in <m:math overflow="scroll"><m:mrow><m:msub><m:mi>B</m:mi><m:mn>0</m:mn></m:msub><m:mo>,</m:mo></m:mrow></m:math>
+there must exist some <m:math overflow="scroll"><m:mrow><m:msub><m:mi>a</m:mi><m:mn>0</m:mn></m:msub><m:mo>∈</m:mo><m:msub><m:mi>A</m:mi><m:mn>0</m:mn></m:msub></m:mrow></m:math> for which <m:math overflow="scroll"><m:mrow><m:mi>r</m:mi><m:mo>&lt;</m:mo><m:msub><m:mi>a</m:mi><m:mn>0</m:mn></m:msub><m:mo>.</m:mo></m:mrow></m:math> But <m:math overflow="scroll"><m:mrow><m:msub><m:mi>a</m:mi><m:mn>0</m:mn></m:msub><m:mo>∈</m:mo><m:msub><m:mo>∪</m:mo><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mi>S</m:mi></m:mrow></m:msub><m:msub><m:mi>A</m:mi><m:mi>x</m:mi></m:msub><m:mo>,</m:mo></m:mrow></m:math>
+so that there must exist an <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mi>S</m:mi></m:mrow></m:math> such that <m:math overflow="scroll"><m:mrow><m:msub><m:mi>a</m:mi><m:mn>0</m:mn></m:msub><m:mo>∈</m:mo><m:msub><m:mi>A</m:mi><m:mi>x</m:mi></m:msub><m:mo>,</m:mo></m:mrow></m:math> and
+hence <m:math overflow="scroll"><m:mi>r</m:mi></m:math> is also in <m:math overflow="scroll"><m:mrow><m:msub><m:mi>A</m:mi><m:mi>x</m:mi></m:msub><m:mo>.</m:mo></m:mrow></m:math>
+But then <m:math overflow="scroll"><m:mrow><m:mi>r</m:mi><m:mo>∈</m:mo><m:msub><m:mi>A</m:mi><m:mn>0</m:mn></m:msub><m:mo>,</m:mo></m:mrow></m:math> and this proves that <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:msub><m:mi>A</m:mi><m:mn>0</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>B</m:mi><m:mn>0</m:mn></m:msub><m:mo>)</m:mo></m:mrow></m:math> is a Dedekind cut.</para>
+    <para id="id71704">Let <m:math overflow="scroll"><m:msub><m:mi>M</m:mi><m:mn>0</m:mn></m:msub></m:math> be the equivalence class determined by the cut <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:msub><m:mi>A</m:mi><m:mn>0</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>B</m:mi><m:mn>0</m:mn></m:msub><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Since each <m:math overflow="scroll"><m:mrow><m:msub><m:mi>A</m:mi><m:mi>x</m:mi></m:msub><m:mo>⊆</m:mo><m:msub><m:mi>A</m:mi><m:mn>0</m:mn></m:msub><m:mo>,</m:mo></m:mrow></m:math> we see that
+<m:math overflow="scroll"><m:mrow><m:msub><m:mi>a</m:mi><m:mi>x</m:mi></m:msub><m:mo>≤</m:mo><m:msub><m:mi>b</m:mi><m:mn>0</m:mn></m:msub></m:mrow></m:math> for every <m:math overflow="scroll"><m:mrow><m:msub><m:mi>a</m:mi><m:mi>x</m:mi></m:msub><m:mo>∈</m:mo><m:msub><m:mi>A</m:mi><m:mi>x</m:mi></m:msub></m:mrow></m:math> and every <m:math overflow="scroll"><m:mrow><m:msub><m:mi>b</m:mi><m:mn>0</m:mn></m:msub><m:mo>∈</m:mo><m:msub><m:mi>B</m:mi><m:mn>0</m:mn></m:msub><m:mo>.</m:mo></m:mrow></m:math>
+Hence, <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>(</m:mo><m:msub><m:mi>A</m:mi><m:mi>x</m:mi></m:msub><m:mo>,</m:mo><m:msub><m:mi>B</m:mi><m:mi>x</m:mi></m:msub><m:mo>)</m:mo></m:mrow><m:mo>≤</m:mo><m:mrow><m:mo>(</m:mo><m:msub><m:mi>A</m:mi><m:mn>0</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>B</m:mi><m:mn>0</m:mn></m:msub><m:mo>)</m:mo></m:mrow></m:mrow></m:math> for every <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mi>S</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+and therefore, by Theorem A.4, <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>≤</m:mo><m:msub><m:mi>M</m:mi><m:mn>0</m:mn></m:msub></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+This shows that <m:math overflow="scroll"><m:msub><m:mi>M</m:mi><m:mn>0</m:mn></m:msub></m:math> is an upper bound for <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+    <para id="id71990">Finally, suppose <m:math overflow="scroll"><m:msup><m:mi>M</m:mi><m:mo>'</m:mo></m:msup></m:math> is another upper bound for <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>,</m:mo></m:mrow></m:math> and
+let <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:msup><m:mi>A</m:mi><m:mo>'</m:mo></m:msup><m:mo>,</m:mo><m:msup><m:mi>B</m:mi><m:mo>'</m:mo></m:msup><m:mo>)</m:mo></m:mrow></m:math> be a cut for which <m:math overflow="scroll"><m:msup><m:mi>M</m:mi><m:mo>'</m:mo></m:msup></m:math> is the equivalence class of <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:msup><m:mi>A</m:mi><m:mo>'</m:mo></m:msup><m:mo>,</m:mo><m:msup><m:mi>B</m:mi><m:mo>'</m:mo></m:msup><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Then <m:math overflow="scroll"><m:mrow><m:msub><m:mi>a</m:mi><m:mi>x</m:mi></m:msub><m:mo>≤</m:mo><m:msup><m:mi>b</m:mi><m:mo>'</m:mo></m:msup></m:mrow></m:math> for every <m:math overflow="scroll"><m:mrow><m:msub><m:mi>a</m:mi><m:mi>x</m:mi></m:msub><m:mo>∈</m:mo><m:msub><m:mi>A</m:mi><m:mi>x</m:mi></m:msub></m:mrow></m:math> and every <m:math overflow="scroll"><m:mrow><m:msup><m:mi>b</m:mi><m:mo>'</m:mo></m:msup><m:mo>∈</m:mo><m:msup><m:mi>B</m:mi><m:mo>'</m:mo></m:msup><m:mo>,</m:mo></m:mrow></m:math>
+implying that <m:math overflow="scroll"><m:mrow><m:msub><m:mi>a</m:mi><m:mn>0</m:mn></m:msub><m:mo>≤</m:mo><m:msup><m:mi>b</m:mi><m:mo>'</m:mo></m:msup></m:mrow></m:math> for every <m:math overflow="scroll"><m:mrow><m:msub><m:mi>a</m:mi><m:mn>0</m:mn></m:msub><m:mo>∈</m:mo><m:msub><m:mi>A</m:mi><m:mn>0</m:mn></m:msub></m:mrow></m:math> and every <m:math overflow="scroll"><m:mrow><m:msup><m:mi>b</m:mi><m:mo>'</m:mo></m:msup><m:mo>∈</m:mo><m:msup><m:mi>B</m:mi><m:mo>'</m:mo></m:msup><m:mo>.</m:mo></m:mrow></m:math>
+Therefore, <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>(</m:mo><m:msub><m:mi>A</m:mi><m:mn>0</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>B</m:mi><m:mn>0</m:mn></m:msub><m:mo>)</m:mo></m:mrow><m:mo>≤</m:mo><m:mrow><m:mo>(</m:mo><m:msup><m:mi>A</m:mi><m:mo>'</m:mo></m:msup><m:mo>,</m:mo><m:msup><m:mi>B</m:mi><m:mo>'</m:mo></m:msup><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> implying that <m:math overflow="scroll"><m:mrow><m:msub><m:mi>M</m:mi><m:mn>0</m:mn></m:msub><m:mo>≤</m:mo><m:msup><m:mi>M</m:mi><m:mo>'</m:mo></m:msup><m:mo>.</m:mo></m:mrow></m:math>
+This shows that <m:math overflow="scroll"><m:msub><m:mi>M</m:mi><m:mn>0</m:mn></m:msub></m:math> is the least upper bound for <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+and the theorem is proved.</para>
+</proof></rule>
+    <para id="id72364">We come now to the second major theorem of this appendix,
+i.e., <link target-id="fs-id1163942040469" document="m36069"/> of <link document="m36069"/>.
+This one asserts the uniqueness, up to isomorphism, of complete ordered fields.</para>
+<rule id="fs-id1164772397872" type="theorem"><statement id="fs-id8102713">
+    <para id="id72368">
+Let <m:math overflow="scroll"><m:mover accent="true"><m:mi>F</m:mi><m:mo>^</m:mo></m:mover></m:math> be a complete ordered field.
+Then there exists an isomorphism of <m:math overflow="scroll"><m:mover accent="true"><m:mi>F</m:mi><m:mo>^</m:mo></m:mover></m:math> onto the Dedekind field <m:math overflow="scroll"><m:mrow><m:mi>F</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+That is, there exists a one-to-one function <m:math overflow="scroll"><m:mrow><m:mi>J</m:mi><m:mo>:</m:mo><m:mover accent="true"><m:mi>F</m:mi><m:mo>^</m:mo></m:mover><m:mo>→</m:mo><m:mi>F</m:mi></m:mrow></m:math> that is onto all of <m:math overflow="scroll"><m:mrow><m:mi>F</m:mi><m:mo>,</m:mo></m:mrow></m:math> and that satisfies</para>
+    <list id="id72458" display="block" list-type="enumerated">
+      <item id="uid34"> <m:math overflow="scroll"><m:mrow><m:mi>J</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>+</m:mo><m:mi>y</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mi>J</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>+</m:mo><m:mi>J</m:mi><m:mo>(</m:mo><m:mi>y</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid35"> <m:math overflow="scroll"><m:mrow><m:mi>J</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mi>y</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mi>J</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mi>J</m:mi><m:mo>(</m:mo><m:mi>y</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid36">If <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> then <m:math overflow="scroll"><m:mrow><m:mi>J</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>&gt;</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math></item>
+    </list>
+</statement>
+<proof id="fs-id1164770729005">
+    <para id="id72618">We know from <link document="m36082"/> that, inside any ordered field, there is
+a subset that is isomorphic to the field <m:math overflow="scroll"><m:mi>Q</m:mi></m:math> of rational numbers.
+We will therefore identify this special subset of <m:math overflow="scroll"><m:mover accent="true"><m:mi>F</m:mi><m:mo>^</m:mo></m:mover></m:math> with <m:math overflow="scroll"><m:mrow><m:mi>Q</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+    <para id="id72678">If <m:math overflow="scroll"><m:mi>x</m:mi></m:math> is an element of <m:math overflow="scroll"><m:mrow><m:mover accent="true"><m:mi>F</m:mi><m:mo>^</m:mo></m:mover><m:mo>,</m:mo></m:mrow></m:math> let <m:math overflow="scroll"><m:mrow><m:msub><m:mi>A</m:mi><m:mi>x</m:mi></m:msub><m:mo>=</m:mo><m:mrow><m:mo>{</m:mo><m:mi>r</m:mi><m:mo>∈</m:mo><m:mi>Q</m:mi><m:mo>:</m:mo><m:mi>r</m:mi><m:mo>≤</m:mo><m:mi>x</m:mi><m:mo>}</m:mo></m:mrow></m:mrow></m:math>
+and let <m:math overflow="scroll"><m:mrow><m:msub><m:mi>B</m:mi><m:mi>x</m:mi></m:msub><m:mo>=</m:mo><m:mrow><m:mo>{</m:mo><m:mi>r</m:mi><m:mo>∈</m:mo><m:mi>Q</m:mi><m:mo>:</m:mo><m:mi>r</m:mi><m:mo>&gt;</m:mo><m:mi>x</m:mi><m:mo>}</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math>
+We claim first that the pair <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:msub><m:mi>A</m:mi><m:mi>x</m:mi></m:msub><m:mo>,</m:mo><m:msub><m:mi>B</m:mi><m:mi>x</m:mi></m:msub><m:mo>)</m:mo></m:mrow></m:math> is a Dedekind cut.
+Indeed, from the definition of <m:math overflow="scroll"><m:msub><m:mi>A</m:mi><m:mi>x</m:mi></m:msub></m:math> and <m:math overflow="scroll"><m:mrow><m:msub><m:mi>B</m:mi><m:mi>x</m:mi></m:msub><m:mo>,</m:mo></m:mrow></m:math> we see that
+Condition (2), i.e., that each <m:math overflow="scroll"><m:mrow><m:msub><m:mi>a</m:mi><m:mi>x</m:mi></m:msub><m:mo>∈</m:mo><m:msub><m:mi>A</m:mi><m:mi>x</m:mi></m:msub></m:mrow></m:math> is less than or equal to
+each <m:math overflow="scroll"><m:mrow><m:msub><m:mi>b</m:mi><m:mi>x</m:mi></m:msub><m:mo>∈</m:mo><m:msub><m:mi>B</m:mi><m:mi>x</m:mi></m:msub><m:mo>,</m:mo></m:mrow></m:math> holds. To see that Condition (1) also holds, let <m:math overflow="scroll"><m:mi>r</m:mi></m:math>
+be a rational number in <m:math overflow="scroll"><m:mrow><m:mover accent="true"><m:mi>F</m:mi><m:mo>^</m:mo></m:mover><m:mo>.</m:mo></m:mrow></m:math>
+Then, because <m:math overflow="scroll"><m:mover accent="true"><m:mi>F</m:mi><m:mo>^</m:mo></m:mover></m:math> is an ordered field, either <m:math overflow="scroll"><m:mrow><m:mi>r</m:mi><m:mo>≤</m:mo><m:mi>x</m:mi></m:mrow></m:math> or <m:math overflow="scroll"><m:mrow><m:mi>r</m:mi><m:mo>&gt;</m:mo><m:mi>x</m:mi><m:mo>,</m:mo></m:mrow></m:math> i.e., <m:math overflow="scroll"><m:mrow><m:mi>r</m:mi><m:mo>∈</m:mo><m:msub><m:mi>A</m:mi><m:mi>x</m:mi></m:msub></m:mrow></m:math> or <m:math overflow="scroll"><m:mrow><m:mi>r</m:mi><m:mo>∈</m:mo><m:msub><m:mi>B</m:mi><m:mi>x</m:mi></m:msub><m:mo>.</m:mo></m:mrow></m:math>
+Hence, <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:msub><m:mi>A</m:mi><m:mi>x</m:mi></m:msub><m:mo>,</m:mo><m:msub><m:mi>B</m:mi><m:mi>x</m:mi></m:msub><m:mo>)</m:mo></m:mrow></m:math> is a Dedekind cut.</para>
+    <para id="id73062">We define a function <m:math overflow="scroll"><m:mi>J</m:mi></m:math> from <m:math overflow="scroll"><m:mover accent="true"><m:mi>F</m:mi><m:mo>^</m:mo></m:mover></m:math> into <m:math overflow="scroll"><m:mi>F</m:mi></m:math> by setting
+<m:math overflow="scroll"><m:mrow><m:mi>J</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:math> equal to the equivalence class determined by the cut <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:msub><m:mi>A</m:mi><m:mi>x</m:mi></m:msub><m:mo>,</m:mo><m:msub><m:mi>B</m:mi><m:mi>x</m:mi></m:msub><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+We must check several things.</para>
+    <para id="id73146">First of all, <m:math overflow="scroll"><m:mi>J</m:mi></m:math> is one-to-one. Indeed, let <m:math overflow="scroll"><m:mi>x</m:mi></m:math> and <m:math overflow="scroll"><m:mi>y</m:mi></m:math> be elements of <m:math overflow="scroll"><m:mover accent="true"><m:mi>F</m:mi><m:mo>^</m:mo></m:mover></m:math> that are not equal.
+Assume without loss of generality that <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mi>y</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Then, according to <link target-id="" document=""/>, which is a theorem about complete ordered fields and hence applicable to <m:math overflow="scroll"><m:mrow><m:mover accent="true"><m:mi>F</m:mi><m:mo>^</m:mo></m:mover><m:mo>,</m:mo></m:mrow></m:math>, there exist two rational numbers <m:math overflow="scroll"><m:msub><m:mi>r</m:mi><m:mn>1</m:mn></m:msub></m:math> and <m:math overflow="scroll"><m:msub><m:mi>r</m:mi><m:mn>2</m:mn></m:msub></m:math> such that
+<m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:msub><m:mi>r</m:mi><m:mn>1</m:mn></m:msub><m:mo>&lt;</m:mo><m:msub><m:mi>r</m:mi><m:mn>2</m:mn></m:msub><m:mo>&lt;</m:mo><m:mi>y</m:mi><m:mo>,</m:mo></m:mrow></m:math> which implies that
+<m:math overflow="scroll"><m:mrow><m:msub><m:mi>r</m:mi><m:mn>1</m:mn></m:msub><m:mo>∈</m:mo><m:msub><m:mi>B</m:mi><m:mi>x</m:mi></m:msub></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:msub><m:mi>r</m:mi><m:mn>2</m:mn></m:msub><m:mo>∈</m:mo><m:msub><m:mi>A</m:mi><m:mi>y</m:mi></m:msub><m:mo>.</m:mo></m:mrow></m:math>
+Since <m:math overflow="scroll"><m:mrow><m:msub><m:mi>r</m:mi><m:mn>2</m:mn></m:msub><m:mo>&gt;</m:mo><m:msub><m:mi>r</m:mi><m:mn>1</m:mn></m:msub><m:mo>,</m:mo></m:mrow></m:math>
+the cut <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:msub><m:mi>A</m:mi><m:mi>y</m:mi></m:msub><m:mo>,</m:mo><m:msub><m:mi>B</m:mi><m:mi>y</m:mi></m:msub><m:mo>)</m:mo></m:mrow></m:math> is not
+equivalent to the cut <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:msub><m:mi>A</m:mi><m:mi>x</m:mi></m:msub><m:mo>,</m:mo><m:msub><m:mi>B</m:mi><m:mi>x</m:mi></m:msub><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math> and therefore <m:math overflow="scroll"><m:mrow><m:mi>J</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>≠</m:mo><m:mi>J</m:mi><m:mo>(</m:mo><m:mi>y</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math></para>
+    <para id="id73461">Next, we claim that the function <m:math overflow="scroll"><m:mi>J</m:mi></m:math> is onto all of the Dedekind field <m:math overflow="scroll"><m:mrow><m:mi>F</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Indeed, let <m:math overflow="scroll"><m:mi>z</m:mi></m:math> be an element of <m:math overflow="scroll"><m:mrow><m:mi>F</m:mi><m:mo>,</m:mo></m:mrow></m:math> and
+let <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>A</m:mi><m:mo>,</m:mo><m:mi>B</m:mi><m:mo>)</m:mo></m:mrow></m:math> be a Dedekind cut for which <m:math overflow="scroll"><m:mi>z</m:mi></m:math> is the equivalence class determined by <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>A</m:mi><m:mo>,</m:mo><m:mi>B</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Think of <m:math overflow="scroll"><m:mi>A</m:mi></m:math> as a subset of the complete ordered field <m:math overflow="scroll"><m:mrow><m:mover accent="true"><m:mi>F</m:mi><m:mo>^</m:mo></m:mover><m:mo>.</m:mo></m:mrow></m:math> Then
+<m:math overflow="scroll"><m:mi>A</m:mi></m:math> is nonempty and is bounded above.
+In fact, every element of <m:math overflow="scroll"><m:mi>B</m:mi></m:math> is an upper bound of <m:math overflow="scroll"><m:mrow><m:mi>A</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Let <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mo movablelimits="true" form="prefix">sup</m:mo><m:mi>A</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+(Here is another place where we are using the completeness of the field <m:math overflow="scroll"><m:mrow><m:mover accent="true"><m:mi>F</m:mi><m:mo>^</m:mo></m:mover><m:mo>.</m:mo></m:mrow></m:math>)
+We claim that the cut <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>A</m:mi><m:mo>,</m:mo><m:mi>B</m:mi><m:mo>)</m:mo></m:mrow></m:math> is equivalent to the cut <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:msub><m:mi>A</m:mi><m:mi>x</m:mi></m:msub><m:mo>,</m:mo><m:msub><m:mi>B</m:mi><m:mi>x</m:mi></m:msub><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math>
+which will imply that <m:math overflow="scroll"><m:mrow><m:mi>J</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mi>z</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Thus, if <m:math overflow="scroll"><m:mrow><m:msub><m:mi>a</m:mi><m:mi>x</m:mi></m:msub><m:mo>∈</m:mo><m:msub><m:mi>A</m:mi><m:mi>x</m:mi></m:msub><m:mo>,</m:mo></m:mrow></m:math> then <m:math overflow="scroll"><m:mrow><m:msub><m:mi>a</m:mi><m:mi>x</m:mi></m:msub><m:mo>≤</m:mo><m:mi>x</m:mi><m:mo>,</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>≤</m:mo><m:mi>b</m:mi></m:mrow></m:math> for every <m:math overflow="scroll"><m:mrow><m:mi>b</m:mi><m:mo>∈</m:mo><m:mi>B</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+because <m:math overflow="scroll"><m:mi>x</m:mi></m:math> is the least upper bound of <m:math overflow="scroll"><m:mrow><m:mi>A</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Similarly, if <m:math overflow="scroll"><m:mrow><m:mi>a</m:mi><m:mo>∈</m:mo><m:mi>A</m:mi><m:mo>,</m:mo></m:mrow></m:math> then <m:math overflow="scroll"><m:mrow><m:mi>a</m:mi><m:mo>≤</m:mo><m:mi>x</m:mi><m:mo>,</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:msub><m:mi>b</m:mi><m:mi>x</m:mi></m:msub></m:mrow></m:math> for every <m:math overflow="scroll"><m:mrow><m:msub><m:mi>b</m:mi><m:mi>x</m:mi></m:msub><m:mo>∈</m:mo><m:msub><m:mi>B</m:mi><m:mi>x</m:mi></m:msub><m:mo>.</m:mo></m:mrow></m:math>
+This proves that the cuts <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>A</m:mi><m:mo>,</m:mo><m:mi>B</m:mi><m:mo>)</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:msub><m:mi>A</m:mi><m:mi>x</m:mi></m:msub><m:mo>,</m:mo><m:msub><m:mi>B</m:mi><m:mi>x</m:mi></m:msub><m:mo>)</m:mo></m:mrow></m:math> are equivalent, as desired.</para>
+    <para id="id73956">If <m:math overflow="scroll"><m:mi>x</m:mi></m:math> and <m:math overflow="scroll"><m:mi>y</m:mi></m:math> are elements of <m:math overflow="scroll"><m:mrow><m:mover accent="true"><m:mi>F</m:mi><m:mo>^</m:mo></m:mover><m:mo>,</m:mo></m:mrow></m:math>
+and <m:math overflow="scroll"><m:mrow><m:msub><m:mi>b</m:mi><m:mi>x</m:mi></m:msub><m:mo>∈</m:mo><m:msub><m:mi>B</m:mi><m:mi>x</m:mi></m:msub></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:msub><m:mi>b</m:mi><m:mi>y</m:mi></m:msub><m:mo>∈</m:mo><m:msub><m:mi>B</m:mi><m:mi>y</m:mi></m:msub><m:mo>,</m:mo></m:mrow></m:math> then
+<m:math overflow="scroll"><m:mrow><m:msub><m:mi>b</m:mi><m:mi>x</m:mi></m:msub><m:mo>&gt;</m:mo><m:mi>x</m:mi></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:msub><m:mi>b</m:mi><m:mi>y</m:mi></m:msub><m:mo>&gt;</m:mo><m:mi>y</m:mi><m:mo>,</m:mo></m:mrow></m:math> so that <m:math overflow="scroll"><m:mrow><m:msub><m:mi>b</m:mi><m:mi>x</m:mi></m:msub><m:mo>+</m:mo><m:msub><m:mi>b</m:mi><m:mi>y</m:mi></m:msub><m:mo>&gt;</m:mo><m:mi>x</m:mi><m:mo>+</m:mo><m:mi>y</m:mi><m:mo>,</m:mo></m:mrow></m:math> and
+therefore <m:math overflow="scroll"><m:mrow><m:msub><m:mi>b</m:mi><m:mi>x</m:mi></m:msub><m:mo>+</m:mo><m:msub><m:mi>b</m:mi><m:mi>y</m:mi></m:msub><m:mo>∈</m:mo><m:msub><m:mi>B</m:mi><m:mrow><m:mi>x</m:mi><m:mo>+</m:mo><m:mi>y</m:mi></m:mrow></m:msub></m:mrow></m:math> for every <m:math overflow="scroll"><m:mrow><m:msub><m:mi>b</m:mi><m:mi>x</m:mi></m:msub><m:mo>∈</m:mo><m:msub><m:mi>B</m:mi><m:mi>x</m:mi></m:msub></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:msub><m:mi>b</m:mi><m:mi>y</m:mi></m:msub><m:mo>∈</m:mo><m:msub><m:mi>B</m:mi><m:mi>y</m:mi></m:msub><m:mo>.</m:mo></m:mrow></m:math>
+On the other hand, if <m:math overflow="scroll"><m:mrow><m:mi>r</m:mi><m:mo>∈</m:mo><m:msub><m:mi>B</m:mi><m:mrow><m:mi>x</m:mi><m:mo>+</m:mo><m:mi>y</m:mi></m:mrow></m:msub><m:mo>,</m:mo></m:mrow></m:math> then <m:math overflow="scroll"><m:mrow><m:mi>r</m:mi><m:mo>&gt;</m:mo><m:mi>x</m:mi><m:mo>+</m:mo><m:mi>y</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Therefore, <m:math overflow="scroll"><m:mrow><m:mi>r</m:mi><m:mo>-</m:mo><m:mi>x</m:mi><m:mo>&gt;</m:mo><m:mi>y</m:mi><m:mo>,</m:mo></m:mrow></m:math> implying, again by <link target-id="fs-id1167349626367" document="m36094"/>,
+that there exists an element <m:math overflow="scroll"><m:mrow><m:msub><m:mi>b</m:mi><m:mi>y</m:mi></m:msub><m:mo>∈</m:mo><m:msub><m:mi>B</m:mi><m:mi>y</m:mi></m:msub></m:mrow></m:math> such that <m:math overflow="scroll"><m:mrow><m:mi>y</m:mi><m:mo>&lt;</m:mo><m:msub><m:mi>b</m:mi><m:mi>y</m:mi></m:msub><m:mo>&lt;</m:mo><m:mi>r</m:mi><m:mo>-</m:mo><m:mi>x</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+But then <m:math overflow="scroll"><m:mrow><m:mi>r</m:mi><m:mo>-</m:mo><m:msub><m:mi>b</m:mi><m:mi>y</m:mi></m:msub><m:mo>&gt;</m:mo><m:mi>x</m:mi><m:mo>,</m:mo></m:mrow></m:math> which means that <m:math overflow="scroll"><m:mrow><m:mi>r</m:mi><m:mo>-</m:mo><m:msub><m:mi>b</m:mi><m:mi>y</m:mi></m:msub><m:mo>=</m:mo><m:msub><m:mi>b</m:mi><m:mi>x</m:mi></m:msub></m:mrow></m:math> for some <m:math overflow="scroll"><m:mrow><m:msub><m:mi>b</m:mi><m:mi>x</m:mi></m:msub><m:mo>∈</m:mo><m:msub><m:mi>B</m:mi><m:mi>x</m:mi></m:msub><m:mo>.</m:mo></m:mrow></m:math>
+So, <m:math overflow="scroll"><m:mrow><m:mi>r</m:mi><m:mo>=</m:mo><m:msub><m:mi>b</m:mi><m:mi>x</m:mi></m:msub><m:mo>+</m:mo><m:msub><m:mi>b</m:mi><m:mi>y</m:mi></m:msub><m:mo>,</m:mo></m:mrow></m:math> and this shows that <m:math overflow="scroll"><m:mrow><m:msub><m:mi>B</m:mi><m:mrow><m:mi>x</m:mi><m:mo>+</m:mo><m:mi>y</m:mi></m:mrow></m:msub><m:mo>=</m:mo><m:msub><m:mi>b</m:mi><m:mi>x</m:mi></m:msub><m:mo>+</m:mo><m:msub><m:mi>B</m:mi><m:mi>y</m:mi></m:msub><m:mo>.</m:mo></m:mrow></m:math>
+It follows from this that the cuts <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:msub><m:mi>A</m:mi><m:mrow><m:mi>x</m:mi><m:mo>+</m:mo><m:mi>y</m:mi></m:mrow></m:msub><m:mo>,</m:mo><m:msub><m:mi>B</m:mi><m:mrow><m:mi>x</m:mi><m:mo>+</m:mo><m:mi>y</m:mi></m:mrow></m:msub><m:mo>)</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>(</m:mo><m:msub><m:mi>A</m:mi><m:mi>x</m:mi></m:msub><m:mo>,</m:mo><m:msub><m:mi>B</m:mi><m:mi>x</m:mi></m:msub><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mrow><m:mo>(</m:mo><m:msub><m:mi>A</m:mi><m:mi>y</m:mi></m:msub><m:mo>,</m:mo><m:msub><m:mi>B</m:mi><m:mi>y</m:mi></m:msub><m:mo>)</m:mo></m:mrow></m:mrow></m:math> are equal,
+and therefore <m:math overflow="scroll"><m:mrow><m:mi>J</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>+</m:mo><m:mi>y</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mi>J</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>+</m:mo><m:mi>J</m:mi><m:mo>(</m:mo><m:mi>y</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+A consequence of this is that <m:math overflow="scroll"><m:mrow><m:mi>J</m:mi><m:mo>(</m:mo><m:mo>-</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mo>-</m:mo><m:mi>J</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mover accent="true"><m:mi>F</m:mi><m:mo>^</m:mo></m:mover><m:mo>.</m:mo></m:mrow></m:math></para>
+    <para id="id74690">If <m:math overflow="scroll"><m:mi>x</m:mi></m:math> and <m:math overflow="scroll"><m:mi>y</m:mi></m:math> are two positive elements of <m:math overflow="scroll"><m:mrow><m:mover accent="true"><m:mi>F</m:mi><m:mo>^</m:mo></m:mover><m:mo>,</m:mo></m:mrow></m:math> then an argument just like
+the one in the preceding paragraph shows that <m:math overflow="scroll"><m:mrow><m:mi>J</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mi>y</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mi>J</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mi>J</m:mi><m:mo>(</m:mo><m:mi>y</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Then, since <m:math overflow="scroll"><m:mrow><m:mi>J</m:mi><m:mo>(</m:mo><m:mo>-</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mo>-</m:mo><m:mi>J</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math> the fact that <m:math overflow="scroll"><m:mrow><m:mi>J</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mi>y</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mi>J</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mi>J</m:mi><m:mo>(</m:mo><m:mi>y</m:mi><m:mo>)</m:mo></m:mrow></m:math>
+for all <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>,</m:mo><m:mi>y</m:mi><m:mo>∈</m:mo><m:mover accent="true"><m:mi>F</m:mi><m:mo>^</m:mo></m:mover></m:mrow></m:math> follows.</para>
+    <para id="id74866">Finally, if <m:math overflow="scroll"><m:mi>x</m:mi></m:math> is a positive element of <m:math overflow="scroll"><m:mrow><m:mover accent="true"><m:mi>F</m:mi><m:mo>^</m:mo></m:mover><m:mo>,</m:mo></m:mrow></m:math> then the set <m:math overflow="scroll"><m:msub><m:mi>A</m:mi><m:mi>x</m:mi></m:msub></m:math>
+must contain some positive rationals, and hence the cut <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:msub><m:mi>A</m:mi><m:mi>x</m:mi></m:msub><m:mo>,</m:mo><m:msub><m:mi>B</m:mi><m:mi>x</m:mi></m:msub><m:mo>)</m:mo></m:mrow></m:math> is a positive cut,
+implying that <m:math overflow="scroll"><m:mrow><m:mi>J</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>&gt;</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math></para>
+    <para id="id74963">We have verified all the requirements for an isomorphism between the two fields <m:math overflow="scroll"><m:mover accent="true"><m:mi>F</m:mi><m:mo>^</m:mo></m:mover></m:math>
+and <m:math overflow="scroll"><m:mrow><m:mi>F</m:mi><m:mo>,</m:mo></m:mrow></m:math> and the theorem is proved.</para>
+</proof></rule>
+  </content>
+</document>

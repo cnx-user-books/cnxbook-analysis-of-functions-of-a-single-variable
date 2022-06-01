@@ -1,0 +1,395 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML">
+  <title>The Elementary Transcendental Functions</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m36160</md:content-id>
+  <md:title>The Elementary Transcendental Functions</md:title>
+  <md:abstract>This module dives deeper into power series functions, examining their properties, which coefficients in a power series give special properties, which have converging tendencies, and when they are defined everywhere. The exponential function is defined.</md:abstract>
+  <md:uuid>da594f62-d30b-48c7-a0ce-e896f1b509f8</md:uuid>
+</metadata>
+
+<content>
+    <para id="id292047">Having introduced a class of new functions (power series functions),
+we might well expect that some of these will have interesting
+and unexpected properties. So, which sets of coefficients might give us
+an exotic new function?
+Unfortunately, at this point in our development, we haven't much insight into this question.
+It is true, see <link target-id="fs-id1171769766696" document="m36165"/>, that most power series functions that we
+naturally write down have finite radii of convergence.
+Such functions may well be new and fascinating, but as a first example,
+we would prefer to consider a power series function that is defined everywhere,
+i.e., one with an infinite radius of convergence.
+Again revisiting <link target-id="fs-id1171769766696" document="m36165"/>, let us consider the coefficients <m:math overflow="scroll"><m:mrow><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>n</m:mi><m:mo>!</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+This may seem a bit ad hoc, but let's have a look.</para>
+<definition id="fs-id1164708500027"><term/><meaning id="fs-id1164717513627">
+    <para id="id292086">
+Define a power series function, denoted by exp, as follows:</para>
+    <equation id="id292431">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mo form="prefix">exp</m:mo>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>z</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>=</m:mo>
+          <m:munderover>
+            <m:mo>∑</m:mo>
+            <m:mrow>
+              <m:mi>n</m:mi>
+              <m:mo>=</m:mo>
+              <m:mn>0</m:mn>
+            </m:mrow>
+            <m:mi>∞</m:mi>
+          </m:munderover>
+          <m:mfrac>
+            <m:msup>
+              <m:mi>z</m:mi>
+              <m:mi>n</m:mi>
+            </m:msup>
+            <m:mrow>
+              <m:mi>n</m:mi>
+              <m:mo>!</m:mo>
+            </m:mrow>
+          </m:mfrac>
+          <m:mo>.</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id292487">We will call this function, with 20-20 hindsight, the <emphasis effect="italics">exponential function.</emphasis></para>
+</meaning></definition>
+    <para id="id292497">What do we know about this function, apart from the
+fact that it is defined for all complex numbers?
+We certainly do not know that it has anything to do with the function <m:math overflow="scroll"><m:mrow><m:msup><m:mi>e</m:mi><m:mi>z</m:mi></m:msup><m:mo>;</m:mo></m:mrow></m:math>
+that will come in the next chapter.
+We do know what the number <m:math overflow="scroll"><m:mi>e</m:mi></m:math> is, but we do not know how to raise that number to a complex exponent.</para>
+    <para id="id292527">All of the exponential function's coefficients are positive, and so by part (d) of <link target-id="fs-id1171756794069" document="m36165"/>
+exp is not a rational function; it really is something new.
+It is natural to consider the even and odd parts <m:math overflow="scroll"><m:msub><m:mo form="prefix">exp</m:mo><m:mi>e</m:mi></m:msub></m:math> and <m:math overflow="scroll"><m:msub><m:mo form="prefix">exp</m:mo><m:mi>o</m:mi></m:msub></m:math> of this new function.
+And then, considering the constructions in <link target-id="fs-id1171770312646" document="m36165"/>,
+to introduce the alternating versions <m:math overflow="scroll"><m:msubsup><m:mo form="prefix">exp</m:mo><m:mi>e</m:mi><m:mi>a</m:mi></m:msubsup></m:math> and <m:math overflow="scroll"><m:msubsup><m:mo form="prefix">exp</m:mo><m:mi>o</m:mi><m:mi>a</m:mi></m:msubsup></m:math> of them.</para>
+<definition id="fs-id1164716582733"><term/><meaning id="fs-id1164719530972">
+    <para id="id292600">
+Define two power series functions cosh (hyperbolic cosine) and sinh (hyperbolic sine) by</para>
+    <equation id="id292609">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mo form="prefix">cosh</m:mo>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>z</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>=</m:mo>
+          <m:mfrac>
+            <m:mrow>
+              <m:mo form="prefix">exp</m:mo>
+              <m:mo>(</m:mo>
+              <m:mi>z</m:mi>
+              <m:mo>)</m:mo>
+              <m:mo>+</m:mo>
+              <m:mo form="prefix">exp</m:mo>
+              <m:mo>(</m:mo>
+              <m:mo>-</m:mo>
+              <m:mi>z</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mn>2</m:mn>
+          </m:mfrac>
+          <m:mspace width="4.pt"/>
+          <m:mtext>and</m:mtext>
+          <m:mspace width="4.pt"/>
+          <m:mo form="prefix">sinh</m:mo>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>z</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>=</m:mo>
+          <m:mfrac>
+            <m:mrow>
+              <m:mo form="prefix">exp</m:mo>
+              <m:mo>(</m:mo>
+              <m:mi>z</m:mi>
+              <m:mo>)</m:mo>
+              <m:mo>-</m:mo>
+              <m:mo form="prefix">exp</m:mo>
+              <m:mo>(</m:mo>
+              <m:mi>z</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mn>2</m:mn>
+          </m:mfrac>
+          <m:mo>,</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id292894">and two other power series functions cos (cosine) and sin (sine) by</para>
+    <equation id="id292900">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mo form="prefix">cos</m:mo>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>z</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>=</m:mo>
+          <m:mo form="prefix">cosh</m:mo>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>i</m:mi>
+            <m:mi>z</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>=</m:mo>
+          <m:mfrac>
+            <m:mrow>
+              <m:mo form="prefix">exp</m:mo>
+              <m:mo>(</m:mo>
+              <m:mi>i</m:mi>
+              <m:mi>z</m:mi>
+              <m:mo>)</m:mo>
+              <m:mo>+</m:mo>
+              <m:mo form="prefix">exp</m:mo>
+              <m:mo>(</m:mo>
+              <m:mo>-</m:mo>
+              <m:mi>i</m:mi>
+              <m:mi>z</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mn>2</m:mn>
+          </m:mfrac>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id292973">and</para>
+    <equation id="id292978">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mo form="prefix">sin</m:mo>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>z</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>=</m:mo>
+          <m:mo>-</m:mo>
+          <m:mi>i</m:mi>
+          <m:mo form="prefix">sinh</m:mo>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>i</m:mi>
+            <m:mi>z</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>=</m:mo>
+          <m:mfrac>
+            <m:mrow>
+              <m:mo form="prefix">exp</m:mo>
+              <m:mo>(</m:mo>
+              <m:mi>i</m:mi>
+              <m:mi>z</m:mi>
+              <m:mo>)</m:mo>
+              <m:mo>-</m:mo>
+              <m:mo form="prefix">exp</m:mo>
+              <m:mo>(</m:mo>
+              <m:mo>-</m:mo>
+              <m:mi>i</m:mi>
+              <m:mi>z</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mrow>
+              <m:mn>2</m:mn>
+              <m:mi>i</m:mi>
+            </m:mrow>
+          </m:mfrac>
+          <m:mo>.</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id293061">The five functions just defined are called the <emphasis effect="italics">elementary transcendental functions</emphasis>,
+the <m:math overflow="scroll"><m:mo form="prefix">sinh</m:mo></m:math> and <m:math overflow="scroll"><m:mo form="prefix">cosh</m:mo></m:math> functions are called the basic
+<emphasis effect="italics">hyperbolic functions,</emphasis>
+and the sine and cosine functions are called the basic
+<emphasis effect="italics">trigonometric</emphasis> or <emphasis effect="italics">circular functions.</emphasis>
+The connections between the hyperbolic functions
+and hyperbolic geometry, and the connection between the trigonometric functions and circles and triangles, will only emerge in the next chapter.
+From the very definitions, however, we can see
+a connection between the hyperbolic functions and the trigonometric functions.
+It's something like interchanging the roles of the real and imaginary axes.
+This is probably worth some more thought.</para>
+</meaning></definition>
+<exercise id="fs-id1164712718145"><problem id="fs-id1164718458689">
+    <list id="id293120" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid1"> Verify the following equations:
+<equation id="uid2"><m:math overflow="scroll" mode="display"><m:mtable displaystyle="true"><m:mtr><m:mtd columnalign="right"><m:mrow><m:mo form="prefix">exp</m:mo><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow></m:mtd><m:mtd><m:mo>=</m:mo></m:mtd><m:mtd columnalign="left"><m:mrow><m:munderover><m:mo>∑</m:mo><m:mrow><m:mi>n</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow><m:mi>∞</m:mi></m:munderover><m:mfrac><m:msup><m:mi>z</m:mi><m:mi>n</m:mi></m:msup><m:mrow><m:mi>n</m:mi><m:mo>!</m:mo></m:mrow></m:mfrac></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd><m:mo>=</m:mo></m:mtd><m:mtd columnalign="left"><m:mrow><m:mn>1</m:mn><m:mo>+</m:mo><m:mi>z</m:mi><m:mo>+</m:mo><m:mfrac><m:msup><m:mi>z</m:mi><m:mn>2</m:mn></m:msup><m:mrow><m:mn>2</m:mn><m:mo>!</m:mo></m:mrow></m:mfrac><m:mo>+</m:mo><m:mfrac><m:msup><m:mi>z</m:mi><m:mn>3</m:mn></m:msup><m:mrow><m:mn>3</m:mn><m:mo>!</m:mo></m:mrow></m:mfrac><m:mo>+</m:mo><m:mo>...</m:mo><m:mo>+</m:mo><m:mfrac><m:msup><m:mi>z</m:mi><m:mi>k</m:mi></m:msup><m:mrow><m:mi>k</m:mi><m:mo>!</m:mo></m:mrow></m:mfrac><m:mo>+</m:mo><m:mo>...</m:mo><m:mo>,</m:mo></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd><m:mo>=</m:mo></m:mtd><m:mtd columnalign="left"><m:mrow><m:mo form="prefix">cosh</m:mo><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo><m:mo>+</m:mo><m:mo form="prefix">sinh</m:mo><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:mtd></m:mtr></m:mtable></m:math></equation><equation id="uid3"><m:math overflow="scroll" mode="display"><m:mtable displaystyle="true"><m:mtr><m:mtd columnalign="right"><m:mrow><m:mo form="prefix">sin</m:mo><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow></m:mtd><m:mtd><m:mo>=</m:mo></m:mtd><m:mtd columnalign="left"><m:mrow><m:mi>z</m:mi><m:mo>-</m:mo><m:mfrac><m:msup><m:mi>z</m:mi><m:mn>3</m:mn></m:msup><m:mrow><m:mn>3</m:mn><m:mo>!</m:mo></m:mrow></m:mfrac><m:mo>+</m:mo><m:mfrac><m:msup><m:mi>z</m:mi><m:mn>5</m:mn></m:msup><m:mrow><m:mn>5</m:mn><m:mo>!</m:mo></m:mrow></m:mfrac><m:mo>-</m:mo><m:mfrac><m:msup><m:mi>z</m:mi><m:mn>7</m:mn></m:msup><m:mrow><m:mn>7</m:mn><m:mo>!</m:mo></m:mrow></m:mfrac><m:mo>+</m:mo><m:mo>...</m:mo><m:mo>+</m:mo><m:msup><m:mrow><m:mo>(</m:mo><m:mo>-</m:mo><m:mn>1</m:mn><m:mo>)</m:mo></m:mrow><m:mi>k</m:mi></m:msup><m:mfrac><m:msup><m:mi>z</m:mi><m:mrow><m:mn>2</m:mn><m:mi>k</m:mi><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow></m:msup><m:mrow><m:mo>(</m:mo><m:mn>2</m:mn><m:mi>k</m:mi><m:mo>+</m:mo><m:mn>1</m:mn><m:mo>)</m:mo><m:mo>!</m:mo></m:mrow></m:mfrac><m:mo>+</m:mo><m:mo>...</m:mo></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd><m:mo>=</m:mo></m:mtd><m:mtd columnalign="left"><m:mrow><m:munderover><m:mo>∑</m:mo><m:mrow><m:mi>k</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow><m:mi>∞</m:mi></m:munderover><m:msup><m:mrow><m:mo>(</m:mo><m:mo>-</m:mo><m:mn>1</m:mn><m:mo>)</m:mo></m:mrow><m:mi>k</m:mi></m:msup><m:mfrac><m:msup><m:mi>z</m:mi><m:mrow><m:mn>2</m:mn><m:mi>k</m:mi><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow></m:msup><m:mrow><m:mo>(</m:mo><m:mn>2</m:mn><m:mi>k</m:mi><m:mo>+</m:mo><m:mn>1</m:mn><m:mo>)</m:mo><m:mo>!</m:mo></m:mrow></m:mfrac><m:mo>,</m:mo></m:mrow></m:mtd></m:mtr></m:mtable></m:math></equation><equation id="uid4"><m:math overflow="scroll" mode="display"><m:mtable displaystyle="true"><m:mtr><m:mtd columnalign="right"><m:mrow><m:mo form="prefix">cos</m:mo><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow></m:mtd><m:mtd><m:mo>=</m:mo></m:mtd><m:mtd columnalign="left"><m:mrow><m:mn>1</m:mn><m:mo>-</m:mo><m:mfrac><m:msup><m:mi>z</m:mi><m:mn>2</m:mn></m:msup><m:mrow><m:mn>2</m:mn><m:mo>!</m:mo></m:mrow></m:mfrac><m:mo>+</m:mo><m:mfrac><m:msup><m:mi>z</m:mi><m:mn>4</m:mn></m:msup><m:mrow><m:mn>4</m:mn><m:mo>!</m:mo></m:mrow></m:mfrac><m:mo>-</m:mo><m:mfrac><m:msup><m:mi>z</m:mi><m:mn>6</m:mn></m:msup><m:mrow><m:mn>6</m:mn><m:mo>!</m:mo></m:mrow></m:mfrac><m:mo>+</m:mo><m:mo>...</m:mo><m:mo>+</m:mo><m:msup><m:mrow><m:mo>(</m:mo><m:mo>-</m:mo><m:mn>1</m:mn><m:mo>)</m:mo></m:mrow><m:mi>k</m:mi></m:msup><m:mfrac><m:msup><m:mi>z</m:mi><m:mrow><m:mn>2</m:mn><m:mi>k</m:mi></m:mrow></m:msup><m:mrow><m:mo>(</m:mo><m:mn>2</m:mn><m:mi>k</m:mi><m:mo>)</m:mo><m:mo>!</m:mo></m:mrow></m:mfrac><m:mo>+</m:mo><m:mo>...</m:mo></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd><m:mo>=</m:mo></m:mtd><m:mtd columnalign="left"><m:mrow><m:munderover><m:mo>∑</m:mo><m:mrow><m:mi>k</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow><m:mi>∞</m:mi></m:munderover><m:msup><m:mrow><m:mo>(</m:mo><m:mo>-</m:mo><m:mn>1</m:mn><m:mo>)</m:mo></m:mrow><m:mi>k</m:mi></m:msup><m:mfrac><m:msup><m:mi>z</m:mi><m:mrow><m:mn>2</m:mn><m:mi>k</m:mi></m:mrow></m:msup><m:mrow><m:mo>(</m:mo><m:mn>2</m:mn><m:mi>k</m:mi><m:mo>)</m:mo><m:mo>!</m:mo></m:mrow></m:mfrac><m:mo>,</m:mo></m:mrow></m:mtd></m:mtr></m:mtable></m:math></equation><equation id="id293752"><m:math overflow="scroll" mode="display"><m:mrow><m:mo form="prefix">sinh</m:mo><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:munderover><m:mo>∑</m:mo><m:mrow><m:mi>k</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow><m:mi>∞</m:mi></m:munderover><m:mfrac><m:msup><m:mi>z</m:mi><m:mrow><m:mn>2</m:mn><m:mi>k</m:mi><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow></m:msup><m:mrow><m:mo>(</m:mo><m:mn>2</m:mn><m:mi>k</m:mi><m:mo>+</m:mo><m:mn>1</m:mn><m:mo>)</m:mo><m:mo>!</m:mo></m:mrow></m:mfrac><m:mo>,</m:mo></m:mrow></m:math></equation>
+and
+<equation id="id293831"><m:math overflow="scroll" mode="display"><m:mrow><m:mo form="prefix">cosh</m:mo><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:munderover><m:mo>∑</m:mo><m:mrow><m:mi>k</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow><m:mi>∞</m:mi></m:munderover><m:mfrac><m:msup><m:mi>z</m:mi><m:mrow><m:mn>2</m:mn><m:mi>k</m:mi></m:mrow></m:msup><m:mrow><m:mo>(</m:mo><m:mn>2</m:mn><m:mi>k</m:mi><m:mo>)</m:mo><m:mo>!</m:mo></m:mrow></m:mfrac><m:mo>.</m:mo></m:mrow></m:math></equation>
+(These expressions for the elementary transcendental functions are perhaps the
+more familiar ones from a calculus course.)
+</item>
+      <item id="uid5"> Compute the radii of convergence for the elementary transcendental functions.
+HINT: Do not use the Cauchy-Hadamard formula.
+Just figure out for which <m:math overflow="scroll"><m:mi>z</m:mi></m:math>'s the functions are defined.
+</item>
+      <item id="uid6"> Verify that <m:math overflow="scroll"><m:mrow><m:mo form="prefix">exp</m:mo><m:mo>(</m:mo><m:mn>0</m:mn><m:mo>)</m:mo><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>,</m:mo></m:mrow></m:math><m:math overflow="scroll"><m:mrow><m:mo form="prefix">sin</m:mo><m:mo>(</m:mo><m:mn>0</m:mn><m:mo>)</m:mo><m:mo>=</m:mo><m:mo form="prefix">sinh</m:mo><m:mo>(</m:mo><m:mn>0</m:mn><m:mo>)</m:mo><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> and
+<m:math overflow="scroll"><m:mrow><m:mo form="prefix">cos</m:mo><m:mo>(</m:mo><m:mn>0</m:mn><m:mo>)</m:mo><m:mo>=</m:mo><m:mo form="prefix">cosh</m:mo><m:mo>(</m:mo><m:mn>0</m:mn><m:mo>)</m:mo><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid7"> Prove that all five of the elementary transcendental functions are not rational functions.
+</item>
+      <item id="uid8"> Can you explain why <m:math overflow="scroll"><m:mrow><m:msup><m:mo form="prefix">sin</m:mo><m:mn>2</m:mn></m:msup><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:msup><m:mo form="prefix">cos</m:mo><m:mn>2</m:mn></m:msup><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>≡</m:mo><m:mn>1</m:mn><m:mo>?</m:mo></m:mrow></m:math> What about the “ Addition Formula”
+<equation id="id294109"><m:math overflow="scroll" mode="display"><m:mrow><m:mo form="prefix">sin</m:mo><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>+</m:mo><m:mi>w</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mo form="prefix">sin</m:mo><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo><m:mo form="prefix">cos</m:mo><m:mo>(</m:mo><m:mi>w</m:mi><m:mo>)</m:mo><m:mo>+</m:mo><m:mo form="prefix">cos</m:mo><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo><m:mo form="prefix">sin</m:mo><m:mo>(</m:mo><m:mi>w</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math></equation></item>
+    </list>
+</problem></exercise>
+<exercise id="fs-id1164719117949"><problem id="fs-id1164713796678">
+    <list id="id294194" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid9"> Show that the elementary transcendental functions map real numbers to real numbers.
+That is, as functions of a real variable, they are real-valued functions.
+</item>
+      <item id="uid10"> Show that the exponential function exp is not bounded above. Show in fact that, for each nonnegative integer <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>,</m:mo></m:mrow></m:math><m:math overflow="scroll"><m:mrow><m:mo form="prefix">exp</m:mo><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>/</m:mo><m:msup><m:mi>x</m:mi><m:mi>n</m:mi></m:msup></m:mrow></m:math>
+is unbounded.
+Can you show that <m:math overflow="scroll"><m:mrow><m:mo form="prefix">exp</m:mo><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>e</m:mi><m:mi>x</m:mi></m:msup><m:mo>?</m:mo></m:mrow></m:math>
+What, in fact, does <m:math overflow="scroll"><m:msup><m:mi>e</m:mi><m:mi>x</m:mi></m:msup></m:math> mean if <m:math overflow="scroll"><m:mi>x</m:mi></m:math> is an irrational or complex number?
+</item>
+    </list>
+</problem></exercise>
+    <para id="id294314">At this point, we probably need a little fanfare!</para>
+<rule id="fs-id8170501" type="theorem"><title><emphasis effect="bold">THEOREM 3.14159</emphasis> (Definition of <m:math overflow="scroll"><m:mi>π</m:mi></m:math>)</title><statement id="fs-id1164719829915">
+    <para id="id294318">
+There exists a smallest positive number <m:math overflow="scroll"><m:mi>x</m:mi></m:math> for which <m:math overflow="scroll"><m:mrow><m:mo form="prefix">sin</m:mo><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math>
+We will denote this distinguished number <m:math overflow="scroll"><m:mi>x</m:mi></m:math> by the symbol <m:math overflow="scroll"><m:mrow><m:mi>π</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+</statement>
+<proof id="fs-id1164708197200">
+    <para id="id294383">
+First we observe that <m:math overflow="scroll"><m:mrow><m:mo form="prefix">sin</m:mo><m:mo>(</m:mo><m:mn>1</m:mn><m:mo>)</m:mo></m:mrow></m:math> is positive.
+Indeed, the infinite series for <m:math overflow="scroll"><m:mrow><m:mo form="prefix">sin</m:mo><m:mo>(</m:mo><m:mn>1</m:mn><m:mo>)</m:mo></m:mrow></m:math> is alternating.
+It follows from the alternating series test (Theorem 2.18) that
+<m:math overflow="scroll"><m:mrow><m:mo form="prefix">sin</m:mo><m:mo>(</m:mo><m:mn>1</m:mn><m:mo>)</m:mo><m:mo>&gt;</m:mo><m:mn>1</m:mn><m:mo>-</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mn>6</m:mn><m:mo>=</m:mo><m:mn>5</m:mn><m:mo>/</m:mo><m:mn>6</m:mn><m:mo>.</m:mo></m:mrow></m:math></para>
+    <para id="id294466">Next, again using the alternating series test,
+we observe that <m:math overflow="scroll"><m:mrow><m:mo form="prefix">sin</m:mo><m:mo>(</m:mo><m:mn>4</m:mn><m:mo>)</m:mo><m:mo>&lt;</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math>
+Indeed,</para>
+    <equation id="id294494">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mo form="prefix">sin</m:mo>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mn>4</m:mn>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>&lt;</m:mo>
+          <m:mn>4</m:mn>
+          <m:mo>-</m:mo>
+          <m:mfrac>
+            <m:msup>
+              <m:mn>4</m:mn>
+              <m:mn>3</m:mn>
+            </m:msup>
+            <m:mrow>
+              <m:mn>3</m:mn>
+              <m:mo>!</m:mo>
+            </m:mrow>
+          </m:mfrac>
+          <m:mo>+</m:mo>
+          <m:mfrac>
+            <m:msup>
+              <m:mn>4</m:mn>
+              <m:mn>5</m:mn>
+            </m:msup>
+            <m:mrow>
+              <m:mn>5</m:mn>
+              <m:mo>!</m:mo>
+            </m:mrow>
+          </m:mfrac>
+          <m:mo>-</m:mo>
+          <m:mfrac>
+            <m:msup>
+              <m:mn>4</m:mn>
+              <m:mn>7</m:mn>
+            </m:msup>
+            <m:mrow>
+              <m:mn>7</m:mn>
+              <m:mo>!</m:mo>
+            </m:mrow>
+          </m:mfrac>
+          <m:mo>+</m:mo>
+          <m:mfrac>
+            <m:msup>
+              <m:mn>4</m:mn>
+              <m:mn>9</m:mn>
+            </m:msup>
+            <m:mrow>
+              <m:mn>9</m:mn>
+              <m:mo>!</m:mo>
+            </m:mrow>
+          </m:mfrac>
+          <m:mo>≈</m:mo>
+          <m:mo>-</m:mo>
+          <m:mn>0</m:mn>
+          <m:mo>.</m:mo>
+          <m:mn>4553</m:mn>
+          <m:mo>&lt;</m:mo>
+          <m:mn>0</m:mn>
+          <m:mo>.</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id294604">Hence, by the intermediate value theorem, there must exist a number
+<m:math overflow="scroll"><m:mi>c</m:mi></m:math> between 1 and 4 such that <m:math overflow="scroll"><m:mrow><m:mo form="prefix">sin</m:mo><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math>
+So, there is at least one positive number <m:math overflow="scroll"><m:mi>x</m:mi></m:math> such that <m:math overflow="scroll"><m:mrow><m:mo form="prefix">sin</m:mo><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math>
+However, we must show that there is a smallest positive number satisfying this equation.</para>
+    <para id="id294675">Let <m:math overflow="scroll"><m:mi>A</m:mi></m:math> be the set of all <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn></m:mrow></m:math> for which <m:math overflow="scroll"><m:mrow><m:mo form="prefix">sin</m:mo><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math>
+Then <m:math overflow="scroll"><m:mi>A</m:mi></m:math> is a nonempty set of real numbers that is bounded below. Define <m:math overflow="scroll"><m:mrow><m:mi>π</m:mi><m:mo>=</m:mo><m:mo movablelimits="true" form="prefix">inf</m:mo><m:mi>A</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+We need to prove that <m:math overflow="scroll"><m:mrow><m:mo form="prefix">sin</m:mo><m:mo>(</m:mo><m:mi>π</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> and that <m:math overflow="scroll"><m:mrow><m:mi>π</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math>
+Clearly then it will be the smallest positive number <m:math overflow="scroll"><m:mi>x</m:mi></m:math> for which <m:math overflow="scroll"><m:mrow><m:mo form="prefix">sin</m:mo><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math></para>
+    <para id="id294829">By <link target-id="fs-id1172694598035" document="m36157"/>, there exists a sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>x</m:mi><m:mi>k</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> of elements of <m:math overflow="scroll"><m:mi>A</m:mi></m:math>
+such that <m:math overflow="scroll"><m:mrow><m:mi>π</m:mi><m:mo>=</m:mo><m:mo movablelimits="true" form="prefix">lim</m:mo><m:msub><m:mi>x</m:mi><m:mi>k</m:mi></m:msub><m:mo>.</m:mo></m:mrow></m:math> Since <m:math overflow="scroll"><m:mo form="prefix">sin</m:mo></m:math> is continuous at <m:math overflow="scroll"><m:mrow><m:mi>π</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+it follows that <m:math overflow="scroll"><m:mrow><m:mo form="prefix">sin</m:mo><m:mrow><m:mo>(</m:mo><m:mi>π</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mo movablelimits="true" form="prefix">lim</m:mo><m:mo form="prefix">sin</m:mo><m:mrow><m:mo>(</m:mo><m:msub><m:mi>x</m:mi><m:mi>k</m:mi></m:msub><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mo movablelimits="true" form="prefix">lim</m:mo><m:mn>0</m:mn><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math>
+Finally, if <m:math overflow="scroll"><m:mi>π</m:mi></m:math> were equal to 0, then by the
+Identity Theorem, Theorem 3.14, we would have that
+<m:math overflow="scroll"><m:mrow><m:mo form="prefix">sin</m:mo><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>.</m:mo></m:mrow></m:math> Since this is clearly not the
+case, we must have that <m:math overflow="scroll"><m:mrow><m:mi>π</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math></para>
+    <para id="id295029">Hence, <m:math overflow="scroll"><m:mi>π</m:mi></m:math> is the smallest (minimum) positive number <m:math overflow="scroll"><m:mi>x</m:mi></m:math> for which <m:math overflow="scroll"><m:mrow><m:mo form="prefix">sin</m:mo><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math></para>
+</proof></rule>
+    <para id="id295075">As hinted at earlier, the connection between this number <m:math overflow="scroll"><m:mi>π</m:mi></m:math>
+and circles is not at all evident at the moment.
+For instance, you probably will not be able to answer the questions in the next exercise.</para>
+<exercise id="fs-id6625452"><problem id="fs-id7592983">
+    <list id="id295100" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid11"> Can you see why <m:math overflow="scroll"><m:mrow><m:mo form="prefix">sin</m:mo><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>2</m:mn><m:mi>π</m:mi><m:mo>)</m:mo><m:mo>≡</m:mo><m:mo form="prefix">sin</m:mo><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>?</m:mo></m:mrow></m:math>
+That is, is it obvious that <m:math overflow="scroll"><m:mo form="prefix">sin</m:mo></m:math> is a periodic function?
+</item>
+      <item id="uid12"> Can you prove that <m:math overflow="scroll"><m:mrow><m:mo form="prefix">cos</m:mo><m:mo>(</m:mo><m:mi>π</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mo>-</m:mo><m:mn>1</m:mn><m:mo>?</m:mo></m:mrow></m:math></item>
+    </list>
+</problem></exercise>
+<rule id="fs-id1164721269873"><label/><statement id="fs-id1164710647469">
+    <para id="id295207"><emphasis effect="bold">REMARK</emphasis>
+Defining <m:math overflow="scroll"><m:mi>π</m:mi></m:math> to be the smallest positive zero of the sine function
+may strike many people as very much “out of the blue.”
+However, the zeroes of a function are often important numbers. For instance, a zero of the function
+<m:math overflow="scroll"><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>-</m:mo><m:mn>2</m:mn></m:mrow></m:math> is a square root of 2, and that number we know
+was exztremely important to the Greeks as they began the
+study of what real numbers are.
+A zero of the function <m:math overflow="scroll"><m:mrow><m:msup><m:mi>z</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow></m:math> is something whose square is -1, i.e., negative. The idea of a square being
+negative was implausible at first, but is fundamental now, so that the zero of this particular function is critical for our understanding to numbers.
+Very likely, then, the zeroes of any “new” function will be worth studying.
+For instance, we will soon see that, perhaps disappointingly, there are no zeroes for the exponential
+function: <m:math overflow="scroll"><m:mrow><m:mo form="prefix">exp</m:mo><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow></m:math> is never 0.
+Maybe it's even more interesting then that there are zeroes of the sine function.</para>
+</statement></rule>
+    <para id="id295294">The next theorem establishes some familiar facts about the trigonometric functions.</para>
+
+<rule id="fs-id7296231" type="theorem"><statement id="fs-id1164710241673">
+    <list id="id295302" display="block" list-type="enumerated">
+      <item id="uid13"> <m:math overflow="scroll"><m:mrow><m:mo form="prefix">exp</m:mo><m:mo>(</m:mo><m:mi>i</m:mi><m:mi>z</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mo form="prefix">cos</m:mo><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo><m:mo>+</m:mo><m:mi>i</m:mi><m:mo form="prefix">sin</m:mo><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>z</m:mi><m:mo>∈</m:mo><m:mi>C</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid14">Let <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>z</m:mi><m:mi>k</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> be a sequence of complex numbers that converges to 0.
+Then
+<equation id="id295422"><m:math overflow="scroll" mode="display"><m:mrow><m:mo movablelimits="true" form="prefix">lim</m:mo><m:mfrac><m:mrow><m:mo form="prefix">sin</m:mo><m:mo>(</m:mo><m:msub><m:mi>z</m:mi><m:mi>k</m:mi></m:msub><m:mo>)</m:mo></m:mrow><m:msub><m:mi>z</m:mi><m:mi>k</m:mi></m:msub></m:mfrac><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math></equation></item>
+      <item id="uid15">Let <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>z</m:mi><m:mi>k</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> be a sequence of complex numbers that converges to 0. Then
+<equation id="id295505"><m:math overflow="scroll" mode="display"><m:mrow><m:mo movablelimits="true" form="prefix">lim</m:mo><m:mfrac><m:mrow><m:mn>1</m:mn><m:mo>-</m:mo><m:mo form="prefix">cos</m:mo><m:mo>(</m:mo><m:msub><m:mi>z</m:mi><m:mi>k</m:mi></m:msub><m:mo>)</m:mo></m:mrow><m:msubsup><m:mi>z</m:mi><m:mi>k</m:mi><m:mn>2</m:mn></m:msubsup></m:mfrac><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac><m:mo>.</m:mo></m:mrow></m:math></equation></item>
+    </list>
+</statement></rule>
+<exercise id="fs-id1164724530170"><problem id="fs-id1164710337535">
+    <para id="id295566">Prove <link target-id="fs-id7296231"/>.</para>
+    <para id="id295579">HINT: For parts (2) and (3), use <link target-id="fs-id1171787790149" document="m36165"/>.</para>
+</problem></exercise>
+    <!--empty paragraphs get left behind.-->
+  </content>
+</document>

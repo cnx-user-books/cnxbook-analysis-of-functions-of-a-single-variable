@@ -1,0 +1,141 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML">
+  <title>Analytic Functions and Taylor Series</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m36168</md:content-id>
+  <md:title>Analytic Functions and Taylor Series</md:title>
+  <md:abstract>A summary of taylor series functions and their properties, including some practice exercises relating the taylor series to the identity theorem.</md:abstract>
+  <md:uuid>643c6b0f-a4ae-4441-8664-23a5066f59e3</md:uuid>
+</metadata>
+
+<content>
+<definition id="fs-id1170289192849"><term/><meaning id="fs-id1170287751997">
+    <para id="id62159">
+Let <m:math overflow="scroll"><m:mi>S</m:mi></m:math> be a subset of <m:math overflow="scroll"><m:mrow><m:mi>C</m:mi><m:mo>,</m:mo></m:mrow></m:math> let <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>:</m:mo><m:mi>S</m:mi><m:mo>→</m:mo><m:mi>C</m:mi></m:mrow></m:math> be a complex-valued function, and let <m:math overflow="scroll"><m:mi>c</m:mi></m:math> be a point of <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Then <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is said to be <emphasis effect="italics">expandable in a Taylor series around c</emphasis> with radius of convergence <m:math overflow="scroll"><m:mi>r</m:mi></m:math>
+if there exists an <m:math overflow="scroll"><m:mrow><m:mi>r</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn></m:mrow></m:math> such that <m:math overflow="scroll"><m:mrow><m:msub><m:mi>B</m:mi><m:mi>r</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>⊆</m:mo><m:mi>S</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+and <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow></m:math> is given by the formula</para>
+    <equation id="id62834">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mi>f</m:mi>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>z</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>=</m:mo>
+          <m:munderover>
+            <m:mo>∑</m:mo>
+            <m:mrow>
+              <m:mi>n</m:mi>
+              <m:mo>=</m:mo>
+              <m:mn>0</m:mn>
+            </m:mrow>
+            <m:mi>∞</m:mi>
+          </m:munderover>
+          <m:msub>
+            <m:mi>a</m:mi>
+            <m:mi>n</m:mi>
+          </m:msub>
+          <m:msup>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>z</m:mi>
+              <m:mo>-</m:mo>
+              <m:mi>c</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mi>n</m:mi>
+          </m:msup>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id62894">for all <m:math overflow="scroll"><m:mrow><m:mi>z</m:mi><m:mo>∈</m:mo><m:msub><m:mi>B</m:mi><m:mi>r</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></para>
+    <para id="id62926">Let <m:math overflow="scroll"><m:mi>S</m:mi></m:math> be a subset of <m:math overflow="scroll"><m:mrow><m:mi>R</m:mi><m:mo>,</m:mo></m:mrow></m:math> let <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>:</m:mo><m:mi>S</m:mi><m:mo>→</m:mo><m:mi>R</m:mi></m:mrow></m:math> be a real-valued function on <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>,</m:mo></m:mrow></m:math> and let <m:math overflow="scroll"><m:mi>c</m:mi></m:math> be a point of <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Then <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is said to be <emphasis effect="italics">expandable in a Taylor series around c</emphasis> with radius of convergence <m:math overflow="scroll"><m:mi>r</m:mi></m:math>
+if there exists an <m:math overflow="scroll"><m:mrow><m:mi>r</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn></m:mrow></m:math> such that the interval <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>-</m:mo><m:mi>r</m:mi><m:mo>,</m:mo><m:mi>c</m:mi><m:mo>+</m:mo><m:mi>r</m:mi><m:mo>)</m:mo><m:mo>⊆</m:mo><m:mi>S</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+and <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:math> is given by the formula</para>
+    <equation id="id63091">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mi>f</m:mi>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>x</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>=</m:mo>
+          <m:munderover>
+            <m:mo>∑</m:mo>
+            <m:mrow>
+              <m:mi>n</m:mi>
+              <m:mo>=</m:mo>
+              <m:mn>0</m:mn>
+            </m:mrow>
+            <m:mi>∞</m:mi>
+          </m:munderover>
+          <m:msub>
+            <m:mi>a</m:mi>
+            <m:mi>n</m:mi>
+          </m:msub>
+          <m:msup>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>x</m:mi>
+              <m:mo>-</m:mo>
+              <m:mi>c</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mi>n</m:mi>
+          </m:msup>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id63152">for all <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>-</m:mo><m:mi>r</m:mi><m:mo>,</m:mo><m:mi>c</m:mi><m:mo>+</m:mo><m:mi>r</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math></para>
+    <para id="id63189">Suppose <m:math overflow="scroll"><m:mi>S</m:mi></m:math> is an open subset of <m:math overflow="scroll"><m:mrow><m:mi>C</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+A function <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>:</m:mo><m:mi>S</m:mi><m:mo>→</m:mo><m:mi>C</m:mi></m:mrow></m:math> is called
+<emphasis effect="italics">analytic on S</emphasis>
+if it is expandable in a Taylor series
+around every point <m:math overflow="scroll"><m:mi>c</m:mi></m:math> of <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+    <para id="id63266">Suppose <m:math overflow="scroll"><m:mi>S</m:mi></m:math> is an open subset of <m:math overflow="scroll"><m:mrow><m:mi>R</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+A function <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>:</m:mo><m:mi>S</m:mi><m:mo>→</m:mo><m:mi>C</m:mi></m:mrow></m:math> is called
+<emphasis effect="italics">real analytic on S</emphasis>
+if it is expandable in a Taylor series
+around every point <m:math overflow="scroll"><m:mi>c</m:mi></m:math> of <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+</meaning></definition>
+<rule id="fs-id1170297453684" type="theorem"><statement id="fs-id1170293083548">
+    <para id="id63344">
+Suppose <m:math overflow="scroll"><m:mi>S</m:mi></m:math> is a subset of <m:math overflow="scroll"><m:mrow><m:mi>C</m:mi><m:mo>,</m:mo></m:mrow></m:math> that <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>:</m:mo><m:mi>S</m:mi><m:mo>→</m:mo><m:mi>C</m:mi></m:mrow></m:math> is a complex-valued function and that <m:math overflow="scroll"><m:mi>c</m:mi></m:math>
+belongs to <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Assume that <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is expandable in a Taylor series around <m:math overflow="scroll"><m:mi>c</m:mi></m:math> with radius of convergence <m:math overflow="scroll"><m:mrow><m:mi>r</m:mi><m:mo>.</m:mo></m:mrow></m:math> Then
+<m:math overflow="scroll"><m:mi>f</m:mi></m:math> is continuous at each <m:math overflow="scroll"><m:mrow><m:mi>z</m:mi><m:mo>∈</m:mo><m:msub><m:mi>B</m:mi><m:mi>r</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></para>
+    <para id="id63483">Suppose <m:math overflow="scroll"><m:mi>S</m:mi></m:math> is a subset of <m:math overflow="scroll"><m:mrow><m:mi>R</m:mi><m:mo>,</m:mo></m:mrow></m:math> that <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>:</m:mo><m:mi>S</m:mi><m:mo>→</m:mo><m:mi>R</m:mi></m:mrow></m:math> is a real-valued function and that <m:math overflow="scroll"><m:mi>c</m:mi></m:math>
+belongs to <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Assume that <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is expandable in a Taylor series around <m:math overflow="scroll"><m:mi>c</m:mi></m:math> with radius of convergence <m:math overflow="scroll"><m:mrow><m:mi>r</m:mi><m:mo>.</m:mo></m:mrow></m:math> Then
+<m:math overflow="scroll"><m:mi>f</m:mi></m:math> is continuous at each <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>-</m:mo><m:mi>r</m:mi><m:mo>,</m:mo><m:mi>c</m:mi><m:mo>+</m:mo><m:mi>r</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math></para>
+</statement>
+<proof id="fs-id1170288500616">
+    <para id="id63622">If we let <m:math overflow="scroll"><m:mi>g</m:mi></m:math> be the power series function given by <m:math overflow="scroll"><m:mrow><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mo>∑</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:msup><m:mi>z</m:mi><m:mi>n</m:mi></m:msup><m:mo>,</m:mo></m:mrow></m:math>
+and <m:math overflow="scroll"><m:mi>T</m:mi></m:math> be the function defined by <m:math overflow="scroll"><m:mrow><m:mi>T</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mi>z</m:mi><m:mo>-</m:mo><m:mi>c</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+then <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mi>g</m:mi><m:mo>(</m:mo><m:mi>T</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math>
+and this theorem is a consequence of <link target-id="fs-id1166304539489" document="m36150"/> and <link target-id="fs-id1171787790149" document="m36165"/>.</para>
+</proof></rule>
+<exercise id="fs-id1170294169333"><problem id="fs-id1170290223869">
+    <para id="id63744">
+Prove that <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>z</m:mi></m:mrow></m:math> is analytic on its domain.</para>
+    <para id="id63779">HINT: Use <m:math overflow="scroll"><m:mrow><m:mi>r</m:mi><m:mo>=</m:mo><m:mo>|</m:mo><m:mi>c</m:mi><m:mo>|</m:mo><m:mo>,</m:mo></m:mrow></m:math> and then use the infinite geometric series.</para>
+</problem></exercise>
+<exercise id="fs-id4408720"><problem id="fs-id1170288404941">
+    <para id="id63805">State and prove an Identity Theorem, analogous to <link target-id="fs-id1171757680912" document="m36165"/>,
+for functions that are expandable in a Taylor series around a point <m:math overflow="scroll"><m:mrow><m:mi>c</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+</problem></exercise>
+<exercise id="fs-id1170290723117"><problem id="fs-id1170302524144">
+    <list id="id63838" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid1"> Prove that every polynomial is expandable in a Taylor series around every point <m:math overflow="scroll"><m:mrow><m:mi>c</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+HINT: Use the binomial theorem.
+</item>
+      <item id="uid2"> Is the exponential function expandable in a Taylor
+series around the number <m:math overflow="scroll"><m:mrow><m:mo>-</m:mo><m:mn>1</m:mn><m:mo>?</m:mo></m:mrow></m:math></item>
+    </list>
+</problem></exercise>
+  </content>
+</document>

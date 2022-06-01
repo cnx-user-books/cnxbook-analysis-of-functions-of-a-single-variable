@@ -1,0 +1,1322 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML">
+  <title>Consequences of the Fundamental Theorem</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m36211</md:content-id>
+  <md:title>Consequences of the Fundamental Theorem</md:title>
+  <md:abstract>The first two theorems of this section constitute the
+basic “techniques of integration” taught in a calculus course.
+However, the careful formulations of these standard methods of evaluating integrals
+have some subtle points, i.e., some hypotheses.
+Calculus students are rarely told about these details.</md:abstract>
+  <md:uuid>579eb1a4-65be-4183-bb15-b1710888e8c5</md:uuid>
+</metadata>
+
+<content>
+    <para id="id315530">The first two theorems of this section constitute the
+basic “techniques of integration” taught in a calculus course.
+However, the careful formulations of these standard methods of evaluating integrals
+have some subtle points, i.e., some hypotheses.
+Calculus students are rarely told about these details.</para>
+<rule id="fs-id1164788652945" type="theorem"><title>Integration by Parts Formula</title><statement id="fs-id1164788147950">
+    <para id="id315541">
+Let <m:math overflow="scroll"><m:mi>f</m:mi></m:math> and <m:math overflow="scroll"><m:mi>g</m:mi></m:math> be integrable functions on <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>,</m:mo></m:mrow></m:math>
+and as usual let <m:math overflow="scroll"><m:mi>F</m:mi></m:math> and <m:math overflow="scroll"><m:mi>G</m:mi></m:math>
+denote the functions defined by</para>
+    <equation id="id315938">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mi>F</m:mi>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>x</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>=</m:mo>
+          <m:msubsup>
+            <m:mo>∫</m:mo>
+            <m:mi>a</m:mi>
+            <m:mi>x</m:mi>
+          </m:msubsup>
+          <m:mi>f</m:mi>
+          <m:mo>,</m:mo>
+          <m:mspace width="4.pt"/>
+          <m:mtext>and</m:mtext>
+          <m:mspace width="4.pt"/>
+          <m:mi>G</m:mi>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>x</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>=</m:mo>
+          <m:msubsup>
+            <m:mo>∫</m:mo>
+            <m:mi>a</m:mi>
+            <m:mi>x</m:mi>
+          </m:msubsup>
+          <m:mi>g</m:mi>
+          <m:mo>.</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id316008">Then</para>
+    <equation id="id316013">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:msubsup>
+            <m:mo>∫</m:mo>
+            <m:mi>a</m:mi>
+            <m:mi>b</m:mi>
+          </m:msubsup>
+          <m:mi>f</m:mi>
+          <m:mi>G</m:mi>
+          <m:mo>=</m:mo>
+          <m:mrow>
+            <m:mo>[</m:mo>
+            <m:mi>F</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>b</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mi>G</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>b</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>-</m:mo>
+            <m:mi>F</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>a</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mi>G</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>a</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>]</m:mo>
+          </m:mrow>
+          <m:mo>-</m:mo>
+          <m:msubsup>
+            <m:mo>∫</m:mo>
+            <m:mi>a</m:mi>
+            <m:mi>b</m:mi>
+          </m:msubsup>
+          <m:mi>F</m:mi>
+          <m:mi>g</m:mi>
+          <m:mo>.</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id316104">Or, recalling that <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>=</m:mo><m:msup><m:mi>F</m:mi><m:mo>'</m:mo></m:msup></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>g</m:mi><m:mo>=</m:mo><m:msup><m:mi>G</m:mi><m:mo>'</m:mo></m:msup><m:mo>,</m:mo></m:mrow></m:math></para>
+    <equation id="id316147">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:msubsup>
+            <m:mo>∫</m:mo>
+            <m:mi>a</m:mi>
+            <m:mi>b</m:mi>
+          </m:msubsup>
+          <m:msup>
+            <m:mi>F</m:mi>
+            <m:mo>'</m:mo>
+          </m:msup>
+          <m:mi>G</m:mi>
+          <m:mo>=</m:mo>
+          <m:mrow>
+            <m:mo>[</m:mo>
+            <m:mi>F</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>b</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mi>G</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>b</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>-</m:mo>
+            <m:mi>F</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>a</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mi>G</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>a</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>]</m:mo>
+          </m:mrow>
+          <m:mo>-</m:mo>
+          <m:msubsup>
+            <m:mo>∫</m:mo>
+            <m:mi>a</m:mi>
+            <m:mi>b</m:mi>
+          </m:msubsup>
+          <m:mi>F</m:mi>
+          <m:msup>
+            <m:mi>G</m:mi>
+            <m:mo>'</m:mo>
+          </m:msup>
+          <m:mo>.</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+</statement></rule>
+<exercise id="fs-id1164788494230"><problem id="fs-id1164788510610">
+    <list id="id316259" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid1"> Prove the preceding theorem.
+HINT: Replace the upper limit <m:math overflow="scroll"><m:mi>b</m:mi></m:math> by a variable <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>,</m:mo></m:mrow></m:math> and differentiate both sides.
+By the way, how do we know that the functions <m:math overflow="scroll"><m:mrow><m:mi>F</m:mi><m:mi>g</m:mi></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mi>G</m:mi></m:mrow></m:math> are integrable?
+</item>
+      <item id="uid2"> Suppose <m:math overflow="scroll"><m:mi>f</m:mi></m:math> and <m:math overflow="scroll"><m:mi>g</m:mi></m:math> are integrable functions on <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow></m:math> and that
+both <m:math overflow="scroll"><m:msup><m:mi>f</m:mi><m:mo>'</m:mo></m:msup></m:math> and <m:math overflow="scroll"><m:msup><m:mi>g</m:mi><m:mo>'</m:mo></m:msup></m:math> are continuous on <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo></m:mrow></m:math>
+and integrable on <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+(Of course <m:math overflow="scroll"><m:msup><m:mi>f</m:mi><m:mo>'</m:mo></m:msup></m:math> and <m:math overflow="scroll"><m:msup><m:mi>g</m:mi><m:mo>'</m:mo></m:msup></m:math> are not even defined at the endpoints <m:math overflow="scroll"><m:mi>a</m:mi></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>b</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+but they can still be integrable on <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>.</m:mo></m:mrow></m:math> See
+the remark following <link target-id="fs-id1170765565230" document="m36209"/>.)
+Prove that
+<equation id="id316494"><m:math overflow="scroll" mode="display"><m:mrow><m:msubsup><m:mo>∫</m:mo><m:mi>a</m:mi><m:mi>b</m:mi></m:msubsup><m:mi>f</m:mi><m:msup><m:mi>g</m:mi><m:mo>'</m:mo></m:msup><m:mo>=</m:mo><m:mrow><m:mo>[</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>b</m:mi><m:mo>)</m:mo></m:mrow><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>b</m:mi><m:mo>)</m:mo></m:mrow><m:mo>-</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow><m:mo>]</m:mo></m:mrow><m:mo>-</m:mo><m:msubsup><m:mo>∫</m:mo><m:mi>a</m:mi><m:mi>b</m:mi></m:msubsup><m:msup><m:mi>f</m:mi><m:mo>'</m:mo></m:msup><m:mi>g</m:mi><m:mo>.</m:mo></m:mrow></m:math></equation></item>
+    </list>
+</problem></exercise>
+<rule id="fs-id1164787816970" type="theorem"><title>Integration by Substitution</title><statement id="fs-id1164788369311">
+    <para id="id316596">Let <m:math overflow="scroll"><m:mi>f</m:mi></m:math> be a continuous function on <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>,</m:mo></m:mrow></m:math>
+and suppose <m:math overflow="scroll"><m:mi>g</m:mi></m:math> is a continuous, one-to-one function from <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>c</m:mi><m:mo>,</m:mo><m:mi>d</m:mi><m:mo>]</m:mo></m:mrow></m:math> onto <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow></m:math> such that <m:math overflow="scroll"><m:mi>g</m:mi></m:math>
+is continuously differentiable on <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>,</m:mo><m:mi>d</m:mi><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math>
+and such that <m:math overflow="scroll"><m:mrow><m:mi>a</m:mi><m:mo>=</m:mo><m:mi>g</m:mi><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>b</m:mi><m:mo>=</m:mo><m:mi>g</m:mi><m:mo>(</m:mo><m:mi>d</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Assume finally that <m:math overflow="scroll"><m:msup><m:mi>g</m:mi><m:mo>'</m:mo></m:msup></m:math> is integrable on <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>c</m:mi><m:mo>,</m:mo><m:mi>d</m:mi><m:mo>]</m:mo><m:mo>.</m:mo></m:mrow></m:math> Then</para>
+    <equation id="id316776">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:msubsup>
+            <m:mo>∫</m:mo>
+            <m:mi>a</m:mi>
+            <m:mi>b</m:mi>
+          </m:msubsup>
+          <m:mi>f</m:mi>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>t</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mspace width="0.166667em"/>
+          <m:mi>d</m:mi>
+          <m:mi>t</m:mi>
+          <m:mo>=</m:mo>
+          <m:msubsup>
+            <m:mo>∫</m:mo>
+            <m:mi>c</m:mi>
+            <m:mi>d</m:mi>
+          </m:msubsup>
+          <m:mi>f</m:mi>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>g</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>s</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:msup>
+            <m:mi>g</m:mi>
+            <m:mo>'</m:mo>
+          </m:msup>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>s</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mspace width="0.166667em"/>
+          <m:mi>d</m:mi>
+          <m:mi>s</m:mi>
+          <m:mo>.</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+</statement>
+<proof id="fs-id1164788359807">
+    <para id="id317046">
+It follows from our assumptions that the function <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>s</m:mi><m:mo>)</m:mo></m:mrow><m:mo>)</m:mo></m:mrow><m:msup><m:mi>g</m:mi><m:mo>'</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>s</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> is continuous on <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo></m:mrow></m:math> and integrable on <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>c</m:mi><m:mo>,</m:mo><m:mi>d</m:mi><m:mo>]</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+It also follows from our assumptions that <m:math overflow="scroll"><m:mi>g</m:mi></m:math> maps the open interval <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>,</m:mo><m:mi>d</m:mi><m:mo>)</m:mo></m:mrow></m:math> onto the open interval <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+As usual, let <m:math overflow="scroll"><m:mi>F</m:mi></m:math> denote the function on <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow></m:math> defined by
+<m:math overflow="scroll"><m:mrow><m:mi>F</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msubsup><m:mo>∫</m:mo><m:mi>a</m:mi><m:mi>x</m:mi></m:msubsup><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mspace width="0.166667em"/><m:mi>d</m:mi><m:mi>t</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Then, by part (2) of the Fundamental Theorem, <m:math overflow="scroll"><m:mi>F</m:mi></m:math> is differentiable on <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:msup><m:mi>F</m:mi><m:mo>'</m:mo></m:msup><m:mo>=</m:mo><m:mi>f</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Then, by the chain rule, <m:math overflow="scroll"><m:mrow><m:mi>F</m:mi><m:mo>∘</m:mo><m:mi>g</m:mi></m:mrow></m:math> is continuous and differentiable on <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>,</m:mo><m:mi>d</m:mi><m:mo>)</m:mo></m:mrow></m:math>
+and</para>
+    <equation id="id317328">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:msup>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>F</m:mi>
+              <m:mo>∘</m:mo>
+              <m:mi>g</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>'</m:mo>
+          </m:msup>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>s</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>=</m:mo>
+          <m:msup>
+            <m:mi>F</m:mi>
+            <m:mo>'</m:mo>
+          </m:msup>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>g</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>s</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:msup>
+            <m:mi>g</m:mi>
+            <m:mo>'</m:mo>
+          </m:msup>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>s</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>=</m:mo>
+          <m:mi>f</m:mi>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>g</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>s</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:msup>
+            <m:mi>g</m:mi>
+            <m:mo>'</m:mo>
+          </m:msup>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>s</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>.</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id317437">So, by part (3) of the Fundamental Theorem, we have that</para>
+    <equation id="uid3">
+      <m:math overflow="scroll" mode="display">
+        <m:mtable displaystyle="true">
+          <m:mtr>
+            <m:mtd columnalign="right">
+              <m:mrow>
+                <m:msubsup>
+                  <m:mo>∫</m:mo>
+                  <m:mi>c</m:mi>
+                  <m:mi>d</m:mi>
+                </m:msubsup>
+                <m:mi>f</m:mi>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>g</m:mi>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>s</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:msup>
+                  <m:mi>g</m:mi>
+                  <m:mo>'</m:mo>
+                </m:msup>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>s</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mspace width="0.166667em"/>
+                <m:mi>d</m:mi>
+                <m:mi>s</m:mi>
+              </m:mrow>
+            </m:mtd>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:msubsup>
+                  <m:mo>∫</m:mo>
+                  <m:mi>c</m:mi>
+                  <m:mi>d</m:mi>
+                </m:msubsup>
+                <m:msup>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>F</m:mi>
+                    <m:mo>∘</m:mo>
+                    <m:mi>g</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>'</m:mo>
+                </m:msup>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>s</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mspace width="0.166667em"/>
+                <m:mi>d</m:mi>
+                <m:mi>s</m:mi>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>F</m:mi>
+                <m:mo>∘</m:mo>
+                <m:mi>g</m:mi>
+                <m:mo>)</m:mo>
+                <m:mo>(</m:mo>
+                <m:mi>d</m:mi>
+                <m:mo>)</m:mo>
+                <m:mo>-</m:mo>
+                <m:mo>(</m:mo>
+                <m:mi>F</m:mi>
+                <m:mo>∘</m:mo>
+                <m:mi>g</m:mi>
+                <m:mo>)</m:mo>
+                <m:mo>(</m:mo>
+                <m:mi>c</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mi>F</m:mi>
+                <m:mo>(</m:mo>
+                <m:mi>g</m:mi>
+                <m:mo>(</m:mo>
+                <m:mi>d</m:mi>
+                <m:mo>)</m:mo>
+                <m:mo>)</m:mo>
+                <m:mo>-</m:mo>
+                <m:mi>F</m:mi>
+                <m:mo>(</m:mo>
+                <m:mi>g</m:mi>
+                <m:mo>(</m:mo>
+                <m:mi>c</m:mi>
+                <m:mo>)</m:mo>
+                <m:mo>)</m:mo>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mi>F</m:mi>
+                <m:mo>(</m:mo>
+                <m:mi>b</m:mi>
+                <m:mo>)</m:mo>
+                <m:mo>-</m:mo>
+                <m:mi>F</m:mi>
+                <m:mo>(</m:mo>
+                <m:mi>a</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:msubsup>
+                  <m:mo>∫</m:mo>
+                  <m:mi>a</m:mi>
+                  <m:mi>b</m:mi>
+                </m:msubsup>
+                <m:mi>f</m:mi>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>t</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mspace width="0.166667em"/>
+                <m:mi>d</m:mi>
+                <m:mi>t</m:mi>
+                <m:mo>,</m:mo>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+        </m:mtable>
+      </m:math>
+    </equation>
+    <para id="id317719">which finishes the proof.</para>
+</proof></rule>
+<exercise id="fs-id1164791035841"><problem id="fs-id1164788847948">
+    <list id="id317734" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid4"> Prove the “Mean Value Theorem” for integrals:
+If <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is continuous on <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>,</m:mo></m:mrow></m:math> then
+there exists a <m:math overflow="scroll"><m:mrow><m:mi>c</m:mi><m:mo>∈</m:mo><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo></m:mrow></m:math> such that
+<equation id="id317799"><m:math overflow="scroll" mode="display"><m:mrow><m:msubsup><m:mo>∫</m:mo><m:mi>a</m:mi><m:mi>b</m:mi></m:msubsup><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mspace width="0.166667em"/><m:mi>d</m:mi><m:mi>t</m:mi><m:mo>=</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mrow><m:mo>(</m:mo><m:mi>b</m:mi><m:mo>-</m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></equation></item>
+      <item id="uid5"> (Uniform limits of differentiable functions. Compare with <link target-id="fs-id1170921676961" document="m36192"/>.)
+Suppose <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>f</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> is a sequence of continuous functions on a closed interval <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow></m:math>
+that converges pointwise to a function <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Suppose that each derivative <m:math overflow="scroll"><m:msubsup><m:mi>f</m:mi><m:mi>n</m:mi><m:mo>'</m:mo></m:msubsup></m:math> is continuous on the open interval <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math>
+is integrable on the closed interval <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>,</m:mo></m:mrow></m:math>
+and that the sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msubsup><m:mi>f</m:mi><m:mi>n</m:mi><m:mo>'</m:mo></m:msubsup><m:mo>}</m:mo></m:mrow></m:math> converges uniformly to a function <m:math overflow="scroll"><m:mi>g</m:mi></m:math> on <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Prove that <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is differentiable on <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:msup><m:mi>f</m:mi><m:mo>'</m:mo></m:msup><m:mo>=</m:mo><m:mi>g</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+HINT: Let <m:math overflow="scroll"><m:mi>x</m:mi></m:math> be in <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math> and let <m:math overflow="scroll"><m:mi>c</m:mi></m:math> be in the interval <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Justify the following equalities, and use them together with the Fundamental Theorem to make the proof.
+<equation id="id318144"><m:math overflow="scroll" mode="display"><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>-</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mo movablelimits="true" form="prefix">lim</m:mo><m:mrow><m:mo>(</m:mo><m:msub><m:mi>f</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>-</m:mo><m:msub><m:mi>f</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mo movablelimits="true" form="prefix">lim</m:mo><m:msubsup><m:mo>∫</m:mo><m:mi>c</m:mi><m:mi>x</m:mi></m:msubsup><m:msubsup><m:mi>f</m:mi><m:mi>n</m:mi><m:mo>'</m:mo></m:msubsup><m:mo>=</m:mo><m:msubsup><m:mo>∫</m:mo><m:mi>c</m:mi><m:mi>x</m:mi></m:msubsup><m:mi>g</m:mi><m:mo>.</m:mo></m:mrow></m:math></equation></item>
+    </list>
+</problem></exercise>
+    <para id="id318270">We revisit now the Remainder Theorem of Taylor,
+which we first presented in <link target-id="fs-id1170275990129" document="m36204"/>.
+The point is that there is another form of this theorem, the integral form,
+and this version is more powerful in some instances than the original one, e.g., in the general Binomial Theorem below.</para>
+<rule id="fs-id1164791153871" type="theorem"><title>Integral Form of Taylor's Remainder Theorem</title><statement id="fs-id1164789030373">
+    <para id="id318275">
+Let <m:math overflow="scroll"><m:mi>c</m:mi></m:math> be a real number, and let
+<m:math overflow="scroll"><m:mi>f</m:mi></m:math> have <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow></m:math> derivatives on <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>-</m:mo><m:mi>r</m:mi><m:mo>,</m:mo><m:mi>c</m:mi><m:mo>+</m:mo><m:mi>r</m:mi><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math> and suppose that
+<m:math overflow="scroll"><m:mrow><m:msup><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>n</m:mi><m:mo>+</m:mo><m:mn>1</m:mn><m:mo>)</m:mo></m:mrow></m:msup><m:mo>∈</m:mo><m:mi>I</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mo>[</m:mo><m:mi>c</m:mi><m:mo>-</m:mo><m:mi>r</m:mi><m:mo>,</m:mo><m:mi>c</m:mi><m:mo>+</m:mo><m:mi>r</m:mi><m:mo>]</m:mo></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math> Then
+for each <m:math overflow="scroll"><m:mrow><m:mi>c</m:mi><m:mo>&lt;</m:mo><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mi>c</m:mi><m:mo>+</m:mo><m:mi>r</m:mi><m:mo>,</m:mo></m:mrow></m:math></para>
+    <equation id="id318427">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mi>f</m:mi>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>x</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>-</m:mo>
+          <m:msubsup>
+            <m:mi>T</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>f</m:mi>
+              <m:mo>,</m:mo>
+              <m:mi>c</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mi>n</m:mi>
+          </m:msubsup>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>x</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>=</m:mo>
+          <m:msubsup>
+            <m:mo>∫</m:mo>
+            <m:mi>c</m:mi>
+            <m:mi>x</m:mi>
+          </m:msubsup>
+          <m:msup>
+            <m:mi>f</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>n</m:mi>
+              <m:mo>+</m:mo>
+              <m:mn>1</m:mn>
+              <m:mo>)</m:mo>
+            </m:mrow>
+          </m:msup>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>t</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mfrac>
+            <m:msup>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>x</m:mi>
+                <m:mo>-</m:mo>
+                <m:mi>t</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:mi>n</m:mi>
+            </m:msup>
+            <m:mrow>
+              <m:mi>n</m:mi>
+              <m:mo>!</m:mo>
+            </m:mrow>
+          </m:mfrac>
+          <m:mspace width="0.166667em"/>
+          <m:mi>d</m:mi>
+          <m:mi>t</m:mi>
+          <m:mo>,</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id318548">where <m:math overflow="scroll"><m:msubsup><m:mi>T</m:mi><m:mi>f</m:mi><m:mi>n</m:mi></m:msubsup></m:math> denotes the <m:math overflow="scroll"><m:mi>n</m:mi></m:math>th Taylor polynomial for <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+    <para id="id318591">Similarly, for <m:math overflow="scroll"><m:mrow><m:mi>c</m:mi><m:mo>-</m:mo><m:mi>r</m:mi><m:mo>&lt;</m:mo><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mi>c</m:mi><m:mo>,</m:mo></m:mrow></m:math></para>
+    <equation id="id318619">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mi>f</m:mi>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>x</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>-</m:mo>
+          <m:msubsup>
+            <m:mi>T</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>f</m:mi>
+              <m:mo>,</m:mo>
+              <m:mi>c</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mi>n</m:mi>
+          </m:msubsup>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>x</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>=</m:mo>
+          <m:msubsup>
+            <m:mo>∫</m:mo>
+            <m:mi>x</m:mi>
+            <m:mi>c</m:mi>
+          </m:msubsup>
+          <m:msup>
+            <m:mi>f</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>n</m:mi>
+              <m:mo>+</m:mo>
+              <m:mn>1</m:mn>
+              <m:mo>)</m:mo>
+            </m:mrow>
+          </m:msup>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>t</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mfrac>
+            <m:msup>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>x</m:mi>
+                <m:mo>-</m:mo>
+                <m:mi>t</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:mi>n</m:mi>
+            </m:msup>
+            <m:mrow>
+              <m:mi>n</m:mi>
+              <m:mo>!</m:mo>
+            </m:mrow>
+          </m:mfrac>
+          <m:mspace width="0.166667em"/>
+          <m:mi>d</m:mi>
+          <m:mi>t</m:mi>
+          <m:mo>.</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    
+</statement></rule>
+    <exercise id="eip-567"><problem id="eip-127">
+  <para id="eip-625">
+    Prove the preceding theorem.
+  </para>
+<para id="eip-id1164457199741">HINT: Argue by induction on <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>,</m:mo></m:mrow></m:math> and integrate by parts.</para>
+</problem>
+
+</exercise>
+<rule id="fs-id1164789350906"><label/><statement id="fs-id1164788365945">
+    <para id="id318771"><emphasis effect="bold">REMARK</emphasis>
+We return now to the general Binomial Theorem, first studied
+in <link target-id="fs-id1164059448103" document="m36205"/>.
+The proof given there used the derivative form of Taylor's remainder Theorem,
+but we were only able to prove the Binomial Theorem for <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>t</m:mi><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mn>2</m:mn><m:mo>.</m:mo></m:mrow></m:math>
+The theorem below uses the integral form of Taylor's Remainder Theorem in its proof,
+and it gives the full binomial theorem, i.e., for all <m:math overflow="scroll"><m:mi>t</m:mi></m:math> for which <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>t</m:mi><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mn>1</m:mn><m:mo>.</m:mo></m:mrow></m:math></para>
+</statement></rule>
+<rule id="fs-id1164789276017" type="theorem"><title>General Binomial Theorem</title><statement id="fs-id1164788343084">
+    <para id="id318835">
+
+Let <m:math overflow="scroll"><m:mrow><m:mi>α</m:mi><m:mo>=</m:mo><m:mi>a</m:mi><m:mo>+</m:mo><m:mi>b</m:mi><m:mi>i</m:mi></m:mrow></m:math> be a fixed complex number. Then</para>
+    <equation id="id318864">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:msup>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mn>1</m:mn>
+              <m:mo>+</m:mo>
+              <m:mi>t</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mi>α</m:mi>
+          </m:msup>
+          <m:mo>=</m:mo>
+          <m:munderover>
+            <m:mo>∑</m:mo>
+            <m:mrow>
+              <m:mi>k</m:mi>
+              <m:mo>=</m:mo>
+              <m:mn>0</m:mn>
+            </m:mrow>
+            <m:mi>∞</m:mi>
+          </m:munderover>
+          <m:mfenced separators="" open="(" close=")">
+            <m:mfrac linethickness="0pt">
+              <m:mi>α</m:mi>
+              <m:mi>k</m:mi>
+            </m:mfrac>
+          </m:mfenced>
+          <m:msup>
+            <m:mi>t</m:mi>
+            <m:mi>k</m:mi>
+          </m:msup>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id318933">for all <m:math overflow="scroll"><m:mrow><m:mi>t</m:mi><m:mo>∈</m:mo><m:mo>(</m:mo><m:mo>-</m:mo><m:mn>1</m:mn><m:mo>,</m:mo><m:mn>1</m:mn><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math></para>
+</statement>
+<proof id="fs-id1164788876259">
+    <para id="id318966">For clarity, we repeat some of the proof of <link target-id="fs-id1164059448103" document="m36205"/>.
+Given a general <m:math overflow="scroll"><m:mrow><m:mi>α</m:mi><m:mo>=</m:mo><m:mi>a</m:mi><m:mo>+</m:mo><m:mi>b</m:mi><m:mi>i</m:mi><m:mo>,</m:mo></m:mrow></m:math> consider the function <m:math overflow="scroll"><m:mrow><m:mi>g</m:mi><m:mo>:</m:mo><m:mo>(</m:mo><m:mo>-</m:mo><m:mn>1</m:mn><m:mo>,</m:mo><m:mn>1</m:mn><m:mo>)</m:mo><m:mo>→</m:mo><m:mi>C</m:mi></m:mrow></m:math> defined by
+<m:math overflow="scroll"><m:mrow><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mrow><m:mo>(</m:mo><m:mn>1</m:mn><m:mo>+</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mi>α</m:mi></m:msup><m:mo>.</m:mo></m:mrow></m:math> Observe that the <m:math overflow="scroll"><m:mi>n</m:mi></m:math>th derivative of <m:math overflow="scroll"><m:mi>g</m:mi></m:math> is given by</para>
+    <equation id="id319091">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:msup>
+            <m:mi>g</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>n</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+          </m:msup>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>t</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>=</m:mo>
+          <m:mfrac>
+            <m:mrow>
+              <m:mi>α</m:mi>
+              <m:mo>(</m:mo>
+              <m:mi>α</m:mi>
+              <m:mo>-</m:mo>
+              <m:mn>1</m:mn>
+              <m:mo>)</m:mo>
+              <m:mo>...</m:mo>
+              <m:mo>(</m:mo>
+              <m:mi>α</m:mi>
+              <m:mo>-</m:mo>
+              <m:mi>n</m:mi>
+              <m:mo>+</m:mo>
+              <m:mn>1</m:mn>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:msup>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mn>1</m:mn>
+                <m:mo>+</m:mo>
+                <m:mi>t</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:mrow>
+                <m:mi>n</m:mi>
+                <m:mo>-</m:mo>
+                <m:mi>α</m:mi>
+              </m:mrow>
+            </m:msup>
+          </m:mfrac>
+          <m:mo>.</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id319181">Then <m:math overflow="scroll"><m:mrow><m:mi>g</m:mi><m:mo>∈</m:mo><m:msup><m:mi>C</m:mi><m:mi>∞</m:mi></m:msup><m:mrow><m:mo>(</m:mo><m:mrow><m:mo>(</m:mo><m:mo>-</m:mo><m:mn>1</m:mn><m:mo>,</m:mo><m:mn>1</m:mn><m:mo>)</m:mo></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></para>
+    <para id="id319227">For each nonnegative integer <m:math overflow="scroll"><m:mi>k</m:mi></m:math> define</para>
+    <equation id="id319240">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:msub>
+            <m:mi>a</m:mi>
+            <m:mi>k</m:mi>
+          </m:msub>
+          <m:mo>=</m:mo>
+          <m:msup>
+            <m:mi>g</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>k</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+          </m:msup>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mn>0</m:mn>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>/</m:mo>
+          <m:mi>k</m:mi>
+          <m:mo>!</m:mo>
+          <m:mo>=</m:mo>
+          <m:mfrac>
+            <m:mrow>
+              <m:mi>α</m:mi>
+              <m:mo>(</m:mo>
+              <m:mi>α</m:mi>
+              <m:mo>-</m:mo>
+              <m:mn>1</m:mn>
+              <m:mo>)</m:mo>
+              <m:mo>...</m:mo>
+              <m:mo>(</m:mo>
+              <m:mi>α</m:mi>
+              <m:mo>-</m:mo>
+              <m:mi>k</m:mi>
+              <m:mo>+</m:mo>
+              <m:mn>1</m:mn>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mrow>
+              <m:mi>k</m:mi>
+              <m:mo>!</m:mo>
+            </m:mrow>
+          </m:mfrac>
+          <m:mo>=</m:mo>
+          <m:mfenced separators="" open="(" close=")">
+            <m:mfrac linethickness="0pt">
+              <m:mi>α</m:mi>
+              <m:mi>k</m:mi>
+            </m:mfrac>
+          </m:mfenced>
+          <m:mo>,</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id319347">and set <m:math overflow="scroll"><m:mrow><m:mi>h</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msubsup><m:mo>∑</m:mo><m:mrow><m:mi>k</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow><m:mi>∞</m:mi></m:msubsup><m:msub><m:mi>a</m:mi><m:mi>k</m:mi></m:msub><m:msup><m:mi>t</m:mi><m:mi>k</m:mi></m:msup><m:mo>.</m:mo></m:mrow></m:math>
+The radius of convergence for the power series function <m:math overflow="scroll"><m:mi>h</m:mi></m:math> is 1,
+as was shown in <link target-id="fs-id1164057564178" document="m36205"/>.
+We wish to show that <m:math overflow="scroll"><m:mrow><m:mi>g</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mi>h</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mo>-</m:mo><m:mn>1</m:mn><m:mo>&lt;</m:mo><m:mi>t</m:mi><m:mo>&lt;</m:mo><m:mn>1</m:mn><m:mo>.</m:mo></m:mrow></m:math>
+That is, we wish to show that <m:math overflow="scroll"><m:mi>g</m:mi></m:math> is a Taylor series function around 0.
+It will suffice to show that the sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>S</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> of partial sums of the power series function <m:math overflow="scroll"><m:mi>h</m:mi></m:math>
+converges to the function <m:math overflow="scroll"><m:mrow><m:mi>g</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+We note also that the <m:math overflow="scroll"><m:mi>n</m:mi></m:math>th partial sum is just the <m:math overflow="scroll"><m:mi>n</m:mi></m:math>th Taylor polynomial
+<m:math overflow="scroll"><m:msubsup><m:mi>T</m:mi><m:mi>g</m:mi><m:mi>n</m:mi></m:msubsup></m:math> for <m:math overflow="scroll"><m:mrow><m:mi>g</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+    <para id="id319563">Now, fix a <m:math overflow="scroll"><m:mi>t</m:mi></m:math> strictly between 0 and <m:math overflow="scroll"><m:mrow><m:mn>1</m:mn><m:mo>.</m:mo></m:mrow></m:math>
+The argument for <m:math overflow="scroll"><m:mi>t</m:mi></m:math>'s between <m:math overflow="scroll"><m:mrow><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:math> and 0 is completely analogous..
+Choose an <m:math overflow="scroll"><m:mrow><m:mi>ϵ</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn></m:mrow></m:math> for which <m:math overflow="scroll"><m:mrow><m:mi>β</m:mi><m:mo>=</m:mo><m:mo>(</m:mo><m:mn>1</m:mn><m:mo>+</m:mo><m:mi>ϵ</m:mi><m:mo>)</m:mo><m:mi>t</m:mi><m:mo>&lt;</m:mo><m:mn>1</m:mn><m:mo>.</m:mo></m:mrow></m:math>
+We let <m:math overflow="scroll"><m:msub><m:mi>C</m:mi><m:mi>ϵ</m:mi></m:msub></m:math> be a numbers such that
+<m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:mfenced separators="" open="(" close=")"><m:mfrac linethickness="0pt"><m:mi>α</m:mi><m:mi>n</m:mi></m:mfrac></m:mfenced><m:mrow><m:mo>|</m:mo><m:mo>≤</m:mo></m:mrow><m:msub><m:mi>C</m:mi><m:mi>ϵ</m:mi></m:msub><m:msup><m:mrow><m:mo>(</m:mo><m:mn>1</m:mn><m:mo>+</m:mo><m:mi>ϵ</m:mi><m:mo>)</m:mo></m:mrow><m:mi>n</m:mi></m:msup></m:mrow></m:math> for all nonnegative integers <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+See <link target-id="fs-id1164057564178" document="m36205"/>.
+We will also need the following estimate, which can be
+easily deduced as a calculus exercise (See part (d) of <link target-id="fs-id1169864141564" document="m36203"/>.).
+For all <m:math overflow="scroll"><m:mi>s</m:mi></m:math> between 0 and <m:math overflow="scroll"><m:mrow><m:mi>t</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+we have <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>-</m:mo><m:mi>s</m:mi><m:mo>)</m:mo><m:mo>/</m:mo><m:mo>(</m:mo><m:mn>1</m:mn><m:mo>+</m:mo><m:mi>s</m:mi><m:mo>)</m:mo><m:mo>≤</m:mo><m:mi>t</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Note also that, for any <m:math overflow="scroll"><m:mrow><m:mi>s</m:mi><m:mo>∈</m:mo><m:mo>(</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mi>t</m:mi><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math>
+we have <m:math overflow="scroll"><m:mrow><m:msup><m:mrow><m:mo>|</m:mo><m:mrow><m:mo>(</m:mo><m:mn>1</m:mn><m:mo>+</m:mo><m:mi>s</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mi>α</m:mi></m:msup><m:msup><m:mrow><m:mo>|</m:mo><m:mo>=</m:mo><m:mrow><m:mo>(</m:mo><m:mn>1</m:mn><m:mo>+</m:mo><m:mi>s</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mi>a</m:mi></m:msup><m:mo>,</m:mo></m:mrow></m:math>
+and this is trapped between 1 and <m:math overflow="scroll"><m:mrow><m:msup><m:mrow><m:mo>(</m:mo><m:mn>1</m:mn><m:mo>+</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mi>a</m:mi></m:msup><m:mo>.</m:mo></m:mrow></m:math>
+Hence, there exists a number <m:math overflow="scroll"><m:msub><m:mi>M</m:mi><m:mi>t</m:mi></m:msub></m:math> such that <m:math overflow="scroll"><m:mrow><m:msup><m:mrow><m:mo>|</m:mo><m:mrow><m:mo>(</m:mo><m:mn>1</m:mn><m:mo>+</m:mo><m:mi>s</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mrow><m:mi>α</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msup><m:mrow><m:mo>|</m:mo><m:mo>≤</m:mo></m:mrow><m:msub><m:mi>M</m:mi><m:mi>t</m:mi></m:msub></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>s</m:mi><m:mo>∈</m:mo><m:mo>(</m:mo><m:mo>-</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mi>t</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+We will need this estimate in the calculation that follows.</para>
+    <para id="id319993">Then, by the integral form of Taylor's Remainder Theorem, we have:</para>
+    <equation id="uid6">
+      <m:math overflow="scroll" mode="display">
+        <m:mtable displaystyle="true">
+          <m:mtr>
+            <m:mtd columnalign="right">
+              <m:mrow>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                  <m:mi>g</m:mi>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>t</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>-</m:mo>
+                </m:mrow>
+                <m:munderover>
+                  <m:mo>∑</m:mo>
+                  <m:mrow>
+                    <m:mi>k</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mn>0</m:mn>
+                  </m:mrow>
+                  <m:mi>n</m:mi>
+                </m:munderover>
+                <m:msub>
+                  <m:mi>a</m:mi>
+                  <m:mi>k</m:mi>
+                </m:msub>
+                <m:msup>
+                  <m:mi>t</m:mi>
+                  <m:mi>k</m:mi>
+                </m:msup>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                  <m:mi>g</m:mi>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>t</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>-</m:mo>
+                </m:mrow>
+                <m:msubsup>
+                  <m:mi>T</m:mi>
+                  <m:mi>g</m:mi>
+                  <m:mi>n</m:mi>
+                </m:msubsup>
+                <m:mrow>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>t</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:msubsup>
+                  <m:mo>∫</m:mo>
+                  <m:mn>0</m:mn>
+                  <m:mi>t</m:mi>
+                </m:msubsup>
+                <m:msup>
+                  <m:mi>g</m:mi>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>n</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mn>1</m:mn>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                </m:msup>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>s</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mfrac>
+                  <m:msup>
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:mi>t</m:mi>
+                      <m:mo>-</m:mo>
+                      <m:mi>s</m:mi>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                    <m:mi>n</m:mi>
+                  </m:msup>
+                  <m:mrow>
+                    <m:mi>n</m:mi>
+                    <m:mo>!</m:mo>
+                  </m:mrow>
+                </m:mfrac>
+                <m:mrow>
+                  <m:mspace width="0.166667em"/>
+                  <m:mi>d</m:mi>
+                  <m:mi>s</m:mi>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:msubsup>
+                  <m:mo>∫</m:mo>
+                  <m:mn>0</m:mn>
+                  <m:mi>t</m:mi>
+                </m:msubsup>
+                <m:mfenced separators="" open="(" close=")">
+                  <m:mfrac linethickness="0pt">
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:mi>n</m:mi>
+                      <m:mo>+</m:mo>
+                      <m:mn>1</m:mn>
+                      <m:mo>)</m:mo>
+                      <m:mo>×</m:mo>
+                      <m:mi>α</m:mi>
+                    </m:mrow>
+                    <m:mrow>
+                      <m:mi>n</m:mi>
+                      <m:mo>+</m:mo>
+                      <m:mn>1</m:mn>
+                    </m:mrow>
+                  </m:mfrac>
+                </m:mfenced>
+                <m:msup>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mn>1</m:mn>
+                    <m:mo>+</m:mo>
+                    <m:mi>s</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mrow>
+                    <m:mi>α</m:mi>
+                    <m:mo>-</m:mo>
+                    <m:mi>n</m:mi>
+                    <m:mo>-</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                </m:msup>
+                <m:msup>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>t</m:mi>
+                    <m:mo>-</m:mo>
+                    <m:mi>s</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mi>n</m:mi>
+                </m:msup>
+                <m:mrow>
+                  <m:mspace width="0.166667em"/>
+                  <m:mi>d</m:mi>
+                  <m:mi>s</m:mi>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>≤</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:msubsup>
+                  <m:mo>∫</m:mo>
+                  <m:mn>0</m:mn>
+                  <m:mi>t</m:mi>
+                </m:msubsup>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:mfenced separators="" open="(" close=")">
+                  <m:mfrac linethickness="0pt">
+                    <m:mi>α</m:mi>
+                    <m:mrow>
+                      <m:mi>n</m:mi>
+                      <m:mo>+</m:mo>
+                      <m:mn>1</m:mn>
+                    </m:mrow>
+                  </m:mfrac>
+                </m:mfenced>
+                <m:msup>
+                  <m:mrow>
+                    <m:mo>|</m:mo>
+                    <m:mo>|</m:mo>
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:mn>1</m:mn>
+                      <m:mo>+</m:mo>
+                      <m:mi>s</m:mi>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                  </m:mrow>
+                  <m:mrow>
+                    <m:mi>α</m:mi>
+                    <m:mo>-</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                </m:msup>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>n</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mn>1</m:mn>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>|</m:mo>
+                  <m:mo>(</m:mo>
+                </m:mrow>
+                <m:mfrac>
+                  <m:mrow>
+                    <m:mi>t</m:mi>
+                    <m:mo>-</m:mo>
+                    <m:mi>s</m:mi>
+                  </m:mrow>
+                  <m:mrow>
+                    <m:mn>1</m:mn>
+                    <m:mo>+</m:mo>
+                    <m:mi>s</m:mi>
+                  </m:mrow>
+                </m:mfrac>
+                <m:msup>
+                  <m:mrow>
+                    <m:mo>|</m:mo>
+                  </m:mrow>
+                  <m:mi>n</m:mi>
+                </m:msup>
+                <m:mspace width="0.166667em"/>
+                <m:mi>d</m:mi>
+                <m:mi>s</m:mi>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>≤</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:msubsup>
+                  <m:mo>∫</m:mo>
+                  <m:mn>0</m:mn>
+                  <m:mi>t</m:mi>
+                </m:msubsup>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                  <m:mfenced separators="" open="(" close=")">
+                    <m:mfrac linethickness="0pt">
+                      <m:mi>α</m:mi>
+                      <m:mrow>
+                        <m:mi>n</m:mi>
+                        <m:mo>+</m:mo>
+                        <m:mn>1</m:mn>
+                      </m:mrow>
+                    </m:mfrac>
+                  </m:mfenced>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:msub>
+                  <m:mi>M</m:mi>
+                  <m:mi>t</m:mi>
+                </m:msub>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>n</m:mi>
+                  <m:mo>+</m:mo>
+                  <m:mn>1</m:mn>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:msup>
+                  <m:mi>t</m:mi>
+                  <m:mi>n</m:mi>
+                </m:msup>
+                <m:mspace width="0.166667em"/>
+                <m:mi>d</m:mi>
+                <m:mi>s</m:mi>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>≤</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:msub>
+                  <m:mi>C</m:mi>
+                  <m:mi>ϵ</m:mi>
+                </m:msub>
+                <m:msub>
+                  <m:mi>M</m:mi>
+                  <m:mi>t</m:mi>
+                </m:msub>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>n</m:mi>
+                  <m:mo>+</m:mo>
+                  <m:mn>1</m:mn>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:msubsup>
+                  <m:mo>∫</m:mo>
+                  <m:mn>0</m:mn>
+                  <m:mi>t</m:mi>
+                </m:msubsup>
+                <m:msup>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mn>1</m:mn>
+                    <m:mo>+</m:mo>
+                    <m:mi>ϵ</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mrow>
+                    <m:mi>n</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                </m:msup>
+                <m:msup>
+                  <m:mi>t</m:mi>
+                  <m:mi>n</m:mi>
+                </m:msup>
+                <m:mspace width="0.166667em"/>
+                <m:mi>d</m:mi>
+                <m:mi>s</m:mi>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:msub>
+                  <m:mi>C</m:mi>
+                  <m:mi>ϵ</m:mi>
+                </m:msub>
+                <m:msub>
+                  <m:mi>M</m:mi>
+                  <m:mi>t</m:mi>
+                </m:msub>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>n</m:mi>
+                  <m:mo>+</m:mo>
+                  <m:mn>1</m:mn>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:msup>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mn>1</m:mn>
+                    <m:mo>+</m:mo>
+                    <m:mi>ϵ</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mrow>
+                    <m:mi>n</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                </m:msup>
+                <m:msup>
+                  <m:mi>t</m:mi>
+                  <m:mrow>
+                    <m:mi>n</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                </m:msup>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:msub>
+                  <m:mi>C</m:mi>
+                  <m:mi>ϵ</m:mi>
+                </m:msub>
+                <m:msub>
+                  <m:mi>M</m:mi>
+                  <m:mi>t</m:mi>
+                </m:msub>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>n</m:mi>
+                  <m:mo>+</m:mo>
+                  <m:mn>1</m:mn>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:msup>
+                  <m:mi>β</m:mi>
+                  <m:mrow>
+                    <m:mi>n</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                </m:msup>
+                <m:mo>,</m:mo>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+        </m:mtable>
+      </m:math>
+    </equation>
+    <para id="id320726">which tends to 0 as <m:math overflow="scroll"><m:mi>n</m:mi></m:math> goes to <m:math overflow="scroll"><m:mrow><m:mi>∞</m:mi><m:mo>,</m:mo></m:mrow></m:math> because <m:math overflow="scroll"><m:mrow><m:mi>β</m:mi><m:mo>&lt;</m:mo><m:mn>1</m:mn><m:mo>.</m:mo></m:mrow></m:math>
+This completes the proof for <m:math overflow="scroll"><m:mrow><m:mn>0</m:mn><m:mo>&lt;</m:mo><m:mi>t</m:mi><m:mo>&lt;</m:mo><m:mn>1</m:mn><m:mo>.</m:mo></m:mrow></m:math></para>
+</proof></rule>
+    <!--empty paragraphs get left behind.-->
+  </content>
+</document>

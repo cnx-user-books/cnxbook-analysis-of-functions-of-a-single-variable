@@ -1,0 +1,379 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML">
+  <title>A Little Topology</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m36157</md:content-id>
+  <md:title>A Little Topology</md:title>
+  <md:abstract>We now investigate some properties that subsets of <m:math overflow="scroll"><m:mi>R</m:mi></m:math> and <m:math overflow="scroll"><m:mi>C</m:mi></m:math>
+may possess. We will define “closed sets,” “open sets,” and “limit points” of sets.
+These notions are the rudimentary notions of what is called topology.
+As in earlier definitions, these topological ones will be enlightening when we come to continuity.</md:abstract>
+  <md:uuid>3576f28f-8bea-487b-a160-f5c56100b9c0</md:uuid>
+</metadata>
+
+<content>
+    <para id="id258220">We now investigate some properties that subsets of <m:math overflow="scroll"><m:mi>R</m:mi></m:math> and <m:math overflow="scroll"><m:mi>C</m:mi></m:math>
+may possess. We will define “closed sets,” “open sets,” and “limit points” of sets.
+These notions are the rudimentary notions of what is called topology.
+As in earlier definitions, these topological ones will be enlightening when we come to continuity.</para>
+<definition id="fs-id1171765197016"><term/><meaning id="fs-id1171768863003">
+    <para id="id258261">Let <m:math overflow="scroll"><m:mi>S</m:mi></m:math> be a subset of <m:math overflow="scroll"><m:mrow><m:mi>C</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+A complex number <m:math overflow="scroll"><m:mi>x</m:mi></m:math>
+is called a <emphasis effect="italics">limit point</emphasis> of <m:math overflow="scroll"><m:mi>S</m:mi></m:math> if there exists a sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> of elements of <m:math overflow="scroll"><m:mi>S</m:mi></m:math>
+such
+that <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mo movablelimits="true" form="prefix">lim</m:mo><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mo>.</m:mo></m:mrow></m:math></para>
+    <para id="id258705">A set <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>⊆</m:mo><m:mi>C</m:mi></m:mrow></m:math> is called <emphasis effect="italics">closed</emphasis>
+if every limit point of <m:math overflow="scroll"><m:mi>S</m:mi></m:math> belongs to <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math></para></meaning></definition>
+    <para id="id258751">Every limit point of a set of real numbers is a real number.
+Closed intervals <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow></m:math> are examples of closed sets in <m:math overflow="scroll"><m:mrow><m:mi>R</m:mi><m:mo>,</m:mo></m:mrow></m:math> while open intervals and half-open intervals may not be closed sets.
+Similarly, closed disks <m:math overflow="scroll"><m:mover><m:mrow><m:msub><m:mi>B</m:mi><m:mi>r</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>¯</m:mo></m:mover></m:math> of radius <m:math overflow="scroll"><m:mi>r</m:mi></m:math> around a point <m:math overflow="scroll"><m:mi>c</m:mi></m:math> in <m:math overflow="scroll"><m:mi>C</m:mi></m:math>,
+and closed neighborhoods <m:math overflow="scroll"><m:mrow><m:msub><m:mover><m:mi>N</m:mi><m:mo>¯</m:mo></m:mover><m:mi>r</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>S</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> of radius <m:math overflow="scroll"><m:mi>r</m:mi></m:math> around a set <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>⊆</m:mo><m:mi>C</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+are closed sets, while the open disks or open neighborhoods are not closed sets.
+As a first example of a limit point of a set, we give
+the following exercise.</para>
+<exercise id="fs-id1172694598035"><problem id="fs-id1172694608852">
+    <para id="id259086">
+Let <m:math overflow="scroll"><m:mi>S</m:mi></m:math> be a nonempty bounded set of real numbers, and let <m:math overflow="scroll"><m:mrow><m:mi>M</m:mi><m:mo>=</m:mo><m:mo movablelimits="true" form="prefix">sup</m:mo><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Prove that there exists a sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> of elements of <m:math overflow="scroll"><m:mi>S</m:mi></m:math> such that <m:math overflow="scroll"><m:mrow><m:mi>M</m:mi><m:mo>=</m:mo><m:mo movablelimits="true" form="prefix">lim</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>.</m:mo></m:mrow></m:math>
+That is, prove that the supremum of a bounded set of real numbers is a limit point of that set.
+State and prove an analogous result for infs.</para>
+    <para id="id259182">HINT: Use <link target-id="fs-id1170177642504" document="m36085"/>, and let <m:math overflow="scroll"><m:mi>ϵ</m:mi></m:math> run through the numbers <m:math overflow="scroll"><m:mrow><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>n</m:mi><m:mo>.</m:mo></m:mrow></m:math></para></problem></exercise>
+<exercise id="fs-id1172694600042"><problem id="fs-id1172694412708">
+    <list id="id259219" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid1"> Suppose <m:math overflow="scroll"><m:mi>S</m:mi></m:math> is a set of real numbers, and that <m:math overflow="scroll"><m:mrow><m:mi>z</m:mi><m:mo>=</m:mo><m:mi>a</m:mi><m:mo>+</m:mo><m:mi>b</m:mi><m:mi>i</m:mi><m:mo>∈</m:mo><m:mi>C</m:mi></m:mrow></m:math>
+with <m:math overflow="scroll"><m:mrow><m:mi>b</m:mi><m:mo>≠</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math> Show that <m:math overflow="scroll"><m:mi>z</m:mi></m:math> is not a limit point of <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+That is, every limit point of a set of real numbers is a real number.
+HINT: Suppose false; write <m:math overflow="scroll"><m:mrow><m:mi>a</m:mi><m:mo>+</m:mo><m:mi>b</m:mi><m:mi>i</m:mi><m:mo>=</m:mo><m:mo movablelimits="true" form="prefix">lim</m:mo><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mo>,</m:mo></m:mrow></m:math> and make
+use of the positive number <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>b</m:mi><m:mo>|</m:mo><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid2"> Let <m:math overflow="scroll"><m:mi>c</m:mi></m:math> be a complex number, and let
+<m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>=</m:mo><m:msub><m:mover><m:mi>B</m:mi><m:mo>¯</m:mo></m:mover><m:mi>r</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> be the set of all <m:math overflow="scroll"><m:mrow><m:mi>z</m:mi><m:mo>∈</m:mo><m:mi>C</m:mi></m:mrow></m:math> for which <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>z</m:mi><m:mo>-</m:mo><m:mi>c</m:mi><m:mo>|</m:mo><m:mo>≤</m:mo><m:mi>r</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Show that <m:math overflow="scroll"><m:mi>S</m:mi></m:math> is a closed subset of <m:math overflow="scroll"><m:mi>C</m:mi></m:math>.
+HINT: Use part (b) of <link target-id="fs-id1164145165058" document="m36126"/>.
+</item>
+      <item id="uid3"> Show that the open disk <m:math overflow="scroll"><m:mrow><m:msub><m:mi>B</m:mi><m:mi>r</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mn>0</m:mn><m:mo>)</m:mo></m:mrow></m:mrow></m:math> is not a closed set in <m:math overflow="scroll"><m:mi>C</m:mi></m:math> by finding
+a limit point of <m:math overflow="scroll"><m:mrow><m:msub><m:mi>B</m:mi><m:mi>r</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mn>0</m:mn><m:mo>)</m:mo></m:mrow></m:mrow></m:math> that is not in <m:math overflow="scroll"><m:mrow><m:msub><m:mi>B</m:mi><m:mi>r</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mn>0</m:mn><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid4"> State and prove results analogous to parts b and c for
+intervals in <m:math overflow="scroll"><m:mrow><m:mi>R</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid5"> Show that every element <m:math overflow="scroll"><m:mi>x</m:mi></m:math> of a set <m:math overflow="scroll"><m:mi>S</m:mi></m:math> is a limit point of <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid6"> Let <m:math overflow="scroll"><m:mi>S</m:mi></m:math> be a subset of <m:math overflow="scroll"><m:mi>C</m:mi></m:math>, and let <m:math overflow="scroll"><m:mi>x</m:mi></m:math> be a complex number.
+Show that <m:math overflow="scroll"><m:mi>x</m:mi></m:math> is not a limit point of <m:math overflow="scroll"><m:mi>S</m:mi></m:math> if and only if
+there exists a positive number <m:math overflow="scroll"><m:mi>ϵ</m:mi></m:math> such that if <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>y</m:mi><m:mo>-</m:mo><m:mi>x</m:mi><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mi>ϵ</m:mi><m:mo>,</m:mo></m:mrow></m:math> then <m:math overflow="scroll"><m:mi>y</m:mi></m:math> is not in <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+That is, <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>∩</m:mo><m:msub><m:mi>B</m:mi><m:mi>ϵ</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>∅</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+HINT:
+To prove the “ only if” part, argue by contradiction,
+and use the sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>n</m:mi><m:mo>}</m:mo></m:mrow></m:math> as <m:math overflow="scroll"><m:mi>ϵ</m:mi></m:math>'s.
+</item>
+      <item id="uid7"> Let <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> be a sequence of complex numbers, and let <m:math overflow="scroll"><m:mi>S</m:mi></m:math>
+be the set of all the <m:math overflow="scroll"><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub></m:math>'s.
+What is the difference between a cluster point of the sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> and a limit point of the set <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>?</m:mo></m:mrow></m:math></item>
+      <item id="uid8">(h) Prove that the cluster set of a sequence is a closed set.
+HINT: Use parts (e) and (f).
+
+</item>
+    </list>
+</problem></exercise>
+<exercise id="fs-id1172694597136"><problem id="fs-id1172694594447">
+    <list id="id259930" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid9"> Show that the set <m:math overflow="scroll"><m:mi>Q</m:mi></m:math> of all rational numbers is not a closed set.
+Show also that the set of all irrational numbers is not a closed set.
+</item>
+      <item id="uid10"> Show that if <m:math overflow="scroll"><m:mi>S</m:mi></m:math> is a closed subset of <m:math overflow="scroll"><m:mi>R</m:mi></m:math> that contains <m:math overflow="scroll"><m:mrow><m:mi>Q</m:mi><m:mo>,</m:mo></m:mrow></m:math> then <m:math overflow="scroll"><m:mi>S</m:mi></m:math> must equal all of <m:math overflow="scroll"><m:mrow><m:mi>R</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+    </list>
+</problem></exercise>
+    <para id="id260048">Here is another version of the Bolzano-Weierstrass Theorem, this time
+stated in terms of closed sets rather than bounded sequences.</para>
+<rule id="fs-id1172694593561" type="theorem"><statement id="fs-id1172694418266">
+    <para id="id260052">
+Let <m:math overflow="scroll"><m:mi>S</m:mi></m:math> be a bounded and closed subset of <m:math overflow="scroll"><m:mi>C</m:mi></m:math>.
+Then every sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> of elements of <m:math overflow="scroll"><m:mi>S</m:mi></m:math> has a subsequence that converges to an element of <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+</statement>
+<proof id="fs-id1172694605825">
+    <para id="id260124">Let <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> be a sequence in <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Since <m:math overflow="scroll"><m:mi>S</m:mi></m:math> is bounded, we know by <link target-id="fs-id1165799319451" document="m36129"/> that there exists a subsequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>x</m:mi><m:msub><m:mi>n</m:mi><m:mi>k</m:mi></m:msub></m:msub><m:mo>}</m:mo></m:mrow></m:math> of <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> that converges to
+some
+number <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Since each <m:math overflow="scroll"><m:msub><m:mi>x</m:mi><m:msub><m:mi>n</m:mi><m:mi>k</m:mi></m:msub></m:msub></m:math> belongs to <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>,</m:mo></m:mrow></m:math> it follows that <m:math overflow="scroll"><m:mi>x</m:mi></m:math> is a limit point of <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Finally, because <m:math overflow="scroll"><m:mi>S</m:mi></m:math> is a closed subset of <m:math overflow="scroll"><m:mrow><m:mi>C</m:mi><m:mo>,</m:mo></m:mrow></m:math> it then follows that <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+</proof></rule>
+    <para id="id260328">We have defined the concept of a closed set.
+Now let's give the definition of an open set.</para>
+<definition id="fs-id1172694593764"><term/><meaning id="fs-id1172694603049">
+    <para id="id260332">
+Let <m:math overflow="scroll"><m:mi>S</m:mi></m:math> be a subset of <m:math overflow="scroll"><m:mrow><m:mi>C</m:mi><m:mo>.</m:mo></m:mrow></m:math> A point <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mi>S</m:mi></m:mrow></m:math> is
+called an <emphasis effect="italics">interior point</emphasis> of <m:math overflow="scroll"><m:mi>S</m:mi></m:math> if there exists an <m:math overflow="scroll"><m:mrow><m:mi>ϵ</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn></m:mrow></m:math>
+such that the open disk <m:math overflow="scroll"><m:mrow><m:msub><m:mi>B</m:mi><m:mi>ϵ</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> of radius <m:math overflow="scroll"><m:mi>ϵ</m:mi></m:math> around <m:math overflow="scroll"><m:mi>x</m:mi></m:math> is entirely contained in <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+The set of all interior points of <m:math overflow="scroll"><m:mi>S</m:mi></m:math> is denoted by <m:math overflow="scroll"><m:msup><m:mi>S</m:mi><m:mn>0</m:mn></m:msup></m:math>
+and we call <m:math overflow="scroll"><m:msup><m:mi>S</m:mi><m:mn>0</m:mn></m:msup></m:math> the <emphasis effect="italics">interior</emphasis> of <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+    <para id="id260520">A subset <m:math overflow="scroll"><m:mi>S</m:mi></m:math> of <m:math overflow="scroll"><m:mi>C</m:mi></m:math>
+is called an <emphasis effect="italics">open</emphasis> subset of <m:math overflow="scroll"><m:mi>C</m:mi></m:math>
+if every point of <m:math overflow="scroll"><m:mi>S</m:mi></m:math> is an interior point of <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>;</m:mo></m:mrow></m:math>
+i.e., if <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>=</m:mo><m:msup><m:mi>S</m:mi><m:mn>0</m:mn></m:msup><m:mo>.</m:mo></m:mrow></m:math></para>
+    <para id="id260612">Analogously, let <m:math overflow="scroll"><m:mi>S</m:mi></m:math> be a subset of <m:math overflow="scroll"><m:mrow><m:mi>R</m:mi><m:mo>.</m:mo></m:mrow></m:math> A point <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mi>S</m:mi></m:mrow></m:math> is
+called an <emphasis effect="italics">interior point</emphasis> of <m:math overflow="scroll"><m:mi>S</m:mi></m:math> if there exists an <m:math overflow="scroll"><m:mrow><m:mi>ϵ</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn></m:mrow></m:math>
+such that the open interval <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>-</m:mo><m:mi>ϵ</m:mi><m:mo>,</m:mo><m:mi>x</m:mi><m:mo>+</m:mo><m:mi>ϵ</m:mi><m:mo>)</m:mo></m:mrow></m:math>
+is entirely contained in <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Again, we denote the set of all interior points of <m:math overflow="scroll"><m:mi>S</m:mi></m:math> by <m:math overflow="scroll"><m:msup><m:mi>S</m:mi><m:mn>0</m:mn></m:msup></m:math>
+and call <m:math overflow="scroll"><m:msup><m:mi>S</m:mi><m:mn>0</m:mn></m:msup></m:math> the <emphasis effect="italics">interior</emphasis> of <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+    <para id="id260782">A subset <m:math overflow="scroll"><m:mi>S</m:mi></m:math> of <m:math overflow="scroll"><m:mi>R</m:mi></m:math>
+is called an <emphasis effect="italics">open</emphasis> subset of <m:math overflow="scroll"><m:mi>R</m:mi></m:math>
+if every point of <m:math overflow="scroll"><m:mi>S</m:mi></m:math> is an interior point of <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>;</m:mo></m:mrow></m:math>
+i.e., if <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>=</m:mo><m:msup><m:mi>S</m:mi><m:mn>0</m:mn></m:msup><m:mo>.</m:mo></m:mrow></m:math></para>
+</meaning></definition>
+<exercise id="fs-id1172714048005"><problem id="fs-id1172694417946">
+    <list id="id260885" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid11"> Prove that an open interval <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo></m:mrow></m:math> in <m:math overflow="scroll"><m:mi>R</m:mi></m:math> is an
+open subset of <m:math overflow="scroll"><m:mi>R</m:mi></m:math>; i.e., show that every point of <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo></m:mrow></m:math> is an interior point of <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid12"> Prove that any disk <m:math overflow="scroll"><m:mrow><m:msub><m:mi>B</m:mi><m:mi>r</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> is an open subset of <m:math overflow="scroll"><m:mrow><m:mi>C</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Show also that the <emphasis effect="italics">punctured disk</emphasis><m:math overflow="scroll"><m:mrow><m:msubsup><m:mi>B</m:mi><m:mi>r</m:mi><m:mo>'</m:mo></m:msubsup><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> is an open set,
+where <m:math overflow="scroll"><m:mrow><m:msubsup><m:mi>B</m:mi><m:mi>r</m:mi><m:mo>'</m:mo></m:msubsup><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mrow><m:mo>{</m:mo><m:mi>z</m:mi><m:mo>:</m:mo><m:mn>0</m:mn><m:mo>&lt;</m:mo><m:mo>|</m:mo><m:mi>z</m:mi></m:mrow><m:mo>-</m:mo><m:mrow><m:mi>c</m:mi><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mi>r</m:mi><m:mo>}</m:mo><m:mo>,</m:mo></m:mrow></m:mrow></m:math> i.e., evrything in the disk <m:math overflow="scroll"><m:mrow><m:msub><m:mi>B</m:mi><m:mi>r</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> except the central point <m:math overflow="scroll"><m:mrow><m:mi>c</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid13"> Prove that the neighborhood <m:math overflow="scroll"><m:mrow><m:msub><m:mi>N</m:mi><m:mi>r</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>S</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> of radius <m:math overflow="scroll"><m:mi>r</m:mi></m:math> around a set <m:math overflow="scroll"><m:mi>S</m:mi></m:math>
+is an open subset of <m:math overflow="scroll"><m:mrow><m:mi>C</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid14"> Prove that no nonempty subset of <m:math overflow="scroll"><m:mi>R</m:mi></m:math> is an open subset of <m:math overflow="scroll"><m:mrow><m:mi>C</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid15">(e) Prove that the set <m:math overflow="scroll"><m:mi>Q</m:mi></m:math> of all rational numbers is not an open subset of <m:math overflow="scroll"><m:mrow><m:mi>R</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+We have seen in part (a) of <link target-id="fs-id1172694597136"/> that <m:math overflow="scroll"><m:mi>Q</m:mi></m:math> is
+not a closed set. Consequently it is an example of a set that is neither open nor closed.
+Show that the set of all irrational numbers is neither open nor closed.
+</item>
+    </list>
+</problem></exercise>
+    <para id="id261359">We give next a useful application of the Bolzano-Weierstrass Theorem, or more precisely an
+application of <link target-id="fs-id1172694593561"/>.
+This also provides some insight into the structure of open sets.</para>
+<rule id="fs-id1172695221054" type="theorem"><statement id="fs-id1172694588727">
+    <para id="id261364">
+Let <m:math overflow="scroll"><m:mi>S</m:mi></m:math> be a closed and bounded subset of <m:math overflow="scroll"><m:mrow><m:mi>C</m:mi><m:mo>,</m:mo></m:mrow></m:math> and suppose
+<m:math overflow="scroll"><m:mi>S</m:mi></m:math> is a subset of an open set <m:math overflow="scroll"><m:mrow><m:mi>U</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Then there exists an <m:math overflow="scroll"><m:mrow><m:mi>r</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn></m:mrow></m:math> such that the neighborhood <m:math overflow="scroll"><m:mrow><m:msub><m:mi>N</m:mi><m:mi>r</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>S</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> is contained in <m:math overflow="scroll"><m:mrow><m:mi>U</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+That is, every open set containing a closed and bounded set <m:math overflow="scroll"><m:mi>S</m:mi></m:math> actually contains a neighborhood of <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+</statement>
+<proof id="fs-id1172703554293">
+    <para id="id261491">If <m:math overflow="scroll"><m:mi>S</m:mi></m:math> is just a singleton <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:mi>x</m:mi><m:mo>}</m:mo><m:mo>,</m:mo></m:mrow></m:math> then this theorem is asserting nothing more than
+the fact that <m:math overflow="scroll"><m:mi>x</m:mi></m:math> is in the interior of <m:math overflow="scroll"><m:mrow><m:mi>U</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+which it is if <m:math overflow="scroll"><m:mi>U</m:mi></m:math> is an open set.
+However, when <m:math overflow="scroll"><m:mi>S</m:mi></m:math> is an infinite set, then the result is more subtle.
+We argue by contradiction. Thus, suppose there is no such <m:math overflow="scroll"><m:mrow><m:mi>r</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn></m:mrow></m:math>
+for which <m:math overflow="scroll"><m:mrow><m:msub><m:mi>N</m:mi><m:mi>r</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>S</m:mi><m:mo>)</m:mo></m:mrow><m:mo>⊆</m:mo><m:mi>U</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+then for each positive integer <m:math overflow="scroll"><m:mi>n</m:mi></m:math> there must be a point <m:math overflow="scroll"><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub></m:math> that is not in <m:math overflow="scroll"><m:mrow><m:mi>U</m:mi><m:mo>,</m:mo></m:mrow></m:math> and a corresponding point <m:math overflow="scroll"><m:mrow><m:msub><m:mi>y</m:mi><m:mi>n</m:mi></m:msub><m:mo>∈</m:mo><m:mi>S</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+such that <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mo>-</m:mo><m:msub><m:mi>y</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>n</m:mi><m:mo>.</m:mo></m:mrow></m:mrow></m:math> Otherwise, the number <m:math overflow="scroll"><m:mrow><m:mi>r</m:mi><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>n</m:mi></m:mrow></m:math> would satisfy the claim of the theorem.
+Now, because the <m:math overflow="scroll"><m:msub><m:mi>y</m:mi><m:mi>n</m:mi></m:msub></m:math>'s all belong to <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>,</m:mo></m:mrow></m:math> we know from <link target-id="fs-id1172694593561"/> that a subsequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>y</m:mi><m:msub><m:mi>n</m:mi><m:mi>k</m:mi></m:msub></m:msub><m:mo>}</m:mo></m:mrow></m:math> of the sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>y</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math>
+must converge to a number <m:math overflow="scroll"><m:mrow><m:mi>y</m:mi><m:mo>∈</m:mo><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math> Next, we see that</para>
+    <equation id="id261814">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mrow>
+            <m:mo>|</m:mo>
+          </m:mrow>
+          <m:msub>
+            <m:mi>x</m:mi>
+            <m:msub>
+              <m:mi>n</m:mi>
+              <m:mi>k</m:mi>
+            </m:msub>
+          </m:msub>
+          <m:mrow>
+            <m:mo>-</m:mo>
+            <m:mi>y</m:mi>
+            <m:mo>|</m:mo>
+            <m:mo>≤</m:mo>
+            <m:mo>|</m:mo>
+          </m:mrow>
+          <m:msub>
+            <m:mi>x</m:mi>
+            <m:msub>
+              <m:mi>n</m:mi>
+              <m:mi>k</m:mi>
+            </m:msub>
+          </m:msub>
+          <m:mo>-</m:mo>
+          <m:msub>
+            <m:mi>y</m:mi>
+            <m:msub>
+              <m:mi>n</m:mi>
+              <m:mi>k</m:mi>
+            </m:msub>
+          </m:msub>
+          <m:mrow>
+            <m:mo>|</m:mo>
+            <m:mo>+</m:mo>
+            <m:mo>|</m:mo>
+          </m:mrow>
+          <m:msub>
+            <m:mi>y</m:mi>
+            <m:msub>
+              <m:mi>n</m:mi>
+              <m:mi>k</m:mi>
+            </m:msub>
+          </m:msub>
+          <m:mrow>
+            <m:mo>-</m:mo>
+            <m:mi>y</m:mi>
+            <m:mo>|</m:mo>
+            <m:mo>,</m:mo>
+            <m:mo>&lt;</m:mo>
+          </m:mrow>
+          <m:mfrac>
+            <m:mn>1</m:mn>
+            <m:msub>
+              <m:mi>n</m:mi>
+              <m:mi>k</m:mi>
+            </m:msub>
+          </m:mfrac>
+          <m:mo>+</m:mo>
+          <m:mrow>
+            <m:mo>|</m:mo>
+            <m:msub>
+              <m:mi>y</m:mi>
+              <m:msub>
+                <m:mi>n</m:mi>
+                <m:mi>k</m:mi>
+              </m:msub>
+            </m:msub>
+            <m:mo>-</m:mo>
+            <m:mi>y</m:mi>
+            <m:mo>|</m:mo>
+          </m:mrow>
+          <m:mo>,</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id261950">and this quantity tends to 0. Hence, the subsequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>x</m:mi><m:msub><m:mi>n</m:mi><m:mi>k</m:mi></m:msub></m:msub><m:mo>}</m:mo></m:mrow></m:math> of the sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> also converges to <m:math overflow="scroll"><m:mrow><m:mi>y</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+    <para id="id262012">Finally, because <m:math overflow="scroll"><m:mi>y</m:mi></m:math> belongs to <m:math overflow="scroll"><m:mi>S</m:mi></m:math> and hence to the open set <m:math overflow="scroll"><m:mrow><m:mi>U</m:mi><m:mo>,</m:mo></m:mrow></m:math> we know that there must exist an <m:math overflow="scroll"><m:mrow><m:mi>ϵ</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn></m:mrow></m:math> such that the entire
+disk <m:math overflow="scroll"><m:mrow><m:msub><m:mi>B</m:mi><m:mi>ϵ</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>y</m:mi><m:mo>)</m:mo></m:mrow><m:mo>⊆</m:mo><m:mi>U</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Then, since the subsequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>x</m:mi><m:msub><m:mi>n</m:mi><m:mi>k</m:mi></m:msub></m:msub><m:mo>}</m:mo></m:mrow></m:math> converges
+to <m:math overflow="scroll"><m:mrow><m:mi>y</m:mi><m:mo>,</m:mo></m:mrow></m:math> there must exist a<m:math overflow="scroll"><m:msub><m:mi>n</m:mi><m:mi>k</m:mi></m:msub></m:math> such that <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msub><m:mi>x</m:mi><m:msub><m:mi>n</m:mi><m:mi>k</m:mi></m:msub></m:msub><m:mrow><m:mo>-</m:mo><m:mi>y</m:mi><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mi>ϵ</m:mi><m:mo>,</m:mo></m:mrow></m:mrow></m:math> implying that
+<m:math overflow="scroll"><m:mrow><m:msub><m:mi>x</m:mi><m:msub><m:mi>n</m:mi><m:mi>k</m:mi></m:msub></m:msub><m:mo>∈</m:mo><m:msub><m:mi>B</m:mi><m:mi>ϵ</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>y</m:mi><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> and hence belongs to
+<m:math overflow="scroll"><m:mrow><m:mi>U</m:mi><m:mo>.</m:mo></m:mrow></m:math> But this is our contradiction, because all of the <m:math overflow="scroll"><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub></m:math>'s were not in <m:math overflow="scroll"><m:mrow><m:mi>U</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+So, the theorem is proved.</para>
+</proof></rule>
+    <para id="id262259">We give next a result that clarifies to some extent the connection between open sets and closed sets.
+Always remember that there are sets that are neither open nor closed, and just because a set is not open
+<emphasis effect="bold">does not</emphasis> mean that it is closed.</para>
+<rule id="fs-id1172694598986" type="theorem"><statement id="fs-id1172694808596">
+<para id="fs-id1172694599426">
+ A subset <m:math overflow="scroll"><m:mi>S</m:mi></m:math> of <m:math overflow="scroll"><m:mi>C</m:mi></m:math> (<m:math overflow="scroll"><m:mi>R</m:mi></m:math>) is open
+if and only if its complement <m:math overflow="scroll"><m:mrow><m:mover accent="true"><m:mi>S</m:mi><m:mo>˜</m:mo></m:mover><m:mo>=</m:mo><m:mi>C</m:mi><m:mo>∖</m:mo><m:mi>S</m:mi></m:mrow></m:math>
+(<m:math overflow="scroll"><m:mrow><m:mi>R</m:mi><m:mo>∖</m:mo><m:mi>S</m:mi></m:mrow></m:math>) is closed.</para>
+</statement>
+<proof id="fs-id1172694605119">
+    <para id="id262372">
+First, assume that <m:math overflow="scroll"><m:mi>S</m:mi></m:math> is open, and let us show that <m:math overflow="scroll"><m:mover accent="true"><m:mi>S</m:mi><m:mo>˜</m:mo></m:mover></m:math> is closed.
+Suppose not. We will derive a contradiction.
+Suppose then that there is a sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> of elements of <m:math overflow="scroll"><m:mover accent="true"><m:mi>S</m:mi><m:mo>˜</m:mo></m:mover></m:math> that converges to a number
+<m:math overflow="scroll"><m:mi>x</m:mi></m:math> that is not in <m:math overflow="scroll"><m:mrow><m:mover accent="true"><m:mi>S</m:mi><m:mo>˜</m:mo></m:mover><m:mo>;</m:mo></m:mrow></m:math> i.e., <m:math overflow="scroll"><m:mi>x</m:mi></m:math> is an element of <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Since every element of <m:math overflow="scroll"><m:mi>S</m:mi></m:math> is an interior point of <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>,</m:mo></m:mrow></m:math> there
+must exist an <m:math overflow="scroll"><m:mrow><m:mi>ϵ</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn></m:mrow></m:math> such that the entire disk <m:math overflow="scroll"><m:mrow><m:msub><m:mi>B</m:mi><m:mi>ϵ</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> (or interval <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>-</m:mo><m:mi>ϵ</m:mi><m:mo>,</m:mo><m:mi>x</m:mi><m:mo>+</m:mo><m:mi>ϵ</m:mi><m:mo>)</m:mo></m:mrow></m:math>) is a subset of <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Now, since <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mo movablelimits="true" form="prefix">lim</m:mo><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mo>,</m:mo></m:mrow></m:math> there must exist an<m:math overflow="scroll"><m:mi>N</m:mi></m:math> such that <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mo>-</m:mo><m:mi>x</m:mi><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mi>ϵ</m:mi></m:mrow></m:mrow></m:math>
+for every <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>≥</m:mo><m:mi>N</m:mi><m:mo>.</m:mo></m:mrow></m:math> In
+particular, <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msub><m:mi>x</m:mi><m:mi>N</m:mi></m:msub><m:mrow><m:mo>-</m:mo><m:mi>x</m:mi><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mi>ϵ</m:mi><m:mo>;</m:mo></m:mrow></m:mrow></m:math> i.e., <m:math overflow="scroll"><m:msub><m:mi>x</m:mi><m:mi>N</m:mi></m:msub></m:math> belongs to <m:math overflow="scroll"><m:mrow><m:msub><m:mi>B</m:mi><m:mi>ϵ</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> (or <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>-</m:mo><m:mi>ϵ</m:mi><m:mo>,</m:mo><m:mi>x</m:mi><m:mo>+</m:mo><m:mi>ϵ</m:mi><m:mo>)</m:mo></m:mrow></m:math>).
+This implies that <m:math overflow="scroll"><m:mrow><m:msub><m:mi>x</m:mi><m:mi>N</m:mi></m:msub><m:mo>∈</m:mo><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math> But <m:math overflow="scroll"><m:mrow><m:msub><m:mi>x</m:mi><m:mi>N</m:mi></m:msub><m:mo>∈</m:mo><m:mover accent="true"><m:mi>S</m:mi><m:mo>˜</m:mo></m:mover><m:mo>,</m:mo></m:mrow></m:math> and this is a contradiction.
+Hence, if <m:math overflow="scroll"><m:mi>S</m:mi></m:math> is open, then <m:math overflow="scroll"><m:mover accent="true"><m:mi>S</m:mi><m:mo>˜</m:mo></m:mover></m:math> is closed.</para>
+    <para id="id262844">Conversely, assume that <m:math overflow="scroll"><m:mover accent="true"><m:mi>S</m:mi><m:mo>˜</m:mo></m:mover></m:math> is closed, and let us show that <m:math overflow="scroll"><m:mi>S</m:mi></m:math> must be open.
+Again we argue by contradiction.
+Thus, assuming that <m:math overflow="scroll"><m:mi>S</m:mi></m:math> is not open, there must exist a point <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mi>S</m:mi></m:mrow></m:math>
+that is not an interior point of <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math> Hence, for every <m:math overflow="scroll"><m:mrow><m:mi>ϵ</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn></m:mrow></m:math>
+the disk <m:math overflow="scroll"><m:mrow><m:msub><m:mi>B</m:mi><m:mi>ϵ</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> (or interval <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>-</m:mo><m:mi>ϵ</m:mi><m:mo>,</m:mo><m:mi>x</m:mi><m:mo>+</m:mo><m:mi>ϵ</m:mi><m:mo>)</m:mo></m:mrow></m:math>) is not entirely contained in <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+So, for each positive integer <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>,</m:mo></m:mrow></m:math> there must exist a point
+<m:math overflow="scroll"><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub></m:math> such that <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mo>-</m:mo><m:mi>x</m:mi><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>n</m:mi></m:mrow></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mo>∉</m:mo><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+It follows then that <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mo movablelimits="true" form="prefix">lim</m:mo><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mo>,</m:mo></m:mrow></m:math> and that each <m:math overflow="scroll"><m:mrow><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mo>∈</m:mo><m:mover accent="true"><m:mi>S</m:mi><m:mo>˜</m:mo></m:mover><m:mo>.</m:mo></m:mrow></m:math>
+Since <m:math overflow="scroll"><m:mover accent="true"><m:mi>S</m:mi><m:mo>˜</m:mo></m:mover></m:math> is a closed set, we must have that <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mover accent="true"><m:mi>S</m:mi><m:mo>˜</m:mo></m:mover><m:mo>.</m:mo></m:mrow></m:math>
+But <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mi>S</m:mi><m:mo>,</m:mo></m:mrow></m:math> and we have arrived at the desired contradiction.
+Hence, if <m:math overflow="scroll"><m:mover accent="true"><m:mi>S</m:mi><m:mo>˜</m:mo></m:mover></m:math> is closed, then <m:math overflow="scroll"><m:mi>S</m:mi></m:math> is open,
+and the theorem is proved.</para>
+</proof></rule>
+    <para id="id263206">The theorem below, the famous Heine-Borel Theorem,
+gives an equivalent and different description of closed and bounded sets.
+This description is in terms of open sets, whereas the original definitions
+were interms of limit points.
+Any time we can find two very different descriptions of the same phenomenon, we have
+found something useful.</para>
+<definition id="fs-id1172694808760"><term/><meaning id="fs-id1172694593071">
+    <para id="id263212">
+Let <m:math overflow="scroll"><m:mi>S</m:mi></m:math> be a subset of <m:math overflow="scroll"><m:mi>C</m:mi></m:math> (respectively <m:math overflow="scroll"><m:mrow><m:mi>R</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math> By an <emphasis effect="italics">open cover</emphasis>
+of <m:math overflow="scroll"><m:mi>S</m:mi></m:math> we mean a sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>U</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> of open subsets of <m:math overflow="scroll"><m:mi>C</m:mi></m:math> (respectively <m:math overflow="scroll"><m:mi>R</m:mi></m:math>)
+such that <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>⊆</m:mo><m:mo>∪</m:mo><m:msub><m:mi>U</m:mi><m:mi>n</m:mi></m:msub><m:mo>;</m:mo></m:mrow></m:math>
+i.e., for every <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mi>S</m:mi></m:mrow></m:math>there exists an <m:math overflow="scroll"><m:mi>n</m:mi></m:math> such that <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:msub><m:mi>U</m:mi><m:mi>n</m:mi></m:msub><m:mo>.</m:mo></m:mrow></m:math></para>
+    <para id="id263403">A subset <m:math overflow="scroll"><m:mi>S</m:mi></m:math> of <m:math overflow="scroll"><m:mi>C</m:mi></m:math> (respectively <m:math overflow="scroll"><m:mi>R</m:mi></m:math>)
+is called <emphasis effect="italics">compact</emphasis>,
+or is said to satisfy the
+<emphasis effect="italics">Heine-Borel property</emphasis>, if every open cover of <m:math overflow="scroll"><m:mi>S</m:mi></m:math>
+has a finite subcover. That is, if <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>U</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math>
+is an open cover of <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>,</m:mo></m:mrow></m:math> then there exists an integer <m:math overflow="scroll"><m:mi>N</m:mi></m:math> such that
+<m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>⊆</m:mo><m:msubsup><m:mo>∪</m:mo><m:mrow><m:mi>n</m:mi><m:mo>=</m:mo><m:mn>1</m:mn></m:mrow><m:mi>N</m:mi></m:msubsup><m:msub><m:mi>U</m:mi><m:mi>n</m:mi></m:msub><m:mo>.</m:mo></m:mrow></m:math>
+In other words, only a finite number of the open sets are necessary to cover <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+</meaning></definition>
+<rule id="fs-id1164796447667"><label/><statement id="fs-id7042147">
+    <para id="id263560"><emphasis effect="bold">REMARK</emphasis>
+The definition we have given here for a set being compact is
+a little less general from the one found in books on topology.
+We have restricted the notion of an open cover to be a sequence of
+open sets, while in the general setting an open
+cover is just a collection of open sets.
+The distinction between a sequence of open sets and a collection of open sets
+is genuine in general topology, but it can be
+disregarded in the case of the topological spaces <m:math overflow="scroll"><m:mi>R</m:mi></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>C</m:mi><m:mo>.</m:mo></m:mrow></m:math></para></statement></rule>
+<rule id="fs-id6921287" type="theorem"><title>Heine-Borel Theorem</title><statement id="fs-id1164796362714">
+    <para id="id263606">
+A subset <m:math overflow="scroll"><m:mi>S</m:mi></m:math> of <m:math overflow="scroll"><m:mi>C</m:mi></m:math> (respectively <m:math overflow="scroll"><m:mi>R</m:mi></m:math>) is compact
+if and only if it is a closed and bounded set.</para>
+</statement>
+<proof id="fs-id6652624">
+    <para id="id263656">We prove this theorem for subsets <m:math overflow="scroll"><m:mi>S</m:mi></m:math> of <m:math overflow="scroll"><m:mrow><m:mi>C</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+and leave the proof for subsets of <m:math overflow="scroll"><m:mi>R</m:mi></m:math> to the exercises.</para>
+    <para id="id263710">Suppose first that <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>⊆</m:mo><m:mi>C</m:mi></m:mrow></m:math> is compact, i.e., satisfies the Heine-Borel property.
+For each positive integer <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>,</m:mo></m:mrow></m:math> define <m:math overflow="scroll"><m:msub><m:mi>U</m:mi><m:mi>n</m:mi></m:msub></m:math> to be the
+open set <m:math overflow="scroll"><m:mrow><m:msub><m:mi>B</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mn>0</m:mn><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math> Then <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>⊆</m:mo><m:mo>∪</m:mo><m:msub><m:mi>U</m:mi><m:mi>n</m:mi></m:msub><m:mo>,</m:mo></m:mrow></m:math> because <m:math overflow="scroll"><m:mrow><m:mi>C</m:mi><m:mo>=</m:mo><m:mo>∪</m:mo><m:msub><m:mi>U</m:mi><m:mi>n</m:mi></m:msub><m:mo>.</m:mo></m:mrow></m:math>
+Hence, by the Heine-Borel property, there must exist an <m:math overflow="scroll"><m:mi>N</m:mi></m:math> such
+that <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>⊆</m:mo><m:msubsup><m:mo>∪</m:mo><m:mrow><m:mi>n</m:mi><m:mo>=</m:mo><m:mn>1</m:mn></m:mrow><m:mi>N</m:mi></m:msubsup><m:msub><m:mi>U</m:mi><m:mi>n</m:mi></m:msub><m:mo>.</m:mo></m:mrow></m:math> But then <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>⊆</m:mo><m:msub><m:mi>B</m:mi><m:mi>N</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mn>0</m:mn><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math>
+implying that <m:math overflow="scroll"><m:mi>S</m:mi></m:math> is bounded.
+Indeed, <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>x</m:mi><m:mo>|</m:mo><m:mo>≤</m:mo><m:mi>N</m:mi></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+    <para id="id263962">Next, still assuming that <m:math overflow="scroll"><m:mi>S</m:mi></m:math> is compact, we will show that <m:math overflow="scroll"><m:mi>S</m:mi></m:math> is closed by showing that <m:math overflow="scroll"><m:mover accent="true"><m:mi>S</m:mi><m:mo>˜</m:mo></m:mover></m:math> is open.
+Thus, let <m:math overflow="scroll"><m:mi>x</m:mi></m:math> be an element of <m:math overflow="scroll"><m:mrow><m:mover accent="true"><m:mi>S</m:mi><m:mo>˜</m:mo></m:mover><m:mo>.</m:mo></m:mrow></m:math> For each positive integer <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>,</m:mo></m:mrow></m:math> define
+<m:math overflow="scroll"><m:msub><m:mi>U</m:mi><m:mi>n</m:mi></m:msub></m:math> to be the complement of the closed set <m:math overflow="scroll"><m:mrow><m:mover><m:mrow><m:msub><m:mi>B</m:mi><m:mrow><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>n</m:mi></m:mrow></m:msub><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>¯</m:mo></m:mover><m:mo>.</m:mo></m:mrow></m:math>
+Then each <m:math overflow="scroll"><m:msub><m:mi>U</m:mi><m:mi>n</m:mi></m:msub></m:math> is an open set by Theorem 2.12, and we claim that <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>U</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math>
+is an open cover of <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math> Indeed, if <m:math overflow="scroll"><m:mrow><m:mi>y</m:mi><m:mo>∈</m:mo><m:mi>S</m:mi><m:mo>,</m:mo></m:mrow></m:math> then <m:math overflow="scroll"><m:mrow><m:mi>y</m:mi><m:mo>≠</m:mo><m:mi>x</m:mi><m:mo>,</m:mo></m:mrow></m:math> and
+<m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>y</m:mi><m:mo>-</m:mo><m:mi>x</m:mi><m:mo>|</m:mo><m:mo>&gt;</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math> Choose an <m:math overflow="scroll"><m:mi>n</m:mi></m:math> so that <m:math overflow="scroll"><m:mrow><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>n</m:mi><m:mo>&lt;</m:mo><m:mo>|</m:mo><m:mi>y</m:mi><m:mo>-</m:mo><m:mi>x</m:mi><m:mo>|</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Then <m:math overflow="scroll"><m:mrow><m:mi>y</m:mi><m:mo>∉</m:mo><m:mover><m:mrow><m:msub><m:mi>B</m:mi><m:mrow><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>n</m:mi></m:mrow></m:msub><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>¯</m:mo></m:mover><m:mo>,</m:mo></m:mrow></m:math> implying that <m:math overflow="scroll"><m:mrow><m:mi>y</m:mi><m:mo>∈</m:mo><m:msub><m:mi>U</m:mi><m:mi>n</m:mi></m:msub><m:mo>.</m:mo></m:mrow></m:math>
+This proves our claim that <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>U</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> is an open cover of <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Now, by the Heine-Borel property,
+there exists an <m:math overflow="scroll"><m:mi>N</m:mi></m:math> such that <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>⊆</m:mo><m:msubsup><m:mo>∪</m:mo><m:mrow><m:mi>n</m:mi><m:mo>=</m:mo><m:mn>1</m:mn></m:mrow><m:mi>N</m:mi></m:msubsup><m:msub><m:mi>U</m:mi><m:mi>n</m:mi></m:msub><m:mo>.</m:mo></m:mrow></m:math>
+But this implies that for every <m:math overflow="scroll"><m:mrow><m:mi>z</m:mi><m:mo>∈</m:mo><m:mi>S</m:mi></m:mrow></m:math> we must have
+<m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>z</m:mi><m:mo>-</m:mo><m:mi>x</m:mi><m:mo>|</m:mo><m:mo>≥</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>N</m:mi><m:mo>,</m:mo></m:mrow></m:math> and this implies that the disk
+<m:math overflow="scroll"><m:mrow><m:msub><m:mi>B</m:mi><m:mrow><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>N</m:mi></m:mrow></m:msub><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> is entirely contained in <m:math overflow="scroll"><m:mrow><m:mover accent="true"><m:mi>S</m:mi><m:mo>˜</m:mo></m:mover><m:mo>.</m:mo></m:mrow></m:math> Therefore, every element <m:math overflow="scroll"><m:mi>x</m:mi></m:math> of <m:math overflow="scroll"><m:mover accent="true"><m:mi>S</m:mi><m:mo>˜</m:mo></m:mover></m:math>
+is an interior point of <m:math overflow="scroll"><m:mrow><m:mover accent="true"><m:mi>S</m:mi><m:mo>˜</m:mo></m:mover><m:mo>.</m:mo></m:mrow></m:math>
+So, <m:math overflow="scroll"><m:mover accent="true"><m:mi>S</m:mi><m:mo>˜</m:mo></m:mover></m:math> is open, whence <m:math overflow="scroll"><m:mi>S</m:mi></m:math> is closed.
+This finishes the proof that compact sets are necessarily closed and bounded.</para>
+    <para id="id264533">Conversely, assume that <m:math overflow="scroll"><m:mi>S</m:mi></m:math> is both closed and bounded.
+We must show that <m:math overflow="scroll"><m:mi>S</m:mi></m:math> satisfies the Heine-Borel property.
+Suppose not. Then, there exists an open cover
+<m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>U</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> that has no finite subcover. So, for each positive integer <m:math overflow="scroll"><m:mi>n</m:mi></m:math> there must exist an element <m:math overflow="scroll"><m:mrow><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mo>∈</m:mo><m:mi>S</m:mi></m:mrow></m:math>
+for which <m:math overflow="scroll"><m:mrow><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mo>∉</m:mo><m:msubsup><m:mo>∪</m:mo><m:mrow><m:mi>k</m:mi><m:mo>=</m:mo><m:mn>1</m:mn></m:mrow><m:mi>n</m:mi></m:msubsup><m:msub><m:mi>U</m:mi><m:mi>k</m:mi></m:msub><m:mo>.</m:mo></m:mrow></m:math> Otherwise, there would be a finite subcover.
+By <link target-id="fs-id1172694593561"/>, there exists a subsequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>x</m:mi><m:msub><m:mi>n</m:mi><m:mi>j</m:mi></m:msub></m:msub><m:mo>}</m:mo></m:mrow></m:math> of <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> that converges
+to an element <m:math overflow="scroll"><m:mi>x</m:mi></m:math> of <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math> Now, because <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>U</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> is an open cover of <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+there must exist an <m:math overflow="scroll"><m:mi>N</m:mi></m:math> such that <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:msub><m:mi>U</m:mi><m:mi>N</m:mi></m:msub><m:mo>.</m:mo></m:mrow></m:math>
+Because <m:math overflow="scroll"><m:msub><m:mi>U</m:mi><m:mi>N</m:mi></m:msub></m:math> is open, there exists an <m:math overflow="scroll"><m:mrow><m:mi>ϵ</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn></m:mrow></m:math> so that the
+entire disk <m:math overflow="scroll"><m:mrow><m:msub><m:mi>B</m:mi><m:mi>ϵ</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> is contained in <m:math overflow="scroll"><m:mrow><m:msub><m:mi>U</m:mi><m:mi>N</m:mi></m:msub><m:mo>.</m:mo></m:mrow></m:math>
+Since <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mo movablelimits="true" form="prefix">lim</m:mo><m:msub><m:mi>x</m:mi><m:msub><m:mi>n</m:mi><m:mi>j</m:mi></m:msub></m:msub><m:mo>,</m:mo></m:mrow></m:math> there exists a <m:math overflow="scroll"><m:mi>J</m:mi></m:math> so that <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msub><m:mi>x</m:mi><m:msub><m:mi>n</m:mi><m:mi>j</m:mi></m:msub></m:msub><m:mrow><m:mo>-</m:mo><m:mi>x</m:mi><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mi>ϵ</m:mi></m:mrow></m:mrow></m:math>
+if <m:math overflow="scroll"><m:mrow><m:mi>j</m:mi><m:mo>≥</m:mo><m:mi>J</m:mi><m:mo>.</m:mo></m:mrow></m:math> Therefore, if <m:math overflow="scroll"><m:mrow><m:mi>j</m:mi><m:mo>≥</m:mo><m:mi>J</m:mi><m:mo>,</m:mo></m:mrow></m:math> then <m:math overflow="scroll"><m:mrow><m:msub><m:mi>x</m:mi><m:msub><m:mi>n</m:mi><m:mi>j</m:mi></m:msub></m:msub><m:mo>∈</m:mo><m:msub><m:mi>U</m:mi><m:mi>N</m:mi></m:msub><m:mo>.</m:mo></m:mrow></m:math>
+But the sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>n</m:mi><m:mi>j</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> is strictly increasing, so that there exists a <m:math overflow="scroll"><m:mrow><m:msup><m:mi>j</m:mi><m:mo>'</m:mo></m:msup><m:mo>≥</m:mo><m:mi>J</m:mi></m:mrow></m:math> such that <m:math overflow="scroll"><m:mrow><m:msub><m:mi>n</m:mi><m:msup><m:mi>j</m:mi><m:mo>'</m:mo></m:msup></m:msub><m:mo>&gt;</m:mo><m:mi>N</m:mi><m:mo>,</m:mo></m:mrow></m:math> and by the choice of the
+point <m:math overflow="scroll"><m:mrow><m:msub><m:mi>x</m:mi><m:msub><m:mi>n</m:mi><m:msup><m:mi>j</m:mi><m:mo>'</m:mo></m:msup></m:msub></m:msub><m:mo>,</m:mo></m:mrow></m:math> we know that <m:math overflow="scroll"><m:mrow><m:msub><m:mi>x</m:mi><m:msub><m:mi>n</m:mi><m:msup><m:mi>j</m:mi><m:mo>'</m:mo></m:msup></m:msub></m:msub><m:mo>∉</m:mo><m:msubsup><m:mo>∪</m:mo><m:mrow><m:mi>k</m:mi><m:mo>=</m:mo><m:mn>1</m:mn></m:mrow><m:mi>N</m:mi></m:msubsup><m:msub><m:mi>U</m:mi><m:mi>k</m:mi></m:msub><m:mo>.</m:mo></m:mrow></m:math>
+We have arrived at a contradiction, and so the second half of the theorem is proved.</para>
+</proof></rule>
+<exercise id="fs-id1164797997554"><problem id="fs-id1164794641130">
+    <list id="id265152" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid16"> Prove that the union <m:math overflow="scroll"><m:mrow><m:mi>A</m:mi><m:mo>∪</m:mo><m:mi>B</m:mi></m:mrow></m:math> of two open sets is open and the intersection <m:math overflow="scroll"><m:mrow><m:mi>A</m:mi><m:mo>∩</m:mo><m:mi>B</m:mi></m:mrow></m:math> is also open.
+</item>
+      <item id="uid17"> Prove that the union <m:math overflow="scroll"><m:mrow><m:mi>A</m:mi><m:mo>∪</m:mo><m:mi>B</m:mi></m:mrow></m:math> of two closed sets is closed and the intersection <m:math overflow="scroll"><m:mrow><m:mi>A</m:mi><m:mo>∩</m:mo><m:mi>B</m:mi></m:mrow></m:math> is also closed.
+HINT: Use <link target-id="fs-id1172694598986"/> and the set equations
+<m:math overflow="scroll"><m:mrow><m:mover accent="true"><m:mrow><m:mi>A</m:mi><m:mo>∪</m:mo><m:mi>B</m:mi></m:mrow><m:mo>˜</m:mo></m:mover><m:mo>=</m:mo><m:mover accent="true"><m:mi>A</m:mi><m:mo>˜</m:mo></m:mover><m:mo>∩</m:mo><m:mover accent="true"><m:mi>B</m:mi><m:mo>˜</m:mo></m:mover><m:mo>,</m:mo></m:mrow></m:math> and
+<m:math overflow="scroll"><m:mrow><m:mover accent="true"><m:mrow><m:mi>A</m:mi><m:mo>∩</m:mo><m:mi>B</m:mi></m:mrow><m:mo>˜</m:mo></m:mover><m:mo>=</m:mo><m:mover accent="true"><m:mi>A</m:mi><m:mo>˜</m:mo></m:mover><m:mo>∪</m:mo><m:mover accent="true"><m:mi>B</m:mi><m:mo>˜</m:mo></m:mover><m:mo>.</m:mo></m:mrow></m:math>
+These set equations are known as Demorgan's Laws.
+</item>
+      <item id="uid18"> Prove that the union <m:math overflow="scroll"><m:mrow><m:mi>A</m:mi><m:mo>∪</m:mo><m:mi>B</m:mi></m:mrow></m:math> of two bounded sets is bounded and the intersection <m:math overflow="scroll"><m:mrow><m:mi>A</m:mi><m:mo>∩</m:mo><m:mi>B</m:mi></m:mrow></m:math> is also bounded.
+</item>
+      <item id="uid19"> Prove that the union <m:math overflow="scroll"><m:mrow><m:mi>A</m:mi><m:mo>∪</m:mo><m:mi>B</m:mi></m:mrow></m:math> of two compact sets is compact and the intersection <m:math overflow="scroll"><m:mrow><m:mi>A</m:mi><m:mo>∩</m:mo><m:mi>B</m:mi></m:mrow></m:math> is also compact.
+</item>
+      <item id="uid20"> Prove that the intersection of a compact set and a closed set is compact.
+</item>
+      <item id="uid21"> Suppose <m:math overflow="scroll"><m:mi>S</m:mi></m:math> is a compact set in <m:math overflow="scroll"><m:mi>C</m:mi></m:math> and <m:math overflow="scroll"><m:mi>r</m:mi></m:math> is a positive real number.
+Prove that the closed neighborhood <m:math overflow="scroll"><m:mrow><m:msub><m:mover><m:mi>N</m:mi><m:mo>¯</m:mo></m:mover><m:mi>r</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>S</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> of radius <m:math overflow="scroll"><m:mi>r</m:mi></m:math> around <m:math overflow="scroll"><m:mi>S</m:mi></m:math> is compact.
+HINT: To see that this set is closed, show that its coplement is open.
+</item>
+    </list>
+</problem></exercise>
+  </content>
+</document>

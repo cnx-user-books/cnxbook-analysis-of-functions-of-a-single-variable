@@ -1,0 +1,1081 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML">
+  <title>L'Hopital's Rule</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m36201</md:content-id>
+  <md:title>L'Hopital's Rule</md:title>
+  <md:abstract>The caught mean value theorem and L'Hopital's rule are included in this module, accompanied by practice exercises.</md:abstract>
+  <md:uuid>430da81b-115a-4117-92b0-fbf0ae87de02</md:uuid>
+</metadata>
+
+<content>
+    <para id="id125305">Many limits of certain combinations of functions are difficult to evaluate
+because they lead to what's known as
+“indeterminate forms.” These are expressions of the form <m:math overflow="scroll"><m:mrow><m:mn>0</m:mn><m:mo>/</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math><m:math overflow="scroll"><m:mrow><m:mi>∞</m:mi><m:mo>/</m:mo><m:mi>∞</m:mi><m:mo>,</m:mo></m:mrow></m:math><m:math overflow="scroll"><m:mrow><m:msup><m:mn>0</m:mn><m:mn>0</m:mn></m:msup><m:mo>,</m:mo></m:mrow></m:math><m:math overflow="scroll"><m:mrow><m:mi>∞</m:mi><m:mo>-</m:mo><m:mi>∞</m:mi><m:mo>,</m:mo></m:mrow></m:math><m:math overflow="scroll"><m:mrow><m:msup><m:mn>1</m:mn><m:mi>∞</m:mi></m:msup><m:mo>,</m:mo></m:mrow></m:math> and the like.
+They are precisely combinations of functions that are not covered by our limit theorems. See <link target-id="fs-id1171015671709" document="m36185"/>.
+The very definition of the derivative itself is such a case:
+<m:math overflow="scroll"><m:mrow><m:msub><m:mo movablelimits="true" form="prefix">lim</m:mo><m:mrow><m:mi>h</m:mi><m:mo>→</m:mo><m:mn>0</m:mn></m:mrow></m:msub><m:mrow><m:mo>(</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>+</m:mo><m:mi>h</m:mi><m:mo>)</m:mo></m:mrow><m:mo>-</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math><m:math overflow="scroll"><m:mrow><m:msub><m:mo movablelimits="true" form="prefix">lim</m:mo><m:mrow><m:mi>h</m:mi><m:mo>→</m:mo><m:mn>0</m:mn></m:mrow></m:msub><m:mi>h</m:mi><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> and we
+are interested in the limit of the quotient of these two functions, which would lead us to the indeterminate form <m:math overflow="scroll"><m:mrow><m:mn>0</m:mn><m:mo>/</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math>
+The definition of the number <m:math overflow="scroll"><m:mi>e</m:mi></m:math> is another example:
+<m:math overflow="scroll"><m:mrow><m:mo movablelimits="true" form="prefix">lim</m:mo><m:mo>(</m:mo><m:mn>1</m:mn><m:mo>+</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>n</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>,</m:mo></m:mrow></m:math><m:math overflow="scroll"><m:mrow><m:mo movablelimits="true" form="prefix">lim</m:mo><m:mi>n</m:mi><m:mo>=</m:mo><m:mi>∞</m:mi><m:mo>,</m:mo></m:mrow></m:math> and we are interested in the limit of <m:math overflow="scroll"><m:mrow><m:msup><m:mrow><m:mo>(</m:mo><m:mn>1</m:mn><m:mo>+</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>n</m:mi><m:mo>)</m:mo></m:mrow><m:mi>n</m:mi></m:msup><m:mo>,</m:mo></m:mrow></m:math>
+which leads to the indeterminate form <m:math overflow="scroll"><m:mrow><m:msup><m:mn>1</m:mn><m:mi>∞</m:mi></m:msup><m:mo>.</m:mo></m:mrow></m:math>
+L'Hopital's Rule, <link target-id="fs-id1164063272676"/> below, is our strongest tool for handling such indeterminate forms.</para>
+    <para id="id125952">To begin with, here is a useful generalization of the Mean Value Theorem.</para>
+<rule id="fs-id1164057494175" type="theorem"><title>Cauchy Mean Value Theorem</title><statement id="fs-id1164063042723">
+    <para id="id125956">
+Let <m:math overflow="scroll"><m:mi>f</m:mi></m:math> and <m:math overflow="scroll"><m:mi>g</m:mi></m:math> be continuous real-valued functions on a closed interval <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>,</m:mo></m:mrow></m:math>
+suppose <m:math overflow="scroll"><m:mrow><m:mi>g</m:mi><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo><m:mo>≠</m:mo><m:mi>g</m:mi><m:mo>(</m:mo><m:mi>b</m:mi><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math>
+and assume that both <m:math overflow="scroll"><m:mi>f</m:mi></m:math> and <m:math overflow="scroll"><m:mi>g</m:mi></m:math> are differentiable on the open interval <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Then there exists a point <m:math overflow="scroll"><m:mrow><m:mi>c</m:mi><m:mo>∈</m:mo><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo></m:mrow></m:math> such that</para>
+    <equation id="id126265">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mfrac>
+            <m:mrow>
+              <m:mi>f</m:mi>
+              <m:mo>(</m:mo>
+              <m:mi>b</m:mi>
+              <m:mo>)</m:mo>
+              <m:mo>-</m:mo>
+              <m:mi>f</m:mi>
+              <m:mo>(</m:mo>
+              <m:mi>a</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mrow>
+              <m:mi>g</m:mi>
+              <m:mo>(</m:mo>
+              <m:mi>b</m:mi>
+              <m:mo>)</m:mo>
+              <m:mo>-</m:mo>
+              <m:mi>g</m:mi>
+              <m:mo>(</m:mo>
+              <m:mi>a</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+          </m:mfrac>
+          <m:mo>=</m:mo>
+          <m:mfrac>
+            <m:mrow>
+              <m:msup>
+                <m:mi>f</m:mi>
+                <m:mo>'</m:mo>
+              </m:msup>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>c</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+            </m:mrow>
+            <m:mrow>
+              <m:msup>
+                <m:mi>g</m:mi>
+                <m:mo>'</m:mo>
+              </m:msup>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>c</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+            </m:mrow>
+          </m:mfrac>
+          <m:mo>.</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+</statement></rule>
+<exercise id="fs-id1164057503669"><problem id="fs-id1164060165197">
+    <para id="id126355"> Prove the preceding theorem.</para>
+    <para id="id126366">HINT: Define an auxiliary function <m:math overflow="scroll"><m:mi>h</m:mi></m:math> as was
+done in the proof of the original Mean Value Theorem.</para>
+    <para id="id126380">The following theorem and exercise comprise what is
+called L'Hopital's Rule.</para>
+</problem></exercise>
+<rule id="fs-id1164063272676" type="theorem"><statement id="fs-id1164064616883">
+    <para id="id126386">
+Suppose <m:math overflow="scroll"><m:mi>f</m:mi></m:math> and <m:math overflow="scroll"><m:mi>g</m:mi></m:math> are differentiable real-valued functions
+on the bounded open interval <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo></m:mrow></m:math> and assume that</para>
+    <equation id="id126427">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:munder>
+            <m:mo movablelimits="true" form="prefix">lim</m:mo>
+            <m:mrow>
+              <m:mi>x</m:mi>
+              <m:mo>→</m:mo>
+              <m:mi>a</m:mi>
+              <m:mo>+</m:mo>
+              <m:mn>0</m:mn>
+            </m:mrow>
+          </m:munder>
+          <m:mfrac>
+            <m:mrow>
+              <m:msup>
+                <m:mi>f</m:mi>
+                <m:mo>'</m:mo>
+              </m:msup>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>x</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+            </m:mrow>
+            <m:mrow>
+              <m:msup>
+                <m:mi>g</m:mi>
+                <m:mo>'</m:mo>
+              </m:msup>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>x</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+            </m:mrow>
+          </m:mfrac>
+          <m:mo>=</m:mo>
+          <m:mi>L</m:mi>
+          <m:mo>,</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id126498">where <m:math overflow="scroll"><m:mi>L</m:mi></m:math> is a real number.
+(Implicit in this hypothesis is that <m:math overflow="scroll"><m:mrow><m:msup><m:mi>g</m:mi><m:mo>'</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>≠</m:mo><m:mn>0</m:mn></m:mrow></m:math> for <m:math overflow="scroll"><m:mi>x</m:mi></m:math> in some interval <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>a</m:mi><m:mo>+</m:mo><m:mi>α</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>)
+Suppose further that either</para>
+    <equation id="id126569">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:munder>
+            <m:mo movablelimits="true" form="prefix">lim</m:mo>
+            <m:mrow>
+              <m:mi>x</m:mi>
+              <m:mo>→</m:mo>
+              <m:mi>a</m:mi>
+              <m:mo>+</m:mo>
+              <m:mn>0</m:mn>
+            </m:mrow>
+          </m:munder>
+          <m:mi>f</m:mi>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>x</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>=</m:mo>
+          <m:munder>
+            <m:mo movablelimits="true" form="prefix">lim</m:mo>
+            <m:mrow>
+              <m:mi>x</m:mi>
+              <m:mo>→</m:mo>
+              <m:mi>a</m:mi>
+              <m:mo>+</m:mo>
+              <m:mn>0</m:mn>
+            </m:mrow>
+          </m:munder>
+          <m:mi>g</m:mi>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>x</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>=</m:mo>
+          <m:mn>0</m:mn>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id126646">or</para>
+    <equation id="id126651">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:munder>
+            <m:mo movablelimits="true" form="prefix">lim</m:mo>
+            <m:mrow>
+              <m:mi>x</m:mi>
+              <m:mo>→</m:mo>
+              <m:mi>a</m:mi>
+              <m:mo>+</m:mo>
+              <m:mn>0</m:mn>
+            </m:mrow>
+          </m:munder>
+          <m:mi>f</m:mi>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>x</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>=</m:mo>
+          <m:munder>
+            <m:mo movablelimits="true" form="prefix">lim</m:mo>
+            <m:mrow>
+              <m:mi>x</m:mi>
+              <m:mo>→</m:mo>
+              <m:mi>a</m:mi>
+              <m:mo>+</m:mo>
+              <m:mn>0</m:mn>
+            </m:mrow>
+          </m:munder>
+          <m:mi>g</m:mi>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>x</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>=</m:mo>
+          <m:mi>∞</m:mi>
+          <m:mo>.</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id126729">then</para>
+    <equation id="id126735">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:munder>
+            <m:mo movablelimits="true" form="prefix">lim</m:mo>
+            <m:mrow>
+              <m:mi>x</m:mi>
+              <m:mo>→</m:mo>
+              <m:mi>a</m:mi>
+              <m:mo>+</m:mo>
+              <m:mn>0</m:mn>
+            </m:mrow>
+          </m:munder>
+          <m:mfrac>
+            <m:mrow>
+              <m:mi>f</m:mi>
+              <m:mo>(</m:mo>
+              <m:mi>x</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mrow>
+              <m:mi>g</m:mi>
+              <m:mo>(</m:mo>
+              <m:mi>x</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+          </m:mfrac>
+          <m:mo>=</m:mo>
+          <m:mi>L</m:mi>
+          <m:mo>.</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+</statement>
+<proof id="fs-id1164065354694">
+    <para id="id126792"> Suppose first that</para>
+    <equation id="id126800">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:munder>
+            <m:mo movablelimits="true" form="prefix">lim</m:mo>
+            <m:mrow>
+              <m:mi>x</m:mi>
+              <m:mo>→</m:mo>
+              <m:mi>a</m:mi>
+              <m:mo>+</m:mo>
+              <m:mn>0</m:mn>
+            </m:mrow>
+          </m:munder>
+          <m:mi>f</m:mi>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>x</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>=</m:mo>
+          <m:munder>
+            <m:mo movablelimits="true" form="prefix">lim</m:mo>
+            <m:mrow>
+              <m:mi>x</m:mi>
+              <m:mo>→</m:mo>
+              <m:mi>a</m:mi>
+              <m:mo>+</m:mo>
+              <m:mn>0</m:mn>
+            </m:mrow>
+          </m:munder>
+          <m:mi>g</m:mi>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>x</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>=</m:mo>
+          <m:mn>0</m:mn>
+          <m:mo>.</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id126878">Observe first that, because <m:math overflow="scroll"><m:mrow><m:msup><m:mi>g</m:mi><m:mo>'</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>≠</m:mo><m:mn>0</m:mn></m:mrow></m:math> for all <m:math overflow="scroll"><m:mi>x</m:mi></m:math> in some interval <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>a</m:mi><m:mo>+</m:mo><m:mi>α</m:mi><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math><m:math overflow="scroll"><m:mrow><m:msup><m:mi>g</m:mi><m:mo>'</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> is either always positive or always negative on that interval.
+(This follows from part (d) of <link target-id="fs-id1169862410269" document="m36203"/>.)
+Therefore
+the function <m:math overflow="scroll"><m:mi>g</m:mi></m:math> must be strictly monotonic on the interval <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>a</m:mi><m:mo>+</m:mo><m:mi>α</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Hence, since <m:math overflow="scroll"><m:mrow><m:msub><m:mo movablelimits="true" form="prefix">lim</m:mo><m:mrow><m:mi>x</m:mi><m:mo>→</m:mo><m:mi>a</m:mi><m:mo>+</m:mo><m:mn>0</m:mn></m:mrow></m:msub><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math>
+we must have that <m:math overflow="scroll"><m:mrow><m:mi>g</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>≠</m:mo><m:mn>0</m:mn></m:mrow></m:math> on the interval <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>a</m:mi><m:mo>+</m:mo><m:mi>α</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math></para>
+    <para id="id127083">Now, given an <m:math overflow="scroll"><m:mrow><m:mi>ϵ</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> choose
+a positive <m:math overflow="scroll"><m:mrow><m:mi>δ</m:mi><m:mo>&lt;</m:mo><m:mi>α</m:mi></m:mrow></m:math> such that
+if <m:math overflow="scroll"><m:mrow><m:mi>a</m:mi><m:mo>&lt;</m:mo><m:mi>c</m:mi><m:mo>&lt;</m:mo><m:mi>a</m:mi><m:mo>+</m:mo><m:mi>δ</m:mi></m:mrow></m:math> then <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:mfrac><m:mrow><m:msup><m:mi>f</m:mi><m:mo>'</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mrow><m:msup><m:mi>g</m:mi><m:mo>'</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:mfrac><m:mrow><m:mo>-</m:mo><m:mi>L</m:mi><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mi>ϵ</m:mi><m:mo>.</m:mo></m:mrow></m:mrow></m:math>
+Then, for every natural number <m:math overflow="scroll"><m:mi>n</m:mi></m:math> for which <m:math overflow="scroll"><m:mrow><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>n</m:mi><m:mo>&lt;</m:mo><m:mi>δ</m:mi><m:mo>,</m:mo></m:mrow></m:math> and every <m:math overflow="scroll"><m:mrow><m:mi>a</m:mi><m:mo>&lt;</m:mo><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mi>a</m:mi><m:mo>+</m:mo><m:mi>δ</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+we have by the Cauchy Mean Value Theorem that
+there exists a point <m:math overflow="scroll"><m:mi>c</m:mi></m:math> between <m:math overflow="scroll"><m:mrow><m:mi>a</m:mi><m:mo>+</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>n</m:mi></m:mrow></m:math> and <m:math overflow="scroll"><m:mi>x</m:mi></m:math> such that</para>
+    <equation id="id127279">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mrow>
+            <m:mo>|</m:mo>
+          </m:mrow>
+          <m:mfrac>
+            <m:mrow>
+              <m:mi>f</m:mi>
+              <m:mo>(</m:mo>
+              <m:mi>x</m:mi>
+              <m:mo>)</m:mo>
+              <m:mo>-</m:mo>
+              <m:mi>f</m:mi>
+              <m:mo>(</m:mo>
+              <m:mi>a</m:mi>
+              <m:mo>+</m:mo>
+              <m:mn>1</m:mn>
+              <m:mo>/</m:mo>
+              <m:mi>n</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mrow>
+              <m:mi>g</m:mi>
+              <m:mo>(</m:mo>
+              <m:mi>x</m:mi>
+              <m:mo>)</m:mo>
+              <m:mo>-</m:mo>
+              <m:mi>g</m:mi>
+              <m:mo>(</m:mo>
+              <m:mi>a</m:mi>
+              <m:mo>+</m:mo>
+              <m:mn>1</m:mn>
+              <m:mo>/</m:mo>
+              <m:mi>n</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+          </m:mfrac>
+          <m:mrow>
+            <m:mo>-</m:mo>
+            <m:mi>L</m:mi>
+            <m:mo>|</m:mo>
+            <m:mo>=</m:mo>
+            <m:mo>|</m:mo>
+          </m:mrow>
+          <m:mfrac>
+            <m:mrow>
+              <m:msup>
+                <m:mi>f</m:mi>
+                <m:mo>'</m:mo>
+              </m:msup>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>c</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+            </m:mrow>
+            <m:mrow>
+              <m:msup>
+                <m:mi>g</m:mi>
+                <m:mo>'</m:mo>
+              </m:msup>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>c</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+            </m:mrow>
+          </m:mfrac>
+          <m:mrow>
+            <m:mo>-</m:mo>
+            <m:mi>L</m:mi>
+            <m:mo>|</m:mo>
+            <m:mo>&lt;</m:mo>
+            <m:mi>ϵ</m:mi>
+            <m:mo>.</m:mo>
+          </m:mrow>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id127411">Therefore, taking the limit as <m:math overflow="scroll"><m:mi>n</m:mi></m:math> approaches <m:math overflow="scroll"><m:mrow><m:mi>∞</m:mi><m:mo>,</m:mo></m:mrow></m:math> we obtain</para>
+    <equation id="id127435">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mrow>
+            <m:mo>|</m:mo>
+          </m:mrow>
+          <m:mfrac>
+            <m:mrow>
+              <m:mi>f</m:mi>
+              <m:mo>(</m:mo>
+              <m:mi>x</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mrow>
+              <m:mi>g</m:mi>
+              <m:mo>(</m:mo>
+              <m:mi>x</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+          </m:mfrac>
+          <m:mrow>
+            <m:mo>-</m:mo>
+            <m:mi>L</m:mi>
+            <m:mo>|</m:mo>
+            <m:mo>=</m:mo>
+          </m:mrow>
+          <m:munder>
+            <m:mo movablelimits="true" form="prefix">lim</m:mo>
+            <m:mrow>
+              <m:mi>n</m:mi>
+              <m:mo>→</m:mo>
+              <m:mi>∞</m:mi>
+            </m:mrow>
+          </m:munder>
+          <m:mrow>
+            <m:mo>|</m:mo>
+            <m:mfrac>
+              <m:mrow>
+                <m:mi>f</m:mi>
+                <m:mo>(</m:mo>
+                <m:mi>x</m:mi>
+                <m:mo>)</m:mo>
+                <m:mo>-</m:mo>
+                <m:mi>f</m:mi>
+                <m:mo>(</m:mo>
+                <m:mi>a</m:mi>
+                <m:mo>+</m:mo>
+                <m:mn>1</m:mn>
+                <m:mo>/</m:mo>
+                <m:mi>n</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:mrow>
+                <m:mi>g</m:mi>
+                <m:mo>(</m:mo>
+                <m:mi>x</m:mi>
+                <m:mo>)</m:mo>
+                <m:mo>-</m:mo>
+                <m:mi>g</m:mi>
+                <m:mo>(</m:mo>
+                <m:mi>a</m:mi>
+                <m:mo>+</m:mo>
+                <m:mn>1</m:mn>
+                <m:mo>/</m:mo>
+                <m:mi>n</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+            </m:mfrac>
+            <m:mo>-</m:mo>
+            <m:mi>L</m:mi>
+            <m:mo>|</m:mo>
+          </m:mrow>
+          <m:mo>≤</m:mo>
+          <m:mi>ϵ</m:mi>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id127568">for all <m:math overflow="scroll"><m:mi>x</m:mi></m:math> for which <m:math overflow="scroll"><m:mrow><m:mi>a</m:mi><m:mo>&lt;</m:mo><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mi>a</m:mi><m:mo>+</m:mo><m:mi>δ</m:mi><m:mo>.</m:mo></m:mrow></m:math> This proves the theorem in this first case.</para>
+    <para id="id127606">Next, suppose that</para>
+    <equation id="id127609">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:munder>
+            <m:mo movablelimits="true" form="prefix">lim</m:mo>
+            <m:mrow>
+              <m:mi>x</m:mi>
+              <m:mo>→</m:mo>
+              <m:mi>a</m:mi>
+              <m:mo>+</m:mo>
+              <m:mn>0</m:mn>
+            </m:mrow>
+          </m:munder>
+          <m:mi>f</m:mi>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>x</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>=</m:mo>
+          <m:munder>
+            <m:mo movablelimits="true" form="prefix">lim</m:mo>
+            <m:mrow>
+              <m:mi>x</m:mi>
+              <m:mo>→</m:mo>
+              <m:mi>a</m:mi>
+              <m:mo>+</m:mo>
+              <m:mn>0</m:mn>
+            </m:mrow>
+          </m:munder>
+          <m:mi>g</m:mi>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>x</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>=</m:mo>
+          <m:mi>∞</m:mi>
+          <m:mo>.</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id127690">This part of the theorem is a bit more complicated to prove.
+First, choose a positive <m:math overflow="scroll"><m:mi>α</m:mi></m:math> so that <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>g</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:math> are both
+positive on the interval <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>a</m:mi><m:mo>+</m:mo><m:mi>α</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+This is possible because both functions are tending to infinity as <m:math overflow="scroll"><m:mi>x</m:mi></m:math> approaches <m:math overflow="scroll"><m:mrow><m:mi>a</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Now, given an <m:math overflow="scroll"><m:mrow><m:mi>ϵ</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> choose a positive number <m:math overflow="scroll"><m:mrow><m:mi>β</m:mi><m:mo>&lt;</m:mo><m:mi>α</m:mi></m:mrow></m:math> such that</para>
+    <equation id="id127815">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mrow>
+            <m:mo>|</m:mo>
+          </m:mrow>
+          <m:mfrac>
+            <m:mrow>
+              <m:msup>
+                <m:mi>f</m:mi>
+                <m:mo>'</m:mo>
+              </m:msup>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>c</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+            </m:mrow>
+            <m:mrow>
+              <m:msup>
+                <m:mi>g</m:mi>
+                <m:mo>'</m:mo>
+              </m:msup>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>c</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+            </m:mrow>
+          </m:mfrac>
+          <m:mrow>
+            <m:mo>-</m:mo>
+            <m:mi>L</m:mi>
+            <m:mo>|</m:mo>
+            <m:mo>&lt;</m:mo>
+          </m:mrow>
+          <m:mfrac>
+            <m:mi>ϵ</m:mi>
+            <m:mn>2</m:mn>
+          </m:mfrac>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id127879">for all <m:math overflow="scroll"><m:mrow><m:mi>a</m:mi><m:mo>&lt;</m:mo><m:mi>c</m:mi><m:mo>&lt;</m:mo><m:mi>a</m:mi><m:mo>+</m:mo><m:mi>β</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+We express this absolute value inequality as the following pair of ordinary inequalities:</para>
+    <equation id="id127911">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mi>L</m:mi>
+          <m:mo>-</m:mo>
+          <m:mfrac>
+            <m:mi>ϵ</m:mi>
+            <m:mn>2</m:mn>
+          </m:mfrac>
+          <m:mo>&lt;</m:mo>
+          <m:mfrac>
+            <m:mrow>
+              <m:msup>
+                <m:mi>f</m:mi>
+                <m:mo>'</m:mo>
+              </m:msup>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>c</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+            </m:mrow>
+            <m:mrow>
+              <m:msup>
+                <m:mi>g</m:mi>
+                <m:mo>'</m:mo>
+              </m:msup>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>c</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+            </m:mrow>
+          </m:mfrac>
+          <m:mo>&lt;</m:mo>
+          <m:mi>L</m:mi>
+          <m:mo>+</m:mo>
+          <m:mfrac>
+            <m:mi>ϵ</m:mi>
+            <m:mn>2</m:mn>
+          </m:mfrac>
+          <m:mo>.</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id127984">Set <m:math overflow="scroll"><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mi>a</m:mi><m:mo>+</m:mo><m:mi>β</m:mi><m:mo>.</m:mo></m:mrow></m:math> Using the Cauchy Mean Value Theorem, and the preceding inequalities, we
+have that for all <m:math overflow="scroll"><m:mrow><m:mi>a</m:mi><m:mo>&lt;</m:mo><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mi>y</m:mi></m:mrow></m:math></para>
+    <equation id="id128030">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mi>L</m:mi>
+          <m:mo>-</m:mo>
+          <m:mfrac>
+            <m:mi>ϵ</m:mi>
+            <m:mn>2</m:mn>
+          </m:mfrac>
+          <m:mo>&lt;</m:mo>
+          <m:mfrac>
+            <m:mrow>
+              <m:mi>f</m:mi>
+              <m:mo>(</m:mo>
+              <m:mi>x</m:mi>
+              <m:mo>)</m:mo>
+              <m:mo>-</m:mo>
+              <m:mi>f</m:mi>
+              <m:mo>(</m:mo>
+              <m:mi>y</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mrow>
+              <m:mi>g</m:mi>
+              <m:mo>(</m:mo>
+              <m:mi>x</m:mi>
+              <m:mo>)</m:mo>
+              <m:mo>-</m:mo>
+              <m:mi>g</m:mi>
+              <m:mo>(</m:mo>
+              <m:mi>y</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+          </m:mfrac>
+          <m:mo>&lt;</m:mo>
+          <m:mi>L</m:mi>
+          <m:mo>+</m:mo>
+          <m:mfrac>
+            <m:mi>ϵ</m:mi>
+            <m:mn>2</m:mn>
+          </m:mfrac>
+          <m:mo>,</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id128110">implying that</para>
+    <equation id="id128116">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>L</m:mi>
+            <m:mo>-</m:mo>
+            <m:mfrac>
+              <m:mi>ϵ</m:mi>
+              <m:mn>2</m:mn>
+            </m:mfrac>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>g</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>x</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>-</m:mo>
+            <m:mi>g</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>y</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>+</m:mo>
+          <m:mi>f</m:mi>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>y</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>&lt;</m:mo>
+          <m:mi>f</m:mi>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>x</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>&lt;</m:mo>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>L</m:mi>
+            <m:mo>+</m:mo>
+            <m:mfrac>
+              <m:mi>ϵ</m:mi>
+              <m:mn>2</m:mn>
+            </m:mfrac>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>g</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>x</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>-</m:mo>
+            <m:mi>g</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>y</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>+</m:mo>
+          <m:mi>f</m:mi>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>y</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>.</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id128252">Dividing through by <m:math overflow="scroll"><m:mrow><m:mi>g</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:math> and simplifying we obtain</para>
+    <equation id="id128275">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mi>L</m:mi>
+          <m:mo>-</m:mo>
+          <m:mfrac>
+            <m:mi>ϵ</m:mi>
+            <m:mn>2</m:mn>
+          </m:mfrac>
+          <m:mo>-</m:mo>
+          <m:mfrac>
+            <m:mrow>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>L</m:mi>
+                <m:mo>-</m:mo>
+                <m:mfrac>
+                  <m:mi>ϵ</m:mi>
+                  <m:mn>2</m:mn>
+                </m:mfrac>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:mi>g</m:mi>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>y</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+            </m:mrow>
+            <m:mrow>
+              <m:mi>g</m:mi>
+              <m:mo>(</m:mo>
+              <m:mi>x</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+          </m:mfrac>
+          <m:mo>+</m:mo>
+          <m:mfrac>
+            <m:mrow>
+              <m:mi>f</m:mi>
+              <m:mo>(</m:mo>
+              <m:mi>y</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mrow>
+              <m:mi>g</m:mi>
+              <m:mo>(</m:mo>
+              <m:mi>x</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+          </m:mfrac>
+          <m:mo>&lt;</m:mo>
+          <m:mfrac>
+            <m:mrow>
+              <m:mi>f</m:mi>
+              <m:mo>(</m:mo>
+              <m:mi>x</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mrow>
+              <m:mi>g</m:mi>
+              <m:mo>(</m:mo>
+              <m:mi>x</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+          </m:mfrac>
+          <m:mo>&lt;</m:mo>
+          <m:mi>L</m:mi>
+          <m:mo>+</m:mo>
+          <m:mfrac>
+            <m:mi>ϵ</m:mi>
+            <m:mn>2</m:mn>
+          </m:mfrac>
+          <m:mo>-</m:mo>
+          <m:mfrac>
+            <m:mrow>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>L</m:mi>
+                <m:mo>+</m:mo>
+                <m:mfrac>
+                  <m:mi>ϵ</m:mi>
+                  <m:mn>2</m:mn>
+                </m:mfrac>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:mi>g</m:mi>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>y</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+            </m:mrow>
+            <m:mrow>
+              <m:mi>g</m:mi>
+              <m:mo>(</m:mo>
+              <m:mi>x</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+          </m:mfrac>
+          <m:mo>+</m:mo>
+          <m:mfrac>
+            <m:mrow>
+              <m:mi>f</m:mi>
+              <m:mo>(</m:mo>
+              <m:mi>y</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mrow>
+              <m:mi>g</m:mi>
+              <m:mo>(</m:mo>
+              <m:mi>x</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+          </m:mfrac>
+          <m:mo>.</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id128462">Finally, using the hypothesis that <m:math overflow="scroll"><m:mrow><m:msub><m:mo movablelimits="true" form="prefix">lim</m:mo><m:mrow><m:mi>x</m:mi><m:mo>→</m:mo><m:mi>a</m:mi><m:mo>+</m:mo><m:mn>0</m:mn></m:mrow></m:msub><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>∞</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+and the fact that <m:math overflow="scroll"><m:mrow><m:mi>L</m:mi><m:mo>,</m:mo><m:mi>ϵ</m:mi><m:mo>,</m:mo><m:mi>g</m:mi><m:mo>(</m:mo><m:mi>y</m:mi><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>y</m:mi><m:mo>)</m:mo></m:mrow></m:math> are all constants,
+choose a <m:math overflow="scroll"><m:mrow><m:mi>δ</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> with <m:math overflow="scroll"><m:mrow><m:mi>δ</m:mi><m:mo>&lt;</m:mo><m:mi>β</m:mi><m:mo>,</m:mo></m:mrow></m:math> such that if <m:math overflow="scroll"><m:mrow><m:mi>a</m:mi><m:mo>&lt;</m:mo><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mi>a</m:mi><m:mo>+</m:mo><m:mi>δ</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+then</para>
+    <equation id="id128617">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mrow>
+            <m:mo>|</m:mo>
+            <m:mo>-</m:mo>
+          </m:mrow>
+          <m:mfrac>
+            <m:mrow>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>L</m:mi>
+                <m:mo>-</m:mo>
+                <m:mfrac>
+                  <m:mi>ϵ</m:mi>
+                  <m:mn>2</m:mn>
+                </m:mfrac>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:mi>g</m:mi>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>y</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+            </m:mrow>
+            <m:mrow>
+              <m:mi>g</m:mi>
+              <m:mo>(</m:mo>
+              <m:mi>x</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+          </m:mfrac>
+          <m:mo>+</m:mo>
+          <m:mfrac>
+            <m:mrow>
+              <m:mi>f</m:mi>
+              <m:mo>(</m:mo>
+              <m:mi>y</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mrow>
+              <m:mi>g</m:mi>
+              <m:mo>(</m:mo>
+              <m:mi>x</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+          </m:mfrac>
+          <m:mrow>
+            <m:mo>|</m:mo>
+            <m:mo>&lt;</m:mo>
+          </m:mrow>
+          <m:mfrac>
+            <m:mi>ϵ</m:mi>
+            <m:mn>2</m:mn>
+          </m:mfrac>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id128706">and</para>
+    <equation id="id128712">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mrow>
+            <m:mo>|</m:mo>
+            <m:mo>-</m:mo>
+          </m:mrow>
+          <m:mfrac>
+            <m:mrow>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>L</m:mi>
+                <m:mo>+</m:mo>
+                <m:mfrac>
+                  <m:mi>ϵ</m:mi>
+                  <m:mn>2</m:mn>
+                </m:mfrac>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:mi>g</m:mi>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>y</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+            </m:mrow>
+            <m:mrow>
+              <m:mi>g</m:mi>
+              <m:mo>(</m:mo>
+              <m:mi>x</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+          </m:mfrac>
+          <m:mo>+</m:mo>
+          <m:mfrac>
+            <m:mrow>
+              <m:mi>f</m:mi>
+              <m:mo>(</m:mo>
+              <m:mi>y</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mrow>
+              <m:mi>g</m:mi>
+              <m:mo>(</m:mo>
+              <m:mi>x</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+          </m:mfrac>
+          <m:mrow>
+            <m:mo>|</m:mo>
+            <m:mo>&lt;</m:mo>
+          </m:mrow>
+          <m:mfrac>
+            <m:mi>ϵ</m:mi>
+            <m:mn>2</m:mn>
+          </m:mfrac>
+          <m:mo>.</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id128803">Then, for all <m:math overflow="scroll"><m:mrow><m:mi>a</m:mi><m:mo>&lt;</m:mo><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mi>a</m:mi><m:mo>+</m:mo><m:mi>δ</m:mi><m:mo>,</m:mo></m:mrow></m:math> we would have</para>
+    <equation id="id128835">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mi>L</m:mi>
+          <m:mo>-</m:mo>
+          <m:mi>ϵ</m:mi>
+          <m:mo>&lt;</m:mo>
+          <m:mfrac>
+            <m:mrow>
+              <m:mi>f</m:mi>
+              <m:mo>(</m:mo>
+              <m:mi>x</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mrow>
+              <m:mi>g</m:mi>
+              <m:mo>(</m:mo>
+              <m:mi>x</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+          </m:mfrac>
+          <m:mo>&lt;</m:mo>
+          <m:mi>L</m:mi>
+          <m:mo>+</m:mo>
+          <m:mi>ϵ</m:mi>
+          <m:mo>,</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id128886">implying that</para>
+    <equation id="id128892">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mrow>
+            <m:mo>|</m:mo>
+          </m:mrow>
+          <m:mfrac>
+            <m:mrow>
+              <m:mi>f</m:mi>
+              <m:mo>(</m:mo>
+              <m:mi>x</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mrow>
+              <m:mi>g</m:mi>
+              <m:mo>(</m:mo>
+              <m:mi>x</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+          </m:mfrac>
+          <m:mrow>
+            <m:mo>-</m:mo>
+            <m:mi>L</m:mi>
+            <m:mo>|</m:mo>
+            <m:mo>&lt;</m:mo>
+            <m:mi>ϵ</m:mi>
+            <m:mo>,</m:mo>
+          </m:mrow>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id128941">and the theorem is proved.</para>
+</proof></rule>
+<exercise id="fs-id5690318"><problem id="fs-id1164059258963">
+    <list id="id128958" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid1"> Show that the conclusions of the preceding theorem also hold if we assume that
+<equation id="id128974"><m:math overflow="scroll" mode="display"><m:mrow><m:munder><m:mo movablelimits="true" form="prefix">lim</m:mo><m:mrow><m:mi>x</m:mi><m:mo>→</m:mo><m:mi>a</m:mi><m:mo>+</m:mo><m:mn>0</m:mn></m:mrow></m:munder><m:mfrac><m:mrow><m:msup><m:mi>f</m:mi><m:mo>'</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mrow><m:msup><m:mi>g</m:mi><m:mo>'</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:mfrac><m:mo>=</m:mo><m:mi>∞</m:mi><m:mo>.</m:mo></m:mrow></m:math></equation>
+HINT: Replace <m:math overflow="scroll"><m:mi>ϵ</m:mi></m:math> by a large real number <m:math overflow="scroll"><m:mi>B</m:mi></m:math>
+and show that <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>/</m:mo><m:mi>g</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>&gt;</m:mo><m:mi>B</m:mi></m:mrow></m:math> if <m:math overflow="scroll"><m:mrow><m:mn>0</m:mn><m:mo>&lt;</m:mo><m:mi>x</m:mi><m:mo>-</m:mo><m:mi>a</m:mi><m:mo>&lt;</m:mo><m:mi>δ</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid2"> Show that the preceding theorem, as well as part (a) of this exercise,
+also holds if we replace
+the (finite) endpoint <m:math overflow="scroll"><m:mi>a</m:mi></m:math> by <m:math overflow="scroll"><m:mrow><m:mo>-</m:mo><m:mi>∞</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+HINT: Replace the <m:math overflow="scroll"><m:mi>δ</m:mi></m:math>'s by negative numbers <m:math overflow="scroll"><m:mrow><m:mi>B</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid3"> Show that the preceding theorem, as well as parts a and b of this exercise,
+hold if the limit as <m:math overflow="scroll"><m:mi>x</m:mi></m:math> approaches <m:math overflow="scroll"><m:mi>a</m:mi></m:math> from the right
+is replaced by the limit as <m:math overflow="scroll"><m:mi>x</m:mi></m:math> approaches <m:math overflow="scroll"><m:mi>b</m:mi></m:math> from the left.
+HINT: Replace <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:math> by <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mo>-</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>g</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:math> by <m:math overflow="scroll"><m:mrow><m:mi>g</m:mi><m:mo>(</m:mo><m:mo>-</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid4"> Give an example to show that the converse
+of L'Hopital's Rule need not hold; i.e., find functions
+<m:math overflow="scroll"><m:mi>f</m:mi></m:math> and <m:math overflow="scroll"><m:mi>g</m:mi></m:math> for which
+<m:math overflow="scroll"><m:mrow><m:msub><m:mo movablelimits="true" form="prefix">lim</m:mo><m:mrow><m:mi>x</m:mi><m:mo>→</m:mo><m:mi>a</m:mi><m:mo>+</m:mo><m:mn>0</m:mn></m:mrow></m:msub><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msub><m:mo movablelimits="true" form="prefix">lim</m:mo><m:mrow><m:mi>x</m:mi><m:mo>→</m:mo><m:mi>a</m:mi><m:mo>+</m:mo><m:mn>0</m:mn></m:mrow></m:msub><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math><equation id="id129420"><m:math overflow="scroll" mode="display"><m:mrow><m:munder><m:mo movablelimits="true" form="prefix">lim</m:mo><m:mrow><m:mi>x</m:mi><m:mo>→</m:mo><m:mi>a</m:mi><m:mo>+</m:mo><m:mn>0</m:mn></m:mrow></m:munder><m:mfrac><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mrow><m:mi>g</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mfrac><m:mspace width="4.pt"/><m:mtext>exists,</m:mtext><m:mspace width="4.pt"/><m:mtext>but</m:mtext><m:mspace width="4.pt"/><m:munder><m:mo movablelimits="true" form="prefix">lim</m:mo><m:mrow><m:mi>x</m:mi><m:mo>→</m:mo><m:mi>a</m:mi><m:mo>+</m:mo><m:mn>0</m:mn></m:mrow></m:munder><m:mfrac><m:mrow><m:msup><m:mi>f</m:mi><m:mo>'</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mrow><m:msup><m:mi>g</m:mi><m:mo>'</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:mfrac><m:mspace width="4.pt"/><m:mtext>does</m:mtext><m:mspace width="4.pt"/><m:mtext>not</m:mtext><m:mspace width="4.pt"/><m:mtext>exist.</m:mtext></m:mrow></m:math></equation></item>
+      <item id="uid5"> Deduce from the proof given above that if
+<m:math overflow="scroll"><m:mrow><m:msub><m:mo movablelimits="true" form="prefix">lim</m:mo><m:mrow><m:mi>x</m:mi><m:mo>→</m:mo><m:mi>a</m:mi><m:mo>+</m:mo><m:mn>0</m:mn></m:mrow></m:msub><m:msup><m:mi>f</m:mi><m:mo>'</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>/</m:mo><m:msup><m:mi>g</m:mi><m:mo>'</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>L</m:mi></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:msub><m:mo movablelimits="true" form="prefix">lim</m:mo><m:mrow><m:mi>x</m:mi><m:mo>→</m:mo><m:mi>a</m:mi><m:mo>+</m:mo><m:mn>0</m:mn></m:mrow></m:msub><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>∞</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+then
+<m:math overflow="scroll"><m:mrow><m:msub><m:mo movablelimits="true" form="prefix">lim</m:mo><m:mrow><m:mi>x</m:mi><m:mo>→</m:mo><m:mi>a</m:mi><m:mo>+</m:mo><m:mn>0</m:mn></m:mrow></m:msub><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>/</m:mo><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>L</m:mi></m:mrow></m:math> independent of the behavior of <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid6"> Evaluate <m:math overflow="scroll"><m:mrow><m:msub><m:mo movablelimits="true" form="prefix">lim</m:mo><m:mrow><m:mi>x</m:mi><m:mo>→</m:mo><m:mi>∞</m:mi></m:mrow></m:msub><m:msup><m:mi>x</m:mi><m:mrow><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>x</m:mi></m:mrow></m:msup><m:mo>,</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:msub><m:mo movablelimits="true" form="prefix">lim</m:mo><m:mrow><m:mi>x</m:mi><m:mo>→</m:mo><m:mn>0</m:mn></m:mrow></m:msub><m:msup><m:mrow><m:mo>(</m:mo><m:mn>1</m:mn><m:mo>-</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mrow><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>x</m:mi></m:mrow></m:msup><m:mo>.</m:mo></m:mrow></m:math>
+HINT: Take logarithms.
+</item>
+    </list>
+</problem></exercise>
+  </content>
+</document>

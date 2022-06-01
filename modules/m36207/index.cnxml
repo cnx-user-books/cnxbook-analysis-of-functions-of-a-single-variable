@@ -1,0 +1,36 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML">
+  <title>Integration, Average Behavior A=π r^2</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m36207</md:content-id>
+  <md:title>Integration, Average Behavior A=π r^2</md:title>
+  <md:abstract>A brief introduction to a group of modules about integration, with links to important theorems in those modules.</md:abstract>
+  <md:uuid>cbdf9f69-2066-40c4-8cfb-e8c74bb5730b</md:uuid>
+</metadata>
+
+<content>
+    <para id="id75945">In this chapter we will derive the formula <m:math overflow="scroll"><m:mrow><m:mi>A</m:mi><m:mo>=</m:mo><m:mi>π</m:mi><m:msup><m:mi>r</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:math> for the area of a circle of radius <m:math overflow="scroll"><m:mrow><m:mi>r</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+As a matter of fact, we will first have to settle on exactly what is the
+definition of the area of a region in the plane,
+and more subtle than that, we must decide what kinds of regions in the plane “have” areas.
+Before we consider the problem of area, we will
+develop the notion of the integral (or average value) of a function defined on an interval <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>,</m:mo></m:mrow></m:math>
+which notion we will use later to compute areas, once they have been defined.</para>
+    <para id="id76349">The main results of this chapter include:</para>
+    <list id="id76352" display="block" list-type="enumerated"><item id="uid1">The definition of <emphasis effect="bold">integrability</emphasis> of a function,
+and the definition of the <emphasis effect="bold">integral</emphasis> of an integrable function,
+</item>
+      <item id="uid2">The <emphasis effect="bold">Fundamental Theorem of Calculus</emphasis> (<link target-id="fs-id1170937657090" document="m36210"/>),
+</item>
+      <item id="uid3">The <emphasis effect="bold">Integral Form of Taylor's Remainder Theorem</emphasis> (<link target-id="fs-id1164791153871" document="m36211"/>),
+</item>
+      <item id="uid4">The <emphasis effect="bold">General Binomial Theorem</emphasis> (<link target-id="fs-id1164789276017" document="m36211"/>),
+</item>
+      <item id="uid5">The definition of the <emphasis effect="bold">area</emphasis> of a <emphasis effect="bold">geometric set,</emphasis></item>
+      <item id="uid6"> <m:math overflow="scroll"><m:mrow><m:mi>A</m:mi><m:mo>=</m:mo><m:mi>π</m:mi><m:msup><m:mi>r</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:math> (<link target-id="fs-id8011063" document="m36212"/>), and
+</item>
+      <item id="uid7">The <emphasis effect="bold">Integral Test</emphasis> (<link target-id="fs-id1164271133781" document="m36222"/>).
+</item>
+    </list>
+    <!--empty paragraphs get left behind.-->
+  </content>
+</document>

@@ -1,0 +1,518 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML">
+  <title>Sequences and Limits</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m36118</md:content-id>
+  <md:title>Sequences and Limits</md:title>
+  <md:abstract>A definition of a sequence of numbers is followed by the concept of convergence and limits.</md:abstract>
+  <md:uuid>6c203dc5-0156-4b5f-abce-562e86d30421</md:uuid>
+</metadata>
+
+<content>
+<definition id="fs-id1172149271687"><term/><meaning id="fs-id1172156158797">
+    <para id="id284571">
+A <emphasis effect="italics">sequence</emphasis> of real or complex numbers is defined to be a function from the set <m:math overflow="scroll"><m:mi>N</m:mi></m:math> of natural numbers into the set<m:math overflow="scroll"><m:mi>R</m:mi></m:math>
+or <m:math overflow="scroll"><m:mrow><m:mi>C</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Instead of referring to such a function as an assignment <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>→</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>n</m:mi><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math> we ordinarily use the notation <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo><m:mo>,</m:mo></m:mrow></m:math><m:math overflow="scroll"><m:mrow><m:msubsup><m:mrow><m:mo>{</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow><m:mn>1</m:mn><m:mi>∞</m:mi></m:msubsup><m:mo>,</m:mo></m:mrow></m:math> or <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>a</m:mi><m:mn>1</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>a</m:mi><m:mn>2</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>a</m:mi><m:mn>3</m:mn></m:msub><m:mo>,</m:mo><m:mo>...</m:mo><m:mo>}</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Here, of course, <m:math overflow="scroll"><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub></m:math> denotes the number <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>n</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math></para>
+</meaning></definition>
+<rule id="fs-id1172129939056"><label/><statement id="fs-id1172149528283">
+    <para id="id285299"><emphasis effect="bold">REMARK</emphasis> We expand this definition slightly on occasion
+to make some of our notation more indicative.
+That is, we sometimes <emphasis effect="bold">index</emphasis> the terms of a sequence
+beginning with an integer other than 1. For example, we write
+<m:math overflow="scroll"><m:mrow><m:msubsup><m:mrow><m:mo>{</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow><m:mn>0</m:mn><m:mi>∞</m:mi></m:msubsup><m:mo>,</m:mo></m:mrow></m:math><m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>a</m:mi><m:mn>0</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>a</m:mi><m:mn>1</m:mn></m:msub><m:mo>,</m:mo><m:mo>...</m:mo><m:mo>}</m:mo><m:mo>,</m:mo></m:mrow></m:math> or even <m:math overflow="scroll"><m:mrow><m:msubsup><m:mrow><m:mo>{</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow><m:mrow><m:mo>-</m:mo><m:mn>3</m:mn></m:mrow><m:mi>∞</m:mi></m:msubsup><m:mo>.</m:mo></m:mrow></m:math></para></statement></rule>
+    <para id="id285411">We give next what is the most significant definition in the whole of mathematical analysis,
+i.e., what it means for a sequence to converge or to have a limit.</para>
+<definition id="fs-id1172129664506"><term/><meaning id="fs-id1172146149375"><para id="fs-id1172155813061">
+Let <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> be a sequence of real numbers and let <m:math overflow="scroll"><m:mi>L</m:mi></m:math> be a real number.
+The sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> is said to <emphasis effect="italics">converge</emphasis> to <m:math overflow="scroll"><m:mrow><m:mi>L</m:mi><m:mo>,</m:mo></m:mrow></m:math> or that <m:math overflow="scroll"><m:mi>L</m:mi></m:math> is the <emphasis effect="italics">limit</emphasis> of <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math>, if the following condition
+is satisfied.
+For every positive number <m:math overflow="scroll"><m:mrow><m:mi>ϵ</m:mi><m:mo>,</m:mo></m:mrow></m:math> there exists a natural number <m:math overflow="scroll"><m:mi>N</m:mi></m:math> such that
+if <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>≥</m:mo><m:mi>N</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+then <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mo>-</m:mo><m:mi>L</m:mi><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mi>ϵ</m:mi><m:mo>.</m:mo></m:mrow></m:mrow></m:math></para>
+    <para id="id285578">In symbols, we say <m:math overflow="scroll"><m:mrow><m:mi>L</m:mi><m:mo>=</m:mo><m:mo movablelimits="true" form="prefix">lim</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub></m:mrow></m:math> or</para>
+    <equation id="id285606">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mi>L</m:mi>
+          <m:mo>=</m:mo>
+          <m:munder>
+            <m:mo movablelimits="true" form="prefix">lim</m:mo>
+            <m:mrow>
+              <m:mi>n</m:mi>
+              <m:mo>→</m:mo>
+              <m:mi>∞</m:mi>
+            </m:mrow>
+          </m:munder>
+          <m:msub>
+            <m:mi>a</m:mi>
+            <m:mi>n</m:mi>
+          </m:msub>
+          <m:mo>.</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id285646">We also may write <m:math overflow="scroll"><m:mrow><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>↦</m:mo><m:mi>L</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+    <para id="id285671">If a sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> of real or complex numbers
+converges to a number <m:math overflow="scroll"><m:mrow><m:mi>L</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+we say that the sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> is <emphasis effect="italics">convergent</emphasis>.</para>
+    <para id="id285728">We say that a sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> of real numbers <emphasis effect="italics">diverges</emphasis> to <m:math overflow="scroll"><m:mrow><m:mo>+</m:mo><m:mi>∞</m:mi></m:mrow></m:math> if for every
+positive number <m:math overflow="scroll"><m:mrow><m:mi>M</m:mi><m:mo>,</m:mo></m:mrow></m:math> there exists a natural number <m:math overflow="scroll"><m:mi>N</m:mi></m:math> such that
+if <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>≥</m:mo><m:mi>N</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+then <m:math overflow="scroll"><m:mrow><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>≥</m:mo><m:mi>M</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Note that we do <emphasis effect="bold">not</emphasis> say that such a sequence
+is convergent.</para>
+    <para id="id285826">Similarly, we say that a sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> of real numbers <emphasis effect="italics">diverges</emphasis> to <m:math overflow="scroll"><m:mrow><m:mo>-</m:mo><m:mi>∞</m:mi></m:mrow></m:math>
+if for every real number <m:math overflow="scroll"><m:mrow><m:mi>M</m:mi><m:mo>,</m:mo></m:mrow></m:math> there
+exists
+a natural number <m:math overflow="scroll"><m:mi>N</m:mi></m:math> such that if
+<m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>≥</m:mo><m:mi>N</m:mi><m:mo>,</m:mo></m:mrow></m:math> then <m:math overflow="scroll"><m:mrow><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>≤</m:mo><m:mi>M</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+    <para id="id285918">The definition of convergence for a sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>z</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> of complex numbers is
+exactly the same as for a sequence of real numbers.
+Thus, let <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>z</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> be a sequence of complex numbers and let <m:math overflow="scroll"><m:mi>L</m:mi></m:math> be a complex number.
+The sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>z</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> is said to <emphasis effect="italics">converge</emphasis> to <m:math overflow="scroll"><m:mrow><m:mi>L</m:mi><m:mo>,</m:mo></m:mrow></m:math> or that <m:math overflow="scroll"><m:mi>L</m:mi></m:math> is the <emphasis effect="italics">limit</emphasis> of <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>z</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo><m:mo>,</m:mo></m:mrow></m:math> if the following condition
+is satisfied.
+For every positive number <m:math overflow="scroll"><m:mrow><m:mi>ϵ</m:mi><m:mo>,</m:mo></m:mrow></m:math> there exists a natural number <m:math overflow="scroll"><m:mi>N</m:mi></m:math> such that
+if <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>≥</m:mo><m:mi>N</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+then <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msub><m:mi>z</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mo>-</m:mo><m:mi>L</m:mi><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mi>ϵ</m:mi><m:mo>.</m:mo></m:mrow></m:mrow></m:math></para></meaning></definition>
+<rule id="fs-id1170982116502"><label/><statement id="fs-id1170975538372">
+    <para id="id286102"><emphasis effect="bold">REMARKS</emphasis>  The natural number <m:math overflow="scroll"><m:mi>N</m:mi></m:math> of the preceding definition
+surely depends on the positive number <m:math overflow="scroll"><m:mrow><m:mi>ϵ</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+If <m:math overflow="scroll"><m:msup><m:mi>ϵ</m:mi><m:mo>'</m:mo></m:msup></m:math> is a smaller positive number than <m:math overflow="scroll"><m:mrow><m:mi>ϵ</m:mi><m:mo>,</m:mo></m:mrow></m:math> then the
+corresponding <m:math overflow="scroll"><m:msup><m:mi>N</m:mi><m:mo>'</m:mo></m:msup></m:math> very likely will need to be larger than <m:math overflow="scroll"><m:mrow><m:mi>N</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Sometimes we will indicate this dependence by writing <m:math overflow="scroll"><m:mrow><m:mi>N</m:mi><m:mo>(</m:mo><m:mi>ϵ</m:mi><m:mo>)</m:mo></m:mrow></m:math>
+instead of simply <m:math overflow="scroll"><m:mrow><m:mi>N</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+It is always wise to remember that <m:math overflow="scroll"><m:mi>N</m:mi></m:math> depends on <m:math overflow="scroll"><m:mrow><m:mi>ϵ</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+On the other hand, the <m:math overflow="scroll"><m:mi>N</m:mi></m:math> or <m:math overflow="scroll"><m:mrow><m:mi>N</m:mi><m:mo>(</m:mo><m:mi>ϵ</m:mi><m:mo>)</m:mo></m:mrow></m:math> in this definition is not unique.
+It should be clear that if a natural number <m:math overflow="scroll"><m:mi>N</m:mi></m:math> satisfies this definition, then any larger natural number
+<m:math overflow="scroll"><m:mi>M</m:mi></m:math> will also satisfy the definition.
+So, in fact, if there exists one natural number that works, then there exist infinitely many such natural numbers.</para>
+    <para id="id286271">It is clear, too, from the definition that whether or not a sequence
+is convergent only depends on the “tail” of the sequence.
+Specifically, for any positive integer <m:math overflow="scroll"><m:mrow><m:mi>K</m:mi><m:mo>,</m:mo></m:mrow></m:math> the numbers
+<m:math overflow="scroll"><m:mrow><m:msub><m:mi>a</m:mi><m:mn>1</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>a</m:mi><m:mn>2</m:mn></m:msub><m:mo>,</m:mo><m:mo>...</m:mo><m:mo>,</m:mo><m:msub><m:mi>a</m:mi><m:mi>K</m:mi></m:msub></m:mrow></m:math> can take on any value whatsoever without
+affecting the convergence of the entire sequence.
+We are only concerned with <m:math overflow="scroll"><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub></m:math>'s for <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>≥</m:mo><m:mi>N</m:mi><m:mo>,</m:mo></m:mrow></m:math> and as soon
+as <m:math overflow="scroll"><m:mi>N</m:mi></m:math> is chosen to be greater than <m:math overflow="scroll"><m:mrow><m:mi>K</m:mi><m:mo>,</m:mo></m:mrow></m:math> the first part of the sequence is irrelevant.</para>
+    <para id="id286378">The definition of convergence is given as a fairly complicated sentence, and there are several other
+ways of saying the same thing. Here are two:
+For every <m:math overflow="scroll"><m:mrow><m:mi>ϵ</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> there exists a <m:math overflow="scroll"><m:mi>N</m:mi></m:math> such that, whenever <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>≥</m:mo><m:mi>N</m:mi><m:mo>,</m:mo></m:mrow></m:math><m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mo>-</m:mo><m:mi>L</m:mi><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mi>ϵ</m:mi><m:mo>.</m:mo></m:mrow></m:mrow></m:math>
+And, given an <m:math overflow="scroll"><m:mrow><m:mi>ϵ</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> there exists a <m:math overflow="scroll"><m:mi>N</m:mi></m:math> such that <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mo>-</m:mo><m:mi>L</m:mi><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mi>ϵ</m:mi></m:mrow></m:mrow></m:math> for all <m:math overflow="scroll"><m:mi>n</m:mi></m:math> for which <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>≥</m:mo><m:mi>N</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+It's a good idea to think about these two sentences and convince yourself that
+they really do “mean” the same thing as the one defining convergence.</para>
+    <para id="id286539">It is clear from this definition that we can't
+check whether a sequence converges or not unless we know the
+limit value <m:math overflow="scroll"><m:mrow><m:mi>L</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+The whole thrust of this definition has to do with estimating the quantity <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mo>-</m:mo><m:mi>L</m:mi><m:mo>|</m:mo><m:mo>.</m:mo></m:mrow></m:mrow></m:math>
+We will see later that there
+are ways to tell in advance that a sequence converges without knowing the value of the limit.</para>
+</statement></rule>
+<example id="fs-id1171001000789">
+    <para id="id286585">
+Let <m:math overflow="scroll"><m:mrow><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>n</m:mi><m:mo>,</m:mo></m:mrow></m:math> and let us show that <m:math overflow="scroll"><m:mrow><m:mo movablelimits="true" form="prefix">lim</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math>
+Given an <m:math overflow="scroll"><m:mrow><m:mi>ϵ</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> let us choose a <m:math overflow="scroll"><m:mi>N</m:mi></m:math> such that <m:math overflow="scroll"><m:mrow><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>N</m:mi><m:mo>&lt;</m:mo><m:mi>ϵ</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+(How do we know we can find such a <m:math overflow="scroll"><m:mrow><m:mi>N</m:mi><m:mo>?</m:mo></m:mrow></m:math>)
+Now, if <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>≥</m:mo><m:mi>N</m:mi><m:mo>,</m:mo></m:mrow></m:math> then we have</para>
+    <equation id="id286722">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mrow>
+            <m:mo>|</m:mo>
+          </m:mrow>
+          <m:msub>
+            <m:mi>a</m:mi>
+            <m:mi>n</m:mi>
+          </m:msub>
+          <m:mrow>
+            <m:mo>-</m:mo>
+            <m:mn>0</m:mn>
+            <m:mo>|</m:mo>
+            <m:mo>=</m:mo>
+            <m:mo>|</m:mo>
+          </m:mrow>
+          <m:mfrac>
+            <m:mn>1</m:mn>
+            <m:mi>n</m:mi>
+          </m:mfrac>
+          <m:mrow>
+            <m:mo>|</m:mo>
+            <m:mo>=</m:mo>
+          </m:mrow>
+          <m:mfrac>
+            <m:mn>1</m:mn>
+            <m:mi>n</m:mi>
+          </m:mfrac>
+          <m:mo>≤</m:mo>
+          <m:mfrac>
+            <m:mn>1</m:mn>
+            <m:mi>N</m:mi>
+          </m:mfrac>
+          <m:mo>&lt;</m:mo>
+          <m:mi>ϵ</m:mi>
+          <m:mo>,</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id286788">which is exactly what we needed to show to conclude that <m:math overflow="scroll"><m:mrow><m:mn>0</m:mn><m:mo>=</m:mo><m:mo movablelimits="true" form="prefix">lim</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>.</m:mo></m:mrow></m:math></para>
+</example>
+<example id="fs-id1170977094148">
+    <para id="id286822"> Let <m:math overflow="scroll"><m:mrow><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>=</m:mo><m:mrow><m:mo>(</m:mo><m:mn>2</m:mn><m:mi>n</m:mi><m:mo>+</m:mo><m:mn>1</m:mn><m:mo>)</m:mo></m:mrow><m:mo>/</m:mo><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>1</m:mn><m:mo>-</m:mo><m:mn>3</m:mn><m:mi>n</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math>
+and let <m:math overflow="scroll"><m:mrow><m:mi>L</m:mi><m:mo>=</m:mo><m:mo>-</m:mo><m:mn>2</m:mn><m:mo>/</m:mo><m:mn>3</m:mn><m:mo>.</m:mo></m:mrow></m:math> Let us show that <m:math overflow="scroll"><m:mrow><m:mi>L</m:mi><m:mo>=</m:mo><m:mo movablelimits="true" form="prefix">lim</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>.</m:mo></m:mrow></m:math>
+Indeed, if <m:math overflow="scroll"><m:mrow><m:mi>ϵ</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn></m:mrow></m:math> is given, we must find a <m:math overflow="scroll"><m:mrow><m:mi>N</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+such that if <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>≥</m:mo><m:mi>N</m:mi></m:mrow></m:math> then <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mo>+</m:mo><m:mrow><m:mo>(</m:mo><m:mn>2</m:mn><m:mo>/</m:mo><m:mn>3</m:mn><m:mo>)</m:mo></m:mrow><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mi>ϵ</m:mi><m:mo>.</m:mo></m:mrow></m:mrow></m:math>
+Let us examine the quantity <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mo>+</m:mo><m:mn>2</m:mn><m:mo>/</m:mo><m:mn>3</m:mn><m:mo>|</m:mo><m:mo>.</m:mo></m:mrow></m:mrow></m:math>
+Maybe we can make some estimates on it, in such a way that it becomes clear how to find the natural number <m:math overflow="scroll"><m:mrow><m:mi>N</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+    <equation id="uid1"><m:math overflow="scroll" mode="display">
+        <m:mtable displaystyle="true">
+          <m:mtr>
+            <m:mtd columnalign="right">
+              <m:mrow>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:msub>
+                  <m:mi>a</m:mi>
+                  <m:mi>n</m:mi>
+                </m:msub>
+                <m:mrow>
+                  <m:mo>+</m:mo>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mn>2</m:mn>
+                    <m:mo>/</m:mo>
+                    <m:mn>3</m:mn>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:mfrac>
+                  <m:mrow>
+                    <m:mn>2</m:mn>
+                    <m:mi>n</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                  <m:mrow>
+                    <m:mn>1</m:mn>
+                    <m:mo>-</m:mo>
+                    <m:mn>3</m:mn>
+                    <m:mi>n</m:mi>
+                  </m:mrow>
+                </m:mfrac>
+                <m:mo>+</m:mo>
+                <m:mfrac>
+                  <m:mn>2</m:mn>
+                  <m:mn>3</m:mn>
+                </m:mfrac>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:mfrac>
+                  <m:mrow>
+                    <m:mn>6</m:mn>
+                    <m:mi>n</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mn>3</m:mn>
+                    <m:mo>+</m:mo>
+                    <m:mn>2</m:mn>
+                    <m:mo>-</m:mo>
+                    <m:mn>6</m:mn>
+                    <m:mi>n</m:mi>
+                  </m:mrow>
+                  <m:mrow>
+                    <m:mn>3</m:mn>
+                    <m:mo>-</m:mo>
+                    <m:mn>9</m:mn>
+                    <m:mi>n</m:mi>
+                  </m:mrow>
+                </m:mfrac>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:mfrac>
+                  <m:mn>5</m:mn>
+                  <m:mrow>
+                    <m:mn>3</m:mn>
+                    <m:mo>-</m:mo>
+                    <m:mn>9</m:mn>
+                    <m:mi>n</m:mi>
+                  </m:mrow>
+                </m:mfrac>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mfrac>
+                <m:mn>5</m:mn>
+                <m:mrow>
+                  <m:mn>9</m:mn>
+                  <m:mi>n</m:mi>
+                  <m:mo>-</m:mo>
+                  <m:mn>3</m:mn>
+                </m:mrow>
+              </m:mfrac>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mfrac>
+                <m:mn>5</m:mn>
+                <m:mrow>
+                  <m:mn>6</m:mn>
+                  <m:mi>n</m:mi>
+                  <m:mo>+</m:mo>
+                  <m:mn>3</m:mn>
+                  <m:mi>n</m:mi>
+                  <m:mo>-</m:mo>
+                  <m:mn>3</m:mn>
+                </m:mrow>
+              </m:mfrac>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>≤</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mfrac>
+                <m:mn>5</m:mn>
+                <m:mrow>
+                  <m:mn>6</m:mn>
+                  <m:mi>n</m:mi>
+                </m:mrow>
+              </m:mfrac>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>&lt;</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mfrac>
+                  <m:mn>1</m:mn>
+                  <m:mi>n</m:mi>
+                </m:mfrac>
+                <m:mo>,</m:mo>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+        </m:mtable>
+      </m:math>
+    </equation>
+    <para id="id287288">for all <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>≥</m:mo><m:mn>1</m:mn><m:mo>.</m:mo></m:mrow></m:math>
+Therefore,
+if <m:math overflow="scroll"><m:mi>N</m:mi></m:math> is an integer for which
+<m:math overflow="scroll"><m:mrow><m:mi>N</m:mi><m:mo>&gt;</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>ϵ</m:mi><m:mo>,</m:mo></m:mrow></m:math> then</para>
+    <equation id="id287340">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mrow>
+            <m:mo>|</m:mo>
+          </m:mrow>
+          <m:msub>
+            <m:mi>a</m:mi>
+            <m:mi>n</m:mi>
+          </m:msub>
+          <m:mrow>
+            <m:mo>+</m:mo>
+            <m:mn>2</m:mn>
+            <m:mo>/</m:mo>
+            <m:mn>3</m:mn>
+            <m:mo>|</m:mo>
+            <m:mo>&lt;</m:mo>
+            <m:mn>1</m:mn>
+            <m:mo>/</m:mo>
+            <m:mi>n</m:mi>
+            <m:mo>≤</m:mo>
+            <m:mn>1</m:mn>
+            <m:mo>/</m:mo>
+            <m:mi>N</m:mi>
+            <m:mo>&lt;</m:mo>
+            <m:mi>ϵ</m:mi>
+            <m:mo>,</m:mo>
+          </m:mrow>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id287397">whenever <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>≥</m:mo><m:mi>N</m:mi><m:mo>,</m:mo></m:mrow></m:math> as desired.
+(How do we know that there exists a <m:math overflow="scroll"><m:mi>N</m:mi></m:math> which is larger than the number <m:math overflow="scroll"><m:mrow><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>ϵ</m:mi><m:mo>?</m:mo></m:mrow></m:math>)</para>
+</example>
+<example id="fs-id1170974753597">
+    <para id="id287445">
+Let <m:math overflow="scroll"><m:mrow><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:msqrt><m:mi>n</m:mi></m:msqrt><m:mo>,</m:mo></m:mrow></m:math> and let us show that
+<m:math overflow="scroll"><m:mrow><m:mo movablelimits="true" form="prefix">lim</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math>
+Given an <m:math overflow="scroll"><m:mrow><m:mi>ϵ</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> we must find an integer <m:math overflow="scroll"><m:mi>N</m:mi></m:math>
+that satisfies the requirements of the definition.
+It's a little trickier this time to choose this <m:math overflow="scroll"><m:mrow><m:mi>N</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Consider the positive number <m:math overflow="scroll"><m:mrow><m:msup><m:mi>ϵ</m:mi><m:mn>2</m:mn></m:msup><m:mo>.</m:mo></m:mrow></m:math>
+We know, from Exercise 1.16, that there exists a
+natural number <m:math overflow="scroll"><m:mi>N</m:mi></m:math> such that <m:math overflow="scroll"><m:mrow><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>N</m:mi><m:mo>&lt;</m:mo><m:msup><m:mi>ϵ</m:mi><m:mn>2</m:mn></m:msup><m:mo>.</m:mo></m:mrow></m:math>
+Now, if <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>≥</m:mo><m:mi>N</m:mi><m:mo>,</m:mo></m:mrow></m:math> then</para>
+    <equation id="id287616">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mrow>
+            <m:mo>|</m:mo>
+          </m:mrow>
+          <m:msub>
+            <m:mi>a</m:mi>
+            <m:mi>n</m:mi>
+          </m:msub>
+          <m:mrow>
+            <m:mo>-</m:mo>
+            <m:mn>0</m:mn>
+            <m:mo>|</m:mo>
+            <m:mo>=</m:mo>
+          </m:mrow>
+          <m:mfrac>
+            <m:mn>1</m:mn>
+            <m:msqrt>
+              <m:mi>n</m:mi>
+            </m:msqrt>
+          </m:mfrac>
+          <m:mo>≤</m:mo>
+          <m:mfrac>
+            <m:mn>1</m:mn>
+            <m:msqrt>
+              <m:mi>N</m:mi>
+            </m:msqrt>
+          </m:mfrac>
+          <m:mo>=</m:mo>
+          <m:msqrt>
+            <m:mfrac>
+              <m:mn>1</m:mn>
+              <m:mi>N</m:mi>
+            </m:mfrac>
+          </m:msqrt>
+          <m:mo>&lt;</m:mo>
+          <m:msqrt>
+            <m:msup>
+              <m:mi>ϵ</m:mi>
+              <m:mn>2</m:mn>
+            </m:msup>
+          </m:msqrt>
+          <m:mo>=</m:mo>
+          <m:mi>ϵ</m:mi>
+          <m:mo>,</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id287691">which shows that <m:math overflow="scroll"><m:mrow><m:mn>0</m:mn><m:mo>=</m:mo><m:mo movablelimits="true" form="prefix">lim</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:msqrt><m:mi>n</m:mi></m:msqrt><m:mo>.</m:mo></m:mrow></m:math></para>
+</example>
+<rule id="fs-id1170978287259"><label/><statement id="fs-id1170981380845">
+    <para id="id287724"><emphasis effect="bold">REMARK</emphasis>
+A good way to attack a limit problem is to immediately examine the
+quantity <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mo>-</m:mo><m:mi>L</m:mi><m:mo>|</m:mo><m:mo>,</m:mo></m:mrow></m:mrow></m:math>
+which is what we did in <link target-id="fs-id1170977094148"/> above.
+This is the quantity we eventually wish to show is less than <m:math overflow="scroll"><m:mi>ϵ</m:mi></m:math> when <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>≥</m:mo><m:mi>N</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+and determining which <m:math overflow="scroll"><m:mi>N</m:mi></m:math> to use is always the hard part.
+Ordinarily, some algebraic manipulations can be performed on the expression
+<m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mo>-</m:mo><m:mi>L</m:mi><m:mo>|</m:mo></m:mrow></m:mrow></m:math> that can help us figure out exactly how to choose <m:math overflow="scroll"><m:mrow><m:mi>N</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Just know that this process takes some getting used to,
+so practice!</para></statement></rule>
+<exercise id="fs-id1170987452385"><problem id="fs-id1170977555255">
+    <list id="id287846" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid2"> Using the basic definition, prove that
+<m:math overflow="scroll"><m:mrow><m:mo movablelimits="true" form="prefix">lim</m:mo><m:mn>3</m:mn><m:mo>/</m:mo><m:mo>(</m:mo><m:mn>2</m:mn><m:mi>n</m:mi><m:mo>+</m:mo><m:mn>7</m:mn><m:mo>)</m:mo><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid3"> Using the basic definition, prove that
+<m:math overflow="scroll"><m:mrow><m:mo movablelimits="true" form="prefix">lim</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:msup><m:mi>n</m:mi><m:mn>2</m:mn></m:msup><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid4"> Using the basic definition, prove that <m:math overflow="scroll"><m:mrow><m:mo movablelimits="true" form="prefix">lim</m:mo><m:mrow><m:mo>(</m:mo><m:msup><m:mi>n</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mn>1</m:mn><m:mo>)</m:mo></m:mrow><m:mo>/</m:mo><m:mrow><m:mo>(</m:mo><m:msup><m:mi>n</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mn>100</m:mn><m:mi>n</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>.</m:mo></m:mrow></m:math>
+HINT: Use the idea from the remark above; i.e.,
+examine the quantity <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mo>-</m:mo><m:mi>L</m:mi><m:mo>|</m:mo><m:mo>.</m:mo></m:mrow></m:mrow></m:math></item>
+      <item id="uid5"> Again, using the basic definition, prove that
+<equation id="id288058"><m:math overflow="scroll" mode="display"><m:mrow><m:mo movablelimits="true" form="prefix">lim</m:mo><m:mfrac><m:mrow><m:mi>n</m:mi><m:mo>+</m:mo><m:msup><m:mi>n</m:mi><m:mn>2</m:mn></m:msup><m:mi>i</m:mi></m:mrow><m:mrow><m:mi>n</m:mi><m:mo>-</m:mo><m:msup><m:mi>n</m:mi><m:mn>2</m:mn></m:msup><m:mi>i</m:mi></m:mrow></m:mfrac><m:mo>=</m:mo><m:mo>-</m:mo><m:mn>1</m:mn><m:mo>.</m:mo></m:mrow></m:math></equation>
+Remember the definition of the absolute value of a complex number.
+</item>
+      <item id="uid6"> Using the basic definition, prove that
+<equation id="id288133"><m:math overflow="scroll" mode="display"><m:mrow><m:mo movablelimits="true" form="prefix">lim</m:mo><m:mfrac><m:mrow><m:msup><m:mi>n</m:mi><m:mn>3</m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mi>n</m:mi><m:mn>2</m:mn></m:msup><m:mi>i</m:mi></m:mrow><m:mrow><m:mn>1</m:mn><m:mo>-</m:mo><m:msup><m:mi>n</m:mi><m:mn>3</m:mn></m:msup><m:mi>i</m:mi></m:mrow></m:mfrac><m:mo>=</m:mo><m:mi>i</m:mi><m:mo>.</m:mo></m:mrow></m:math></equation></item>
+      <item id="uid7"> Let <m:math overflow="scroll"><m:mrow><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>=</m:mo><m:msup><m:mrow><m:mo>(</m:mo><m:mo>-</m:mo><m:mn>1</m:mn><m:mo>)</m:mo></m:mrow><m:mi>n</m:mi></m:msup><m:mo>.</m:mo></m:mrow></m:math>
+Prove that 1 is <emphasis effect="bold">not</emphasis> the limit of the sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+HINT: Suppose the sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> does converge to 1.
+Use <m:math overflow="scroll"><m:mrow><m:mi>ϵ</m:mi><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>,</m:mo></m:mrow></m:math> let <m:math overflow="scroll"><m:mi>N</m:mi></m:math> be the corresponding integer that exists in the definition,
+satisfying <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mo>-</m:mo><m:mn>1</m:mn><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mn>1</m:mn></m:mrow></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>≥</m:mo><m:mi>N</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+and then examine the quantity <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mo>-</m:mo><m:mn>1</m:mn><m:mo>|</m:mo></m:mrow></m:mrow></m:math> for various <m:math overflow="scroll"><m:mi>n</m:mi></m:math>'s to get a contradiction.
+</item>
+    </list>
+</problem></exercise>
+<exercise id="fs-id1170980147584"><problem id="fs-id1170980264856">
+    <list id="id288411" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid8"> Let <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> be a sequence of (real or complex) numbers, and let <m:math overflow="scroll"><m:mi>L</m:mi></m:math> be a number.
+Prove that <m:math overflow="scroll"><m:mrow><m:mi>L</m:mi><m:mo>=</m:mo><m:mo movablelimits="true" form="prefix">lim</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub></m:mrow></m:math> if and only if
+for every positive integer <m:math overflow="scroll"><m:mi>k</m:mi></m:math> there exists an integer <m:math overflow="scroll"><m:mrow><m:mi>N</m:mi><m:mo>,</m:mo></m:mrow></m:math> such that if <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>≥</m:mo><m:mi>N</m:mi></m:mrow></m:math> then
+<m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mo>-</m:mo><m:mi>L</m:mi><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>k</m:mi><m:mo>.</m:mo></m:mrow></m:mrow></m:math></item>
+      <item id="uid9"> Let <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>c</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> be a sequence of complex numbers, and
+suppose that <m:math overflow="scroll"><m:mrow><m:msub><m:mi>c</m:mi><m:mi>n</m:mi></m:msub><m:mo>↦</m:mo><m:mi>L</m:mi><m:mo>.</m:mo></m:mrow></m:math> If <m:math overflow="scroll"><m:mrow><m:msub><m:mi>c</m:mi><m:mi>n</m:mi></m:msub><m:mo>=</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>+</m:mo><m:msub><m:mi>b</m:mi><m:mi>n</m:mi></m:msub><m:mi>i</m:mi></m:mrow></m:math>
+and <m:math overflow="scroll"><m:mrow><m:mi>L</m:mi><m:mo>=</m:mo><m:mi>a</m:mi><m:mo>+</m:mo><m:mi>b</m:mi><m:mi>i</m:mi><m:mo>,</m:mo></m:mrow></m:math> show that
+<m:math overflow="scroll"><m:mrow><m:mi>a</m:mi><m:mo>=</m:mo><m:mo movablelimits="true" form="prefix">lim</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>b</m:mi><m:mo>=</m:mo><m:mo movablelimits="true" form="prefix">lim</m:mo><m:msub><m:mi>b</m:mi><m:mi>n</m:mi></m:msub><m:mo>.</m:mo></m:mrow></m:math>
+Conversely, if <m:math overflow="scroll"><m:mrow><m:mi>a</m:mi><m:mo>=</m:mo><m:mo movablelimits="true" form="prefix">lim</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>b</m:mi><m:mo>=</m:mo><m:mo movablelimits="true" form="prefix">lim</m:mo><m:msub><m:mi>b</m:mi><m:mi>n</m:mi></m:msub><m:mo>,</m:mo></m:mrow></m:math> show that
+<m:math overflow="scroll"><m:mrow><m:mi>a</m:mi><m:mo>+</m:mo><m:mi>b</m:mi><m:mi>i</m:mi><m:mo>=</m:mo><m:mo movablelimits="true" form="prefix">lim</m:mo><m:mo>(</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>+</m:mo><m:msub><m:mi>b</m:mi><m:mi>n</m:mi></m:msub><m:mi>i</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+That is, a sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>c</m:mi><m:mi>n</m:mi></m:msub><m:mo>=</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>+</m:mo><m:msub><m:mi>b</m:mi><m:mi>n</m:mi></m:msub><m:mi>i</m:mi><m:mo>}</m:mo></m:mrow></m:math> of complex numbers converges if and only if
+the sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> of the real parts converges and the sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>b</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> of the
+imaginary parts converges.
+HINT: You need to show that, given some hypotheses, certain quantities are less than <m:math overflow="scroll"><m:mrow><m:mi>ϵ</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Part (c) of <link document="m36113" target-id="fs-id1169302072454"/> should be of help.
+</item>
+    </list>
+</problem></exercise>
+<exercise id="fs-id1170978191101"><problem id="fs-id1170983163376">
+    <list id="id288937" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid10"> Prove that a constant sequence (<m:math overflow="scroll"><m:mrow><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>≡</m:mo><m:mi>c</m:mi></m:mrow></m:math>) converges to <m:math overflow="scroll"><m:mrow><m:mi>c</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid11"> Prove that the sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:mfrac><m:mrow><m:mn>2</m:mn><m:msup><m:mi>n</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow><m:mrow><m:mn>1</m:mn><m:mo>-</m:mo><m:mn>3</m:mn><m:mi>n</m:mi></m:mrow></m:mfrac><m:mo>}</m:mo></m:mrow></m:math> diverges to <m:math overflow="scroll"><m:mrow><m:mo>-</m:mo><m:mi>∞</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid12"> Prove that the sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msup><m:mrow><m:mo>(</m:mo><m:mo>-</m:mo><m:mn>1</m:mn><m:mo>)</m:mo></m:mrow><m:mi>n</m:mi></m:msup><m:mo>}</m:mo></m:mrow></m:math> does not converge to any number <m:math overflow="scroll"><m:mrow><m:mi>L</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+HINT: Argue by contradiction. Suppose it does converge to a number <m:math overflow="scroll"><m:mrow><m:mi>L</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Use <m:math overflow="scroll"><m:mrow><m:mi>ϵ</m:mi><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mn>2</m:mn><m:mo>,</m:mo></m:mrow></m:math> let <m:math overflow="scroll"><m:mi>N</m:mi></m:math> be the corresponding integer that exists in the definition,
+and then examine <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>-</m:mo><m:msub><m:mi>a</m:mi><m:mrow><m:mi>n</m:mi><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mrow><m:mo>|</m:mo></m:mrow></m:mrow></m:math> for <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>≥</m:mo><m:mi>N</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Use the following useful add and subtract trick:
+<equation id="id289201"><m:math overflow="scroll" mode="display"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>-</m:mo><m:msub><m:mi>a</m:mi><m:mrow><m:mi>n</m:mi><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mrow><m:mo>|</m:mo><m:mo>=</m:mo><m:mo>|</m:mo></m:mrow><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>-</m:mo><m:mi>L</m:mi><m:mo>+</m:mo><m:mi>L</m:mi><m:mo>-</m:mo><m:msub><m:mi>a</m:mi><m:mrow><m:mi>n</m:mi><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mrow><m:mo>|</m:mo><m:mo>≤</m:mo><m:mo>|</m:mo></m:mrow><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mo>-</m:mo><m:mi>L</m:mi><m:mo>|</m:mo><m:mo>+</m:mo><m:mo>|</m:mo><m:mi>L</m:mi><m:mo>-</m:mo></m:mrow><m:msub><m:mi>a</m:mi><m:mrow><m:mi>n</m:mi><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mrow><m:mo>|</m:mo><m:mo>.</m:mo></m:mrow></m:mrow></m:math></equation></item>
+    </list>
+</problem></exercise>
+  </content>
+</document>

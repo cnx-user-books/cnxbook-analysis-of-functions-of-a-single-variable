@@ -1,0 +1,618 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML">
+  <title>The Trigonometric and Hyperbolic Functions</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m36196</md:content-id>
+  <md:title>The Trigonometric and Hyperbolic Functions</md:title>
+  <md:abstract>Two theorems covering differentiation of trigonometric and hyperbolic functions, including practice exercises corresponding to the theorems.</md:abstract>
+  <md:uuid>d3c206d5-2cef-4f30-b65d-588706f7a566</md:uuid>
+</metadata>
+
+<content>
+    <para id="id62159">The laws of exponents and the algebraic connections
+between the exponential function and the trigonometric and
+hyperbolic functions, give the following
+“addition formulas:”</para>
+<rule id="fs-id1172012795040" type="theorem"><statement id="fs-id1172012949536">
+    <para id="id62167">
+The following identities hold for all complex numbers <m:math overflow="scroll"><m:mi>z</m:mi></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>w</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+    <equation id="id62193">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mo form="prefix">sin</m:mo>
+          <m:mo>(</m:mo>
+          <m:mi>z</m:mi>
+          <m:mo>+</m:mo>
+          <m:mi>w</m:mi>
+          <m:mo>)</m:mo>
+          <m:mo>=</m:mo>
+          <m:mo form="prefix">sin</m:mo>
+          <m:mo>(</m:mo>
+          <m:mi>z</m:mi>
+          <m:mo>)</m:mo>
+          <m:mo form="prefix">cos</m:mo>
+          <m:mo>(</m:mo>
+          <m:mi>w</m:mi>
+          <m:mo>)</m:mo>
+          <m:mo>+</m:mo>
+          <m:mo form="prefix">cos</m:mo>
+          <m:mo>(</m:mo>
+          <m:mi>z</m:mi>
+          <m:mo>)</m:mo>
+          <m:mo form="prefix">sin</m:mo>
+          <m:mo>(</m:mo>
+          <m:mi>w</m:mi>
+          <m:mo>)</m:mo>
+          <m:mo>.</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <equation id="id62603">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mo form="prefix">cos</m:mo>
+          <m:mo>(</m:mo>
+          <m:mi>z</m:mi>
+          <m:mo>+</m:mo>
+          <m:mi>w</m:mi>
+          <m:mo>)</m:mo>
+          <m:mo>=</m:mo>
+          <m:mo form="prefix">cos</m:mo>
+          <m:mo>(</m:mo>
+          <m:mi>z</m:mi>
+          <m:mo>)</m:mo>
+          <m:mo form="prefix">cos</m:mo>
+          <m:mo>(</m:mo>
+          <m:mi>w</m:mi>
+          <m:mo>)</m:mo>
+          <m:mo>-</m:mo>
+          <m:mo form="prefix">sin</m:mo>
+          <m:mo>(</m:mo>
+          <m:mi>z</m:mi>
+          <m:mo>)</m:mo>
+          <m:mo form="prefix">sin</m:mo>
+          <m:mo>(</m:mo>
+          <m:mi>w</m:mi>
+          <m:mo>)</m:mo>
+          <m:mo>.</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <equation id="id62676">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mo form="prefix">sinh</m:mo>
+          <m:mo>(</m:mo>
+          <m:mi>z</m:mi>
+          <m:mo>+</m:mo>
+          <m:mi>w</m:mi>
+          <m:mo>)</m:mo>
+          <m:mo>=</m:mo>
+          <m:mo form="prefix">sinh</m:mo>
+          <m:mo>(</m:mo>
+          <m:mi>z</m:mi>
+          <m:mo>)</m:mo>
+          <m:mo form="prefix">cosh</m:mo>
+          <m:mo>(</m:mo>
+          <m:mi>w</m:mi>
+          <m:mo>)</m:mo>
+          <m:mo>+</m:mo>
+          <m:mo form="prefix">cosh</m:mo>
+          <m:mo>(</m:mo>
+          <m:mi>z</m:mi>
+          <m:mo>)</m:mo>
+          <m:mo form="prefix">sinh</m:mo>
+          <m:mo>(</m:mo>
+          <m:mi>w</m:mi>
+          <m:mo>)</m:mo>
+          <m:mo>.</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <equation id="id62747">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mo form="prefix">cosh</m:mo>
+          <m:mo>(</m:mo>
+          <m:mi>z</m:mi>
+          <m:mo>+</m:mo>
+          <m:mi>w</m:mi>
+          <m:mo>)</m:mo>
+          <m:mo>=</m:mo>
+          <m:mo form="prefix">cosh</m:mo>
+          <m:mo>(</m:mo>
+          <m:mi>z</m:mi>
+          <m:mo>)</m:mo>
+          <m:mo form="prefix">cosh</m:mo>
+          <m:mo>(</m:mo>
+          <m:mi>w</m:mi>
+          <m:mo>)</m:mo>
+          <m:mo>+</m:mo>
+          <m:mo form="prefix">sinh</m:mo>
+          <m:mo>(</m:mo>
+          <m:mi>z</m:mi>
+          <m:mo>)</m:mo>
+          <m:mo form="prefix">sinh</m:mo>
+          <m:mo>(</m:mo>
+          <m:mi>w</m:mi>
+          <m:mo>)</m:mo>
+          <m:mo>.</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+</statement>
+<proof id="fs-id1172012958016">
+    <para id="id62819">
+We derive the first formula and leave
+the others to an exercise.</para>
+    <para id="id62827">First, for any two real numbers <m:math overflow="scroll"><m:mi>x</m:mi></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>y</m:mi><m:mo>,</m:mo></m:mrow></m:math> we have</para>
+    <equation id="uid1">
+      <m:math overflow="scroll" mode="display">
+        <m:mtable displaystyle="true">
+          <m:mtr>
+            <m:mtd columnalign="right">
+              <m:mrow>
+                <m:mo form="prefix">cos</m:mo>
+                <m:mo>(</m:mo>
+                <m:mi>x</m:mi>
+                <m:mo>+</m:mo>
+                <m:mi>y</m:mi>
+                <m:mo>)</m:mo>
+                <m:mo>+</m:mo>
+                <m:mi>i</m:mi>
+                <m:mo form="prefix">sin</m:mo>
+                <m:mo>(</m:mo>
+                <m:mi>x</m:mi>
+                <m:mo>+</m:mo>
+                <m:mi>y</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+            </m:mtd>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:msup>
+                <m:mi>e</m:mi>
+                <m:mrow>
+                  <m:mi>i</m:mi>
+                  <m:mo>(</m:mo>
+                  <m:mi>x</m:mi>
+                  <m:mo>+</m:mo>
+                  <m:mi>y</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+              </m:msup>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:msup>
+                  <m:mi>e</m:mi>
+                  <m:mrow>
+                    <m:mi>i</m:mi>
+                    <m:mi>x</m:mi>
+                  </m:mrow>
+                </m:msup>
+                <m:msup>
+                  <m:mi>e</m:mi>
+                  <m:mrow>
+                    <m:mi>i</m:mi>
+                    <m:mi>y</m:mi>
+                  </m:mrow>
+                </m:msup>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mo form="prefix">cos</m:mo>
+                <m:mi>x</m:mi>
+                <m:mo>+</m:mo>
+                <m:mi>i</m:mi>
+                <m:mo form="prefix">sin</m:mo>
+                <m:mi>x</m:mi>
+                <m:mo>)</m:mo>
+                <m:mo>×</m:mo>
+                <m:mo>(</m:mo>
+                <m:mo form="prefix">cos</m:mo>
+                <m:mi>y</m:mi>
+                <m:mo>+</m:mo>
+                <m:mi>i</m:mi>
+                <m:mo form="prefix">sin</m:mo>
+                <m:mi>y</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mo form="prefix">cos</m:mo>
+                <m:mi>x</m:mi>
+                <m:mo form="prefix">cos</m:mo>
+                <m:mi>y</m:mi>
+                <m:mo>-</m:mo>
+                <m:mo form="prefix">sin</m:mo>
+                <m:mi>x</m:mi>
+                <m:mo form="prefix">sin</m:mo>
+                <m:mi>y</m:mi>
+                <m:mo>+</m:mo>
+                <m:mi>i</m:mi>
+                <m:mo>(</m:mo>
+                <m:mo form="prefix">cos</m:mo>
+                <m:mi>x</m:mi>
+                <m:mo form="prefix">sin</m:mo>
+                <m:mi>y</m:mi>
+                <m:mo>+</m:mo>
+                <m:mo form="prefix">sin</m:mo>
+                <m:mi>x</m:mi>
+                <m:mo form="prefix">cos</m:mo>
+                <m:mi>y</m:mi>
+                <m:mo>)</m:mo>
+                <m:mo>,</m:mo>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+        </m:mtable>
+      </m:math>
+    </equation>
+    <para id="id63089">which, equating real and imaginary parts, gives that</para>
+    <equation id="id63094">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mo form="prefix">cos</m:mo>
+          <m:mo>(</m:mo>
+          <m:mi>x</m:mi>
+          <m:mo>+</m:mo>
+          <m:mi>y</m:mi>
+          <m:mo>)</m:mo>
+          <m:mo>=</m:mo>
+          <m:mo form="prefix">cos</m:mo>
+          <m:mi>x</m:mi>
+          <m:mo form="prefix">cos</m:mo>
+          <m:mi>y</m:mi>
+          <m:mo>-</m:mo>
+          <m:mo form="prefix">sin</m:mo>
+          <m:mi>x</m:mi>
+          <m:mo form="prefix">sin</m:mo>
+          <m:mi>y</m:mi>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id63147">and</para>
+    <equation id="id63152">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mo form="prefix">sin</m:mo>
+          <m:mo>(</m:mo>
+          <m:mi>x</m:mi>
+          <m:mo>+</m:mo>
+          <m:mi>y</m:mi>
+          <m:mo>)</m:mo>
+          <m:mo>=</m:mo>
+          <m:mo form="prefix">sin</m:mo>
+          <m:mi>x</m:mi>
+          <m:mo form="prefix">cos</m:mo>
+          <m:mi>y</m:mi>
+          <m:mo>+</m:mo>
+          <m:mo form="prefix">cos</m:mo>
+          <m:mi>x</m:mi>
+          <m:mo form="prefix">sin</m:mo>
+          <m:mi>y</m:mi>
+          <m:mo>.</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id63208">The second of these equations is exactly what we want,
+but this calculation only shows that it holds for real numbers <m:math overflow="scroll"><m:mi>x</m:mi></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>y</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+We can use the Identity Theorem to show that in fact this formula holds for all complex numbers <m:math overflow="scroll"><m:mi>z</m:mi></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>w</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Thus, fix a real number <m:math overflow="scroll"><m:mrow><m:mi>y</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Let <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mo form="prefix">sin</m:mo><m:mi>z</m:mi><m:mo form="prefix">cos</m:mo><m:mi>y</m:mi><m:mo>+</m:mo><m:mo form="prefix">cos</m:mo><m:mi>z</m:mi><m:mo form="prefix">sin</m:mo><m:mi>y</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+and let</para>
+    <equation id="id63310">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mi>g</m:mi>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>z</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>=</m:mo>
+          <m:mo form="prefix">sin</m:mo>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>z</m:mi>
+            <m:mo>+</m:mo>
+            <m:mi>y</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>=</m:mo>
+          <m:mfrac>
+            <m:mn>1</m:mn>
+            <m:mrow>
+              <m:mn>2</m:mn>
+              <m:mi>i</m:mi>
+            </m:mrow>
+          </m:mfrac>
+          <m:mrow>
+            <m:mo>(</m:mo>
+          </m:mrow>
+          <m:msup>
+            <m:mi>e</m:mi>
+            <m:mrow>
+              <m:mi>i</m:mi>
+              <m:mo>(</m:mo>
+              <m:mi>z</m:mi>
+              <m:mo>+</m:mo>
+              <m:mi>y</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+          </m:msup>
+          <m:mo>-</m:mo>
+          <m:msup>
+            <m:mi>e</m:mi>
+            <m:mrow>
+              <m:mo>-</m:mo>
+              <m:mi>i</m:mi>
+              <m:mo>(</m:mo>
+              <m:mi>z</m:mi>
+              <m:mo>+</m:mo>
+              <m:mi>y</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+          </m:msup>
+          <m:mo>=</m:mo>
+          <m:mfrac>
+            <m:mn>1</m:mn>
+            <m:mrow>
+              <m:mn>2</m:mn>
+              <m:mi>i</m:mi>
+            </m:mrow>
+          </m:mfrac>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:msup>
+              <m:mi>e</m:mi>
+              <m:mrow>
+                <m:mi>i</m:mi>
+                <m:mi>z</m:mi>
+              </m:mrow>
+            </m:msup>
+            <m:msup>
+              <m:mi>e</m:mi>
+              <m:mrow>
+                <m:mi>i</m:mi>
+                <m:mi>y</m:mi>
+              </m:mrow>
+            </m:msup>
+            <m:mo>-</m:mo>
+            <m:msup>
+              <m:mi>e</m:mi>
+              <m:mrow>
+                <m:mo>-</m:mo>
+                <m:mi>i</m:mi>
+                <m:mi>z</m:mi>
+              </m:mrow>
+            </m:msup>
+            <m:msup>
+              <m:mi>e</m:mi>
+              <m:mrow>
+                <m:mo>-</m:mo>
+                <m:mi>i</m:mi>
+                <m:mi>y</m:mi>
+              </m:mrow>
+            </m:msup>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>.</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id63652">Then both <m:math overflow="scroll"><m:mi>f</m:mi></m:math> and <m:math overflow="scroll"><m:mi>g</m:mi></m:math> are power series functions of the variable <m:math overflow="scroll"><m:mrow><m:mi>z</m:mi><m:mo>.</m:mo></m:mrow></m:math> Furthermore, by the previous calculation,
+<m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>k</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mi>g</m:mi><m:mo>(</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>k</m:mi><m:mo>)</m:mo></m:mrow></m:math> for all positive integers <m:math overflow="scroll"><m:mrow><m:mi>k</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Hence, by the Identity Theorem, <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mi>g</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow></m:math> for all complex <m:math overflow="scroll"><m:mrow><m:mi>z</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Hence we have the formula we want for all complex numbers <m:math overflow="scroll"><m:mi>z</m:mi></m:math> and all real numbers <m:math overflow="scroll"><m:mrow><m:mi>y</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+    <para id="id63786">To finish the proof, we do the same trick one more time.
+Fix a complex number <m:math overflow="scroll"><m:mrow><m:mi>z</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Let <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>w</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mo form="prefix">sin</m:mo><m:mi>z</m:mi><m:mo form="prefix">cos</m:mo><m:mi>w</m:mi><m:mo>+</m:mo><m:mo form="prefix">cos</m:mo><m:mi>z</m:mi><m:mo form="prefix">sin</m:mo><m:mi>w</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+and let</para>
+    <equation id="id63848">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mi>g</m:mi>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>w</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>=</m:mo>
+          <m:mo form="prefix">sin</m:mo>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>z</m:mi>
+            <m:mo>+</m:mo>
+            <m:mi>w</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>=</m:mo>
+          <m:mfrac>
+            <m:mn>1</m:mn>
+            <m:mrow>
+              <m:mn>2</m:mn>
+              <m:mi>i</m:mi>
+            </m:mrow>
+          </m:mfrac>
+          <m:mrow>
+            <m:mo>(</m:mo>
+          </m:mrow>
+          <m:msup>
+            <m:mi>e</m:mi>
+            <m:mrow>
+              <m:mi>i</m:mi>
+              <m:mo>(</m:mo>
+              <m:mi>z</m:mi>
+              <m:mo>+</m:mo>
+              <m:mi>w</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+          </m:msup>
+          <m:mo>-</m:mo>
+          <m:msup>
+            <m:mi>e</m:mi>
+            <m:mrow>
+              <m:mo>-</m:mo>
+              <m:mi>i</m:mi>
+              <m:mo>(</m:mo>
+              <m:mi>z</m:mi>
+              <m:mo>+</m:mo>
+              <m:mi>w</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+          </m:msup>
+          <m:mo>=</m:mo>
+          <m:mfrac>
+            <m:mn>1</m:mn>
+            <m:mrow>
+              <m:mn>2</m:mn>
+              <m:mi>i</m:mi>
+            </m:mrow>
+          </m:mfrac>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:msup>
+              <m:mi>e</m:mi>
+              <m:mrow>
+                <m:mi>i</m:mi>
+                <m:mi>z</m:mi>
+              </m:mrow>
+            </m:msup>
+            <m:msup>
+              <m:mi>e</m:mi>
+              <m:mrow>
+                <m:mi>i</m:mi>
+                <m:mi>w</m:mi>
+              </m:mrow>
+            </m:msup>
+            <m:mo>-</m:mo>
+            <m:msup>
+              <m:mi>e</m:mi>
+              <m:mrow>
+                <m:mo>-</m:mo>
+                <m:mi>i</m:mi>
+                <m:mi>z</m:mi>
+              </m:mrow>
+            </m:msup>
+            <m:msup>
+              <m:mi>e</m:mi>
+              <m:mrow>
+                <m:mo>-</m:mo>
+                <m:mi>i</m:mi>
+                <m:mi>w</m:mi>
+              </m:mrow>
+            </m:msup>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>.</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id64010">Again, both <m:math overflow="scroll"><m:mi>f</m:mi></m:math> and <m:math overflow="scroll"><m:mi>g</m:mi></m:math> are power series functions of the variable <m:math overflow="scroll"><m:mrow><m:mi>w</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+and they agree on the sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>k</m:mi><m:mo>}</m:mo><m:mo>.</m:mo></m:mrow></m:math> Hence they agree everywhere,
+and this completes the proof of the first addition formula.</para>
+</proof></rule>
+<exercise id="fs-id1172022709676"><problem id="fs-id1172018735372">
+    <list id="id64074" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid2"> Derive the remaining three addition formulas of the preceding theorem.
+</item>
+      <item id="uid3"> From the addition formulas, derive the two “half angle” formulas for the trigonometric functions:
+<equation id="id64102"><m:math overflow="scroll" mode="display"><m:mrow><m:msup><m:mo form="prefix">sin</m:mo><m:mn>2</m:mn></m:msup><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac><m:mrow><m:mn>1</m:mn><m:mo>-</m:mo><m:mo form="prefix">cos</m:mo><m:mo>(</m:mo><m:mn>2</m:mn><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mn>2</m:mn></m:mfrac><m:mo>,</m:mo></m:mrow></m:math></equation>
+and
+<equation id="id64160"><m:math overflow="scroll" mode="display"><m:mrow><m:msup><m:mo form="prefix">cos</m:mo><m:mn>2</m:mn></m:msup><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac><m:mrow><m:mn>1</m:mn><m:mo>+</m:mo><m:mo form="prefix">cos</m:mo><m:mo>(</m:mo><m:mn>2</m:mn><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mn>2</m:mn></m:mfrac><m:mo>.</m:mo></m:mrow></m:math></equation></item>
+    </list>
+</problem></exercise>
+<rule id="fs-id5424241" type="theorem"><statement id="fs-id1172022801184">
+    <para id="id64213"> The trigonometric functions <m:math overflow="scroll"><m:mo form="prefix">sin</m:mo></m:math> and <m:math overflow="scroll"><m:mo form="prefix">cos</m:mo></m:math> are periodic with
+period <m:math overflow="scroll"><m:mrow><m:mn>2</m:mn><m:mi>π</m:mi><m:mo>;</m:mo></m:mrow></m:math> i.e., <m:math overflow="scroll"><m:mrow><m:mo form="prefix">sin</m:mo><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>+</m:mo><m:mn>2</m:mn><m:mi>π</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mo form="prefix">sin</m:mo><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow></m:math>
+and <m:math overflow="scroll"><m:mrow><m:mo form="prefix">cos</m:mo><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>+</m:mo><m:mn>2</m:mn><m:mi>π</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mo form="prefix">cos</m:mo><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow></m:math> for all complex numbers <m:math overflow="scroll"><m:mrow><m:mi>z</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+</statement>
+<proof id="fs-id1172017424678">
+    <para id="id64336"> We have from the preceding exercise that
+<m:math overflow="scroll"><m:mrow><m:mo form="prefix">sin</m:mo><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>+</m:mo><m:mn>2</m:mn><m:mi>π</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mo form="prefix">sin</m:mo><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo><m:mo form="prefix">cos</m:mo><m:mo>(</m:mo><m:mn>2</m:mn><m:mi>π</m:mi><m:mo>)</m:mo><m:mo>+</m:mo><m:mo form="prefix">cos</m:mo><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo><m:mo form="prefix">sin</m:mo><m:mo>(</m:mo><m:mn>2</m:mn><m:mi>π</m:mi><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math>
+so that the periodicity assertion for the sine function will follow if we show that
+<m:math overflow="scroll"><m:mrow><m:mo form="prefix">cos</m:mo><m:mo>(</m:mo><m:mn>2</m:mn><m:mi>π</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mn>1</m:mn></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mo form="prefix">sin</m:mo><m:mo>(</m:mo><m:mn>2</m:mn><m:mi>π</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math>
+From part (b) of the preceding exercise, we have that</para>
+    <equation id="id64471">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mn>0</m:mn>
+          <m:mo>=</m:mo>
+          <m:msup>
+            <m:mo form="prefix">sin</m:mo>
+            <m:mn>2</m:mn>
+          </m:msup>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>π</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>=</m:mo>
+          <m:mfrac>
+            <m:mrow>
+              <m:mn>1</m:mn>
+              <m:mo>-</m:mo>
+              <m:mo form="prefix">cos</m:mo>
+              <m:mo>(</m:mo>
+              <m:mn>2</m:mn>
+              <m:mi>π</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mn>2</m:mn>
+          </m:mfrac>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id64526">which shows that <m:math overflow="scroll"><m:mrow><m:mo form="prefix">cos</m:mo><m:mo>(</m:mo><m:mn>2</m:mn><m:mi>π</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>.</m:mo></m:mrow></m:math> Since <m:math overflow="scroll"><m:mrow><m:msup><m:mo form="prefix">cos</m:mo><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mo form="prefix">sin</m:mo><m:mn>2</m:mn></m:msup><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>,</m:mo></m:mrow></m:math>
+it then follows that <m:math overflow="scroll"><m:mrow><m:mo form="prefix">sin</m:mo><m:mo>(</m:mo><m:mn>2</m:mn><m:mi>π</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math></para>
+    <para id="id64616">The periodicity of the cosine function is proved similarly.</para>
+</proof></rule>
+<exercise id="fs-id1172027048469"><problem id="fs-id1172016543715">
+    <list id="id64630" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid4"> Prove that the hyperbolic functions <m:math overflow="scroll"><m:mo form="prefix">sinh</m:mo></m:math> and <m:math overflow="scroll"><m:mo form="prefix">cosh</m:mo></m:math>
+are periodic.
+What is the period?
+</item>
+      <item id="uid5"> Prove that the hyperbolic cosine <m:math overflow="scroll"><m:mrow><m:mo form="prefix">cosh</m:mo><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:math> is never 0 for <m:math overflow="scroll"><m:mi>x</m:mi></m:math> a real number,
+that the hyperbolic tangent <m:math overflow="scroll"><m:mrow><m:mo form="prefix">tanh</m:mo><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mo form="prefix">sinh</m:mo><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>/</m:mo><m:mo form="prefix">cosh</m:mo><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:math> is bounded
+and increasing from <m:math overflow="scroll"><m:mi>R</m:mi></m:math> onto <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mo>-</m:mo><m:mn>1</m:mn><m:mo>,</m:mo><m:mn>1</m:mn><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math> and that the inverse hyperbolic tangent has derivative given by
+<m:math overflow="scroll"><m:mrow><m:msup><m:mrow><m:msup><m:mo form="prefix">tanh</m:mo><m:mrow><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msup></m:mrow><m:mo>'</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>y</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mrow><m:mo>(</m:mo><m:mn>1</m:mn><m:mo>-</m:mo><m:msup><m:mi>y</m:mi><m:mn>2</m:mn></m:msup><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid6"> Verify that for all <m:math overflow="scroll"><m:mrow><m:mi>y</m:mi><m:mo>∈</m:mo><m:mo>(</m:mo><m:mo>-</m:mo><m:mn>1</m:mn><m:mo>,</m:mo><m:mn>1</m:mn><m:mo>)</m:mo></m:mrow></m:math><equation id="id64887"><m:math overflow="scroll" mode="display"><m:mrow><m:msup><m:mo form="prefix">tanh</m:mo><m:mrow><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msup><m:mrow><m:mo>(</m:mo><m:mi>y</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mo form="prefix">ln</m:mo><m:mrow><m:mo>(</m:mo><m:msqrt><m:mfrac><m:mrow><m:mn>1</m:mn><m:mo>+</m:mo><m:mi>y</m:mi></m:mrow><m:mrow><m:mn>1</m:mn><m:mo>-</m:mo><m:mi>y</m:mi></m:mrow></m:mfrac></m:msqrt><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></equation></item>
+    </list>
+</problem></exercise>
+<exercise id="fs-id1172016573702"><title>Polar coordinates</title><problem id="fs-id1172028098408">
+    <para id="id64950"> 
+Let <m:math overflow="scroll"><m:mi>z</m:mi></m:math> be a nonzero complex number. Prove that
+there exists a unique real number <m:math overflow="scroll"><m:mrow><m:mn>0</m:mn><m:mo>≤</m:mo><m:mi>θ</m:mi><m:mo>&lt;</m:mo><m:mn>2</m:mn><m:mi>π</m:mi></m:mrow></m:math>
+such that <m:math overflow="scroll"><m:mrow><m:mi>z</m:mi><m:mo>=</m:mo><m:mi>r</m:mi><m:msup><m:mi>e</m:mi><m:mrow><m:mi>i</m:mi><m:mi>θ</m:mi></m:mrow></m:msup><m:mo>,</m:mo></m:mrow></m:math> where <m:math overflow="scroll"><m:mrow><m:mi>r</m:mi><m:mo>=</m:mo><m:mo>|</m:mo><m:mi>z</m:mi><m:mo>|</m:mo><m:mo>.</m:mo></m:mrow></m:math></para>
+    <para id="id65039">HINT: If <m:math overflow="scroll"><m:mrow><m:mi>z</m:mi><m:mo>=</m:mo><m:mi>a</m:mi><m:mo>+</m:mo><m:mi>b</m:mi><m:mi>i</m:mi><m:mo>,</m:mo></m:mrow></m:math> then
+<m:math overflow="scroll"><m:mrow><m:mi>z</m:mi><m:mo>=</m:mo><m:mi>r</m:mi><m:mo>(</m:mo><m:mfrac><m:mi>a</m:mi><m:mi>r</m:mi></m:mfrac><m:mo>+</m:mo><m:mfrac><m:mi>b</m:mi><m:mi>r</m:mi></m:mfrac><m:mi>i</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Observe that <m:math overflow="scroll"><m:mrow><m:mo>-</m:mo><m:mn>1</m:mn><m:mo>≤</m:mo><m:mfrac><m:mi>a</m:mi><m:mi>r</m:mi></m:mfrac><m:mo>≤</m:mo><m:mn>1</m:mn><m:mo>,</m:mo></m:mrow></m:math><m:math overflow="scroll"><m:mrow><m:mo>-</m:mo><m:mn>1</m:mn><m:mo>≤</m:mo><m:mfrac><m:mi>b</m:mi><m:mi>r</m:mi></m:mfrac><m:mo>≤</m:mo><m:mn>1</m:mn><m:mo>,</m:mo></m:mrow></m:math> and
+<m:math overflow="scroll"><m:mrow><m:msup><m:mrow><m:mo>(</m:mo><m:mfrac><m:mi>a</m:mi><m:mi>r</m:mi></m:mfrac><m:mo>)</m:mo></m:mrow><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mrow><m:mo>(</m:mo><m:mfrac><m:mi>b</m:mi><m:mi>r</m:mi></m:mfrac><m:mo>)</m:mo></m:mrow><m:mn>2</m:mn></m:msup><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>.</m:mo></m:mrow></m:math>
+Show that there exists a unique <m:math overflow="scroll"><m:mrow><m:mn>0</m:mn><m:mo>≤</m:mo><m:mi>θ</m:mi><m:mo>&lt;</m:mo><m:mn>2</m:mn><m:mi>π</m:mi></m:mrow></m:math>
+such that <m:math overflow="scroll"><m:mrow><m:mfrac><m:mi>a</m:mi><m:mi>r</m:mi></m:mfrac><m:mo>=</m:mo><m:mo form="prefix">cos</m:mo><m:mi>θ</m:mi></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mfrac><m:mi>b</m:mi><m:mi>r</m:mi></m:mfrac><m:mo>=</m:mo><m:mo form="prefix">sin</m:mo><m:mi>θ</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+</problem></exercise>
+  </content>
+</document>

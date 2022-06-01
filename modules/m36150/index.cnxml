@@ -1,0 +1,662 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML">
+  <title>Continuity</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m36150</md:content-id>
+  <md:title>Continuity</md:title>
+  <md:abstract>Next, we come to the definition of continuity.
+Unlike the preceding discussion, which can be
+viewed as being related primarily to the algebraic properties of functions,
+this one is an analytic notion.</md:abstract>
+  <md:uuid>dbb82740-5563-40b3-8e79-5fb38c9e40c0</md:uuid>
+</metadata>
+
+<content>
+    <para id="id267471">Next, we come to the definition of continuity.
+Unlike the preceding discussion, which can be
+viewed as being related primarily to the algebraic properties of functions,
+this one is an analytic notion.</para>
+<definition id="fs-id1166314005347"><term/><meaning id="fs-id1166328406784">
+    <para id="id267478">
+Let <m:math overflow="scroll"><m:mi>S</m:mi></m:math> and <m:math overflow="scroll"><m:mi>T</m:mi></m:math> be sets of complex numbers, and let <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>:</m:mo><m:mi>S</m:mi><m:mo>→</m:mo><m:mi>T</m:mi><m:mo>.</m:mo></m:mrow></m:math> Then <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is said to be
+<emphasis effect="italics">continuous at a point</emphasis><m:math overflow="scroll"><m:mi>c</m:mi></m:math> of <m:math overflow="scroll"><m:mi>S</m:mi></m:math>
+if for every positive <m:math overflow="scroll"><m:mrow><m:mi>ϵ</m:mi><m:mo>,</m:mo></m:mrow></m:math> there exists a positive <m:math overflow="scroll"><m:mi>δ</m:mi></m:math> such that
+if <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mi>S</m:mi></m:mrow></m:math> satisfies <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>x</m:mi><m:mo>-</m:mo><m:mi>c</m:mi><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mi>δ</m:mi><m:mo>,</m:mo></m:mrow></m:math> then <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>-</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mi>ϵ</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+The function <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is called <emphasis effect="italics">continuous on S</emphasis> if it is
+continuous at every point <m:math overflow="scroll"><m:mi>c</m:mi></m:math> of <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+    <para id="id268011">If the domain <m:math overflow="scroll"><m:mi>S</m:mi></m:math> of <m:math overflow="scroll"><m:mi>f</m:mi></m:math> consists of real numbers, then the function <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is called <emphasis effect="italics">right continuous at c</emphasis> if for every <m:math overflow="scroll"><m:mrow><m:mi>ϵ</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn></m:mrow></m:math>
+there exists a <m:math overflow="scroll"><m:mrow><m:mi>δ</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn></m:mrow></m:math> such that <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>-</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mi>ϵ</m:mi></m:mrow></m:math> whenever <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mi>S</m:mi></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mn>0</m:mn><m:mo>≤</m:mo><m:mi>x</m:mi><m:mo>-</m:mo><m:mi>c</m:mi><m:mo>&lt;</m:mo><m:mi>δ</m:mi><m:mo>,</m:mo></m:mrow></m:math> and is called <emphasis effect="italics">left
+continuous</emphasis> at <m:math overflow="scroll"><m:mi>c</m:mi></m:math> if for every <m:math overflow="scroll"><m:mrow><m:mi>ϵ</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn></m:mrow></m:math>
+there exists a <m:math overflow="scroll"><m:mrow><m:mi>δ</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn></m:mrow></m:math> such that <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>-</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mi>ϵ</m:mi></m:mrow></m:math> whenever <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mi>S</m:mi></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mn>0</m:mn><m:mo>≥</m:mo><m:mi>x</m:mi><m:mo>-</m:mo><m:mi>c</m:mi><m:mo>&gt;</m:mo><m:mo>-</m:mo><m:mi>δ</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+</meaning></definition>
+<rule id="fs-id1166304678010"><label/><statement id="fs-id1166311533475">
+    <para id="id268433"><emphasis effect="bold">REMARK</emphasis> If <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is continuous at a point <m:math overflow="scroll"><m:mrow><m:mi>c</m:mi><m:mo>,</m:mo></m:mrow></m:math> then the positive number
+<m:math overflow="scroll"><m:mi>δ</m:mi></m:math> of the preceding definition is not unique (any smaller number would work as well),
+but it does depend both on the number <m:math overflow="scroll"><m:mi>ϵ</m:mi></m:math> and on the point <m:math overflow="scroll"><m:mrow><m:mi>c</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Sometimes we will write <m:math overflow="scroll"><m:mrow><m:mi>δ</m:mi><m:mo>(</m:mo><m:mi>ϵ</m:mi><m:mo>,</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow></m:math> to make this dependence explicit.
+Later, we will introduce a notion of uniform continuity
+in which <m:math overflow="scroll"><m:mi>δ</m:mi></m:math> only depends on the number <m:math overflow="scroll"><m:mi>ϵ</m:mi></m:math>
+and not on the particular point <m:math overflow="scroll"><m:mrow><m:mi>c</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+</statement></rule>
+    <para id="id268534">The next theorem indicates the interaction between
+the algebraic properties of functions and continuity.</para>
+<rule id="fs-id1166339138340" type="theorem"><statement id="fs-id1166339138342">
+    <para id="id268538">
+Let <m:math overflow="scroll"><m:mi>S</m:mi></m:math> and <m:math overflow="scroll"><m:mi>T</m:mi></m:math> be subsets of <m:math overflow="scroll"><m:mrow><m:mi>C</m:mi><m:mo>,</m:mo></m:mrow></m:math> let <m:math overflow="scroll"><m:mi>f</m:mi></m:math> and <m:math overflow="scroll"><m:mi>g</m:mi></m:math> be functions from <m:math overflow="scroll"><m:mi>S</m:mi></m:math> into <m:math overflow="scroll"><m:mrow><m:mi>T</m:mi><m:mo>,</m:mo></m:mrow></m:math> and suppose that <m:math overflow="scroll"><m:mi>f</m:mi></m:math> and
+<m:math overflow="scroll"><m:mi>g</m:mi></m:math> are both continuous
+at a point <m:math overflow="scroll"><m:mi>c</m:mi></m:math> of <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math> Then</para>
+    <list id="id268648" display="block" list-type="enumerated">
+      <item id="uid1">There exists a <m:math overflow="scroll"><m:mrow><m:mi>δ</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn></m:mrow></m:math> and a positive number <m:math overflow="scroll"><m:mi>M</m:mi></m:math>
+such that if <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>y</m:mi><m:mo>-</m:mo><m:mi>c</m:mi><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mi>δ</m:mi></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>y</m:mi><m:mo>∈</m:mo><m:mi>S</m:mi></m:mrow></m:math> then <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>y</m:mi><m:mo>)</m:mo><m:mo>|</m:mo><m:mo>≤</m:mo><m:mi>M</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+That is, if <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is continuous at <m:math overflow="scroll"><m:mrow><m:mi>c</m:mi><m:mo>,</m:mo></m:mrow></m:math> then it is bounded near <m:math overflow="scroll"><m:mrow><m:mi>c</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid2"><m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>+</m:mo><m:mi>g</m:mi></m:mrow></m:math> is continuous at <m:math overflow="scroll"><m:mrow><m:mi>c</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid3"><m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mi>g</m:mi></m:mrow></m:math> is continuous at <m:math overflow="scroll"><m:mrow><m:mi>c</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid4"><m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>f</m:mi><m:mo>|</m:mo></m:mrow></m:math> is continuous at <m:math overflow="scroll"><m:mrow><m:mi>c</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid5">If <m:math overflow="scroll"><m:mrow><m:mi>g</m:mi><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo><m:mo>≠</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> then <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>/</m:mo><m:mi>g</m:mi></m:mrow></m:math> is continuous at <m:math overflow="scroll"><m:mrow><m:mi>c</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid6">If <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is a complex-valued function, and
+<m:math overflow="scroll"><m:mi>u</m:mi></m:math> and <m:math overflow="scroll"><m:mi>v</m:mi></m:math> are the real and imaginary parts of <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+then <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is continuous at <m:math overflow="scroll"><m:mi>c</m:mi></m:math> if and only if <m:math overflow="scroll"><m:mi>u</m:mi></m:math> and <m:math overflow="scroll"><m:mi>v</m:mi></m:math> are continuous at <m:math overflow="scroll"><m:mrow><m:mi>c</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+    </list>
+</statement>
+<proof id="fs-id1166314770755">
+    <para id="id269023"> We prove parts (1) and (5), and leave the remaining
+parts to the exercise that follows.</para>
+    <para id="id269031">To see part (1), let <m:math overflow="scroll"><m:mrow><m:mi>ϵ</m:mi><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>.</m:mo></m:mrow></m:math> Then, since <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is
+continuous at <m:math overflow="scroll"><m:mrow><m:mi>c</m:mi><m:mo>,</m:mo></m:mrow></m:math> there exists a <m:math overflow="scroll"><m:mrow><m:mi>δ</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn></m:mrow></m:math> such that
+if <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>y</m:mi><m:mo>-</m:mo><m:mi>c</m:mi><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mi>δ</m:mi></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>y</m:mi><m:mo>∈</m:mo><m:mi>S</m:mi></m:mrow></m:math> then <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>y</m:mi><m:mo>)</m:mo><m:mo>-</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mn>1</m:mn><m:mo>.</m:mo></m:mrow></m:math>
+Since <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>z</m:mi><m:mo>-</m:mo><m:mi>w</m:mi><m:mo>|</m:mo><m:mo>≥</m:mo><m:mo>|</m:mo><m:mo>|</m:mo><m:mi>z</m:mi><m:mo>|</m:mo><m:mo>-</m:mo><m:mo>|</m:mo><m:mi>w</m:mi><m:mo>|</m:mo><m:mo>|</m:mo></m:mrow></m:math> for any two complex numbers
+<m:math overflow="scroll"><m:mi>z</m:mi></m:math> and <m:math overflow="scroll"><m:mi>w</m:mi></m:math> (backwards Triangle Inequality), it then follows that
+<m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mo>|</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>y</m:mi><m:mo>)</m:mo><m:mo>|</m:mo><m:mo>-</m:mo><m:mo>|</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo><m:mo>|</m:mo><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mn>1</m:mn><m:mo>,</m:mo></m:mrow></m:math>
+from which it follows that if <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>y</m:mi><m:mo>-</m:mo><m:mi>c</m:mi><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mi>δ</m:mi></m:mrow></m:math> then <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>y</m:mi><m:mo>)</m:mo><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mo>|</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo><m:mo>|</m:mo><m:mo>+</m:mo><m:mn>1</m:mn><m:mo>.</m:mo></m:mrow></m:math>
+Hence, setting <m:math overflow="scroll"><m:mrow><m:mi>M</m:mi><m:mo>=</m:mo><m:mo>|</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo><m:mo>|</m:mo><m:mo>+</m:mo><m:mn>1</m:mn><m:mo>,</m:mo></m:mrow></m:math> we have that if
+<m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>y</m:mi><m:mo>-</m:mo><m:mi>c</m:mi><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mi>δ</m:mi></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>y</m:mi><m:mo>∈</m:mo><m:mi>S</m:mi><m:mo>,</m:mo></m:mrow></m:math> then <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>y</m:mi><m:mo>)</m:mo><m:mo>|</m:mo><m:mo>≤</m:mo><m:mi>M</m:mi></m:mrow></m:math> as desired.</para>
+
+    <para id="id269423">To prove part (5), we first make use of part 1.
+Let <m:math overflow="scroll"><m:mrow><m:msub><m:mi>δ</m:mi><m:mn>1</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>M</m:mi><m:mn>1</m:mn></m:msub></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:msub><m:mi>δ</m:mi><m:mn>2</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>M</m:mi><m:mn>2</m:mn></m:msub></m:mrow></m:math> be chosen so that
+if <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo><m:mi>y</m:mi><m:mo>-</m:mo><m:mi>c</m:mi><m:mo>|</m:mo><m:mo>&lt;</m:mo></m:mrow><m:msub><m:mi>δ</m:mi><m:mn>1</m:mn></m:msub></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>y</m:mi><m:mo>∈</m:mo><m:mi>S</m:mi></m:mrow></m:math> then</para>
+    <equation id="id269521"><m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mrow>
+            <m:mo>|</m:mo>
+            <m:mi>f</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>y</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>|</m:mo>
+            <m:mo>&lt;</m:mo>
+          </m:mrow>
+          <m:msub>
+            <m:mi>M</m:mi>
+            <m:mn>1</m:mn>
+          </m:msub>
+
+       
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id269573">and if <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo><m:mi>y</m:mi><m:mo>-</m:mo><m:mi>c</m:mi><m:mo>|</m:mo><m:mo>&lt;</m:mo></m:mrow><m:msub><m:mi>δ</m:mi><m:mn>2</m:mn></m:msub></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>y</m:mi><m:mo>∈</m:mo><m:mi>S</m:mi></m:mrow></m:math> then</para>
+    <equation id="id269623"><m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mrow>
+            <m:mo>|</m:mo>
+            <m:mi>g</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>y</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>|</m:mo>
+            <m:mo>&lt;</m:mo>
+          </m:mrow>
+          <m:msub>
+            <m:mi>M</m:mi>
+            <m:mn>2</m:mn>
+          </m:msub>
+        
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id269676">Next, let <m:math overflow="scroll"><m:msup><m:mi>ϵ</m:mi><m:mo>'</m:mo></m:msup></m:math> be the positive number <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>g</m:mi><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo><m:mo>|</m:mo><m:mo>/</m:mo><m:mn>2</m:mn><m:mo>.</m:mo></m:mrow></m:math>
+Then, there exists a <m:math overflow="scroll"><m:mrow><m:msup><m:mi>δ</m:mi><m:mo>'</m:mo></m:msup><m:mo>&gt;</m:mo><m:mn>0</m:mn></m:mrow></m:math> such that if <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo><m:mi>y</m:mi><m:mo>-</m:mo><m:mi>c</m:mi><m:mo>|</m:mo><m:mo>&lt;</m:mo></m:mrow><m:msup><m:mi>δ</m:mi><m:mo>'</m:mo></m:msup></m:mrow></m:math>
+and <m:math overflow="scroll"><m:mrow><m:mi>y</m:mi><m:mo>∈</m:mo><m:mi>S</m:mi></m:mrow></m:math> then
+<m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>y</m:mi><m:mo>)</m:mo></m:mrow><m:mo>-</m:mo><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>|</m:mo><m:mo>&lt;</m:mo></m:mrow><m:msup><m:mi>ϵ</m:mi><m:mo>'</m:mo></m:msup><m:mo>=</m:mo><m:mrow><m:mo>|</m:mo><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>|</m:mo></m:mrow><m:mo>/</m:mo><m:mn>2</m:mn><m:mo>.</m:mo></m:mrow></m:math>
+It then follows from the backwards triangle inequality that</para>
+    <equation id="id269857"><m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mrow>
+            <m:mo>|</m:mo>
+            <m:mi>g</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>y</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>|</m:mo>
+            <m:mo>&gt;</m:mo>
+          </m:mrow>
+          <m:msup>
+            <m:mi>ϵ</m:mi>
+            <m:mo>'</m:mo>
+          </m:msup>
+          <m:mo>=</m:mo>
+          <m:mrow>
+            <m:mo>|</m:mo>
+            <m:mi>g</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>c</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>|</m:mo>
+            <m:mo>/</m:mo>
+            <m:mn>2</m:mn>
+            <m:mspace width="0.166667em"/>
+            <m:mtext>so</m:mtext>
+            <m:mspace width="4.pt"/>
+            <m:mtext>that</m:mtext>
+            <m:mspace width="4.pt"/>
+            <m:mspace width="0.166667em"/>
+            <m:mo>|</m:mo>
+            <m:mn>1</m:mn>
+            <m:mo>/</m:mo>
+            <m:mi>g</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>y</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>|</m:mo>
+            <m:mo>&lt;</m:mo>
+            <m:mn>2</m:mn>
+            <m:mo>/</m:mo>
+            <m:mo>|</m:mo>
+            <m:mi>g</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>c</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>|</m:mo>
+        
+          </m:mrow>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id269989">Now, to finish the proof of part (5),
+let <m:math overflow="scroll"><m:mrow><m:mi>ϵ</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn></m:mrow></m:math> be given.
+If <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>y</m:mi><m:mo>-</m:mo><m:mi>c</m:mi><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mo movablelimits="true" form="prefix">min</m:mo><m:mo>(</m:mo><m:msub><m:mi>δ</m:mi><m:mn>1</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>δ</m:mi><m:mn>2</m:mn></m:msub><m:mo>,</m:mo><m:msup><m:mi>δ</m:mi><m:mo>'</m:mo></m:msup><m:mo>)</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>y</m:mi><m:mo>∈</m:mo><m:mi>S</m:mi><m:mo>,</m:mo></m:mrow></m:math> then
+from Inequalities (3.1), (3.2), and (3.3) we obtain</para>
+    <equation id="uid7">
+      <m:math overflow="scroll" mode="display">
+        <m:mtable displaystyle="true">
+          <m:mtr>
+            <m:mtd columnalign="right">
+              <m:mrow>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:mfrac>
+                  <m:mrow>
+                    <m:mi>f</m:mi>
+                    <m:mo>(</m:mo>
+                    <m:mi>y</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mrow>
+                    <m:mi>g</m:mi>
+                    <m:mo>(</m:mo>
+                    <m:mi>y</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                </m:mfrac>
+                <m:mo>-</m:mo>
+                <m:mfrac>
+                  <m:mrow>
+                    <m:mi>f</m:mi>
+                    <m:mo>(</m:mo>
+                    <m:mi>c</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mrow>
+                    <m:mi>g</m:mi>
+                    <m:mo>(</m:mo>
+                    <m:mi>c</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                </m:mfrac>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mfrac>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                  <m:mi>f</m:mi>
+                  <m:mo>(</m:mo>
+                  <m:mi>y</m:mi>
+                  <m:mo>)</m:mo>
+                  <m:mi>g</m:mi>
+                  <m:mo>(</m:mo>
+                  <m:mi>c</m:mi>
+                  <m:mo>)</m:mo>
+                  <m:mo>-</m:mo>
+                  <m:mi>f</m:mi>
+                  <m:mo>(</m:mo>
+                  <m:mi>c</m:mi>
+                  <m:mo>)</m:mo>
+                  <m:mi>g</m:mi>
+                  <m:mo>(</m:mo>
+                  <m:mi>y</m:mi>
+                  <m:mo>)</m:mo>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                  <m:mi>g</m:mi>
+                  <m:mo>(</m:mo>
+                  <m:mi>y</m:mi>
+                  <m:mo>)</m:mo>
+                  <m:mi>g</m:mi>
+                  <m:mo>(</m:mo>
+                  <m:mi>c</m:mi>
+                  <m:mo>)</m:mo>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+              </m:mfrac>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mfrac>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                  <m:mi>f</m:mi>
+                  <m:mo>(</m:mo>
+                  <m:mi>y</m:mi>
+                  <m:mo>)</m:mo>
+                  <m:mi>g</m:mi>
+                  <m:mo>(</m:mo>
+                  <m:mi>c</m:mi>
+                  <m:mo>)</m:mo>
+                  <m:mo>-</m:mo>
+                  <m:mi>f</m:mi>
+                  <m:mo>(</m:mo>
+                  <m:mi>c</m:mi>
+                  <m:mo>)</m:mo>
+                  <m:mi>g</m:mi>
+                  <m:mo>(</m:mo>
+                  <m:mi>c</m:mi>
+                  <m:mo>)</m:mo>
+                  <m:mo>+</m:mo>
+                  <m:mi>f</m:mi>
+                  <m:mo>(</m:mo>
+                  <m:mi>c</m:mi>
+                  <m:mo>)</m:mo>
+                  <m:mi>g</m:mi>
+                  <m:mo>(</m:mo>
+                  <m:mi>c</m:mi>
+                  <m:mo>)</m:mo>
+                  <m:mo>-</m:mo>
+                  <m:mi>f</m:mi>
+                  <m:mo>(</m:mo>
+                  <m:mi>c</m:mi>
+                  <m:mo>)</m:mo>
+                  <m:mi>g</m:mi>
+                  <m:mo>(</m:mo>
+                  <m:mi>y</m:mi>
+                  <m:mo>)</m:mo>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                  <m:mi>g</m:mi>
+                  <m:mo>(</m:mo>
+                  <m:mi>y</m:mi>
+                  <m:mo>)</m:mo>
+                  <m:mo>|</m:mo>
+                  <m:mo>|</m:mo>
+                  <m:mi>g</m:mi>
+                  <m:mo>(</m:mo>
+                  <m:mi>c</m:mi>
+                  <m:mo>)</m:mo>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+              </m:mfrac>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>≤</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mfrac>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                  <m:mi>f</m:mi>
+                  <m:mo>(</m:mo>
+                  <m:mi>y</m:mi>
+                  <m:mo>)</m:mo>
+                  <m:mo>-</m:mo>
+                  <m:mi>f</m:mi>
+                  <m:mo>(</m:mo>
+                  <m:mi>c</m:mi>
+                  <m:mo>)</m:mo>
+                  <m:mo>|</m:mo>
+                  <m:mo>|</m:mo>
+                  <m:mi>g</m:mi>
+                  <m:mo>(</m:mo>
+                  <m:mi>c</m:mi>
+                  <m:mo>)</m:mo>
+                  <m:mo>|</m:mo>
+                  <m:mo>+</m:mo>
+                  <m:mo>|</m:mo>
+                  <m:mi>f</m:mi>
+                  <m:mo>(</m:mo>
+                  <m:mi>c</m:mi>
+                  <m:mo>)</m:mo>
+                  <m:mo>|</m:mo>
+                  <m:mo>|</m:mo>
+                  <m:mi>g</m:mi>
+                  <m:mo>(</m:mo>
+                  <m:mi>c</m:mi>
+                  <m:mo>)</m:mo>
+                  <m:mo>-</m:mo>
+                  <m:mi>g</m:mi>
+                  <m:mo>(</m:mo>
+                  <m:mi>y</m:mi>
+                  <m:mo>)</m:mo>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                  <m:mi>g</m:mi>
+                  <m:mo>(</m:mo>
+                  <m:mi>y</m:mi>
+                  <m:mo>)</m:mo>
+                  <m:mo>|</m:mo>
+                  <m:mo>|</m:mo>
+                  <m:mi>g</m:mi>
+                  <m:mo>(</m:mo>
+                  <m:mi>c</m:mi>
+                  <m:mo>)</m:mo>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+              </m:mfrac>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>&lt;</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mo>|</m:mo>
+                  <m:mi>f</m:mi>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>y</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>-</m:mo>
+                  <m:mi>f</m:mi>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>c</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:msub>
+                  <m:mi>M</m:mi>
+                  <m:mn>2</m:mn>
+                </m:msub>
+                <m:mo>+</m:mo>
+                <m:msub>
+                  <m:mi>M</m:mi>
+                  <m:mn>1</m:mn>
+                </m:msub>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                  <m:mi>g</m:mi>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>c</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>-</m:mo>
+                  <m:mi>g</m:mi>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>y</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>|</m:mo>
+                  <m:mo>)</m:mo>
+                  <m:mo>×</m:mo>
+                </m:mrow>
+                <m:mfrac>
+                  <m:mn>2</m:mn>
+                  <m:msup>
+                    <m:mrow>
+                      <m:mo>|</m:mo>
+                      <m:mi>g</m:mi>
+                      <m:mrow>
+                        <m:mo>(</m:mo>
+                        <m:mi>c</m:mi>
+                        <m:mo>)</m:mo>
+                      </m:mrow>
+                      <m:mo>|</m:mo>
+                    </m:mrow>
+                    <m:mn>2</m:mn>
+                  </m:msup>
+                </m:mfrac>
+                <m:mo>.</m:mo>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+        </m:mtable>
+      </m:math>
+    </equation>
+    <para id="id270577">Finally, using the continuity of both <m:math overflow="scroll"><m:mi>f</m:mi></m:math> and <m:math overflow="scroll"><m:mi>g</m:mi></m:math>
+applied to the positive numbers
+<m:math overflow="scroll"><m:mrow><m:msub><m:mi>ϵ</m:mi><m:mn>1</m:mn></m:msub><m:mrow><m:mo>=</m:mo><m:mi>ϵ</m:mi><m:mo>/</m:mo><m:mo>(</m:mo><m:mn>4</m:mn></m:mrow><m:msub><m:mi>M</m:mi><m:mn>2</m:mn></m:msub><m:msup><m:mrow><m:mo>|</m:mo><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>|</m:mo></m:mrow><m:mn>2</m:mn></m:msup><m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> and
+<m:math overflow="scroll"><m:mrow><m:msub><m:mi>ϵ</m:mi><m:mn>2</m:mn></m:msub><m:mrow><m:mo>=</m:mo><m:mi>ϵ</m:mi><m:mo>/</m:mo><m:mo>(</m:mo><m:mn>4</m:mn></m:mrow><m:msub><m:mi>M</m:mi><m:mn>1</m:mn></m:msub><m:msup><m:mrow><m:mo>|</m:mo><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>|</m:mo></m:mrow><m:mn>2</m:mn></m:msup><m:mrow><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:mrow></m:math>
+choose <m:math overflow="scroll"><m:mrow><m:mi>δ</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> with <m:math overflow="scroll"><m:mrow><m:mi>δ</m:mi><m:mo>&lt;</m:mo><m:mo movablelimits="true" form="prefix">min</m:mo><m:mo>(</m:mo><m:msub><m:mi>δ</m:mi><m:mn>1</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>δ</m:mi><m:mn>2</m:mn></m:msub><m:mo>,</m:mo><m:msup><m:mi>δ</m:mi><m:mo>'</m:mo></m:msup><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math>
+and such that if <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>y</m:mi><m:mo>-</m:mo><m:mi>c</m:mi><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mi>δ</m:mi></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>y</m:mi><m:mo>∈</m:mo><m:mi>S</m:mi></m:mrow></m:math> then
+<m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>y</m:mi><m:mo>)</m:mo></m:mrow><m:mo>-</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>|</m:mo><m:mo>&lt;</m:mo></m:mrow><m:mfrac><m:mi>ϵ</m:mi><m:mrow><m:mn>4</m:mn><m:msub><m:mi>M</m:mi><m:mn>2</m:mn></m:msub><m:mo>/</m:mo><m:msup><m:mrow><m:mo>|</m:mo><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>|</m:mo></m:mrow><m:mn>2</m:mn></m:msup></m:mrow></m:mfrac></m:mrow></m:math> and
+<m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>-</m:mo><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>y</m:mi><m:mo>)</m:mo></m:mrow><m:mo>|</m:mo><m:mo>&lt;</m:mo></m:mrow><m:mfrac><m:mi>ϵ</m:mi><m:mrow><m:mn>4</m:mn><m:msub><m:mi>M</m:mi><m:mn>1</m:mn></m:msub><m:mo>/</m:mo><m:msup><m:mrow><m:mo>|</m:mo><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>|</m:mo></m:mrow><m:mn>2</m:mn></m:msup></m:mrow></m:mfrac><m:mo>.</m:mo></m:mrow></m:math>
+Then, if <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>y</m:mi><m:mo>-</m:mo><m:mi>c</m:mi><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mi>δ</m:mi></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>y</m:mi><m:mo>∈</m:mo><m:mi>S</m:mi></m:mrow></m:math> we have that</para>
+    <equation id="id271016">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mrow>
+            <m:mo>|</m:mo>
+          </m:mrow>
+          <m:mfrac>
+            <m:mrow>
+              <m:mi>f</m:mi>
+              <m:mo>(</m:mo>
+              <m:mi>y</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mrow>
+              <m:mi>g</m:mi>
+              <m:mo>(</m:mo>
+              <m:mi>y</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+          </m:mfrac>
+          <m:mo>-</m:mo>
+          <m:mfrac>
+            <m:mrow>
+              <m:mi>f</m:mi>
+              <m:mo>(</m:mo>
+              <m:mi>c</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mrow>
+              <m:mi>g</m:mi>
+              <m:mo>(</m:mo>
+              <m:mi>c</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+          </m:mfrac>
+          <m:mrow>
+            <m:mo>|</m:mo>
+            <m:mo>&lt;</m:mo>
+            <m:mi>ϵ</m:mi>
+          </m:mrow>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id271082">as desired.</para>
+</proof></rule>
+<exercise id="fs-id1166308811611"><problem id="fs-id1166308811612">
+    <list id="id271098" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid8"> Prove part (2) of the preceding theorem.
+(It's an <m:math overflow="scroll"><m:mrow><m:mi>ϵ</m:mi><m:mo>/</m:mo><m:mn>2</m:mn></m:mrow></m:math> argument.)
+</item>
+      <item id="uid9"> Prove part (3) of the preceding theorem.
+(It's similar to the proof of part (5) only easier.)
+</item>
+      <item id="uid10"> Prove part (4) of the preceding theorem.
+</item>
+      <item id="uid11"> Prove part (6) of the preceding theorem.
+</item>
+      <item id="uid12"> Suppose <m:math overflow="scroll"><m:mi>S</m:mi></m:math> is a subset of <m:math overflow="scroll"><m:mrow><m:mi>R</m:mi><m:mo>.</m:mo></m:mrow></m:math> Verify
+the above theorem
+replacing “ continuity”
+with left continuity and right continuity.
+</item>
+      <item id="uid13"> If <m:math overflow="scroll"><m:mi>S</m:mi></m:math> is a subset of <m:math overflow="scroll"><m:mrow><m:mi>R</m:mi><m:mo>,</m:mo></m:mrow></m:math> show that <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is continuous at a point <m:math overflow="scroll"><m:mrow><m:mi>c</m:mi><m:mo>∈</m:mo><m:mi>S</m:mi></m:mrow></m:math> if and only if it is
+both right continuous and left continuous at <m:math overflow="scroll"><m:mrow><m:mi>c</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+    </list>
+</problem></exercise>
+<rule id="fs-id1166304539489" type="theorem"><title>The composition of continuous functions is continuous.</title><statement id="fs-id1166304539492">
+    <para id="id271286">
+Let <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>,</m:mo><m:mi>T</m:mi><m:mo>,</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mi>U</m:mi></m:math> be subsets of <m:math overflow="scroll"><m:mrow><m:mi>C</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+and let <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>:</m:mo><m:mi>S</m:mi><m:mo>→</m:mo><m:mi>T</m:mi></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>g</m:mi><m:mo>:</m:mo><m:mi>T</m:mi><m:mo>→</m:mo><m:mi>U</m:mi></m:mrow></m:math> be functions.
+Suppose <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is continuous at a point
+<m:math overflow="scroll"><m:mrow><m:mi>c</m:mi><m:mo>∈</m:mo><m:mi>S</m:mi></m:mrow></m:math> and that <m:math overflow="scroll"><m:mi>g</m:mi></m:math> is continuous at the point <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo><m:mo>∈</m:mo><m:mi>T</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Then the composition <m:math overflow="scroll"><m:mrow><m:mi>g</m:mi><m:mo>∘</m:mo><m:mi>f</m:mi></m:mrow></m:math> is continuous at <m:math overflow="scroll"><m:mrow><m:mi>c</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+</statement>
+<proof id="fs-id1166310426260">
+    <para id="id271457">
+Let <m:math overflow="scroll"><m:mrow><m:mi>ϵ</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn></m:mrow></m:math> be given. Because <m:math overflow="scroll"><m:mi>g</m:mi></m:math> is continuous at
+the point <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math> there exists an <m:math overflow="scroll"><m:mrow><m:mi>α</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn></m:mrow></m:math> such that
+<m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>g</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo><m:mo>-</m:mo><m:mi>g</m:mi><m:mo>(</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo><m:mo>)</m:mo><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mi>ϵ</m:mi></m:mrow></m:math> if <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>t</m:mi><m:mo>-</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mi>α</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Now, using this positive number <m:math overflow="scroll"><m:mrow><m:mi>α</m:mi><m:mo>,</m:mo></m:mrow></m:math> and using the fact
+that <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is continuous at the point <m:math overflow="scroll"><m:mrow><m:mi>c</m:mi><m:mo>,</m:mo></m:mrow></m:math> there
+exists a <m:math overflow="scroll"><m:mrow><m:mi>δ</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn></m:mrow></m:math> so that <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>s</m:mi><m:mo>)</m:mo><m:mo>-</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mi>α</m:mi></m:mrow></m:math> if <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>s</m:mi><m:mo>-</m:mo><m:mi>c</m:mi><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mi>δ</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Therefore, if <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>s</m:mi><m:mo>-</m:mo><m:mi>c</m:mi><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mi>δ</m:mi><m:mo>,</m:mo></m:mrow></m:math> then <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>s</m:mi><m:mo>)</m:mo><m:mo>-</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mi>α</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+and hence <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>g</m:mi><m:mo>(</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>s</m:mi><m:mo>)</m:mo><m:mo>)</m:mo><m:mo>-</m:mo><m:mi>g</m:mi><m:mo>(</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo><m:mo>)</m:mo><m:mo>|</m:mo><m:mo>=</m:mo><m:mo>|</m:mo><m:mi>g</m:mi><m:mo>∘</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>s</m:mi><m:mo>)</m:mo><m:mo>-</m:mo><m:mi>g</m:mi><m:mo>∘</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mi>ϵ</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+which completes the proof.</para>
+</proof></rule>
+<exercise id="fs-id1166308855470"><problem id="fs-id1166308855472">
+    <list id="id271865" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid14"> If <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>:</m:mo><m:mi>C</m:mi><m:mo>→</m:mo><m:mi>C</m:mi></m:mrow></m:math> is the function defined by <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mi>z</m:mi><m:mo>,</m:mo></m:mrow></m:math> prove that <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is continuous at each point of <m:math overflow="scroll"><m:mrow><m:mi>C</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid15"> Use part (a) and Theorem 3.2 to conclude that every rational function is continuous
+on its domain.
+</item>
+      <item id="uid16"> Prove that a step function <m:math overflow="scroll"><m:mrow><m:mi>h</m:mi><m:mo>:</m:mo><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>→</m:mo><m:mi>C</m:mi></m:mrow></m:math> is continuous everywhere on
+<m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow></m:math> except possibly at the points of the partition <m:math overflow="scroll"><m:mi>P</m:mi></m:math> that determines <m:math overflow="scroll"><m:mrow><m:mi>h</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+    </list>
+</problem></exercise>
+<exercise id="fs-id1166310426235"><problem id="fs-id1166305040991">
+    <list id="id272074" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid17"> Let <m:math overflow="scroll"><m:mi>S</m:mi></m:math> be the set of nonnegative real numbers, and define <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>:</m:mo><m:mi>S</m:mi><m:mo>→</m:mo><m:mi>S</m:mi></m:mrow></m:math> by <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msqrt><m:mi>x</m:mi></m:msqrt><m:mo>.</m:mo></m:mrow></m:math> Prove that <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is continuous
+at each point of <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+HINT: For <m:math overflow="scroll"><m:mrow><m:mi>c</m:mi><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> use <m:math overflow="scroll"><m:mrow><m:mi>δ</m:mi><m:mo>=</m:mo><m:msup><m:mi>ϵ</m:mi><m:mn>2</m:mn></m:msup><m:mo>.</m:mo></m:mrow></m:math>
+For <m:math overflow="scroll"><m:mrow><m:mi>c</m:mi><m:mo>≠</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> use the identity
+<equation id="id272222"><m:math overflow="scroll" mode="display"><m:mrow><m:msqrt><m:mi>y</m:mi></m:msqrt><m:mo>-</m:mo><m:msqrt><m:mi>c</m:mi></m:msqrt><m:mo>=</m:mo><m:mrow><m:mo>(</m:mo><m:msqrt><m:mi>y</m:mi></m:msqrt><m:mo>-</m:mo><m:msqrt><m:mi>c</m:mi></m:msqrt><m:mo>)</m:mo></m:mrow><m:mfrac><m:mrow><m:msqrt><m:mi>y</m:mi></m:msqrt><m:mo>+</m:mo><m:msqrt><m:mi>c</m:mi></m:msqrt></m:mrow><m:mrow><m:msqrt><m:mi>y</m:mi></m:msqrt><m:mo>+</m:mo><m:msqrt><m:mi>c</m:mi></m:msqrt></m:mrow></m:mfrac><m:mo>=</m:mo><m:mfrac><m:mrow><m:mi>y</m:mi><m:mo>-</m:mo><m:mi>c</m:mi></m:mrow><m:mrow><m:msqrt><m:mi>y</m:mi></m:msqrt><m:mo>+</m:mo><m:msqrt><m:mi>c</m:mi></m:msqrt></m:mrow></m:mfrac><m:mo>≤</m:mo><m:mfrac><m:mrow><m:mi>y</m:mi><m:mo>-</m:mo><m:mi>c</m:mi></m:mrow><m:msqrt><m:mi>c</m:mi></m:msqrt></m:mfrac><m:mo>.</m:mo></m:mrow></m:math></equation></item>
+      <item id="uid18"> If <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>:</m:mo><m:mi>C</m:mi><m:mo>→</m:mo><m:mi>R</m:mi></m:mrow></m:math> is the function defined by <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mo>|</m:mo><m:mi>z</m:mi><m:mo>|</m:mo><m:mo>,</m:mo></m:mrow></m:math>
+show that <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is continuous at every point of its domain.
+</item>
+    </list>
+</problem></exercise>
+<exercise id="fs-id1166314770732"><problem id="fs-id1166314770733">
+    <para id="id272400">
+Using the previous theorems and exercises, explain why
+the following functions <m:math overflow="scroll"><m:mi>f</m:mi></m:math> are continuous on their domains.
+Describe the domains as well.</para>
+    <list id="id272421" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid19"> <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mrow><m:mo>(</m:mo><m:mn>1</m:mn><m:mo>-</m:mo><m:msup><m:mi>z</m:mi><m:mn>2</m:mn></m:msup><m:mo>)</m:mo></m:mrow><m:mo>/</m:mo><m:mrow><m:mo>(</m:mo><m:mn>1</m:mn><m:mo>+</m:mo><m:msup><m:mi>z</m:mi><m:mn>2</m:mn></m:msup><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid20"> <m:math overflow="scroll"><m:mrow><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mo>|</m:mo><m:mn>1</m:mn><m:mo>+</m:mo><m:mi>z</m:mi><m:mo>+</m:mo></m:mrow><m:msup><m:mi>z</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mi>z</m:mi><m:mn>3</m:mn></m:msup><m:mrow><m:mo>-</m:mo><m:mrow><m:mo>(</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>|</m:mo><m:mo>.</m:mo></m:mrow></m:mrow></m:math></item>
+      <item id="uid21"> <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msqrt><m:mrow><m:mn>1</m:mn><m:mo>+</m:mo><m:msqrt><m:mrow><m:mn>1</m:mn><m:mo>-</m:mo><m:msup><m:mrow><m:mo>|</m:mo><m:mi>z</m:mi><m:mo>|</m:mo></m:mrow><m:mn>2</m:mn></m:msup></m:mrow></m:msqrt></m:mrow></m:msqrt><m:mo>.</m:mo></m:mrow></m:math></item>
+    </list>
+</problem></exercise>
+<exercise id="fs-id1166304925593"><problem id="fs-id1166304925594">
+    <list id="id272638" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid22"> If <m:math overflow="scroll"><m:mi>c</m:mi></m:math> and <m:math overflow="scroll"><m:mi>d</m:mi></m:math> are real numbers, show that <m:math overflow="scroll"><m:mrow><m:mo movablelimits="true" form="prefix">max</m:mo><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>,</m:mo><m:mi>d</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>+</m:mo><m:mi>d</m:mi><m:mo>)</m:mo><m:mo>/</m:mo><m:mn>2</m:mn><m:mo>+</m:mo><m:mo>|</m:mo><m:mi>c</m:mi><m:mo>-</m:mo><m:mi>d</m:mi><m:mo>|</m:mo><m:mo>/</m:mo><m:mn>2</m:mn><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid23"> If <m:math overflow="scroll"><m:mi>f</m:mi></m:math> and <m:math overflow="scroll"><m:mi>g</m:mi></m:math> are functions from <m:math overflow="scroll"><m:mi>S</m:mi></m:math> into <m:math overflow="scroll"><m:mrow><m:mi>R</m:mi><m:mo>,</m:mo></m:mrow></m:math> show that <m:math overflow="scroll"><m:mrow><m:mo movablelimits="true" form="prefix">max</m:mo><m:mo>(</m:mo><m:mi>f</m:mi><m:mo>,</m:mo><m:mi>g</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mo>(</m:mo><m:mi>f</m:mi><m:mo>+</m:mo><m:mi>g</m:mi><m:mo>)</m:mo><m:mo>/</m:mo><m:mn>2</m:mn><m:mo>+</m:mo><m:mo>|</m:mo><m:mi>f</m:mi><m:mo>-</m:mo><m:mi>g</m:mi><m:mo>|</m:mo><m:mo>/</m:mo><m:mn>2</m:mn><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid24"> If <m:math overflow="scroll"><m:mi>f</m:mi></m:math> and <m:math overflow="scroll"><m:mi>g</m:mi></m:math> are real-valued functions that are
+both continuous at a point <m:math overflow="scroll"><m:mrow><m:mi>c</m:mi><m:mo>,</m:mo></m:mrow></m:math> show that <m:math overflow="scroll"><m:mrow><m:mo movablelimits="true" form="prefix">max</m:mo><m:mo>(</m:mo><m:mi>f</m:mi><m:mo>,</m:mo><m:mi>g</m:mi><m:mo>)</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mo movablelimits="true" form="prefix">min</m:mo><m:mo>(</m:mo><m:mi>f</m:mi><m:mo>,</m:mo><m:mi>g</m:mi><m:mo>)</m:mo></m:mrow></m:math> are both continuous at <m:math overflow="scroll"><m:mrow><m:mi>c</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+    </list>
+</problem></exercise>
+<exercise id="fs-id1166313710602"><problem id="fs-id1166313710603">
+    <para id="id272954">
+Let <m:math overflow="scroll"><m:mi>N</m:mi></m:math> be the set of natural numbers, let <m:math overflow="scroll"><m:mi>P</m:mi></m:math> be the set of positive real numbers, and define <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>:</m:mo><m:mi>N</m:mi><m:mo>→</m:mo><m:mi>P</m:mi></m:mrow></m:math> by <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>n</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msqrt><m:mrow><m:mn>1</m:mn><m:mo>+</m:mo><m:mi>n</m:mi></m:mrow></m:msqrt><m:mo>.</m:mo></m:mrow></m:math> Prove that <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is continuous at each point of <m:math overflow="scroll"><m:mrow><m:mi>N</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Show in fact that every function <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>:</m:mo><m:mi>N</m:mi><m:mo>→</m:mo><m:mi>C</m:mi></m:mrow></m:math> is continuous on this domain <m:math overflow="scroll"><m:mrow><m:mi>N</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+    <para id="id273128">HINT: Show that for any <m:math overflow="scroll"><m:mrow><m:mi>ϵ</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> the choice of <m:math overflow="scroll"><m:mrow><m:mi>δ</m:mi><m:mo>=</m:mo><m:mn>1</m:mn></m:mrow></m:math> will work.</para>
+</problem></exercise>
+<exercise id="fs-id1166314799784"><title>Negations</title><problem id="fs-id1166314799785">
+ 
+    <list id="id273177" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid25"> Negate the statement:
+“For every <m:math overflow="scroll"><m:mrow><m:mi>ϵ</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math><m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo><m:mi>x</m:mi><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mi>ϵ</m:mi></m:mrow><m:msup><m:mo>.</m:mo><m:mrow><m:mo>'</m:mo><m:mo>'</m:mo></m:mrow></m:msup></m:mrow></m:math></item>
+      <item id="uid26"> Negate the statement:
+“For every <m:math overflow="scroll"><m:mrow><m:mi>ϵ</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> there exists an <m:math overflow="scroll"><m:mi>x</m:mi></m:math> for which <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo><m:mi>x</m:mi><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mi>ϵ</m:mi></m:mrow><m:msup><m:mo>.</m:mo><m:mrow><m:mo>'</m:mo><m:mo>'</m:mo></m:mrow></m:msup></m:mrow></m:math></item>
+      <item id="uid27"> Negate the statement that “ <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is continuous at <m:math overflow="scroll"><m:mrow><m:mi>c</m:mi><m:msup><m:mo>.</m:mo><m:mrow><m:mo>'</m:mo><m:mo>'</m:mo></m:mrow></m:msup></m:mrow></m:math></item>
+    </list>
+</problem></exercise>
+    <para id="id273350">The next result establishes an equivalence
+between the basic <m:math overflow="scroll"><m:mrow><m:mi>ϵ</m:mi><m:mo>,</m:mo><m:mi>δ</m:mi></m:mrow></m:math> definition of continuity
+and a sequential formulation.
+In many cases, maybe most, this sequential version of continuity
+is easier to work with than the <m:math overflow="scroll"><m:mrow><m:mi>ϵ</m:mi><m:mo>,</m:mo><m:mi>δ</m:mi></m:mrow></m:math> version.</para>
+
+<rule id="fs-id1166304708413" type="theorem"><statement id="fs-id1166304708417">
+    <para id="id273384">
+Let <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>:</m:mo><m:mi>S</m:mi><m:mo>→</m:mo><m:mi>C</m:mi></m:mrow></m:math> be a complex-valued function on <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+and let <m:math overflow="scroll"><m:mi>c</m:mi></m:math> be a point in <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Then <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is continuous at <m:math overflow="scroll"><m:mi>c</m:mi></m:math> if and only if the following condition holds: For every sequence
+<m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> of elements of <m:math overflow="scroll"><m:mi>S</m:mi></m:math> that converges to <m:math overflow="scroll"><m:mrow><m:mi>c</m:mi><m:mo>,</m:mo></m:mrow></m:math> the sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mo>)</m:mo></m:mrow><m:mo>}</m:mo></m:mrow></m:math> converges to <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Or, said a different way, if <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> converges to <m:math overflow="scroll"><m:mrow><m:mi>c</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+then <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mo>)</m:mo></m:mrow><m:mo>}</m:mo></m:mrow></m:math> converges to <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+And, said yet a third (somewhat less precise) way, the function <m:math overflow="scroll"><m:mi>f</m:mi></m:math> converts convergent sequences to convergent sequences.</para>
+</statement>
+<proof id="fs-id1166304727144">
+    <para id="id273644">
+Suppose first that <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is continuous at <m:math overflow="scroll"><m:mrow><m:mi>c</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+and let <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> be a sequence of elements of <m:math overflow="scroll"><m:mi>S</m:mi></m:math> that converges to <m:math overflow="scroll"><m:mrow><m:mi>c</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Let <m:math overflow="scroll"><m:mrow><m:mi>ϵ</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn></m:mrow></m:math> be given.
+We must find a natural number <m:math overflow="scroll"><m:mi>N</m:mi></m:math> such that if <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>≥</m:mo><m:mi>N</m:mi></m:mrow></m:math> then <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo><m:mi>f</m:mi></m:mrow><m:mrow><m:mo>(</m:mo><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mo>)</m:mo></m:mrow><m:mo>-</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mrow><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mi>ϵ</m:mi><m:mo>.</m:mo></m:mrow></m:mrow></m:math>
+First, choose <m:math overflow="scroll"><m:mrow><m:mi>δ</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn></m:mrow></m:math> so that <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>y</m:mi><m:mo>)</m:mo><m:mo>-</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mi>ϵ</m:mi></m:mrow></m:math> whenever <m:math overflow="scroll"><m:mrow><m:mi>y</m:mi><m:mo>∈</m:mo><m:mi>S</m:mi></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>y</m:mi><m:mo>-</m:mo><m:mi>c</m:mi><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mi>δ</m:mi><m:mo>.</m:mo></m:mrow></m:math> Now, choose <m:math overflow="scroll"><m:mi>N</m:mi></m:math> so that <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mo>-</m:mo><m:mi>c</m:mi><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mi>δ</m:mi></m:mrow></m:mrow></m:math> whenever <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>≥</m:mo><m:mi>N</m:mi><m:mo>.</m:mo></m:mrow></m:math> Then if <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>≥</m:mo><m:mi>N</m:mi><m:mo>,</m:mo></m:mrow></m:math> we have that
+<m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mo>-</m:mo><m:mi>c</m:mi><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mi>δ</m:mi><m:mo>,</m:mo></m:mrow></m:mrow></m:math> whence <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo><m:mi>f</m:mi></m:mrow><m:mrow><m:mo>(</m:mo><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mo>)</m:mo></m:mrow><m:mo>-</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mrow><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mi>ϵ</m:mi><m:mo>.</m:mo></m:mrow></m:mrow></m:math>
+This shows that the sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mo>)</m:mo></m:mrow><m:mo>}</m:mo></m:mrow></m:math> converges to <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math>
+as desired.</para>
+    <para id="id274089">We prove the converse by proving the contrapositive statement;
+i.e., we will show that if <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is not continuous at <m:math overflow="scroll"><m:mrow><m:mi>c</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+then there does exist a sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> that converges to <m:math overflow="scroll"><m:mi>c</m:mi></m:math> but for which
+the sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mo>)</m:mo></m:mrow><m:mo>}</m:mo></m:mrow></m:math> does not converge to <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Thus, suppose <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is <emphasis effect="bold">not</emphasis> continuous at <m:math overflow="scroll"><m:mrow><m:mi>c</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Then there exists an <m:math overflow="scroll"><m:mrow><m:msub><m:mi>ϵ</m:mi><m:mn>0</m:mn></m:msub><m:mo>&gt;</m:mo><m:mn>0</m:mn></m:mrow></m:math> such that for every <m:math overflow="scroll"><m:mrow><m:mi>δ</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn></m:mrow></m:math> there is a
+<m:math overflow="scroll"><m:mrow><m:mi>y</m:mi><m:mo>∈</m:mo><m:mi>S</m:mi></m:mrow></m:math> such that <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>y</m:mi><m:mo>-</m:mo><m:mi>c</m:mi><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mi>δ</m:mi></m:mrow></m:math> but <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>y</m:mi><m:mo>)</m:mo></m:mrow><m:mo>-</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>|</m:mo></m:mrow><m:mo>≥</m:mo><m:msub><m:mi>ϵ</m:mi><m:mn>0</m:mn></m:msub><m:mo>.</m:mo></m:mrow></m:math>
+To obtain a sequence, we apply this statement to <m:math overflow="scroll"><m:mi>δ</m:mi></m:math>'s of the form <m:math overflow="scroll"><m:mrow><m:mi>δ</m:mi><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>n</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Hence, for every natural number <m:math overflow="scroll"><m:mi>n</m:mi></m:math> there exists a point <m:math overflow="scroll"><m:mrow><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mo>∈</m:mo><m:mi>S</m:mi></m:mrow></m:math>
+such that <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mo>-</m:mo><m:mi>c</m:mi><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>n</m:mi></m:mrow></m:mrow></m:math> but <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo><m:mi>f</m:mi></m:mrow><m:mrow><m:mo>(</m:mo><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mo>)</m:mo></m:mrow><m:mo>-</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mrow><m:mo>|</m:mo><m:mo>≥</m:mo></m:mrow><m:msub><m:mi>ϵ</m:mi><m:mn>0</m:mn></m:msub><m:mo>.</m:mo></m:mrow></m:math>
+Clearly, the sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> converges to <m:math overflow="scroll"><m:mi>c</m:mi></m:math> since <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mo>-</m:mo><m:mi>c</m:mi><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>n</m:mi><m:mo>.</m:mo></m:mrow></m:mrow></m:math>
+On the other hand, the sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mo>)</m:mo></m:mrow><m:mo>}</m:mo></m:mrow></m:math> cannot be converging to <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math>
+because <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo><m:mi>f</m:mi></m:mrow><m:mrow><m:mo>(</m:mo><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mo>)</m:mo></m:mrow><m:mo>-</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mrow><m:mo>|</m:mo></m:mrow></m:mrow></m:math> is always <m:math overflow="scroll"><m:mrow><m:mo>≥</m:mo><m:msub><m:mi>ϵ</m:mi><m:mn>0</m:mn></m:msub><m:mo>.</m:mo></m:mrow></m:math></para>
+    <para id="id274652">This completes the proof of the theorem.</para>
+</proof></rule>
+  </content>
+</document>

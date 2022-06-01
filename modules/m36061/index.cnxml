@@ -1,0 +1,303 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML">
+  <title>The Rational Numbers</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m36061</md:content-id>
+  <md:title>The Rational Numbers</md:title>
+  <md:abstract>Rational numbers are thought of as quotients k/n of integers. Fields are defined, and examples of fields are given.</md:abstract>
+  <md:uuid>fd7396da-7627-4535-9757-7e51992b0b3d</md:uuid>
+</metadata>
+
+<content>
+    <para id="id62155">Next, we discuss the set <m:math overflow="scroll"><m:mi>Q</m:mi></m:math> of rational numbers, which we ordinarily think of as quotients <m:math overflow="scroll"><m:mrow><m:mi>k</m:mi><m:mo>/</m:mo><m:mi>n</m:mi></m:mrow></m:math> of integers. Of course, we do not allow the “second” element <m:math overflow="scroll"><m:mi>n</m:mi></m:math> of the quotient <m:math overflow="scroll"><m:mrow><m:mi>k</m:mi><m:mo>/</m:mo><m:mi>n</m:mi></m:mrow></m:math> to be 0. Also, we must remember that there isn't a 1-1 correspondence between the set <m:math overflow="scroll"><m:mi>Q</m:mi></m:math> of all rational numbers and the set of all such quotients <m:math overflow="scroll"><m:mrow><m:mi>k</m:mi><m:mo>/</m:mo><m:mi>n</m:mi><m:mo>.</m:mo></m:mrow></m:math> Indeed, the two distinct quotients <m:math overflow="scroll"><m:mrow><m:mn>2</m:mn><m:mo>/</m:mo><m:mn>3</m:mn></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mn>6</m:mn><m:mo>/</m:mo><m:mn>9</m:mn></m:mrow></m:math> represent the same rational number. To be precise, the set <m:math overflow="scroll"><m:mi>Q</m:mi></m:math> is a collection of equivalence classes of ordered pairs <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>k</m:mi><m:mo>,</m:mo><m:mi>n</m:mi><m:mo>)</m:mo></m:mrow></m:math> of integers, for which the second component of the pair is not 0. The equivalence relation among these ordered pairs is this:</para>
+    <equation id="id62644">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>k</m:mi>
+            <m:mo>,</m:mo>
+            <m:mi>n</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>≡</m:mo>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:msup>
+              <m:mi>k</m:mi>
+              <m:mo>'</m:mo>
+            </m:msup>
+            <m:mo>,</m:mo>
+            <m:msup>
+              <m:mi>n</m:mi>
+              <m:mo>'</m:mo>
+            </m:msup>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mspace width="4.pt"/>
+          <m:mtext>if</m:mtext>
+          <m:mspace width="4.pt"/>
+          <m:mi>k</m:mi>
+          <m:mo>×</m:mo>
+          <m:msup>
+            <m:mi>n</m:mi>
+            <m:mo>'</m:mo>
+          </m:msup>
+          <m:mo>=</m:mo>
+          <m:mi>n</m:mi>
+          <m:mo>×</m:mo>
+          <m:msup>
+            <m:mi>k</m:mi>
+            <m:mo>'</m:mo>
+          </m:msup>
+          <m:mo>.</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id62725">We will not dwell on this possibly subtle definition, but will rather accept the usual understanding of the rational numbers and their arithmetic properties. In particular, we will represent them as quotients rather than as ordered pairs, and, if <m:math overflow="scroll"><m:mi>r</m:mi></m:math> is a rational number, we will write <m:math overflow="scroll"><m:mrow><m:mi>r</m:mi><m:mo>=</m:mo><m:mi>k</m:mi><m:mo>/</m:mo><m:mi>n</m:mi><m:mo>,</m:mo></m:mrow></m:math> instead of writing <m:math overflow="scroll"><m:mi>r</m:mi></m:math> as the equivalence class containing the ordered pair <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>k</m:mi><m:mo>,</m:mo><m:mi>n</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math> As usual, we refer to the first integer in the quotient <m:math overflow="scroll"><m:mrow><m:mi>k</m:mi><m:mo>/</m:mo><m:mi>n</m:mi></m:mrow></m:math> as the <emphasis effect="italics">numerator</emphasis> and the second (nonzero) integer in the quotient <m:math overflow="scroll"><m:mrow><m:mi>k</m:mi><m:mo>/</m:mo><m:mi>n</m:mi></m:mrow></m:math> as the <emphasis effect="italics">denominator</emphasis> of the quotient. The familiar definitions of sum and product for rational numbers are these:</para>
+    <equation id="id62824">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mfrac>
+            <m:mi>k</m:mi>
+            <m:mi>n</m:mi>
+          </m:mfrac>
+          <m:mo>+</m:mo>
+          <m:mfrac>
+            <m:msup>
+              <m:mi>k</m:mi>
+              <m:mo>'</m:mo>
+            </m:msup>
+            <m:msup>
+              <m:mi>n</m:mi>
+              <m:mo>'</m:mo>
+            </m:msup>
+          </m:mfrac>
+          <m:mo>=</m:mo>
+          <m:mfrac>
+            <m:mrow>
+              <m:mi>k</m:mi>
+              <m:msup>
+                <m:mi>n</m:mi>
+                <m:mo>'</m:mo>
+              </m:msup>
+              <m:mo>+</m:mo>
+              <m:mi>n</m:mi>
+              <m:msup>
+                <m:mi>k</m:mi>
+                <m:mo>'</m:mo>
+              </m:msup>
+            </m:mrow>
+            <m:mrow>
+              <m:mi>n</m:mi>
+              <m:msup>
+                <m:mi>n</m:mi>
+                <m:mo>'</m:mo>
+              </m:msup>
+            </m:mrow>
+          </m:mfrac>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id62896">and</para>
+    <equation id="id62899">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mfrac>
+            <m:mi>k</m:mi>
+            <m:mi>n</m:mi>
+          </m:mfrac>
+          <m:mo>×</m:mo>
+          <m:mfrac>
+            <m:msup>
+              <m:mi>k</m:mi>
+              <m:mo>'</m:mo>
+            </m:msup>
+            <m:msup>
+              <m:mi>n</m:mi>
+              <m:mo>'</m:mo>
+            </m:msup>
+          </m:mfrac>
+          <m:mo>=</m:mo>
+          <m:mfrac>
+            <m:mrow>
+              <m:mi>k</m:mi>
+              <m:msup>
+                <m:mi>k</m:mi>
+                <m:mo>'</m:mo>
+              </m:msup>
+            </m:mrow>
+            <m:mrow>
+              <m:mi>n</m:mi>
+              <m:msup>
+                <m:mi>n</m:mi>
+                <m:mo>'</m:mo>
+              </m:msup>
+            </m:mrow>
+          </m:mfrac>
+          <m:mo>.</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id62962">Addition and multiplication of rational numbers satisfy the three basic algebraic relations of commutativity, associativity and distributivity stated earlier.</para>
+    <para id="id62966">We note that the integers <m:math overflow="scroll"><m:mi>Z</m:mi></m:math> can be identified in an obvious way as a subset of the rational numbers <m:math overflow="scroll"><m:mrow><m:mi>Q</m:mi><m:mo>.</m:mo></m:mrow></m:math> Indeed, we identify the
+integer <m:math overflow="scroll"><m:mi>k</m:mi></m:math> with the quotient <m:math overflow="scroll"><m:mrow><m:mi>k</m:mi><m:mo>/</m:mo><m:mn>1</m:mn><m:mo>.</m:mo></m:mrow></m:math> In this way, we note that <m:math overflow="scroll"><m:mi>Q</m:mi></m:math> contains the two numbers <m:math overflow="scroll"><m:mrow><m:mn>0</m:mn><m:mo>≡</m:mo><m:mn>0</m:mn><m:mo>/</m:mo><m:mn>1</m:mn></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mn>1</m:mn><m:mo>≡</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mn>1</m:mn><m:mo>.</m:mo></m:mrow></m:math> Notice that any other quotient <m:math overflow="scroll"><m:mrow><m:mi>k</m:mi><m:mo>/</m:mo><m:mi>n</m:mi></m:mrow></m:math> that is equivalent to <m:math overflow="scroll"><m:mrow><m:mn>0</m:mn><m:mo>/</m:mo><m:mn>1</m:mn></m:mrow></m:math> must satisfy <m:math overflow="scroll"><m:mrow><m:mi>k</m:mi><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> and any other quotient <m:math overflow="scroll"><m:mrow><m:mi>k</m:mi><m:mo>/</m:mo><m:mi>n</m:mi></m:mrow></m:math> that is equivalent to <m:math overflow="scroll"><m:mrow><m:mn>1</m:mn><m:mo>/</m:mo><m:mn>1</m:mn></m:mrow></m:math> must satisfy <m:math overflow="scroll"><m:mrow><m:mi>k</m:mi><m:mo>=</m:mo><m:mi>n</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Remember, <m:math overflow="scroll"><m:mrow><m:mi>k</m:mi><m:mo>/</m:mo><m:mi>n</m:mi><m:mo>≡</m:mo><m:msup><m:mi>k</m:mi><m:mo>'</m:mo></m:msup><m:mo>/</m:mo><m:msup><m:mi>n</m:mi><m:mo>'</m:mo></m:msup></m:mrow></m:math> if and only if <m:math overflow="scroll"><m:mrow><m:mi>k</m:mi><m:msup><m:mi>n</m:mi><m:mo>'</m:mo></m:msup><m:mo>=</m:mo><m:msup><m:mi>k</m:mi><m:mo>'</m:mo></m:msup><m:mi>n</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+    <para id="id63403">The set <m:math overflow="scroll"><m:mi>Q</m:mi></m:math> has an additional property not shared by the set of integers <m:math overflow="scroll"><m:mrow><m:mi>Z</m:mi><m:mo>.</m:mo></m:mrow></m:math> It is this: For each nonzero element <m:math overflow="scroll"><m:mrow><m:mi>r</m:mi><m:mo>∈</m:mo><m:mi>Q</m:mi><m:mo>,</m:mo></m:mrow></m:math> there exists an element <m:math overflow="scroll"><m:mrow><m:msup><m:mi>r</m:mi><m:mo>'</m:mo></m:msup><m:mo>∈</m:mo><m:mi>Q</m:mi></m:mrow></m:math> for which <m:math overflow="scroll"><m:mrow><m:mi>r</m:mi><m:mo>×</m:mo><m:msup><m:mi>r</m:mi><m:mo>'</m:mo></m:msup><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>.</m:mo></m:mrow></m:math> Indeed, if <m:math overflow="scroll"><m:mrow><m:mi>r</m:mi><m:mo>=</m:mo><m:mi>k</m:mi><m:mo>/</m:mo><m:mi>n</m:mi><m:mo>≠</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> then <m:math overflow="scroll"><m:mrow><m:mi>k</m:mi><m:mo>≠</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> and we may define <m:math overflow="scroll"><m:mrow><m:msup><m:mi>r</m:mi><m:mo>'</m:mo></m:msup><m:mo>=</m:mo><m:mi>n</m:mi><m:mo>/</m:mo><m:mi>k</m:mi><m:mo>.</m:mo></m:mrow></m:math> Consequently, the set <m:math overflow="scroll"><m:mi>Q</m:mi></m:math> of all rational numbers is what is known in mathematics as a field.</para>
+<definition id="fs-id1168851121804"><term/><meaning id="fs-id1168853997248"><para id="fs-id1168824672257">    
+A <emphasis effect="italics">field</emphasis> is a nonempty set <m:math overflow="scroll"><m:mi>F</m:mi></m:math> on which there are defined two binary operations, addition (<m:math overflow="scroll"><m:mo>+</m:mo></m:math>) and multiplication (<m:math overflow="scroll"><m:mo>×</m:mo></m:math>), such that the following six axioms hold:</para>
+
+
+    <list id="id63630" display="block" list-type="enumerated">
+      <item id="uid1">Both addition and multiplication are commutative and associative.
+</item>
+      <item id="uid2">Multiplication is distributive over addition; i.e.,
+<equation id="id63657"><m:math overflow="scroll" mode="display"><m:mrow><m:mi>x</m:mi><m:mo>×</m:mo><m:mo>(</m:mo><m:mi>y</m:mi><m:mo>+</m:mo><m:mi>z</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mi>x</m:mi><m:mo>×</m:mo><m:mi>y</m:mi><m:mo>+</m:mo><m:mi>x</m:mi><m:mo>×</m:mo><m:mi>z</m:mi></m:mrow></m:math></equation>
+for all <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>,</m:mo><m:mi>y</m:mi><m:mo>,</m:mo><m:mi>z</m:mi><m:mo>∈</m:mo><m:mi>F</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid3">There exists an element in <m:math overflow="scroll"><m:mrow><m:mi>F</m:mi><m:mo>,</m:mo></m:mrow></m:math> which we will denote by <m:math overflow="scroll"><m:mrow><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math>
+that is an identity for addition;
+i.e.,
+<m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>0</m:mn><m:mo>=</m:mo><m:mi>x</m:mi></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mi>F</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid4">There exists a <emphasis effect="bold">nonzero</emphasis> element in <m:math overflow="scroll"><m:mrow><m:mi>F</m:mi><m:mo>,</m:mo></m:mrow></m:math> which we will denote by <m:math overflow="scroll"><m:mrow><m:mn>1</m:mn><m:mo>,</m:mo></m:mrow></m:math>
+that is an identity for multiplication; i.e.,
+<m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>×</m:mo><m:mn>1</m:mn><m:mo>=</m:mo><m:mi>x</m:mi></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mi>F</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid5">If <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mi>F</m:mi><m:mo>,</m:mo></m:mrow></m:math> then there exists a unique element
+<m:math overflow="scroll"><m:mrow><m:mi>y</m:mi><m:mo>∈</m:mo><m:mi>F</m:mi></m:mrow></m:math> such that <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>+</m:mo><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math>
+This element <m:math overflow="scroll"><m:mi>y</m:mi></m:math> is called the <emphasis effect="italics">additive inverse</emphasis> of <m:math overflow="scroll"><m:mi>x</m:mi></m:math>
+and is denoted by <m:math overflow="scroll"><m:mrow><m:mo>-</m:mo><m:mi>x</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid6">If <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mi>F</m:mi></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>≠</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> then there
+exists a unique element <m:math overflow="scroll"><m:mrow><m:mi>y</m:mi><m:mo>∈</m:mo><m:mi>F</m:mi></m:mrow></m:math> such that
+<m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>×</m:mo><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>.</m:mo></m:mrow></m:math>
+This element <m:math overflow="scroll"><m:mi>y</m:mi></m:math> is called the <emphasis effect="italics">multiplicative inverse</emphasis> of <m:math overflow="scroll"><m:mi>x</m:mi></m:math>
+and is denoted by <m:math overflow="scroll"><m:mrow><m:msup><m:mi>x</m:mi><m:mrow><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msup><m:mo>.</m:mo></m:mrow></m:math></item>
+    </list>
+</meaning></definition>
+<rule id="fs-id1168838495450"><label/>
+<statement id="fs-id1168835821061">
+    <para id="id64072"><emphasis effect="bold">REMARK.</emphasis> There are many examples of fields.
+(See <link target-id="eip-82"/>.) They all share certain arithmetic properties, which can be derived from the axioms above. If <m:math overflow="scroll"><m:mi>x</m:mi></m:math> is an element of a field <m:math overflow="scroll"><m:mrow><m:mi>F</m:mi><m:mo>,</m:mo></m:mrow></m:math> then according to one of the axioms above,
+we have that <m:math overflow="scroll"><m:mrow><m:mn>1</m:mn><m:mo>×</m:mo><m:mi>x</m:mi><m:mo>=</m:mo><m:mi>x</m:mi><m:mo>.</m:mo></m:mrow></m:math> (Note that this “1” is the multiplicative identity of the field <m:math overflow="scroll"><m:mi>F</m:mi></m:math> and not the natural number 1.)
+However, it is tempting to write <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>+</m:mo><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>2</m:mn><m:mo>×</m:mo><m:mi>x</m:mi></m:mrow></m:math> in the field <m:math overflow="scroll"><m:mrow><m:mi>F</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+The “2” here is not à priori an element of <m:math overflow="scroll"><m:mrow><m:mi>F</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+so that the equation <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>+</m:mo><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>2</m:mn><m:mo>×</m:mo><m:mi>x</m:mi></m:mrow></m:math> is not really justified.
+This is an example of a situation where a careful recursive definition can be useful.</para>
+</statement></rule>
+<definition id="fs-id1168834780595"><term/>
+<meaning id="fs-id1168851750943">
+    <para id="id64205">If <m:math overflow="scroll"><m:mi>x</m:mi></m:math> is an element of a field <m:math overflow="scroll"><m:mrow><m:mi>F</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+define inductively elements <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>·</m:mo><m:mi>x</m:mi><m:mo>≡</m:mo><m:mi>n</m:mi><m:mi>x</m:mi></m:mrow></m:math> of <m:math overflow="scroll"><m:mi>F</m:mi></m:math> by
+<m:math overflow="scroll"><m:mrow><m:mn>1</m:mn><m:mo>·</m:mo><m:mi>x</m:mi><m:mo>=</m:mo><m:mi>x</m:mi><m:mo>,</m:mo></m:mrow></m:math> and, if <m:math overflow="scroll"><m:mrow><m:mi>k</m:mi><m:mo>·</m:mo><m:mi>x</m:mi></m:mrow></m:math> is defined,
+set <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>k</m:mi><m:mo>+</m:mo><m:mn>1</m:mn><m:mo>)</m:mo><m:mo>·</m:mo><m:mi>x</m:mi><m:mo>=</m:mo><m:mi>x</m:mi><m:mo>+</m:mo><m:mi>k</m:mi><m:mo>·</m:mo><m:mi>x</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+The set <m:math overflow="scroll"><m:mi>S</m:mi></m:math> of all natural numbers <m:math overflow="scroll"><m:mi>n</m:mi></m:math> for which
+<m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>·</m:mo><m:mi>x</m:mi></m:mrow></m:math> is defined is therefore, by the axiom of mathematical induction, all of <m:math overflow="scroll"><m:mrow><m:mi>N</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+</meaning></definition>
+    <para id="id64389">Usually we will write <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mi>x</m:mi></m:mrow></m:math> instead of <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>·</m:mo><m:mi>x</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Of course, <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mi>x</m:mi></m:mrow></m:math> is just the element of <m:math overflow="scroll"><m:mi>F</m:mi></m:math> obtained by adding <m:math overflow="scroll"><m:mi>x</m:mi></m:math> to itself <m:math overflow="scroll"><m:mi>n</m:mi></m:math> times:
+<m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mi>x</m:mi><m:mo>=</m:mo><m:mi>x</m:mi><m:mo>+</m:mo><m:mi>x</m:mi><m:mo>+</m:mo><m:mi>x</m:mi><m:mo>+</m:mo><m:mo>...</m:mo><m:mo>+</m:mo><m:mi>x</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+    
+    <exercise id="eip-82"><problem id="eip-73">
+
+ <list id="id64502" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid7"> Justify for yourself that the set <m:math overflow="scroll"><m:mi>Q</m:mi></m:math> of all
+rational numbers is a field.
+That is, carefully verify that all six of the axioms hold.
+</item>
+      <item id="uid8"> Let <m:math overflow="scroll"><m:msub><m:mi>F</m:mi><m:mn>7</m:mn></m:msub></m:math> denote the seven elements
+<m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>1</m:mn><m:mo>,</m:mo><m:mn>2</m:mn><m:mo>,</m:mo><m:mn>3</m:mn><m:mo>,</m:mo><m:mn>4</m:mn><m:mo>,</m:mo><m:mn>5</m:mn><m:mo>,</m:mo><m:mn>6</m:mn><m:mo>}</m:mo><m:mo>.</m:mo></m:mrow></m:math> Define addition and multiplication on <m:math overflow="scroll"><m:msub><m:mi>F</m:mi><m:mn>7</m:mn></m:msub></m:math>
+as ordinary addition and multiplication mod 7.
+Prove that <m:math overflow="scroll"><m:msub><m:mi>F</m:mi><m:mn>7</m:mn></m:msub></m:math> is a field.
+(You may assume that axioms (1) and (2) hold.
+Check only conditions (3)–(6).)
+Show in addition that <m:math overflow="scroll"><m:mrow><m:mn>7</m:mn><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math> for every <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:msub><m:mi>F</m:mi><m:mn>7</m:mn></m:msub><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid9"> Let <m:math overflow="scroll"><m:msub><m:mi>F</m:mi><m:mn>9</m:mn></m:msub></m:math> denote the set consisting of the nine
+elements <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>1</m:mn><m:mo>,</m:mo><m:mn>2</m:mn><m:mo>,</m:mo><m:mn>3</m:mn><m:mo>,</m:mo><m:mn>4</m:mn><m:mo>,</m:mo><m:mn>5</m:mn><m:mo>,</m:mo><m:mn>6</m:mn><m:mo>,</m:mo><m:mn>7</m:mn><m:mo>,</m:mo><m:mn>8</m:mn><m:mo>}</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Define addition and multiplication on <m:math overflow="scroll"><m:msub><m:mi>F</m:mi><m:mn>9</m:mn></m:msub></m:math> to be ordinary addition
+and multiplication mod 9. Show that <m:math overflow="scroll"><m:msub><m:mi>F</m:mi><m:mn>9</m:mn></m:msub></m:math> is not a field.
+Which of the axioms fail to hold?
+</item>
+      <item id="uid10"> Show that the set <m:math overflow="scroll"><m:mi>N</m:mi></m:math> of natural numbers is not a field.
+Which of the field axioms fail to hold?
+Show that the set <m:math overflow="scroll"><m:mi>Z</m:mi></m:math> of all integers is not a field.
+Which of the field axioms fail to hold?
+</item>
+    </list>
+</problem>
+</exercise>
+    
+    <exercise id="eip-713"><problem id="eip-111">
+  <para id="eip-471">Let <m:math overflow="scroll"><m:mi>F</m:mi></m:math> be any field. Verify that the
+following arithmetic properties hold in <m:math overflow="scroll"><m:mrow><m:mi>F</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+<list id="id64853" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid11"> <m:math overflow="scroll"><m:mrow><m:mn>0</m:mn><m:mo>×</m:mo><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mi>F</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+HINT: Use the distributive law and the fact that <m:math overflow="scroll"><m:mrow><m:mn>0</m:mn><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>+</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid12"> If <m:math overflow="scroll"><m:mi>x</m:mi></m:math> and <m:math overflow="scroll"><m:mi>y</m:mi></m:math> are nonzero elements of <m:math overflow="scroll"><m:mrow><m:mi>F</m:mi><m:mo>,</m:mo></m:mrow></m:math> then
+<m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>×</m:mo><m:mi>y</m:mi></m:mrow></m:math> is nonzero.
+And, the multiplicative inverse of <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>×</m:mo><m:mi>y</m:mi></m:mrow></m:math> satisfies <m:math overflow="scroll"><m:mrow><m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>×</m:mo><m:mi>y</m:mi><m:mo>)</m:mo></m:mrow><m:mrow><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msup><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mrow><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msup><m:mo>×</m:mo><m:msup><m:mi>y</m:mi><m:mrow><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msup><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid13"> <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mo>-</m:mo><m:mn>1</m:mn><m:mo>)</m:mo><m:mo>×</m:mo><m:mi>x</m:mi><m:mo>=</m:mo><m:mo>(</m:mo><m:mo>-</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mi>F</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid14"> <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mo>-</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>×</m:mo><m:mo>(</m:mo><m:mo>-</m:mo><m:mi>y</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mi>x</m:mi><m:mo>×</m:mo><m:mi>y</m:mi></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>,</m:mo><m:mi>y</m:mi><m:mo>∈</m:mo><m:mi>F</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid15"> <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>×</m:mo><m:mi>x</m:mi><m:mo>-</m:mo><m:mi>y</m:mi><m:mo>×</m:mo><m:mi>y</m:mi><m:mo>=</m:mo><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>-</m:mo><m:mi>y</m:mi><m:mo>)</m:mo><m:mo>×</m:mo><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>+</m:mo><m:mi>y</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid16"> <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>+</m:mo><m:mi>y</m:mi><m:mo>)</m:mo><m:mo>×</m:mo><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>+</m:mo><m:mi>y</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mi>x</m:mi><m:mo>×</m:mo><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>2</m:mn><m:mo>·</m:mo><m:mi>x</m:mi><m:mo>×</m:mo><m:mi>y</m:mi><m:mo>+</m:mo><m:mi>y</m:mi><m:mo>×</m:mo><m:mi>y</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+    </list>
+</problem></exercise>
+<definition id="fs-id1170340938548"><term/>
+<meaning id="fs-id1170346954998">
+    <para id="id65318">Let <m:math overflow="scroll"><m:mi>F</m:mi></m:math> be a field, and let
+<m:math overflow="scroll"><m:mi>x</m:mi></m:math> be a nonzero element of <m:math overflow="scroll"><m:mrow><m:mi>F</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+    <para id="id65354">For each natural number <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>,</m:mo></m:mrow></m:math> we define inductively an
+element <m:math overflow="scroll"><m:msup><m:mi>x</m:mi><m:mi>n</m:mi></m:msup></m:math> in <m:math overflow="scroll"><m:mi>F</m:mi></m:math> as follows:
+<m:math overflow="scroll"><m:mrow><m:msup><m:mi>x</m:mi><m:mn>1</m:mn></m:msup><m:mo>=</m:mo><m:mi>x</m:mi><m:mo>,</m:mo></m:mrow></m:math> and, if <m:math overflow="scroll"><m:msup><m:mi>x</m:mi><m:mi>k</m:mi></m:msup></m:math> is defined, set <m:math overflow="scroll"><m:mrow><m:msup><m:mi>x</m:mi><m:mrow><m:mi>k</m:mi><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow></m:msup><m:mo>=</m:mo><m:mi>x</m:mi><m:mo>×</m:mo><m:msup><m:mi>x</m:mi><m:mi>k</m:mi></m:msup><m:mo>.</m:mo></m:mrow></m:math>
+Of course, <m:math overflow="scroll"><m:msup><m:mi>x</m:mi><m:mi>n</m:mi></m:msup></m:math> is just the product of <m:math overflow="scroll"><m:mi>n</m:mi></m:math><m:math overflow="scroll"><m:mi>x</m:mi></m:math>'s.</para>
+    <para id="id65498">Define <m:math overflow="scroll"><m:msup><m:mi>x</m:mi><m:mn>0</m:mn></m:msup></m:math> to be <m:math overflow="scroll"><m:mrow><m:mn>1</m:mn><m:mo>.</m:mo></m:mrow></m:math></para>
+    <para id="id65526">For each natural number <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>,</m:mo></m:mrow></m:math> define <m:math overflow="scroll"><m:msup><m:mi>x</m:mi><m:mrow><m:mo>-</m:mo><m:mi>n</m:mi></m:mrow></m:msup></m:math> to be the multiplicative inverse <m:math overflow="scroll"><m:msup><m:mrow><m:mo>(</m:mo><m:msup><m:mi>x</m:mi><m:mi>n</m:mi></m:msup><m:mo>)</m:mo></m:mrow><m:mrow><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msup></m:math> of the element <m:math overflow="scroll"><m:mrow><m:msup><m:mi>x</m:mi><m:mi>n</m:mi></m:msup><m:mo>.</m:mo></m:mrow></m:math></para>
+    <para id="id65603">Finally, we define <m:math overflow="scroll"><m:msup><m:mn>0</m:mn><m:mi>m</m:mi></m:msup></m:math> to be 0 for every positive integer <m:math overflow="scroll"><m:mrow><m:mi>m</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+and we leave <m:math overflow="scroll"><m:msup><m:mn>0</m:mn><m:mrow><m:mo>-</m:mo><m:mi>n</m:mi></m:mrow></m:msup></m:math> and <m:math overflow="scroll"><m:msup><m:mn>0</m:mn><m:mn>0</m:mn></m:msup></m:math> undefined.</para>
+</meaning></definition>
+    <para id="id65664">We have therefore defined <m:math overflow="scroll"><m:msup><m:mi>x</m:mi><m:mi>m</m:mi></m:msup></m:math> for every nonzero <m:math overflow="scroll"><m:mi>x</m:mi></m:math> and every integer <m:math overflow="scroll"><m:mrow><m:mi>m</m:mi><m:mo>∈</m:mo><m:mi>Z</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+    
+<exercise id="fs-id1170736173656">
+<problem id="fs-id1170737900357">
+<para id="fs-id1166090764977">Let <m:math overflow="scroll"><m:mi>F</m:mi></m:math> be a field.
+Derive the following laws of exponents:</para>
+    <list id="id65731" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid17"> <m:math overflow="scroll"><m:mrow><m:msup><m:mi>x</m:mi><m:mrow><m:mi>n</m:mi><m:mo>+</m:mo><m:mi>m</m:mi></m:mrow></m:msup><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mi>n</m:mi></m:msup><m:mo>×</m:mo><m:msup><m:mi>x</m:mi><m:mi>m</m:mi></m:msup></m:mrow></m:math> for all
+nonzero elements <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mi>F</m:mi></m:mrow></m:math> and all integers <m:math overflow="scroll"><m:mi>n</m:mi></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>m</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+HINT: Fix <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mi>F</m:mi></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>m</m:mi><m:mo>∈</m:mo><m:mi>Z</m:mi></m:mrow></m:math> and use induction
+to derive this law for all natural numbers <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Then use the fact that in any field <m:math overflow="scroll"><m:mrow><m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>×</m:mo><m:mi>y</m:mi><m:mo>)</m:mo></m:mrow><m:mrow><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msup><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mrow><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msup><m:mo>×</m:mo><m:msup><m:mi>y</m:mi><m:mrow><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msup><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid18"> <m:math overflow="scroll"><m:mrow><m:msup><m:mi>x</m:mi><m:mrow><m:mi>n</m:mi><m:mo>×</m:mo><m:mi>m</m:mi></m:mrow></m:msup><m:mo>=</m:mo><m:msup><m:mrow><m:mo>(</m:mo><m:msup><m:mi>x</m:mi><m:mi>m</m:mi></m:msup><m:mo>)</m:mo></m:mrow><m:mi>n</m:mi></m:msup></m:mrow></m:math> for all nonzero <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mi>F</m:mi></m:mrow></m:math>
+and all <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>,</m:mo><m:mi>m</m:mi><m:mo>∈</m:mo><m:mi>Z</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid19"> <m:math overflow="scroll"><m:mrow><m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>×</m:mo><m:mi>y</m:mi><m:mo>)</m:mo></m:mrow><m:mi>n</m:mi></m:msup><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mi>n</m:mi></m:msup><m:mo>×</m:mo><m:msup><m:mi>y</m:mi><m:mi>n</m:mi></m:msup></m:mrow></m:math> for all nonzero <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>,</m:mo><m:mi>y</m:mi><m:mo>∈</m:mo><m:mi>F</m:mi></m:mrow></m:math>
+and all <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>∈</m:mo><m:mi>Z</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+    </list>
+</problem>
+</exercise>
+
+    <para id="id66125">From now on, we will indicate multiplication in a field
+by juxtaposition; i.e., <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>×</m:mo><m:mi>y</m:mi></m:mrow></m:math> will be denoted simply as <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mi>y</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Also, we will use the standard fractional notation to indicate
+multiplicative inverses. For instance,</para>
+    <equation id="id66159">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mi>x</m:mi>
+          <m:msup>
+            <m:mi>y</m:mi>
+            <m:mrow>
+              <m:mo>-</m:mo>
+              <m:mn>1</m:mn>
+            </m:mrow>
+          </m:msup>
+          <m:mo>=</m:mo>
+          <m:mi>x</m:mi>
+          <m:mfrac>
+            <m:mn>1</m:mn>
+            <m:mi>y</m:mi>
+          </m:mfrac>
+          <m:mo>=</m:mo>
+          <m:mfrac>
+            <m:mi>x</m:mi>
+            <m:mi>y</m:mi>
+          </m:mfrac>
+          <m:mo>.</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <!--empty paragraphs get left behind.-->
+  </content>
+</document>

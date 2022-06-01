@@ -1,0 +1,49 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML">
+  <title>The Fundamental Theorem of Algebra, and the Fundamental Theorem of Analysis</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m36234</md:content-id>
+  <md:title>The Fundamental Theorem of Algebra, and the Fundamental Theorem of Analysis</md:title>
+  <md:abstract>An introduction to the fundamental theorem of algebra, with links to important theorems on the topic.</md:abstract>
+  <md:uuid>3f373e52-7334-493b-9e70-55876e721b36</md:uuid>
+</metadata>
+
+<content>
+    <para id="id62155">In this chapter we will discover the
+incredible difference between the analysis of functions
+of a single complex variable as opposed to functions of a single
+real variable.
+Up to this point, in some sense, we have treated them as being
+quite similar subjects, whereas in fact
+they are extremely different in character.
+Indeed, if <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is a differentiable function of a complex variable on an open set <m:math overflow="scroll"><m:mrow><m:mi>U</m:mi><m:mo>⊆</m:mo><m:mi>C</m:mi><m:mo>,</m:mo></m:mrow></m:math> then
+we will see that <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is actually expandable in a Taylor series around every point in <m:math overflow="scroll"><m:mrow><m:mi>U</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+In particular, a function <m:math overflow="scroll"><m:mi>f</m:mi></m:math>of a complex variable is guaranteed to have infinitely many derivatives on <m:math overflow="scroll"><m:mi>U</m:mi></m:math> if it merely has the first one on <m:math overflow="scroll"><m:mrow><m:mi>U</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+This is in marked contrast with functions of a real variable.
+See part (3) of <link target-id="fs-id7582339" document="m36192"/>.</para>
+    <para id="id62582">The main points of this chapter are:</para>
+    <list id="id62585" display="block" list-type="enumerated"><item id="uid1"><emphasis effect="bold">The Cauchy-Riemann Equations</emphasis> (<link target-id="fs-id1170810388270" document="m36235"/>),
+</item>
+      <item id="uid2"><emphasis effect="bold">Cauchy's Theorem</emphasis> (<link target-id="fs-id1170827240654" document="m36235"/>),
+</item>
+      <item id="uid3"><emphasis effect="bold">Cauchy Integral Formula</emphasis> (<link target-id="fs-id1170819963435" document="m36235"/>),
+</item>
+      <item id="uid4"><emphasis effect="bold">A complex-valued function that is differentiable on an open set is expandable in a Taylor series around each point of the set</emphasis> (<link target-id="fs-id1167472693549" document="m36237"/>),
+</item>
+      <item id="uid5"><emphasis effect="bold">The Identity Theorem</emphasis> (<link target-id="fs-id1853397" document="m36237"/>),
+</item>
+      <item id="uid6"><emphasis effect="bold">The Fundamental Theorem of Algebra</emphasis> (<link target-id="fs-id1172549276378" document="m36238"/>),
+</item>
+      <item id="uid7"><emphasis effect="bold">Liouville's Theorem</emphasis> (<link target-id="fs-id1172552488682" document="m36238"/>),
+</item>
+      <item id="uid8"><emphasis effect="bold">The Maximum Modulus Principle</emphasis> (corollary to <link target-id="fs-id1172068491562" document="m36239"/>),
+</item>
+      <item id="uid9"><emphasis effect="bold">The Open Mapping Theorem</emphasis> (<link target-id="fs-id1167524484222" document="m36240"/>),
+</item>
+      <item id="uid10"><emphasis effect="bold">The uniform limit of analytic functions is analytic</emphasis> (<link target-id="fs-id1167522586798" document="m36241"/>), and
+</item>
+      <item id="uid11"><emphasis effect="bold">The Residue Theorem</emphasis> (<link target-id="fs-id1165909735907" document="m36242"/>).
+</item>
+    </list>
+    <!--empty paragraphs get left behind.-->
+  </content>
+</document>

@@ -1,0 +1,874 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML">
+  <title>The General Binomial Theorem</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m36205</md:content-id>
+  <md:title>The General Binomial Theorem</md:title>
+  <md:abstract>We use Taylor's Remainder Theorem to derive a generalization of the Binomial
+Theorem to nonintegral exponents. First we must generalize the definition of binomial coefficient.</md:abstract>
+  <md:uuid>508ac0c7-babb-4db4-b880-866b660f11b4</md:uuid>
+</metadata>
+
+<content>
+    <para id="id313619">We use Taylor's Remainder Theorem to derive a generalization of the Binomial
+Theorem to nonintegral exponents. First we must generalize the definition of binomial coefficient.</para>
+<definition id="fs-id1164051405046"><term/><meaning id="fs-id1164065750502">
+    <para id="id313626"> Let <m:math overflow="scroll"><m:mi>α</m:mi></m:math> be a complex number,
+and let <m:math overflow="scroll"><m:mi>k</m:mi></m:math> be a nonnegative integer.
+We define the general <emphasis effect="italics">binomial coefficient</emphasis><m:math overflow="scroll"><m:mfenced separators="" open="(" close=")"><m:mfrac linethickness="0pt"><m:mi>α</m:mi><m:mi>k</m:mi></m:mfrac></m:mfenced></m:math> by</para>
+    <equation id="id314014">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mfenced separators="" open="(" close=")">
+            <m:mfrac linethickness="0pt">
+              <m:mi>α</m:mi>
+              <m:mi>k</m:mi>
+            </m:mfrac>
+          </m:mfenced>
+          <m:mo>=</m:mo>
+          <m:mfrac>
+            <m:mrow>
+              <m:mi>α</m:mi>
+              <m:mo>(</m:mo>
+              <m:mi>α</m:mi>
+              <m:mo>-</m:mo>
+              <m:mn>1</m:mn>
+              <m:mo>)</m:mo>
+              <m:mo>...</m:mo>
+              <m:mo>(</m:mo>
+              <m:mi>α</m:mi>
+              <m:mo>-</m:mo>
+              <m:mi>k</m:mi>
+              <m:mo>+</m:mo>
+              <m:mn>1</m:mn>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mrow>
+              <m:mi>k</m:mi>
+              <m:mo>!</m:mo>
+            </m:mrow>
+          </m:mfrac>
+          <m:mo>.</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id314081">If <m:math overflow="scroll"><m:mi>α</m:mi></m:math> is itself a positive integer and <m:math overflow="scroll"><m:mrow><m:mi>k</m:mi><m:mo>≤</m:mo><m:mi>α</m:mi><m:mo>,</m:mo></m:mrow></m:math> then <m:math overflow="scroll"><m:mfenced separators="" open="(" close=")"><m:mfrac linethickness="0pt"><m:mi>α</m:mi><m:mi>k</m:mi></m:mfrac></m:mfenced></m:math> agrees
+with the earlier definition of the binomial coefficient,
+and <m:math overflow="scroll"><m:mrow><m:mfenced separators="" open="(" close=")"><m:mfrac linethickness="0pt"><m:mi>α</m:mi><m:mi>k</m:mi></m:mfrac></m:mfenced><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math>
+when <m:math overflow="scroll"><m:mrow><m:mi>k</m:mi><m:mo>&gt;</m:mo><m:mi>α</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+However, if <m:math overflow="scroll"><m:mi>α</m:mi></m:math> is not an integer, but just an arbitrary complex number, then every <m:math overflow="scroll"><m:mrow><m:mfenced separators="" open="(" close=")"><m:mfrac linethickness="0pt"><m:mi>α</m:mi><m:mi>k</m:mi></m:mfrac></m:mfenced><m:mo>≠</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math></para>
+</meaning></definition>
+<exercise id="fs-id1164057564178"><problem id="fs-id1164051592042">
+    <para id="id314206"> Estimates for the size of binomial coefficients.
+Let <m:math overflow="scroll"><m:mi>α</m:mi></m:math> be a fixed complex number.</para>
+    <list id="id314226" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid1"> Show that
+<equation id="id314241"><m:math overflow="scroll" mode="display"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:mfenced separators="" open="(" close=")"><m:mfrac linethickness="0pt"><m:mi>α</m:mi><m:mi>k</m:mi></m:mfrac></m:mfenced><m:mrow><m:mo>|</m:mo><m:mo>≤</m:mo></m:mrow><m:munderover><m:mo>∏</m:mo><m:mrow><m:mi>j</m:mi><m:mo>=</m:mo><m:mn>1</m:mn></m:mrow><m:mi>k</m:mi></m:munderover><m:mrow><m:mo>(</m:mo><m:mn>1</m:mn><m:mo>+</m:mo><m:mfrac><m:mrow><m:mo>|</m:mo><m:mi>α</m:mi><m:mo>|</m:mo></m:mrow><m:mi>j</m:mi></m:mfrac><m:mo>)</m:mo></m:mrow></m:mrow></m:math></equation>
+for all nonnegative integers <m:math overflow="scroll"><m:mrow><m:mi>k</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+HINT: Note that
+<equation id="id314332"><m:math overflow="scroll" mode="display"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:mfenced separators="" open="(" close=")"><m:mfrac linethickness="0pt"><m:mi>α</m:mi><m:mi>k</m:mi></m:mfrac></m:mfenced><m:mrow><m:mo>|</m:mo><m:mo>≤</m:mo></m:mrow><m:mfrac><m:mrow><m:mo>|</m:mo><m:mi>α</m:mi><m:mo>|</m:mo><m:mo>(</m:mo><m:mo>|</m:mo><m:mi>a</m:mi><m:mi>l</m:mi><m:mi>p</m:mi><m:mi>h</m:mi><m:mi>a</m:mi><m:mo>|</m:mo><m:mo>+</m:mo><m:mn>1</m:mn><m:mo>)</m:mo><m:mo>(</m:mo><m:mo>|</m:mo><m:mi>a</m:mi><m:mi>l</m:mi><m:mi>p</m:mi><m:mi>h</m:mi><m:mi>a</m:mi><m:mo>|</m:mo><m:mo>+</m:mo><m:mn>2</m:mn><m:mo>)</m:mo><m:mo>...</m:mo><m:mo>(</m:mo><m:mo>|</m:mo><m:mi>α</m:mi><m:mo>|</m:mo><m:mo>+</m:mo><m:mi>k</m:mi><m:mo>-</m:mo><m:mn>1</m:mn><m:mo>)</m:mo></m:mrow><m:mrow><m:mi>k</m:mi><m:mo>!</m:mo></m:mrow></m:mfrac><m:mo>.</m:mo></m:mrow></m:math></equation></item>
+      <item id="uid2"> Use part (a) to prove that there exists a constant <m:math overflow="scroll"><m:mi>C</m:mi></m:math> such that
+<equation id="id314649"><m:math overflow="scroll" mode="display"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:mfenced separators="" open="(" close=")"><m:mfrac linethickness="0pt"><m:mi>α</m:mi><m:mi>k</m:mi></m:mfrac></m:mfenced><m:mrow><m:mo>|</m:mo><m:mo>≤</m:mo><m:mi>C</m:mi></m:mrow><m:msup><m:mn>2</m:mn><m:mi>k</m:mi></m:msup></m:mrow></m:math></equation>
+for all nonnegative integers <m:math overflow="scroll"><m:mrow><m:mi>k</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+HINT: Note that <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mn>1</m:mn><m:mo>+</m:mo><m:mo>|</m:mo><m:mi>α</m:mi><m:mo>|</m:mo><m:mo>/</m:mo><m:mi>j</m:mi><m:mo>)</m:mo><m:mo>&lt;</m:mo><m:mn>2</m:mn></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>j</m:mi><m:mo>&gt;</m:mo><m:mo>|</m:mo><m:mi>α</m:mi><m:mo>|</m:mo><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid3"> Show in fact that for each <m:math overflow="scroll"><m:mrow><m:mi>ϵ</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn></m:mrow></m:math> there exists
+a constant <m:math overflow="scroll"><m:msub><m:mi>C</m:mi><m:mi>ϵ</m:mi></m:msub></m:math> such that
+<equation id="id314798"><m:math overflow="scroll" mode="display"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:mfenced separators="" open="(" close=")"><m:mfrac linethickness="0pt"><m:mi>α</m:mi><m:mi>k</m:mi></m:mfrac></m:mfenced><m:mrow><m:mo>|</m:mo><m:mo>≤</m:mo></m:mrow><m:msub><m:mi>C</m:mi><m:mi>ϵ</m:mi></m:msub><m:msup><m:mrow><m:mo>(</m:mo><m:mn>1</m:mn><m:mo>+</m:mo><m:mi>ϵ</m:mi><m:mo>)</m:mo></m:mrow><m:mi>k</m:mi></m:msup></m:mrow></m:math></equation>
+for all nonnegative integers <m:math overflow="scroll"><m:mrow><m:mi>k</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid4"> Let <m:math overflow="scroll"><m:mrow><m:mi>h</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:math> be the power series function
+given by <m:math overflow="scroll"><m:mrow><m:mi>h</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msubsup><m:mo>∑</m:mo><m:mrow><m:mi>k</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow><m:mi>∞</m:mi></m:msubsup><m:mfenced separators="" open="(" close=")"><m:mfrac linethickness="0pt"><m:mi>α</m:mi><m:mi>k</m:mi></m:mfrac></m:mfenced><m:msup><m:mi>t</m:mi><m:mi>k</m:mi></m:msup><m:mo>.</m:mo></m:mrow></m:math>
+Use the ratio test to show that the radius of convergence for <m:math overflow="scroll"><m:mi>h</m:mi></m:math> equals 1.
+</item>
+    </list>
+</problem></exercise>
+<rule id="fs-id1164059879290"><label/><statement id="fs-id1164054705120">
+    <para id="id314967"><emphasis effect="bold">REMARK</emphasis>
+The general Binomial Theorem, if there is one, should be something like the following:</para>
+    <equation id="id314975">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:msup>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>x</m:mi>
+              <m:mo>+</m:mo>
+              <m:mi>y</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mi>α</m:mi>
+          </m:msup>
+          <m:mo>=</m:mo>
+          <m:munderover>
+            <m:mo>∑</m:mo>
+            <m:mrow>
+              <m:mi>k</m:mi>
+              <m:mo>=</m:mo>
+              <m:mn>0</m:mn>
+            </m:mrow>
+            <m:mi>∞</m:mi>
+          </m:munderover>
+          <m:mfenced separators="" open="(" close=")">
+            <m:mfrac linethickness="0pt">
+              <m:mi>α</m:mi>
+              <m:mi>k</m:mi>
+            </m:mfrac>
+          </m:mfenced>
+          <m:msup>
+            <m:mi>x</m:mi>
+            <m:mrow>
+              <m:mi>α</m:mi>
+              <m:mo>-</m:mo>
+              <m:mi>k</m:mi>
+            </m:mrow>
+          </m:msup>
+          <m:msup>
+            <m:mi>y</m:mi>
+            <m:mi>k</m:mi>
+          </m:msup>
+          <m:mo>.</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id315057">The problem is to determine when this infinite series converges, i.e., for what
+values of the three variables <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>,</m:mo><m:mi>y</m:mi><m:mo>,</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mi>α</m:mi></m:math>
+does it converge.
+It certainly is correct if <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> so we may as well assume that <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>≠</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math>
+in which case we are considering the validity of the formula</para>
+    <equation id="id315118">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:msup>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>x</m:mi>
+              <m:mo>+</m:mo>
+              <m:mi>y</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mi>α</m:mi>
+          </m:msup>
+          <m:mo>=</m:mo>
+          <m:msup>
+            <m:mi>x</m:mi>
+            <m:mi>α</m:mi>
+          </m:msup>
+          <m:msup>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mn>1</m:mn>
+              <m:mo>+</m:mo>
+              <m:mi>t</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mi>α</m:mi>
+          </m:msup>
+          <m:mo>=</m:mo>
+          <m:msup>
+            <m:mi>x</m:mi>
+            <m:mi>α</m:mi>
+          </m:msup>
+          <m:munderover>
+            <m:mo>∑</m:mo>
+            <m:mrow>
+              <m:mi>k</m:mi>
+              <m:mo>=</m:mo>
+              <m:mn>0</m:mn>
+            </m:mrow>
+            <m:mi>∞</m:mi>
+          </m:munderover>
+          <m:mfenced separators="" open="(" close=")">
+            <m:mfrac linethickness="0pt">
+              <m:mi>α</m:mi>
+              <m:mi>k</m:mi>
+            </m:mfrac>
+          </m:mfenced>
+          <m:msup>
+            <m:mi>t</m:mi>
+            <m:mi>k</m:mi>
+          </m:msup>
+          <m:mo>,</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id315221">where <m:math overflow="scroll"><m:mrow><m:mi>t</m:mi><m:mo>=</m:mo><m:mi>y</m:mi><m:mo>/</m:mo><m:mi>x</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Therefore, it will suffice to determine for what values of <m:math overflow="scroll"><m:mi>t</m:mi></m:math> and <m:math overflow="scroll"><m:mi>α</m:mi></m:math> does the infinite series</para>
+    <equation id="id315263">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:munderover>
+            <m:mo>∑</m:mo>
+            <m:mrow>
+              <m:mi>k</m:mi>
+              <m:mo>=</m:mo>
+              <m:mn>0</m:mn>
+            </m:mrow>
+            <m:mi>∞</m:mi>
+          </m:munderover>
+          <m:mfenced separators="" open="(" close=")">
+            <m:mfrac linethickness="0pt">
+              <m:mi>α</m:mi>
+              <m:mi>k</m:mi>
+            </m:mfrac>
+          </m:mfenced>
+          <m:msup>
+            <m:mi>t</m:mi>
+            <m:mi>k</m:mi>
+          </m:msup>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id315310">equal</para>
+    <equation id="id315316">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:msup>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mn>1</m:mn>
+              <m:mo>+</m:mo>
+              <m:mi>t</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mi>α</m:mi>
+          </m:msup>
+          <m:mo>.</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id315344">The answer is that, for n arbitrary complex number <m:math overflow="scroll"><m:mrow><m:mi>α</m:mi><m:mo>,</m:mo></m:mrow></m:math> this series converges to the correct value for all <m:math overflow="scroll"><m:mrow><m:mi>t</m:mi><m:mo>∈</m:mo><m:mo>(</m:mo><m:mo>-</m:mo><m:mn>1</m:mn><m:mo>,</m:mo><m:mn>1</m:mn><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+(Of course, <m:math overflow="scroll"><m:mi>t</m:mi></m:math> must be larger than <m:math overflow="scroll"><m:mrow><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:math> for the expression <m:math overflow="scroll"><m:msup><m:mrow><m:mo>(</m:mo><m:mn>1</m:mn><m:mo>+</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mi>α</m:mi></m:msup></m:math> even to be defined.)
+However, the next theorem only establishes this equality for <m:math overflow="scroll"><m:mi>t</m:mi></m:math>'s in the subinterval <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mo>-</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mn>2</m:mn><m:mo>,</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mn>2</m:mn><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+As mentioned earlier, its proof is based on Taylor's Remainder Theorem.
+We must postpone the complete proof to <link document="m36207"/>,
+where we will have a better version of Taylor's Theorem.</para>
+</statement></rule>
+<rule id="fs-id1164059448103" type="theorem"><statement id="fs-id1164053100693">
+    <para id="id315469">
+Let <m:math overflow="scroll"><m:mrow><m:mi>α</m:mi><m:mo>=</m:mo><m:mi>a</m:mi><m:mo>+</m:mo><m:mi>b</m:mi><m:mi>i</m:mi></m:mrow></m:math> be a fixed complex number. Then</para>
+    <equation id="id315496">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:msup>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mn>1</m:mn>
+              <m:mo>+</m:mo>
+              <m:mi>t</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mi>α</m:mi>
+          </m:msup>
+          <m:mo>=</m:mo>
+          <m:munderover>
+            <m:mo>∑</m:mo>
+            <m:mrow>
+              <m:mi>k</m:mi>
+              <m:mo>=</m:mo>
+              <m:mn>0</m:mn>
+            </m:mrow>
+            <m:mi>∞</m:mi>
+          </m:munderover>
+          <m:mfenced separators="" open="(" close=")">
+            <m:mfrac linethickness="0pt">
+              <m:mi>α</m:mi>
+              <m:mi>k</m:mi>
+            </m:mfrac>
+          </m:mfenced>
+          <m:msup>
+            <m:mi>t</m:mi>
+            <m:mi>k</m:mi>
+          </m:msup>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id315563">for all <m:math overflow="scroll"><m:mrow><m:mi>t</m:mi><m:mo>∈</m:mo><m:mo>(</m:mo><m:mo>-</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mn>2</m:mn><m:mo>,</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mn>2</m:mn><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math></para>
+</statement>
+<proof id="fs-id1164061846473">
+    <para id="id315602">Of course, this theorem is true if <m:math overflow="scroll"><m:mi>α</m:mi></m:math> is a nonnegative integer,
+for it is then just the original Binomial Theorem,
+and in fact in that case it holds for every complex number <m:math overflow="scroll"><m:mrow><m:mi>t</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+For a general complex number <m:math overflow="scroll"><m:mrow><m:mi>α</m:mi><m:mo>,</m:mo></m:mrow></m:math> we have only
+defined <m:math overflow="scroll"><m:msup><m:mi>x</m:mi><m:mi>α</m:mi></m:msup></m:math> for positive <m:math overflow="scroll"><m:mi>x</m:mi></m:math>'s,
+so that <m:math overflow="scroll"><m:msup><m:mrow><m:mo>(</m:mo><m:mn>1</m:mn><m:mo>+</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mi>α</m:mi></m:msup></m:math> is not even defined for <m:math overflow="scroll"><m:mrow><m:mi>t</m:mi><m:mo>&lt;</m:mo><m:mo>-</m:mo><m:mn>1</m:mn><m:mo>.</m:mo></m:mrow></m:math></para>
+    <para id="id315701">Now, for a general <m:math overflow="scroll"><m:mrow><m:mi>α</m:mi><m:mo>=</m:mo><m:mi>a</m:mi><m:mo>+</m:mo><m:mi>b</m:mi><m:mi>i</m:mi><m:mo>,</m:mo></m:mrow></m:math> consider the function <m:math overflow="scroll"><m:mrow><m:mi>g</m:mi><m:mo>:</m:mo><m:mo>(</m:mo><m:mo>-</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mn>2</m:mn><m:mo>,</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mn>2</m:mn><m:mo>)</m:mo><m:mo>→</m:mo><m:mi>C</m:mi></m:mrow></m:math> defined by
+<m:math overflow="scroll"><m:mrow><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mrow><m:mo>(</m:mo><m:mn>1</m:mn><m:mo>+</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mi>α</m:mi></m:msup><m:mo>.</m:mo></m:mrow></m:math> Observe that the <m:math overflow="scroll"><m:mi>n</m:mi></m:math>th derivative of <m:math overflow="scroll"><m:mi>g</m:mi></m:math> is given by</para>
+    <equation id="id315826">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:msup>
+            <m:mi>g</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>n</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+          </m:msup>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>t</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>=</m:mo>
+          <m:mfrac>
+            <m:mrow>
+              <m:mi>α</m:mi>
+              <m:mo>(</m:mo>
+              <m:mi>α</m:mi>
+              <m:mo>-</m:mo>
+              <m:mn>1</m:mn>
+              <m:mo>)</m:mo>
+              <m:mo>...</m:mo>
+              <m:mo>(</m:mo>
+              <m:mi>α</m:mi>
+              <m:mo>-</m:mo>
+              <m:mi>n</m:mi>
+              <m:mo>+</m:mo>
+              <m:mn>1</m:mn>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:msup>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mn>1</m:mn>
+                <m:mo>+</m:mo>
+                <m:mi>t</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:mrow>
+                <m:mi>n</m:mi>
+                <m:mo>-</m:mo>
+                <m:mi>α</m:mi>
+              </m:mrow>
+            </m:msup>
+          </m:mfrac>
+          <m:mo>.</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id315916">Then <m:math overflow="scroll"><m:mrow><m:mi>g</m:mi><m:mo>∈</m:mo><m:msup><m:mi>C</m:mi><m:mi>∞</m:mi></m:msup><m:mrow><m:mo>(</m:mo><m:mrow><m:mo>(</m:mo><m:mo>-</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mn>2</m:mn><m:mo>,</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mn>2</m:mn><m:mo>)</m:mo></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math>
+(Of course, <m:math overflow="scroll"><m:mi>g</m:mi></m:math> is actually in <m:math overflow="scroll"><m:mrow><m:msup><m:mi>C</m:mi><m:mi>∞</m:mi></m:msup><m:mrow><m:mo>(</m:mo><m:mo>-</m:mo><m:mn>1</m:mn><m:mo>,</m:mo><m:mn>1</m:mn><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> but the present
+theorem is only concerned with <m:math overflow="scroll"><m:mi>t</m:mi></m:math>'s in <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mo>-</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mn>2</m:mn><m:mo>,</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mn>2</m:mn><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>)</para>
+    <para id="id316053">For each nonnegative integer <m:math overflow="scroll"><m:mi>k</m:mi></m:math> define</para>
+    <equation id="id316065">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:msub>
+            <m:mi>a</m:mi>
+            <m:mi>k</m:mi>
+          </m:msub>
+          <m:mo>=</m:mo>
+          <m:msup>
+            <m:mi>g</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>k</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+          </m:msup>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mn>0</m:mn>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>/</m:mo>
+          <m:mi>k</m:mi>
+          <m:mo>!</m:mo>
+          <m:mo>=</m:mo>
+          <m:mfrac>
+            <m:mrow>
+              <m:mi>α</m:mi>
+              <m:mo>(</m:mo>
+              <m:mi>α</m:mi>
+              <m:mo>-</m:mo>
+              <m:mn>1</m:mn>
+              <m:mo>)</m:mo>
+              <m:mo>...</m:mo>
+              <m:mo>(</m:mo>
+              <m:mi>α</m:mi>
+              <m:mo>-</m:mo>
+              <m:mi>k</m:mi>
+              <m:mo>+</m:mo>
+              <m:mn>1</m:mn>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mrow>
+              <m:mi>k</m:mi>
+              <m:mo>!</m:mo>
+            </m:mrow>
+          </m:mfrac>
+          <m:mo>=</m:mo>
+          <m:mfenced separators="" open="(" close=")">
+            <m:mfrac linethickness="0pt">
+              <m:mi>α</m:mi>
+              <m:mi>k</m:mi>
+            </m:mfrac>
+          </m:mfenced>
+          <m:mo>,</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id316172">and set <m:math overflow="scroll"><m:mi>h</m:mi></m:math> equal to the power series function given by
+<m:math overflow="scroll"><m:mrow><m:mi>h</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msubsup><m:mo>∑</m:mo><m:mrow><m:mi>k</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow><m:mi>∞</m:mi></m:msubsup><m:msub><m:mi>a</m:mi><m:mi>k</m:mi></m:msub><m:msup><m:mi>t</m:mi><m:mi>k</m:mi></m:msup><m:mo>.</m:mo></m:mrow></m:math>
+According to part (d) of the preceding exercise,
+the radius of convergence for the power series<m:math overflow="scroll"><m:mrow><m:mo>∑</m:mo><m:msub><m:mi>a</m:mi><m:mi>k</m:mi></m:msub><m:msup><m:mi>t</m:mi><m:mi>k</m:mi></m:msup></m:mrow></m:math> is 1.
+The aim of this theorem is to
+show that <m:math overflow="scroll"><m:mrow><m:mi>g</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mi>h</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mo>-</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mn>2</m:mn><m:mo>&lt;</m:mo><m:mi>t</m:mi><m:mo>&lt;</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mn>2</m:mn><m:mo>.</m:mo></m:mrow></m:math>
+In other words, we wish to show that <m:math overflow="scroll"><m:mi>g</m:mi></m:math> agrees with this power series function
+at least on the interval <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mo>-</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mn>2</m:mn><m:mo>,</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mn>2</m:mn><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+It will suffice to show that the sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>S</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> of partial sums
+of the power series function <m:math overflow="scroll"><m:mi>h</m:mi></m:math> converges to the function <m:math overflow="scroll"><m:mrow><m:mi>g</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+at least on <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mo>-</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mn>2</m:mn><m:mo>,</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mn>2</m:mn><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+We note also that the <m:math overflow="scroll"><m:mi>n</m:mi></m:math>th partial sum of this power series is just the
+<m:math overflow="scroll"><m:mi>n</m:mi></m:math>th Taylor polynomial <m:math overflow="scroll"><m:msubsup><m:mi>T</m:mi><m:mi>g</m:mi><m:mi>n</m:mi></m:msubsup></m:math> for <m:math overflow="scroll"><m:mrow><m:mi>g</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+    <equation id="id316485">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:msub>
+            <m:mi>S</m:mi>
+            <m:mi>n</m:mi>
+          </m:msub>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>t</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>=</m:mo>
+          <m:munderover>
+            <m:mo>∑</m:mo>
+            <m:mrow>
+              <m:mi>k</m:mi>
+              <m:mo>=</m:mo>
+              <m:mn>0</m:mn>
+            </m:mrow>
+            <m:mi>n</m:mi>
+          </m:munderover>
+          <m:mfenced separators="" open="(" close=")">
+            <m:mfrac linethickness="0pt">
+              <m:mi>α</m:mi>
+              <m:mi>k</m:mi>
+            </m:mfrac>
+          </m:mfenced>
+          <m:msup>
+            <m:mi>t</m:mi>
+            <m:mi>k</m:mi>
+          </m:msup>
+          <m:mo>=</m:mo>
+          <m:munderover>
+            <m:mo>∑</m:mo>
+            <m:mrow>
+              <m:mi>k</m:mi>
+              <m:mo>=</m:mo>
+              <m:mn>0</m:mn>
+            </m:mrow>
+            <m:mi>n</m:mi>
+          </m:munderover>
+          <m:mfrac>
+            <m:mrow>
+              <m:msup>
+                <m:mi>g</m:mi>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>k</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+              </m:msup>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mn>0</m:mn>
+                <m:mo>)</m:mo>
+              </m:mrow>
+            </m:mrow>
+            <m:mrow>
+              <m:mi>k</m:mi>
+              <m:mo>!</m:mo>
+            </m:mrow>
+          </m:mfrac>
+          <m:msup>
+            <m:mi>t</m:mi>
+            <m:mi>k</m:mi>
+          </m:msup>
+          <m:mo>.</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id316607">Now, fix a <m:math overflow="scroll"><m:mi>t</m:mi></m:math> strictly between <m:math overflow="scroll"><m:mrow><m:mo>-</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mn>2</m:mn></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mn>1</m:mn><m:mo>/</m:mo><m:mn>2</m:mn><m:mo>,</m:mo></m:mrow></m:math>
+and let <m:math overflow="scroll"><m:mrow><m:mi>r</m:mi><m:mo>&lt;</m:mo><m:mn>1</m:mn></m:mrow></m:math> be as in part (c) of <link target-id="fs-id1164057564178"/>.
+That is, <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>t</m:mi><m:mo>/</m:mo><m:mo>(</m:mo><m:mn>1</m:mn><m:mo>+</m:mo><m:mi>y</m:mi><m:mo>)</m:mo><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mi>r</m:mi></m:mrow></m:math> for every <m:math overflow="scroll"><m:mi>y</m:mi></m:math> between 0 and <m:math overflow="scroll"><m:mrow><m:mi>t</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+(This is an important inequality for our proof, and this
+is one place where the hypothesis that <m:math overflow="scroll"><m:mrow><m:mi>t</m:mi><m:mo>∈</m:mo><m:mo>(</m:mo><m:mo>-</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mn>2</m:mn><m:mo>,</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mn>2</m:mn><m:mo>)</m:mo></m:mrow></m:math> is necessary.)
+Note also that, for any <m:math overflow="scroll"><m:mrow><m:mi>y</m:mi><m:mo>∈</m:mo><m:mo>(</m:mo><m:mo>-</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mn>2</m:mn><m:mo>,</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mn>2</m:mn><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math>
+we have <m:math overflow="scroll"><m:mrow><m:msup><m:mrow><m:mo>|</m:mo><m:mrow><m:mo>(</m:mo><m:mn>1</m:mn><m:mo>+</m:mo><m:mi>y</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mi>α</m:mi></m:msup><m:msup><m:mrow><m:mo>|</m:mo><m:mo>=</m:mo><m:mrow><m:mo>(</m:mo><m:mn>1</m:mn><m:mo>+</m:mo><m:mi>y</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mi>a</m:mi></m:msup><m:mo>,</m:mo></m:mrow></m:math>
+and this is trapped between <m:math overflow="scroll"><m:msup><m:mrow><m:mo>(</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mn>2</m:mn><m:mo>)</m:mo></m:mrow><m:mi>a</m:mi></m:msup></m:math> and <m:math overflow="scroll"><m:mrow><m:msup><m:mrow><m:mo>(</m:mo><m:mn>3</m:mn><m:mo>/</m:mo><m:mn>2</m:mn><m:mo>)</m:mo></m:mrow><m:mi>a</m:mi></m:msup><m:mo>.</m:mo></m:mrow></m:math>
+Hence, there exists a number <m:math overflow="scroll"><m:mi>M</m:mi></m:math> such that <m:math overflow="scroll"><m:mrow><m:msup><m:mrow><m:mo>|</m:mo><m:mrow><m:mo>(</m:mo><m:mn>1</m:mn><m:mo>+</m:mo><m:mi>y</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mi>α</m:mi></m:msup><m:mrow><m:mo>|</m:mo><m:mo>≤</m:mo><m:mi>M</m:mi></m:mrow></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>y</m:mi><m:mo>∈</m:mo><m:mo>(</m:mo><m:mo>-</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mn>2</m:mn><m:mo>,</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mn>2</m:mn><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math></para>
+    <para id="id316974">Next, choose an <m:math overflow="scroll"><m:mrow><m:mi>ϵ</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn></m:mrow></m:math> for which
+<m:math overflow="scroll"><m:mrow><m:mi>β</m:mi><m:mo>=</m:mo><m:mo>(</m:mo><m:mn>1</m:mn><m:mo>+</m:mo><m:mi>ϵ</m:mi><m:mo>)</m:mo><m:mi>r</m:mi><m:mo>&lt;</m:mo><m:mn>1</m:mn><m:mo>.</m:mo></m:mrow></m:math>
+We let <m:math overflow="scroll"><m:msub><m:mi>C</m:mi><m:mi>ϵ</m:mi></m:msub></m:math> be a constant satisfying the inequality in Part (c) of <link target-id="fs-id1164057564178"/>.
+So, using Taylor's Remainder Theorem, we have that
+there exists a <m:math overflow="scroll"><m:mi>y</m:mi></m:math> between 0 and <m:math overflow="scroll"><m:mi>t</m:mi></m:math> for which</para>
+    <equation id="uid5">
+      <m:math overflow="scroll" mode="display">
+        <m:mtable displaystyle="true">
+          <m:mtr>
+            <m:mtd columnalign="right">
+              <m:mrow>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                  <m:mi>g</m:mi>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>t</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>-</m:mo>
+                </m:mrow>
+                <m:munderover>
+                  <m:mo>∑</m:mo>
+                  <m:mrow>
+                    <m:mi>k</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mn>0</m:mn>
+                  </m:mrow>
+                  <m:mi>n</m:mi>
+                </m:munderover>
+                <m:msub>
+                  <m:mi>a</m:mi>
+                  <m:mi>k</m:mi>
+                </m:msub>
+                <m:msup>
+                  <m:mi>t</m:mi>
+                  <m:mi>k</m:mi>
+                </m:msup>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mo>|</m:mo>
+                <m:mi>g</m:mi>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>t</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mo>-</m:mo>
+                <m:mo>(</m:mo>
+                <m:msubsup>
+                  <m:mi>T</m:mi>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>g</m:mi>
+                    <m:mo>,</m:mo>
+                    <m:mn>0</m:mn>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mi>n</m:mi>
+                </m:msubsup>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>t</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mo>|</m:mo>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:mfrac>
+                  <m:mrow>
+                    <m:msup>
+                      <m:mi>g</m:mi>
+                      <m:mrow>
+                        <m:mo>(</m:mo>
+                        <m:mi>n</m:mi>
+                        <m:mo>+</m:mo>
+                        <m:mn>1</m:mn>
+                        <m:mo>)</m:mo>
+                      </m:mrow>
+                    </m:msup>
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:mi>y</m:mi>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                  </m:mrow>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>n</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mn>1</m:mn>
+                    <m:mo>)</m:mo>
+                    <m:mo>!</m:mo>
+                  </m:mrow>
+                </m:mfrac>
+                <m:msup>
+                  <m:mi>t</m:mi>
+                  <m:mrow>
+                    <m:mi>n</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                </m:msup>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:mfrac>
+                  <m:mrow>
+                    <m:mi>α</m:mi>
+                    <m:mo>(</m:mo>
+                    <m:mi>α</m:mi>
+                    <m:mo>-</m:mo>
+                    <m:mn>1</m:mn>
+                    <m:mo>)</m:mo>
+                    <m:mo>...</m:mo>
+                    <m:mo>(</m:mo>
+                    <m:mi>α</m:mi>
+                    <m:mo>-</m:mo>
+                    <m:mi>n</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mrow>
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:mi>n</m:mi>
+                      <m:mo>+</m:mo>
+                      <m:mn>1</m:mn>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                    <m:mo>!</m:mo>
+                    <m:msup>
+                      <m:mrow>
+                        <m:mo>(</m:mo>
+                        <m:mn>1</m:mn>
+                        <m:mo>+</m:mo>
+                        <m:mi>y</m:mi>
+                        <m:mo>)</m:mo>
+                      </m:mrow>
+                      <m:mrow>
+                        <m:mi>n</m:mi>
+                        <m:mo>+</m:mo>
+                        <m:mn>1</m:mn>
+                        <m:mo>-</m:mo>
+                        <m:mi>α</m:mi>
+                      </m:mrow>
+                    </m:msup>
+                  </m:mrow>
+                </m:mfrac>
+                <m:msup>
+                  <m:mi>t</m:mi>
+                  <m:mrow>
+                    <m:mi>n</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                </m:msup>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>≤</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:mfenced separators="" open="(" close=")">
+                  <m:mfrac linethickness="0pt">
+                    <m:mi>α</m:mi>
+                    <m:mrow>
+                      <m:mi>n</m:mi>
+                      <m:mo>+</m:mo>
+                      <m:mn>1</m:mn>
+                    </m:mrow>
+                  </m:mfrac>
+                </m:mfenced>
+                <m:msup>
+                  <m:mrow>
+                    <m:mo>|</m:mo>
+                    <m:mo>|</m:mo>
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:mn>1</m:mn>
+                      <m:mo>+</m:mo>
+                      <m:mi>y</m:mi>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                  </m:mrow>
+                  <m:mi>α</m:mi>
+                </m:msup>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:mfrac>
+                  <m:mi>t</m:mi>
+                  <m:mrow>
+                    <m:mn>1</m:mn>
+                    <m:mo>+</m:mo>
+                    <m:mi>y</m:mi>
+                  </m:mrow>
+                </m:mfrac>
+                <m:msup>
+                  <m:mrow>
+                    <m:mo>|</m:mo>
+                  </m:mrow>
+                  <m:mrow>
+                    <m:mi>n</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                </m:msup>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>≤</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:msub>
+                  <m:mi>C</m:mi>
+                  <m:mi>ϵ</m:mi>
+                </m:msub>
+                <m:msup>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mn>1</m:mn>
+                    <m:mo>+</m:mo>
+                    <m:mi>ϵ</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mrow>
+                    <m:mi>n</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                </m:msup>
+                <m:mi>M</m:mi>
+                <m:msup>
+                  <m:mrow>
+                    <m:mo>|</m:mo>
+                    <m:mfrac>
+                      <m:mi>t</m:mi>
+                      <m:mrow>
+                        <m:mn>1</m:mn>
+                        <m:mo>+</m:mo>
+                        <m:mi>y</m:mi>
+                      </m:mrow>
+                    </m:mfrac>
+                    <m:mo>|</m:mo>
+                  </m:mrow>
+                  <m:mrow>
+                    <m:mi>n</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                </m:msup>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>≤</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:msub>
+                  <m:mi>C</m:mi>
+                  <m:mi>ϵ</m:mi>
+                </m:msub>
+                <m:msup>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mn>1</m:mn>
+                    <m:mo>+</m:mo>
+                    <m:mi>ϵ</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mrow>
+                    <m:mi>n</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                </m:msup>
+                <m:mi>M</m:mi>
+                <m:msup>
+                  <m:mi>r</m:mi>
+                  <m:mrow>
+                    <m:mi>n</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                </m:msup>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>≤</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:msub>
+                  <m:mi>C</m:mi>
+                  <m:mi>ϵ</m:mi>
+                </m:msub>
+                <m:mi>M</m:mi>
+                <m:msup>
+                  <m:mi>β</m:mi>
+                  <m:mrow>
+                    <m:mi>n</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                </m:msup>
+                <m:mo>,</m:mo>
+                <m:mo>.</m:mo>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+        </m:mtable>
+      </m:math>
+    </equation>
+    <para id="id317603">Taking the limit as <m:math overflow="scroll"><m:mi>n</m:mi></m:math> tends to <m:math overflow="scroll"><m:mrow><m:mi>∞</m:mi><m:mo>,</m:mo></m:mrow></m:math> and
+recalling that <m:math overflow="scroll"><m:mrow><m:mi>β</m:mi><m:mo>&lt;</m:mo><m:mn>1</m:mn><m:mo>,</m:mo></m:mrow></m:math> shows that
+<m:math overflow="scroll"><m:mrow><m:mi>g</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mi>h</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mo>-</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mn>2</m:mn><m:mo>&lt;</m:mo><m:mi>t</m:mi><m:mo>&lt;</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mn>2</m:mn><m:mo>,</m:mo></m:mrow></m:math>
+which completes the proof.</para>
+</proof></rule>
+    <!--empty paragraphs get left behind.-->
+  </content>
+</document>

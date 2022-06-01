@@ -1,0 +1,1479 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML">
+  <title>The Complex Numbers</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m36113</md:content-id>
+  <md:title>The Complex Numbers</md:title>
+  <md:abstract>Complex numbers are covered, involving i. The fundamental theorem of algebra is referenced. The absolute value of a complex number is defined. The triangle inequality is stated.</md:abstract>
+  <md:uuid>68844cb8-c00a-46f7-8ce7-7eb973af8cf3</md:uuid>
+</metadata>
+
+<content>
+
+      <para id="id297175">It is useful to build from the real numbers another number system called the <emphasis effect="italics">complex numbers.</emphasis>
+Although the real numbers <m:math overflow="scroll"><m:mi>R</m:mi></m:math> have many of the
+properties we expect, i.e., every positive number has a positive square root,
+every number has a cube root, and so on, there are somewhat less
+prominent properties that <m:math overflow="scroll"><m:mi>R</m:mi></m:math> fails to possess.
+For instance, negative numbers do not have square roots.
+This is actually a property that is missing in any ordered field,
+since every square is positive in an ordered field.
+See part (e) of <link target-id="fs-id1166089624930" document="m36069"/>.
+One way of describing this shortcoming on the part of the real numbers is to
+note that the equation <m:math overflow="scroll"><m:mrow><m:mn>1</m:mn><m:mo>+</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math> has no solution in the real numbers.
+Any solution would have to be a number whose square is <m:math overflow="scroll"><m:mrow><m:mo>-</m:mo><m:mn>1</m:mn><m:mo>,</m:mo></m:mrow></m:math> and no real number has that property.
+As an initial extension of the set of real numbers,
+why not build a number system in which this equation has a solution?</para>
+      <para id="id297597">We faced a similar kind of problem earlier on.
+In the set <m:math overflow="scroll"><m:mi>N</m:mi></m:math> there is no element <m:math overflow="scroll"><m:mi>j</m:mi></m:math> such that <m:math overflow="scroll"><m:mrow><m:mi>j</m:mi><m:mo>+</m:mo><m:mi>n</m:mi><m:mo>=</m:mo><m:mi>n</m:mi></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>∈</m:mo><m:mi>N</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+That is, there was no element like 0 in the natural numbers.
+The solution to the problem in that case was simply to “create” something called zero, and just adjoin it to our set <m:math overflow="scroll"><m:mrow><m:mi>N</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+The same kind of solution exists for us now.
+Let us invent an additional number, this time denoted by <m:math overflow="scroll"><m:mrow><m:mi>i</m:mi><m:mo>,</m:mo></m:mrow></m:math> which has
+the property that its square <m:math overflow="scroll"><m:msup><m:mi>i</m:mi><m:mn>2</m:mn></m:msup></m:math> is <m:math overflow="scroll"><m:mrow><m:mo>-</m:mo><m:mn>1</m:mn><m:mo>.</m:mo></m:mrow></m:math>
+Because the square of any nonzero real number is positive, this
+new number <m:math overflow="scroll"><m:mi>i</m:mi></m:math> was traditionally referred to as an “imaginary” number.
+We simply adjoin this number to the set <m:math overflow="scroll"><m:mrow><m:mi>R</m:mi><m:mo>,</m:mo></m:mrow></m:math> and we will then have a number whose square is negative, i.e., <m:math overflow="scroll"><m:mrow><m:mo>-</m:mo><m:mn>1</m:mn><m:mo>.</m:mo></m:mrow></m:math>
+Of course, we will require that our new number system should still be a field;
+we don't want to give up our
+basic algebraic operations.
+There are several implications of this requirement:
+First of all, if <m:math overflow="scroll"><m:mi>y</m:mi></m:math> is any real number, then we must also adjoin to <m:math overflow="scroll"><m:mi>R</m:mi></m:math> the number <m:math overflow="scroll"><m:mrow><m:mi>y</m:mi><m:mo>×</m:mo><m:mi>i</m:mi><m:mo>≡</m:mo><m:mi>y</m:mi><m:mi>i</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+for our new number system should be closed under multiplication.
+Of course the square of <m:math overflow="scroll"><m:mrow><m:mi>i</m:mi><m:mi>y</m:mi></m:mrow></m:math> will equal <m:math overflow="scroll"><m:mrow><m:msup><m:mi>i</m:mi><m:mn>2</m:mn></m:msup><m:msup><m:mi>y</m:mi><m:mn>2</m:mn></m:msup><m:mo>=</m:mo><m:mo>-</m:mo><m:msup><m:mi>y</m:mi><m:mn>2</m:mn></m:msup><m:mo>,</m:mo></m:mrow></m:math>
+and therefore this new number <m:math overflow="scroll"><m:mrow><m:mi>i</m:mi><m:mi>y</m:mi></m:mrow></m:math> must also be imaginary, i.e., not a real number.
+Secondly, if <m:math overflow="scroll"><m:mi>x</m:mi></m:math> and <m:math overflow="scroll"><m:mi>y</m:mi></m:math> are any two real numbers, we must have in our new system
+a number called <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>+</m:mo><m:mi>y</m:mi><m:mi>i</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+because our new system should be closed under addition.
+</para>
+<definition id="fs-id1164033508976"><term/><meaning id="fs-id1164040833419">
+<para id="fs-id2246810">
+Let <m:math overflow="scroll"><m:mi>i</m:mi></m:math> denote an object whose square <m:math overflow="scroll"><m:mrow><m:msup><m:mi>i</m:mi><m:mn>2</m:mn></m:msup><m:mo>=</m:mo><m:mo>-</m:mo><m:mn>1</m:mn><m:mo>.</m:mo></m:mrow></m:math>
+Let <m:math overflow="scroll"><m:mi>C</m:mi></m:math> be the set of all objects that can be represented in the form
+<m:math overflow="scroll"><m:mrow><m:mi>z</m:mi><m:mo>=</m:mo><m:mi>x</m:mi><m:mo>+</m:mo><m:mi>y</m:mi><m:mi>i</m:mi><m:mo>,</m:mo></m:mrow></m:math> where both <m:math overflow="scroll"><m:mi>x</m:mi></m:math> and <m:math overflow="scroll"><m:mi>y</m:mi></m:math> are real numbers.</para>
+      <para id="id298175">Define two operations <m:math overflow="scroll"><m:mo>+</m:mo></m:math> and <m:math overflow="scroll"><m:mo>×</m:mo></m:math> on <m:math overflow="scroll"><m:mi>C</m:mi></m:math> as follows:</para>
+      <equation id="id298209">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>x</m:mi>
+              <m:mo>+</m:mo>
+              <m:mi>y</m:mi>
+              <m:mi>i</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>+</m:mo>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:msup>
+                <m:mi>x</m:mi>
+                <m:mo>'</m:mo>
+              </m:msup>
+              <m:mo>+</m:mo>
+              <m:msup>
+                <m:mi>y</m:mi>
+                <m:mo>'</m:mo>
+              </m:msup>
+              <m:mi>i</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>=</m:mo>
+            <m:mi>x</m:mi>
+            <m:mo>+</m:mo>
+            <m:msup>
+              <m:mi>x</m:mi>
+              <m:mo>'</m:mo>
+            </m:msup>
+            <m:mo>+</m:mo>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>y</m:mi>
+              <m:mo>+</m:mo>
+              <m:msup>
+                <m:mi>y</m:mi>
+                <m:mo>'</m:mo>
+              </m:msup>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mi>i</m:mi>
+            <m:mo>,</m:mo>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id298296">and</para>
+      <equation id="id298301">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>x</m:mi>
+              <m:mo>+</m:mo>
+              <m:mi>i</m:mi>
+              <m:mi>y</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:msup>
+                <m:mi>x</m:mi>
+                <m:mo>'</m:mo>
+              </m:msup>
+              <m:mo>+</m:mo>
+              <m:mi>i</m:mi>
+              <m:msup>
+                <m:mi>y</m:mi>
+                <m:mo>'</m:mo>
+              </m:msup>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>=</m:mo>
+            <m:mi>x</m:mi>
+            <m:msup>
+              <m:mi>x</m:mi>
+              <m:mo>'</m:mo>
+            </m:msup>
+            <m:mo>+</m:mo>
+            <m:mi>x</m:mi>
+            <m:mi>i</m:mi>
+            <m:msup>
+              <m:mi>y</m:mi>
+              <m:mo>'</m:mo>
+            </m:msup>
+            <m:mo>+</m:mo>
+            <m:mi>i</m:mi>
+            <m:mi>y</m:mi>
+            <m:msup>
+              <m:mi>x</m:mi>
+              <m:mo>'</m:mo>
+            </m:msup>
+            <m:mo>+</m:mo>
+            <m:mi>i</m:mi>
+            <m:mi>y</m:mi>
+            <m:mi>i</m:mi>
+            <m:msup>
+              <m:mi>y</m:mi>
+              <m:mo>'</m:mo>
+            </m:msup>
+            <m:mo>=</m:mo>
+            <m:mi>x</m:mi>
+            <m:msup>
+              <m:mi>x</m:mi>
+              <m:mo>'</m:mo>
+            </m:msup>
+            <m:mo>-</m:mo>
+            <m:mi>y</m:mi>
+            <m:msup>
+              <m:mi>y</m:mi>
+              <m:mo>'</m:mo>
+            </m:msup>
+            <m:mo>+</m:mo>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>x</m:mi>
+              <m:msup>
+                <m:mi>y</m:mi>
+                <m:mo>'</m:mo>
+              </m:msup>
+              <m:mo>+</m:mo>
+              <m:mi>y</m:mi>
+              <m:msup>
+                <m:mi>x</m:mi>
+                <m:mo>'</m:mo>
+              </m:msup>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mi>i</m:mi>
+            <m:mo>.</m:mo>
+          </m:mrow>
+        </m:math>
+      </equation>
+</meaning></definition>
+
+<rule id="fs-id1164028868446" type="theorem">
+<statement id="fs-id1164025338566">
+      <list id="id298466" display="block" list-type="enumerated">
+        <item id="uid2">The two operations <m:math overflow="scroll"><m:mo>+</m:mo></m:math> and <m:math overflow="scroll"><m:mo>×</m:mo></m:math> defined above are commutative and associative,
+and multiplication is distributive over addition.
+</item>
+        <item id="uid3">Each operation has an identity: <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mn>0</m:mn><m:mo>+</m:mo><m:mn>0</m:mn><m:mi>i</m:mi><m:mo>)</m:mo></m:mrow></m:math> is the identity for addition, and <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mn>1</m:mn><m:mo>+</m:mo><m:mn>0</m:mn><m:mi>i</m:mi><m:mo>)</m:mo></m:mrow></m:math> is the identity for multiplication.
+</item>
+        <item id="uid4">The set
+<m:math overflow="scroll"><m:mi>C</m:mi></m:math> with these operations is a field.
+</item>
+      </list>
+</statement>
+<proof id="fs-id1164038524940">
+      <para id="id298575">
+We leave the proofs of Parts (1) and (2) to the following exercise.
+To see that <m:math overflow="scroll"><m:mi>C</m:mi></m:math> is a field, we need to verify one final condition,
+and that is to show that if <m:math overflow="scroll"><m:mrow><m:mi>z</m:mi><m:mo>=</m:mo><m:mi>x</m:mi><m:mo>+</m:mo><m:mi>y</m:mi><m:mi>i</m:mi><m:mo>≠</m:mo><m:mn>0</m:mn><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>+</m:mo><m:mn>0</m:mn><m:mi>i</m:mi><m:mo>,</m:mo></m:mrow></m:math> then there exists a <m:math overflow="scroll"><m:mrow><m:mi>w</m:mi><m:mo>=</m:mo><m:mi>u</m:mi><m:mo>+</m:mo><m:mi>v</m:mi><m:mi>i</m:mi></m:mrow></m:math> such that <m:math overflow="scroll"><m:mrow><m:mi>z</m:mi><m:mo>×</m:mo><m:mi>w</m:mi><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>+</m:mo><m:mn>0</m:mn><m:mi>i</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Thus, suppose <m:math overflow="scroll"><m:mrow><m:mi>z</m:mi><m:mo>=</m:mo><m:mi>x</m:mi><m:mo>+</m:mo><m:mi>y</m:mi><m:mi>i</m:mi><m:mo>≠</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math> Then at least one of the two real numbers <m:math overflow="scroll"><m:mi>x</m:mi></m:math> and <m:math overflow="scroll"><m:mi>y</m:mi></m:math> must be nonzero,
+so that <m:math overflow="scroll"><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mi>y</m:mi><m:mn>2</m:mn></m:msup><m:mo>&gt;</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math> Define a complex number <m:math overflow="scroll"><m:mi>w</m:mi></m:math> by</para>
+      <equation id="id298766">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:mi>w</m:mi>
+            <m:mo>=</m:mo>
+            <m:mfrac>
+              <m:mi>x</m:mi>
+              <m:mrow>
+                <m:msup>
+                  <m:mi>x</m:mi>
+                  <m:mn>2</m:mn>
+                </m:msup>
+                <m:mo>+</m:mo>
+                <m:msup>
+                  <m:mi>y</m:mi>
+                  <m:mn>2</m:mn>
+                </m:msup>
+              </m:mrow>
+            </m:mfrac>
+            <m:mo>+</m:mo>
+            <m:mfrac>
+              <m:mrow>
+                <m:mo>-</m:mo>
+                <m:mi>y</m:mi>
+              </m:mrow>
+              <m:mrow>
+                <m:msup>
+                  <m:mi>x</m:mi>
+                  <m:mn>2</m:mn>
+                </m:msup>
+                <m:mo>+</m:mo>
+                <m:msup>
+                  <m:mi>y</m:mi>
+                  <m:mn>2</m:mn>
+                </m:msup>
+              </m:mrow>
+            </m:mfrac>
+            <m:mi>i</m:mi>
+            <m:mo>.</m:mo>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id298834">We then have</para>
+      <equation id="uid5"><m:math overflow="scroll" mode="display">
+        <m:mtable displaystyle="true">
+          <m:mtr>
+            <m:mtd columnalign="right">
+              <m:mrow>
+                <m:mi>z</m:mi>
+                <m:mo>×</m:mo>
+                <m:mi>w</m:mi>
+              </m:mrow>
+            </m:mtd>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>x</m:mi>
+                  <m:mo>+</m:mo>
+                  <m:mi>y</m:mi>
+                  <m:mi>i</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mo>×</m:mo>
+                <m:mo>(</m:mo>
+                <m:mfrac>
+                  <m:mi>x</m:mi>
+                  <m:mrow>
+                    <m:msup>
+                      <m:mi>x</m:mi>
+                      <m:mn>2</m:mn>
+                    </m:msup>
+                    <m:mo>+</m:mo>
+                    <m:msup>
+                      <m:mi>y</m:mi>
+                      <m:mn>2</m:mn>
+                    </m:msup>
+                  </m:mrow>
+                </m:mfrac>
+                <m:mo>+</m:mo>
+                <m:mfrac>
+                  <m:mrow>
+                    <m:mo>-</m:mo>
+                    <m:mi>y</m:mi>
+                  </m:mrow>
+                  <m:mrow>
+                    <m:msup>
+                      <m:mi>x</m:mi>
+                      <m:mn>2</m:mn>
+                    </m:msup>
+                    <m:mo>+</m:mo>
+                    <m:msup>
+                      <m:mi>y</m:mi>
+                      <m:mn>2</m:mn>
+                    </m:msup>
+                  </m:mrow>
+                </m:mfrac>
+                <m:mi>i</m:mi>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mfrac>
+                  <m:msup>
+                    <m:mi>x</m:mi>
+                    <m:mn>2</m:mn>
+                  </m:msup>
+                  <m:mrow>
+                    <m:msup>
+                      <m:mi>x</m:mi>
+                      <m:mn>2</m:mn>
+                    </m:msup>
+                    <m:mo>+</m:mo>
+                    <m:msup>
+                      <m:mi>y</m:mi>
+                      <m:mn>2</m:mn>
+                    </m:msup>
+                  </m:mrow>
+                </m:mfrac>
+                <m:mo>-</m:mo>
+                <m:mfrac>
+                  <m:mrow>
+                    <m:mo>-</m:mo>
+                    <m:msup>
+                      <m:mi>y</m:mi>
+                      <m:mn>2</m:mn>
+                    </m:msup>
+                  </m:mrow>
+                  <m:mrow>
+                    <m:msup>
+                      <m:mi>x</m:mi>
+                      <m:mn>2</m:mn>
+                    </m:msup>
+                    <m:mo>+</m:mo>
+                    <m:msup>
+                      <m:mi>y</m:mi>
+                      <m:mn>2</m:mn>
+                    </m:msup>
+                  </m:mrow>
+                </m:mfrac>
+                <m:mo>+</m:mo>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>x</m:mi>
+                  <m:mfrac>
+                    <m:mrow>
+                      <m:mo>-</m:mo>
+                      <m:mi>y</m:mi>
+                    </m:mrow>
+                    <m:mrow>
+                      <m:msup>
+                        <m:mi>x</m:mi>
+                        <m:mn>2</m:mn>
+                      </m:msup>
+                      <m:mo>+</m:mo>
+                      <m:msup>
+                        <m:mi>y</m:mi>
+                        <m:mn>2</m:mn>
+                      </m:msup>
+                    </m:mrow>
+                  </m:mfrac>
+                  <m:mo>+</m:mo>
+                  <m:mi>y</m:mi>
+                  <m:mfrac>
+                    <m:mi>x</m:mi>
+                    <m:mrow>
+                      <m:msup>
+                        <m:mi>x</m:mi>
+                        <m:mn>2</m:mn>
+                      </m:msup>
+                      <m:mo>+</m:mo>
+                      <m:msup>
+                        <m:mi>y</m:mi>
+                        <m:mn>2</m:mn>
+                      </m:msup>
+                    </m:mrow>
+                  </m:mfrac>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mi>i</m:mi>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mfrac>
+                  <m:mrow>
+                    <m:msup>
+                      <m:mi>x</m:mi>
+                      <m:mn>2</m:mn>
+                    </m:msup>
+                    <m:mo>+</m:mo>
+                    <m:msup>
+                      <m:mi>y</m:mi>
+                      <m:mn>2</m:mn>
+                    </m:msup>
+                  </m:mrow>
+                  <m:mrow>
+                    <m:msup>
+                      <m:mi>x</m:mi>
+                      <m:mn>2</m:mn>
+                    </m:msup>
+                    <m:mo>+</m:mo>
+                    <m:msup>
+                      <m:mi>y</m:mi>
+                      <m:mn>2</m:mn>
+                    </m:msup>
+                  </m:mrow>
+                </m:mfrac>
+                <m:mo>+</m:mo>
+                <m:mfrac>
+                  <m:mn>0</m:mn>
+                  <m:mrow>
+                    <m:msup>
+                      <m:mi>x</m:mi>
+                      <m:mn>2</m:mn>
+                    </m:msup>
+                    <m:mo>+</m:mo>
+                    <m:msup>
+                      <m:mi>y</m:mi>
+                      <m:mn>2</m:mn>
+                    </m:msup>
+                  </m:mrow>
+                </m:mfrac>
+                <m:mi>i</m:mi>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mn>1</m:mn>
+                <m:mo>+</m:mo>
+                <m:mn>0</m:mn>
+                <m:mi>i</m:mi>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mn>1</m:mn>
+                <m:mo>,</m:mo>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+        </m:mtable>
+      </m:math>
+    </equation>
+      <para id="id299164">as desired.</para>
+</proof></rule>
+      <exercise id="eip-504"><problem id="eip-709">
+  <para id="eip-832">Prove parts (1) and (2) of <link target-id="fs-id1164028868446"/>.</para>
+</problem>
+
+</exercise>
+      <para id="id299181">One might think that these kinds of improvements of the real numbers will go on and on.
+For instance, we might next have to create and adjoin another object <m:math overflow="scroll"><m:mi>j</m:mi></m:math> so that the number <m:math overflow="scroll"><m:mi>i</m:mi></m:math> has a square root;
+i.e., so that the equation <m:math overflow="scroll"><m:mrow><m:mi>i</m:mi><m:mo>-</m:mo><m:msup><m:mi>z</m:mi><m:mn>2</m:mn></m:msup><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math> has a solution.
+Fortunately and surprisingly, this is not necessary,
+as we will see when we finally come to the Fundamental Theorem of Algebra in <link target-id="fs-id1172549276378" document="m36238"/>.</para>
+      <para id="id299228">The subset of <m:math overflow="scroll"><m:mi>C</m:mi></m:math> consisting of the pairs <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>0</m:mn><m:mi>i</m:mi></m:mrow></m:math> is a perfect (isomorphic) copy of the real number system <m:math overflow="scroll"><m:mi>R</m:mi></m:math>.
+We are justified
+then in saying that the complex number system extends the real number system, and we will say that a real number <m:math overflow="scroll"><m:mi>x</m:mi></m:math> is the same
+as the complex number <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>0</m:mn><m:mi>i</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+That is, real numbers are special kinds of complex numbers.
+The complex numbers of the form <m:math overflow="scroll"><m:mrow><m:mn>0</m:mn><m:mo>+</m:mo><m:mi>y</m:mi><m:mi>i</m:mi></m:mrow></m:math>
+are called <emphasis effect="italics">purely imaginary numbers.</emphasis>
+Obviously, the only complex number that is both real and purely imaginary is the number <m:math overflow="scroll"><m:mrow><m:mn>0</m:mn><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>+</m:mo><m:mn>0</m:mn><m:mi>i</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+The set <m:math overflow="scroll"><m:mi>C</m:mi></m:math> can also be regarded as a 2-dimensional space, a plane,
+and it is also helpful to realize that the complex numbers form a 2-dimensional vector space over the field
+of real numbers.</para>
+<definition id="fs-id1172141650350"><term/><meaning id="fs-id1172151516670">
+<para id="fs-id1172135611508"> If <m:math overflow="scroll"><m:mrow><m:mi>z</m:mi><m:mo>=</m:mo><m:mi>x</m:mi><m:mo>+</m:mo><m:mi>y</m:mi><m:mi>i</m:mi><m:mo>,</m:mo></m:mrow></m:math> we say that the real number <m:math overflow="scroll"><m:mi>x</m:mi></m:math> is the <emphasis effect="italics">real part</emphasis> of <m:math overflow="scroll"><m:mi>z</m:mi></m:math> and write <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mi>ℜ</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math> We say that
+the real number <m:math overflow="scroll"><m:mi>y</m:mi></m:math> is the <emphasis effect="italics">imaginary part</emphasis> of <m:math overflow="scroll"><m:mi>z</m:mi></m:math> and write <m:math overflow="scroll"><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mi>ℑ</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math></para>
+      <para id="id299476">If <m:math overflow="scroll"><m:mrow><m:mi>z</m:mi><m:mo>=</m:mo><m:mi>x</m:mi><m:mo>+</m:mo><m:mi>y</m:mi><m:mi>i</m:mi></m:mrow></m:math> is a complex number, define the <emphasis effect="italics">complex conjugate</emphasis><m:math overflow="scroll"><m:mover accent="true"><m:mi>z</m:mi><m:mo>¯</m:mo></m:mover></m:math> of <m:math overflow="scroll"><m:mi>z</m:mi></m:math> by <m:math overflow="scroll"><m:mrow><m:mover accent="true"><m:mi>z</m:mi><m:mo>¯</m:mo></m:mover><m:mo>=</m:mo><m:mi>x</m:mi><m:mo>-</m:mo><m:mi>y</m:mi><m:mi>i</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+</meaning></definition>
+
+      <para id="id299558">The complex number <m:math overflow="scroll"><m:mi>i</m:mi></m:math> satisfies <m:math overflow="scroll"><m:mrow><m:msup><m:mi>i</m:mi><m:mn>2</m:mn></m:msup><m:mo>=</m:mo><m:mo>-</m:mo><m:mn>1</m:mn><m:mo>,</m:mo></m:mrow></m:math>
+showing that the negative number <m:math overflow="scroll"><m:mrow><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:math> has a square root in <m:math overflow="scroll"><m:mrow><m:mi>C</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+or equivalently that the equation <m:math overflow="scroll"><m:mrow><m:mn>1</m:mn><m:mo>+</m:mo><m:msup><m:mi>z</m:mi><m:mn>2</m:mn></m:msup><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math> has a solution in <m:math overflow="scroll"><m:mrow><m:mi>C</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+We have thus satisfied our initial goal of extending the real numbers.
+But what about other complex numbers?
+Do they have square roots, cube roots, <m:math overflow="scroll"><m:mi>n</m:mi></m:math>th roots?
+What about solutions to other kinds of equations than
+<m:math overflow="scroll"><m:mrow><m:mn>1</m:mn><m:mo>+</m:mo><m:msup><m:mi>z</m:mi><m:mn>2</m:mn></m:msup><m:mo>?</m:mo></m:mrow></m:math></para>
+      
+
+<exercise id="fs-id1169307391591"><problem id="fs-id1169321211828">
+      <list id="id299710" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid6"> Prove that every complex number has a square root.
+HINT: Let <m:math overflow="scroll"><m:mrow><m:mi>z</m:mi><m:mo>=</m:mo><m:mi>a</m:mi><m:mo>+</m:mo><m:mi>b</m:mi><m:mi>i</m:mi><m:mo>.</m:mo></m:mrow></m:math> Assume <m:math overflow="scroll"><m:mrow><m:mi>w</m:mi><m:mo>=</m:mo><m:mi>x</m:mi><m:mo>+</m:mo><m:mi>y</m:mi><m:mi>i</m:mi></m:mrow></m:math> satisfies <m:math overflow="scroll"><m:mrow><m:msup><m:mi>w</m:mi><m:mn>2</m:mn></m:msup><m:mo>=</m:mo><m:mi>z</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+and just solve the two equations in two unknowns that arise.
+</item>
+        <item id="uid7"> Prove that every quadratic equation <m:math overflow="scroll"><m:mrow><m:mi>a</m:mi><m:msup><m:mi>z</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mi>b</m:mi><m:mi>z</m:mi><m:mo>+</m:mo><m:mi>c</m:mi><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> for <m:math overflow="scroll"><m:mrow><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>,</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mi>c</m:mi></m:math> complex numbers,
+has a solution in <m:math overflow="scroll"><m:mrow><m:mi>C</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+HINT: If <m:math overflow="scroll"><m:mrow><m:mi>a</m:mi><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> it is easy to find a solution.
+If <m:math overflow="scroll"><m:mrow><m:mi>a</m:mi><m:mo>≠</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> we need only find a solution to the equivalent equation
+<equation id="id299927"><m:math overflow="scroll" mode="display"><m:mrow><m:msup><m:mi>z</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mfrac><m:mi>b</m:mi><m:mi>a</m:mi></m:mfrac><m:mi>z</m:mi><m:mo>+</m:mo><m:mfrac><m:mi>c</m:mi><m:mi>a</m:mi></m:mfrac><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math></equation>
+Justify the following algebraic manipulations, and then solve the equation.
+<equation id="uid8"><m:math overflow="scroll" mode="display">
+        <m:mtable displaystyle="true">
+          <m:mtr>
+            <m:mtd columnalign="right">
+              <m:mrow>
+                <m:msup>
+                  <m:mi>z</m:mi>
+                  <m:mn>2</m:mn>
+                </m:msup>
+                <m:mo>+</m:mo>
+                <m:mfrac>
+                  <m:mi>b</m:mi>
+                  <m:mi>a</m:mi>
+                </m:mfrac>
+                <m:mi>z</m:mi>
+                <m:mo>+</m:mo>
+                <m:mfrac>
+                  <m:mi>c</m:mi>
+                  <m:mi>a</m:mi>
+                </m:mfrac>
+              </m:mrow>
+            </m:mtd>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:msup>
+                  <m:mi>z</m:mi>
+                  <m:mn>2</m:mn>
+                </m:msup>
+                <m:mo>+</m:mo>
+                <m:mfrac>
+                  <m:mi>b</m:mi>
+                  <m:mi>a</m:mi>
+                </m:mfrac>
+                <m:mi>z</m:mi>
+                <m:mo>+</m:mo>
+                <m:mfrac>
+                  <m:msup>
+                    <m:mi>b</m:mi>
+                    <m:mn>2</m:mn>
+                  </m:msup>
+                  <m:mrow>
+                    <m:mn>4</m:mn>
+                    <m:msup>
+                      <m:mi>a</m:mi>
+                      <m:mn>2</m:mn>
+                    </m:msup>
+                  </m:mrow>
+                </m:mfrac>
+                <m:mo>-</m:mo>
+                <m:mfrac>
+                  <m:msup>
+                    <m:mi>b</m:mi>
+                    <m:mn>2</m:mn>
+                  </m:msup>
+                  <m:mrow>
+                    <m:mn>4</m:mn>
+                    <m:msup>
+                      <m:mi>a</m:mi>
+                      <m:mn>2</m:mn>
+                    </m:msup>
+                  </m:mrow>
+                </m:mfrac>
+                <m:mo>+</m:mo>
+                <m:mfrac>
+                  <m:mi>c</m:mi>
+                  <m:mi>a</m:mi>
+                </m:mfrac>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:msup>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>z</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mfrac>
+                      <m:mi>b</m:mi>
+                      <m:mrow>
+                        <m:mn>2</m:mn>
+                        <m:mi>a</m:mi>
+                      </m:mrow>
+                    </m:mfrac>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mn>2</m:mn>
+                </m:msup>
+                <m:mo>-</m:mo>
+                <m:mfrac>
+                  <m:msup>
+                    <m:mi>b</m:mi>
+                    <m:mn>2</m:mn>
+                  </m:msup>
+                  <m:mrow>
+                    <m:mn>4</m:mn>
+                    <m:msup>
+                      <m:mi>a</m:mi>
+                      <m:mn>2</m:mn>
+                    </m:msup>
+                  </m:mrow>
+                </m:mfrac>
+                <m:mo>+</m:mo>
+                <m:mfrac>
+                  <m:mi>c</m:mi>
+                  <m:mi>a</m:mi>
+                </m:mfrac>
+                <m:mo>.</m:mo>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+        </m:mtable>
+      </m:math>
+    </equation></item>
+      </list>
+</problem></exercise>
+
+      <para id="id300165">What about this new field <m:math overflow="scroll"><m:mrow><m:mi>C</m:mi><m:mo>?</m:mo></m:mrow></m:math> Does every complex number have a
+cube root, a fourth root, does every equation have a solution in <m:math overflow="scroll"><m:mrow><m:mi>C</m:mi><m:mo>?</m:mo></m:mrow></m:math>
+A natural instinct would be to suspect that <m:math overflow="scroll"><m:mi>C</m:mi></m:math> takes care of square roots, but that it probably does not necessarily have
+higher order roots.
+However, the content of the Fundamental Theorem of Algebra,
+to be proved in <link document="m36238"/>, is that every equation of the form <m:math overflow="scroll"><m:mrow><m:mi>P</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> where <m:math overflow="scroll"><m:mi>P</m:mi></m:math> is a nonconstant polynomial,
+has a solution in <m:math overflow="scroll"><m:mrow><m:mi>C</m:mi><m:mo>.</m:mo></m:mrow></m:math> This immediately implies that every complex number <m:math overflow="scroll"><m:mi>c</m:mi></m:math> has an <m:math overflow="scroll"><m:mi>n</m:mi></m:math>th root, for any solution of the
+equation <m:math overflow="scroll"><m:mrow><m:msup><m:mi>z</m:mi><m:mi>n</m:mi></m:msup><m:mo>-</m:mo><m:mi>c</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math> would be an <m:math overflow="scroll"><m:mi>n</m:mi></m:math>th root of <m:math overflow="scroll"><m:mrow><m:mi>c</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+      <para id="id300341">The fact that the Fundamental Theorem of Algebra is true
+is a good indication that the field <m:math overflow="scroll"><m:mi>C</m:mi></m:math> is a “good” field. But it's not perfect.</para>
+
+<rule id="fs-id1169300898436" type="theorem">
+<statement id="fs-id1169292403738">
+<para id="fs-id1169302043731"> In no way can the field <m:math overflow="scroll"><m:mi>C</m:mi></m:math> be made into an ordered field. That is, there exists no subset
+<m:math overflow="scroll"><m:mi>P</m:mi></m:math> of <m:math overflow="scroll"><m:mi>C</m:mi></m:math> that satisfies the two positivity axioms.</para>
+</statement>
+<proof id="fs-id1169291310743">
+      <para id="id300412">Suppose <m:math overflow="scroll"><m:mi>C</m:mi></m:math> were an ordered field,
+and write <m:math overflow="scroll"><m:mi>P</m:mi></m:math> for its set of positive elements.
+Then, since every square in an ordered field must be in <m:math overflow="scroll"><m:mi>P</m:mi></m:math>
+(part (e) of <link target-id="fs-id1166089624930" document="m36069"/>),
+we must have that <m:math overflow="scroll"><m:mrow><m:mo>-</m:mo><m:mn>1</m:mn><m:mo>=</m:mo><m:msup><m:mi>i</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:math> must be in <m:math overflow="scroll"><m:mrow><m:mi>P</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+But, by part (a) of <link target-id="fs-id1166089624930" document="m36069"/>, we also must have that 1 is in <m:math overflow="scroll"><m:mrow><m:mi>P</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+and this leads to a contradiction of the law of tricotomy. We can't have both 1 and <m:math overflow="scroll"><m:mrow><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:math> in <m:math overflow="scroll"><m:mrow><m:mi>P</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Therefore, <m:math overflow="scroll"><m:mi>C</m:mi></m:math> is not an ordered field.</para>
+</proof>
+</rule>
+      <para id="id300542">Although we may not define when one complex number is smaller than another, we can define the absolute value of a complex number and the distance between two of them.</para>
+<definition id="fs-id1169285800499"><term/><meaning id="fs-id1169308166673">
+<para id="fs-id1477675">If <m:math overflow="scroll"><m:mrow><m:mi>z</m:mi><m:mo>=</m:mo><m:mi>x</m:mi><m:mo>+</m:mo><m:mi>y</m:mi><m:mi>i</m:mi></m:mrow></m:math> is in <m:math overflow="scroll"><m:mi>C</m:mi></m:math>, we define the <emphasis effect="italics">absolute value</emphasis> of <m:math overflow="scroll"><m:mi>z</m:mi></m:math> by</para>
+      <equation id="id300604">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:mrow>
+              <m:mo>|</m:mo>
+              <m:mi>z</m:mi>
+              <m:mo>|</m:mo>
+            </m:mrow>
+            <m:mo>=</m:mo>
+            <m:msqrt>
+              <m:mrow>
+                <m:msup>
+                  <m:mi>x</m:mi>
+                  <m:mn>2</m:mn>
+                </m:msup>
+                <m:mo>+</m:mo>
+                <m:msup>
+                  <m:mi>y</m:mi>
+                  <m:mn>2</m:mn>
+                </m:msup>
+              </m:mrow>
+            </m:msqrt>
+            <m:mo>.</m:mo>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id300644">We define the <emphasis effect="italics">distance</emphasis><m:math overflow="scroll"><m:mrow><m:mi>d</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>,</m:mo><m:mi>w</m:mi><m:mo>)</m:mo></m:mrow></m:math> between two complex numbers <m:math overflow="scroll"><m:mi>z</m:mi></m:math> and <m:math overflow="scroll"><m:mi>w</m:mi></m:math> by</para>
+      <para id="id300692">
+        <m:math overflow="scroll">
+          <m:mrow>
+            <m:mi>d</m:mi>
+            <m:mo>(</m:mo>
+            <m:mi>z</m:mi>
+            <m:mo>,</m:mo>
+            <m:mi>w</m:mi>
+            <m:mo>)</m:mo>
+            <m:mo>=</m:mo>
+            <m:mo>|</m:mo>
+            <m:mi>z</m:mi>
+            <m:mo>-</m:mo>
+            <m:mi>w</m:mi>
+            <m:mo>|</m:mo>
+            <m:mo>.</m:mo>
+          </m:mrow>
+        </m:math>
+      </para>
+      <para id="id300731">If <m:math overflow="scroll"><m:mrow><m:mi>c</m:mi><m:mo>∈</m:mo><m:mi>C</m:mi></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>r</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> we define the
+<emphasis effect="italics">open disk of radius <m:math overflow="scroll"><m:mi>r</m:mi></m:math> around c</emphasis>, and
+denote it by <m:math overflow="scroll"><m:mrow><m:msub><m:mi>B</m:mi><m:mi>r</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> by
+</para>
+      <equation id="id300819">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:msub>
+              <m:mi>B</m:mi>
+              <m:mi>r</m:mi>
+            </m:msub>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>c</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>=</m:mo>
+            <m:mrow>
+              <m:mo>{</m:mo>
+              <m:mi>z</m:mi>
+              <m:mo>∈</m:mo>
+              <m:mi>C</m:mi>
+              <m:mo>:</m:mo>
+              <m:mo>|</m:mo>
+              <m:mi>z</m:mi>
+              <m:mo>-</m:mo>
+              <m:mi>c</m:mi>
+              <m:mo>|</m:mo>
+              <m:mo>&lt;</m:mo>
+              <m:mi>r</m:mi>
+              <m:mo>}</m:mo>
+            </m:mrow>
+            <m:mo>.</m:mo>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id300878">The <emphasis effect="italics">closed disk</emphasis> of radius <m:math overflow="scroll"><m:mi>r</m:mi></m:math> around <m:math overflow="scroll"><m:mi>c</m:mi></m:math> is denoted by
+<m:math overflow="scroll"><m:mrow><m:msub><m:mover><m:mi>B</m:mi><m:mo>¯</m:mo></m:mover><m:mi>r</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> and is defined by
+</para>
+      <equation id="id300943">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:msub>
+              <m:mover>
+                <m:mi>B</m:mi>
+                <m:mo>¯</m:mo>
+              </m:mover>
+              <m:mi>r</m:mi>
+            </m:msub>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>c</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>=</m:mo>
+            <m:mrow>
+              <m:mo>{</m:mo>
+              <m:mi>z</m:mi>
+              <m:mo>∈</m:mo>
+              <m:mi>C</m:mi>
+              <m:mo>:</m:mo>
+              <m:mo>|</m:mo>
+              <m:mi>z</m:mi>
+              <m:mo>-</m:mo>
+              <m:mi>c</m:mi>
+              <m:mo>|</m:mo>
+              <m:mo>≤</m:mo>
+              <m:mi>r</m:mi>
+              <m:mo>}</m:mo>
+            </m:mrow>
+            <m:mo>.</m:mo>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id301006">We also define open and closed <emphasis effect="italics">punctured</emphasis> disks
+<m:math overflow="scroll"><m:mrow><m:msubsup><m:mi>B</m:mi><m:mi>r</m:mi><m:mo>'</m:mo></m:msubsup><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:msubsup><m:mover><m:mi>B</m:mi><m:mo>¯</m:mo></m:mover><m:mi>r</m:mi><m:mo>'</m:mo></m:msubsup><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> around <m:math overflow="scroll"><m:mi>c</m:mi></m:math> by</para>
+      <equation id="id301082">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:msubsup>
+              <m:mi>B</m:mi>
+              <m:mi>r</m:mi>
+              <m:mo>'</m:mo>
+            </m:msubsup>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>c</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>=</m:mo>
+            <m:mrow>
+              <m:mo>{</m:mo>
+              <m:mi>z</m:mi>
+              <m:mo>:</m:mo>
+              <m:mn>0</m:mn>
+              <m:mo>&lt;</m:mo>
+              <m:mo>|</m:mo>
+              <m:mi>z</m:mi>
+            </m:mrow>
+            <m:mo>-</m:mo>
+            <m:mrow>
+              <m:mi>c</m:mi>
+              <m:mo>|</m:mo>
+              <m:mo>&lt;</m:mo>
+              <m:mi>r</m:mi>
+              <m:mo>}</m:mo>
+            </m:mrow>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id301142">and</para>
+      <equation id="id301148">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:msubsup>
+              <m:mover>
+                <m:mi>B</m:mi>
+                <m:mo>¯</m:mo>
+              </m:mover>
+              <m:mi>r</m:mi>
+              <m:mo>'</m:mo>
+            </m:msubsup>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>c</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>=</m:mo>
+            <m:mrow>
+              <m:mo>{</m:mo>
+              <m:mi>z</m:mi>
+              <m:mo>:</m:mo>
+              <m:mn>0</m:mn>
+              <m:mo>&lt;</m:mo>
+              <m:mo>|</m:mo>
+              <m:mi>z</m:mi>
+              <m:mo>-</m:mo>
+              <m:mi>c</m:mi>
+              <m:mo>≤</m:mo>
+              <m:mi>r</m:mi>
+              <m:mo>}</m:mo>
+            </m:mrow>
+            <m:mo>.</m:mo>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id301212">These punctured disks are just like the regular disks, except that
+they do not contain the central point <m:math overflow="scroll"><m:mrow><m:mi>c</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+      <para id="id301230">More generally, if <m:math overflow="scroll"><m:mi>S</m:mi></m:math> is any subset of <m:math overflow="scroll"><m:mrow><m:mi>C</m:mi><m:mo>,</m:mo></m:mrow></m:math> we define the <emphasis effect="italics">open neighborhood of radius r</emphasis> around <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+denoted by <m:math overflow="scroll"><m:mrow><m:msub><m:mi>N</m:mi><m:mi>r</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>S</m:mi><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> to be the set of all <m:math overflow="scroll"><m:mi>z</m:mi></m:math>
+such that there exists a <m:math overflow="scroll"><m:mrow><m:mi>w</m:mi><m:mo>∈</m:mo><m:mi>S</m:mi></m:mrow></m:math> for which <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>z</m:mi><m:mo>-</m:mo><m:mi>w</m:mi><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mi>r</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+That is, <m:math overflow="scroll"><m:mrow><m:msub><m:mi>N</m:mi><m:mi>r</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>S</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> is the set of all complex numbers that are within a distance of <m:math overflow="scroll"><m:mi>r</m:mi></m:math> of the set <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+We define the <emphasis effect="italics">closed neighborhood</emphasis> of radius <m:math overflow="scroll"><m:mi>r</m:mi></m:math> around <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+and denote it by <m:math overflow="scroll"><m:mrow><m:msub><m:mover><m:mi>N</m:mi><m:mo>¯</m:mo></m:mover><m:mi>r</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>S</m:mi><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math>
+to be the set of all <m:math overflow="scroll"><m:mrow><m:mi>z</m:mi><m:mo>∈</m:mo><m:mi>C</m:mi></m:mrow></m:math> for which there exists a <m:math overflow="scroll"><m:mrow><m:mi>w</m:mi><m:mo>∈</m:mo><m:mi>S</m:mi></m:mrow></m:math> such that <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>z</m:mi><m:mo>-</m:mo><m:mi>w</m:mi><m:mo>|</m:mo><m:mo>≤</m:mo><m:mi>r</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+</meaning></definition>
+<exercise id="fs-id1169302072454"><problem id="fs-id1169312739870">
+      <list id="id301525" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid9"> Prove that the absolute value of a complex number <m:math overflow="scroll"><m:mi>z</m:mi></m:math> is a nonnegative real number.
+Show in addition that <m:math overflow="scroll"><m:mrow><m:msup><m:mrow><m:mo>|</m:mo><m:mi>z</m:mi><m:mo>|</m:mo></m:mrow><m:mn>2</m:mn></m:msup><m:mo>=</m:mo><m:mi>z</m:mi><m:mover accent="true"><m:mi>z</m:mi><m:mo>¯</m:mo></m:mover><m:mo>.</m:mo></m:mrow></m:math></item>
+        <item id="uid10"> Let <m:math overflow="scroll"><m:mi>x</m:mi></m:math> be a real number. Show that the absolute value of <m:math overflow="scroll"><m:mi>x</m:mi></m:math> is the same whether we think of <m:math overflow="scroll"><m:mi>x</m:mi></m:math> as a real number or as
+a complex number.
+</item>
+        <item id="uid11"> Prove that <m:math overflow="scroll"><m:mrow><m:mo movablelimits="true" form="prefix">max</m:mo><m:mo>(</m:mo><m:mo>|</m:mo><m:mi>ℜ</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo><m:mo>|</m:mo><m:mo>,</m:mo><m:mo>|</m:mo><m:mi>ℑ</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo><m:mo>|</m:mo><m:mo>)</m:mo><m:mo>≤</m:mo><m:mo>|</m:mo><m:mi>z</m:mi><m:mo>|</m:mo><m:mo>≤</m:mo><m:mo>|</m:mo><m:mi>ℜ</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo><m:mo>|</m:mo><m:mo>+</m:mo><m:mo>|</m:mo><m:mi>ℑ</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo><m:mo>|</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Note that this just amounts to verifying that
+<equation id="id301725"><m:math overflow="scroll" mode="display"><m:mrow><m:mo movablelimits="true" form="prefix">max</m:mo><m:mrow><m:mo>(</m:mo><m:mo>|</m:mo><m:mi>x</m:mi><m:mo>|</m:mo><m:mo>,</m:mo><m:mo>|</m:mo><m:mi>y</m:mi><m:mo>|</m:mo><m:mo>)</m:mo></m:mrow><m:mo>≤</m:mo><m:msqrt><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mi>y</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:msqrt><m:mo>≤</m:mo><m:mrow><m:mo>|</m:mo><m:mi>x</m:mi><m:mo>|</m:mo></m:mrow><m:mo>+</m:mo><m:mrow><m:mo>|</m:mo><m:mi>y</m:mi><m:mo>|</m:mo></m:mrow></m:mrow></m:math></equation>
+for any two real numbers <m:math overflow="scroll"><m:mi>x</m:mi></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>y</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+        <item id="uid12"> For any complex numbers <m:math overflow="scroll"><m:mi>z</m:mi></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>w</m:mi><m:mo>,</m:mo></m:mrow></m:math> show that <m:math overflow="scroll"><m:mrow><m:mover><m:mrow><m:mi>z</m:mi><m:mo>+</m:mo><m:mi>w</m:mi></m:mrow><m:mo>¯</m:mo></m:mover><m:mo>=</m:mo><m:mover accent="true"><m:mi>z</m:mi><m:mo>¯</m:mo></m:mover><m:mo>+</m:mo><m:mover accent="true"><m:mi>w</m:mi><m:mo>¯</m:mo></m:mover><m:mo>,</m:mo></m:mrow></m:math> and that <m:math overflow="scroll"><m:mrow><m:mover><m:mover><m:mi>z</m:mi><m:mo>¯</m:mo></m:mover><m:mo>¯</m:mo></m:mover><m:mo>=</m:mo><m:mi>z</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+        <item id="uid13"> Show that <m:math overflow="scroll"><m:mrow><m:mi>z</m:mi><m:mo>+</m:mo><m:mover accent="true"><m:mi>z</m:mi><m:mo>¯</m:mo></m:mover><m:mo>=</m:mo><m:mn>2</m:mn><m:mi>ℜ</m:mi><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> and
+<m:math overflow="scroll"><m:mrow><m:mi>z</m:mi><m:mo>-</m:mo><m:mover accent="true"><m:mi>z</m:mi><m:mo>¯</m:mo></m:mover><m:mo>=</m:mo><m:mn>2</m:mn><m:mi>i</m:mi><m:mi>ℑ</m:mi><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></item>
+        <item id="uid14"> If <m:math overflow="scroll"><m:mrow><m:mi>z</m:mi><m:mo>=</m:mo><m:mi>a</m:mi><m:mo>+</m:mo><m:mi>b</m:mi><m:mi>i</m:mi></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>w</m:mi><m:mo>=</m:mo><m:msup><m:mi>a</m:mi><m:mo>'</m:mo></m:msup><m:mo>+</m:mo><m:msup><m:mi>b</m:mi><m:mo>'</m:mo></m:msup><m:mi>i</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+prove that <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>z</m:mi><m:mi>w</m:mi><m:mo>|</m:mo><m:mo>=</m:mo><m:mo>|</m:mo><m:mi>z</m:mi><m:mo>|</m:mo><m:mo>|</m:mo><m:mi>w</m:mi><m:mo>|</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+HINT: Just compute <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>+</m:mo><m:mi>b</m:mi><m:mi>i</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mrow><m:mo>(</m:mo><m:msup><m:mi>a</m:mi><m:mo>'</m:mo></m:msup><m:mo>+</m:mo><m:msup><m:mi>b</m:mi><m:mo>'</m:mo></m:msup><m:mi>i</m:mi><m:mo>)</m:mo></m:mrow><m:msup><m:mrow><m:mo>|</m:mo></m:mrow><m:mn>2</m:mn></m:msup><m:mo>.</m:mo></m:mrow></m:math></item>
+      </list>
+</problem></exercise>
+      <para id="id302180">The next theorem is in a true sense the most often used inequality of mathematical analysis.
+We have already proved the triangle inequality for the absolute value of real numbers, and the proof was
+not very difficult in that case. For complex numbers,
+it is not at all simple, and this should be taken as a good indication that it is a deep result.</para>
+<rule id="fs-id1165815249837" type="theorem"><title>Triangle Inequality</title><statement id="fs-id1165813988032"><para id="fs-id1165800142592">
+
+If <m:math overflow="scroll"><m:mi>z</m:mi></m:math> and <m:math overflow="scroll"><m:msup><m:mi>z</m:mi><m:mo>'</m:mo></m:msup></m:math> are two complex numbers, then</para>
+      <equation id="id302216">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:mrow>
+              <m:mo>|</m:mo>
+              <m:mi>z</m:mi>
+              <m:mo>+</m:mo>
+            </m:mrow>
+            <m:msup>
+              <m:mi>z</m:mi>
+              <m:mo>'</m:mo>
+            </m:msup>
+            <m:mrow>
+              <m:mo>|</m:mo>
+              <m:mo>≤</m:mo>
+              <m:mo>|</m:mo>
+              <m:mi>z</m:mi>
+              <m:mo>|</m:mo>
+              <m:mo>+</m:mo>
+              <m:mo>|</m:mo>
+            </m:mrow>
+            <m:msup>
+              <m:mi>z</m:mi>
+              <m:mo>'</m:mo>
+            </m:msup>
+            <m:mrow>
+              <m:mo>|</m:mo>
+            </m:mrow>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id302267">and</para>
+      <equation id="id302272">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:mrow>
+              <m:mo>|</m:mo>
+              <m:mi>z</m:mi>
+              <m:mo>-</m:mo>
+            </m:mrow>
+            <m:msup>
+              <m:mi>z</m:mi>
+              <m:mo>'</m:mo>
+            </m:msup>
+            <m:mrow>
+              <m:mo>|</m:mo>
+              <m:mo>≥</m:mo>
+              <m:mo>|</m:mo>
+              <m:mo>|</m:mo>
+              <m:mi>z</m:mi>
+              <m:mo>|</m:mo>
+              <m:mo>-</m:mo>
+              <m:mo>|</m:mo>
+            </m:mrow>
+            <m:msup>
+              <m:mi>z</m:mi>
+              <m:mo>'</m:mo>
+            </m:msup>
+            <m:mrow>
+              <m:mo>|</m:mo>
+              <m:mo>|</m:mo>
+            </m:mrow>
+            <m:mo>.</m:mo>
+          </m:mrow>
+        </m:math>
+      </equation>
+</statement>
+<proof id="fs-id1165798267068">
+      <para id="id302331">We use the results contained in <link target-id="fs-id1169302072454"/>.</para>
+      <equation id="uid15"><m:math overflow="scroll" mode="display">
+        <m:mtable displaystyle="true">
+          <m:mtr>
+            <m:mtd columnalign="right">
+              <m:mrow>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                  <m:mi>z</m:mi>
+                  <m:mo>+</m:mo>
+                </m:mrow>
+                <m:msup>
+                  <m:mi>z</m:mi>
+                  <m:mo>'</m:mo>
+                </m:msup>
+                <m:msup>
+                  <m:mrow>
+                    <m:mo>|</m:mo>
+                  </m:mrow>
+                  <m:mn>2</m:mn>
+                </m:msup>
+              </m:mrow>
+            </m:mtd>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>z</m:mi>
+                  <m:mo>+</m:mo>
+                  <m:msup>
+                    <m:mi>z</m:mi>
+                    <m:mo>'</m:mo>
+                  </m:msup>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mover>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>z</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:msup>
+                      <m:mi>z</m:mi>
+                      <m:mo>'</m:mo>
+                    </m:msup>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>¯</m:mo>
+                </m:mover>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>z</m:mi>
+                  <m:mo>+</m:mo>
+                  <m:msup>
+                    <m:mi>z</m:mi>
+                    <m:mo>'</m:mo>
+                  </m:msup>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mover accent="true">
+                    <m:mi>z</m:mi>
+                    <m:mo>¯</m:mo>
+                  </m:mover>
+                  <m:mo>+</m:mo>
+                  <m:mover accent="true">
+                    <m:msup>
+                      <m:mi>z</m:mi>
+                      <m:mo>'</m:mo>
+                    </m:msup>
+                    <m:mo>¯</m:mo>
+                  </m:mover>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mi>z</m:mi>
+                <m:mover accent="true">
+                  <m:mi>z</m:mi>
+                  <m:mo>¯</m:mo>
+                </m:mover>
+                <m:mo>+</m:mo>
+                <m:msup>
+                  <m:mi>z</m:mi>
+                  <m:mo>'</m:mo>
+                </m:msup>
+                <m:mover accent="true">
+                  <m:mi>z</m:mi>
+                  <m:mo>¯</m:mo>
+                </m:mover>
+                <m:mo>+</m:mo>
+                <m:mi>z</m:mi>
+                <m:mover accent="true">
+                  <m:msup>
+                    <m:mi>z</m:mi>
+                    <m:mo>'</m:mo>
+                  </m:msup>
+                  <m:mo>¯</m:mo>
+                </m:mover>
+                <m:mo>+</m:mo>
+                <m:msup>
+                  <m:mi>z</m:mi>
+                  <m:mo>'</m:mo>
+                </m:msup>
+                <m:mover accent="true">
+                  <m:msup>
+                    <m:mi>z</m:mi>
+                    <m:mo>'</m:mo>
+                  </m:msup>
+                  <m:mo>¯</m:mo>
+                </m:mover>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:msup>
+                  <m:mrow>
+                    <m:mo>|</m:mo>
+                    <m:mi>z</m:mi>
+                    <m:mo>|</m:mo>
+                  </m:mrow>
+                  <m:mn>2</m:mn>
+                </m:msup>
+                <m:mo>+</m:mo>
+                <m:msup>
+                  <m:mi>z</m:mi>
+                  <m:mo>'</m:mo>
+                </m:msup>
+                <m:mover accent="true">
+                  <m:mi>z</m:mi>
+                  <m:mo>¯</m:mo>
+                </m:mover>
+                <m:mo>+</m:mo>
+                <m:mover>
+                  <m:mrow>
+                    <m:msup>
+                      <m:mi>z</m:mi>
+                      <m:mo>'</m:mo>
+                    </m:msup>
+                    <m:mover accent="true">
+                      <m:mi>z</m:mi>
+                      <m:mo>¯</m:mo>
+                    </m:mover>
+                  </m:mrow>
+                  <m:mo>¯</m:mo>
+                </m:mover>
+                <m:mo>+</m:mo>
+                <m:msup>
+                  <m:mrow>
+                    <m:mo>|</m:mo>
+                    <m:msup>
+                      <m:mi>z</m:mi>
+                      <m:mo>'</m:mo>
+                    </m:msup>
+                    <m:mo>|</m:mo>
+                  </m:mrow>
+                  <m:mn>2</m:mn>
+                </m:msup>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:msup>
+                  <m:mrow>
+                    <m:mo>|</m:mo>
+                    <m:mi>z</m:mi>
+                    <m:mo>|</m:mo>
+                  </m:mrow>
+                  <m:mn>2</m:mn>
+                </m:msup>
+                <m:mo>+</m:mo>
+                <m:mn>2</m:mn>
+                <m:mi>ℜ</m:mi>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:msup>
+                    <m:mi>z</m:mi>
+                    <m:mo>'</m:mo>
+                  </m:msup>
+                  <m:mover accent="true">
+                    <m:mi>z</m:mi>
+                    <m:mo>¯</m:mo>
+                  </m:mover>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mo>+</m:mo>
+                <m:msup>
+                  <m:mrow>
+                    <m:mo>|</m:mo>
+                    <m:msup>
+                      <m:mi>z</m:mi>
+                      <m:mo>'</m:mo>
+                    </m:msup>
+                    <m:mo>|</m:mo>
+                  </m:mrow>
+                  <m:mn>2</m:mn>
+                </m:msup>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>≤</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:msup>
+                  <m:mrow>
+                    <m:mo>|</m:mo>
+                    <m:mi>z</m:mi>
+                    <m:mo>|</m:mo>
+                  </m:mrow>
+                  <m:mn>2</m:mn>
+                </m:msup>
+                <m:mrow>
+                  <m:mo>+</m:mo>
+                  <m:mn>2</m:mn>
+                  <m:mo>|</m:mo>
+                  <m:mi>ℜ</m:mi>
+                </m:mrow>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:msup>
+                    <m:mi>z</m:mi>
+                    <m:mo>'</m:mo>
+                  </m:msup>
+                  <m:mover accent="true">
+                    <m:mi>z</m:mi>
+                    <m:mo>¯</m:mo>
+                  </m:mover>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                  <m:mo>+</m:mo>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:msup>
+                  <m:mi>z</m:mi>
+                  <m:mo>'</m:mo>
+                </m:msup>
+                <m:msup>
+                  <m:mrow>
+                    <m:mo>|</m:mo>
+                  </m:mrow>
+                  <m:mn>2</m:mn>
+                </m:msup>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>≤</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:msup>
+                  <m:mrow>
+                    <m:mo>|</m:mo>
+                    <m:mi>z</m:mi>
+                    <m:mo>|</m:mo>
+                  </m:mrow>
+                  <m:mn>2</m:mn>
+                </m:msup>
+                <m:mrow>
+                  <m:mo>+</m:mo>
+                  <m:mn>2</m:mn>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:msup>
+                  <m:mi>z</m:mi>
+                  <m:mo>'</m:mo>
+                </m:msup>
+                <m:mover accent="true">
+                  <m:mi>z</m:mi>
+                  <m:mo>¯</m:mo>
+                </m:mover>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                  <m:mo>+</m:mo>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:msup>
+                  <m:mi>z</m:mi>
+                  <m:mo>'</m:mo>
+                </m:msup>
+                <m:msup>
+                  <m:mrow>
+                    <m:mo>|</m:mo>
+                  </m:mrow>
+                  <m:mn>2</m:mn>
+                </m:msup>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:msup>
+                  <m:mrow>
+                    <m:mo>|</m:mo>
+                    <m:mi>z</m:mi>
+                    <m:mo>|</m:mo>
+                  </m:mrow>
+                  <m:mn>2</m:mn>
+                </m:msup>
+                <m:mrow>
+                  <m:mo>+</m:mo>
+                  <m:mn>2</m:mn>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:msup>
+                  <m:mi>z</m:mi>
+                  <m:mo>'</m:mo>
+                </m:msup>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                  <m:mo>|</m:mo>
+                  <m:mi>z</m:mi>
+                  <m:mo>|</m:mo>
+                  <m:mo>+</m:mo>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:msup>
+                  <m:mi>z</m:mi>
+                  <m:mo>'</m:mo>
+                </m:msup>
+                <m:msup>
+                  <m:mrow>
+                    <m:mo>|</m:mo>
+                  </m:mrow>
+                  <m:mn>2</m:mn>
+                </m:msup>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mo>|</m:mo>
+                  <m:mi>z</m:mi>
+                  <m:mo>|</m:mo>
+                  <m:mo>+</m:mo>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:msup>
+                  <m:mi>z</m:mi>
+                  <m:mo>'</m:mo>
+                </m:msup>
+                <m:msup>
+                  <m:mrow>
+                    <m:mo>|</m:mo>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mn>2</m:mn>
+                </m:msup>
+                <m:mo>.</m:mo>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+        </m:mtable>
+      </m:math>
+    </equation>
+</proof></rule>
+      <para id="id302947">The Triangle Inequality follows now by taking square roots.</para>
+<rule id="fs-id1165800004995"><label/><statement id="fs-id1165799267252">
+      <para id="id302953"><emphasis effect="bold">REMARK</emphasis>
+The Triangle Inequality is often used in conjunction
+with what's called the “add and subtract trick.”
+Frequently we want to estimate the size of a quantity like <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>z</m:mi><m:mo>-</m:mo><m:mi>w</m:mi><m:mo>|</m:mo><m:mo>,</m:mo></m:mrow></m:math>
+and we can often accomplish this estimation by adding and subtracting
+the same thing within the absolute value bars:</para>
+      <equation id="id302986">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:mo>|</m:mo>
+            <m:mi>z</m:mi>
+            <m:mo>-</m:mo>
+            <m:mi>w</m:mi>
+            <m:mo>|</m:mo>
+            <m:mo>=</m:mo>
+            <m:mo>|</m:mo>
+            <m:mi>z</m:mi>
+            <m:mo>-</m:mo>
+            <m:mi>v</m:mi>
+            <m:mo>+</m:mo>
+            <m:mi>v</m:mi>
+            <m:mo>-</m:mo>
+            <m:mi>w</m:mi>
+            <m:mo>|</m:mo>
+            <m:mo>≤</m:mo>
+            <m:mo>|</m:mo>
+            <m:mi>z</m:mi>
+            <m:mo>-</m:mo>
+            <m:mi>v</m:mi>
+            <m:mo>|</m:mo>
+            <m:mo>+</m:mo>
+            <m:mo>|</m:mo>
+            <m:mi>v</m:mi>
+            <m:mo>-</m:mo>
+            <m:mi>w</m:mi>
+            <m:mo>|</m:mo>
+            <m:mo>.</m:mo>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id303055">The point is that we have replaced the estimation problem of the possibly unknown quantity
+<m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>z</m:mi><m:mo>-</m:mo><m:mi>w</m:mi><m:mo>|</m:mo></m:mrow></m:math> by the estimation problems of two other quantities <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>z</m:mi><m:mo>-</m:mo><m:mi>v</m:mi><m:mo>|</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>v</m:mi><m:mo>-</m:mo><m:mi>w</m:mi><m:mo>|</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+It is often easier to estimate these latter two quantities, usually by an ingenious choice of <m:math overflow="scroll"><m:mi>v</m:mi></m:math> of course.</para>
+</statement></rule>
+<exercise id="fs-id1165801034110"><problem id="fs-id1165811608519">
+      <list id="id303139" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid16"> Prove the second assertion of the preceding theorem.
+</item>
+        <item id="uid17"> Prove the Triangle Inequality for the distance function. That is, prove that
+<equation id="id303168"><m:math overflow="scroll" mode="display"><m:mrow><m:mi>d</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>,</m:mo><m:mi>w</m:mi><m:mo>)</m:mo><m:mo>≤</m:mo><m:mi>d</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>,</m:mo><m:mi>v</m:mi><m:mo>)</m:mo><m:mo>+</m:mo><m:mi>d</m:mi><m:mo>(</m:mo><m:mi>v</m:mi><m:mo>,</m:mo><m:mi>w</m:mi><m:mo>)</m:mo></m:mrow></m:math></equation>
+for all <m:math overflow="scroll"><m:mrow><m:mi>z</m:mi><m:mo>,</m:mo><m:mi>w</m:mi><m:mo>,</m:mo><m:mi>v</m:mi><m:mo>∈</m:mo><m:mi>C</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+        <item id="uid18"> Use mathematical induction to prove that
+<equation id="id303270"><m:math overflow="scroll" mode="display"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:munderover><m:mo>∑</m:mo><m:mrow><m:mi>i</m:mi><m:mo>=</m:mo><m:mn>1</m:mn></m:mrow><m:mi>n</m:mi></m:munderover><m:msub><m:mi>a</m:mi><m:mi>i</m:mi></m:msub><m:mrow><m:mo>|</m:mo><m:mo>≤</m:mo></m:mrow><m:munderover><m:mo>∑</m:mo><m:mrow><m:mi>i</m:mi><m:mo>=</m:mo><m:mn>1</m:mn></m:mrow><m:mi>n</m:mi></m:munderover><m:mrow><m:mo>|</m:mo><m:msub><m:mi>a</m:mi><m:mi>i</m:mi></m:msub><m:mo>|</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></equation></item>
+      </list>
+</problem></exercise>
+      <para id="id303345">It may not be necessary to point out that part (b) of the preceding
+exercise provides a justification for the name “triangle inequality.”
+Indeed, part (b) of that exercise is just the assertion that
+the length of one side of a triangle in the plane is less than or equal
+to the sum of the lengths of the other two sides.
+Plot the three points <m:math overflow="scroll"><m:mrow><m:mi>z</m:mi><m:mo>,</m:mo><m:mi>w</m:mi><m:mo>,</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>v</m:mi><m:mo>,</m:mo></m:mrow></m:math> and see that this interpretation is correct.</para>
+
+<definition id="fs-id1165811806822"><term/><meaning id="fs-id1165804639504"><para id="fs-id1165815610375"> A subset <m:math overflow="scroll"><m:mi>S</m:mi></m:math> of <m:math overflow="scroll"><m:mi>C</m:mi></m:math> is called <emphasis effect="italics">Bounded</emphasis> if there exists a real number <m:math overflow="scroll"><m:mi>M</m:mi></m:math> such that
+<m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>z</m:mi><m:mo>|</m:mo><m:mo>≤</m:mo><m:mi>M</m:mi></m:mrow></m:math>
+for every <m:math overflow="scroll"><m:mi>z</m:mi></m:math> in <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math></para></meaning></definition>
+<exercise id="fs-id1165800080539"><problem id="fs-id1165802110832">
+      <list id="eip-id1164160940696" list-type="enumerated" number-style="lower-alpha"><item><para id="id303468">Let <m:math overflow="scroll"><m:mi>S</m:mi></m:math> be a subset of <m:math overflow="scroll"><m:mi>C</m:mi></m:math>. Let <m:math overflow="scroll"><m:msub><m:mi>S</m:mi><m:mn>1</m:mn></m:msub></m:math> be the subset of <m:math overflow="scroll"><m:mi>R</m:mi></m:math> consisting of the real parts of the complex
+numbers in <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>,</m:mo></m:mrow></m:math> and let <m:math overflow="scroll"><m:msub><m:mi>S</m:mi><m:mn>2</m:mn></m:msub></m:math> be the subset of <m:math overflow="scroll"><m:mi>R</m:mi></m:math> consisting of the imaginary parts of the elements of <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math> Prove that
+<m:math overflow="scroll"><m:mi>S</m:mi></m:math> is bounded if and only if <m:math overflow="scroll"><m:msub><m:mi>S</m:mi><m:mn>1</m:mn></m:msub></m:math> and <m:math overflow="scroll"><m:msub><m:mi>S</m:mi><m:mn>2</m:mn></m:msub></m:math> are both bounded.</para>
+      <para id="id303628">HINT: Use Part (c) of <link target-id="fs-id1169302072454"/>..</para></item>
+<item>
+      <para id="id303634"> Let <m:math overflow="scroll"><m:mi>S</m:mi></m:math> be the unit circle in the plane, i.e., the set
+of all complex numbers <m:math overflow="scroll"><m:mrow><m:mi>z</m:mi><m:mo>=</m:mo><m:mi>x</m:mi><m:mo>+</m:mo><m:mi>i</m:mi><m:mi>y</m:mi></m:mrow></m:math> for which <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>z</m:mi><m:mo>|</m:mo><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>.</m:mo></m:mrow></m:math>
+Compute the sets <m:math overflow="scroll"><m:msub><m:mi>S</m:mi><m:mn>1</m:mn></m:msub></m:math> and <m:math overflow="scroll"><m:msub><m:mi>S</m:mi><m:mn>2</m:mn></m:msub></m:math> of part (a).</para></item></list></problem></exercise>
+<exercise id="fs-id1165812409803"><problem id="fs-id1165802074704">
+     
+      <list id="id303727" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid19"> Verify that the formulas for the sum of a geometric
+progression and the binomial theorem (<link target-id="fs-id1168615573590" document="m36104"/> and <link target-id="fs-id1170975717247" document="m36104"/>)
+are valid for complex numbers <m:math overflow="scroll"><m:mi>z</m:mi></m:math> and <m:math overflow="scroll"><m:mrow><m:msup><m:mi>z</m:mi><m:mo>'</m:mo></m:msup><m:mo>.</m:mo></m:mrow></m:math>
+HINT: Check that, as claimed, the proofs of those theorems work in any field.
+</item>
+        <item id="uid20"> Prove <link target-id="fs-id1170978519676" document="m36104"/> for complex numbers <m:math overflow="scroll"><m:mi>z</m:mi></m:math> and <m:math overflow="scroll"><m:mrow><m:msup><m:mi>z</m:mi><m:mo>'</m:mo></m:msup><m:mo>.</m:mo></m:mrow></m:math></item>
+      </list>
+</problem></exercise>
+ 
+  </content>
+</document>

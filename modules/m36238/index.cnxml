@@ -1,0 +1,391 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML">
+  <title>The Fundamental Theorem of Algebra</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m36238</md:content-id>
+  <md:title>The Fundamental Theorem of Algebra</md:title>
+  <md:abstract>We can now prove the Fundamental Theorem of Algebra, the last
+of our primary goals. One final trumpet fanfare, please!</md:abstract>
+  <md:uuid>1d3ca371-ce06-49c7-995a-89367b9367c8</md:uuid>
+</metadata>
+
+<content>
+    <para id="id62159">We can now prove the Fundamental Theorem of Algebra, the last
+of our primary goals. One final trumpet fanfare, please!</para>
+<rule id="fs-id1172549276378" type="theorem"><title>Fundamental Theorem of Algebra</title><statement id="fs-id1172566319271">
+    <para id="id62165">
+Let <m:math overflow="scroll"><m:mrow><m:mi>p</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow></m:math> be a nonconstant polynomial of a complex variable. Then there exists a
+complex number <m:math overflow="scroll"><m:msub><m:mi>z</m:mi><m:mn>0</m:mn></m:msub></m:math> such that <m:math overflow="scroll"><m:mrow><m:mi>p</m:mi><m:mo>(</m:mo><m:msub><m:mi>z</m:mi><m:mn>0</m:mn></m:msub><m:mo>)</m:mo><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math>
+That is, every nonconstant polynomial of a complex variable has a root in the complex numbers.</para>
+</statement>
+<proof id="fs-id1172548258245">
+    <para id="id62568">
+We prove this theorem by contradiction.
+Thus, suppose that <m:math overflow="scroll"><m:mi>p</m:mi></m:math> is a nonconstant polynomial of degree <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>≥</m:mo><m:mn>1</m:mn><m:mo>,</m:mo></m:mrow></m:math> and that <m:math overflow="scroll"><m:mrow><m:mi>p</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow></m:math> is never 0.
+Set <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>p</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math>
+and observe that <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is defined and differentiable at every point <m:math overflow="scroll"><m:mrow><m:mi>z</m:mi><m:mo>∈</m:mo><m:mi>C</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+We will show that <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is a constant function, implying that <m:math overflow="scroll"><m:mrow><m:mi>p</m:mi><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>f</m:mi></m:mrow></m:math> is a constant,
+and that will give the contradiction.
+We prove that <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is constant by showing that its derivative is identically 0,
+and we compute its derivative by using the Cauchy Integral Formula for the derivative.</para>
+    <para id="id62712">From part (4) of <link target-id="fs-id1171768351772" document="m36147"/>, we recall that there exists a <m:math overflow="scroll"><m:mrow><m:mi>B</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn></m:mrow></m:math> such that
+<m:math overflow="scroll"><m:mrow><m:mfrac><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msub><m:mi>c</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mo>|</m:mo></m:mrow></m:mrow><m:mn>2</m:mn></m:mfrac><m:msup><m:mrow><m:mo>|</m:mo><m:mi>z</m:mi><m:mo>|</m:mo></m:mrow><m:mi>n</m:mi></m:msup><m:mo>≤</m:mo><m:mrow><m:mo>|</m:mo><m:mi>p</m:mi><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>|</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math>
+for all <m:math overflow="scroll"><m:mi>z</m:mi></m:math> for which <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>z</m:mi><m:mo>|</m:mo><m:mo>≥</m:mo><m:mi>B</m:mi><m:mo>,</m:mo></m:mrow></m:math> and where <m:math overflow="scroll"><m:msub><m:mi>c</m:mi><m:mi>n</m:mi></m:msub></m:math> is the (nonzero) leading coefficient of the polynomial <m:math overflow="scroll"><m:mrow><m:mi>p</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Hence, <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>|</m:mo></m:mrow><m:mo>≤</m:mo><m:mfrac><m:mi>M</m:mi><m:msup><m:mrow><m:mo>|</m:mo><m:mi>z</m:mi><m:mo>|</m:mo></m:mrow><m:mi>n</m:mi></m:msup></m:mfrac></m:mrow></m:math>
+for all <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>z</m:mi><m:mo>|</m:mo><m:mo>≥</m:mo><m:mi>B</m:mi><m:mo>,</m:mo></m:mrow></m:math> where we write <m:math overflow="scroll"><m:mi>M</m:mi></m:math> for <m:math overflow="scroll"><m:mrow><m:mrow><m:mn>2</m:mn><m:mo>/</m:mo><m:mo>|</m:mo></m:mrow><m:msub><m:mi>c</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mo>|</m:mo><m:mo>.</m:mo></m:mrow></m:mrow></m:math>
+Now, fix a point <m:math overflow="scroll"><m:mrow><m:mi>c</m:mi><m:mo>∈</m:mo><m:mi>C</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Because <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is differentiable on the open set <m:math overflow="scroll"><m:mrow><m:mi>U</m:mi><m:mo>=</m:mo><m:mi>C</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+we can use the corollary to <link target-id="fs-id1170819963435" document="m36235"/> to
+compute the derivative of <m:math overflow="scroll"><m:mi>f</m:mi></m:math> at <m:math overflow="scroll"><m:mi>c</m:mi></m:math> by using any of the curves <m:math overflow="scroll"><m:msub><m:mi>C</m:mi><m:mi>r</m:mi></m:msub></m:math> that bound
+the disks <m:math overflow="scroll"><m:mrow><m:msub><m:mi>B</m:mi><m:mi>r</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math>
+and we choose an <m:math overflow="scroll"><m:mi>r</m:mi></m:math> large enough so that <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo><m:mi>c</m:mi><m:mo>+</m:mo><m:mi>r</m:mi></m:mrow><m:msup><m:mi>e</m:mi><m:mrow><m:mi>i</m:mi><m:mi>t</m:mi></m:mrow></m:msup><m:mrow><m:mo>|</m:mo><m:mo>≥</m:mo><m:mi>B</m:mi></m:mrow></m:mrow></m:math>
+for all <m:math overflow="scroll"><m:mrow><m:mn>0</m:mn><m:mo>≤</m:mo><m:mi>t</m:mi><m:mo>≤</m:mo><m:mn>2</m:mn><m:mi>π</m:mi><m:mo>.</m:mo></m:mrow></m:math> Then,</para>
+    <equation id="uid1">
+      <m:math overflow="scroll" mode="display">
+        <m:mtable displaystyle="true">
+          <m:mtr>
+            <m:mtd columnalign="right">
+              <m:mrow>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:msup>
+                  <m:mi>f</m:mi>
+                  <m:mo>'</m:mo>
+                </m:msup>
+                <m:mrow>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>c</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:mfrac>
+                  <m:mn>1</m:mn>
+                  <m:mrow>
+                    <m:mn>2</m:mn>
+                    <m:mi>π</m:mi>
+                    <m:mi>i</m:mi>
+                  </m:mrow>
+                </m:mfrac>
+                <m:msub>
+                  <m:mo>∫</m:mo>
+                  <m:msub>
+                    <m:mi>C</m:mi>
+                    <m:mi>r</m:mi>
+                  </m:msub>
+                </m:msub>
+                <m:mfrac>
+                  <m:mrow>
+                    <m:mi>f</m:mi>
+                    <m:mo>(</m:mo>
+                    <m:mi>ζ</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:msup>
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:mi>ζ</m:mi>
+                      <m:mo>-</m:mo>
+                      <m:mi>c</m:mi>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                    <m:mn>2</m:mn>
+                  </m:msup>
+                </m:mfrac>
+                <m:mrow>
+                  <m:mspace width="0.166667em"/>
+                  <m:mi>d</m:mi>
+                  <m:mi>ζ</m:mi>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mfrac>
+                  <m:mn>1</m:mn>
+                  <m:mrow>
+                    <m:mn>2</m:mn>
+                    <m:mi>π</m:mi>
+                  </m:mrow>
+                </m:mfrac>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                  <m:msubsup>
+                    <m:mo>∫</m:mo>
+                    <m:mn>0</m:mn>
+                    <m:mrow>
+                      <m:mn>2</m:mn>
+                      <m:mi>π</m:mi>
+                    </m:mrow>
+                  </m:msubsup>
+                  <m:mfrac>
+                    <m:mrow>
+                      <m:mi>f</m:mi>
+                      <m:mo>(</m:mo>
+                      <m:mi>c</m:mi>
+                      <m:mo>+</m:mo>
+                      <m:mi>r</m:mi>
+                      <m:msup>
+                        <m:mi>e</m:mi>
+                        <m:mrow>
+                          <m:mi>i</m:mi>
+                          <m:mi>t</m:mi>
+                        </m:mrow>
+                      </m:msup>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                    <m:msup>
+                      <m:mrow>
+                        <m:mo>(</m:mo>
+                        <m:mi>c</m:mi>
+                        <m:mo>+</m:mo>
+                        <m:mi>r</m:mi>
+                        <m:msup>
+                          <m:mi>e</m:mi>
+                          <m:mrow>
+                            <m:mi>i</m:mi>
+                            <m:mi>t</m:mi>
+                          </m:mrow>
+                        </m:msup>
+                        <m:mo>-</m:mo>
+                        <m:mi>c</m:mi>
+                        <m:mo>)</m:mo>
+                      </m:mrow>
+                      <m:mn>2</m:mn>
+                    </m:msup>
+                  </m:mfrac>
+                  <m:mi>i</m:mi>
+                  <m:mi>r</m:mi>
+                  <m:msup>
+                    <m:mi>e</m:mi>
+                    <m:mrow>
+                      <m:mi>i</m:mi>
+                      <m:mi>t</m:mi>
+                    </m:mrow>
+                  </m:msup>
+                  <m:mspace width="0.166667em"/>
+                  <m:mi>d</m:mi>
+                  <m:mi>t</m:mi>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>≤</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mfrac>
+                  <m:mn>1</m:mn>
+                  <m:mrow>
+                    <m:mn>2</m:mn>
+                    <m:mi>π</m:mi>
+                    <m:mi>r</m:mi>
+                  </m:mrow>
+                </m:mfrac>
+                <m:msubsup>
+                  <m:mo>∫</m:mo>
+                  <m:mn>0</m:mn>
+                  <m:mrow>
+                    <m:mn>2</m:mn>
+                    <m:mi>π</m:mi>
+                  </m:mrow>
+                </m:msubsup>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                  <m:mi>f</m:mi>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>c</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mi>r</m:mi>
+                    <m:msup>
+                      <m:mi>e</m:mi>
+                      <m:mrow>
+                        <m:mi>i</m:mi>
+                        <m:mi>t</m:mi>
+                      </m:mrow>
+                    </m:msup>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:mspace width="0.166667em"/>
+                <m:mi>d</m:mi>
+                <m:mi>t</m:mi>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>≤</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mfrac>
+                  <m:mn>1</m:mn>
+                  <m:mrow>
+                    <m:mn>2</m:mn>
+                    <m:mi>π</m:mi>
+                    <m:mi>r</m:mi>
+                  </m:mrow>
+                </m:mfrac>
+                <m:msubsup>
+                  <m:mo>∫</m:mo>
+                  <m:mn>0</m:mn>
+                  <m:mrow>
+                    <m:mn>2</m:mn>
+                    <m:mi>π</m:mi>
+                  </m:mrow>
+                </m:msubsup>
+                <m:mfrac>
+                  <m:mi>M</m:mi>
+                  <m:mrow>
+                    <m:mrow>
+                      <m:mo>|</m:mo>
+                      <m:mi>c</m:mi>
+                      <m:mo>+</m:mo>
+                      <m:mi>r</m:mi>
+                    </m:mrow>
+                    <m:msup>
+                      <m:mi>e</m:mi>
+                      <m:mrow>
+                        <m:mi>i</m:mi>
+                        <m:mi>t</m:mi>
+                      </m:mrow>
+                    </m:msup>
+                    <m:msup>
+                      <m:mrow>
+                        <m:mo>|</m:mo>
+                      </m:mrow>
+                      <m:mi>n</m:mi>
+                    </m:msup>
+                  </m:mrow>
+                </m:mfrac>
+                <m:mspace width="0.166667em"/>
+                <m:mi>d</m:mi>
+                <m:mi>t</m:mi>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>≤</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mfrac>
+                  <m:mi>M</m:mi>
+                  <m:mrow>
+                    <m:mi>r</m:mi>
+                    <m:msup>
+                      <m:mi>B</m:mi>
+                      <m:mi>n</m:mi>
+                    </m:msup>
+                  </m:mrow>
+                </m:mfrac>
+                <m:mo>.</m:mo>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+        </m:mtable>
+      </m:math>
+    </equation>
+    <para id="id63698">Hence, by letting <m:math overflow="scroll"><m:mi>r</m:mi></m:math> tend to infinity, we get that</para>
+    <equation id="id63710">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mrow>
+            <m:mo>|</m:mo>
+          </m:mrow>
+          <m:msup>
+            <m:mi>f</m:mi>
+            <m:mo>'</m:mo>
+          </m:msup>
+          <m:mrow>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>c</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>|</m:mo>
+            <m:mo>≤</m:mo>
+          </m:mrow>
+          <m:munder>
+            <m:mo movablelimits="true" form="prefix">lim</m:mo>
+            <m:mrow>
+              <m:mi>r</m:mi>
+              <m:mo>→</m:mo>
+              <m:mi>∞</m:mi>
+            </m:mrow>
+          </m:munder>
+          <m:mfrac>
+            <m:mi>M</m:mi>
+            <m:mrow>
+              <m:mi>r</m:mi>
+              <m:msup>
+                <m:mi>B</m:mi>
+                <m:mi>n</m:mi>
+              </m:msup>
+            </m:mrow>
+          </m:mfrac>
+          <m:mo>=</m:mo>
+          <m:mn>0</m:mn>
+          <m:mo>,</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id63781">and the proof is complete.</para>
+</proof></rule>
+<rule id="fs-id1172549019741"><label>REMARK</label><statement id="fs-id1172544094764">
+    <para id="id63786">The Fundamental Theorem of Algebra settles a question
+first raised back in <link document="m36082"/>. There, we introduced a number <m:math overflow="scroll"><m:mi>I</m:mi></m:math> that was a root of the
+polynomial <m:math overflow="scroll"><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mn>1</m:mn><m:mo>.</m:mo></m:mrow></m:math>
+We did this in order to build a number system in which negative numbers would have square roots.
+We adjoined the “number” <m:math overflow="scroll"><m:mi>i</m:mi></m:math> to the set of real numbers to form
+the set of complex numbers,
+and we then saw that in fact every complex number <m:math overflow="scroll"><m:mi>z</m:mi></m:math> has a square root.
+However, a fear was that,
+in order to build a system in which every number has
+an <m:math overflow="scroll"><m:mi>n</m:mi></m:math>th root for every <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+we would continually need to
+be adjoining new elements to our number system.
+However, the Fundamental Theorem of Algebra shows that this is not necessary.
+The set of complex numbers is already rich enough to contain all <m:math overflow="scroll"><m:mi>n</m:mi></m:math>th roots and even more.</para>
+</statement></rule>
+    <para id="id63872">Practically the same argument as in the preceding proof establishes another striking result.</para>
+<rule id="fs-id1172552488682" type="theorem"><title>Liouville</title><statement id="fs-id1882790"><para id="fs-id1172548668827">
+
+Suppose <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is a bounded, everywhere differentiable function of a complex variable.
+Then <m:math overflow="scroll"><m:mi>f</m:mi></m:math> must be a constant function.</para>
+</statement></rule>
+<exercise id="fs-id1172544961270"><problem id="fs-id1172549903353">
+    <para id="id63898">
+Prove Liouville's Theorem.
+</para>
+</problem></exercise>
+  </content>
+</document>

@@ -1,0 +1,824 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML">
+  <title>Power Series Functions</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m36165</md:content-id>
+  <md:title>Power Series Functions</md:title>
+  <md:abstract>We introduce next a new kind of function.
+It is a natural generalization of a polynomial function.
+Among these
+will be the exponential function and the trigonometric functions.
+We begin by discussing functions of a complex varible,
+although totally analogous definitions and theorems hold for functions of a real variable.</md:abstract>
+  <md:uuid>562c806a-e152-4870-a054-260abb41619c</md:uuid>
+</metadata>
+
+<content>
+    <para id="id62159">The class of functions that we know are continuous
+includes, among others, the polynomials, the rational functions, and the <m:math overflow="scroll"><m:mi>n</m:mi></m:math>th root functions.
+We can combine these functions in various ways, e.g., sums, products, quotients, and so on.
+We also can combine continuous functions using composition, so that we know that <m:math overflow="scroll"><m:mi>n</m:mi></m:math>th roots of rational functions are also continuous.
+The set of all functions obtained in this manner is called
+the class of “algebraic functions.”
+Now that we also have developed a notion of limit,
+or infinite sum, we can construct other continuous functions.</para>
+    <para id="id62187">We introduce next a new kind of function.
+It is a natural generalization of a polynomial function.
+Among these
+will be the exponential function and the trigonometric functions.
+We begin by discussing functions of a complex varible,
+although totally analogous definitions and theorems hold for functions of a real variable.</para>
+<definition id="fs-id1171786056594"><term/><meaning id="fs-id3497023">
+    <para id="id62193">
+Let <m:math overflow="scroll"><m:msubsup><m:mrow><m:mo>{</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow><m:mn>0</m:mn><m:mi>∞</m:mi></m:msubsup></m:math> be a sequence of real or complex numbers.
+By the <emphasis effect="italics">power series function</emphasis><m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msubsup><m:mo>∑</m:mo><m:mrow><m:mi>n</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow><m:mi>∞</m:mi></m:msubsup><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:msup><m:mi>z</m:mi><m:mi>n</m:mi></m:msup></m:mrow></m:math> we
+mean the function <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>:</m:mo><m:mi>S</m:mi><m:mo>→</m:mo><m:mi>C</m:mi></m:mrow></m:math>
+where the domain <m:math overflow="scroll"><m:mi>S</m:mi></m:math> is the set of all <m:math overflow="scroll"><m:mrow><m:mi>z</m:mi><m:mo>∈</m:mo><m:mi>C</m:mi></m:mrow></m:math> for which the infinite series
+<m:math overflow="scroll"><m:mrow><m:mo>∑</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:msup><m:mi>z</m:mi><m:mi>n</m:mi></m:msup></m:mrow></m:math> converges,
+and where <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is the rule that assigns to such a <m:math overflow="scroll"><m:mrow><m:mi>z</m:mi><m:mo>∈</m:mo><m:mi>S</m:mi></m:mrow></m:math> the sum of the series.</para>
+    <para id="id62718">The numbers <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> defining a power series function are called the
+<emphasis effect="italics">coefficients</emphasis> of the function.</para>
+    <para id="id62746">We associate to a power series function <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msubsup><m:mo>∑</m:mo><m:mrow><m:mi>n</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow><m:mi>∞</m:mi></m:msubsup><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:msup><m:mi>z</m:mi><m:mi>n</m:mi></m:msup></m:mrow></m:math> its
+sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>S</m:mi><m:mi>N</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> of partial sums. We write</para>
+    <equation id="id62818">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:msub>
+            <m:mi>S</m:mi>
+            <m:mi>N</m:mi>
+          </m:msub>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>z</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>=</m:mo>
+          <m:munderover>
+            <m:mo>∑</m:mo>
+            <m:mrow>
+              <m:mi>n</m:mi>
+              <m:mo>=</m:mo>
+              <m:mn>0</m:mn>
+            </m:mrow>
+            <m:mi>N</m:mi>
+          </m:munderover>
+          <m:msub>
+            <m:mi>a</m:mi>
+            <m:mi>n</m:mi>
+          </m:msub>
+          <m:msup>
+            <m:mi>z</m:mi>
+            <m:mi>n</m:mi>
+          </m:msup>
+          <m:mo>.</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id62104">Notice that polynomial functions are very special cases of power series functions.
+They are the power series functions for which the coefficients <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> are all 0 beyond some point.
+Note also that each partial sum <m:math overflow="scroll"><m:msub><m:mi>S</m:mi><m:mi>N</m:mi></m:msub></m:math> for any power series function is itself a polynomial function of degree less than or equal to <m:math overflow="scroll"><m:mrow><m:mi>N</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Moreover, if <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is a power series function, then
+for each <m:math overflow="scroll"><m:mi>z</m:mi></m:math> in its domain we have <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msub><m:mo movablelimits="true" form="prefix">lim</m:mo><m:mi>N</m:mi></m:msub><m:msub><m:mi>S</m:mi><m:mi>N</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math>
+Evidently, every power series function is a “limit” of a sequence of polynomials.</para>
+    <para id="id63170">Obviously, the domain <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>≡</m:mo><m:msub><m:mi>S</m:mi><m:mi>f</m:mi></m:msub></m:mrow></m:math> of a power series function <m:math overflow="scroll"><m:mi>f</m:mi></m:math>
+depends on the coefficients <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> determining the function.
+Our first goal is to describe this domain.</para>
+</meaning></definition>
+<rule id="fs-id1171784230006" type="theorem"><statement id="fs-id1171789945416">
+    <para id="id63218">
+Let <m:math overflow="scroll"><m:mi>f</m:mi></m:math> be a power series function: <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msubsup><m:mo>∑</m:mo><m:mrow><m:mi>n</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow><m:mi>∞</m:mi></m:msubsup><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:msup><m:mi>z</m:mi><m:mi>n</m:mi></m:msup></m:mrow></m:math> with domain <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math> Then:</para>
+    <list id="id63294" display="block" list-type="enumerated">
+      <item id="uid1"> 0 belongs to <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid2">If a number <m:math overflow="scroll"><m:mi>t</m:mi></m:math> belongs to <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>,</m:mo></m:mrow></m:math> then every number <m:math overflow="scroll"><m:mrow><m:mi>u</m:mi><m:mo>,</m:mo></m:mrow></m:math> for which <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>u</m:mi><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mo>|</m:mo><m:mi>t</m:mi><m:mo>|</m:mo><m:mo>,</m:mo></m:mrow></m:math> also belongs to <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid3"> <m:math overflow="scroll"><m:mi>S</m:mi></m:math> is a disk of radius <m:math overflow="scroll"><m:mi>r</m:mi></m:math> around 0 in <m:math overflow="scroll"><m:mi>C</m:mi></m:math> (possibly open, possibly closed, possibly neither, possibly infinite).
+That is, <m:math overflow="scroll"><m:mi>S</m:mi></m:math> consists of the disk <m:math overflow="scroll"><m:mrow><m:msub><m:mi>B</m:mi><m:mi>r</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mn>0</m:mn><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mrow><m:mo>{</m:mo><m:mi>z</m:mi><m:mo>:</m:mo><m:mo>|</m:mo><m:mi>z</m:mi><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mi>r</m:mi><m:mo>}</m:mo></m:mrow></m:mrow></m:math> possibly together with some of the points <m:math overflow="scroll"><m:mi>z</m:mi></m:math> for which <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>z</m:mi><m:mo>|</m:mo><m:mo>=</m:mo><m:mi>r</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid4">The radius <m:math overflow="scroll"><m:mi>r</m:mi></m:math> of the disk in part (3) is given by the
+Cauchy-Hadamard formula:
+<equation id="id63535"><m:math overflow="scroll" mode="display"><m:mrow><m:mi>r</m:mi><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mrow><m:mrow><m:mo movablelimits="true" form="prefix">lim sup</m:mo><m:mo>|</m:mo></m:mrow><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:msup><m:mrow><m:mo>|</m:mo></m:mrow><m:mrow><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>n</m:mi></m:mrow></m:msup></m:mrow></m:mfrac><m:mo>,</m:mo></m:mrow></m:math></equation>
+which we interpret to imply that <m:math overflow="scroll"><m:mrow><m:mi>r</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math> if and only if the limsup on the right is infinite, and <m:math overflow="scroll"><m:mrow><m:mi>r</m:mi><m:mo>=</m:mo><m:mi>∞</m:mi></m:mrow></m:math> if and only if that
+limsup is <m:math overflow="scroll"><m:mrow><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math></item>
+    </list>
+</statement>
+<proof id="fs-id1748333">
+    <para id="id63632">
+Part (1) is clear.</para>
+    <para id="id63639">To see part 2, assume that <m:math overflow="scroll"><m:mi>t</m:mi></m:math> belongs to <m:math overflow="scroll"><m:mi>S</m:mi></m:math> and that <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>u</m:mi><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mo>|</m:mo><m:mi>t</m:mi><m:mo>|</m:mo><m:mo>.</m:mo></m:mrow></m:math> We wish to show
+that the infinites series <m:math overflow="scroll"><m:mrow><m:mo>∑</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:msup><m:mi>u</m:mi><m:mi>n</m:mi></m:msup></m:mrow></m:math> converges.
+In fact, we will show that <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>∑</m:mo><m:mo>|</m:mo></m:mrow><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:msup><m:mi>u</m:mi><m:mi>n</m:mi></m:msup><m:mrow><m:mo>|</m:mo></m:mrow></m:mrow></m:math> is convergent, i.e., that <m:math overflow="scroll"><m:mrow><m:mo>∑</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:msup><m:mi>u</m:mi><m:mi>n</m:mi></m:msup></m:mrow></m:math> is absolutely convergent.
+We are given that the infinite series <m:math overflow="scroll"><m:mrow><m:mo>∑</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:msup><m:mi>t</m:mi><m:mi>n</m:mi></m:msup></m:mrow></m:math> converges, which implies
+that the terms <m:math overflow="scroll"><m:mrow><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:msup><m:mi>t</m:mi><m:mi>n</m:mi></m:msup></m:mrow></m:math> tend to 0.
+Hence, let <m:math overflow="scroll"><m:mi>B</m:mi></m:math> be a number such that <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:msup><m:mi>z</m:mi><m:mi>n</m:mi></m:msup><m:mrow><m:mo>|</m:mo><m:mo>≤</m:mo><m:mi>B</m:mi></m:mrow></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+and set <m:math overflow="scroll"><m:mrow><m:mi>α</m:mi><m:mo>=</m:mo><m:mo>|</m:mo><m:mi>u</m:mi><m:mo>|</m:mo><m:mo>/</m:mo><m:mo>|</m:mo><m:mi>t</m:mi><m:mo>|</m:mo><m:mo>.</m:mo></m:mrow></m:math> Then <m:math overflow="scroll"><m:mrow><m:mi>α</m:mi><m:mo>&lt;</m:mo><m:mn>1</m:mn><m:mo>,</m:mo></m:mrow></m:math> and therefore the infinite series
+<m:math overflow="scroll"><m:mrow><m:mo>∑</m:mo><m:mi>B</m:mi><m:msup><m:mi>α</m:mi><m:mi>n</m:mi></m:msup></m:mrow></m:math> is convergent.
+Finally, <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:msup><m:mi>u</m:mi><m:mi>n</m:mi></m:msup><m:mrow><m:mo>|</m:mo><m:mo>=</m:mo><m:mo>|</m:mo></m:mrow><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:msup><m:mi>t</m:mi><m:mi>n</m:mi></m:msup><m:mrow><m:mo>|</m:mo></m:mrow><m:msup><m:mi>α</m:mi><m:mi>n</m:mi></m:msup><m:mo>≤</m:mo><m:mi>B</m:mi><m:msup><m:mi>α</m:mi><m:mi>n</m:mi></m:msup><m:mo>,</m:mo></m:mrow></m:math>
+which, by the Comparison Test, implies that <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>∑</m:mo><m:mo>|</m:mo></m:mrow><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:msup><m:mi>u</m:mi><m:mi>n</m:mi></m:msup><m:mrow><m:mo>|</m:mo></m:mrow></m:mrow></m:math> is convergent, as desired.</para>
+    <para id="id64023">Part (3) follows, with just a little thought, from part 2.</para>
+    <para id="id64027">To prove part (4), note that <m:math overflow="scroll"><m:mrow><m:mrow><m:mo movablelimits="true" form="prefix">lim sup</m:mo><m:mo>|</m:mo></m:mrow><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:msup><m:mrow><m:mo>|</m:mo></m:mrow><m:mrow><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>n</m:mi></m:mrow></m:msup></m:mrow></m:math> either is finite or it is infinite.
+assume first that the sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:mo>|</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:msup><m:mo>|</m:mo><m:mrow><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>n</m:mi></m:mrow></m:msup><m:mo>}</m:mo></m:mrow></m:math> is not bounded;
+i.e., that <m:math overflow="scroll"><m:mrow><m:mrow><m:mo movablelimits="true" form="prefix">lim sup</m:mo><m:mo>|</m:mo></m:mrow><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:msup><m:mrow><m:mo>|</m:mo></m:mrow><m:mrow><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>n</m:mi></m:mrow></m:msup><m:mo>=</m:mo><m:mi>∞</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Then, given any number <m:math overflow="scroll"><m:mrow><m:mi>p</m:mi><m:mo>,</m:mo></m:mrow></m:math> there are
+infinitely many terms <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:msup><m:mrow><m:mo>|</m:mo></m:mrow><m:mrow><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>n</m:mi></m:mrow></m:msup></m:mrow></m:math> that are larger than <m:math overflow="scroll"><m:mrow><m:mi>p</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+So, for any <m:math overflow="scroll"><m:mrow><m:mi>z</m:mi><m:mo>≠</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> there exist infinitely many terms
+<m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:msup><m:mrow><m:mo>|</m:mo></m:mrow><m:mrow><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>n</m:mi></m:mrow></m:msup></m:mrow></m:math> that are larger than <m:math overflow="scroll"><m:mrow><m:mn>1</m:mn><m:mo>/</m:mo><m:mo>|</m:mo><m:mi>z</m:mi><m:mo>|</m:mo><m:mo>.</m:mo></m:mrow></m:math> But then <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:msup><m:mi>z</m:mi><m:mi>n</m:mi></m:msup><m:mrow><m:mo>|</m:mo><m:mo>&gt;</m:mo><m:mn>1</m:mn></m:mrow></m:mrow></m:math> for all such terms. Therefore
+the infinite series <m:math overflow="scroll"><m:mrow><m:mo>∑</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:msup><m:mi>z</m:mi><m:mi>n</m:mi></m:msup></m:mrow></m:math> is not convergent, since <m:math overflow="scroll"><m:mrow><m:mo movablelimits="true" form="prefix">lim</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:msup><m:mi>z</m:mi><m:mi>n</m:mi></m:msup></m:mrow></m:math> is not zero. So no such z is in the domain <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math> This shows
+that if <m:math overflow="scroll"><m:mrow><m:mrow><m:mo movablelimits="true" form="prefix">lim sup</m:mo><m:mo>|</m:mo></m:mrow><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:msup><m:mrow><m:mo>|</m:mo></m:mrow><m:mrow><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>n</m:mi></m:mrow></m:msup><m:mo>=</m:mo><m:mi>∞</m:mi><m:mo>,</m:mo></m:mrow></m:math> then <m:math overflow="scroll"><m:mrow><m:mrow><m:mi>r</m:mi><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mo movablelimits="true" form="prefix">lim sup</m:mo><m:mo>|</m:mo></m:mrow><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:msup><m:mrow><m:mo>|</m:mo></m:mrow><m:mrow><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>n</m:mi></m:mrow></m:msup><m:mo>.</m:mo></m:mrow></m:math></para>
+    <para id="id64465">Now, suppose the sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:mo>|</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:msup><m:mo>|</m:mo><m:mrow><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>n</m:mi></m:mrow></m:msup><m:mo>}</m:mo></m:mrow></m:math> is bounded, and let <m:math overflow="scroll"><m:mi>L</m:mi></m:math> denote its limsup.
+We must show that <m:math overflow="scroll"><m:mrow><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>r</m:mi><m:mo>=</m:mo><m:mi>L</m:mi><m:mo>.</m:mo></m:mrow></m:math> We
+will show the following two claims: (a) if <m:math overflow="scroll"><m:mrow><m:mn>1</m:mn><m:mo>/</m:mo><m:mo>|</m:mo><m:mi>z</m:mi><m:mo>|</m:mo><m:mo>&gt;</m:mo><m:mi>L</m:mi><m:mo>,</m:mo></m:mrow></m:math> then <m:math overflow="scroll"><m:mrow><m:mi>z</m:mi><m:mo>∈</m:mo><m:mi>S</m:mi><m:mo>,</m:mo></m:mrow></m:math> and (b) if <m:math overflow="scroll"><m:mrow><m:mn>1</m:mn><m:mo>/</m:mo><m:mo>|</m:mo><m:mi>z</m:mi><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mi>L</m:mi><m:mo>,</m:mo></m:mrow></m:math> then <m:math overflow="scroll"><m:mrow><m:mi>z</m:mi><m:mo>∉</m:mo><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math> (Why will
+these two claims complete the proof?)
+Thus, suppose that <m:math overflow="scroll"><m:mrow><m:mn>1</m:mn><m:mo>/</m:mo><m:mo>|</m:mo><m:mi>z</m:mi><m:mo>|</m:mo><m:mo>&gt;</m:mo><m:mi>L</m:mi><m:mo>.</m:mo></m:mrow></m:math> Let <m:math overflow="scroll"><m:mi>β</m:mi></m:math> be a number satisfying <m:math overflow="scroll"><m:mrow><m:mi>L</m:mi><m:mo>&lt;</m:mo><m:mi>β</m:mi><m:mo>&lt;</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mo>|</m:mo><m:mi>z</m:mi><m:mo>|</m:mo><m:mo>,</m:mo></m:mrow></m:math> and let <m:math overflow="scroll"><m:mrow><m:mi>α</m:mi><m:mo>=</m:mo><m:mi>β</m:mi><m:mo>|</m:mo><m:mi>z</m:mi><m:mo>|</m:mo><m:mo>.</m:mo></m:mrow></m:math> Then <m:math overflow="scroll"><m:mrow><m:mn>0</m:mn><m:mo>&lt;</m:mo><m:mi>α</m:mi><m:mo>&lt;</m:mo><m:mn>1</m:mn><m:mo>.</m:mo></m:mrow></m:math>
+Now there exists a natural number <m:math overflow="scroll"><m:mi>N</m:mi></m:math> so that <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:msup><m:mrow><m:mo>|</m:mo></m:mrow><m:mrow><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>n</m:mi></m:mrow></m:msup><m:mo>&lt;</m:mo><m:mi>β</m:mi></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>≥</m:mo><m:mi>N</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+or equivalently <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mo>|</m:mo><m:mo>≤</m:mo></m:mrow><m:msup><m:mi>β</m:mi><m:mi>n</m:mi></m:msup></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>≥</m:mo><m:mi>N</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+(See part (a) of Exercise
+2.17. ) This means that for all <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>≥</m:mo><m:mi>N</m:mi></m:mrow></m:math> we have <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:msup><m:mi>z</m:mi><m:mi>n</m:mi></m:msup><m:mrow><m:mo>|</m:mo><m:mo>=</m:mo><m:mo>|</m:mo></m:mrow><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>/</m:mo><m:msup><m:mi>β</m:mi><m:mi>n</m:mi></m:msup><m:msup><m:mrow><m:mo>|</m:mo><m:mo>|</m:mo><m:mi>β</m:mi><m:mi>z</m:mi><m:mo>|</m:mo></m:mrow><m:mi>n</m:mi></m:msup><m:mo>≤</m:mo><m:msup><m:mi>α</m:mi><m:mi>n</m:mi></m:msup><m:mo>.</m:mo></m:mrow></m:math> This implies by the Comparison Test that the power series
+<m:math overflow="scroll"><m:mrow><m:mo>∑</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:msup><m:mi>z</m:mi><m:mi>n</m:mi></m:msup></m:mrow></m:math> is absolutely convergent, whence convergent.
+Hence, <m:math overflow="scroll"><m:mrow><m:mi>z</m:mi><m:mo>∈</m:mo><m:mi>S</m:mi><m:mo>,</m:mo></m:mrow></m:math> and this proves claim (a) above.
+Incidentally, note also that if <m:math overflow="scroll"><m:mrow><m:mi>L</m:mi><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> this argument shows that <m:math overflow="scroll"><m:mrow><m:mi>r</m:mi><m:mo>=</m:mo><m:mi>∞</m:mi><m:mo>,</m:mo></m:mrow></m:math> as desired.</para>
+    <para id="id65007">To verify claim (b),
+suppose that <m:math overflow="scroll"><m:mrow><m:mn>1</m:mn><m:mo>/</m:mo><m:mo>|</m:mo><m:mi>z</m:mi><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mi>L</m:mi><m:mo>.</m:mo></m:mrow></m:math> Then there are infinitely many terms of the sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:mo>|</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:msup><m:mo>|</m:mo><m:mrow><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>n</m:mi></m:mrow></m:msup><m:mo>}</m:mo></m:mrow></m:math> that are greater
+than <m:math overflow="scroll"><m:mrow><m:mn>1</m:mn><m:mo>/</m:mo><m:mo>|</m:mo><m:mi>z</m:mi><m:mo>|</m:mo><m:mo>.</m:mo></m:mrow></m:math> (Why?)
+For each such term, we would then have <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:msup><m:mi>z</m:mi><m:mi>n</m:mi></m:msup><m:mrow><m:mo>|</m:mo><m:mo>≥</m:mo><m:mn>1</m:mn><m:mo>.</m:mo></m:mrow></m:mrow></m:math> This means that the infinite
+series <m:math overflow="scroll"><m:mrow><m:mo>∑</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:msup><m:mi>z</m:mi><m:mi>n</m:mi></m:msup></m:mrow></m:math> is not convergent and <m:math overflow="scroll"><m:mrow><m:mi>z</m:mi><m:mo>∉</m:mo><m:mi>S</m:mi><m:mo>,</m:mo></m:mrow></m:math> which shows claim b.</para>
+    <para id="id65170">Hence, in all cases, we have that <m:math overflow="scroll"><m:mrow><m:mrow><m:mi>r</m:mi><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mo movablelimits="true" form="prefix">lim sup</m:mo><m:mo>|</m:mo></m:mrow><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:msup><m:mrow><m:mo>|</m:mo></m:mrow><m:mrow><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>n</m:mi></m:mrow></m:msup><m:mo>,</m:mo></m:mrow></m:math> as desired.</para>
+</proof></rule>
+<definition id="fs-id1171760761964"><term/><meaning id="fs-id7449377">
+    <para id="id65223">
+If <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is a power series function, the number <m:math overflow="scroll"><m:mi>r</m:mi></m:math> of the preceding theorem is called the <emphasis effect="italics">radius of convergence</emphasis>
+
+of the power series. The disk <m:math overflow="scroll"><m:mi>S</m:mi></m:math> of radius <m:math overflow="scroll"><m:mi>r</m:mi></m:math> around 0, denoted by <m:math overflow="scroll"><m:mrow><m:msub><m:mi>B</m:mi><m:mi>r</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mn>0</m:mn><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> is called the <emphasis effect="italics">disk of convergence.</emphasis></para>
+</meaning></definition>
+<exercise id="fs-id1171769766696"><problem id="fs-id4305788">
+    <para id="id65302">
+Compute directly the radii of convergence for the following power series functions, i.e., without using the Cauchy-Hadamard formula.
+Then, when possible, verify that the Cauchy-Hadamard formula agrees with your computation.</para>
+    <list id="id65316" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid5"> <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mo>∑</m:mo><m:msup><m:mi>z</m:mi><m:mi>n</m:mi></m:msup><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid6"> <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mo>∑</m:mo><m:msup><m:mi>n</m:mi><m:mn>2</m:mn></m:msup><m:msup><m:mi>z</m:mi><m:mi>n</m:mi></m:msup><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid7"> <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mo>∑</m:mo><m:msup><m:mrow><m:mo>(</m:mo><m:mo>-</m:mo><m:mn>1</m:mn><m:mo>)</m:mo></m:mrow><m:mi>n</m:mi></m:msup><m:mrow><m:mo>(</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mrow><m:mo>(</m:mo><m:mi>n</m:mi><m:mo>+</m:mo><m:mn>1</m:mn><m:mo>)</m:mo></m:mrow><m:mo>)</m:mo></m:mrow><m:msup><m:mi>z</m:mi><m:mi>n</m:mi></m:msup><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid8"> <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mo>∑</m:mo><m:mrow><m:mo>(</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mrow><m:mo>(</m:mo><m:mi>n</m:mi><m:mo>+</m:mo><m:mn>1</m:mn><m:mo>)</m:mo></m:mrow><m:mo>)</m:mo></m:mrow><m:msup><m:mi>z</m:mi><m:mrow><m:mn>3</m:mn><m:mi>n</m:mi><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow></m:msup></m:mrow></m:math>.
+</item>
+      <item id="uid9"> <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msubsup><m:mo>∑</m:mo><m:mrow><m:mi>n</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow><m:mi>∞</m:mi></m:msubsup><m:msup><m:mi>z</m:mi><m:mi>n</m:mi></m:msup><m:mo>/</m:mo><m:mi>n</m:mi><m:mo>!</m:mo><m:mo>.</m:mo></m:mrow></m:math></item>
+    </list>
+</problem></exercise>
+<exercise id="fs-id1171770312646"><problem id="fs-id1171761905122">
+    <list id="id65634" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid10"> Use part (e) of <link target-id="fs-id1172704529252" document="m36141"/> to show that a power series function <m:math overflow="scroll"><m:mi>p</m:mi></m:math> is an even function if and only if its only
+nonzero coefficients are even ones, i.e., the <m:math overflow="scroll"><m:msub><m:mi>a</m:mi><m:mrow><m:mn>2</m:mn><m:mi>k</m:mi></m:mrow></m:msub></m:math>'s.
+Show also that a power series function is an odd function if and only if its
+only nonzero coefficients are odd ones, i.e., the <m:math overflow="scroll"><m:msub><m:mi>a</m:mi><m:mrow><m:mn>2</m:mn><m:mi>k</m:mi><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow></m:msub></m:math>'s.
+</item>
+      <item id="uid11"> Suppose <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msubsup><m:mo>∑</m:mo><m:mrow><m:mi>k</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow><m:mi>∞</m:mi></m:msubsup><m:msub><m:mi>a</m:mi><m:mrow><m:mn>2</m:mn><m:mi>k</m:mi></m:mrow></m:msub><m:msup><m:mi>z</m:mi><m:mrow><m:mn>2</m:mn><m:mi>k</m:mi></m:mrow></m:msup></m:mrow></m:math> is a power series function that is an even function.
+Show that
+<equation id="id65769"><m:math overflow="scroll" mode="display"><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>i</m:mi><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:munderover><m:mo>∑</m:mo><m:mrow><m:mi>k</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow><m:mi>∞</m:mi></m:munderover><m:msup><m:mrow><m:mo>(</m:mo><m:mo>-</m:mo><m:mn>1</m:mn><m:mo>)</m:mo></m:mrow><m:mi>k</m:mi></m:msup><m:msub><m:mi>a</m:mi><m:mrow><m:mn>2</m:mn><m:mi>k</m:mi></m:mrow></m:msub><m:msup><m:mi>z</m:mi><m:mrow><m:mn>2</m:mn><m:mi>k</m:mi></m:mrow></m:msup><m:mo>=</m:mo><m:msup><m:mi>f</m:mi><m:mi>a</m:mi></m:msup><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math></equation>
+where <m:math overflow="scroll"><m:msup><m:mi>f</m:mi><m:mi>a</m:mi></m:msup></m:math> is the power series function obtained from <m:math overflow="scroll"><m:mi>f</m:mi></m:math> by alternating the signs of its coefficients.
+We call this function <m:math overflow="scroll"><m:msup><m:mi>f</m:mi><m:mi>a</m:mi></m:msup></m:math> the alternating version of <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid12"> If <m:math overflow="scroll"><m:mrow><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msubsup><m:mo>∑</m:mo><m:mrow><m:mi>k</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow><m:mi>∞</m:mi></m:msubsup><m:msub><m:mi>a</m:mi><m:mrow><m:mn>2</m:mn><m:mi>k</m:mi><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:msup><m:mi>z</m:mi><m:mrow><m:mn>2</m:mn><m:mi>k</m:mi><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow></m:msup></m:mrow></m:math> is a power series function
+that is an odd function, show that
+<equation id="id65998"><m:math overflow="scroll" mode="display"><m:mrow><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>i</m:mi><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>i</m:mi><m:munderover><m:mo>∑</m:mo><m:mrow><m:mi>k</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow><m:mi>∞</m:mi></m:munderover><m:msup><m:mrow><m:mo>(</m:mo><m:mo>-</m:mo><m:mn>1</m:mn><m:mo>)</m:mo></m:mrow><m:mi>k</m:mi></m:msup><m:msub><m:mi>a</m:mi><m:mrow><m:mn>2</m:mn><m:mi>k</m:mi><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:msup><m:mi>z</m:mi><m:mrow><m:mn>2</m:mn><m:mi>k</m:mi><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow></m:msup><m:mo>=</m:mo><m:mi>i</m:mi><m:msup><m:mi>g</m:mi><m:mi>a</m:mi></m:msup><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math></equation>
+where again <m:math overflow="scroll"><m:msup><m:mi>g</m:mi><m:mi>a</m:mi></m:msup></m:math> is the power series function obtained from <m:math overflow="scroll"><m:mi>g</m:mi></m:math> by alternating the signs of its coefficients.
+</item>
+      <item id="uid13"> If <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is any power series function, show that
+<equation id="id66157"><m:math overflow="scroll" mode="display"><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>i</m:mi><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msub><m:mi>f</m:mi><m:mi>e</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>i</m:mi><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:msub><m:mi>f</m:mi><m:mi>o</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>i</m:mi><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msubsup><m:mi>f</m:mi><m:mi>e</m:mi><m:mi>a</m:mi></m:msubsup><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mi>i</m:mi><m:msubsup><m:mi>f</m:mi><m:mi>o</m:mi><m:mi>a</m:mi></m:msubsup><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math></equation>
+and hence that <m:math overflow="scroll"><m:mrow><m:msub><m:mi>f</m:mi><m:mi>e</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>i</m:mi><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msubsup><m:mi>f</m:mi><m:mi>e</m:mi><m:mi>a</m:mi></m:msubsup><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math>
+and <m:math overflow="scroll"><m:mrow><m:msub><m:mi>f</m:mi><m:mi>o</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>i</m:mi><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>i</m:mi><m:msubsup><m:mi>p</m:mi><m:mi>o</m:mi><m:mi>a</m:mi></m:msubsup><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></item>
+    </list>
+</problem></exercise>
+    <para id="id66362">The next theorem will not come as a shock, but its
+proof is not so simple.</para>
+<rule id="fs-id1171787790149" type="theorem"><statement id="fs-id1171763540266"><para id="fs-id1171779028293">
+Let <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mo>∑</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:msup><m:mi>z</m:mi><m:mi>n</m:mi></m:msup></m:mrow></m:math> be a power series function with radius of convergence <m:math overflow="scroll"><m:mrow><m:mi>r</m:mi><m:mo>.</m:mo></m:mrow></m:math> Then <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is continuous at each
+point in the open disk <m:math overflow="scroll"><m:mrow><m:msub><m:mi>B</m:mi><m:mi>r</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mn>0</m:mn><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> i.e., at each point
+<m:math overflow="scroll"><m:mi>z</m:mi></m:math> for which <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>z</m:mi><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mi>r</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+</statement>
+<proof id="fs-id1171767829809">
+    <para id="id66483">
+Let <m:math overflow="scroll"><m:mrow><m:mi>z</m:mi><m:mo>∈</m:mo><m:msub><m:mi>B</m:mi><m:mi>r</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mn>0</m:mn><m:mo>)</m:mo></m:mrow></m:mrow></m:math> be given.
+We must make some auxiliary constructions before we can show that <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is continuous at <m:math overflow="scroll"><m:mrow><m:mi>z</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+First, choose a <m:math overflow="scroll"><m:msup><m:mi>z</m:mi><m:mo>'</m:mo></m:msup></m:math> such that <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo><m:mi>z</m:mi><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mo>|</m:mo></m:mrow><m:msup><m:mi>z</m:mi><m:mo>'</m:mo></m:msup><m:mrow><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mi>r</m:mi><m:mo>.</m:mo></m:mrow></m:mrow></m:math>
+Next, set <m:math overflow="scroll"><m:mrow><m:msub><m:mi>b</m:mi><m:mi>n</m:mi></m:msub><m:mo>=</m:mo><m:mrow><m:mo>|</m:mo><m:mi>n</m:mi><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>|</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math>
+and define <m:math overflow="scroll"><m:mrow><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mo>∑</m:mo><m:msub><m:mi>b</m:mi><m:mi>n</m:mi></m:msub><m:msup><m:mi>z</m:mi><m:mi>n</m:mi></m:msup><m:mo>.</m:mo></m:mrow></m:math>
+By the Cauchy-Hadamard formula, we see that the power series function <m:math overflow="scroll"><m:mi>g</m:mi></m:math> has the
+same radius of convergence as the power series function <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Indeed, <m:math overflow="scroll"><m:mrow><m:mrow><m:mo movablelimits="true" form="prefix">lim sup</m:mo><m:mo>|</m:mo></m:mrow><m:msub><m:mi>b</m:mi><m:mi>n</m:mi></m:msub><m:msup><m:mrow><m:mo>|</m:mo></m:mrow><m:mrow><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>n</m:mi></m:mrow></m:msup><m:mo>=</m:mo><m:mo movablelimits="true" form="prefix">lim sup</m:mo><m:msup><m:mi>n</m:mi><m:mrow><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>n</m:mi></m:mrow></m:msup><m:mrow><m:mo>|</m:mo></m:mrow><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mo>|</m:mo><m:mo>=</m:mo><m:mo movablelimits="true" form="prefix">lim</m:mo></m:mrow><m:msup><m:mi>n</m:mi><m:mrow><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>n</m:mi></m:mrow></m:msup><m:mo movablelimits="true" form="prefix">lim sup</m:mo><m:mrow><m:mo>|</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>|</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math>
+Therefore, <m:math overflow="scroll"><m:msup><m:mi>z</m:mi><m:mo>'</m:mo></m:msup></m:math> belongs to the domain of <m:math overflow="scroll"><m:mrow><m:mi>g</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Let <m:math overflow="scroll"><m:mi>M</m:mi></m:math> be a number such that
+each partial sum of the series <m:math overflow="scroll"><m:mrow><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:msup><m:mi>z</m:mi><m:mo>'</m:mo></m:msup><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msubsup><m:mo>∑</m:mo><m:mrow><m:mi>n</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow><m:mi>N</m:mi></m:msubsup><m:msub><m:mi>b</m:mi><m:mi>n</m:mi></m:msub><m:msup><m:mrow><m:msup><m:mi>z</m:mi><m:mo>'</m:mo></m:msup></m:mrow><m:mi>n</m:mi></m:msup></m:mrow></m:math> is bounded by <m:math overflow="scroll"><m:mrow><m:mi>M</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+    <para id="id66915">Now, let <m:math overflow="scroll"><m:mrow><m:mi>ϵ</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn></m:mrow></m:math> be given, and choose <m:math overflow="scroll"><m:mi>δ</m:mi></m:math> to be the minimum of the two positive numbers <m:math overflow="scroll"><m:mrow><m:mrow><m:mi>ϵ</m:mi><m:mo>|</m:mo></m:mrow><m:msup><m:mi>z</m:mi><m:mo>'</m:mo></m:msup><m:mrow><m:mo>|</m:mo><m:mo>/</m:mo><m:mi>M</m:mi></m:mrow></m:mrow></m:math>
+and <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msup><m:mi>z</m:mi><m:mo>'</m:mo></m:msup><m:mrow><m:mo>|</m:mo><m:mo>-</m:mo><m:mo>|</m:mo><m:mi>z</m:mi><m:mo>|</m:mo><m:mo>.</m:mo></m:mrow></m:mrow></m:math> We consider any <m:math overflow="scroll"><m:mi>y</m:mi></m:math> for which <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>y</m:mi><m:mo>-</m:mo><m:mi>z</m:mi><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mi>δ</m:mi><m:mo>.</m:mo></m:mrow></m:math> Then
+<m:math overflow="scroll"><m:mrow><m:mi>y</m:mi><m:mo>∈</m:mo><m:msub><m:mi>B</m:mi><m:mi>r</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mn>0</m:mn><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math><m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo><m:mi>y</m:mi><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mo>|</m:mo></m:mrow><m:msup><m:mi>z</m:mi><m:mo>'</m:mo></m:msup><m:mrow><m:mo>|</m:mo><m:mo>,</m:mo></m:mrow></m:mrow></m:math> and</para>
+    <equation id="uid14">
+      <m:math overflow="scroll" mode="display">
+        <m:mtable displaystyle="true">
+          <m:mtr>
+            <m:mtd columnalign="right">
+              <m:mrow>
+                <m:mo>|</m:mo>
+                <m:mi>f</m:mi>
+                <m:mo>(</m:mo>
+                <m:mi>y</m:mi>
+                <m:mo>)</m:mo>
+                <m:mo>-</m:mo>
+                <m:mi>f</m:mi>
+                <m:mo>(</m:mo>
+                <m:mi>z</m:mi>
+                <m:mo>)</m:mo>
+                <m:mo>|</m:mo>
+              </m:mrow>
+            </m:mtd>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mrow>
+                  <m:mo movablelimits="true" form="prefix">lim</m:mo>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:msub>
+                  <m:mi>S</m:mi>
+                  <m:mi>N</m:mi>
+                </m:msub>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>y</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mo>-</m:mo>
+                <m:msub>
+                  <m:mi>S</m:mi>
+                  <m:mi>N</m:mi>
+                </m:msub>
+                <m:mrow>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>z</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mrow>
+                  <m:mo movablelimits="true" form="prefix">lim</m:mo>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:munderover>
+                  <m:mo>∑</m:mo>
+                  <m:mrow>
+                    <m:mi>n</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mn>0</m:mn>
+                  </m:mrow>
+                  <m:mi>N</m:mi>
+                </m:munderover>
+                <m:msub>
+                  <m:mi>a</m:mi>
+                  <m:mi>n</m:mi>
+                </m:msub>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:msup>
+                    <m:mi>y</m:mi>
+                    <m:mi>n</m:mi>
+                  </m:msup>
+                  <m:mo>-</m:mo>
+                  <m:msup>
+                    <m:mi>z</m:mi>
+                    <m:mi>n</m:mi>
+                  </m:msup>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>≤</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:munder>
+                  <m:mo movablelimits="true" form="prefix">lim</m:mo>
+                  <m:mi>N</m:mi>
+                </m:munder>
+                <m:munderover>
+                  <m:mo>∑</m:mo>
+                  <m:mrow>
+                    <m:mi>n</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mn>0</m:mn>
+                  </m:mrow>
+                  <m:mi>N</m:mi>
+                </m:munderover>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:msub>
+                  <m:mi>a</m:mi>
+                  <m:mi>n</m:mi>
+                </m:msub>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:msup>
+                  <m:mi>y</m:mi>
+                  <m:mi>n</m:mi>
+                </m:msup>
+                <m:mo>-</m:mo>
+                <m:msup>
+                  <m:mi>z</m:mi>
+                  <m:mi>n</m:mi>
+                </m:msup>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:munder>
+                  <m:mo movablelimits="true" form="prefix">lim</m:mo>
+                  <m:mi>N</m:mi>
+                </m:munder>
+                <m:munderover>
+                  <m:mo>∑</m:mo>
+                  <m:mrow>
+                    <m:mi>n</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                  <m:mi>N</m:mi>
+                </m:munderover>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:msub>
+                  <m:mi>a</m:mi>
+                  <m:mi>n</m:mi>
+                </m:msub>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                  <m:mo>|</m:mo>
+                  <m:mi>y</m:mi>
+                  <m:mo>-</m:mo>
+                  <m:mi>z</m:mi>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:munderover>
+                  <m:mo>∑</m:mo>
+                  <m:mrow>
+                    <m:mi>j</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mn>0</m:mn>
+                  </m:mrow>
+                  <m:mrow>
+                    <m:mi>n</m:mi>
+                    <m:mo>-</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                </m:munderover>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:msup>
+                  <m:mi>y</m:mi>
+                  <m:mi>j</m:mi>
+                </m:msup>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:msup>
+                  <m:mi>z</m:mi>
+                  <m:mrow>
+                    <m:mi>n</m:mi>
+                    <m:mo>-</m:mo>
+                    <m:mn>1</m:mn>
+                    <m:mo>-</m:mo>
+                    <m:mi>j</m:mi>
+                  </m:mrow>
+                </m:msup>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>≤</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:munder>
+                  <m:mo movablelimits="true" form="prefix">lim</m:mo>
+                  <m:mi>N</m:mi>
+                </m:munder>
+                <m:munderover>
+                  <m:mo>∑</m:mo>
+                  <m:mrow>
+                    <m:mi>n</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                  <m:mi>N</m:mi>
+                </m:munderover>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:msub>
+                  <m:mi>a</m:mi>
+                  <m:mi>n</m:mi>
+                </m:msub>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                  <m:mo>|</m:mo>
+                  <m:mi>y</m:mi>
+                  <m:mo>-</m:mo>
+                  <m:mi>z</m:mi>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:munderover>
+                  <m:mo>∑</m:mo>
+                  <m:mrow>
+                    <m:mi>j</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mn>0</m:mn>
+                  </m:mrow>
+                  <m:mrow>
+                    <m:mi>n</m:mi>
+                    <m:mo>-</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                </m:munderover>
+                <m:msup>
+                  <m:mrow>
+                    <m:mo>|</m:mo>
+                    <m:msup>
+                      <m:mi>z</m:mi>
+                      <m:mo>'</m:mo>
+                    </m:msup>
+                    <m:mo>|</m:mo>
+                  </m:mrow>
+                  <m:mrow>
+                    <m:mi>n</m:mi>
+                    <m:mo>-</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                </m:msup>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>≤</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:munder>
+                  <m:mo movablelimits="true" form="prefix">lim</m:mo>
+                  <m:mi>N</m:mi>
+                </m:munder>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                  <m:mi>y</m:mi>
+                  <m:mo>-</m:mo>
+                  <m:mi>z</m:mi>
+                  <m:mo>|</m:mo>
+                  <m:mo>(</m:mo>
+                  <m:mn>1</m:mn>
+                  <m:mo>/</m:mo>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:msup>
+                  <m:mi>z</m:mi>
+                  <m:mo>'</m:mo>
+                </m:msup>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:munderover>
+                  <m:mo>∑</m:mo>
+                  <m:mrow>
+                    <m:mi>n</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mn>0</m:mn>
+                  </m:mrow>
+                  <m:mi>N</m:mi>
+                </m:munderover>
+                <m:mrow>
+                  <m:mi>n</m:mi>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:msub>
+                  <m:mi>a</m:mi>
+                  <m:mi>n</m:mi>
+                </m:msub>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:msup>
+                  <m:mi>z</m:mi>
+                  <m:mo>'</m:mo>
+                </m:msup>
+                <m:msup>
+                  <m:mrow>
+                    <m:mo>|</m:mo>
+                  </m:mrow>
+                  <m:mi>n</m:mi>
+                </m:msup>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>≤</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                  <m:mi>y</m:mi>
+                  <m:mo>-</m:mo>
+                  <m:mi>z</m:mi>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:munder>
+                  <m:mo movablelimits="true" form="prefix">lim</m:mo>
+                  <m:mi>N</m:mi>
+                </m:munder>
+                <m:mfrac>
+                  <m:mi>M</m:mi>
+                  <m:mrow>
+                    <m:mrow>
+                      <m:mo>|</m:mo>
+                    </m:mrow>
+                    <m:msup>
+                      <m:mi>z</m:mi>
+                      <m:mo>'</m:mo>
+                    </m:msup>
+                    <m:mrow>
+                      <m:mo>|</m:mo>
+                    </m:mrow>
+                  </m:mrow>
+                </m:mfrac>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>&lt;</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mi>δ</m:mi>
+                <m:munder>
+                  <m:mo movablelimits="true" form="prefix">lim</m:mo>
+                  <m:mi>N</m:mi>
+                </m:munder>
+                <m:mfrac>
+                  <m:mi>M</m:mi>
+                  <m:mrow>
+                    <m:mrow>
+                      <m:mo>|</m:mo>
+                    </m:mrow>
+                    <m:msup>
+                      <m:mi>z</m:mi>
+                      <m:mo>'</m:mo>
+                    </m:msup>
+                    <m:mrow>
+                      <m:mo>|</m:mo>
+                    </m:mrow>
+                  </m:mrow>
+                </m:mfrac>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>≤</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mi>ϵ</m:mi>
+                <m:mo>.</m:mo>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+        </m:mtable>
+      </m:math>
+    </equation>
+    <para id="id67786">This completes the proof.</para>
+</proof></rule>
+<exercise id="fs-id1171757293278"><problem id="fs-id1171779250818">
+    <list id="id67803" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid15"> Let <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msubsup><m:mo>∑</m:mo><m:mrow><m:mi>n</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow><m:mi>∞</m:mi></m:msubsup><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:msup><m:mi>z</m:mi><m:mi>n</m:mi></m:msup></m:mrow></m:math> be a power series function,
+and let <m:math overflow="scroll"><m:mrow><m:mi>p</m:mi><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msubsup><m:mo>∑</m:mo><m:mrow><m:mi>k</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow><m:mi>m</m:mi></m:msubsup><m:msub><m:mi>b</m:mi><m:mi>k</m:mi></m:msub><m:msup><m:mi>z</m:mi><m:mi>k</m:mi></m:msup></m:mrow></m:math> be a polynomial function.
+Prove that <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>+</m:mo><m:mi>p</m:mi></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mi>p</m:mi></m:mrow></m:math> are both power series functions.
+Express the coefficients for <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>+</m:mo><m:mi>p</m:mi></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mi>p</m:mi></m:mrow></m:math> in terms
+of the <m:math overflow="scroll"><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub></m:math>'s and <m:math overflow="scroll"><m:msub><m:mi>b</m:mi><m:mi>k</m:mi></m:msub></m:math>'s.
+</item>
+      <item id="uid16"> Suppose <m:math overflow="scroll"><m:mi>f</m:mi></m:math> and <m:math overflow="scroll"><m:mi>g</m:mi></m:math> are power series functions. Prove that <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>+</m:mo><m:mi>g</m:mi></m:mrow></m:math> is a power series function. What is its radius
+of convergence? What about <m:math overflow="scroll"><m:mrow><m:mi>c</m:mi><m:mi>f</m:mi><m:mo>?</m:mo></m:mrow></m:math> What about <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mi>g</m:mi><m:mo>?</m:mo></m:mrow></m:math> What about <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>/</m:mo><m:mi>g</m:mi><m:mo>?</m:mo></m:mrow></m:math> What about <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>f</m:mi><m:mo>|</m:mo><m:mo>?</m:mo></m:mrow></m:math></item>
+    </list>
+</problem></exercise>
+<exercise id="fs-id1171771434001"><problem id="fs-id1171771434002">
+    <list id="id68118" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid17"> Prove that every polynomial is a power series function with infinite radius of convergence.
+</item>
+      <item id="uid18"> Prove that <m:math overflow="scroll"><m:mrow><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>z</m:mi></m:mrow></m:math>
+and <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>-</m:mo><m:mn>1</m:mn><m:mo>)</m:mo><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>+</m:mo><m:mn>2</m:mn><m:mo>)</m:mo><m:mo>)</m:mo></m:mrow></m:math> are not power series functions.
+(Their domains aren't right.)
+</item>
+      <item id="uid19"> Define <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msubsup><m:mo>∑</m:mo><m:mrow><m:mi>n</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow><m:mi>∞</m:mi></m:msubsup><m:msup><m:mrow><m:mo>(</m:mo><m:mo>-</m:mo><m:mn>1</m:mn><m:mo>)</m:mo></m:mrow><m:mi>n</m:mi></m:msup><m:msup><m:mi>z</m:mi><m:mrow><m:mn>2</m:mn><m:mi>n</m:mi><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow></m:msup><m:mo>.</m:mo></m:mrow></m:math> Prove that
+the radius of convergence of this power series function is 1,
+and that <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac><m:mi>z</m:mi><m:mrow><m:mn>1</m:mn><m:mo>+</m:mo><m:msup><m:mi>z</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:mfrac></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>z</m:mi><m:mo>∈</m:mo><m:msub><m:mi>B</m:mi><m:mn>1</m:mn></m:msub><m:mrow><m:mo>(</m:mo><m:mn>0</m:mn><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math>
+Conclude that the rational function <m:math overflow="scroll"><m:mrow><m:mi>z</m:mi><m:mo>/</m:mo><m:mo>(</m:mo><m:mn>1</m:mn><m:mo>+</m:mo><m:msup><m:mi>z</m:mi><m:mn>2</m:mn></m:msup><m:mo>)</m:mo></m:mrow></m:math> agrees with a power series function
+on the disk <m:math overflow="scroll"><m:mrow><m:msub><m:mi>B</m:mi><m:mn>1</m:mn></m:msub><m:mrow><m:mo>(</m:mo><m:mn>0</m:mn><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math>
+But, they are <emphasis effect="bold">not</emphasis> the same function.
+HINT: Use the infinite geometric series.
+</item>
+    </list>
+</problem></exercise>
+    <para id="id68411"><link target-id="fs-id1171787790149"/> and <link target-id="fs-id1171757293278"/> and <link target-id="fs-id1171771434001"/> raise a very interesting and subtle point.
+Suppose <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mo>∑</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:msup><m:mi>z</m:mi><m:mi>n</m:mi></m:msup></m:mrow></m:math> is a power series function having finite radius of convergence <m:math overflow="scroll"><m:mrow><m:mi>r</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math>
+<link target-id="fs-id1171787790149"/> says that <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is continuous on the open disk, but it does not say anything about
+the continuity of <m:math overflow="scroll"><m:mi>f</m:mi></m:math> at points on the boundary of this disk that are in the domain of <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+i,e., at points <m:math overflow="scroll"><m:msub><m:mi>z</m:mi><m:mn>0</m:mn></m:msub></m:math> for which <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msub><m:mi>z</m:mi><m:mn>0</m:mn></m:msub><m:mrow><m:mo>|</m:mo><m:mo>=</m:mo><m:mi>r</m:mi><m:mo>.</m:mo></m:mrow></m:mrow></m:math>
+and <m:math overflow="scroll"><m:mrow><m:mo>∑</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:msubsup><m:mi>z</m:mi><m:mn>0</m:mn><m:mi>n</m:mi></m:msubsup></m:mrow></m:math> converges.
+Suppose <m:math overflow="scroll"><m:mrow><m:mi>g</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow></m:math> is a continuous function whose domain contains the open disk <m:math overflow="scroll"><m:mrow><m:msub><m:mi>B</m:mi><m:mi>r</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mn>0</m:mn><m:mo>)</m:mo></m:mrow></m:mrow></m:math> and also a point <m:math overflow="scroll"><m:mrow><m:msub><m:mi>z</m:mi><m:mn>0</m:mn></m:msub><m:mo>,</m:mo></m:mrow></m:math>
+and assume that <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mi>g</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>z</m:mi><m:mo>∈</m:mo><m:msub><m:mi>B</m:mi><m:mi>r</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mn>0</m:mn><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math>
+Does <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:msub><m:mi>z</m:mi><m:mn>0</m:mn></m:msub><m:mo>)</m:mo></m:mrow></m:math> have to agree with <m:math overflow="scroll"><m:mrow><m:mi>g</m:mi><m:mo>(</m:mo><m:msub><m:mi>z</m:mi><m:mn>0</m:mn></m:msub><m:mo>)</m:mo><m:mo>?</m:mo></m:mrow></m:math>
+It's worth some thought to understand just what this question means.
+It amounts to a question of the equality of two different kinds of limits.
+<m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:msub><m:mi>z</m:mi><m:mn>0</m:mn></m:msub><m:mo>)</m:mo></m:mrow></m:math> is the sum of an infinite series, the limit of a sequence of partial sums,
+while, because <m:math overflow="scroll"><m:mi>g</m:mi></m:math> is continuous at <m:math overflow="scroll"><m:mrow><m:msub><m:mi>z</m:mi><m:mn>0</m:mn></m:msub><m:mo>,</m:mo></m:mrow></m:math><m:math overflow="scroll"><m:mrow><m:mi>g</m:mi><m:mo>(</m:mo><m:msub><m:mi>z</m:mi><m:mn>0</m:mn></m:msub><m:mo>=</m:mo><m:msub><m:mo movablelimits="true" form="prefix">lim</m:mo><m:mrow><m:mi>z</m:mi><m:mo>→</m:mo><m:msub><m:mi>z</m:mi><m:mn>0</m:mn></m:msub></m:mrow></m:msub><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math>
+At the end of this chapter, we include a theorem of Abel that answers this question.</para>
+    <para id="id68834">The next theorem is the analog for power series functions of part (2) of <link target-id="fs-id1171768351772" document="m36147"/> for polynomials.
+We call it the “Identity Theorem,” but it equally well could
+be known as the “Uniqueness of Coefficients Theorem,”
+for it implies that different coefficients mean different functions.</para>
+<rule id="fs-id1171757680912" type="theorem"><title>Identity Theorem</title><statement id="fs-id1171761052936">
+    <para id="id68843">
+ Let <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mo>∑</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:msup><m:mi>z</m:mi><m:mi>n</m:mi></m:msup></m:mrow></m:math> be a power series function with positive radius of convergence <m:math overflow="scroll"><m:mrow><m:mi>r</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Suppose <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>z</m:mi><m:mi>k</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> is a sequence of nonzero distinct numbers in the domain of <m:math overflow="scroll"><m:mi>f</m:mi></m:math> such that:</para>
+    <list id="id68930" display="block" list-type="enumerated">
+      <item id="uid20"> <m:math overflow="scroll"><m:mrow><m:mo movablelimits="true" form="prefix">lim</m:mo><m:msub><m:mi>z</m:mi><m:mi>k</m:mi></m:msub><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid21"> <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:msub><m:mi>z</m:mi><m:mi>k</m:mi></m:msub><m:mo>)</m:mo><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>k</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+    </list>
+    <para id="id69022">Then <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is identically 0 (<m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo><m:mo>≡</m:mo><m:mn>0</m:mn></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>z</m:mi><m:mo>∈</m:mo><m:mi>S</m:mi></m:mrow></m:math>).
+Moreover, each coefficient <m:math overflow="scroll"><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub></m:math> of <m:math overflow="scroll"><m:mi>f</m:mi></m:math> equals <m:math overflow="scroll"><m:mrow><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math></para>
+</statement>
+<proof id="fs-id1171757504366">
+    <para id="id69104">Arguing by induction on <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>,</m:mo></m:mrow></m:math> let us prove that
+all the coefficients <m:math overflow="scroll"><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub></m:math> are <m:math overflow="scroll"><m:mrow><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math>
+First, since <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is continuous at <m:math overflow="scroll"><m:mrow><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> and since <m:math overflow="scroll"><m:mrow><m:mo movablelimits="true" form="prefix">lim</m:mo><m:msub><m:mi>z</m:mi><m:mi>k</m:mi></m:msub><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> we have that <m:math overflow="scroll"><m:mrow><m:msub><m:mi>a</m:mi><m:mn>0</m:mn></m:msub><m:mo>,</m:mo></m:mrow></m:math> which equals <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mn>0</m:mn><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo><m:mspace width="3.33333pt"/><m:mo>=</m:mo><m:mo movablelimits="true" form="prefix">lim</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:msub><m:mi>z</m:mi><m:mi>k</m:mi></m:msub><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math></para>
+    <para id="id69268">Assume then that <m:math overflow="scroll"><m:mrow><m:msub><m:mi>a</m:mi><m:mn>0</m:mn></m:msub><m:mo>=</m:mo><m:msub><m:mi>a</m:mi><m:mn>1</m:mn></m:msub><m:mo>=</m:mo><m:mo>...</m:mo><m:mo>=</m:mo><m:msub><m:mi>a</m:mi><m:mrow><m:mi>n</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math>
+Then</para>
+    <equation id="uid22">
+      <m:math overflow="scroll" mode="display">
+        <m:mtable displaystyle="true">
+          <m:mtr>
+            <m:mtd columnalign="right">
+              <m:mrow>
+                <m:mi>f</m:mi>
+                <m:mo>(</m:mo>
+                <m:mi>z</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+            </m:mtd>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:msub>
+                  <m:mi>a</m:mi>
+                  <m:mi>n</m:mi>
+                </m:msub>
+                <m:msup>
+                  <m:mi>z</m:mi>
+                  <m:mi>n</m:mi>
+                </m:msup>
+                <m:mo>+</m:mo>
+                <m:msub>
+                  <m:mi>a</m:mi>
+                  <m:mrow>
+                    <m:mi>n</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                </m:msub>
+                <m:msup>
+                  <m:mi>z</m:mi>
+                  <m:mrow>
+                    <m:mi>n</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                </m:msup>
+                <m:mo>+</m:mo>
+                <m:mo>...</m:mo>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:msup>
+                  <m:mi>z</m:mi>
+                  <m:mi>n</m:mi>
+                </m:msup>
+                <m:munderover>
+                  <m:mo>∑</m:mo>
+                  <m:mrow>
+                    <m:mi>j</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mn>0</m:mn>
+                  </m:mrow>
+                  <m:mi>∞</m:mi>
+                </m:munderover>
+                <m:msub>
+                  <m:mi>b</m:mi>
+                  <m:mi>j</m:mi>
+                </m:msub>
+                <m:msup>
+                  <m:mi>z</m:mi>
+                  <m:mi>j</m:mi>
+                </m:msup>
+                <m:mo>,</m:mo>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+        </m:mtable>
+      </m:math>
+    </equation>
+    <para id="id69457">where <m:math overflow="scroll"><m:mrow><m:msub><m:mi>b</m:mi><m:mi>j</m:mi></m:msub><m:mo>=</m:mo><m:msub><m:mi>a</m:mi><m:mrow><m:mi>n</m:mi><m:mo>+</m:mo><m:mi>j</m:mi></m:mrow></m:msub><m:mo>.</m:mo></m:mrow></m:math>
+If <m:math overflow="scroll"><m:mi>g</m:mi></m:math> is the power series function defined by <m:math overflow="scroll"><m:mrow><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mo>∑</m:mo><m:msub><m:mi>b</m:mi><m:mi>j</m:mi></m:msub><m:msup><m:mi>z</m:mi><m:mi>j</m:mi></m:msup><m:mo>,</m:mo></m:mrow></m:math>
+then, by the Cauchy-Hadamard Formula, we have that the radius of convergence for <m:math overflow="scroll"><m:mi>g</m:mi></m:math> is the same as that for <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+(Why does <m:math overflow="scroll"><m:mrow><m:mrow><m:mo movablelimits="true" form="prefix">lim sup</m:mo><m:mo>|</m:mo></m:mrow><m:msub><m:mi>b</m:mi><m:mi>j</m:mi></m:msub><m:msup><m:mrow><m:mo>|</m:mo></m:mrow><m:mrow><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>j</m:mi></m:mrow></m:msup><m:mo>=</m:mo><m:mo movablelimits="true" form="prefix">lim sup</m:mo><m:msup><m:mrow><m:mo>|</m:mo><m:msub><m:mi>a</m:mi><m:mi>k</m:mi></m:msub><m:mo>|</m:mo></m:mrow><m:mrow><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>k</m:mi></m:mrow></m:msup><m:mo>?</m:mo></m:mrow></m:math>)
+We have that <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>z</m:mi><m:mi>n</m:mi></m:msup><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> for all <m:math overflow="scroll"><m:mi>z</m:mi></m:math> in the common disk of
+convergence of these functions <m:math overflow="scroll"><m:mi>f</m:mi></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>g</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Since, for each <m:math overflow="scroll"><m:mrow><m:mi>k</m:mi><m:mo>,</m:mo><m:mspace width="3.33333pt"/><m:msub><m:mi>z</m:mi><m:mi>k</m:mi></m:msub><m:mo>≠</m:mo><m:mn>0</m:mn></m:mrow></m:math>
+and <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:msub><m:mi>z</m:mi><m:mi>k</m:mi></m:msub><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msubsup><m:mi>z</m:mi><m:mi>k</m:mi><m:mi>n</m:mi></m:msubsup><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:msub><m:mi>z</m:mi><m:mi>k</m:mi></m:msub><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math>
+it follows that <m:math overflow="scroll"><m:mrow><m:mi>g</m:mi><m:mo>(</m:mo><m:msub><m:mi>z</m:mi><m:mi>k</m:mi></m:msub><m:mo>)</m:mo><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math> for every <m:math overflow="scroll"><m:mrow><m:mi>k</m:mi><m:mo>.</m:mo></m:mrow></m:math> Since
+<m:math overflow="scroll"><m:mi>g</m:mi></m:math> is continuous at <m:math overflow="scroll"><m:mrow><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> it then follows as in the argument above that <m:math overflow="scroll"><m:mrow><m:mi>g</m:mi><m:mo>(</m:mo><m:mn>0</m:mn><m:mo>)</m:mo><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math>
+But, <m:math overflow="scroll"><m:mrow><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mn>0</m:mn><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msub><m:mi>b</m:mi><m:mn>0</m:mn></m:msub><m:mo>=</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>.</m:mo></m:mrow></m:math> Hence <m:math overflow="scroll"><m:mrow><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> and so by induction all the coefficients
+of the power series function <m:math overflow="scroll"><m:mi>f</m:mi></m:math> are 0. Clearly this implies that <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow></m:math> is identically 0.</para>
+</proof></rule>
+<rule id="fs-id1171768794576" type="corrolary"><statement id="fs-id1171772901249">
+    <para id="id69957">
+Suppose <m:math overflow="scroll"><m:mi>f</m:mi></m:math> and <m:math overflow="scroll"><m:mi>g</m:mi></m:math> are two power series functions, that
+<m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>z</m:mi><m:mi>k</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> is a sequence of nonzero points that converges to 0, and that
+<m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:msub><m:mi>z</m:mi><m:mi>k</m:mi></m:msub><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:msub><m:mi>z</m:mi><m:mi>k</m:mi></m:msub><m:mo>)</m:mo></m:mrow></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>k</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Then <m:math overflow="scroll"><m:mi>f</m:mi></m:math> and <m:math overflow="scroll"><m:mi>g</m:mi></m:math> have the same coefficients, the same radius of convergence,
+and hence <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mi>g</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow></m:math> for all <m:math overflow="scroll"><m:mi>z</m:mi></m:math> in their common domain.</para>
+</statement></rule>
+<exercise id="fs-id1171756794069"><problem id="fs-id1171756794070">
+    <list id="id70119" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid23"> Prove the preceding corollary.
+(Compare with the proof of <link target-id="fs-id1171768351772" document="m36147"/>.)
+</item>
+      <item id="uid24"> Use the corollary, and the power series function <m:math overflow="scroll"><m:mrow><m:mi>g</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mi>z</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+to prove that <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mo>|</m:mo><m:mi>z</m:mi><m:mo>|</m:mo></m:mrow></m:math> is not a power series function.
+</item>
+      <item id="uid25"> Show that there are power series functions that are not polynomial functions.
+</item>
+      <item id="uid26"> Let <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mo>∑</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:msup><m:mi>z</m:mi><m:mi>n</m:mi></m:msup></m:mrow></m:math> be a power series function with infinite radius of convergence, all of whose
+coefficients are positive. Show that there is no rational function <m:math overflow="scroll"><m:mrow><m:mi>r</m:mi><m:mo>=</m:mo><m:mi>p</m:mi><m:mo>/</m:mo><m:mi>q</m:mi></m:mrow></m:math>
+for which <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mi>r</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow></m:math> for all complex numbers <m:math overflow="scroll"><m:mrow><m:mi>z</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Conclude that the collection of power series functions provides
+some <emphasis effect="bold">new</emphasis> functions.
+HINT: Use the fact that for any <m:math overflow="scroll"><m:mi>n</m:mi></m:math> we have that <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>&gt;</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:msup><m:mi>x</m:mi><m:mi>n</m:mi></m:msup></m:mrow></m:math> for all positive <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Then, by choosing <m:math overflow="scroll"><m:mi>n</m:mi></m:math> appropriately, derive a contradiction to the resulting fact that
+<m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo><m:mi>p</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>/</m:mo><m:mi>q</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>|</m:mo><m:mo>&gt;</m:mo></m:mrow><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:msup><m:mi>x</m:mi><m:mi>n</m:mi></m:msup></m:mrow></m:math> for all positive <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+See part (b) of <link target-id="fs-id1171763106785" document="m36147"/>.
+</item>
+    </list>
+</problem></exercise>
+  </content>
+</document>

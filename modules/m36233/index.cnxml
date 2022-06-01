@@ -1,0 +1,3813 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML">
+  <title>Integration Around Closed Curves, and Green's Theorem</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m36233</md:content-id>
+  <md:title>Integration Around Closed Curves, and Green's Theorem</md:title>
+  <md:abstract>Two problems are immediately apparent concerning integrating
+around a closed curve.
+First, where do we start on the curve,
+which point is the initial point? And second, which way to we go around the curve?
+Recall tha if <m:math overflow="scroll"><m:mrow><m:mi>φ</m:mi><m:mo>:</m:mo><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>→</m:mo><m:mi>C</m:mi></m:mrow></m:math> is a parameterization of <m:math overflow="scroll"><m:mrow><m:mi>C</m:mi><m:mo>,</m:mo></m:mrow></m:math> then
+<m:math overflow="scroll"><m:mrow><m:mi>ψ</m:mi><m:mo>:</m:mo><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>→</m:mo><m:mi>C</m:mi><m:mo>,</m:mo></m:mrow></m:math> defined by <m:math overflow="scroll"><m:mrow><m:mi>ψ</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mi>φ</m:mi><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>+</m:mo><m:mi>b</m:mi><m:mo>-</m:mo><m:mi>t</m:mi><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math>
+is a parameterization of <m:math overflow="scroll"><m:mi>C</m:mi></m:math> that is the reverse of <m:math overflow="scroll"><m:mrow><m:mi>φ</m:mi><m:mo>,</m:mo></m:mrow></m:math> i.e., it goes around
+the curve in the other direction.
+If we are integrating with respect to arc length, this reverse direction
+won't make a difference, but, for contour integrals and line integrals,
+integrating in the reverse direction will introduce a minus sign.</md:abstract>
+  <md:uuid>2dd6dc75-ee79-4261-bbf3-33edf25eee51</md:uuid>
+</metadata>
+
+<content>
+    <para id="id172751">Thus far, we have discussed integration over curves joining two distinct points <m:math overflow="scroll"><m:msub><m:mi>z</m:mi><m:mn>1</m:mn></m:msub></m:math> and <m:math overflow="scroll"><m:mrow><m:msub><m:mi>z</m:mi><m:mn>2</m:mn></m:msub><m:mo>.</m:mo></m:mrow></m:math>
+Very important in analysis is the concept of integrating around a closed curve, i.e., one that starts and ends at the same point.
+There is nothing really new here; the formulas for
+all three kinds of integrals we have defined will look the same, in the sense that they all
+are described interms of some parameterization <m:math overflow="scroll"><m:mrow><m:mi>φ</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+A parameterization <m:math overflow="scroll"><m:mrow><m:mi>φ</m:mi><m:mo>:</m:mo><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>→</m:mo><m:mi>C</m:mi></m:mrow></m:math> of a closed curve <m:math overflow="scroll"><m:mi>C</m:mi></m:math>
+is just like the parameterization for a curve joining two points, except that the two
+points <m:math overflow="scroll"><m:mrow><m:mi>φ</m:mi><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>φ</m:mi><m:mo>(</m:mo><m:mi>b</m:mi><m:mo>)</m:mo></m:mrow></m:math> are equal.</para>
+    <para id="id173204">Two problems are immediately apparent concerning integrating
+around a closed curve.
+First, where do we start on the curve,
+which point is the initial point? And second, which way to we go around the curve?
+Recall tha if <m:math overflow="scroll"><m:mrow><m:mi>φ</m:mi><m:mo>:</m:mo><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>→</m:mo><m:mi>C</m:mi></m:mrow></m:math> is a parameterization of <m:math overflow="scroll"><m:mrow><m:mi>C</m:mi><m:mo>,</m:mo></m:mrow></m:math> then
+<m:math overflow="scroll"><m:mrow><m:mi>ψ</m:mi><m:mo>:</m:mo><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>→</m:mo><m:mi>C</m:mi><m:mo>,</m:mo></m:mrow></m:math> defined by <m:math overflow="scroll"><m:mrow><m:mi>ψ</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mi>φ</m:mi><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>+</m:mo><m:mi>b</m:mi><m:mo>-</m:mo><m:mi>t</m:mi><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math>
+is a parameterization of <m:math overflow="scroll"><m:mi>C</m:mi></m:math> that is the reverse of <m:math overflow="scroll"><m:mrow><m:mi>φ</m:mi><m:mo>,</m:mo></m:mrow></m:math> i.e., it goes around
+the curve in the other direction.
+If we are integrating with respect to arc length, this reverse direction
+won't make a difference, but, for contour integrals and line integrals,
+integrating in the reverse direction will introduce a minus sign.</para>
+    <para id="id173332">The first question mentioned above is not so difficult to handle. It doesn't really matter where we start
+on a closed curve; the parameterization can easily be shifted.</para>
+<exercise id="fs-id1169309446617"><problem id="fs-id1169308387588">
+    <para id="id173336">
+
+Let <m:math overflow="scroll"><m:mrow><m:mi>φ</m:mi><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow><m:mo>→</m:mo><m:msup><m:mrow><m:mi>R</m:mi></m:mrow><m:mn>2</m:mn></m:msup></m:mrow></m:math> be a piecewise smooth function that is 1-1 except that <m:math overflow="scroll"><m:mrow><m:mi>φ</m:mi><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mi>φ</m:mi><m:mo>(</m:mo><m:mi>b</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+For each <m:math overflow="scroll"><m:mrow><m:mn>0</m:mn><m:mo>&lt;</m:mo><m:mi>c</m:mi><m:mo>&lt;</m:mo><m:mi>b</m:mi><m:mo>-</m:mo><m:mi>a</m:mi><m:mo>,</m:mo></m:mrow></m:math> define <m:math overflow="scroll"><m:mrow><m:mover accent="true"><m:mi>φ</m:mi><m:mo>^</m:mo></m:mover><m:mo>:</m:mo><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>+</m:mo><m:mi>c</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>+</m:mo><m:mi>c</m:mi><m:mo>]</m:mo></m:mrow><m:mo>:</m:mo><m:msup><m:mrow><m:mi>R</m:mi></m:mrow><m:mn>2</m:mn></m:msup></m:mrow></m:math> by
+<m:math overflow="scroll"><m:mrow><m:mover accent="true"><m:mi>φ</m:mi><m:mo>^</m:mo></m:mover><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>φ</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> for <m:math overflow="scroll"><m:mrow><m:mi>a</m:mi><m:mo>+</m:mo><m:mi>c</m:mi><m:mo>≤</m:mo><m:mi>t</m:mi><m:mo>≤</m:mo><m:mi>b</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+and <m:math overflow="scroll"><m:mrow><m:mover accent="true"><m:mi>φ</m:mi><m:mo>^</m:mo></m:mover><m:mrow><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>φ</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>-</m:mo><m:mi>b</m:mi><m:mo>+</m:mo><m:mi>a</m:mi></m:mrow></m:mrow></m:math> for <m:math overflow="scroll"><m:mrow><m:mi>b</m:mi><m:mo>≤</m:mo><m:mi>t</m:mi><m:mo>≤</m:mo><m:mi>b</m:mi><m:mo>+</m:mo><m:mi>c</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+    <list id="id173795" display="block" list-type="enumerated"><item id="uid1"> Show that <m:math overflow="scroll"><m:mover accent="true"><m:mi>φ</m:mi><m:mo>^</m:mo></m:mover></m:math> is a piecewise smooth function, and that the range <m:math overflow="scroll"><m:mi>C</m:mi></m:math>
+of <m:math overflow="scroll"><m:mi>φ</m:mi></m:math> coincides with the range of <m:math overflow="scroll"><m:mrow><m:mover accent="true"><m:mi>φ</m:mi><m:mo>^</m:mo></m:mover><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid2"> Let <m:math overflow="scroll"><m:mi>f</m:mi></m:math> be an integrable (with respect to arc length) function on <m:math overflow="scroll"><m:mrow><m:mi>C</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Show that
+<equation id="id173887"><m:math overflow="scroll" mode="display"><m:mrow><m:msubsup><m:mo>∫</m:mo><m:mi>a</m:mi><m:mi>b</m:mi></m:msubsup><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>φ</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>|</m:mo></m:mrow><m:msup><m:mi>φ</m:mi><m:mo>'</m:mo></m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>|</m:mo><m:mspace width="0.166667em"/><m:mi>d</m:mi><m:mi>t</m:mi><m:mo>=</m:mo></m:mrow><m:msubsup><m:mo>∫</m:mo><m:mrow><m:mi>a</m:mi><m:mo>+</m:mo><m:mi>c</m:mi></m:mrow><m:mrow><m:mi>b</m:mi><m:mo>+</m:mo><m:mi>c</m:mi></m:mrow></m:msubsup><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mover accent="true"><m:mi>φ</m:mi><m:mo>^</m:mo></m:mover><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>)</m:mo></m:mrow><m:mrow><m:mo>|</m:mo><m:msup><m:mover accent="true"><m:mi>φ</m:mi><m:mo>^</m:mo></m:mover><m:mo>'</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>|</m:mo></m:mrow><m:mspace width="0.166667em"/><m:mi>d</m:mi><m:mi>t</m:mi><m:mo>.</m:mo></m:mrow></m:math></equation>
+That is, the integral <m:math overflow="scroll"><m:mrow><m:msub><m:mo>∫</m:mo><m:mi>C</m:mi></m:msub><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>s</m:mi><m:mo>)</m:mo></m:mrow><m:mspace width="0.166667em"/><m:mi>d</m:mi><m:mi>s</m:mi></m:mrow></m:math> of <m:math overflow="scroll"><m:mi>f</m:mi></m:math> with respect
+to arc length around the closed
+curve <m:math overflow="scroll"><m:mi>C</m:mi></m:math> is independent of where we start.
+</item>
+      <item id="uid3"> Let <m:math overflow="scroll"><m:mi>f</m:mi></m:math> be a continuous complex-valued function on <m:math overflow="scroll"><m:mrow><m:mi>C</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Show that
+<equation id="id174120"><m:math overflow="scroll" mode="display"><m:mrow><m:msubsup><m:mo>∫</m:mo><m:mi>a</m:mi><m:mi>b</m:mi></m:msubsup><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>φ</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>)</m:mo></m:mrow><m:msup><m:mi>φ</m:mi><m:mo>'</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mspace width="0.166667em"/><m:mi>d</m:mi><m:mi>t</m:mi><m:mo>=</m:mo><m:msubsup><m:mo>∫</m:mo><m:mrow><m:mi>a</m:mi><m:mo>+</m:mo><m:mi>c</m:mi></m:mrow><m:mrow><m:mi>b</m:mi><m:mo>+</m:mo><m:mi>c</m:mi></m:mrow></m:msubsup><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mover accent="true"><m:mi>φ</m:mi><m:mo>^</m:mo></m:mover><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>)</m:mo></m:mrow><m:msup><m:mover accent="true"><m:mi>φ</m:mi><m:mo>^</m:mo></m:mover><m:mo>'</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mspace width="0.166667em"/><m:mi>d</m:mi><m:mi>t</m:mi><m:mo>.</m:mo></m:mrow></m:math></equation>
+That is, the contour integral <m:math overflow="scroll"><m:mrow><m:msub><m:mo>∫</m:mo><m:mi>C</m:mi></m:msub><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>ζ</m:mi><m:mo>)</m:mo></m:mrow><m:mspace width="0.166667em"/><m:mi>d</m:mi><m:mi>ζ</m:mi></m:mrow></m:math> of <m:math overflow="scroll"><m:mi>f</m:mi></m:math> around the closed
+curve <m:math overflow="scroll"><m:mi>C</m:mi></m:math> is independent of where we start.
+</item>
+      <item id="uid4"> Let <m:math overflow="scroll"><m:mrow><m:mi>ω</m:mi><m:mo>=</m:mo><m:mi>P</m:mi><m:mi>d</m:mi><m:mi>x</m:mi><m:mo>+</m:mo><m:mi>Q</m:mi><m:mi>d</m:mi><m:mi>y</m:mi></m:mrow></m:math> be a differential form on <m:math overflow="scroll"><m:mrow><m:mi>C</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Prove that
+<equation id="id174356"><m:math overflow="scroll" mode="display"><m:mrow><m:msubsup><m:mo>∫</m:mo><m:mi>a</m:mi><m:mi>b</m:mi></m:msubsup><m:mi>P</m:mi><m:mrow><m:mo>(</m:mo><m:mi>φ</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>)</m:mo></m:mrow><m:msup><m:mi>x</m:mi><m:mo>'</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mi>Q</m:mi><m:mrow><m:mo>(</m:mo><m:mi>φ</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>)</m:mo></m:mrow><m:msup><m:mi>y</m:mi><m:mo>'</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mspace width="0.166667em"/><m:mi>d</m:mi><m:mi>t</m:mi><m:mo>=</m:mo><m:msubsup><m:mo>∫</m:mo><m:mrow><m:mi>a</m:mi><m:mo>+</m:mo><m:mi>c</m:mi></m:mrow><m:mrow><m:mi>b</m:mi><m:mo>+</m:mo><m:mi>c</m:mi></m:mrow></m:msubsup><m:mi>P</m:mi><m:mrow><m:mo>(</m:mo><m:mover accent="true"><m:mi>φ</m:mi><m:mo>^</m:mo></m:mover><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>)</m:mo></m:mrow><m:msup><m:mover accent="true"><m:mi>x</m:mi><m:mo>^</m:mo></m:mover><m:mo>'</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mi>Q</m:mi><m:mrow><m:mo>(</m:mo><m:mover accent="true"><m:mi>φ</m:mi><m:mo>^</m:mo></m:mover><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>)</m:mo></m:mrow><m:msup><m:mover accent="true"><m:mi>y</m:mi><m:mo>^</m:mo></m:mover><m:mo>'</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mspace width="0.166667em"/><m:mi>d</m:mi><m:mi>t</m:mi><m:mo>.</m:mo></m:mrow></m:math></equation>
+That is, the line integral <m:math overflow="scroll"><m:mrow><m:msub><m:mo>∫</m:mo><m:mi>C</m:mi></m:msub><m:mi>ω</m:mi></m:mrow></m:math> of <m:math overflow="scroll"><m:mi>ω</m:mi></m:math> around <m:math overflow="scroll"><m:mi>C</m:mi></m:math>
+is independent of where we start.
+</item>
+    </list>
+</problem></exercise>
+    <para id="id174612">The question of which way we proceed around a closed curve is one that leads to
+quite intricate and difficult mathematics, at least when we consider totaly general smooth curves.
+For our purposes it wil, suffice to study a special kind of closed curve, i.e.,
+curves that are the boundaries of piecewise smooth geometric sets.
+Indeed, the intricate part of the general situation has a lot to do with determining which is the “inside”
+of the closed curve and which is the “outside,”
+a question that is easily settled in the case of a geometric set.
+Simple pictures make this general question seem silly, but precise proofs that there is a definite inside and a definite outside are difficult,
+and eluded mathematicians for centuries,
+culminating in the famous Jordan Curve Theorem, which asserts exactly what our intuition predicts:</para>
+<rule id="fs-id1169314072088" type="theorem"><title>Jordan Curve Theorem</title><statement id="fs-id1169298668802">
+    <para id="id174627">
+The complement of a closed curve is the union of two disjoint components, one bounded and one unbounded.</para>
+</statement></rule>
+    <para id="id174636">We define the bounded component to be the inside of the curve and the unbounded component to be the outside.</para>
+    <para id="id174640">We adopt the following convention for how we
+integrate around the boundary of a piecewise smooth geometric set <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+That is, the curve <m:math overflow="scroll"><m:msub><m:mi>C</m:mi><m:mi>S</m:mi></m:msub></m:math> will consist of four parts: the lower boundary (graph of the
+lower bounding function <m:math overflow="scroll"><m:mi>l</m:mi></m:math>), the righthand boundary (a portion of the vertical line <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mi>b</m:mi></m:mrow></m:math>),
+the upper boundary (the graph of the upper bounding function <m:math overflow="scroll"><m:mi>u</m:mi></m:math>),
+and finally the lefthand side (a portion of the vertical line <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mi>a</m:mi></m:mrow></m:math>).
+By <emphasis effect="italics">integrating around</emphasis> such a curve <m:math overflow="scroll"><m:mrow><m:msub><m:mi>C</m:mi><m:mi>S</m:mi></m:msub><m:mo>,</m:mo></m:mrow></m:math> we will always mean proceeding counterclockwise around the curves.
+Specifically, we move from left to right along the lower boundary, from bottom to top along
+the righthand boundary, from right to left across the upper boundary,
+and from top to bottom along the lefthand boundary.
+Of course, as shown in the exercise above, it doesn't matter where we start.</para>
+<exercise id="fs-id1169312082284"><problem id="fs-id1169305285752">
+    <para id="id174738">
+Let <m:math overflow="scroll"><m:mi>S</m:mi></m:math> be the closed piecewise smooth geometric set that is
+determined by the interval <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow></m:math> and the two piecewise smooth bounding functions <m:math overflow="scroll"><m:mi>u</m:mi></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>l</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Assume that the boundary <m:math overflow="scroll"><m:msub><m:mi>C</m:mi><m:mi>S</m:mi></m:msub></m:math> of <m:math overflow="scroll"><m:mi>S</m:mi></m:math> has finite length.
+Suppose the graph of <m:math overflow="scroll"><m:mi>u</m:mi></m:math> intersects the lines <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mi>a</m:mi></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mi>b</m:mi></m:mrow></m:math> at the points <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>b</m:mi><m:mo>,</m:mo><m:mi>d</m:mi><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math>
+and suppose that the graph of <m:math overflow="scroll"><m:mi>l</m:mi></m:math> intersects those lines at the points <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>e</m:mi><m:mo>)</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>b</m:mi><m:mo>,</m:mo><m:mi>f</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Find a parameterization <m:math overflow="scroll"><m:mrow><m:mi>φ</m:mi><m:mo>:</m:mo><m:mrow><m:mo>[</m:mo><m:msup><m:mi>a</m:mi><m:mo>'</m:mo></m:msup><m:mo>,</m:mo><m:msup><m:mi>b</m:mi><m:mo>'</m:mo></m:msup><m:mo>]</m:mo></m:mrow><m:mo>→</m:mo><m:msub><m:mi>C</m:mi><m:mi>S</m:mi></m:msub></m:mrow></m:math> of the curve <m:math overflow="scroll"><m:mrow><m:msub><m:mi>C</m:mi><m:mi>S</m:mi></m:msub><m:mo>.</m:mo></m:mrow></m:math></para>
+    <para id="id175005">HINT: Try using the interval <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>+</m:mo><m:mi>d</m:mi><m:mo>-</m:mo><m:mi>f</m:mi><m:mo>+</m:mo><m:mi>b</m:mi><m:mo>-</m:mo><m:mi>a</m:mi><m:mo>+</m:mo><m:mi>c</m:mi><m:mo>-</m:mo><m:mi>e</m:mi><m:mo>]</m:mo></m:mrow></m:math> as the domain <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:msup><m:mi>a</m:mi><m:mo>'</m:mo></m:msup><m:mo>,</m:mo><m:msup><m:mi>b</m:mi><m:mo>'</m:mo></m:msup><m:mo>]</m:mo></m:mrow></m:math> of <m:math overflow="scroll"><m:mrow><m:mi>φ</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+</problem></exercise>
+    <para id="id175095">The next theorem, though simple to state and use,
+contains in its proof a combinatorial idea that is truly central to all that follows in this chapter.
+In its simplest form, it is just the realization that
+the line integral in one direction along a curve
+is the negative of the line integral in the opposite direction.</para>
+<rule id="fs-id1169299992444" type="theorem"><statement id="fs-id1169300464846">
+    <para id="id175103">
+Let <m:math overflow="scroll"><m:mrow><m:msub><m:mi>S</m:mi><m:mn>1</m:mn></m:msub><m:mo>,</m:mo><m:mo>...</m:mo><m:mo>,</m:mo><m:msub><m:mi>S</m:mi><m:mi>n</m:mi></m:msub></m:mrow></m:math> be a collection of closed geometric sets that constitute a partition of a geometric set <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>,</m:mo></m:mrow></m:math> and assume that
+the boundaries of all the <m:math overflow="scroll"><m:msub><m:mi>S</m:mi><m:mi>i</m:mi></m:msub></m:math>'s, as well as the boundary of <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+have finite length.
+Suppose <m:math overflow="scroll"><m:mi>ω</m:mi></m:math> is a continuous differential form on all the boundaries <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>C</m:mi><m:msub><m:mi>S</m:mi><m:mi>k</m:mi></m:msub></m:msub><m:mo>}</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Then</para>
+    <equation id="id175217">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:msub>
+            <m:mo>∫</m:mo>
+            <m:msub>
+              <m:mi>C</m:mi>
+              <m:mi>S</m:mi>
+            </m:msub>
+          </m:msub>
+          <m:mi>ω</m:mi>
+          <m:mo>=</m:mo>
+          <m:munderover>
+            <m:mo>∑</m:mo>
+            <m:mrow>
+              <m:mi>k</m:mi>
+              <m:mo>=</m:mo>
+              <m:mn>1</m:mn>
+            </m:mrow>
+            <m:mi>n</m:mi>
+          </m:munderover>
+          <m:msub>
+            <m:mo>∫</m:mo>
+            <m:msub>
+              <m:mi>C</m:mi>
+              <m:msub>
+                <m:mi>S</m:mi>
+                <m:mi>k</m:mi>
+              </m:msub>
+            </m:msub>
+          </m:msub>
+          <m:mi>ω</m:mi>
+          <m:mo>.</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+</statement>
+<proof id="fs-id1169298944121">
+    <para id="id175283">
+We give a careful proof for a special case, and then outline the general argument.
+Suppose then that <m:math overflow="scroll"><m:mi>S</m:mi></m:math> is a piecewise smooth geometric set, determined by the
+interval <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow></m:math> and the two bounding functions <m:math overflow="scroll"><m:mi>u</m:mi></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>l</m:mi><m:mo>,</m:mo></m:mrow></m:math> and
+assume that the boundary <m:math overflow="scroll"><m:msub><m:mi>C</m:mi><m:mi>S</m:mi></m:msub></m:math> has finite length.
+Suppose <m:math overflow="scroll"><m:mrow><m:mi>m</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:math> is a piecewise smooth function on <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>,</m:mo></m:mrow></m:math> satisfying <m:math overflow="scroll"><m:mrow><m:msubsup><m:mo>∫</m:mo><m:mi>a</m:mi><m:mi>b</m:mi></m:msubsup><m:mrow><m:mo>|</m:mo><m:msup><m:mi>m</m:mi><m:mo>'</m:mo></m:msup><m:mo>|</m:mo></m:mrow><m:mo>&lt;</m:mo><m:mi>∞</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+and assume that <m:math overflow="scroll"><m:mrow><m:mi>l</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>&lt;</m:mo><m:mi>m</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>&lt;</m:mo><m:mi>u</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Let <m:math overflow="scroll"><m:msub><m:mi>S</m:mi><m:mn>1</m:mn></m:msub></m:math> be the geometric set determined by the interval <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow></m:math> and the two bounding functions <m:math overflow="scroll"><m:mi>m</m:mi></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>l</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+and let <m:math overflow="scroll"><m:msub><m:mi>S</m:mi><m:mn>2</m:mn></m:msub></m:math> be the geometric set determined by the interval <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow></m:math> and the two bounding
+functions <m:math overflow="scroll"><m:mi>u</m:mi></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>m</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+We note first that the two geometric sets <m:math overflow="scroll"><m:msub><m:mi>S</m:mi><m:mn>1</m:mn></m:msub></m:math> and <m:math overflow="scroll"><m:msub><m:mi>S</m:mi><m:mn>2</m:mn></m:msub></m:math> comprise a partition of the geometric set <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+so that this is indeed a
+pspecial case of the theorem.</para>
+    <para id="id175643">Next, consider the following eight line integrals:
+First, integrate from left to write along the graph of <m:math overflow="scroll"><m:mrow><m:mi>m</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+second, up the line <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mi>b</m:mi></m:mrow></m:math> from <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>b</m:mi><m:mo>,</m:mo><m:mi>m</m:mi><m:mo>(</m:mo><m:mi>b</m:mi><m:mo>)</m:mo><m:mo>)</m:mo></m:mrow></m:math> to <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>b</m:mi><m:mo>,</m:mo><m:mi>u</m:mi><m:mo>(</m:mo><m:mi>b</m:mi><m:mo>)</m:mo><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math>
+third, integrate from right to left across the graph of <m:math overflow="scroll"><m:mrow><m:mi>u</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+fourth, integrate down the line <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mi>a</m:mi></m:mrow></m:math> from <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>u</m:mi><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo><m:mo>)</m:mo></m:mrow></m:math> to <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>m</m:mi><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math>
+fifth, continue down the line <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mi>a</m:mi></m:mrow></m:math> from <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>m</m:mi><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo><m:mo>)</m:mo></m:mrow></m:math> to <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>l</m:mi><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math>
+sixth, integrate from left to right across the graph of <m:math overflow="scroll"><m:mrow><m:mi>l</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+seventh, integrate up the line <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mi>b</m:mi></m:mrow></m:math> from <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>b</m:mi><m:mo>,</m:mo><m:mi>l</m:mi><m:mo>(</m:mo><m:mi>b</m:mi><m:mo>)</m:mo><m:mo>)</m:mo></m:mrow></m:math> to <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>b</m:mi><m:mo>,</m:mo><m:mi>m</m:mi><m:mo>(</m:mo><m:mi>b</m:mi><m:mo>)</m:mo><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math>
+and finally, integfrate from right to left across the graph of <m:math overflow="scroll"><m:mrow><m:mi>m</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+    <para id="id175959">The first four line integrals
+comprise the line integral around the geometric set <m:math overflow="scroll"><m:mrow><m:msub><m:mi>S</m:mi><m:mn>2</m:mn></m:msub><m:mo>,</m:mo></m:mrow></m:math>
+and the last four comprise the line integral around the geometric set <m:math overflow="scroll"><m:mrow><m:msub><m:mi>S</m:mi><m:mn>1</m:mn></m:msub><m:mo>.</m:mo></m:mrow></m:math>
+On the other hand, the first and eighth line integrals here cancel out,
+for one is just the reverse of the other.
+Hence, the sum total of these eight line integrals, integrals 2–7, is just the line integral
+around the boundary <m:math overflow="scroll"><m:msub><m:mi>C</m:mi><m:mi>S</m:mi></m:msub></m:math> of <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Therefore</para>
+    <equation id="id176028">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:msub>
+            <m:mo>∫</m:mo>
+            <m:msub>
+              <m:mi>C</m:mi>
+              <m:mi>S</m:mi>
+            </m:msub>
+          </m:msub>
+          <m:mi>ω</m:mi>
+          <m:mo>=</m:mo>
+          <m:msub>
+            <m:mo>∫</m:mo>
+            <m:msub>
+              <m:mi>C</m:mi>
+              <m:msub>
+                <m:mi>S</m:mi>
+                <m:mn>1</m:mn>
+              </m:msub>
+            </m:msub>
+          </m:msub>
+          <m:mi>ω</m:mi>
+          <m:mo>+</m:mo>
+          <m:msub>
+            <m:mo>∫</m:mo>
+            <m:msub>
+              <m:mi>C</m:mi>
+              <m:msub>
+                <m:mi>S</m:mi>
+                <m:mn>2</m:mn>
+              </m:msub>
+            </m:msub>
+          </m:msub>
+          <m:mi>ω</m:mi>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id176099">as desired.</para>
+</proof>
+</rule>
+    <para id="id176104">We give next an outline of the proof for a general partition <m:math overflow="scroll"><m:mrow><m:msub><m:mi>S</m:mi><m:mn>1</m:mn></m:msub><m:mo>,</m:mo><m:mo>...</m:mo><m:mo>,</m:mo><m:msub><m:mi>S</m:mi><m:mi>n</m:mi></m:msub></m:mrow></m:math> of <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Let <m:math overflow="scroll"><m:msub><m:mi>S</m:mi><m:mi>k</m:mi></m:msub></m:math> be determined by the interval <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:msub><m:mi>a</m:mi><m:mi>k</m:mi></m:msub><m:mo>,</m:mo><m:msub><m:mi>b</m:mi><m:mi>k</m:mi></m:msub><m:mo>]</m:mo></m:mrow></m:math> and the two bounding functions <m:math overflow="scroll"><m:msub><m:mi>u</m:mi><m:mi>k</m:mi></m:msub></m:math> and <m:math overflow="scroll"><m:mrow><m:msub><m:mi>l</m:mi><m:mi>k</m:mi></m:msub><m:mo>.</m:mo></m:mrow></m:math>
+Observe that, if the boundary <m:math overflow="scroll"><m:msub><m:mi>C</m:mi><m:msub><m:mi>S</m:mi><m:mi>k</m:mi></m:msub></m:msub></m:math> of <m:math overflow="scroll"><m:msub><m:mi>S</m:mi><m:mi>k</m:mi></m:msub></m:math> intersects the boundary <m:math overflow="scroll"><m:msub><m:mi>C</m:mi><m:msub><m:mi>S</m:mi><m:mi>j</m:mi></m:msub></m:msub></m:math> of <m:math overflow="scroll"><m:msub><m:mi>S</m:mi><m:mi>j</m:mi></m:msub></m:math>
+in a curve <m:math overflow="scroll"><m:mrow><m:mi>C</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+then the line integral of <m:math overflow="scroll"><m:mi>ω</m:mi></m:math> along <m:math overflow="scroll"><m:mrow><m:mi>C</m:mi><m:mo>,</m:mo></m:mrow></m:math> when it is computed as part of
+integrating counterclockwise around <m:math overflow="scroll"><m:mrow><m:msub><m:mi>S</m:mi><m:mi>k</m:mi></m:msub><m:mo>,</m:mo></m:mrow></m:math> is the negative of the line
+integral along <m:math overflow="scroll"><m:mrow><m:mi>C</m:mi><m:mo>,</m:mo></m:mrow></m:math> when it is computed as part of the
+line integral counterclockwise around <m:math overflow="scroll"><m:mrow><m:msub><m:mi>S</m:mi><m:mi>j</m:mi></m:msub><m:mo>.</m:mo></m:mrow></m:math>
+Indeed, the first line integral is the reverse of the second one.
+(A picture could be helpful.)
+Consequently, when we compute the sum of the line integrals of <m:math overflow="scroll"><m:mi>ω</m:mi></m:math> around the <m:math overflow="scroll"><m:msub><m:mi>C</m:mi><m:msub><m:mi>S</m:mi><m:mi>k</m:mi></m:msub></m:msub></m:math>'s,
+All terms cancel out except those line integrals that ar computed along parts of the boundaries of the <m:math overflow="scroll"><m:msub><m:mi>S</m:mi><m:mi>k</m:mi></m:msub></m:math>'s that intersect no other <m:math overflow="scroll"><m:mrow><m:msub><m:mi>S</m:mi><m:mi>j</m:mi></m:msub><m:mo>.</m:mo></m:mrow></m:math>
+But such parts of the boundaries of the <m:math overflow="scroll"><m:msub><m:mi>S</m:mi><m:mi>k</m:mi></m:msub></m:math>'s must coincide with parts
+of the boundary of <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Therefore, the sum of the line integrals of <m:math overflow="scroll"><m:mi>ω</m:mi></m:math> around the boundaries of the <m:math overflow="scroll"><m:msub><m:mi>S</m:mi><m:mi>k</m:mi></m:msub></m:math>'s equals the line integral of <m:math overflow="scroll"><m:mi>ω</m:mi></m:math>
+around the boundary of <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>,</m:mo></m:mrow></m:math> and this is precisely what the theorem asserts.</para>
+<exercise id="fs-id1169299376157"><problem id="fs-id1169301664357">
+    <para id="id176508">Prove the analog of <link target-id="fs-id1169299992444"/> for contour integrals:
+Let <m:math overflow="scroll"><m:mrow><m:msub><m:mi>S</m:mi><m:mn>1</m:mn></m:msub><m:mo>,</m:mo><m:mo>...</m:mo><m:mo>,</m:mo><m:msub><m:mi>S</m:mi><m:mi>n</m:mi></m:msub></m:mrow></m:math> be a collection of closed geometric
+sets that constitute a partition of a geometric set <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>,</m:mo></m:mrow></m:math> and assume that
+the boundaries of all the <m:math overflow="scroll"><m:msub><m:mi>S</m:mi><m:mi>i</m:mi></m:msub></m:math>'s, as well as the boundary of <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+have finite length.
+Suppose <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is a continuous complex-valued function on all the boundaries <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>C</m:mi><m:msub><m:mi>S</m:mi><m:mi>k</m:mi></m:msub></m:msub><m:mo>}</m:mo></m:mrow></m:math> as well as on the boundary <m:math overflow="scroll"><m:mrow><m:msub><m:mi>C</m:mi><m:mi>S</m:mi></m:msub><m:mo>.</m:mo></m:mrow></m:math>
+Then</para>
+    <equation id="id176640">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:msub>
+            <m:mo>∫</m:mo>
+            <m:msub>
+              <m:mi>C</m:mi>
+              <m:mi>S</m:mi>
+            </m:msub>
+          </m:msub>
+          <m:mi>f</m:mi>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>ζ</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mspace width="0.166667em"/>
+          <m:mi>d</m:mi>
+          <m:mi>ζ</m:mi>
+          <m:mo>=</m:mo>
+          <m:munderover>
+            <m:mo>∑</m:mo>
+            <m:mrow>
+              <m:mi>k</m:mi>
+              <m:mo>=</m:mo>
+              <m:mn>1</m:mn>
+            </m:mrow>
+            <m:mi>n</m:mi>
+          </m:munderover>
+          <m:msub>
+            <m:mo>∫</m:mo>
+            <m:msub>
+              <m:mi>C</m:mi>
+              <m:msub>
+                <m:mi>S</m:mi>
+                <m:mi>k</m:mi>
+              </m:msub>
+            </m:msub>
+          </m:msub>
+          <m:mi>f</m:mi>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>ζ</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mspace width="0.166667em"/>
+          <m:mi>d</m:mi>
+          <m:mi>ζ</m:mi>
+          <m:mo>.</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+</problem></exercise>
+    <para id="id176738">We come now to the most remarkable theorem in the subject of
+integration over curves, Green's Theorem.
+Another fanfare, please!</para>
+<rule id="fs-id1169300816456" type="theorem"><title>Green</title><statement id="fs-id1169306521248">
+    <para id="id176747"> 
+Let <m:math overflow="scroll"><m:mi>S</m:mi></m:math> be a piecewise smooth, closed, geometric set,
+let <m:math overflow="scroll"><m:msub><m:mi>C</m:mi><m:mi>S</m:mi></m:msub></m:math> denote the closed curve that is the boundary of <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+and assume that <m:math overflow="scroll"><m:msub><m:mi>C</m:mi><m:mi>S</m:mi></m:msub></m:math> is of finite length.
+Suppose <m:math overflow="scroll"><m:mrow><m:mi>ω</m:mi><m:mo>=</m:mo><m:mi>P</m:mi><m:mi>d</m:mi><m:mi>x</m:mi><m:mo>+</m:mo><m:mi>Q</m:mi><m:mi>d</m:mi><m:mi>y</m:mi></m:mrow></m:math> is a continuous differential form on <m:math overflow="scroll"><m:mi>S</m:mi></m:math> that is smooth on
+the interior <m:math overflow="scroll"><m:msup><m:mi>S</m:mi><m:mn>0</m:mn></m:msup></m:math> of <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Then</para>
+    <equation id="id176868">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:msub>
+            <m:mo>∫</m:mo>
+            <m:msub>
+              <m:mi>C</m:mi>
+              <m:mi>S</m:mi>
+            </m:msub>
+          </m:msub>
+          <m:mi>ω</m:mi>
+          <m:mo>=</m:mo>
+          <m:msub>
+            <m:mo>∫</m:mo>
+            <m:msub>
+              <m:mi>C</m:mi>
+              <m:mi>S</m:mi>
+            </m:msub>
+          </m:msub>
+          <m:mi>P</m:mi>
+          <m:mspace width="0.166667em"/>
+          <m:mi>d</m:mi>
+          <m:mi>x</m:mi>
+          <m:mo>+</m:mo>
+          <m:mi>Q</m:mi>
+          <m:mspace width="0.166667em"/>
+          <m:mi>d</m:mi>
+          <m:mi>y</m:mi>
+          <m:mo>=</m:mo>
+          <m:msub>
+            <m:mo>∫</m:mo>
+            <m:mi>S</m:mi>
+          </m:msub>
+          <m:mfrac>
+            <m:mrow>
+              <m:mi>t</m:mi>
+              <m:mi>i</m:mi>
+              <m:mi>a</m:mi>
+              <m:mi>l</m:mi>
+              <m:mi>Q</m:mi>
+            </m:mrow>
+            <m:mrow>
+              <m:mi>t</m:mi>
+              <m:mi>i</m:mi>
+              <m:mi>a</m:mi>
+              <m:mi>l</m:mi>
+              <m:mi>x</m:mi>
+            </m:mrow>
+          </m:mfrac>
+          <m:mo>-</m:mo>
+          <m:mfrac>
+            <m:mrow>
+              <m:mi>t</m:mi>
+              <m:mi>i</m:mi>
+              <m:mi>a</m:mi>
+              <m:mi>l</m:mi>
+              <m:mi>P</m:mi>
+            </m:mrow>
+            <m:mrow>
+              <m:mi>t</m:mi>
+              <m:mi>i</m:mi>
+              <m:mi>a</m:mi>
+              <m:mi>l</m:mi>
+              <m:mi>y</m:mi>
+            </m:mrow>
+          </m:mfrac>
+          <m:mo>.</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+</statement></rule>
+<rule id="fs-id1169305256473"><label/><statement id="fs-id1169298242856">
+    <para id="id176994"><emphasis effect="bold">REMARK</emphasis>
+The first thing to notice about this theorem is that
+it connects an integral around a (1-dimensional) curve with an integral over a (2-dimensional) set,
+suggesting a kind of connection between a 1-dimensional process and a 2-dimensional one.
+Such a connection seems to be unexpected, and it should
+therefore have some important implications, as indeed
+Green's Theorem does.</para>
+    <para id="id177005">The second thing to think about is the case when <m:math overflow="scroll"><m:mi>ω</m:mi></m:math>
+is an exact differential <m:math overflow="scroll"><m:mrow><m:mi>d</m:mi><m:mi>f</m:mi></m:mrow></m:math> of a smooth function <m:math overflow="scroll"><m:mi>f</m:mi></m:math> of two real variables.
+In that case, Green's Theorem says</para>
+    <equation id="id177040">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:msub>
+            <m:mo>∫</m:mo>
+            <m:msub>
+              <m:mi>C</m:mi>
+              <m:mi>S</m:mi>
+            </m:msub>
+          </m:msub>
+          <m:mfrac>
+            <m:mrow>
+              <m:mi>t</m:mi>
+              <m:mi>i</m:mi>
+              <m:mi>a</m:mi>
+              <m:mi>l</m:mi>
+              <m:mi>f</m:mi>
+            </m:mrow>
+            <m:mrow>
+              <m:mi>t</m:mi>
+              <m:mi>i</m:mi>
+              <m:mi>a</m:mi>
+              <m:mi>l</m:mi>
+              <m:mi>x</m:mi>
+            </m:mrow>
+          </m:mfrac>
+          <m:mspace width="0.166667em"/>
+          <m:mi>d</m:mi>
+          <m:mi>x</m:mi>
+          <m:mo>+</m:mo>
+          <m:mfrac>
+            <m:mrow>
+              <m:mi>t</m:mi>
+              <m:mi>i</m:mi>
+              <m:mi>a</m:mi>
+              <m:mi>l</m:mi>
+              <m:mi>f</m:mi>
+            </m:mrow>
+            <m:mrow>
+              <m:mi>t</m:mi>
+              <m:mi>i</m:mi>
+              <m:mi>a</m:mi>
+              <m:mi>l</m:mi>
+              <m:mi>y</m:mi>
+            </m:mrow>
+          </m:mfrac>
+          <m:mspace width="0.166667em"/>
+          <m:mi>d</m:mi>
+          <m:mi>y</m:mi>
+          <m:mo>=</m:mo>
+          <m:msub>
+            <m:mo>∫</m:mo>
+            <m:mi>S</m:mi>
+          </m:msub>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:msub>
+              <m:mi>f</m:mi>
+              <m:mrow>
+                <m:mi>y</m:mi>
+                <m:mi>x</m:mi>
+              </m:mrow>
+            </m:msub>
+            <m:mo>-</m:mo>
+            <m:msub>
+              <m:mi>f</m:mi>
+              <m:mrow>
+                <m:mi>x</m:mi>
+                <m:mi>y</m:mi>
+              </m:mrow>
+            </m:msub>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>,</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id177172">which would be equal to 0 if <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>∈</m:mo><m:msup><m:mi>C</m:mi><m:mn>2</m:mn></m:msup><m:mrow><m:mo>(</m:mo><m:mi>S</m:mi><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> by <link target-id="fs-id1166169575517" document="m36206"/>.
+Hence, the integral of <m:math overflow="scroll"><m:mrow><m:mi>d</m:mi><m:mi>f</m:mi></m:mrow></m:math> around any such curve would be 0.
+If <m:math overflow="scroll"><m:mi>U</m:mi></m:math> is an open subset of <m:math overflow="scroll"><m:mrow><m:msup><m:mrow><m:mi>R</m:mi></m:mrow><m:mn>2</m:mn></m:msup><m:mo>,</m:mo></m:mrow></m:math>
+there may or may not be some other <m:math overflow="scroll"><m:mi>ω</m:mi></m:math>'s, called <emphasis effect="italics">closed differential forms,</emphasis> having the property
+that their integral around every piecewise smooth curve of finite length in <m:math overflow="scroll"><m:mi>U</m:mi></m:math> is 0,
+and the study of these closed differential forms <m:math overflow="scroll"><m:mi>ω</m:mi></m:math> that are not exact differential forms <m:math overflow="scroll"><m:mrow><m:mi>d</m:mi><m:mi>f</m:mi></m:mrow></m:math> has led to much interesting mathematics.
+It turns out that the structure of the open set <m:math overflow="scroll"><m:mrow><m:mi>U</m:mi><m:mo>,</m:mo></m:mrow></m:math> e.g., how many
+“holes” there are in it, is what's important.
+Take a course in Algebraic Topology!</para>
+</statement></rule>
+    <para id="id177316">The proof of Green's Theorem is tough, and we break it into several steps.</para>
+<rule id="fs-id1169298982632" type="lemma"><statement id="fs-id1169312320560">
+    <para id="id177320">Suppose <m:math overflow="scroll"><m:mi>S</m:mi></m:math> is the rectangle <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>×</m:mo><m:mo>[</m:mo><m:mi>c</m:mi><m:mo>,</m:mo><m:mi>d</m:mi><m:mo>]</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Then Green's Theorem is true.</para>
+</statement>
+<proof id="fs-id1169301650183">
+    <para id="id177370">We think of the closed curve <m:math overflow="scroll"><m:msub><m:mi>C</m:mi><m:mi>S</m:mi></m:msub></m:math> bounding the rectangle as the union of four
+straight lines,
+<m:math overflow="scroll"><m:mrow><m:msub><m:mi>C</m:mi><m:mn>1</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>C</m:mi><m:mn>2</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>C</m:mi><m:mn>3</m:mn></m:msub></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:msub><m:mi>C</m:mi><m:mn>4</m:mn></m:msub><m:mo>,</m:mo></m:mrow></m:math>
+and we parameterize them as follows:
+Let <m:math overflow="scroll"><m:mrow><m:mi>φ</m:mi><m:mo>:</m:mo><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow><m:mo>→</m:mo><m:msub><m:mi>C</m:mi><m:mn>1</m:mn></m:msub></m:mrow></m:math> be defined by <m:math overflow="scroll"><m:mrow><m:mi>φ</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>,</m:mo><m:mi>c</m:mi><m:mo>)</m:mo><m:mo>;</m:mo></m:mrow></m:math>
+let <m:math overflow="scroll"><m:mrow><m:mi>φ</m:mi><m:mo>:</m:mo><m:mrow><m:mo>[</m:mo><m:mi>b</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>+</m:mo><m:mi>d</m:mi><m:mo>-</m:mo><m:mi>c</m:mi><m:mo>]</m:mo></m:mrow><m:mo>→</m:mo><m:msub><m:mi>C</m:mi><m:mn>2</m:mn></m:msub></m:mrow></m:math> be defined by <m:math overflow="scroll"><m:mrow><m:mi>φ</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mo>(</m:mo><m:mi>b</m:mi><m:mo>,</m:mo><m:mi>t</m:mi><m:mo>-</m:mo><m:mi>b</m:mi><m:mo>+</m:mo><m:mi>c</m:mi><m:mo>)</m:mo><m:mo>;</m:mo></m:mrow></m:math>
+let <m:math overflow="scroll"><m:mrow><m:mi>φ</m:mi><m:mo>:</m:mo><m:mrow><m:mo>[</m:mo><m:mi>b</m:mi><m:mo>+</m:mo><m:mi>d</m:mi><m:mo>-</m:mo><m:mi>c</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>+</m:mo><m:mi>d</m:mi><m:mo>-</m:mo><m:mi>c</m:mi><m:mo>+</m:mo><m:mi>b</m:mi><m:mo>-</m:mo><m:mi>a</m:mi><m:mo>]</m:mo></m:mrow><m:mo>→</m:mo><m:msub><m:mi>C</m:mi><m:mn>3</m:mn></m:msub></m:mrow></m:math> be defined by <m:math overflow="scroll"><m:mrow><m:mi>φ</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mo>(</m:mo><m:mi>b</m:mi><m:mo>+</m:mo><m:mi>d</m:mi><m:mo>-</m:mo><m:mi>c</m:mi><m:mo>+</m:mo><m:mi>b</m:mi><m:mo>-</m:mo><m:mi>t</m:mi><m:mo>,</m:mo><m:mi>d</m:mi><m:mo>)</m:mo><m:mo>;</m:mo></m:mrow></m:math>
+and let <m:math overflow="scroll"><m:mrow><m:mi>φ</m:mi><m:mo>:</m:mo><m:mrow><m:mo>[</m:mo><m:mi>b</m:mi><m:mo>+</m:mo><m:mi>d</m:mi><m:mo>-</m:mo><m:mi>c</m:mi><m:mo>+</m:mo><m:mi>b</m:mi><m:mo>-</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>+</m:mo><m:mi>d</m:mi><m:mo>-</m:mo><m:mi>c</m:mi><m:mo>+</m:mo><m:mi>b</m:mi><m:mo>-</m:mo><m:mi>a</m:mi><m:mo>+</m:mo><m:mi>d</m:mi><m:mo>-</m:mo><m:mi>c</m:mi><m:mo>]</m:mo></m:mrow><m:mo>→</m:mo><m:msub><m:mi>C</m:mi><m:mn>4</m:mn></m:msub></m:mrow></m:math> be defined by <m:math overflow="scroll"><m:mrow><m:mi>φ</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>+</m:mo><m:mi>d</m:mi><m:mo>-</m:mo><m:mi>c</m:mi><m:mo>+</m:mo><m:mi>b</m:mi><m:mo>-</m:mo><m:mi>a</m:mi><m:mo>+</m:mo><m:mi>d</m:mi><m:mo>-</m:mo><m:mi>t</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+One can check directly to see that this <m:math overflow="scroll"><m:mi>φ</m:mi></m:math> parameterizes the boundary of the rectangle <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>=</m:mo><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>×</m:mo><m:mo>[</m:mo><m:mi>c</m:mi><m:mo>,</m:mo><m:mi>d</m:mi><m:mo>]</m:mo><m:mo>.</m:mo></m:mrow></m:math></para>
+    <para id="id177881">As usual, we write <m:math overflow="scroll"><m:mrow><m:mi>φ</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo><m:mo>,</m:mo><m:mi>y</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Now, we just compute, use the Fundamental Theorem of Calculus in the middle, and use
+part (d) of <link target-id="fs-id1166580376734" document="m36223"/> at the end.</para>
+    <equation id="uid5">
+      <m:math overflow="scroll" mode="display">
+        <m:mtable displaystyle="true">
+          <m:mtr>
+            <m:mtd columnalign="right">
+              <m:mrow>
+                <m:msub>
+                  <m:mo>∫</m:mo>
+                  <m:msub>
+                    <m:mi>C</m:mi>
+                    <m:mi>S</m:mi>
+                  </m:msub>
+                </m:msub>
+                <m:mi>ω</m:mi>
+              </m:mrow>
+            </m:mtd>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:msub>
+                  <m:mo>∫</m:mo>
+                  <m:msub>
+                    <m:mi>C</m:mi>
+                    <m:mn>1</m:mn>
+                  </m:msub>
+                </m:msub>
+                <m:mi>ω</m:mi>
+                <m:mo>+</m:mo>
+                <m:msub>
+                  <m:mo>∫</m:mo>
+                  <m:msub>
+                    <m:mi>C</m:mi>
+                    <m:mn>2</m:mn>
+                  </m:msub>
+                </m:msub>
+                <m:mi>ω</m:mi>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd/>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mspace width="1.em"/>
+                <m:mspace width="1.em"/>
+                <m:mo>+</m:mo>
+                <m:msub>
+                  <m:mo>∫</m:mo>
+                  <m:msub>
+                    <m:mi>C</m:mi>
+                    <m:mn>3</m:mn>
+                  </m:msub>
+                </m:msub>
+                <m:mi>ω</m:mi>
+                <m:mo>+</m:mo>
+                <m:msub>
+                  <m:mo>∫</m:mo>
+                  <m:msub>
+                    <m:mi>C</m:mi>
+                    <m:mn>4</m:mn>
+                  </m:msub>
+                </m:msub>
+                <m:mi>ω</m:mi>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:msub>
+                  <m:mo>∫</m:mo>
+                  <m:msub>
+                    <m:mi>C</m:mi>
+                    <m:mn>1</m:mn>
+                  </m:msub>
+                </m:msub>
+                <m:mi>P</m:mi>
+                <m:mspace width="0.166667em"/>
+                <m:mi>d</m:mi>
+                <m:mi>x</m:mi>
+                <m:mo>+</m:mo>
+                <m:mi>Q</m:mi>
+                <m:mspace width="0.166667em"/>
+                <m:mi>d</m:mi>
+                <m:mi>y</m:mi>
+                <m:mo>+</m:mo>
+                <m:msub>
+                  <m:mo>∫</m:mo>
+                  <m:msub>
+                    <m:mi>C</m:mi>
+                    <m:mn>2</m:mn>
+                  </m:msub>
+                </m:msub>
+                <m:mi>P</m:mi>
+                <m:mspace width="0.166667em"/>
+                <m:mi>d</m:mi>
+                <m:mi>x</m:mi>
+                <m:mo>+</m:mo>
+                <m:mi>Q</m:mi>
+                <m:mspace width="0.166667em"/>
+                <m:mi>d</m:mi>
+                <m:mi>y</m:mi>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd/>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mspace width="1.em"/>
+                <m:mspace width="1.em"/>
+                <m:mo>+</m:mo>
+                <m:msub>
+                  <m:mo>∫</m:mo>
+                  <m:msub>
+                    <m:mi>C</m:mi>
+                    <m:mn>3</m:mn>
+                  </m:msub>
+                </m:msub>
+                <m:mi>P</m:mi>
+                <m:mspace width="0.166667em"/>
+                <m:mi>d</m:mi>
+                <m:mi>x</m:mi>
+                <m:mo>+</m:mo>
+                <m:mi>Q</m:mi>
+                <m:mspace width="0.166667em"/>
+                <m:mi>d</m:mi>
+                <m:mi>y</m:mi>
+                <m:mo>+</m:mo>
+                <m:msub>
+                  <m:mo>∫</m:mo>
+                  <m:msub>
+                    <m:mi>C</m:mi>
+                    <m:mn>4</m:mn>
+                  </m:msub>
+                </m:msub>
+                <m:mi>P</m:mi>
+                <m:mspace width="0.166667em"/>
+                <m:mi>d</m:mi>
+                <m:mi>x</m:mi>
+                <m:mo>+</m:mo>
+                <m:mi>Q</m:mi>
+                <m:mspace width="0.166667em"/>
+                <m:mi>d</m:mi>
+                <m:mi>y</m:mi>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:msubsup>
+                  <m:mo>∫</m:mo>
+                  <m:mi>a</m:mi>
+                  <m:mi>b</m:mi>
+                </m:msubsup>
+                <m:mi>P</m:mi>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>φ</m:mi>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>t</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:msup>
+                  <m:mi>x</m:mi>
+                  <m:mo>'</m:mo>
+                </m:msup>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>t</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mo>+</m:mo>
+                <m:mi>Q</m:mi>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>φ</m:mi>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>t</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:msup>
+                  <m:mi>y</m:mi>
+                  <m:mo>'</m:mo>
+                </m:msup>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>t</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mspace width="0.166667em"/>
+                <m:mi>d</m:mi>
+                <m:mi>t</m:mi>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd/>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mspace width="1.em"/>
+                <m:mspace width="1.em"/>
+                <m:mo>+</m:mo>
+                <m:msubsup>
+                  <m:mo>∫</m:mo>
+                  <m:mi>b</m:mi>
+                  <m:mrow>
+                    <m:mi>b</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mi>d</m:mi>
+                    <m:mo>-</m:mo>
+                    <m:mi>c</m:mi>
+                  </m:mrow>
+                </m:msubsup>
+                <m:mi>P</m:mi>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>φ</m:mi>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>t</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:msup>
+                  <m:mi>x</m:mi>
+                  <m:mo>'</m:mo>
+                </m:msup>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>t</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mo>+</m:mo>
+                <m:mi>Q</m:mi>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>φ</m:mi>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>t</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:msup>
+                  <m:mi>y</m:mi>
+                  <m:mo>'</m:mo>
+                </m:msup>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>t</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mspace width="0.166667em"/>
+                <m:mi>d</m:mi>
+                <m:mi>t</m:mi>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd/>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mspace width="1.em"/>
+                <m:mspace width="1.em"/>
+                <m:mo>+</m:mo>
+                <m:msubsup>
+                  <m:mo>∫</m:mo>
+                  <m:mrow>
+                    <m:mi>b</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mi>d</m:mi>
+                    <m:mo>-</m:mo>
+                    <m:mi>c</m:mi>
+                  </m:mrow>
+                  <m:mrow>
+                    <m:mi>b</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mi>d</m:mi>
+                    <m:mo>-</m:mo>
+                    <m:mi>c</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mi>b</m:mi>
+                    <m:mo>-</m:mo>
+                    <m:mi>a</m:mi>
+                  </m:mrow>
+                </m:msubsup>
+                <m:mi>P</m:mi>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>φ</m:mi>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>t</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:msup>
+                  <m:mi>x</m:mi>
+                  <m:mo>'</m:mo>
+                </m:msup>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>t</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mo>+</m:mo>
+                <m:mi>Q</m:mi>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>φ</m:mi>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>t</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:msup>
+                  <m:mi>y</m:mi>
+                  <m:mo>'</m:mo>
+                </m:msup>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>t</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mspace width="0.166667em"/>
+                <m:mi>d</m:mi>
+                <m:mi>t</m:mi>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd/>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mspace width="1.em"/>
+                <m:mspace width="1.em"/>
+                <m:mo>+</m:mo>
+                <m:msubsup>
+                  <m:mo>∫</m:mo>
+                  <m:mrow>
+                    <m:mi>b</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mi>d</m:mi>
+                    <m:mo>-</m:mo>
+                    <m:mi>c</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mi>b</m:mi>
+                    <m:mo>-</m:mo>
+                    <m:mi>a</m:mi>
+                  </m:mrow>
+                  <m:mrow>
+                    <m:mi>b</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mi>d</m:mi>
+                    <m:mo>-</m:mo>
+                    <m:mi>c</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mi>b</m:mi>
+                    <m:mo>-</m:mo>
+                    <m:mi>a</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mi>d</m:mi>
+                    <m:mo>-</m:mo>
+                    <m:mi>c</m:mi>
+                  </m:mrow>
+                </m:msubsup>
+                <m:mi>P</m:mi>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>φ</m:mi>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>t</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:msup>
+                  <m:mi>x</m:mi>
+                  <m:mo>'</m:mo>
+                </m:msup>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>t</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mo>+</m:mo>
+                <m:mi>Q</m:mi>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>φ</m:mi>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>t</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:msup>
+                  <m:mi>y</m:mi>
+                  <m:mo>'</m:mo>
+                </m:msup>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>t</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mspace width="0.166667em"/>
+                <m:mi>d</m:mi>
+                <m:mi>t</m:mi>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:msubsup>
+                  <m:mo>∫</m:mo>
+                  <m:mi>a</m:mi>
+                  <m:mi>b</m:mi>
+                </m:msubsup>
+                <m:mi>P</m:mi>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>t</m:mi>
+                  <m:mo>,</m:mo>
+                  <m:mi>c</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mspace width="0.166667em"/>
+                <m:mi>d</m:mi>
+                <m:mi>t</m:mi>
+                <m:mo>+</m:mo>
+                <m:msubsup>
+                  <m:mo>∫</m:mo>
+                  <m:mi>b</m:mi>
+                  <m:mrow>
+                    <m:mi>b</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mi>d</m:mi>
+                    <m:mo>-</m:mo>
+                    <m:mi>c</m:mi>
+                  </m:mrow>
+                </m:msubsup>
+                <m:mi>Q</m:mi>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>b</m:mi>
+                  <m:mo>,</m:mo>
+                  <m:mi>t</m:mi>
+                  <m:mo>-</m:mo>
+                  <m:mi>b</m:mi>
+                  <m:mo>+</m:mo>
+                  <m:mi>c</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mspace width="0.166667em"/>
+                <m:mi>d</m:mi>
+                <m:mi>t</m:mi>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd/>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mspace width="1.em"/>
+                <m:mspace width="1.em"/>
+                <m:mo>+</m:mo>
+                <m:msubsup>
+                  <m:mo>∫</m:mo>
+                  <m:mrow>
+                    <m:mi>b</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mi>d</m:mi>
+                    <m:mo>-</m:mo>
+                    <m:mi>c</m:mi>
+                  </m:mrow>
+                  <m:mrow>
+                    <m:mi>b</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mi>d</m:mi>
+                    <m:mo>-</m:mo>
+                    <m:mi>c</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mi>b</m:mi>
+                    <m:mo>-</m:mo>
+                    <m:mi>a</m:mi>
+                  </m:mrow>
+                </m:msubsup>
+                <m:mi>P</m:mi>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>b</m:mi>
+                  <m:mo>+</m:mo>
+                  <m:mi>d</m:mi>
+                  <m:mo>-</m:mo>
+                  <m:mi>c</m:mi>
+                  <m:mo>+</m:mo>
+                  <m:mi>b</m:mi>
+                  <m:mo>-</m:mo>
+                  <m:mi>t</m:mi>
+                  <m:mo>,</m:mo>
+                  <m:mi>d</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mo>-</m:mo>
+                  <m:mn>1</m:mn>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mspace width="0.166667em"/>
+                <m:mi>d</m:mi>
+                <m:mi>t</m:mi>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd/>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mspace width="1.em"/>
+                <m:mspace width="1.em"/>
+                <m:mo>+</m:mo>
+                <m:msubsup>
+                  <m:mo>∫</m:mo>
+                  <m:mrow>
+                    <m:mi>b</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mi>d</m:mi>
+                    <m:mo>-</m:mo>
+                    <m:mi>c</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mi>b</m:mi>
+                    <m:mo>-</m:mo>
+                    <m:mi>a</m:mi>
+                  </m:mrow>
+                  <m:mrow>
+                    <m:mi>b</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mi>d</m:mi>
+                    <m:mo>-</m:mo>
+                    <m:mi>c</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mi>b</m:mi>
+                    <m:mo>-</m:mo>
+                    <m:mi>a</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mi>d</m:mi>
+                    <m:mo>-</m:mo>
+                    <m:mi>c</m:mi>
+                  </m:mrow>
+                </m:msubsup>
+                <m:mi>Q</m:mi>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>a</m:mi>
+                  <m:mo>,</m:mo>
+                  <m:mi>b</m:mi>
+                  <m:mo>+</m:mo>
+                  <m:mi>d</m:mi>
+                  <m:mo>-</m:mo>
+                  <m:mi>c</m:mi>
+                  <m:mo>+</m:mo>
+                  <m:mi>b</m:mi>
+                  <m:mo>-</m:mo>
+                  <m:mi>a</m:mi>
+                  <m:mo>+</m:mo>
+                  <m:mi>d</m:mi>
+                  <m:mo>-</m:mo>
+                  <m:mi>t</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mo>-</m:mo>
+                  <m:mn>1</m:mn>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mspace width="0.166667em"/>
+                <m:mi>d</m:mi>
+                <m:mi>t</m:mi>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:msubsup>
+                  <m:mo>∫</m:mo>
+                  <m:mi>a</m:mi>
+                  <m:mi>b</m:mi>
+                </m:msubsup>
+                <m:mi>P</m:mi>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>t</m:mi>
+                  <m:mo>,</m:mo>
+                  <m:mi>c</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mspace width="0.166667em"/>
+                <m:mi>d</m:mi>
+                <m:mi>t</m:mi>
+                <m:mo>+</m:mo>
+                <m:msubsup>
+                  <m:mo>∫</m:mo>
+                  <m:mi>c</m:mi>
+                  <m:mi>d</m:mi>
+                </m:msubsup>
+                <m:mi>Q</m:mi>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>b</m:mi>
+                  <m:mo>,</m:mo>
+                  <m:mi>t</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mspace width="0.166667em"/>
+                <m:mi>d</m:mi>
+                <m:mi>t</m:mi>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd/>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mspace width="1.em"/>
+                <m:mspace width="1.em"/>
+                <m:mo>-</m:mo>
+                <m:msubsup>
+                  <m:mo>∫</m:mo>
+                  <m:mi>a</m:mi>
+                  <m:mi>b</m:mi>
+                </m:msubsup>
+                <m:mi>P</m:mi>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>t</m:mi>
+                  <m:mo>,</m:mo>
+                  <m:mi>d</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mspace width="0.166667em"/>
+                <m:mi>d</m:mi>
+                <m:mi>t</m:mi>
+                <m:mo>-</m:mo>
+                <m:msubsup>
+                  <m:mo>∫</m:mo>
+                  <m:mi>c</m:mi>
+                  <m:mi>d</m:mi>
+                </m:msubsup>
+                <m:mi>Q</m:mi>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>a</m:mi>
+                  <m:mo>,</m:mo>
+                  <m:mi>t</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mspace width="0.166667em"/>
+                <m:mi>d</m:mi>
+                <m:mi>t</m:mi>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:msubsup>
+                  <m:mo>∫</m:mo>
+                  <m:mi>c</m:mi>
+                  <m:mi>d</m:mi>
+                </m:msubsup>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>Q</m:mi>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>b</m:mi>
+                    <m:mo>,</m:mo>
+                    <m:mi>t</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>-</m:mo>
+                  <m:mi>Q</m:mi>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>a</m:mi>
+                    <m:mo>,</m:mo>
+                    <m:mi>t</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mspace width="0.166667em"/>
+                <m:mi>d</m:mi>
+                <m:mi>t</m:mi>
+                <m:mo>-</m:mo>
+                <m:msubsup>
+                  <m:mo>∫</m:mo>
+                  <m:mi>a</m:mi>
+                  <m:mi>b</m:mi>
+                </m:msubsup>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>P</m:mi>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>t</m:mi>
+                    <m:mo>,</m:mo>
+                    <m:mi>d</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>-</m:mo>
+                  <m:mi>P</m:mi>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>t</m:mi>
+                    <m:mo>,</m:mo>
+                    <m:mi>c</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mspace width="0.166667em"/>
+                <m:mi>d</m:mi>
+                <m:mi>t</m:mi>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:msubsup>
+                  <m:mo>∫</m:mo>
+                  <m:mi>c</m:mi>
+                  <m:mi>d</m:mi>
+                </m:msubsup>
+                <m:msubsup>
+                  <m:mo>∫</m:mo>
+                  <m:mi>a</m:mi>
+                  <m:mi>b</m:mi>
+                </m:msubsup>
+                <m:mfrac>
+                  <m:mrow>
+                    <m:mi>t</m:mi>
+                    <m:mi>i</m:mi>
+                    <m:mi>a</m:mi>
+                    <m:mi>l</m:mi>
+                    <m:mi>Q</m:mi>
+                  </m:mrow>
+                  <m:mrow>
+                    <m:mi>t</m:mi>
+                    <m:mi>i</m:mi>
+                    <m:mi>a</m:mi>
+                    <m:mi>l</m:mi>
+                    <m:mi>x</m:mi>
+                  </m:mrow>
+                </m:mfrac>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>s</m:mi>
+                  <m:mo>,</m:mo>
+                  <m:mi>t</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mspace width="0.166667em"/>
+                <m:mi>d</m:mi>
+                <m:mi>s</m:mi>
+                <m:mi>d</m:mi>
+                <m:mi>t</m:mi>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd/>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mspace width="1.em"/>
+                <m:mspace width="1.em"/>
+                <m:mo>-</m:mo>
+                <m:msubsup>
+                  <m:mo>∫</m:mo>
+                  <m:mi>a</m:mi>
+                  <m:mi>b</m:mi>
+                </m:msubsup>
+                <m:msubsup>
+                  <m:mo>∫</m:mo>
+                  <m:mi>c</m:mi>
+                  <m:mi>d</m:mi>
+                </m:msubsup>
+                <m:mfrac>
+                  <m:mrow>
+                    <m:mi>t</m:mi>
+                    <m:mi>i</m:mi>
+                    <m:mi>a</m:mi>
+                    <m:mi>l</m:mi>
+                    <m:mi>P</m:mi>
+                  </m:mrow>
+                  <m:mrow>
+                    <m:mi>t</m:mi>
+                    <m:mi>i</m:mi>
+                    <m:mi>a</m:mi>
+                    <m:mi>l</m:mi>
+                    <m:mi>y</m:mi>
+                  </m:mrow>
+                </m:mfrac>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>t</m:mi>
+                  <m:mo>,</m:mo>
+                  <m:mi>s</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mspace width="0.166667em"/>
+                <m:mi>d</m:mi>
+                <m:mi>s</m:mi>
+                <m:mi>d</m:mi>
+                <m:mi>t</m:mi>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:msub>
+                  <m:mo>∫</m:mo>
+                  <m:mi>S</m:mi>
+                </m:msub>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                </m:mrow>
+                <m:mfrac>
+                  <m:mrow>
+                    <m:mi>t</m:mi>
+                    <m:mi>i</m:mi>
+                    <m:mi>a</m:mi>
+                    <m:mi>l</m:mi>
+                    <m:mi>Q</m:mi>
+                  </m:mrow>
+                  <m:mrow>
+                    <m:mi>t</m:mi>
+                    <m:mi>i</m:mi>
+                    <m:mi>a</m:mi>
+                    <m:mi>l</m:mi>
+                    <m:mi>x</m:mi>
+                  </m:mrow>
+                </m:mfrac>
+                <m:mo>-</m:mo>
+                <m:mfrac>
+                  <m:mrow>
+                    <m:mi>t</m:mi>
+                    <m:mi>i</m:mi>
+                    <m:mi>a</m:mi>
+                    <m:mi>l</m:mi>
+                    <m:mi>P</m:mi>
+                  </m:mrow>
+                  <m:mrow>
+                    <m:mi>t</m:mi>
+                    <m:mi>i</m:mi>
+                    <m:mi>a</m:mi>
+                    <m:mi>l</m:mi>
+                    <m:mi>y</m:mi>
+                  </m:mrow>
+                </m:mfrac>
+                <m:mo>,</m:mo>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+        </m:mtable>
+      </m:math>
+    </equation>
+    <para id="id179560">proving the lemma.</para>
+</proof></rule>
+<rule id="fs-id3841309" type="lemma"><statement id="fs-id1169314046247">
+    <para id="id179565">Suppose <m:math overflow="scroll"><m:mi>S</m:mi></m:math> is a right triangle whose vertices are of the form <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>c</m:mi><m:mo>)</m:mo><m:mo>,</m:mo><m:mo>(</m:mo><m:mi>b</m:mi><m:mo>,</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>b</m:mi><m:mo>,</m:mo><m:mi>d</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Then Green's Theorem is true.</para>
+</statement>
+<proof id="fs-id1169298069093">
+    <para id="id179636">We parameterize the boundary <m:math overflow="scroll"><m:msub><m:mi>C</m:mi><m:mi>S</m:mi></m:msub></m:math> of this triangle
+as follows:
+For <m:math overflow="scroll"><m:mrow><m:mi>t</m:mi><m:mo>∈</m:mo><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>,</m:mo></m:mrow></m:math> set <m:math overflow="scroll"><m:mrow><m:mi>φ</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>,</m:mo><m:mi>c</m:mi><m:mo>)</m:mo><m:mo>;</m:mo></m:mrow></m:math>
+for <m:math overflow="scroll"><m:mrow><m:mi>t</m:mi><m:mo>∈</m:mo><m:mo>[</m:mo><m:mi>b</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>+</m:mo><m:mi>d</m:mi><m:mo>-</m:mo><m:mi>c</m:mi><m:mo>]</m:mo><m:mo>,</m:mo></m:mrow></m:math> set <m:math overflow="scroll"><m:mrow><m:mi>φ</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mo>(</m:mo><m:mi>b</m:mi><m:mo>,</m:mo><m:mi>t</m:mi><m:mo>+</m:mo><m:mi>c</m:mi><m:mo>-</m:mo><m:mi>b</m:mi><m:mo>)</m:mo><m:mo>;</m:mo></m:mrow></m:math>
+and for <m:math overflow="scroll"><m:mrow><m:mi>t</m:mi><m:mo>∈</m:mo><m:mo>[</m:mo><m:mi>b</m:mi><m:mo>+</m:mo><m:mi>d</m:mi><m:mo>-</m:mo><m:mi>c</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>+</m:mo><m:mi>d</m:mi><m:mo>-</m:mo><m:mi>c</m:mi><m:mo>+</m:mo><m:mi>b</m:mi><m:mo>-</m:mo><m:mi>a</m:mi><m:mo>]</m:mo><m:mo>,</m:mo></m:mrow></m:math> set <m:math overflow="scroll"><m:mrow><m:mi>φ</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mo>(</m:mo><m:mi>b</m:mi><m:mo>+</m:mo><m:mi>d</m:mi><m:mo>-</m:mo><m:mi>c</m:mi><m:mo>+</m:mo><m:mi>b</m:mi><m:mo>-</m:mo><m:mi>t</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>+</m:mo><m:mi>d</m:mi><m:mo>-</m:mo><m:mi>c</m:mi><m:mo>+</m:mo><m:mi>d</m:mi><m:mo>-</m:mo><m:mi>t</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Again, one can check that this <m:math overflow="scroll"><m:mi>φ</m:mi></m:math> parameterizes the boundary of the triangle <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+    <para id="id179925">Write <m:math overflow="scroll"><m:mrow><m:mi>φ</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo><m:mo>,</m:mo><m:mi>y</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Again, using the Fundamental Theorem and <link target-id="fs-id1166580376734" document="m36223"/>, we have</para>
+    <equation id="uid6">
+      <m:math overflow="scroll" mode="display">
+        <m:mtable displaystyle="true">
+          <m:mtr>
+            <m:mtd columnalign="right">
+              <m:mrow>
+                <m:msub>
+                  <m:mo>∫</m:mo>
+                  <m:msub>
+                    <m:mi>C</m:mi>
+                    <m:mi>S</m:mi>
+                  </m:msub>
+                </m:msub>
+                <m:mi>ω</m:mi>
+              </m:mrow>
+            </m:mtd>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:msub>
+                  <m:mo>∫</m:mo>
+                  <m:msub>
+                    <m:mi>C</m:mi>
+                    <m:mi>S</m:mi>
+                  </m:msub>
+                </m:msub>
+                <m:mi>P</m:mi>
+                <m:mspace width="0.166667em"/>
+                <m:mi>d</m:mi>
+                <m:mi>x</m:mi>
+                <m:mo>+</m:mo>
+                <m:mi>Q</m:mi>
+                <m:mspace width="0.166667em"/>
+                <m:mi>d</m:mi>
+                <m:mi>y</m:mi>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:msubsup>
+                  <m:mo>∫</m:mo>
+                  <m:mi>a</m:mi>
+                  <m:mi>b</m:mi>
+                </m:msubsup>
+                <m:mi>P</m:mi>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>φ</m:mi>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>t</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:msup>
+                  <m:mi>x</m:mi>
+                  <m:mo>'</m:mo>
+                </m:msup>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>t</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mo>+</m:mo>
+                <m:mi>Q</m:mi>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>φ</m:mi>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>t</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:msup>
+                  <m:mi>y</m:mi>
+                  <m:mo>'</m:mo>
+                </m:msup>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>t</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mspace width="0.166667em"/>
+                <m:mi>d</m:mi>
+                <m:mi>t</m:mi>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd/>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mspace width="1.em"/>
+                <m:mspace width="1.em"/>
+                <m:mo>+</m:mo>
+                <m:msubsup>
+                  <m:mo>∫</m:mo>
+                  <m:mi>b</m:mi>
+                  <m:mrow>
+                    <m:mi>b</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mi>d</m:mi>
+                    <m:mo>-</m:mo>
+                    <m:mi>c</m:mi>
+                  </m:mrow>
+                </m:msubsup>
+                <m:mi>P</m:mi>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>φ</m:mi>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>t</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:msup>
+                  <m:mi>x</m:mi>
+                  <m:mo>'</m:mo>
+                </m:msup>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>t</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mo>+</m:mo>
+                <m:mi>Q</m:mi>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>φ</m:mi>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>t</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:msup>
+                  <m:mi>y</m:mi>
+                  <m:mo>'</m:mo>
+                </m:msup>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>t</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mspace width="0.166667em"/>
+                <m:mi>d</m:mi>
+                <m:mi>t</m:mi>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd/>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mspace width="1.em"/>
+                <m:mspace width="1.em"/>
+                <m:mo>+</m:mo>
+                <m:msubsup>
+                  <m:mo>∫</m:mo>
+                  <m:mrow>
+                    <m:mi>b</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mi>d</m:mi>
+                    <m:mo>-</m:mo>
+                    <m:mi>c</m:mi>
+                  </m:mrow>
+                  <m:mrow>
+                    <m:mi>b</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mi>d</m:mi>
+                    <m:mo>-</m:mo>
+                    <m:mi>c</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mi>b</m:mi>
+                    <m:mo>-</m:mo>
+                    <m:mi>a</m:mi>
+                  </m:mrow>
+                </m:msubsup>
+                <m:mi>P</m:mi>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>φ</m:mi>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>t</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:msup>
+                  <m:mi>x</m:mi>
+                  <m:mo>'</m:mo>
+                </m:msup>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>t</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mo>+</m:mo>
+                <m:mi>Q</m:mi>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>φ</m:mi>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>t</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:msup>
+                  <m:mi>y</m:mi>
+                  <m:mo>'</m:mo>
+                </m:msup>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>t</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mspace width="0.166667em"/>
+                <m:mi>d</m:mi>
+                <m:mi>t</m:mi>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:msubsup>
+                  <m:mo>∫</m:mo>
+                  <m:mi>a</m:mi>
+                  <m:mi>b</m:mi>
+                </m:msubsup>
+                <m:mi>P</m:mi>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>t</m:mi>
+                  <m:mo>,</m:mo>
+                  <m:mi>c</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mspace width="0.166667em"/>
+                <m:mi>d</m:mi>
+                <m:mi>t</m:mi>
+                <m:mo>+</m:mo>
+                <m:msubsup>
+                  <m:mo>∫</m:mo>
+                  <m:mi>b</m:mi>
+                  <m:mrow>
+                    <m:mi>b</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mi>d</m:mi>
+                    <m:mo>-</m:mo>
+                    <m:mi>c</m:mi>
+                  </m:mrow>
+                </m:msubsup>
+                <m:mi>Q</m:mi>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>b</m:mi>
+                  <m:mo>,</m:mo>
+                  <m:mi>t</m:mi>
+                  <m:mo>+</m:mo>
+                  <m:mi>c</m:mi>
+                  <m:mo>-</m:mo>
+                  <m:mi>b</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mspace width="0.166667em"/>
+                <m:mi>d</m:mi>
+                <m:mi>t</m:mi>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd/>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mspace width="1.em"/>
+                <m:mspace width="1.em"/>
+                <m:mo>+</m:mo>
+                <m:msubsup>
+                  <m:mo>∫</m:mo>
+                  <m:mrow>
+                    <m:mi>b</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mi>d</m:mi>
+                    <m:mo>-</m:mo>
+                    <m:mi>c</m:mi>
+                  </m:mrow>
+                  <m:mrow>
+                    <m:mi>b</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mi>d</m:mi>
+                    <m:mo>-</m:mo>
+                    <m:mi>c</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mi>b</m:mi>
+                    <m:mo>-</m:mo>
+                    <m:mi>a</m:mi>
+                  </m:mrow>
+                </m:msubsup>
+                <m:mi>P</m:mi>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>b</m:mi>
+                  <m:mo>+</m:mo>
+                  <m:mi>d</m:mi>
+                  <m:mo>-</m:mo>
+                  <m:mi>c</m:mi>
+                  <m:mo>+</m:mo>
+                  <m:mi>b</m:mi>
+                  <m:mo>-</m:mo>
+                  <m:mi>t</m:mi>
+                  <m:mo>,</m:mo>
+                  <m:mi>b</m:mi>
+                  <m:mo>+</m:mo>
+                  <m:mi>d</m:mi>
+                  <m:mo>-</m:mo>
+                  <m:mi>c</m:mi>
+                  <m:mo>+</m:mo>
+                  <m:mi>d</m:mi>
+                  <m:mo>-</m:mo>
+                  <m:mi>t</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mo>-</m:mo>
+                  <m:mn>1</m:mn>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mspace width="0.166667em"/>
+                <m:mi>d</m:mi>
+                <m:mi>t</m:mi>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd/>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mspace width="1.em"/>
+                <m:mspace width="1.em"/>
+                <m:mo>+</m:mo>
+                <m:msubsup>
+                  <m:mo>∫</m:mo>
+                  <m:mrow>
+                    <m:mi>b</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mi>d</m:mi>
+                    <m:mo>-</m:mo>
+                    <m:mi>c</m:mi>
+                  </m:mrow>
+                  <m:mrow>
+                    <m:mi>b</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mi>d</m:mi>
+                    <m:mo>-</m:mo>
+                    <m:mi>c</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mi>b</m:mi>
+                    <m:mo>-</m:mo>
+                    <m:mi>a</m:mi>
+                  </m:mrow>
+                </m:msubsup>
+                <m:mi>Q</m:mi>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>b</m:mi>
+                  <m:mo>+</m:mo>
+                  <m:mi>d</m:mi>
+                  <m:mo>-</m:mo>
+                  <m:mi>c</m:mi>
+                  <m:mo>+</m:mo>
+                  <m:mi>b</m:mi>
+                  <m:mo>-</m:mo>
+                  <m:mi>t</m:mi>
+                  <m:mo>,</m:mo>
+                  <m:mi>b</m:mi>
+                  <m:mo>+</m:mo>
+                  <m:mi>d</m:mi>
+                  <m:mo>-</m:mo>
+                  <m:mi>c</m:mi>
+                  <m:mo>+</m:mo>
+                  <m:mi>d</m:mi>
+                  <m:mo>-</m:mo>
+                  <m:mi>t</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mo>-</m:mo>
+                  <m:mn>1</m:mn>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mspace width="0.166667em"/>
+                <m:mi>d</m:mi>
+                <m:mi>t</m:mi>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:msubsup>
+                  <m:mo>∫</m:mo>
+                  <m:mi>a</m:mi>
+                  <m:mi>b</m:mi>
+                </m:msubsup>
+                <m:mi>P</m:mi>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>t</m:mi>
+                  <m:mo>,</m:mo>
+                  <m:mi>c</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mspace width="0.166667em"/>
+                <m:mi>d</m:mi>
+                <m:mi>t</m:mi>
+                <m:mo>+</m:mo>
+                <m:msubsup>
+                  <m:mo>∫</m:mo>
+                  <m:mi>c</m:mi>
+                  <m:mi>d</m:mi>
+                </m:msubsup>
+                <m:mi>Q</m:mi>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>b</m:mi>
+                  <m:mo>,</m:mo>
+                  <m:mi>t</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mspace width="0.166667em"/>
+                <m:mi>d</m:mi>
+                <m:mi>t</m:mi>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd/>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mspace width="1.em"/>
+                <m:mspace width="1.em"/>
+                <m:mo>-</m:mo>
+                <m:msubsup>
+                  <m:mo>∫</m:mo>
+                  <m:mi>a</m:mi>
+                  <m:mi>b</m:mi>
+                </m:msubsup>
+                <m:mi>P</m:mi>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>s</m:mi>
+                  <m:mo>,</m:mo>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>d</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mfrac>
+                      <m:mrow>
+                        <m:mi>s</m:mi>
+                        <m:mo>-</m:mo>
+                        <m:mi>b</m:mi>
+                      </m:mrow>
+                      <m:mrow>
+                        <m:mi>a</m:mi>
+                        <m:mo>-</m:mo>
+                        <m:mi>b</m:mi>
+                      </m:mrow>
+                    </m:mfrac>
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:mi>c</m:mi>
+                      <m:mo>-</m:mo>
+                      <m:mi>d</m:mi>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mspace width="0.166667em"/>
+                <m:mi>d</m:mi>
+                <m:mi>s</m:mi>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd/>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mspace width="1.em"/>
+                <m:mspace width="1.em"/>
+                <m:mo>-</m:mo>
+                <m:msubsup>
+                  <m:mo>∫</m:mo>
+                  <m:mi>c</m:mi>
+                  <m:mi>d</m:mi>
+                </m:msubsup>
+                <m:mi>Q</m:mi>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>b</m:mi>
+                  <m:mo>+</m:mo>
+                  <m:mfrac>
+                    <m:mrow>
+                      <m:mi>s</m:mi>
+                      <m:mo>-</m:mo>
+                      <m:mi>d</m:mi>
+                    </m:mrow>
+                    <m:mrow>
+                      <m:mi>c</m:mi>
+                      <m:mo>-</m:mo>
+                      <m:mi>d</m:mi>
+                    </m:mrow>
+                  </m:mfrac>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>a</m:mi>
+                    <m:mo>-</m:mo>
+                    <m:mi>b</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mrow>
+                  <m:mo>,</m:mo>
+                  <m:mi>s</m:mi>
+                  <m:mo>)</m:mo>
+                  <m:mspace width="0.166667em"/>
+                  <m:mi>d</m:mi>
+                  <m:mi>s</m:mi>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:msubsup>
+                  <m:mo>∫</m:mo>
+                  <m:mi>c</m:mi>
+                  <m:mi>d</m:mi>
+                </m:msubsup>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>Q</m:mi>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>b</m:mi>
+                    <m:mo>,</m:mo>
+                    <m:mi>s</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>-</m:mo>
+                  <m:mi>Q</m:mi>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:mi>b</m:mi>
+                      <m:mo>+</m:mo>
+                      <m:mfrac>
+                        <m:mrow>
+                          <m:mi>s</m:mi>
+                          <m:mo>-</m:mo>
+                          <m:mi>d</m:mi>
+                        </m:mrow>
+                        <m:mrow>
+                          <m:mi>c</m:mi>
+                          <m:mo>-</m:mo>
+                          <m:mi>d</m:mi>
+                        </m:mrow>
+                      </m:mfrac>
+                      <m:mrow>
+                        <m:mo>(</m:mo>
+                        <m:mi>a</m:mi>
+                        <m:mo>-</m:mo>
+                        <m:mi>b</m:mi>
+                        <m:mo>)</m:mo>
+                      </m:mrow>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                    <m:mo>,</m:mo>
+                    <m:mi>s</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mspace width="0.166667em"/>
+                <m:mi>d</m:mi>
+                <m:mi>s</m:mi>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd/>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mspace width="1.em"/>
+                <m:mspace width="1.em"/>
+                <m:mo>-</m:mo>
+                <m:msubsup>
+                  <m:mo>∫</m:mo>
+                  <m:mi>a</m:mi>
+                  <m:mi>b</m:mi>
+                </m:msubsup>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>P</m:mi>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>s</m:mi>
+                    <m:mo>,</m:mo>
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:mi>d</m:mi>
+                      <m:mo>+</m:mo>
+                      <m:mfrac>
+                        <m:mrow>
+                          <m:mi>s</m:mi>
+                          <m:mo>-</m:mo>
+                          <m:mi>b</m:mi>
+                        </m:mrow>
+                        <m:mrow>
+                          <m:mi>a</m:mi>
+                          <m:mo>-</m:mo>
+                          <m:mi>b</m:mi>
+                        </m:mrow>
+                      </m:mfrac>
+                      <m:mrow>
+                        <m:mo>(</m:mo>
+                        <m:mi>c</m:mi>
+                        <m:mo>-</m:mo>
+                        <m:mi>d</m:mi>
+                        <m:mo>)</m:mo>
+                      </m:mrow>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>-</m:mo>
+                  <m:mi>P</m:mi>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>s</m:mi>
+                    <m:mo>,</m:mo>
+                    <m:mi>c</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mspace width="0.166667em"/>
+                <m:mi>d</m:mi>
+                <m:mi>s</m:mi>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:msubsup>
+                  <m:mo>∫</m:mo>
+                  <m:mi>c</m:mi>
+                  <m:mi>d</m:mi>
+                </m:msubsup>
+                <m:msubsup>
+                  <m:mo>∫</m:mo>
+                  <m:mrow>
+                    <m:mi>b</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mfrac>
+                      <m:mrow>
+                        <m:mi>s</m:mi>
+                        <m:mo>-</m:mo>
+                        <m:mi>d</m:mi>
+                      </m:mrow>
+                      <m:mrow>
+                        <m:mi>c</m:mi>
+                        <m:mo>-</m:mo>
+                        <m:mi>d</m:mi>
+                      </m:mrow>
+                    </m:mfrac>
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:mi>a</m:mi>
+                      <m:mo>-</m:mo>
+                      <m:mi>b</m:mi>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                  </m:mrow>
+                  <m:mi>b</m:mi>
+                </m:msubsup>
+                <m:mfrac>
+                  <m:mrow>
+                    <m:mi>t</m:mi>
+                    <m:mi>i</m:mi>
+                    <m:mi>a</m:mi>
+                    <m:mi>l</m:mi>
+                    <m:mi>Q</m:mi>
+                  </m:mrow>
+                  <m:mrow>
+                    <m:mi>t</m:mi>
+                    <m:mi>i</m:mi>
+                    <m:mi>a</m:mi>
+                    <m:mi>l</m:mi>
+                    <m:mi>x</m:mi>
+                  </m:mrow>
+                </m:mfrac>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>t</m:mi>
+                  <m:mo>,</m:mo>
+                  <m:mi>s</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mspace width="0.166667em"/>
+                <m:mi>d</m:mi>
+                <m:mi>t</m:mi>
+                <m:mi>d</m:mi>
+                <m:mi>s</m:mi>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd/>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mspace width="1.em"/>
+                <m:mspace width="1.em"/>
+                <m:mo>-</m:mo>
+                <m:msubsup>
+                  <m:mo>∫</m:mo>
+                  <m:mi>a</m:mi>
+                  <m:mi>b</m:mi>
+                </m:msubsup>
+                <m:msubsup>
+                  <m:mo>∫</m:mo>
+                  <m:mi>c</m:mi>
+                  <m:mrow>
+                    <m:mi>d</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mfrac>
+                      <m:mrow>
+                        <m:mi>s</m:mi>
+                        <m:mo>-</m:mo>
+                        <m:mi>b</m:mi>
+                      </m:mrow>
+                      <m:mrow>
+                        <m:mi>a</m:mi>
+                        <m:mo>-</m:mo>
+                        <m:mi>b</m:mi>
+                      </m:mrow>
+                    </m:mfrac>
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:mi>c</m:mi>
+                      <m:mo>-</m:mo>
+                      <m:mi>d</m:mi>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                  </m:mrow>
+                </m:msubsup>
+                <m:mfrac>
+                  <m:mrow>
+                    <m:mi>t</m:mi>
+                    <m:mi>i</m:mi>
+                    <m:mi>a</m:mi>
+                    <m:mi>l</m:mi>
+                    <m:mi>P</m:mi>
+                  </m:mrow>
+                  <m:mrow>
+                    <m:mi>t</m:mi>
+                    <m:mi>i</m:mi>
+                    <m:mi>a</m:mi>
+                    <m:mi>l</m:mi>
+                    <m:mi>y</m:mi>
+                  </m:mrow>
+                </m:mfrac>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>s</m:mi>
+                  <m:mo>,</m:mo>
+                  <m:mi>t</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mspace width="0.166667em"/>
+                <m:mi>d</m:mi>
+                <m:mi>t</m:mi>
+                <m:mi>d</m:mi>
+                <m:mi>s</m:mi>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:msub>
+                  <m:mo>∫</m:mo>
+                  <m:mi>S</m:mi>
+                </m:msub>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                </m:mrow>
+                <m:mfrac>
+                  <m:mrow>
+                    <m:mi>t</m:mi>
+                    <m:mi>i</m:mi>
+                    <m:mi>a</m:mi>
+                    <m:mi>l</m:mi>
+                    <m:mi>Q</m:mi>
+                  </m:mrow>
+                  <m:mrow>
+                    <m:mi>t</m:mi>
+                    <m:mi>i</m:mi>
+                    <m:mi>a</m:mi>
+                    <m:mi>l</m:mi>
+                    <m:mi>x</m:mi>
+                  </m:mrow>
+                </m:mfrac>
+                <m:mo>-</m:mo>
+                <m:mfrac>
+                  <m:mrow>
+                    <m:mi>t</m:mi>
+                    <m:mi>i</m:mi>
+                    <m:mi>a</m:mi>
+                    <m:mi>l</m:mi>
+                    <m:mi>P</m:mi>
+                  </m:mrow>
+                  <m:mrow>
+                    <m:mi>t</m:mi>
+                    <m:mi>i</m:mi>
+                    <m:mi>a</m:mi>
+                    <m:mi>l</m:mi>
+                    <m:mi>y</m:mi>
+                  </m:mrow>
+                </m:mfrac>
+                <m:mo>,</m:mo>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+        </m:mtable>
+      </m:math>
+    </equation>
+    <para id="id181484">which proves <link target-id="fs-id3841309"/>.</para>
+</proof></rule>
+<rule id="fs-id1169298113688" type="lemma"><statement id="fs-id1169310525653">
+    <para id="id181490">Suppose <m:math overflow="scroll"><m:mrow><m:msub><m:mi>S</m:mi><m:mn>1</m:mn></m:msub><m:mo>,</m:mo><m:mo>...</m:mo><m:mo>,</m:mo><m:msub><m:mi>S</m:mi><m:mi>n</m:mi></m:msub></m:mrow></m:math> is a partition of the geometric set <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+and that the boundary <m:math overflow="scroll"><m:msub><m:mi>C</m:mi><m:msub><m:mi>S</m:mi><m:mi>k</m:mi></m:msub></m:msub></m:math> has finite length for all <m:math overflow="scroll"><m:mrow><m:mn>1</m:mn><m:mo>≤</m:mo><m:mi>k</m:mi><m:mo>≤</m:mo><m:mi>n</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+If Green's Theorem holds for each geometric set <m:math overflow="scroll"><m:mrow><m:msub><m:mi>S</m:mi><m:mi>k</m:mi></m:msub><m:mo>,</m:mo></m:mrow></m:math> then it holds for <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+</statement>
+<proof id="fs-id1483961">
+    <para id="id181609">From <link target-id="fs-id1169299992444"/> we have</para>
+    <equation id="id181617">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:msub>
+            <m:mo>∫</m:mo>
+            <m:msub>
+              <m:mi>C</m:mi>
+              <m:mi>S</m:mi>
+            </m:msub>
+          </m:msub>
+          <m:mi>ω</m:mi>
+          <m:mo>=</m:mo>
+          <m:munderover>
+            <m:mo>∑</m:mo>
+            <m:mrow>
+              <m:mi>k</m:mi>
+              <m:mo>=</m:mo>
+              <m:mn>1</m:mn>
+            </m:mrow>
+            <m:mi>n</m:mi>
+          </m:munderover>
+          <m:msub>
+            <m:mo>∫</m:mo>
+            <m:msub>
+              <m:mi>C</m:mi>
+              <m:msub>
+                <m:mi>S</m:mi>
+                <m:mi>k</m:mi>
+              </m:msub>
+            </m:msub>
+          </m:msub>
+          <m:mi>ω</m:mi>
+          <m:mo>,</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id181683">and from <link target-id="fs-id1166573915036" document="m36223"/> we have</para>
+    <equation id="id181689">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:msub>
+            <m:mo>∫</m:mo>
+            <m:mi>S</m:mi>
+          </m:msub>
+          <m:msub>
+            <m:mi>Q</m:mi>
+            <m:mi>x</m:mi>
+          </m:msub>
+          <m:mo>-</m:mo>
+          <m:msub>
+            <m:mi>P</m:mi>
+            <m:mi>y</m:mi>
+          </m:msub>
+          <m:mo>=</m:mo>
+          <m:munderover>
+            <m:mo>∑</m:mo>
+            <m:mrow>
+              <m:mi>k</m:mi>
+              <m:mo>=</m:mo>
+              <m:mn>1</m:mn>
+            </m:mrow>
+            <m:mi>n</m:mi>
+          </m:munderover>
+          <m:msub>
+            <m:mo>∫</m:mo>
+            <m:msub>
+              <m:mi>S</m:mi>
+              <m:mi>k</m:mi>
+            </m:msub>
+          </m:msub>
+          <m:msub>
+            <m:mi>Q</m:mi>
+            <m:mi>x</m:mi>
+          </m:msub>
+          <m:mo>-</m:mo>
+          <m:msub>
+            <m:mi>P</m:mi>
+            <m:mi>y</m:mi>
+          </m:msub>
+          <m:mo>.</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id181774">Since Green's Theorem holds for each <m:math overflow="scroll"><m:mrow><m:mi>k</m:mi><m:mo>,</m:mo></m:mrow></m:math> we have that</para>
+    <equation id="id181793">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:msub>
+            <m:mo>∫</m:mo>
+            <m:msub>
+              <m:mi>C</m:mi>
+              <m:msub>
+                <m:mi>S</m:mi>
+                <m:mi>k</m:mi>
+              </m:msub>
+            </m:msub>
+          </m:msub>
+          <m:mi>ω</m:mi>
+          <m:mo>=</m:mo>
+          <m:msub>
+            <m:mo>∫</m:mo>
+            <m:msub>
+              <m:mi>S</m:mi>
+              <m:mi>k</m:mi>
+            </m:msub>
+          </m:msub>
+          <m:msub>
+            <m:mi>Q</m:mi>
+            <m:mi>x</m:mi>
+          </m:msub>
+          <m:mo>-</m:mo>
+          <m:msub>
+            <m:mi>P</m:mi>
+            <m:mi>y</m:mi>
+          </m:msub>
+          <m:mo>,</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id181857">and therefore</para>
+    <equation id="id181862">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:msub>
+            <m:mo>∫</m:mo>
+            <m:msub>
+              <m:mi>C</m:mi>
+              <m:mi>S</m:mi>
+            </m:msub>
+          </m:msub>
+          <m:mi>ω</m:mi>
+          <m:mo>=</m:mo>
+          <m:msub>
+            <m:mo>∫</m:mo>
+            <m:mi>S</m:mi>
+          </m:msub>
+          <m:msub>
+            <m:mi>Q</m:mi>
+            <m:mi>x</m:mi>
+          </m:msub>
+          <m:mo>-</m:mo>
+          <m:msub>
+            <m:mi>P</m:mi>
+            <m:mi>y</m:mi>
+          </m:msub>
+          <m:mo>,</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id181917">as desired.</para>
+</proof></rule>
+<exercise id="fs-id1169306540335"><problem id="fs-id610260">
+    <list id="id181934" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid7"> Prove Green's Theorem for a right triangle with vertices of the form
+<m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>c</m:mi><m:mo>)</m:mo><m:mo>,</m:mo><m:mo>(</m:mo><m:mi>b</m:mi><m:mo>,</m:mo><m:mi>c</m:mi><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>d</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid8"> Prove Green's Theorem for a trapezoid having vertices of the form
+<m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>c</m:mi><m:mo>)</m:mo><m:mo>,</m:mo><m:mo>(</m:mo><m:mi>b</m:mi><m:mo>,</m:mo><m:mi>c</m:mi><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math><m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>b</m:mi><m:mo>,</m:mo><m:mi>d</m:mi><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>e</m:mi><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math> where both <m:math overflow="scroll"><m:mi>d</m:mi></m:math> and <m:math overflow="scroll"><m:mi>e</m:mi></m:math> are greater than <m:math overflow="scroll"><m:mrow><m:mi>c</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+HINT: Represent this trapezoid as the union of a rectangle and a right
+triangle that share a border. Then use <link target-id="fs-id1169298113688"/>.
+</item>
+      <item id="uid9"> Prove Green's Theorem for <m:math overflow="scroll"><m:mi>S</m:mi></m:math> any quadrilateral that has two vertical sides.
+</item>
+      <item id="uid10"> Prove Green's Theorem for any geometric set <m:math overflow="scroll"><m:mi>S</m:mi></m:math> whose upper and lower
+bounding functions are piecewise linear functions.
+HINT: Show that <m:math overflow="scroll"><m:mi>S</m:mi></m:math> can be thought of as a finite union of quadrilaterals, like those in part (c),
+each one sharing a vertical boundary with the next. Then, using induction and the previous exercise
+finish the argument.
+</item>
+    </list>
+</problem></exercise>
+    <para id="id182185">We need one final lemma before we can complete the general proof of Green's Theorem.
+This one is where the analysis shows up; there are carefully
+chosen <m:math overflow="scroll"><m:mi>ϵ</m:mi></m:math>'s and <m:math overflow="scroll"><m:mi>δ</m:mi></m:math>'s.</para>
+<rule id="fs-id1169301666494" type="lemma"><statement id="fs-id1169299029291">
+    <para id="id182207">Suppose <m:math overflow="scroll"><m:mi>S</m:mi></m:math> is contained in an open set <m:math overflow="scroll"><m:mi>U</m:mi></m:math> and that
+<m:math overflow="scroll"><m:mi>ω</m:mi></m:math> is smooth on all of <m:math overflow="scroll"><m:mrow><m:mi>U</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Then Green's Theorem is true.</para>
+</statement>
+<proof id="fs-id1169311137419">
+    <para id="id182255">Let the piecewise smooth geometric set <m:math overflow="scroll"><m:mi>S</m:mi></m:math> be determined by the interval <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow></m:math> and the two bounding functions <m:math overflow="scroll"><m:mi>u</m:mi></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>l</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Using <link target-id="fs-id1172695221054" document="m36157"/>, choose an <m:math overflow="scroll"><m:mrow><m:mi>r</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn></m:mrow></m:math> such that the neighborhood <m:math overflow="scroll"><m:mrow><m:msub><m:mi>N</m:mi><m:mi>r</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>S</m:mi><m:mo>)</m:mo></m:mrow><m:mo>⊆</m:mo><m:mi>U</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Now let <m:math overflow="scroll"><m:mrow><m:mi>ϵ</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn></m:mrow></m:math> be given, and choose <m:math overflow="scroll"><m:mrow><m:mi>d</m:mi><m:mi>e</m:mi><m:mi>l</m:mi><m:mi>t</m:mi><m:mi>a</m:mi></m:mrow></m:math> to satisfy the following conditions:</para>
+    <list id="id182389" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid11"> <m:math overflow="scroll"><m:mrow><m:mi>δ</m:mi><m:mo>&lt;</m:mo><m:mi>r</m:mi><m:mo>/</m:mo><m:mn>2</m:mn><m:mo>,</m:mo></m:mrow></m:math> from which it follows that
+the open neighborhood <m:math overflow="scroll"><m:mrow><m:msub><m:mi>N</m:mi><m:mi>δ</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>S</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> is a subset of the compact set
+<m:math overflow="scroll"><m:mrow><m:msub><m:mover><m:mi>N</m:mi><m:mo>¯</m:mo></m:mover><m:mrow><m:mi>r</m:mi><m:mo>/</m:mo><m:mn>2</m:mn></m:mrow></m:msub><m:mrow><m:mo>(</m:mo><m:mi>S</m:mi><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math> (See part (f) of <link target-id="fs-id1164797997554" document="m36157"/>.)
+</item>
+      <item id="uid12"> <m:math overflow="scroll"><m:mrow><m:mi>δ</m:mi><m:mo>&lt;</m:mo><m:mi>ϵ</m:mi><m:mo>/</m:mo><m:mn>4</m:mn><m:mi>M</m:mi><m:mo>,</m:mo></m:mrow></m:math> where <m:math overflow="scroll"><m:mi>M</m:mi></m:math> is a common bound for all four
+continuous functions <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo><m:mi>P</m:mi><m:mo>|</m:mo><m:mo>,</m:mo><m:mo>|</m:mo><m:mi>Q</m:mi><m:mo>|</m:mo><m:mo>,</m:mo><m:mo>|</m:mo></m:mrow><m:msub><m:mi>P</m:mi><m:mi>y</m:mi></m:msub><m:mrow><m:mo>|</m:mo><m:mo>,</m:mo></m:mrow></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msub><m:mi>Q</m:mi><m:mi>x</m:mi></m:msub><m:mrow><m:mo>|</m:mo></m:mrow></m:mrow></m:math> on the compact set <m:math overflow="scroll"><m:mrow><m:msub><m:mover><m:mi>N</m:mi><m:mo>¯</m:mo></m:mover><m:mrow><m:mi>r</m:mi><m:mo>/</m:mo><m:mn>2</m:mn></m:mrow></m:msub><m:mrow><m:mo>(</m:mo><m:mi>S</m:mi><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid13"> <m:math overflow="scroll"><m:mrow><m:mi>δ</m:mi><m:mo>&lt;</m:mo><m:mi>ϵ</m:mi><m:mo>/</m:mo><m:mn>4</m:mn><m:mi>M</m:mi><m:mo>(</m:mo><m:mi>b</m:mi><m:mo>-</m:mo><m:mi>a</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid14"> <m:math overflow="scroll"><m:mi>δ</m:mi></m:math> satisfies the conditions of <link target-id="fs-id1170825646076" document="m36232"/>.
+</item>
+    </list>
+    <para id="id182692">Next, using <link target-id="fs-id1170766595499" document="m36225"/>, choose two piecewise linear functions
+<m:math overflow="scroll"><m:msub><m:mi>p</m:mi><m:mi>u</m:mi></m:msub></m:math> and <m:math overflow="scroll"><m:msub><m:mi>p</m:mi><m:mi>l</m:mi></m:msub></m:math> so that</para>
+    <list id="id182724" display="block" list-type="enumerated">
+      <item id="uid15"> <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo><m:mi>u</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>-</m:mo></m:mrow><m:msub><m:mi>p</m:mi><m:mi>u</m:mi></m:msub><m:mrow><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mi>δ</m:mi><m:mo>/</m:mo><m:mn>2</m:mn></m:mrow></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid16"> <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo><m:mi>l</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>-</m:mo></m:mrow><m:msub><m:mi>p</m:mi><m:mi>l</m:mi></m:msub><m:mrow><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mi>δ</m:mi><m:mo>/</m:mo><m:mn>2</m:mn></m:mrow></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid17"> <m:math overflow="scroll"><m:mrow><m:msubsup><m:mo>∫</m:mo><m:mi>a</m:mi><m:mi>b</m:mi></m:msubsup><m:mrow><m:mo>|</m:mo><m:msup><m:mi>u</m:mi><m:mo>'</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>-</m:mo><m:msubsup><m:mi>p</m:mi><m:mi>u</m:mi><m:mo>'</m:mo></m:msubsup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>|</m:mo></m:mrow><m:mspace width="0.166667em"/><m:mi>d</m:mi><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mi>δ</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid18"> <m:math overflow="scroll"><m:mrow><m:msubsup><m:mo>∫</m:mo><m:mi>a</m:mi><m:mi>b</m:mi></m:msubsup><m:mrow><m:mo>|</m:mo><m:msup><m:mi>l</m:mi><m:mo>'</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>-</m:mo><m:msubsup><m:mi>p</m:mi><m:mi>l</m:mi><m:mo>'</m:mo></m:msubsup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>|</m:mo></m:mrow><m:mspace width="0.166667em"/><m:mi>d</m:mi><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mi>δ</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+    </list>
+    <para id="id183069">Let <m:math overflow="scroll"><m:mover accent="true"><m:mi>S</m:mi><m:mo>^</m:mo></m:mover></m:math> be the geometric set determined by the
+interval <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow></m:math> and the two bounding functions <m:math overflow="scroll"><m:mover accent="true"><m:mi>u</m:mi><m:mo>^</m:mo></m:mover></m:math> and <m:math overflow="scroll"><m:mrow><m:mover accent="true"><m:mi>l</m:mi><m:mo>^</m:mo></m:mover><m:mo>,</m:mo></m:mrow></m:math> where
+<m:math overflow="scroll"><m:mrow><m:mover accent="true"><m:mi>u</m:mi><m:mo>^</m:mo></m:mover><m:mo>=</m:mo><m:msub><m:mi>p</m:mi><m:mi>u</m:mi></m:msub><m:mo>+</m:mo><m:mi>δ</m:mi><m:mo>/</m:mo><m:mn>2</m:mn></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mover accent="true"><m:mi>l</m:mi><m:mo>^</m:mo></m:mover><m:mo>=</m:mo><m:msub><m:mi>p</m:mi><m:mi>l</m:mi></m:msub><m:mo>-</m:mo><m:mi>δ</m:mi><m:mo>/</m:mo><m:mn>2</m:mn><m:mo>.</m:mo></m:mrow></m:math>
+We know that both <m:math overflow="scroll"><m:mover accent="true"><m:mi>u</m:mi><m:mo>^</m:mo></m:mover></m:math> and <m:math overflow="scroll"><m:mover accent="true"><m:mi>l</m:mi><m:mo>^</m:mo></m:mover></m:math> are piecewise linear functions.
+We have to be a bit careful here, since for some <m:math overflow="scroll"><m:mi>x</m:mi></m:math>'s it could be that
+<m:math overflow="scroll"><m:mrow><m:msub><m:mi>p</m:mi><m:mi>u</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>&lt;</m:mo><m:msub><m:mi>p</m:mi><m:mi>l</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math> Hence, we could not simply use
+<m:math overflow="scroll"><m:msub><m:mi>p</m:mi><m:mi>u</m:mi></m:msub></m:math> and <m:math overflow="scroll"><m:msub><m:mi>p</m:mi><m:mi>l</m:mi></m:msub></m:math> themselves as bounding functions for <m:math overflow="scroll"><m:mrow><m:mover accent="true"><m:mi>S</m:mi><m:mo>^</m:mo></m:mover><m:mo>.</m:mo></m:mrow></m:math>
+We do know from (1) and (2) that <m:math overflow="scroll"><m:mrow><m:mi>u</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>&lt;</m:mo><m:mover accent="true"><m:mi>u</m:mi><m:mo>^</m:mo></m:mover><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>l</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>&gt;</m:mo><m:mover accent="true"><m:mi>l</m:mi><m:mo>^</m:mo></m:mover><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math>
+which implies that the geometric set <m:math overflow="scroll"><m:mi>S</m:mi></m:math> is contained in the geometric set <m:math overflow="scroll"><m:mrow><m:mover accent="true"><m:mi>S</m:mi><m:mo>^</m:mo></m:mover><m:mo>.</m:mo></m:mrow></m:math>
+Also <m:math overflow="scroll"><m:mover accent="true"><m:mi>S</m:mi><m:mo>^</m:mo></m:mover></m:math> is a subset of the neighborhood <m:math overflow="scroll"><m:mrow><m:msub><m:mi>N</m:mi><m:mi>δ</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>s</m:mi><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math>
+which in turn is a subset of the compact set <m:math overflow="scroll"><m:mrow><m:msub><m:mover><m:mi>N</m:mi><m:mo>¯</m:mo></m:mover><m:mrow><m:mi>r</m:mi><m:mo>/</m:mo><m:mn>2</m:mn></m:mrow></m:msub><m:mrow><m:mo>(</m:mo><m:mi>S</m:mi><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></para>
+    <para id="id183521">Now, by part (d) of the preceding exercise, we know that Green's Theorem holds for <m:math overflow="scroll"><m:mrow><m:mover accent="true"><m:mi>S</m:mi><m:mo>^</m:mo></m:mover><m:mo>.</m:mo></m:mrow></m:math>
+That is</para>
+    <equation id="id183543">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:msub>
+            <m:mo>∫</m:mo>
+            <m:msub>
+              <m:mi>C</m:mi>
+              <m:mover accent="true">
+                <m:mi>S</m:mi>
+                <m:mo>^</m:mo>
+              </m:mover>
+            </m:msub>
+          </m:msub>
+          <m:mi>ω</m:mi>
+          <m:mo>=</m:mo>
+          <m:msub>
+            <m:mo>∫</m:mo>
+            <m:mover accent="true">
+              <m:mi>S</m:mi>
+              <m:mo>^</m:mo>
+            </m:mover>
+          </m:msub>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:msub>
+              <m:mi>Q</m:mi>
+              <m:mi>x</m:mi>
+            </m:msub>
+            <m:mo>-</m:mo>
+            <m:msub>
+              <m:mi>P</m:mi>
+              <m:mi>y</m:mi>
+            </m:msub>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>.</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id183616">We will show that Green's Theorem holds for <m:math overflow="scroll"><m:mi>S</m:mi></m:math> by showing two things:
+(i) <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msub><m:mo>∫</m:mo><m:msub><m:mi>C</m:mi><m:mi>S</m:mi></m:msub></m:msub><m:mi>ω</m:mi><m:mo>-</m:mo><m:msub><m:mo>∫</m:mo><m:msub><m:mi>C</m:mi><m:mover accent="true"><m:mi>S</m:mi><m:mo>^</m:mo></m:mover></m:msub></m:msub><m:mrow><m:mi>ω</m:mi><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mn>4</m:mn><m:mi>ϵ</m:mi><m:mo>,</m:mo></m:mrow></m:mrow></m:math> and
+(ii) <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msub><m:mo>∫</m:mo><m:mi>S</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:msub><m:mi>Q</m:mi><m:mi>x</m:mi></m:msub><m:mo>)</m:mo></m:mrow><m:mo>-</m:mo><m:msub><m:mi>P</m:mi><m:mi>y</m:mi></m:msub><m:mrow><m:mo>)</m:mo><m:mo>-</m:mo><m:msub><m:mo>∫</m:mo><m:mover accent="true"><m:mi>S</m:mi><m:mo>^</m:mo></m:mover></m:msub><m:mrow><m:mo>(</m:mo><m:msub><m:mi>Q</m:mi><m:mi>x</m:mi></m:msub><m:mo>-</m:mo><m:msub><m:mi>P</m:mi><m:mi>y</m:mi></m:msub><m:mo>)</m:mo></m:mrow><m:mo>|</m:mo></m:mrow><m:mo>&lt;</m:mo><m:mi>ϵ</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+We would then have, by the usual adding and subtracting business, that</para>
+    <equation id="id183787">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mrow>
+            <m:mo>|</m:mo>
+          </m:mrow>
+          <m:msub>
+            <m:mo>∫</m:mo>
+            <m:msub>
+              <m:mi>C</m:mi>
+              <m:mi>S</m:mi>
+            </m:msub>
+          </m:msub>
+          <m:mi>ω</m:mi>
+          <m:mo>-</m:mo>
+          <m:msub>
+            <m:mo>∫</m:mo>
+            <m:mi>S</m:mi>
+          </m:msub>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:msub>
+              <m:mi>Q</m:mi>
+              <m:mi>x</m:mi>
+            </m:msub>
+            <m:mo>-</m:mo>
+            <m:msub>
+              <m:mi>P</m:mi>
+              <m:mi>y</m:mi>
+            </m:msub>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mrow>
+            <m:mo>|</m:mo>
+            <m:mo>&lt;</m:mo>
+            <m:mn>5</m:mn>
+            <m:mi>ϵ</m:mi>
+            <m:mo>,</m:mo>
+          </m:mrow>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id183860">and, since <m:math overflow="scroll"><m:mi>ϵ</m:mi></m:math> is an arbitrary positive number, we would obtain</para>
+    <equation id="id183876">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:msub>
+            <m:mo>∫</m:mo>
+            <m:msub>
+              <m:mi>C</m:mi>
+              <m:mi>S</m:mi>
+            </m:msub>
+          </m:msub>
+          <m:mi>ω</m:mi>
+          <m:mo>=</m:mo>
+          <m:msub>
+            <m:mo>∫</m:mo>
+            <m:mi>S</m:mi>
+          </m:msub>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:msub>
+              <m:mi>Q</m:mi>
+              <m:mi>x</m:mi>
+            </m:msub>
+            <m:mo>-</m:mo>
+            <m:msub>
+              <m:mi>P</m:mi>
+              <m:mi>y</m:mi>
+            </m:msub>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>.</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id183935">Let us estabish (i) first.
+We have from (1) above that <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo><m:mi>u</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>-</m:mo></m:mrow><m:mover accent="true"><m:mi>u</m:mi><m:mo>^</m:mo></m:mover><m:mrow><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mi>δ</m:mi></m:mrow></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>,</m:mo></m:mrow></m:math>
+and from (3) that</para>
+    <equation id="id184011">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:msubsup>
+            <m:mo>∫</m:mo>
+            <m:mi>a</m:mi>
+            <m:mi>b</m:mi>
+          </m:msubsup>
+          <m:mrow>
+            <m:mo>|</m:mo>
+          </m:mrow>
+          <m:msup>
+            <m:mi>u</m:mi>
+            <m:mo>'</m:mo>
+          </m:msup>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>x</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>-</m:mo>
+          <m:msup>
+            <m:mover accent="true">
+              <m:mi>u</m:mi>
+              <m:mo>^</m:mo>
+            </m:mover>
+            <m:mo>'</m:mo>
+          </m:msup>
+          <m:mrow>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>x</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>|</m:mo>
+            <m:mspace width="0.166667em"/>
+            <m:mi>d</m:mi>
+            <m:mi>x</m:mi>
+            <m:mo>=</m:mo>
+          </m:mrow>
+          <m:msubsup>
+            <m:mo>∫</m:mo>
+            <m:mi>a</m:mi>
+            <m:mi>b</m:mi>
+          </m:msubsup>
+          <m:mrow>
+            <m:mo>|</m:mo>
+            <m:msup>
+              <m:mi>u</m:mi>
+              <m:mo>'</m:mo>
+            </m:msup>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>x</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>-</m:mo>
+            <m:msubsup>
+              <m:mi>p</m:mi>
+              <m:mi>u</m:mi>
+              <m:mo>'</m:mo>
+            </m:msubsup>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>x</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>|</m:mo>
+          </m:mrow>
+          <m:mspace width="0.166667em"/>
+          <m:mi>d</m:mi>
+          <m:mi>x</m:mi>
+          <m:mo>&lt;</m:mo>
+          <m:mi>δ</m:mi>
+          <m:mo>.</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id184154">Hence, by <link target-id="fs-id1170825646076" document="m36232"/>,</para>
+    <equation id="id184159">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:msub>
+            <m:mo>∫</m:mo>
+            <m:mrow>
+              <m:mtext>graph</m:mtext>
+              <m:mo>(</m:mo>
+              <m:mi>u</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+          </m:msub>
+          <m:mi>ω</m:mi>
+          <m:mo>-</m:mo>
+          <m:msub>
+            <m:mo>∫</m:mo>
+            <m:mrow>
+              <m:mtext>graph</m:mtext>
+              <m:mo>(</m:mo>
+              <m:mover accent="true">
+                <m:mi>u</m:mi>
+                <m:mo>^</m:mo>
+              </m:mover>
+              <m:mo>)</m:mo>
+            </m:mrow>
+          </m:msub>
+          <m:mrow>
+            <m:mi>ω</m:mi>
+            <m:mo>|</m:mo>
+            <m:mo>&lt;</m:mo>
+            <m:mi>ϵ</m:mi>
+            <m:mo>.</m:mo>
+          </m:mrow>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id184224">Similarly, using (2) and (4) above, we have that</para>
+    <equation id="id184230">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mrow>
+            <m:mo>|</m:mo>
+          </m:mrow>
+          <m:msub>
+            <m:mo>∫</m:mo>
+            <m:mrow>
+              <m:mtext>graph</m:mtext>
+              <m:mo>(</m:mo>
+              <m:mi>l</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+          </m:msub>
+          <m:mi>ω</m:mi>
+          <m:mo>-</m:mo>
+          <m:msub>
+            <m:mo>∫</m:mo>
+            <m:mrow>
+              <m:mtext>graph</m:mtext>
+              <m:mo>(</m:mo>
+              <m:mover accent="true">
+                <m:mi>l</m:mi>
+                <m:mo>^</m:mo>
+              </m:mover>
+              <m:mo>)</m:mo>
+            </m:mrow>
+          </m:msub>
+          <m:mrow>
+            <m:mi>ω</m:mi>
+            <m:mo>|</m:mo>
+            <m:mo>&lt;</m:mo>
+            <m:mi>ϵ</m:mi>
+            <m:mo>.</m:mo>
+          </m:mrow>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id184298">Also,
+the difference of the line integrals of <m:math overflow="scroll"><m:mi>ω</m:mi></m:math> along the
+righthand boundaries of <m:math overflow="scroll"><m:mi>S</m:mi></m:math> and <m:math overflow="scroll"><m:mover accent="true"><m:mi>S</m:mi><m:mo>^</m:mo></m:mover></m:math> is less than <m:math overflow="scroll"><m:mrow><m:mi>ϵ</m:mi><m:mo>.</m:mo></m:mrow></m:math> Thus</para>
+    <equation id="uid19">
+      <m:math overflow="scroll" mode="display">
+        <m:mtable displaystyle="true">
+          <m:mtr>
+            <m:mtd columnalign="right">
+              <m:mrow>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:msubsup>
+                  <m:mrow>
+                    <m:msub>
+                      <m:mo>∫</m:mo>
+                      <m:mi>C</m:mi>
+                    </m:msub>
+                  </m:mrow>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>b</m:mi>
+                    <m:mo>,</m:mo>
+                    <m:mi>l</m:mi>
+                    <m:mo>(</m:mo>
+                    <m:mi>b</m:mi>
+                    <m:mo>)</m:mo>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>b</m:mi>
+                    <m:mo>,</m:mo>
+                    <m:mi>u</m:mi>
+                    <m:mo>(</m:mo>
+                    <m:mi>b</m:mi>
+                    <m:mo>)</m:mo>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                </m:msubsup>
+                <m:mi>ω</m:mi>
+                <m:mo>-</m:mo>
+                <m:msubsup>
+                  <m:mrow>
+                    <m:msub>
+                      <m:mo>∫</m:mo>
+                      <m:mi>C</m:mi>
+                    </m:msub>
+                  </m:mrow>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>b</m:mi>
+                    <m:mo>,</m:mo>
+                    <m:mover accent="true">
+                      <m:mi>l</m:mi>
+                      <m:mo>^</m:mo>
+                    </m:mover>
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:mi>b</m:mi>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>b</m:mi>
+                    <m:mo>,</m:mo>
+                    <m:mover accent="true">
+                      <m:mi>u</m:mi>
+                      <m:mo>^</m:mo>
+                    </m:mover>
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:mi>b</m:mi>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                </m:msubsup>
+                <m:mrow>
+                  <m:mi>ω</m:mi>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:msubsup>
+                  <m:mo>∫</m:mo>
+                  <m:mrow>
+                    <m:mi>l</m:mi>
+                    <m:mo>(</m:mo>
+                    <m:mi>b</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mrow>
+                    <m:mi>u</m:mi>
+                    <m:mo>(</m:mo>
+                    <m:mi>b</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                </m:msubsup>
+                <m:mi>Q</m:mi>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>b</m:mi>
+                  <m:mo>,</m:mo>
+                  <m:mi>t</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mspace width="0.166667em"/>
+                <m:mi>d</m:mi>
+                <m:mi>t</m:mi>
+                <m:mo>-</m:mo>
+                <m:msubsup>
+                  <m:mo>∫</m:mo>
+                  <m:mrow>
+                    <m:mover accent="true">
+                      <m:mi>l</m:mi>
+                      <m:mo>^</m:mo>
+                    </m:mover>
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:mi>b</m:mi>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                  </m:mrow>
+                  <m:mrow>
+                    <m:mover accent="true">
+                      <m:mi>u</m:mi>
+                      <m:mo>^</m:mo>
+                    </m:mover>
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:mi>b</m:mi>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                  </m:mrow>
+                </m:msubsup>
+                <m:mrow>
+                  <m:mi>Q</m:mi>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>b</m:mi>
+                    <m:mo>,</m:mo>
+                    <m:mi>t</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mspace width="0.166667em"/>
+                  <m:mi>d</m:mi>
+                  <m:mi>t</m:mi>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>≤</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:msubsup>
+                  <m:mo>∫</m:mo>
+                  <m:mrow>
+                    <m:mi>u</m:mi>
+                    <m:mo>(</m:mo>
+                    <m:mi>b</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mrow>
+                    <m:mover accent="true">
+                      <m:mi>u</m:mi>
+                      <m:mo>^</m:mo>
+                    </m:mover>
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:mi>b</m:mi>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                  </m:mrow>
+                </m:msubsup>
+                <m:mrow>
+                  <m:mi>Q</m:mi>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>b</m:mi>
+                    <m:mo>,</m:mo>
+                    <m:mi>t</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mspace width="0.166667em"/>
+                  <m:mi>d</m:mi>
+                  <m:mi>t</m:mi>
+                  <m:mo>|</m:mo>
+                  <m:mo>+</m:mo>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:msubsup>
+                  <m:mo>∫</m:mo>
+                  <m:mrow>
+                    <m:mover accent="true">
+                      <m:mi>l</m:mi>
+                      <m:mo>^</m:mo>
+                    </m:mover>
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:mi>b</m:mi>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                  </m:mrow>
+                  <m:mrow>
+                    <m:mi>l</m:mi>
+                    <m:mo>(</m:mo>
+                    <m:mi>b</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                </m:msubsup>
+                <m:mrow>
+                  <m:mi>Q</m:mi>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>b</m:mi>
+                    <m:mo>,</m:mo>
+                    <m:mi>t</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mspace width="0.166667em"/>
+                  <m:mi>d</m:mi>
+                  <m:mi>t</m:mi>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>≤</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mi>M</m:mi>
+                <m:mo>(</m:mo>
+                <m:mo>|</m:mo>
+                <m:mi>l</m:mi>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>b</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mo>-</m:mo>
+                <m:mover accent="true">
+                  <m:mi>l</m:mi>
+                  <m:mo>^</m:mo>
+                </m:mover>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>b</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mo>|</m:mo>
+                <m:mo>+</m:mo>
+                <m:mo>|</m:mo>
+                <m:mi>u</m:mi>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>b</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mo>-</m:mo>
+                <m:mover accent="true">
+                  <m:mi>u</m:mi>
+                  <m:mo>^</m:mo>
+                </m:mover>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>b</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mo>|</m:mo>
+                <m:mo>)</m:mo>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>≤</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mi>M</m:mi>
+                <m:mo>(</m:mo>
+                <m:mi>δ</m:mi>
+                <m:mo>+</m:mo>
+                <m:mi>δ</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mn>2</m:mn>
+                <m:mi>M</m:mi>
+                <m:mi>δ</m:mi>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>&lt;</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mi>ϵ</m:mi>
+                <m:mo>.</m:mo>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+        </m:mtable>
+      </m:math>
+    </equation>
+    <para id="id184897">Of course, a similar calculation shows that</para>
+    <equation id="id184903">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mrow>
+            <m:mo>|</m:mo>
+          </m:mrow>
+          <m:msubsup>
+            <m:mrow>
+              <m:msub>
+                <m:mo>∫</m:mo>
+                <m:mi>C</m:mi>
+              </m:msub>
+            </m:mrow>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>a</m:mi>
+              <m:mo>,</m:mo>
+              <m:mi>u</m:mi>
+              <m:mo>(</m:mo>
+              <m:mi>a</m:mi>
+              <m:mo>)</m:mo>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>a</m:mi>
+              <m:mo>,</m:mo>
+              <m:mi>l</m:mi>
+              <m:mo>(</m:mo>
+              <m:mi>a</m:mi>
+              <m:mo>)</m:mo>
+              <m:mo>)</m:mo>
+            </m:mrow>
+          </m:msubsup>
+          <m:mi>ω</m:mi>
+          <m:mo>-</m:mo>
+          <m:msubsup>
+            <m:mrow>
+              <m:msub>
+                <m:mo>∫</m:mo>
+                <m:mi>C</m:mi>
+              </m:msub>
+            </m:mrow>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>a</m:mi>
+              <m:mo>,</m:mo>
+              <m:mover accent="true">
+                <m:mi>u</m:mi>
+                <m:mo>^</m:mo>
+              </m:mover>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>a</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>a</m:mi>
+              <m:mo>,</m:mo>
+              <m:mover accent="true">
+                <m:mi>l</m:mi>
+                <m:mo>^</m:mo>
+              </m:mover>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>a</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:mo>)</m:mo>
+            </m:mrow>
+          </m:msubsup>
+          <m:mrow>
+            <m:mi>ω</m:mi>
+            <m:mo>|</m:mo>
+            <m:mo>&lt;</m:mo>
+            <m:mi>ϵ</m:mi>
+            <m:mo>.</m:mo>
+          </m:mrow>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id185048">These four line integral inequalities combine to give us that</para>
+    <equation id="id185054">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mrow>
+            <m:mo>|</m:mo>
+          </m:mrow>
+          <m:msub>
+            <m:mo>∫</m:mo>
+            <m:msub>
+              <m:mi>C</m:mi>
+              <m:mi>S</m:mi>
+            </m:msub>
+          </m:msub>
+          <m:mi>ω</m:mi>
+          <m:mo>-</m:mo>
+          <m:msub>
+            <m:mo>∫</m:mo>
+            <m:msub>
+              <m:mi>C</m:mi>
+              <m:mover accent="true">
+                <m:mi>S</m:mi>
+                <m:mo>^</m:mo>
+              </m:mover>
+            </m:msub>
+          </m:msub>
+          <m:mrow>
+            <m:mi>ω</m:mi>
+            <m:mo>|</m:mo>
+            <m:mo>&lt;</m:mo>
+            <m:mn>4</m:mn>
+            <m:mi>ϵ</m:mi>
+            <m:mo>,</m:mo>
+          </m:mrow>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id185119">establishing (i).</para>
+    <para id="id185125">Finally, to see (ii), we just compute</para>
+    <equation id="uid20">
+      <m:math overflow="scroll" mode="display">
+        <m:mtable displaystyle="true">
+          <m:mtr>
+            <m:mtd columnalign="right">
+              <m:mn>0</m:mn>
+            </m:mtd>
+            <m:mtd>
+              <m:mo>≤</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:msub>
+                  <m:mo>∫</m:mo>
+                  <m:mover accent="true">
+                    <m:mi>S</m:mi>
+                    <m:mo>^</m:mo>
+                  </m:mover>
+                </m:msub>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:msub>
+                    <m:mi>Q</m:mi>
+                    <m:mi>y</m:mi>
+                  </m:msub>
+                  <m:mo>-</m:mo>
+                  <m:msub>
+                    <m:mi>P</m:mi>
+                    <m:mi>x</m:mi>
+                  </m:msub>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mo>-</m:mo>
+                <m:msub>
+                  <m:mo>∫</m:mo>
+                  <m:mi>S</m:mi>
+                </m:msub>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:msub>
+                    <m:mi>Q</m:mi>
+                    <m:mi>y</m:mi>
+                  </m:msub>
+                  <m:mo>-</m:mo>
+                  <m:msub>
+                    <m:mi>P</m:mi>
+                    <m:mi>x</m:mi>
+                  </m:msub>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:msubsup>
+                  <m:mo>∫</m:mo>
+                  <m:mi>a</m:mi>
+                  <m:mi>b</m:mi>
+                </m:msubsup>
+                <m:msubsup>
+                  <m:mo>∫</m:mo>
+                  <m:mrow>
+                    <m:mover accent="true">
+                      <m:mi>l</m:mi>
+                      <m:mo>^</m:mo>
+                    </m:mover>
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:mi>t</m:mi>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                  </m:mrow>
+                  <m:mrow>
+                    <m:mover accent="true">
+                      <m:mi>u</m:mi>
+                      <m:mo>^</m:mo>
+                    </m:mover>
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:mi>t</m:mi>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                  </m:mrow>
+                </m:msubsup>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:msub>
+                    <m:mi>Q</m:mi>
+                    <m:mi>x</m:mi>
+                  </m:msub>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:mi>t</m:mi>
+                      <m:mo>,</m:mo>
+                      <m:mi>s</m:mi>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                    <m:mo>-</m:mo>
+                    <m:msub>
+                      <m:mi>P</m:mi>
+                      <m:mi>y</m:mi>
+                    </m:msub>
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:mi>t</m:mi>
+                      <m:mo>,</m:mo>
+                      <m:mi>s</m:mi>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mspace width="0.166667em"/>
+                  <m:mi>d</m:mi>
+                  <m:mi>s</m:mi>
+                  <m:mi>d</m:mi>
+                  <m:mi>t</m:mi>
+                  <m:mo>-</m:mo>
+                  <m:msubsup>
+                    <m:mo>∫</m:mo>
+                    <m:mi>a</m:mi>
+                    <m:mi>b</m:mi>
+                  </m:msubsup>
+                  <m:msubsup>
+                    <m:mo>∫</m:mo>
+                    <m:mrow>
+                      <m:mi>l</m:mi>
+                      <m:mo>(</m:mo>
+                      <m:mi>t</m:mi>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                    <m:mrow>
+                      <m:mi>u</m:mi>
+                      <m:mo>(</m:mo>
+                      <m:mi>t</m:mi>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                  </m:msubsup>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:msub>
+                      <m:mi>Q</m:mi>
+                      <m:mi>x</m:mi>
+                    </m:msub>
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:mi>t</m:mi>
+                      <m:mo>,</m:mo>
+                      <m:mi>s</m:mi>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                    <m:mo>-</m:mo>
+                    <m:msub>
+                      <m:mi>P</m:mi>
+                      <m:mi>y</m:mi>
+                    </m:msub>
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:mi>t</m:mi>
+                      <m:mo>,</m:mo>
+                      <m:mi>s</m:mi>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mspace width="0.166667em"/>
+                  <m:mi>d</m:mi>
+                  <m:mi>s</m:mi>
+                  <m:mi>d</m:mi>
+                  <m:mi>t</m:mi>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:msubsup>
+                  <m:mo>∫</m:mo>
+                  <m:mi>a</m:mi>
+                  <m:mi>b</m:mi>
+                </m:msubsup>
+                <m:msubsup>
+                  <m:mo>∫</m:mo>
+                  <m:mrow>
+                    <m:mover accent="true">
+                      <m:mi>l</m:mi>
+                      <m:mo>^</m:mo>
+                    </m:mover>
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:mi>t</m:mi>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                  </m:mrow>
+                  <m:mrow>
+                    <m:mi>l</m:mi>
+                    <m:mo>(</m:mo>
+                    <m:mi>t</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                </m:msubsup>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:msub>
+                    <m:mi>Q</m:mi>
+                    <m:mi>x</m:mi>
+                  </m:msub>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>t</m:mi>
+                    <m:mo>,</m:mo>
+                    <m:mi>s</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>-</m:mo>
+                  <m:msub>
+                    <m:mi>P</m:mi>
+                    <m:mi>y</m:mi>
+                  </m:msub>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>t</m:mi>
+                    <m:mo>,</m:mo>
+                    <m:mi>s</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mspace width="0.166667em"/>
+                <m:mi>d</m:mi>
+                <m:mi>s</m:mi>
+                <m:mi>d</m:mi>
+                <m:mi>t</m:mi>
+                <m:mo>+</m:mo>
+                <m:msubsup>
+                  <m:mo>∫</m:mo>
+                  <m:mi>a</m:mi>
+                  <m:mi>b</m:mi>
+                </m:msubsup>
+                <m:msubsup>
+                  <m:mo>∫</m:mo>
+                  <m:mrow>
+                    <m:mi>u</m:mi>
+                    <m:mo>(</m:mo>
+                    <m:mi>t</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mrow>
+                    <m:mover accent="true">
+                      <m:mi>u</m:mi>
+                      <m:mo>^</m:mo>
+                    </m:mover>
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:mi>t</m:mi>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                  </m:mrow>
+                </m:msubsup>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:msub>
+                    <m:mi>Q</m:mi>
+                    <m:mi>x</m:mi>
+                  </m:msub>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>t</m:mi>
+                    <m:mo>,</m:mo>
+                    <m:mi>s</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>-</m:mo>
+                  <m:msub>
+                    <m:mi>P</m:mi>
+                    <m:mi>y</m:mi>
+                  </m:msub>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>t</m:mi>
+                    <m:mo>,</m:mo>
+                    <m:mi>s</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mrow>
+                  <m:mspace width="0.166667em"/>
+                  <m:mi>d</m:mi>
+                  <m:mi>s</m:mi>
+                  <m:mi>d</m:mi>
+                  <m:mi>t</m:mi>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>≤</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mn>2</m:mn>
+                <m:mi>M</m:mi>
+                <m:mo>(</m:mo>
+                <m:msubsup>
+                  <m:mo>∫</m:mo>
+                  <m:mi>a</m:mi>
+                  <m:mi>b</m:mi>
+                </m:msubsup>
+                <m:mo>|</m:mo>
+                <m:mi>l</m:mi>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>t</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mo>-</m:mo>
+                <m:mover accent="true">
+                  <m:mi>l</m:mi>
+                  <m:mo>^</m:mo>
+                </m:mover>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>t</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mo>|</m:mo>
+                <m:mo>+</m:mo>
+                <m:mo>|</m:mo>
+                <m:mover accent="true">
+                  <m:mi>u</m:mi>
+                  <m:mo>^</m:mo>
+                </m:mover>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>t</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mo>-</m:mo>
+                <m:mi>u</m:mi>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>t</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mo>|</m:mo>
+                <m:mspace width="0.166667em"/>
+                <m:mi>d</m:mi>
+                <m:mi>t</m:mi>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>≤</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mn>4</m:mn>
+                <m:mi>M</m:mi>
+                <m:mi>δ</m:mi>
+                <m:mo>(</m:mo>
+                <m:mi>b</m:mi>
+                <m:mo>-</m:mo>
+                <m:mi>a</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>&lt;</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mi>ϵ</m:mi>
+                <m:mo>.</m:mo>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+        </m:mtable>
+      </m:math>
+    </equation>
+    <para id="id185826">This establishes (ii), and the proof is complete.</para>
+</proof></rule>
+    <para id="id185832">At last, we can finish the proof of this remarkable result.</para>
+<rule id="fs-id1169300231341" type="theorem"><title>PROOF OF GREEN'S THEOREM</title><statement id="eip-id1164291036440"><para id="eip-id1164291036441"/></statement>
+<proof id="fs-id1169299103923">
+    <para id="id185836">
+As usual, let <m:math overflow="scroll"><m:mi>S</m:mi></m:math> be determined by the interval <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow></m:math> and the
+two bounding functions <m:math overflow="scroll"><m:mi>u</m:mi></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>l</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Recall that <m:math overflow="scroll"><m:mrow><m:mi>u</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>-</m:mo><m:mi>l</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>&gt;</m:mo><m:mn>0</m:mn></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+For each natural number <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>&gt;</m:mo><m:mn>2</m:mn><m:mo>,</m:mo></m:mrow></m:math> let <m:math overflow="scroll"><m:msub><m:mi>S</m:mi><m:mi>n</m:mi></m:msub></m:math> be the
+geometric set that is determined by the interval
+<m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>+</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>n</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>-</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>n</m:mi><m:mo>]</m:mo></m:mrow></m:math> and the two bounding functions <m:math overflow="scroll"><m:msub><m:mi>u</m:mi><m:mi>n</m:mi></m:msub></m:math> and <m:math overflow="scroll"><m:mrow><m:msub><m:mi>l</m:mi><m:mi>n</m:mi></m:msub><m:mo>,</m:mo></m:mrow></m:math>
+where <m:math overflow="scroll"><m:mrow><m:msub><m:mi>u</m:mi><m:mi>n</m:mi></m:msub><m:mo>=</m:mo><m:mi>u</m:mi><m:mo>-</m:mo><m:mrow><m:mo>(</m:mo><m:mi>u</m:mi><m:mo>-</m:mo><m:mi>l</m:mi><m:mo>)</m:mo></m:mrow><m:mo>/</m:mo><m:mi>n</m:mi></m:mrow></m:math> restricted to the interval <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>+</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>n</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>-</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>n</m:mi><m:mo>]</m:mo><m:mo>,</m:mo></m:mrow></m:math>
+and <m:math overflow="scroll"><m:mrow><m:msub><m:mi>l</m:mi><m:mi>n</m:mi></m:msub><m:mo>=</m:mo><m:mi>l</m:mi><m:mo>+</m:mo><m:mrow><m:mo>(</m:mo><m:mi>u</m:mi><m:mo>-</m:mo><m:mi>l</m:mi><m:mo>)</m:mo></m:mrow><m:mo>/</m:mo><m:mi>n</m:mi></m:mrow></m:math> restricted to <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>+</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>n</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>-</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>n</m:mi><m:mo>]</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Then each <m:math overflow="scroll"><m:msub><m:mi>S</m:mi><m:mi>n</m:mi></m:msub></m:math> is a piecewise smooth geometric set, whose boundary
+has finite length, and each <m:math overflow="scroll"><m:msub><m:mi>S</m:mi><m:mi>n</m:mi></m:msub></m:math> is contained in the open set <m:math overflow="scroll"><m:msup><m:mi>S</m:mi><m:mn>0</m:mn></m:msup></m:math>
+where by hypothesis <m:math overflow="scroll"><m:mi>ω</m:mi></m:math> is smooth.
+Hence, by Lemma 4, Green's Theorem holds for each <m:math overflow="scroll"><m:mrow><m:msub><m:mi>S</m:mi><m:mi>n</m:mi></m:msub><m:mo>.</m:mo></m:mrow></m:math>
+Now it should follow directly, by taking limits,
+that Green's Theorem holds for <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+In fact, this is the case, and we leave the details to the exercise that follows.</para>
+</proof></rule>
+<exercise id="fs-id1169299016737"><problem id="fs-id8477735">
+    <para id="id186282">
+Let <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>,</m:mo><m:mi>ω</m:mi><m:mo>,</m:mo></m:mrow></m:math> and the <m:math overflow="scroll"><m:msub><m:mi>S</m:mi><m:mi>n</m:mi></m:msub></m:math>'s be as in the preceding proof.</para>
+    <list id="id186326" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid21"> Using <link target-id="fs-id1170825646076" document="m36232"/>, show that
+<equation id="id186340"><m:math overflow="scroll" mode="display"><m:mrow><m:msub><m:mo>∫</m:mo><m:msub><m:mi>C</m:mi><m:mi>S</m:mi></m:msub></m:msub><m:mi>ω</m:mi><m:mo>=</m:mo><m:mo movablelimits="true" form="prefix">lim</m:mo><m:msub><m:mo>∫</m:mo><m:msub><m:mi>C</m:mi><m:msub><m:mi>S</m:mi><m:mi>n</m:mi></m:msub></m:msub></m:msub><m:mi>ω</m:mi><m:mo>.</m:mo></m:mrow></m:math></equation></item>
+      <item id="uid22"> Let <m:math overflow="scroll"><m:mi>f</m:mi></m:math> be a bounded integrable function on the geometric set <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Prove that
+<equation id="id186431"><m:math overflow="scroll" mode="display"><m:mrow><m:msub><m:mo>∫</m:mo><m:mi>S</m:mi></m:msub><m:mi>f</m:mi><m:mo>=</m:mo><m:mo movablelimits="true" form="prefix">lim</m:mo><m:msub><m:mo>∫</m:mo><m:msub><m:mi>S</m:mi><m:mi>n</m:mi></m:msub></m:msub><m:mi>f</m:mi><m:mo>.</m:mo></m:mrow></m:math></equation></item>
+      <item id="uid23"> Complete the proof to Green's Theorem; i.e.,
+take limits.
+</item>
+    </list>
+</problem></exercise>
+<rule id="fs-id1169309215426"><label/><statement id="fs-id1169300763940">
+    <para id="id186490"><emphasis effect="bold">REMARK</emphasis>
+Green's Theorem is primarily a theoretical result.
+It is rarely used
+to “compute” a line integral around a curve
+or an integral of a function
+over a geometric set.
+However, there is one amusing exception to this, and that is
+when the differential form <m:math overflow="scroll"><m:mrow><m:mi>ω</m:mi><m:mo>=</m:mo><m:mi>x</m:mi><m:mspace width="0.166667em"/><m:mi>d</m:mi><m:mi>y</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+For that kind of <m:math overflow="scroll"><m:mrow><m:mi>ω</m:mi><m:mo>,</m:mo></m:mrow></m:math> Green's Theorem says that
+the area of the geometric set <m:math overflow="scroll"><m:mi>S</m:mi></m:math> can be computed as follows:</para>
+    <equation id="id186549">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mi>A</m:mi>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>S</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>=</m:mo>
+          <m:msub>
+            <m:mo>∫</m:mo>
+            <m:mi>S</m:mi>
+          </m:msub>
+          <m:mn>1</m:mn>
+          <m:mo>=</m:mo>
+          <m:msub>
+            <m:mo>∫</m:mo>
+            <m:mi>S</m:mi>
+          </m:msub>
+          <m:mfrac>
+            <m:mrow>
+              <m:mi>t</m:mi>
+              <m:mi>i</m:mi>
+              <m:mi>a</m:mi>
+              <m:mi>l</m:mi>
+              <m:mi>Q</m:mi>
+            </m:mrow>
+            <m:mrow>
+              <m:mi>t</m:mi>
+              <m:mi>i</m:mi>
+              <m:mi>a</m:mi>
+              <m:mi>l</m:mi>
+              <m:mi>x</m:mi>
+            </m:mrow>
+          </m:mfrac>
+          <m:mo>=</m:mo>
+          <m:msub>
+            <m:mo>∫</m:mo>
+            <m:msub>
+              <m:mi>C</m:mi>
+              <m:mi>S</m:mi>
+            </m:msub>
+          </m:msub>
+          <m:mi>x</m:mi>
+          <m:mspace width="0.166667em"/>
+          <m:mi>d</m:mi>
+          <m:mi>y</m:mi>
+          <m:mo>.</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+</statement></rule>
+    <para id="id186642">This is certainly a different way of computing areas of sets from the methods we developed earlier.
+Try this way out on circles, ellipses, and the like.</para>
+  </content>
+</document>

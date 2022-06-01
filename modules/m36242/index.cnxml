@@ -1,0 +1,2444 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML">
+  <title>Isolated Singularities, and the Residue Theorem</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m36242</md:content-id>
+  <md:title>Isolated Singularities, and the Residue Theorem</md:title>
+  <md:abstract>this module covers the residue theorem, removable and isolated singularities, some new developments from Cauchy's theorem, and related exercises.</md:abstract>
+  <md:uuid>4891bd3f-abd1-42bd-a515-6dc901e8d6fc</md:uuid>
+</metadata>
+
+<content>
+    <para id="id62159">The first result we present in this section is a natural extension of <link target-id="fs-id1170827240654" document="m36235"/>.
+However, as we shall see, its consequences for computing contour integrals can hardly be overstated.</para>
+<rule id="fs-id1165934889448" type="theorem"><statement id="fs-id1165928606823">
+    <para id="id62165">
+Let <m:math overflow="scroll"><m:mi>S</m:mi></m:math> be a piecewise smooth geometric set whose boundary <m:math overflow="scroll"><m:msub><m:mi>C</m:mi><m:mi>S</m:mi></m:msub></m:math> has finite length.
+Suppose <m:math overflow="scroll"><m:mrow><m:msub><m:mi>c</m:mi><m:mn>1</m:mn></m:msub><m:mo>,</m:mo><m:mo>...</m:mo><m:mo>,</m:mo><m:msub><m:mi>c</m:mi><m:mi>n</m:mi></m:msub></m:mrow></m:math> are distinct points in the interior <m:math overflow="scroll"><m:msup><m:mi>S</m:mi><m:mn>0</m:mn></m:msup></m:math> of <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+and that <m:math overflow="scroll"><m:mrow><m:msub><m:mi>r</m:mi><m:mn>1</m:mn></m:msub><m:mo>,</m:mo><m:mo>...</m:mo><m:mo>,</m:mo><m:msub><m:mi>r</m:mi><m:mi>n</m:mi></m:msub></m:mrow></m:math> are positive numbers such that the closed disks <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mover><m:mi>B</m:mi><m:mo>¯</m:mo></m:mover><m:msub><m:mi>r</m:mi><m:mi>k</m:mi></m:msub></m:msub><m:mrow><m:mo>(</m:mo><m:msub><m:mi>c</m:mi><m:mi>k</m:mi></m:msub><m:mo>)</m:mo></m:mrow><m:mo>}</m:mo></m:mrow></m:math> are contained in <m:math overflow="scroll"><m:msup><m:mi>S</m:mi><m:mn>0</m:mn></m:msup></m:math> and pairwise disjoint.
+Suppose <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is continuous on <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>∖</m:mo><m:mo>∪</m:mo><m:msub><m:mi>B</m:mi><m:msub><m:mi>r</m:mi><m:mi>k</m:mi></m:msub></m:msub><m:mrow><m:mo>(</m:mo><m:msub><m:mi>c</m:mi><m:mi>k</m:mi></m:msub><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math>
+i.e., at each point of <m:math overflow="scroll"><m:mi>S</m:mi></m:math> that is not in any of the open disks <m:math overflow="scroll"><m:mrow><m:msub><m:mi>B</m:mi><m:msub><m:mi>r</m:mi><m:mi>k</m:mi></m:msub></m:msub><m:mrow><m:mo>(</m:mo><m:msub><m:mi>c</m:mi><m:mi>k</m:mi></m:msub><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> and
+that <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is differentiable on <m:math overflow="scroll"><m:mrow><m:msup><m:mi>S</m:mi><m:mn>0</m:mn></m:msup><m:mo>∖</m:mo><m:mo>∪</m:mo><m:msub><m:mover><m:mi>B</m:mi><m:mo>¯</m:mo></m:mover><m:msub><m:mi>r</m:mi><m:mi>k</m:mi></m:msub></m:msub><m:mrow><m:mo>(</m:mo><m:msub><m:mi>c</m:mi><m:mi>k</m:mi></m:msub><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math>
+i.e., at each point of <m:math overflow="scroll"><m:msup><m:mi>S</m:mi><m:mn>0</m:mn></m:msup></m:math> that is not in any of the closed disks <m:math overflow="scroll"><m:mrow><m:msub><m:mover><m:mi>B</m:mi><m:mo>¯</m:mo></m:mover><m:msub><m:mi>r</m:mi><m:mi>k</m:mi></m:msub></m:msub><m:mrow><m:mo>(</m:mo><m:msub><m:mi>c</m:mi><m:mi>k</m:mi></m:msub><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math>
+Write <m:math overflow="scroll"><m:msub><m:mi>C</m:mi><m:mi>k</m:mi></m:msub></m:math> for the circle that is the boundary of the closed disk <m:math overflow="scroll"><m:mrow><m:msub><m:mover><m:mi>B</m:mi><m:mo>¯</m:mo></m:mover><m:msub><m:mi>r</m:mi><m:mi>k</m:mi></m:msub></m:msub><m:mrow><m:mo>(</m:mo><m:msub><m:mi>c</m:mi><m:mi>k</m:mi></m:msub><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math>
+Then</para>
+    <equation id="id62922">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:msub>
+            <m:mo>∫</m:mo>
+            <m:msub>
+              <m:mi>C</m:mi>
+              <m:mi>S</m:mi>
+            </m:msub>
+          </m:msub>
+          <m:mi>f</m:mi>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>ζ</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mspace width="0.166667em"/>
+          <m:mi>d</m:mi>
+          <m:mi>ζ</m:mi>
+          <m:mo>=</m:mo>
+          <m:munderover>
+            <m:mo>∑</m:mo>
+            <m:mrow>
+              <m:mi>k</m:mi>
+              <m:mo>=</m:mo>
+              <m:mn>1</m:mn>
+            </m:mrow>
+            <m:mi>n</m:mi>
+          </m:munderover>
+          <m:msub>
+            <m:mo>∫</m:mo>
+            <m:msub>
+              <m:mi>C</m:mi>
+              <m:mi>k</m:mi>
+            </m:msub>
+          </m:msub>
+          <m:mi>f</m:mi>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>ζ</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mspace width="0.166667em"/>
+          <m:mi>d</m:mi>
+          <m:mi>ζ</m:mi>
+          <m:mo>.</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+</statement>
+<proof id="fs-id8474168">
+    <para id="id63011">This is just a special case of part (d) of <link target-id="fs-id1170812245279" document="m36235"/>.</para>
+</proof></rule>
+    <para id="id63019">Let <m:math overflow="scroll"><m:mi>f</m:mi></m:math> be continuous on the punctured disk <m:math overflow="scroll"><m:mrow><m:msub><m:mover><m:msup><m:mi>B</m:mi><m:mo>'</m:mo></m:msup><m:mo>¯</m:mo></m:mover><m:mi>r</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> analytic at each point <m:math overflow="scroll"><m:mi>z</m:mi></m:math> in <m:math overflow="scroll"><m:mrow><m:msubsup><m:mi>B</m:mi><m:mi>r</m:mi><m:mo>'</m:mo></m:msubsup><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> and suppose <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is undefined at the central point <m:math overflow="scroll"><m:mrow><m:mi>c</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Such points <m:math overflow="scroll"><m:mi>c</m:mi></m:math> are called <emphasis effect="italics">isolated singularities</emphasis> of <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+and we wish now to classify these kinds of points.
+Here is the first kind:</para>
+<definition id="fs-id1165908722723"><term/><meaning id="fs-id1165928635524">
+    <para id="id63321">
+A complex number <m:math overflow="scroll"><m:mi>c</m:mi></m:math> is called a <emphasis effect="italics">removable singularity</emphasis>
+of an analytic function
+<m:math overflow="scroll"><m:mi>f</m:mi></m:math> if there exists an <m:math overflow="scroll"><m:mrow><m:mi>r</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn></m:mrow></m:math> such that
+<m:math overflow="scroll"><m:mi>f</m:mi></m:math> is continuous on the punctured disk <m:math overflow="scroll"><m:mrow><m:msub><m:mover><m:msup><m:mi>B</m:mi><m:mo>'</m:mo></m:msup><m:mo>¯</m:mo></m:mover><m:mi>r</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> analytic at
+each point in <m:math overflow="scroll"><m:mrow><m:msubsup><m:mi>B</m:mi><m:mi>r</m:mi><m:mo>'</m:mo></m:msubsup><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> and
+<m:math overflow="scroll"><m:mrow><m:msub><m:mo movablelimits="true" form="prefix">lim</m:mo><m:mrow><m:mi>z</m:mi><m:mo>→</m:mo><m:mi>c</m:mi></m:mrow></m:msub><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> exists.</para>
+</meaning></definition>
+<exercise id="fs-id1165929629344"><problem id="fs-id1165919209962">
+    <list id="id63475" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid1"> Define <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mo form="prefix">sin</m:mo><m:mi>z</m:mi><m:mo>/</m:mo><m:mi>z</m:mi></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>z</m:mi><m:mo>≠</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math>
+Show that 0 is a removable singularity of <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid2"> For <m:math overflow="scroll"><m:mrow><m:mi>z</m:mi><m:mo>≠</m:mo><m:mi>c</m:mi><m:mo>,</m:mo></m:mrow></m:math> define <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mo>(</m:mo><m:mn>1</m:mn><m:mo>-</m:mo><m:mo form="prefix">cos</m:mo><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>-</m:mo><m:mi>c</m:mi><m:mo>)</m:mo><m:mo>)</m:mo><m:mo>/</m:mo><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>-</m:mo><m:mi>c</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math> Show that <m:math overflow="scroll"><m:mi>c</m:mi></m:math> is a removable singularity of <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid3"> For <m:math overflow="scroll"><m:mrow><m:mi>z</m:mi><m:mo>≠</m:mo><m:mi>c</m:mi><m:mo>,</m:mo></m:mrow></m:math> define <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mrow><m:mo>(</m:mo><m:mn>1</m:mn><m:mo>-</m:mo><m:mo form="prefix">cos</m:mo><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>-</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>/</m:mo><m:msup><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>-</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mn>2</m:mn></m:msup><m:mo>.</m:mo></m:mrow></m:math> Show that <m:math overflow="scroll"><m:mi>c</m:mi></m:math> is still a removable singularity of <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid4"> Let <m:math overflow="scroll"><m:mi>g</m:mi></m:math> be an analytic function on <m:math overflow="scroll"><m:mrow><m:msub><m:mi>B</m:mi><m:mi>r</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> and set
+<m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mo>(</m:mo><m:mi>g</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo><m:mo>-</m:mo><m:mi>g</m:mi><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo><m:mo>)</m:mo><m:mo>/</m:mo><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>-</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>z</m:mi><m:mo>∈</m:mo><m:msubsup><m:mi>B</m:mi><m:mi>r</m:mi><m:mo>'</m:mo></m:msubsup><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math>
+Show that <m:math overflow="scroll"><m:mi>c</m:mi></m:math> is a removable singularity of <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+    </list>
+</problem></exercise>
+
+    <para id="id63901">The following theorem provides a good explanation for the term “removable singularity.”
+The idea is that this is not a “true” singularity; it's just that
+for some reason the natural definition of <m:math overflow="scroll"><m:mi>f</m:mi></m:math> at <m:math overflow="scroll"><m:mi>c</m:mi></m:math> has not yet been made.</para>
+<rule id="fs-id1165910966497" type="theorem"><statement id="fs-id1165918311000">
+    <para id="id63924">
+Let <m:math overflow="scroll"><m:mi>f</m:mi></m:math> be continuous on the punctured disk <m:math overflow="scroll"><m:mrow><m:msubsup><m:mover><m:mi>B</m:mi><m:mo>¯</m:mo></m:mover><m:mi>r</m:mi><m:mo>'</m:mo></m:msubsup><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math>
+and differentiable at each point of the open punctured disk <m:math overflow="scroll"><m:mrow><m:msubsup><m:mi>B</m:mi><m:mi>r</m:mi><m:mo>'</m:mo></m:msubsup><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> and assume that
+<m:math overflow="scroll"><m:mi>c</m:mi></m:math> is a removable singularity of <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Define <m:math overflow="scroll"><m:mover accent="true"><m:mi>f</m:mi><m:mo>˜</m:mo></m:mover></m:math> by <m:math overflow="scroll"><m:mrow><m:mover accent="true"><m:mi>f</m:mi><m:mo>˜</m:mo></m:mover><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>z</m:mi><m:mo>∈</m:mo><m:msubsup><m:mi>B</m:mi><m:mi>r</m:mi><m:mo>'</m:mo></m:msubsup><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mover accent="true"><m:mi>f</m:mi><m:mo>˜</m:mo></m:mover><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msub><m:mo movablelimits="true" form="prefix">lim</m:mo><m:mrow><m:mi>z</m:mi><m:mo>→</m:mo><m:mi>c</m:mi></m:mrow></m:msub><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math>
+Then</para>
+    <list id="id64148" display="block" list-type="enumerated">
+      <item id="uid5"> <m:math overflow="scroll"><m:mover accent="true"><m:mi>f</m:mi><m:mo>˜</m:mo></m:mover></m:math> is analytic on the entire open disk <m:math overflow="scroll"><m:mrow><m:msub><m:mi>B</m:mi><m:mi>r</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> whence
+<equation id="id64200"><m:math overflow="scroll" mode="display"><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:munderover><m:mo>∑</m:mo><m:mrow><m:mi>k</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow><m:mi>∞</m:mi></m:munderover><m:msub><m:mi>c</m:mi><m:mi>k</m:mi></m:msub><m:msup><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>-</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mi>k</m:mi></m:msup></m:mrow></m:math></equation>
+for all <m:math overflow="scroll"><m:mrow><m:mi>z</m:mi><m:mo>∈</m:mo><m:msubsup><m:mi>B</m:mi><m:mi>r</m:mi><m:mo>'</m:mo></m:msubsup><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid6">For any piecewise smooth geometric set <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>⊆</m:mo><m:msub><m:mi>B</m:mi><m:mi>r</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> whose boundary <m:math overflow="scroll"><m:msub><m:mi>C</m:mi><m:mi>S</m:mi></m:msub></m:math> has finite length,
+and for which <m:math overflow="scroll"><m:mrow><m:mi>c</m:mi><m:mo>∈</m:mo><m:msup><m:mi>S</m:mi><m:mn>0</m:mn></m:msup><m:mo>,</m:mo></m:mrow></m:math><equation id="id64372"><m:math overflow="scroll" mode="display"><m:mrow><m:msub><m:mo>∫</m:mo><m:msub><m:mi>C</m:mi><m:mi>S</m:mi></m:msub></m:msub><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>ζ</m:mi><m:mo>)</m:mo></m:mrow><m:mspace width="0.166667em"/><m:mi>d</m:mi><m:mi>ζ</m:mi><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math></equation></item>
+    </list>
+</statement><proof id="fs-id1165906483023">
+    <para id="id64420">As in part (a) of <link target-id="fs-id1167469389585" document="m36237"/>, define <m:math overflow="scroll"><m:mi>F</m:mi></m:math> on <m:math overflow="scroll"><m:mrow><m:msub><m:mi>B</m:mi><m:mi>r</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> by</para>
+    <equation id="id64461">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mi>F</m:mi>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>z</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>=</m:mo>
+          <m:mfrac>
+            <m:mn>1</m:mn>
+            <m:mrow>
+              <m:mn>2</m:mn>
+              <m:mi>π</m:mi>
+              <m:mi>i</m:mi>
+            </m:mrow>
+          </m:mfrac>
+          <m:msub>
+            <m:mo>∫</m:mo>
+            <m:msub>
+              <m:mi>C</m:mi>
+              <m:mi>r</m:mi>
+            </m:msub>
+          </m:msub>
+          <m:mfrac>
+            <m:mrow>
+              <m:mi>f</m:mi>
+              <m:mo>(</m:mo>
+              <m:mi>ζ</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mrow>
+              <m:mi>ζ</m:mi>
+              <m:mo>-</m:mo>
+              <m:mi>z</m:mi>
+            </m:mrow>
+          </m:mfrac>
+          <m:mspace width="0.166667em"/>
+          <m:mi>d</m:mi>
+          <m:mi>ζ</m:mi>
+          <m:mo>.</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id64537">Then, by that exercise, <m:math overflow="scroll"><m:mi>F</m:mi></m:math> is analytic on <m:math overflow="scroll"><m:mrow><m:msub><m:mi>B</m:mi><m:mi>r</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math>
+We show next that <m:math overflow="scroll"><m:mrow><m:mi>F</m:mi><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mover accent="true"><m:mi>f</m:mi><m:mo>˜</m:mo></m:mover><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> on <m:math overflow="scroll"><m:mrow><m:msub><m:mi>B</m:mi><m:mi>r</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> and this will complete the proof of part (1).</para>
+    <para id="id64638">Let <m:math overflow="scroll"><m:mi>z</m:mi></m:math> be a point in <m:math overflow="scroll"><m:mrow><m:msub><m:mi>B</m:mi><m:mi>r</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> that is not equal to <m:math overflow="scroll"><m:mrow><m:mi>c</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+and let <m:math overflow="scroll"><m:mrow><m:mi>ϵ</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn></m:mrow></m:math> be given.
+Choose <m:math overflow="scroll"><m:mrow><m:mi>δ</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn></m:mrow></m:math> such that <m:math overflow="scroll"><m:mrow><m:mi>δ</m:mi><m:mo>&lt;</m:mo><m:mo>|</m:mo><m:mi>z</m:mi><m:mo>-</m:mo><m:mi>c</m:mi><m:mo>|</m:mo><m:mo>/</m:mo><m:mn>2</m:mn></m:mrow></m:math> and such that
+<m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:mover accent="true"><m:mi>f</m:mi><m:mo>˜</m:mo></m:mover><m:mrow><m:mo>(</m:mo><m:mi>ζ</m:mi><m:mo>)</m:mo></m:mrow><m:mo>-</m:mo><m:mover accent="true"><m:mi>f</m:mi><m:mo>˜</m:mo></m:mover><m:mrow><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mi>ϵ</m:mi></m:mrow></m:mrow></m:math>
+if <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>ζ</m:mi><m:mo>-</m:mo><m:mi>c</m:mi><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mi>δ</m:mi><m:mo>.</m:mo></m:mrow></m:math> Then, using part (c) of <link target-id="fs-id1170812269555" document="m36235"/>, we have that</para>
+    <equation id="uid7">
+      <m:math overflow="scroll" mode="display">
+        <m:mtable displaystyle="true">
+          <m:mtr>
+            <m:mtd columnalign="right">
+              <m:mrow>
+                <m:mover accent="true">
+                  <m:mi>f</m:mi>
+                  <m:mo>˜</m:mo>
+                </m:mover>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>z</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+            <m:mtd>
+              <m:mrow>
+                <m:mo>=</m:mo>
+                <m:mi>f</m:mi>
+                <m:mo>(</m:mo>
+                <m:mi>z</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mfrac>
+                  <m:mn>1</m:mn>
+                  <m:mrow>
+                    <m:mn>2</m:mn>
+                    <m:mi>π</m:mi>
+                    <m:mi>i</m:mi>
+                  </m:mrow>
+                </m:mfrac>
+                <m:msub>
+                  <m:mo>∫</m:mo>
+                  <m:msub>
+                    <m:mi>C</m:mi>
+                    <m:mi>r</m:mi>
+                  </m:msub>
+                </m:msub>
+                <m:mfrac>
+                  <m:mrow>
+                    <m:mi>f</m:mi>
+                    <m:mo>(</m:mo>
+                    <m:mi>ζ</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mrow>
+                    <m:mi>ζ</m:mi>
+                    <m:mo>-</m:mo>
+                    <m:mi>z</m:mi>
+                  </m:mrow>
+                </m:mfrac>
+                <m:mspace width="0.166667em"/>
+                <m:mi>d</m:mi>
+                <m:mi>ζ</m:mi>
+                <m:mo>-</m:mo>
+                <m:mfrac>
+                  <m:mn>1</m:mn>
+                  <m:mrow>
+                    <m:mn>2</m:mn>
+                    <m:mi>π</m:mi>
+                    <m:mi>i</m:mi>
+                  </m:mrow>
+                </m:mfrac>
+                <m:msub>
+                  <m:mo>∫</m:mo>
+                  <m:msub>
+                    <m:mi>C</m:mi>
+                    <m:mi>δ</m:mi>
+                  </m:msub>
+                </m:msub>
+                <m:mfrac>
+                  <m:mrow>
+                    <m:mi>f</m:mi>
+                    <m:mo>(</m:mo>
+                    <m:mi>ζ</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mrow>
+                    <m:mi>ζ</m:mi>
+                    <m:mo>-</m:mo>
+                    <m:mi>z</m:mi>
+                  </m:mrow>
+                </m:mfrac>
+                <m:mspace width="0.166667em"/>
+                <m:mi>d</m:mi>
+                <m:mi>ζ</m:mi>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mi>F</m:mi>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>z</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mo>-</m:mo>
+                <m:mfrac>
+                  <m:mn>1</m:mn>
+                  <m:mrow>
+                    <m:mn>2</m:mn>
+                    <m:mi>π</m:mi>
+                    <m:mi>i</m:mi>
+                  </m:mrow>
+                </m:mfrac>
+                <m:msub>
+                  <m:mo>∫</m:mo>
+                  <m:msub>
+                    <m:mi>C</m:mi>
+                    <m:mi>δ</m:mi>
+                  </m:msub>
+                </m:msub>
+                <m:mfrac>
+                  <m:mrow>
+                    <m:mi>f</m:mi>
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:mi>ζ</m:mi>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                    <m:mo>-</m:mo>
+                    <m:mover accent="true">
+                      <m:mi>f</m:mi>
+                      <m:mo>˜</m:mo>
+                    </m:mover>
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:mi>c</m:mi>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                  </m:mrow>
+                  <m:mrow>
+                    <m:mi>ζ</m:mi>
+                    <m:mo>-</m:mo>
+                    <m:mi>z</m:mi>
+                  </m:mrow>
+                </m:mfrac>
+                <m:mspace width="0.166667em"/>
+                <m:mi>d</m:mi>
+                <m:mi>ζ</m:mi>
+                <m:mo>-</m:mo>
+                <m:mfrac>
+                  <m:mn>1</m:mn>
+                  <m:mrow>
+                    <m:mn>2</m:mn>
+                    <m:mi>π</m:mi>
+                    <m:mi>i</m:mi>
+                  </m:mrow>
+                </m:mfrac>
+                <m:msub>
+                  <m:mo>∫</m:mo>
+                  <m:msub>
+                    <m:mi>C</m:mi>
+                    <m:mi>δ</m:mi>
+                  </m:msub>
+                </m:msub>
+                <m:mfrac>
+                  <m:mrow>
+                    <m:mover accent="true">
+                      <m:mi>f</m:mi>
+                      <m:mo>˜</m:mo>
+                    </m:mover>
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:mi>c</m:mi>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                  </m:mrow>
+                  <m:mrow>
+                    <m:mi>ζ</m:mi>
+                    <m:mo>-</m:mo>
+                    <m:mi>z</m:mi>
+                  </m:mrow>
+                </m:mfrac>
+                <m:mspace width="0.166667em"/>
+                <m:mi>d</m:mi>
+                <m:mi>ζ</m:mi>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mi>F</m:mi>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>z</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mo>-</m:mo>
+                <m:mfrac>
+                  <m:mn>1</m:mn>
+                  <m:mrow>
+                    <m:mn>2</m:mn>
+                    <m:mi>π</m:mi>
+                    <m:mi>i</m:mi>
+                  </m:mrow>
+                </m:mfrac>
+                <m:msub>
+                  <m:mo>∫</m:mo>
+                  <m:msub>
+                    <m:mi>C</m:mi>
+                    <m:mi>δ</m:mi>
+                  </m:msub>
+                </m:msub>
+                <m:mfrac>
+                  <m:mrow>
+                    <m:mover accent="true">
+                      <m:mi>f</m:mi>
+                      <m:mo>˜</m:mo>
+                    </m:mover>
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:mi>ζ</m:mi>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                    <m:mo>-</m:mo>
+                    <m:mover accent="true">
+                      <m:mi>f</m:mi>
+                      <m:mo>˜</m:mo>
+                    </m:mover>
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:mi>c</m:mi>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                  </m:mrow>
+                  <m:mrow>
+                    <m:mi>ζ</m:mi>
+                    <m:mo>-</m:mo>
+                    <m:mi>z</m:mi>
+                  </m:mrow>
+                </m:mfrac>
+                <m:mspace width="0.166667em"/>
+                <m:mi>d</m:mi>
+                <m:mi>ζ</m:mi>
+                <m:mo>,</m:mo>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+        </m:mtable>
+      </m:math>
+    </equation>
+    <para id="id65250">where the last equality holds because the function <m:math overflow="scroll"><m:mrow><m:mover accent="true"><m:mi>f</m:mi><m:mo>˜</m:mo></m:mover><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>/</m:mo><m:mrow><m:mo>(</m:mo><m:mi>ζ</m:mi><m:mo>-</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math>
+is an analytic function of <m:math overflow="scroll"><m:mi>ζ</m:mi></m:math> on the disk <m:math overflow="scroll"><m:mrow><m:msub><m:mi>B</m:mi><m:mi>δ</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> and hence the integral is 0 by <link target-id="fs-id1170827240654" document="m36235"/>.
+So,</para>
+    <equation id="uid8">
+      <m:math overflow="scroll" mode="display">
+        <m:mtable displaystyle="true">
+          <m:mtr>
+            <m:mtd columnalign="right">
+              <m:mrow>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:mover accent="true">
+                  <m:mi>f</m:mi>
+                  <m:mo>˜</m:mo>
+                </m:mover>
+                <m:mrow>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>z</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>-</m:mo>
+                  <m:mi>F</m:mi>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>z</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:mfrac>
+                  <m:mn>1</m:mn>
+                  <m:mrow>
+                    <m:mn>2</m:mn>
+                    <m:mi>π</m:mi>
+                    <m:mi>i</m:mi>
+                  </m:mrow>
+                </m:mfrac>
+                <m:msub>
+                  <m:mo>∫</m:mo>
+                  <m:msub>
+                    <m:mi>C</m:mi>
+                    <m:mi>δ</m:mi>
+                  </m:msub>
+                </m:msub>
+                <m:mfrac>
+                  <m:mrow>
+                    <m:mover accent="true">
+                      <m:mi>f</m:mi>
+                      <m:mo>˜</m:mo>
+                    </m:mover>
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:mi>ζ</m:mi>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                    <m:mo>-</m:mo>
+                    <m:mover accent="true">
+                      <m:mi>f</m:mi>
+                      <m:mo>˜</m:mo>
+                    </m:mover>
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:mi>c</m:mi>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                  </m:mrow>
+                  <m:mrow>
+                    <m:mi>ζ</m:mi>
+                    <m:mo>-</m:mo>
+                    <m:mi>z</m:mi>
+                  </m:mrow>
+                </m:mfrac>
+                <m:mrow>
+                  <m:mspace width="0.166667em"/>
+                  <m:mi>d</m:mi>
+                  <m:mi>ζ</m:mi>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>≤</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mfrac>
+                  <m:mn>1</m:mn>
+                  <m:mrow>
+                    <m:mn>2</m:mn>
+                    <m:mi>π</m:mi>
+                  </m:mrow>
+                </m:mfrac>
+                <m:msub>
+                  <m:mo>∫</m:mo>
+                  <m:msub>
+                    <m:mi>C</m:mi>
+                    <m:mi>δ</m:mi>
+                  </m:msub>
+                </m:msub>
+                <m:mfrac>
+                  <m:mrow>
+                    <m:mrow>
+                      <m:mo>|</m:mo>
+                    </m:mrow>
+                    <m:mover accent="true">
+                      <m:mi>f</m:mi>
+                      <m:mo>˜</m:mo>
+                    </m:mover>
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:mi>ζ</m:mi>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                    <m:mo>-</m:mo>
+                    <m:mover accent="true">
+                      <m:mi>f</m:mi>
+                      <m:mo>˜</m:mo>
+                    </m:mover>
+                    <m:mrow>
+                      <m:mrow>
+                        <m:mo>(</m:mo>
+                        <m:mi>c</m:mi>
+                        <m:mo>)</m:mo>
+                      </m:mrow>
+                      <m:mo>|</m:mo>
+                    </m:mrow>
+                  </m:mrow>
+                  <m:mrow>
+                    <m:mo>|</m:mo>
+                    <m:mi>ζ</m:mi>
+                    <m:mo>-</m:mo>
+                    <m:mi>z</m:mi>
+                    <m:mo>|</m:mo>
+                  </m:mrow>
+                </m:mfrac>
+                <m:mspace width="0.166667em"/>
+                <m:mi>d</m:mi>
+                <m:mi>s</m:mi>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>≤</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mfrac>
+                  <m:mn>1</m:mn>
+                  <m:mrow>
+                    <m:mn>2</m:mn>
+                    <m:mi>π</m:mi>
+                  </m:mrow>
+                </m:mfrac>
+                <m:msub>
+                  <m:mo>∫</m:mo>
+                  <m:msub>
+                    <m:mi>C</m:mi>
+                    <m:mi>δ</m:mi>
+                  </m:msub>
+                </m:msub>
+                <m:mfrac>
+                  <m:mi>ϵ</m:mi>
+                  <m:mrow>
+                    <m:mi>δ</m:mi>
+                    <m:mo>/</m:mo>
+                    <m:mn>2</m:mn>
+                  </m:mrow>
+                </m:mfrac>
+                <m:mspace width="0.166667em"/>
+                <m:mi>d</m:mi>
+                <m:mi>s</m:mi>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mfrac>
+                  <m:mrow>
+                    <m:mn>2</m:mn>
+                    <m:mi>ϵ</m:mi>
+                  </m:mrow>
+                  <m:mi>δ</m:mi>
+                </m:mfrac>
+                <m:mo>×</m:mo>
+                <m:mi>δ</m:mi>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mn>2</m:mn>
+                <m:mi>ϵ</m:mi>
+                <m:mo>.</m:mo>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+        </m:mtable>
+      </m:math>
+    </equation>
+    <para id="id65671">Since this holds for arbitrary <m:math overflow="scroll"><m:mrow><m:mi>ϵ</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> we see that <m:math overflow="scroll"><m:mrow><m:mover accent="true"><m:mi>f</m:mi><m:mo>˜</m:mo></m:mover><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>F</m:mi><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math>
+for all <m:math overflow="scroll"><m:mrow><m:mi>z</m:mi><m:mo>≠</m:mo><m:mi>c</m:mi></m:mrow></m:math> in <m:math overflow="scroll"><m:mrow><m:msub><m:mi>B</m:mi><m:mi>r</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></para>
+    <para id="id65768">Finally, since</para>
+    <equation id="id65771">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mover accent="true">
+            <m:mi>f</m:mi>
+            <m:mo>˜</m:mo>
+          </m:mover>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>c</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>=</m:mo>
+          <m:munder>
+            <m:mo movablelimits="true" form="prefix">lim</m:mo>
+            <m:mrow>
+              <m:mi>z</m:mi>
+              <m:mo>→</m:mo>
+              <m:mi>c</m:mi>
+            </m:mrow>
+          </m:munder>
+          <m:mover accent="true">
+            <m:mi>f</m:mi>
+            <m:mo>˜</m:mo>
+          </m:mover>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>z</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>=</m:mo>
+          <m:mo movablelimits="true" form="prefix">lim</m:mo>
+          <m:mrow>
+            <m:mi>z</m:mi>
+            <m:mo>→</m:mo>
+            <m:mi>c</m:mi>
+          </m:mrow>
+          <m:mi>F</m:mi>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>z</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>=</m:mo>
+          <m:mi>F</m:mi>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>c</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>,</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id65873">the equality of <m:math overflow="scroll"><m:mi>F</m:mi></m:math> and <m:math overflow="scroll"><m:mover accent="true"><m:mi>f</m:mi><m:mo>˜</m:mo></m:mover></m:math> on all of <m:math overflow="scroll"><m:mrow><m:msub><m:mi>B</m:mi><m:mi>r</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> is proved.
+This finishes the proof of part (1).</para>
+</proof></rule>
+<exercise id="fs-id1165929388004"><problem id="fs-id5380587">
+    <para id="id65927">
+Prove part (2) of the preceding theorem.</para>
+</problem></exercise>
+    <para id="id65939">Now, for the second kind of isolated singularity:</para>
+<definition id="fs-id1165912734646"><term/><meaning id="fs-id1165910083554">
+    <para id="id65945">
+A complex number <m:math overflow="scroll"><m:mi>c</m:mi></m:math> is called a <emphasis effect="italics">pole</emphasis>
+of a function <m:math overflow="scroll"><m:mi>f</m:mi></m:math> if there exists an <m:math overflow="scroll"><m:mrow><m:mi>r</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn></m:mrow></m:math> such that <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is continuous on the punctured disk <m:math overflow="scroll"><m:mrow><m:msub><m:mover><m:msup><m:mi>B</m:mi><m:mo>'</m:mo></m:msup><m:mo>¯</m:mo></m:mover><m:mi>r</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math>
+analytic at each point of <m:math overflow="scroll"><m:mrow><m:msubsup><m:mi>B</m:mi><m:mi>r</m:mi><m:mo>'</m:mo></m:msubsup><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math>
+the point <m:math overflow="scroll"><m:mi>c</m:mi></m:math> is not a removable singularity of <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+and there exists a positive integer <m:math overflow="scroll"><m:mi>k</m:mi></m:math> such that the analytic function <m:math overflow="scroll"><m:mrow><m:msup><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>-</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mi>k</m:mi></m:msup><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math>
+has a removable singularity at <m:math overflow="scroll"><m:mrow><m:mi>c</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+    <para id="id66140">A pole <m:math overflow="scroll"><m:mi>c</m:mi></m:math> of <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is said to be <emphasis effect="italics">of order n,</emphasis>
+if <m:math overflow="scroll"><m:mi>n</m:mi></m:math> is the smallest positive integer for which the function <m:math overflow="scroll"><m:mrow><m:mover accent="true"><m:mi>f</m:mi><m:mo>˜</m:mo></m:mover><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>≡</m:mo><m:msup><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>-</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mi>n</m:mi></m:msup><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> has a removable singularity at <m:math overflow="scroll"><m:mrow><m:mi>c</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+</meaning></definition>
+<exercise id="fs-id1165929278955"><problem id="fs-id1165930392834">
+    <list id="id66250" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid9"> Let <m:math overflow="scroll"><m:mi>c</m:mi></m:math> be a pole of order <m:math overflow="scroll"><m:mi>n</m:mi></m:math> of a function <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+and write <m:math overflow="scroll"><m:mrow><m:mover accent="true"><m:mi>f</m:mi><m:mo>˜</m:mo></m:mover><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>-</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mi>n</m:mi></m:msup><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math>
+Show that
+<m:math overflow="scroll"><m:mover accent="true"><m:mi>f</m:mi><m:mo>˜</m:mo></m:mover></m:math> is analytic on some disk <m:math overflow="scroll"><m:mrow><m:msub><m:mi>B</m:mi><m:mi>r</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid10"> Define <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mo form="prefix">sin</m:mo><m:mi>z</m:mi><m:mo>/</m:mo><m:msup><m:mi>z</m:mi><m:mn>3</m:mn></m:msup></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>z</m:mi><m:mo>≠</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math>
+Show that 0 is a pole of order 2 of <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+    </list>
+</problem></exercise>
+<rule id="fs-id1165907480999" type="theorem"><statement id="fs-id1165914123402">
+    <para id="id66467">
+Let <m:math overflow="scroll"><m:mi>f</m:mi></m:math> be continuous on a punctured disk <m:math overflow="scroll"><m:mrow><m:msub><m:mover><m:msup><m:mi>B</m:mi><m:mo>'</m:mo></m:msup><m:mo>¯</m:mo></m:mover><m:mi>r</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> analytic at each point of <m:math overflow="scroll"><m:mrow><m:msubsup><m:mi>B</m:mi><m:mi>r</m:mi><m:mo>'</m:mo></m:msubsup><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> and suppose that <m:math overflow="scroll"><m:mi>c</m:mi></m:math> is a pole of order <m:math overflow="scroll"><m:mi>n</m:mi></m:math> of <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Then</para>
+    <list id="id66576" display="block" list-type="enumerated">
+      <item id="uid11">For all <m:math overflow="scroll"><m:mrow><m:mi>z</m:mi><m:mo>∈</m:mo><m:msubsup><m:mi>B</m:mi><m:mi>r</m:mi><m:mo>'</m:mo></m:msubsup><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math><equation id="id66623"><m:math overflow="scroll" mode="display"><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:munderover><m:mo>∑</m:mo><m:mrow><m:mi>k</m:mi><m:mo>=</m:mo><m:mo>-</m:mo><m:mi>n</m:mi></m:mrow><m:mi>∞</m:mi></m:munderover><m:msub><m:mi>a</m:mi><m:mi>k</m:mi></m:msub><m:msup><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>-</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mi>k</m:mi></m:msup><m:mo>.</m:mo></m:mrow></m:math></equation></item>
+      <item id="uid12">The infinite series of part (1) converges uniformly on each compact subset <m:math overflow="scroll"><m:mi>K</m:mi></m:math> of <m:math overflow="scroll"><m:mrow><m:msubsup><m:mi>B</m:mi><m:mi>r</m:mi><m:mo>'</m:mo></m:msubsup><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid13">For any piecewise smooth geometric set <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>⊆</m:mo><m:msub><m:mi>B</m:mi><m:mi>r</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> whose boundary <m:math overflow="scroll"><m:msub><m:mi>C</m:mi><m:mi>S</m:mi></m:msub></m:math> has finite length,
+and satisfying <m:math overflow="scroll"><m:mrow><m:mi>c</m:mi><m:mo>∈</m:mo><m:msup><m:mi>S</m:mi><m:mn>0</m:mn></m:msup><m:mo>,</m:mo></m:mrow></m:math><equation id="id66815"><m:math overflow="scroll" mode="display"><m:mrow><m:msub><m:mo>∫</m:mo><m:msub><m:mi>C</m:mi><m:mi>S</m:mi></m:msub></m:msub><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>ζ</m:mi><m:mo>)</m:mo></m:mrow><m:mspace width="0.166667em"/><m:mi>d</m:mi><m:mi>ζ</m:mi><m:mo>=</m:mo><m:mn>2</m:mn><m:mi>π</m:mi><m:mi>i</m:mi><m:msub><m:mi>a</m:mi><m:mrow><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>,</m:mo></m:mrow></m:math></equation>
+where <m:math overflow="scroll"><m:msub><m:mi>A</m:mi><m:mrow><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msub></m:math> is the coefficient of <m:math overflow="scroll"><m:msup><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>-</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mrow><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msup></m:math> in the series of part (1).
+</item>
+    </list>
+</statement>
+<proof id="fs-id8923897">
+    <para id="id66929">For each <m:math overflow="scroll"><m:mrow><m:mi>z</m:mi><m:mo>∈</m:mo><m:msubsup><m:mi>B</m:mi><m:mi>r</m:mi><m:mo>'</m:mo></m:msubsup><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> write <m:math overflow="scroll"><m:mrow><m:mover accent="true"><m:mi>f</m:mi><m:mo>˜</m:mo></m:mover><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>-</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mi>n</m:mi></m:msup><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math>
+Then, by <link target-id="fs-id1165910966497"/>, <m:math overflow="scroll"><m:mover accent="true"><m:mi>f</m:mi><m:mo>˜</m:mo></m:mover></m:math> is analytic
+on <m:math overflow="scroll"><m:mrow><m:msub><m:mi>B</m:mi><m:mi>r</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> whence</para>
+    <equation id="uid14">
+      <m:math overflow="scroll" mode="display">
+        <m:mtable displaystyle="true">
+          <m:mtr>
+            <m:mtd columnalign="right">
+              <m:mrow>
+                <m:mi>f</m:mi>
+                <m:mo>(</m:mo>
+                <m:mi>z</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+            </m:mtd>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mfrac>
+                <m:mrow>
+                  <m:mover accent="true">
+                    <m:mi>f</m:mi>
+                    <m:mo>˜</m:mo>
+                  </m:mover>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>z</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                </m:mrow>
+                <m:msup>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>z</m:mi>
+                    <m:mo>-</m:mo>
+                    <m:mi>c</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mi>n</m:mi>
+                </m:msup>
+              </m:mfrac>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mfrac>
+                  <m:mn>1</m:mn>
+                  <m:msup>
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:mi>z</m:mi>
+                      <m:mo>-</m:mo>
+                      <m:mi>c</m:mi>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                    <m:mi>n</m:mi>
+                  </m:msup>
+                </m:mfrac>
+                <m:munderover>
+                  <m:mo>∑</m:mo>
+                  <m:mrow>
+                    <m:mi>k</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mn>0</m:mn>
+                  </m:mrow>
+                  <m:mi>∞</m:mi>
+                </m:munderover>
+                <m:msub>
+                  <m:mi>c</m:mi>
+                  <m:mi>k</m:mi>
+                </m:msub>
+                <m:msup>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>z</m:mi>
+                    <m:mo>-</m:mo>
+                    <m:mi>c</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mi>k</m:mi>
+                </m:msup>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:munderover>
+                  <m:mo>∑</m:mo>
+                  <m:mrow>
+                    <m:mi>k</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mo>-</m:mo>
+                    <m:mi>n</m:mi>
+                  </m:mrow>
+                  <m:mi>∞</m:mi>
+                </m:munderover>
+                <m:msub>
+                  <m:mi>a</m:mi>
+                  <m:mi>k</m:mi>
+                </m:msub>
+                <m:msup>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>z</m:mi>
+                    <m:mo>-</m:mo>
+                    <m:mi>c</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mi>k</m:mi>
+                </m:msup>
+                <m:mo>,</m:mo>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+        </m:mtable>
+      </m:math>
+    </equation>
+    <para id="id67265">where <m:math overflow="scroll"><m:mrow><m:msub><m:mi>a</m:mi><m:mi>k</m:mi></m:msub><m:mo>=</m:mo><m:msub><m:mi>c</m:mi><m:mrow><m:mi>n</m:mi><m:mo>+</m:mo><m:mi>k</m:mi></m:mrow></m:msub><m:mo>.</m:mo></m:mrow></m:math>
+This proves part (1).</para>
+    <para id="id67304">We leave the proof of the uniform convergence of the series on each
+compact subset of <m:math overflow="scroll"><m:mrow><m:msubsup><m:mi>B</m:mi><m:mi>r</m:mi><m:mo>'</m:mo></m:msubsup><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> i.e., the proof of part (2), to the exercises.</para>
+    <para id="id67337">Part (3) follows from Cauchy's Theorem (<link target-id="fs-id1170827240654" document="m36235"/>) and the computations in <link target-id="fs-id1170815486722" document="m36235"/>. Thus:</para>
+    <equation id="uid15">
+      <m:math overflow="scroll" mode="display">
+        <m:mtable displaystyle="true">
+          <m:mtr>
+            <m:mtd columnalign="right">
+              <m:mrow>
+                <m:msub>
+                  <m:mo>∫</m:mo>
+                  <m:msub>
+                    <m:mi>C</m:mi>
+                    <m:mi>S</m:mi>
+                  </m:msub>
+                </m:msub>
+                <m:mi>f</m:mi>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>ζ</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mspace width="0.166667em"/>
+                <m:mi>d</m:mi>
+                <m:mi>ζ</m:mi>
+              </m:mrow>
+            </m:mtd>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:msub>
+                  <m:mo>∫</m:mo>
+                  <m:msub>
+                    <m:mi>C</m:mi>
+                    <m:mi>r</m:mi>
+                  </m:msub>
+                </m:msub>
+                <m:mi>f</m:mi>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>ζ</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mspace width="0.166667em"/>
+                <m:mi>d</m:mi>
+                <m:mi>ζ</m:mi>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:msub>
+                  <m:mo>∫</m:mo>
+                  <m:msub>
+                    <m:mi>C</m:mi>
+                    <m:mi>r</m:mi>
+                  </m:msub>
+                </m:msub>
+                <m:munderover>
+                  <m:mo>∑</m:mo>
+                  <m:mrow>
+                    <m:mi>k</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mo>-</m:mo>
+                    <m:mi>n</m:mi>
+                  </m:mrow>
+                  <m:mi>∞</m:mi>
+                </m:munderover>
+                <m:msub>
+                  <m:mi>a</m:mi>
+                  <m:mi>k</m:mi>
+                </m:msub>
+                <m:msup>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>z</m:mi>
+                    <m:mo>-</m:mo>
+                    <m:mi>c</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mi>k</m:mi>
+                </m:msup>
+                <m:mspace width="0.166667em"/>
+                <m:mi>d</m:mi>
+                <m:mi>ζ</m:mi>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:munderover>
+                  <m:mo>∑</m:mo>
+                  <m:mrow>
+                    <m:mi>k</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mo>-</m:mo>
+                    <m:mi>n</m:mi>
+                  </m:mrow>
+                  <m:mi>∞</m:mi>
+                </m:munderover>
+                <m:msub>
+                  <m:mi>a</m:mi>
+                  <m:mi>k</m:mi>
+                </m:msub>
+                <m:msub>
+                  <m:mo>∫</m:mo>
+                  <m:msub>
+                    <m:mi>C</m:mi>
+                    <m:mi>r</m:mi>
+                  </m:msub>
+                </m:msub>
+                <m:msup>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>ζ</m:mi>
+                    <m:mo>-</m:mo>
+                    <m:mi>c</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mi>k</m:mi>
+                </m:msup>
+                <m:mspace width="0.166667em"/>
+                <m:mi>d</m:mi>
+                <m:mi>ζ</m:mi>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:msub>
+                  <m:mi>a</m:mi>
+                  <m:mrow>
+                    <m:mo>-</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                </m:msub>
+                <m:mn>2</m:mn>
+                <m:mi>π</m:mi>
+                <m:mi>i</m:mi>
+                <m:mo>,</m:mo>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+        </m:mtable>
+      </m:math>
+    </equation>
+    <para id="id67608">as desired.
+The summation sign comes out of the integral because of the uniform convergence of the series on the compact circle <m:math overflow="scroll"><m:mrow><m:msub><m:mi>C</m:mi><m:mi>r</m:mi></m:msub><m:mo>.</m:mo></m:mrow></m:math></para>
+</proof></rule>
+<exercise id="fs-id1165906407992"><problem id="fs-id1165919143679">
+    <list id="id67642" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid16"> Complete the proof to part (2) of the preceding theorem.
+That is, show that the infinite series <m:math overflow="scroll"><m:mrow><m:msubsup><m:mo>∑</m:mo><m:mrow><m:mi>k</m:mi><m:mo>=</m:mo><m:mo>-</m:mo><m:mi>n</m:mi></m:mrow><m:mi>∞</m:mi></m:msubsup><m:msub><m:mi>a</m:mi><m:mi>k</m:mi></m:msub><m:msup><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>-</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mi>k</m:mi></m:msup></m:mrow></m:math>
+converges uniformly on each compact subset <m:math overflow="scroll"><m:mi>K</m:mi></m:math> of <m:math overflow="scroll"><m:mrow><m:msubsup><m:mi>B</m:mi><m:mi>r</m:mi><m:mo>'</m:mo></m:msubsup><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math>
+HINT: Use the fact that the Taylor series <m:math overflow="scroll"><m:mrow><m:msubsup><m:mo>∑</m:mo><m:mrow><m:mi>n</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow><m:mi>∞</m:mi></m:msubsup><m:msub><m:mi>c</m:mi><m:mi>n</m:mi></m:msub><m:msup><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>-</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mi>n</m:mi></m:msup></m:mrow></m:math>
+for <m:math overflow="scroll"><m:mover accent="true"><m:mi>f</m:mi><m:mo>˜</m:mo></m:mover></m:math> converges uniformly on the entire disk <m:math overflow="scroll"><m:mrow><m:msub><m:mover><m:mi>B</m:mi><m:mo>¯</m:mo></m:mover><m:mi>r</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math>
+and that if <m:math overflow="scroll"><m:mi>c</m:mi></m:math> is not in a compact subset <m:math overflow="scroll"><m:mi>K</m:mi></m:math> of <m:math overflow="scroll"><m:mrow><m:msub><m:mi>B</m:mi><m:mi>r</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> then there exists a
+<m:math overflow="scroll"><m:mrow><m:mi>δ</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn></m:mrow></m:math> such that <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>z</m:mi><m:mo>-</m:mo><m:mi>c</m:mi><m:mo>|</m:mo><m:mo>&gt;</m:mo><m:mi>δ</m:mi></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>z</m:mi><m:mo>∈</m:mo><m:mi>K</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid17"> Let <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>,</m:mo><m:mi>c</m:mi><m:mo>,</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mover accent="true"><m:mi>f</m:mi><m:mo>˜</m:mo></m:mover></m:math> be as in the preceding proof.
+Show that
+<equation id="id67986"><m:math overflow="scroll" mode="display"><m:mrow><m:msub><m:mi>a</m:mi><m:mrow><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>=</m:mo><m:mfrac><m:mrow><m:msup><m:mover accent="true"><m:mi>f</m:mi><m:mo>˜</m:mo></m:mover><m:mrow><m:mo>(</m:mo><m:mi>n</m:mi><m:mo>-</m:mo><m:mn>1</m:mn><m:mo>)</m:mo></m:mrow></m:msup><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mrow><m:mo>(</m:mo><m:mi>n</m:mi><m:mo>-</m:mo><m:mn>1</m:mn><m:mo>)</m:mo><m:mo>!</m:mo></m:mrow></m:mfrac><m:mo>.</m:mo></m:mrow></m:math></equation></item>
+      <item id="uid18"> Suppose <m:math overflow="scroll"><m:mi>g</m:mi></m:math> is a function defined on a punctured disk <m:math overflow="scroll"><m:mrow><m:msubsup><m:mi>B</m:mi><m:mi>r</m:mi><m:mo>'</m:mo></m:msubsup><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math>
+that is given by the formula
+<equation id="id68106"><m:math overflow="scroll" mode="display"><m:mrow><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:munderover><m:mo>∑</m:mo><m:mrow><m:mi>k</m:mi><m:mo>=</m:mo><m:mo>-</m:mo><m:mi>n</m:mi></m:mrow><m:mi>∞</m:mi></m:munderover><m:msub><m:mi>a</m:mi><m:mi>k</m:mi></m:msub><m:msup><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>-</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mi>k</m:mi></m:msup></m:mrow></m:math></equation>
+for some positive integer <m:math overflow="scroll"><m:mi>n</m:mi></m:math>
+and for all <m:math overflow="scroll"><m:mrow><m:mi>z</m:mi><m:mo>∈</m:mo><m:msubsup><m:mi>B</m:mi><m:mi>r</m:mi><m:mo>'</m:mo></m:msubsup><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math>
+Suppose in addition that the coefficient <m:math overflow="scroll"><m:mrow><m:msub><m:mi>a</m:mi><m:mrow><m:mo>-</m:mo><m:mi>n</m:mi></m:mrow></m:msub><m:mo>≠</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math>
+Show that <m:math overflow="scroll"><m:mi>c</m:mi></m:math> is a pole of order <m:math overflow="scroll"><m:mi>n</m:mi></m:math> of <m:math overflow="scroll"><m:mrow><m:mi>g</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+    </list>
+</problem></exercise>
+    <para id="id68274">Having defined two kinds of isolated singularities of a function <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+the removable ones and the polls of finite order, there remain all the others,
+which we collect into a third type.</para>
+<definition id="fs-id1165906525119"><term/><meaning id="fs-id1165919761151">
+    <para id="id68290">
+Let <m:math overflow="scroll"><m:mi>f</m:mi></m:math> be continuous on a punctured disk <m:math overflow="scroll"><m:mrow><m:msub><m:mover><m:msup><m:mi>B</m:mi><m:mo>'</m:mo></m:msup><m:mo>¯</m:mo></m:mover><m:mi>r</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math>
+and analytic at each point of <m:math overflow="scroll"><m:mrow><m:msubsup><m:mi>B</m:mi><m:mi>r</m:mi><m:mo>'</m:mo></m:msubsup><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math>
+The point <m:math overflow="scroll"><m:mi>c</m:mi></m:math> is called an <emphasis effect="italics">essential singularity</emphasis> of <m:math overflow="scroll"><m:mi>f</m:mi></m:math>
+if it is neither a removable singularity nor a poll of any finite order.
+Singularities that are either poles or essential singularities are
+called <emphasis effect="italics">nonremovable singularities.</emphasis></para>
+</meaning></definition>
+<exercise id="fs-id1165910775067"><problem id="fs-id1165935163176">
+    <para id="id68400">
+For <m:math overflow="scroll"><m:mrow><m:mi>z</m:mi><m:mo>≠</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> define <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>e</m:mi><m:mrow><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>z</m:mi></m:mrow></m:msup><m:mo>.</m:mo></m:mrow></m:math>
+Show that 0 is an essential singularity of <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+</problem></exercise>
+<rule id="fs-id2697350" type="theorem"><statement id="fs-id8499875">
+    <para id="id68474">
+Let <m:math overflow="scroll"><m:mi>f</m:mi></m:math> be continuous on a punctured disk <m:math overflow="scroll"><m:mrow><m:msub><m:mover><m:msup><m:mi>B</m:mi><m:mo>'</m:mo></m:msup><m:mo>¯</m:mo></m:mover><m:mi>r</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> analytic at each point of <m:math overflow="scroll"><m:mrow><m:msubsup><m:mi>B</m:mi><m:mi>r</m:mi><m:mo>'</m:mo></m:msubsup><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> and suppose that <m:math overflow="scroll"><m:mi>c</m:mi></m:math> is
+an essential singularity of <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Then</para>
+    <list id="id68575" display="block" list-type="enumerated">
+      <item id="uid19">For all <m:math overflow="scroll"><m:mrow><m:mi>z</m:mi><m:mo>∈</m:mo><m:msubsup><m:mi>B</m:mi><m:mi>r</m:mi><m:mo>'</m:mo></m:msubsup><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math><equation id="id68623"><m:math overflow="scroll" mode="display"><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:munderover><m:mo>∑</m:mo><m:mrow><m:mi>k</m:mi><m:mo>=</m:mo><m:mo>-</m:mo><m:mi>∞</m:mi></m:mrow><m:mi>∞</m:mi></m:munderover><m:msub><m:mi>a</m:mi><m:mi>k</m:mi></m:msub><m:msup><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>-</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mi>k</m:mi></m:msup><m:mo>,</m:mo></m:mrow></m:math></equation>
+where the sequence <m:math overflow="scroll"><m:msubsup><m:mrow><m:mo>{</m:mo><m:msub><m:mi>a</m:mi><m:mi>k</m:mi></m:msub><m:mo>}</m:mo></m:mrow><m:mrow><m:mo>-</m:mo><m:mi>∞</m:mi></m:mrow><m:mi>∞</m:mi></m:msubsup></m:math> has the property that for any negative integer
+<m:math overflow="scroll"><m:mi>N</m:mi></m:math> there is a <m:math overflow="scroll"><m:mrow><m:mi>k</m:mi><m:mo>&lt;</m:mo><m:mi>N</m:mi></m:mrow></m:math> such that <m:math overflow="scroll"><m:mrow><m:msub><m:mi>a</m:mi><m:mi>k</m:mi></m:msub><m:mo>≠</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid20">The infinite series in part (1) converges uniformly on each compact subset <m:math overflow="scroll"><m:mi>K</m:mi></m:math> of <m:math overflow="scroll"><m:mrow><m:msubsup><m:mi>B</m:mi><m:mi>r</m:mi><m:mo>'</m:mo></m:msubsup><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math>
+That is, if <m:math overflow="scroll"><m:msub><m:mi>F</m:mi><m:mi>n</m:mi></m:msub></m:math> is defined by <m:math overflow="scroll"><m:mrow><m:msub><m:mi>F</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msubsup><m:mo>∑</m:mo><m:mrow><m:mi>k</m:mi><m:mo>=</m:mo><m:mo>-</m:mo><m:mi>n</m:mi></m:mrow><m:mi>n</m:mi></m:msubsup><m:msub><m:mi>a</m:mi><m:mi>k</m:mi></m:msub><m:msup><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>-</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mi>k</m:mi></m:msup><m:mo>,</m:mo></m:mrow></m:math>
+then the sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>F</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> converges uniformly to <m:math overflow="scroll"><m:mi>f</m:mi></m:math> on the compact set <m:math overflow="scroll"><m:mrow><m:mi>K</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid21">For any piecewise smooth geometric set <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>⊆</m:mo><m:msub><m:mi>B</m:mi><m:mi>r</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> whose boundary <m:math overflow="scroll"><m:msub><m:mi>C</m:mi><m:mi>S</m:mi></m:msub></m:math> has finite length,
+and satisfying <m:math overflow="scroll"><m:mrow><m:mi>c</m:mi><m:mo>∈</m:mo><m:msup><m:mi>S</m:mi><m:mn>0</m:mn></m:msup><m:mo>,</m:mo></m:mrow></m:math> we have
+<equation id="id69023"><m:math overflow="scroll" mode="display"><m:mrow><m:msub><m:mo>∫</m:mo><m:msub><m:mi>C</m:mi><m:mi>S</m:mi></m:msub></m:msub><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>ζ</m:mi><m:mo>)</m:mo></m:mrow><m:mspace width="0.166667em"/><m:mi>d</m:mi><m:mi>ζ</m:mi><m:mo>=</m:mo><m:mn>2</m:mn><m:mi>π</m:mi><m:mi>i</m:mi><m:msub><m:mi>a</m:mi><m:mrow><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>,</m:mo></m:mrow></m:math></equation>
+where <m:math overflow="scroll"><m:msub><m:mi>a</m:mi><m:mrow><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msub></m:math> is the coefficient of <m:math overflow="scroll"><m:msup><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>-</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mrow><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msup></m:math> in the series of part (1).
+</item>
+    </list>
+</statement>
+<proof id="fs-id1165906847581">
+    <para id="id69137">
+Define numbers <m:math overflow="scroll"><m:msubsup><m:mrow><m:mo>{</m:mo><m:msub><m:mi>a</m:mi><m:mi>k</m:mi></m:msub><m:mo>}</m:mo></m:mrow><m:mrow><m:mo>-</m:mo><m:mi>∞</m:mi></m:mrow><m:mi>∞</m:mi></m:msubsup></m:math> as follows.</para>
+    <equation id="id69176">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:msub>
+            <m:mi>a</m:mi>
+            <m:mi>k</m:mi>
+          </m:msub>
+          <m:mo>=</m:mo>
+          <m:mfrac>
+            <m:mn>1</m:mn>
+            <m:mrow>
+              <m:mn>2</m:mn>
+              <m:mi>π</m:mi>
+              <m:mi>i</m:mi>
+            </m:mrow>
+          </m:mfrac>
+          <m:msub>
+            <m:mo>∫</m:mo>
+            <m:msub>
+              <m:mi>C</m:mi>
+              <m:mi>r</m:mi>
+            </m:msub>
+          </m:msub>
+          <m:mfrac>
+            <m:mrow>
+              <m:mi>f</m:mi>
+              <m:mo>(</m:mo>
+              <m:mi>ζ</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:msup>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>ζ</m:mi>
+                <m:mo>-</m:mo>
+                <m:mi>c</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:mrow>
+                <m:mi>k</m:mi>
+                <m:mo>+</m:mo>
+                <m:mn>1</m:mn>
+              </m:mrow>
+            </m:msup>
+          </m:mfrac>
+          <m:mspace width="0.166667em"/>
+          <m:mi>d</m:mi>
+          <m:mi>ζ</m:mi>
+          <m:mo>.</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id69265">Note that for any <m:math overflow="scroll"><m:mrow><m:mn>0</m:mn><m:mo>&lt;</m:mo><m:mi>δ</m:mi><m:mo>&lt;</m:mo><m:mi>r</m:mi></m:mrow></m:math> we have from Cauchy's Theorem that</para>
+    <equation id="id69291">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:msub>
+            <m:mi>a</m:mi>
+            <m:mi>k</m:mi>
+          </m:msub>
+          <m:mo>=</m:mo>
+          <m:mfrac>
+            <m:mn>1</m:mn>
+            <m:mrow>
+              <m:mn>2</m:mn>
+              <m:mi>π</m:mi>
+              <m:mi>i</m:mi>
+            </m:mrow>
+          </m:mfrac>
+          <m:msub>
+            <m:mo>∫</m:mo>
+            <m:msub>
+              <m:mi>C</m:mi>
+              <m:mi>δ</m:mi>
+            </m:msub>
+          </m:msub>
+          <m:mfrac>
+            <m:mrow>
+              <m:mi>f</m:mi>
+              <m:mo>(</m:mo>
+              <m:mi>ζ</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:msup>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>ζ</m:mi>
+                <m:mo>-</m:mo>
+                <m:mi>c</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:mrow>
+                <m:mi>k</m:mi>
+                <m:mo>+</m:mo>
+                <m:mn>1</m:mn>
+              </m:mrow>
+            </m:msup>
+          </m:mfrac>
+          <m:mspace width="0.166667em"/>
+          <m:mi>d</m:mi>
+          <m:mi>ζ</m:mi>
+          <m:mo>,</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id69380">where <m:math overflow="scroll"><m:msub><m:mi>C</m:mi><m:mi>δ</m:mi></m:msub></m:math> denotes the boundary of the disk <m:math overflow="scroll"><m:mrow><m:msub><m:mover><m:mi>B</m:mi><m:mo>¯</m:mo></m:mover><m:mi>δ</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></para>
+    <para id="id69429">Let <m:math overflow="scroll"><m:mrow><m:mi>z</m:mi><m:mo>≠</m:mo><m:mi>c</m:mi></m:mrow></m:math> be in <m:math overflow="scroll"><m:mrow><m:msub><m:mi>B</m:mi><m:mi>r</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> and choose <m:math overflow="scroll"><m:mrow><m:mi>δ</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn></m:mrow></m:math> such that <m:math overflow="scroll"><m:mrow><m:mi>δ</m:mi><m:mo>&lt;</m:mo><m:mo>|</m:mo><m:mi>z</m:mi><m:mo>-</m:mo><m:mi>c</m:mi><m:mo>|</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Then, using part (c) of <link target-id="fs-id1170812269555" document="m36235"/>, and then mimicking the proof of <link target-id="fs-id1167472693549" document="m36237"/>, we have</para>
+    <equation id="uid22">
+      <m:math overflow="scroll" mode="display">
+        <m:mtable displaystyle="true">
+          <m:mtr>
+            <m:mtd columnalign="right">
+              <m:mrow>
+                <m:mi>f</m:mi>
+                <m:mo>(</m:mo>
+                <m:mi>z</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+            </m:mtd>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mfrac>
+                  <m:mn>1</m:mn>
+                  <m:mrow>
+                    <m:mn>2</m:mn>
+                    <m:mi>π</m:mi>
+                    <m:mi>i</m:mi>
+                  </m:mrow>
+                </m:mfrac>
+                <m:msub>
+                  <m:mo>∫</m:mo>
+                  <m:msub>
+                    <m:mi>C</m:mi>
+                    <m:mi>r</m:mi>
+                  </m:msub>
+                </m:msub>
+                <m:mfrac>
+                  <m:mrow>
+                    <m:mi>f</m:mi>
+                    <m:mo>(</m:mo>
+                    <m:mi>ζ</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mrow>
+                    <m:mi>ζ</m:mi>
+                    <m:mo>-</m:mo>
+                    <m:mi>z</m:mi>
+                  </m:mrow>
+                </m:mfrac>
+                <m:mspace width="0.166667em"/>
+                <m:mi>d</m:mi>
+                <m:mi>ζ</m:mi>
+                <m:mo>-</m:mo>
+                <m:mfrac>
+                  <m:mn>1</m:mn>
+                  <m:mrow>
+                    <m:mn>2</m:mn>
+                    <m:mi>π</m:mi>
+                    <m:mi>i</m:mi>
+                  </m:mrow>
+                </m:mfrac>
+                <m:msub>
+                  <m:mo>∫</m:mo>
+                  <m:msub>
+                    <m:mi>C</m:mi>
+                    <m:mi>δ</m:mi>
+                  </m:msub>
+                </m:msub>
+                <m:mfrac>
+                  <m:mrow>
+                    <m:mi>f</m:mi>
+                    <m:mo>(</m:mo>
+                    <m:mi>ζ</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mrow>
+                    <m:mi>ζ</m:mi>
+                    <m:mo>-</m:mo>
+                    <m:mi>z</m:mi>
+                  </m:mrow>
+                </m:mfrac>
+                <m:mspace width="0.166667em"/>
+                <m:mi>d</m:mi>
+                <m:mi>ζ</m:mi>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mfrac>
+                  <m:mn>1</m:mn>
+                  <m:mrow>
+                    <m:mn>2</m:mn>
+                    <m:mi>π</m:mi>
+                    <m:mi>i</m:mi>
+                  </m:mrow>
+                </m:mfrac>
+                <m:msub>
+                  <m:mo>∫</m:mo>
+                  <m:msub>
+                    <m:mi>C</m:mi>
+                    <m:mi>r</m:mi>
+                  </m:msub>
+                </m:msub>
+                <m:mfrac>
+                  <m:mrow>
+                    <m:mi>f</m:mi>
+                    <m:mo>(</m:mo>
+                    <m:mi>ζ</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>ζ</m:mi>
+                    <m:mo>-</m:mo>
+                    <m:mi>c</m:mi>
+                    <m:mo>)</m:mo>
+                    <m:mo>-</m:mo>
+                    <m:mo>(</m:mo>
+                    <m:mi>z</m:mi>
+                    <m:mo>-</m:mo>
+                    <m:mi>c</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                </m:mfrac>
+                <m:mspace width="0.166667em"/>
+                <m:mi>d</m:mi>
+                <m:mi>ζ</m:mi>
+                <m:mo>+</m:mo>
+                <m:mfrac>
+                  <m:mn>1</m:mn>
+                  <m:mrow>
+                    <m:mn>2</m:mn>
+                    <m:mi>π</m:mi>
+                    <m:mi>i</m:mi>
+                  </m:mrow>
+                </m:mfrac>
+                <m:msub>
+                  <m:mo>∫</m:mo>
+                  <m:msub>
+                    <m:mi>C</m:mi>
+                    <m:mi>δ</m:mi>
+                  </m:msub>
+                </m:msub>
+                <m:mfrac>
+                  <m:mrow>
+                    <m:mi>f</m:mi>
+                    <m:mo>(</m:mo>
+                    <m:mi>ζ</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>z</m:mi>
+                    <m:mo>-</m:mo>
+                    <m:mi>c</m:mi>
+                    <m:mo>)</m:mo>
+                    <m:mo>-</m:mo>
+                    <m:mo>(</m:mo>
+                    <m:mi>ζ</m:mi>
+                    <m:mo>-</m:mo>
+                    <m:mi>c</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                </m:mfrac>
+                <m:mspace width="0.166667em"/>
+                <m:mi>d</m:mi>
+                <m:mi>ζ</m:mi>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mfrac>
+                  <m:mn>1</m:mn>
+                  <m:mrow>
+                    <m:mn>2</m:mn>
+                    <m:mi>π</m:mi>
+                    <m:mi>i</m:mi>
+                  </m:mrow>
+                </m:mfrac>
+                <m:msub>
+                  <m:mo>∫</m:mo>
+                  <m:msub>
+                    <m:mi>C</m:mi>
+                    <m:mi>r</m:mi>
+                  </m:msub>
+                </m:msub>
+                <m:mfrac>
+                  <m:mrow>
+                    <m:mi>f</m:mi>
+                    <m:mo>(</m:mo>
+                    <m:mi>ζ</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mrow>
+                    <m:mi>ζ</m:mi>
+                    <m:mo>-</m:mo>
+                    <m:mi>c</m:mi>
+                  </m:mrow>
+                </m:mfrac>
+                <m:mfrac>
+                  <m:mn>1</m:mn>
+                  <m:mrow>
+                    <m:mn>1</m:mn>
+                    <m:mo>-</m:mo>
+                    <m:mfrac>
+                      <m:mrow>
+                        <m:mi>z</m:mi>
+                        <m:mo>-</m:mo>
+                        <m:mi>c</m:mi>
+                      </m:mrow>
+                      <m:mrow>
+                        <m:mi>ζ</m:mi>
+                        <m:mo>-</m:mo>
+                        <m:mi>c</m:mi>
+                      </m:mrow>
+                    </m:mfrac>
+                  </m:mrow>
+                </m:mfrac>
+                <m:mspace width="0.166667em"/>
+                <m:mi>d</m:mi>
+                <m:mi>ζ</m:mi>
+                <m:mo>+</m:mo>
+                <m:mfrac>
+                  <m:mn>1</m:mn>
+                  <m:mrow>
+                    <m:mn>2</m:mn>
+                    <m:mi>π</m:mi>
+                    <m:mi>i</m:mi>
+                  </m:mrow>
+                </m:mfrac>
+                <m:msub>
+                  <m:mo>∫</m:mo>
+                  <m:msub>
+                    <m:mi>C</m:mi>
+                    <m:mi>δ</m:mi>
+                  </m:msub>
+                </m:msub>
+                <m:mfrac>
+                  <m:mrow>
+                    <m:mi>f</m:mi>
+                    <m:mo>(</m:mo>
+                    <m:mi>ζ</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mrow>
+                    <m:mi>z</m:mi>
+                    <m:mo>-</m:mo>
+                    <m:mi>c</m:mi>
+                  </m:mrow>
+                </m:mfrac>
+                <m:mfrac>
+                  <m:mn>1</m:mn>
+                  <m:mrow>
+                    <m:mn>1</m:mn>
+                    <m:mo>-</m:mo>
+                    <m:mfrac>
+                      <m:mrow>
+                        <m:mi>ζ</m:mi>
+                        <m:mo>-</m:mo>
+                        <m:mi>c</m:mi>
+                      </m:mrow>
+                      <m:mrow>
+                        <m:mi>z</m:mi>
+                        <m:mo>-</m:mo>
+                        <m:mi>c</m:mi>
+                      </m:mrow>
+                    </m:mfrac>
+                  </m:mrow>
+                </m:mfrac>
+                <m:mspace width="0.166667em"/>
+                <m:mi>d</m:mi>
+                <m:mi>ζ</m:mi>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mfrac>
+                  <m:mn>1</m:mn>
+                  <m:mrow>
+                    <m:mn>2</m:mn>
+                    <m:mi>π</m:mi>
+                    <m:mi>i</m:mi>
+                  </m:mrow>
+                </m:mfrac>
+                <m:msub>
+                  <m:mo>∫</m:mo>
+                  <m:msub>
+                    <m:mi>C</m:mi>
+                    <m:mi>r</m:mi>
+                  </m:msub>
+                </m:msub>
+                <m:mfrac>
+                  <m:mrow>
+                    <m:mi>f</m:mi>
+                    <m:mo>(</m:mo>
+                    <m:mi>ζ</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mrow>
+                    <m:mi>ζ</m:mi>
+                    <m:mo>-</m:mo>
+                    <m:mi>c</m:mi>
+                  </m:mrow>
+                </m:mfrac>
+                <m:munderover>
+                  <m:mo>∑</m:mo>
+                  <m:mrow>
+                    <m:mi>k</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mn>0</m:mn>
+                  </m:mrow>
+                  <m:mi>∞</m:mi>
+                </m:munderover>
+                <m:msup>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mfrac>
+                      <m:mrow>
+                        <m:mi>z</m:mi>
+                        <m:mo>-</m:mo>
+                        <m:mi>c</m:mi>
+                      </m:mrow>
+                      <m:mrow>
+                        <m:mi>ζ</m:mi>
+                        <m:mo>-</m:mo>
+                        <m:mi>c</m:mi>
+                      </m:mrow>
+                    </m:mfrac>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mi>k</m:mi>
+                </m:msup>
+                <m:mspace width="0.166667em"/>
+                <m:mi>d</m:mi>
+                <m:mi>ζ</m:mi>
+                <m:mo>+</m:mo>
+                <m:mfrac>
+                  <m:mn>1</m:mn>
+                  <m:mrow>
+                    <m:mn>2</m:mn>
+                    <m:mi>π</m:mi>
+                    <m:mi>i</m:mi>
+                  </m:mrow>
+                </m:mfrac>
+                <m:msub>
+                  <m:mo>∫</m:mo>
+                  <m:msub>
+                    <m:mi>C</m:mi>
+                    <m:mi>δ</m:mi>
+                  </m:msub>
+                </m:msub>
+                <m:mfrac>
+                  <m:mrow>
+                    <m:mi>f</m:mi>
+                    <m:mo>(</m:mo>
+                    <m:mi>ζ</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mrow>
+                    <m:mi>z</m:mi>
+                    <m:mo>-</m:mo>
+                    <m:mi>c</m:mi>
+                  </m:mrow>
+                </m:mfrac>
+                <m:munderover>
+                  <m:mo>∑</m:mo>
+                  <m:mrow>
+                    <m:mi>j</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mn>0</m:mn>
+                  </m:mrow>
+                  <m:mi>∞</m:mi>
+                </m:munderover>
+                <m:msup>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mfrac>
+                      <m:mrow>
+                        <m:mi>ζ</m:mi>
+                        <m:mo>-</m:mo>
+                        <m:mi>c</m:mi>
+                      </m:mrow>
+                      <m:mrow>
+                        <m:mi>z</m:mi>
+                        <m:mo>-</m:mo>
+                        <m:mi>c</m:mi>
+                      </m:mrow>
+                    </m:mfrac>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mi>j</m:mi>
+                </m:msup>
+                <m:mspace width="0.166667em"/>
+                <m:mi>d</m:mi>
+                <m:mi>ζ</m:mi>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:munderover>
+                  <m:mo>∑</m:mo>
+                  <m:mrow>
+                    <m:mi>k</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mn>0</m:mn>
+                  </m:mrow>
+                  <m:mi>∞</m:mi>
+                </m:munderover>
+                <m:mfrac>
+                  <m:mn>1</m:mn>
+                  <m:mrow>
+                    <m:mn>2</m:mn>
+                    <m:mi>π</m:mi>
+                    <m:mi>i</m:mi>
+                  </m:mrow>
+                </m:mfrac>
+                <m:msub>
+                  <m:mo>∫</m:mo>
+                  <m:msub>
+                    <m:mi>C</m:mi>
+                    <m:mi>r</m:mi>
+                  </m:msub>
+                </m:msub>
+                <m:mfrac>
+                  <m:mrow>
+                    <m:mi>f</m:mi>
+                    <m:mo>(</m:mo>
+                    <m:mi>ζ</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:msup>
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:mi>ζ</m:mi>
+                      <m:mo>-</m:mo>
+                      <m:mi>c</m:mi>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                    <m:mrow>
+                      <m:mi>k</m:mi>
+                      <m:mo>+</m:mo>
+                      <m:mn>1</m:mn>
+                    </m:mrow>
+                  </m:msup>
+                </m:mfrac>
+                <m:mspace width="0.166667em"/>
+                <m:mi>d</m:mi>
+                <m:mi>ζ</m:mi>
+                <m:msup>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>z</m:mi>
+                    <m:mo>-</m:mo>
+                    <m:mi>c</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mi>k</m:mi>
+                </m:msup>
+                <m:mo>+</m:mo>
+                <m:munderover>
+                  <m:mo>∑</m:mo>
+                  <m:mrow>
+                    <m:mi>j</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mn>0</m:mn>
+                  </m:mrow>
+                  <m:mi>∞</m:mi>
+                </m:munderover>
+                <m:mfrac>
+                  <m:mn>1</m:mn>
+                  <m:mrow>
+                    <m:mn>2</m:mn>
+                    <m:mi>π</m:mi>
+                    <m:mi>i</m:mi>
+                  </m:mrow>
+                </m:mfrac>
+                <m:msub>
+                  <m:mo>∫</m:mo>
+                  <m:msub>
+                    <m:mi>C</m:mi>
+                    <m:mi>δ</m:mi>
+                  </m:msub>
+                </m:msub>
+                <m:mi>f</m:mi>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>ζ</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:msup>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>ζ</m:mi>
+                    <m:mo>-</m:mo>
+                    <m:mi>c</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mi>j</m:mi>
+                </m:msup>
+                <m:mspace width="0.166667em"/>
+                <m:mi>d</m:mi>
+                <m:mi>ζ</m:mi>
+                <m:msup>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>z</m:mi>
+                    <m:mo>-</m:mo>
+                    <m:mi>c</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mrow>
+                    <m:mo>-</m:mo>
+                    <m:mi>j</m:mi>
+                    <m:mo>-</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                </m:msup>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:munderover>
+                  <m:mo>∑</m:mo>
+                  <m:mrow>
+                    <m:mi>k</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mn>0</m:mn>
+                  </m:mrow>
+                  <m:mi>∞</m:mi>
+                </m:munderover>
+                <m:msub>
+                  <m:mi>a</m:mi>
+                  <m:mi>k</m:mi>
+                </m:msub>
+                <m:msup>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>z</m:mi>
+                    <m:mo>-</m:mo>
+                    <m:mi>c</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mi>k</m:mi>
+                </m:msup>
+                <m:mo>+</m:mo>
+                <m:munderover>
+                  <m:mo>∑</m:mo>
+                  <m:mrow>
+                    <m:mi>k</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mo>-</m:mo>
+                    <m:mi>∞</m:mi>
+                  </m:mrow>
+                  <m:mrow>
+                    <m:mo>-</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                </m:munderover>
+                <m:mfrac>
+                  <m:mn>1</m:mn>
+                  <m:mrow>
+                    <m:mn>2</m:mn>
+                    <m:mi>π</m:mi>
+                    <m:mi>i</m:mi>
+                  </m:mrow>
+                </m:mfrac>
+                <m:msub>
+                  <m:mo>∫</m:mo>
+                  <m:msub>
+                    <m:mi>C</m:mi>
+                    <m:mi>δ</m:mi>
+                  </m:msub>
+                </m:msub>
+                <m:mfrac>
+                  <m:mrow>
+                    <m:mi>f</m:mi>
+                    <m:mo>(</m:mo>
+                    <m:mi>ζ</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:msup>
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:mi>ζ</m:mi>
+                      <m:mo>-</m:mo>
+                      <m:mi>c</m:mi>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                    <m:mrow>
+                      <m:mi>k</m:mi>
+                      <m:mo>+</m:mo>
+                      <m:mn>1</m:mn>
+                    </m:mrow>
+                  </m:msup>
+                </m:mfrac>
+                <m:mspace width="0.166667em"/>
+                <m:mi>d</m:mi>
+                <m:mi>ζ</m:mi>
+                <m:msup>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>z</m:mi>
+                    <m:mo>-</m:mo>
+                    <m:mi>c</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mi>k</m:mi>
+                </m:msup>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:munderover>
+                  <m:mo>∑</m:mo>
+                  <m:mrow>
+                    <m:mi>k</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mn>0</m:mn>
+                  </m:mrow>
+                  <m:mi>∞</m:mi>
+                </m:munderover>
+                <m:msub>
+                  <m:mi>a</m:mi>
+                  <m:mi>k</m:mi>
+                </m:msub>
+                <m:msup>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>z</m:mi>
+                    <m:mo>-</m:mo>
+                    <m:mi>c</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mi>k</m:mi>
+                </m:msup>
+                <m:mo>+</m:mo>
+                <m:munderover>
+                  <m:mo>∑</m:mo>
+                  <m:mrow>
+                    <m:mi>k</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mo>-</m:mo>
+                    <m:mi>∞</m:mi>
+                  </m:mrow>
+                  <m:mrow>
+                    <m:mo>-</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                </m:munderover>
+                <m:mfrac>
+                  <m:mn>1</m:mn>
+                  <m:mrow>
+                    <m:mn>2</m:mn>
+                    <m:mi>π</m:mi>
+                    <m:mi>i</m:mi>
+                  </m:mrow>
+                </m:mfrac>
+                <m:msub>
+                  <m:mo>∫</m:mo>
+                  <m:msub>
+                    <m:mi>C</m:mi>
+                    <m:mi>r</m:mi>
+                  </m:msub>
+                </m:msub>
+                <m:mfrac>
+                  <m:mrow>
+                    <m:mi>f</m:mi>
+                    <m:mo>(</m:mo>
+                    <m:mi>ζ</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:msup>
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:mi>ζ</m:mi>
+                      <m:mo>-</m:mo>
+                      <m:mi>c</m:mi>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                    <m:mrow>
+                      <m:mi>k</m:mi>
+                      <m:mo>+</m:mo>
+                      <m:mn>1</m:mn>
+                    </m:mrow>
+                  </m:msup>
+                </m:mfrac>
+                <m:mspace width="0.166667em"/>
+                <m:mi>d</m:mi>
+                <m:mi>ζ</m:mi>
+                <m:msup>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>z</m:mi>
+                    <m:mo>-</m:mo>
+                    <m:mi>c</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mi>k</m:mi>
+                </m:msup>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:munderover>
+                  <m:mo>∑</m:mo>
+                  <m:mrow>
+                    <m:mi>k</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mo>-</m:mo>
+                    <m:mi>∞</m:mi>
+                  </m:mrow>
+                  <m:mi>∞</m:mi>
+                </m:munderover>
+                <m:msub>
+                  <m:mi>a</m:mi>
+                  <m:mi>k</m:mi>
+                </m:msub>
+                <m:msup>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>z</m:mi>
+                    <m:mo>-</m:mo>
+                    <m:mi>c</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mi>k</m:mi>
+                </m:msup>
+                <m:mo>,</m:mo>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+        </m:mtable>
+      </m:math>
+    </equation>
+    <para id="id70775">which proves part (1).</para>
+    <para id="id70779">We leave the proofs of parts (2) and (3) to the exercises.</para>
+</proof></rule>
+<exercise id="fs-id1165911019540"><problem id="fs-id1165927447446">
+    <list id="id70794" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid23"> Justify bringing the summation signs out of the integrals in the
+calculation in the preceding proof.
+</item>
+      <item id="uid24"> Prove parts (2) and (3) of the preceding theorem.
+Compare this with <link target-id="fs-id1165906407992"/>.
+</item>
+    </list>
+</problem></exercise>
+<rule id="fs-id1165927537211"><label/><statement id="fs-id1165935317827">
+    <para id="id70824"><emphasis effect="bold">REMARK</emphasis>
+The representation of <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow></m:math> in the punctured disk <m:math overflow="scroll"><m:mrow><m:msubsup><m:mi>B</m:mi><m:mi>r</m:mi><m:mo>'</m:mo></m:msubsup><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> given
+in part (1) of <link target-id="fs-id1165907480999"/> and <link target-id="fs-id2697350"/> is called the <emphasis effect="italics">Laurent expansion</emphasis> of <m:math overflow="scroll"><m:mi>f</m:mi></m:math> around the singularity <m:math overflow="scroll"><m:mrow><m:mi>c</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Of course it differs from a Taylor series representation of <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+as this one contains negative powers of <m:math overflow="scroll"><m:mrow><m:mi>z</m:mi><m:mo>-</m:mo><m:mi>c</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+In fact, which negative powers it contains indicates what kind of singularity the point <m:math overflow="scroll"><m:mi>c</m:mi></m:math> is.</para>
+</statement></rule>
+    <para id="id70941">Non removable isolated singularities of a function <m:math overflow="scroll"><m:mi>f</m:mi></m:math> share
+the property that the integral of <m:math overflow="scroll"><m:mi>f</m:mi></m:math> around a disk centered at the singularity equals <m:math overflow="scroll"><m:mrow><m:mn>2</m:mn><m:mi>π</m:mi><m:mi>i</m:mi><m:msub><m:mi>a</m:mi><m:mrow><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>,</m:mo></m:mrow></m:math>
+where the number <m:math overflow="scroll"><m:msub><m:mi>a</m:mi><m:mrow><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msub></m:math> is the coefficient of <m:math overflow="scroll"><m:msup><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>-</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mrow><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msup></m:math> in the Laurent expansion of <m:math overflow="scroll"><m:mi>f</m:mi></m:math> around <m:math overflow="scroll"><m:mrow><m:mi>c</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+This number <m:math overflow="scroll"><m:mrow><m:mn>2</m:mn><m:mi>π</m:mi><m:mi>i</m:mi><m:msub><m:mi>a</m:mi><m:mrow><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msub></m:mrow></m:math> is obviously significant, and we call it
+the <emphasis effect="italics">residue of f at c,</emphasis>
+and denote it by <m:math overflow="scroll"><m:mrow><m:msub><m:mi>R</m:mi><m:mi>f</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></para>
+    <para id="id71110">Combining <link target-id="fs-id1165934889448"/>, <link target-id="fs-id1165907480999"/>, and <link target-id="fs-id2697350"/>, we obtain:</para>
+<rule id="fs-id1165909735907" type="theorem"><title>Residue Theorem</title><statement id="fs-id1165927442406">
+    <para id="id71114">
+
+Let <m:math overflow="scroll"><m:mi>S</m:mi></m:math> be a piecewise smooth geometric set whose boundary has finite length,
+let <m:math overflow="scroll"><m:mrow><m:msub><m:mi>c</m:mi><m:mn>1</m:mn></m:msub><m:mo>,</m:mo><m:mo>...</m:mo><m:mo>,</m:mo><m:msub><m:mi>c</m:mi><m:mi>n</m:mi></m:msub></m:mrow></m:math> be points in <m:math overflow="scroll"><m:mrow><m:msup><m:mi>S</m:mi><m:mn>0</m:mn></m:msup><m:mo>,</m:mo></m:mrow></m:math>
+and suppose <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is a complex-valued function that is
+continuous at every point <m:math overflow="scroll"><m:mi>z</m:mi></m:math> in <m:math overflow="scroll"><m:mi>S</m:mi></m:math> except the <m:math overflow="scroll"><m:msub><m:mi>c</m:mi><m:mi>k</m:mi></m:msub></m:math>'s, and
+differentiable at every point <m:math overflow="scroll"><m:mrow><m:mi>z</m:mi><m:mo>∈</m:mo><m:msup><m:mi>S</m:mi><m:mn>0</m:mn></m:msup></m:mrow></m:math> except at the <m:math overflow="scroll"><m:msub><m:mi>c</m:mi><m:mi>k</m:mi></m:msub></m:math>'s.
+Assume finally that each <m:math overflow="scroll"><m:msub><m:mi>c</m:mi><m:mi>k</m:mi></m:msub></m:math> is a nonremovable isolated singularity of <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>.</m:mo></m:mrow></m:math> Then</para>
+    <equation id="id71280">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:msub>
+            <m:mo>∫</m:mo>
+            <m:msub>
+              <m:mi>C</m:mi>
+              <m:mi>S</m:mi>
+            </m:msub>
+          </m:msub>
+          <m:mi>f</m:mi>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>ζ</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mspace width="0.166667em"/>
+          <m:mi>d</m:mi>
+          <m:mi>ζ</m:mi>
+          <m:mo>=</m:mo>
+          <m:munderover>
+            <m:mo>∑</m:mo>
+            <m:mrow>
+              <m:mi>k</m:mi>
+              <m:mo>=</m:mo>
+              <m:mn>1</m:mn>
+            </m:mrow>
+            <m:mi>n</m:mi>
+          </m:munderover>
+          <m:msub>
+            <m:mi>R</m:mi>
+            <m:mi>f</m:mi>
+          </m:msub>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:msub>
+              <m:mi>c</m:mi>
+              <m:mi>k</m:mi>
+            </m:msub>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>.</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id71360">That is, the contour integral around <m:math overflow="scroll"><m:msub><m:mi>C</m:mi><m:mi>S</m:mi></m:msub></m:math> is just the sum of the residues inside <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+</statement></rule>
+<exercise id="fs-id1165929329876"><problem id="fs-id1165909808686">
+    <para id="id71392">Prove <link target-id="fs-id1165909735907"/>.</para>
+</problem></exercise>
+<exercise id="fs-id1165917656808"><problem id="fs-id1165909828595">
+    <para id="id71404">
+Use the Residue Theorem to compute <m:math overflow="scroll"><m:mrow><m:msub><m:mo>∫</m:mo><m:msub><m:mi>C</m:mi><m:mi>S</m:mi></m:msub></m:msub><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>ζ</m:mi><m:mo>)</m:mo></m:mrow><m:mspace width="0.166667em"/><m:mi>d</m:mi><m:mi>ζ</m:mi></m:mrow></m:math>
+for the functions <m:math overflow="scroll"><m:mi>f</m:mi></m:math> and geometric sets <m:math overflow="scroll"><m:mi>S</m:mi></m:math> given below.
+That is, determine the poles of <m:math overflow="scroll"><m:mi>f</m:mi></m:math> inside <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>,</m:mo></m:mrow></m:math> their orders, the corresponding residues,
+and then evaluate the integrals.</para>
+    <list id="id71495" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid25"> <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mo form="prefix">sin</m:mo><m:mrow><m:mo>(</m:mo><m:mn>3</m:mn><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>/</m:mo><m:msup><m:mi>z</m:mi><m:mn>2</m:mn></m:msup><m:mo>,</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>=</m:mo><m:msub><m:mover><m:mi>B</m:mi><m:mo>¯</m:mo></m:mover><m:mn>1</m:mn></m:msub><m:mrow><m:mo>(</m:mo><m:mn>0</m:mn><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid26"> <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>e</m:mi><m:mrow><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>z</m:mi></m:mrow></m:msup><m:mo>,</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>=</m:mo><m:msub><m:mover><m:mi>B</m:mi><m:mo>¯</m:mo></m:mover><m:mn>1</m:mn></m:msub><m:mrow><m:mo>(</m:mo><m:mn>0</m:mn><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid27"> <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>e</m:mi><m:mrow><m:mn>1</m:mn><m:mo>/</m:mo><m:msup><m:mi>z</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:msup><m:mo>,</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>=</m:mo><m:msub><m:mover><m:mi>B</m:mi><m:mo>¯</m:mo></m:mover><m:mn>1</m:mn></m:msub><m:mrow><m:mo>(</m:mo><m:mn>0</m:mn><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid28"> <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mo>(</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>z</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>-</m:mo><m:mn>1</m:mn><m:mo>)</m:mo><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>=</m:mo><m:msub><m:mover><m:mi>B</m:mi><m:mo>¯</m:mo></m:mover><m:mn>2</m:mn></m:msub><m:mrow><m:mo>(</m:mo><m:mn>0</m:mn><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid29"> <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mo>(</m:mo><m:mrow><m:mo>(</m:mo><m:mn>1</m:mn><m:mo>-</m:mo><m:msup><m:mi>z</m:mi><m:mn>2</m:mn></m:msup><m:mo>)</m:mo></m:mrow><m:mo>/</m:mo><m:mi>z</m:mi><m:mrow><m:mo>(</m:mo><m:mn>1</m:mn><m:mo>+</m:mo><m:msup><m:mi>z</m:mi><m:mn>2</m:mn></m:msup><m:mo>)</m:mo></m:mrow><m:msup><m:mrow><m:mo>(</m:mo><m:mn>2</m:mn><m:mi>z</m:mi><m:mo>+</m:mo><m:mn>1</m:mn><m:mo>)</m:mo></m:mrow><m:mn>2</m:mn></m:msup><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>=</m:mo><m:msub><m:mover><m:mi>B</m:mi><m:mo>¯</m:mo></m:mover><m:mn>2</m:mn></m:msub><m:mrow><m:mo>(</m:mo><m:mn>0</m:mn><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid30"> <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mrow><m:mo>(</m:mo><m:mn>1</m:mn><m:mo>+</m:mo><m:msup><m:mi>z</m:mi><m:mn>4</m:mn></m:msup><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mrow><m:mo>(</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mrow><m:mo>(</m:mo><m:msup><m:mi>z</m:mi><m:mn>2</m:mn></m:msup><m:mo>-</m:mo><m:mi>i</m:mi><m:mo>)</m:mo></m:mrow><m:mrow><m:mo>(</m:mo><m:msup><m:mi>z</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mi>i</m:mi><m:mo>)</m:mo></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>=</m:mo><m:msub><m:mover><m:mi>B</m:mi><m:mo>¯</m:mo></m:mover><m:mi>r</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mn>0</m:mn><m:mo>)</m:mo></m:mrow></m:mrow></m:math> for any <m:math overflow="scroll"><m:mrow><m:mi>r</m:mi><m:mo>&gt;</m:mo><m:mn>1</m:mn><m:mo>.</m:mo></m:mrow></m:math></item>
+    </list>
+</problem></exercise>
+    <para id="id72114">The Residue Theorem, a result about contour integrals of functions
+of a complex variable, can often provide a tool for evaluating integrals
+of functions of a real variable.</para>
+<example id="fs-id1165917605459">
+    <para id="id72118">
+Consider the integral</para>
+    <equation id="id72126">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:msubsup>
+            <m:mo>∫</m:mo>
+            <m:mrow>
+              <m:mo>-</m:mo>
+              <m:mi>∞</m:mi>
+            </m:mrow>
+            <m:mi>∞</m:mi>
+          </m:msubsup>
+          <m:mfrac>
+            <m:mn>1</m:mn>
+            <m:mrow>
+              <m:mn>1</m:mn>
+              <m:mo>+</m:mo>
+              <m:msup>
+                <m:mi>x</m:mi>
+                <m:mn>4</m:mn>
+              </m:msup>
+            </m:mrow>
+          </m:mfrac>
+          <m:mspace width="0.166667em"/>
+          <m:mi>d</m:mi>
+          <m:mi>x</m:mi>
+          <m:mo>.</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id72177">Let us use the Residue Theorem to compute this integral.</para>
+    <para id="id72183">Of course what we need to compute is</para>
+    <equation id="id72187">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:munder>
+            <m:mo movablelimits="true" form="prefix">lim</m:mo>
+            <m:mrow>
+              <m:mi>B</m:mi>
+              <m:mo>→</m:mo>
+              <m:mi>∞</m:mi>
+            </m:mrow>
+          </m:munder>
+          <m:msubsup>
+            <m:mo>∫</m:mo>
+            <m:mrow>
+              <m:mo>-</m:mo>
+              <m:mi>B</m:mi>
+            </m:mrow>
+            <m:mi>B</m:mi>
+          </m:msubsup>
+          <m:mfrac>
+            <m:mn>1</m:mn>
+            <m:mrow>
+              <m:mn>1</m:mn>
+              <m:mo>+</m:mo>
+              <m:msup>
+                <m:mi>x</m:mi>
+                <m:mn>4</m:mn>
+              </m:msup>
+            </m:mrow>
+          </m:mfrac>
+          <m:mspace width="0.166667em"/>
+          <m:mi>d</m:mi>
+          <m:mi>x</m:mi>
+          <m:mo>.</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id72255">The first thing we do is to replace the real variable <m:math overflow="scroll"><m:mi>x</m:mi></m:math> by a complex variable <m:math overflow="scroll"><m:mrow><m:mi>Z</m:mi><m:mo>,</m:mo></m:mrow></m:math> and observe that
+the function <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mrow><m:mo>(</m:mo><m:mn>1</m:mn><m:mo>+</m:mo><m:msup><m:mi>z</m:mi><m:mn>4</m:mn></m:msup><m:mo>)</m:mo></m:mrow></m:mrow></m:math> is analytic everywhere except at the four points
+<m:math overflow="scroll"><m:mrow><m:mo>±</m:mo><m:msup><m:mi>e</m:mi><m:mrow><m:mi>i</m:mi><m:mi>π</m:mi><m:mo>/</m:mo><m:mn>4</m:mn></m:mrow></m:msup></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mo>±</m:mo><m:msup><m:mi>e</m:mi><m:mrow><m:mn>3</m:mn><m:mi>i</m:mi><m:mi>π</m:mi><m:mo>/</m:mo><m:mn>4</m:mn></m:mrow></m:msup><m:mo>.</m:mo></m:mrow></m:math>
+See part (f) of the preceding exercise.
+These are the four points whose fourth power is <m:math overflow="scroll"><m:mrow><m:mo>-</m:mo><m:mn>1</m:mn><m:mo>,</m:mo></m:mrow></m:math> and hence are the poles of the function <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+    <para id="id72405">Next, given a positive number <m:math overflow="scroll"><m:mrow><m:mi>B</m:mi><m:mo>,</m:mo></m:mrow></m:math> we consider the geometric set (rectangle) <m:math overflow="scroll"><m:msub><m:mi>S</m:mi><m:mi>B</m:mi></m:msub></m:math> that is determined by the
+interval <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mo>-</m:mo><m:mi>B</m:mi><m:mo>,</m:mo><m:mi>B</m:mi><m:mo>]</m:mo></m:mrow></m:math> and the two bounding functions <m:math overflow="scroll"><m:mrow><m:mi>l</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>u</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mi>B</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Then, as long as <m:math overflow="scroll"><m:mrow><m:mi>B</m:mi><m:mo>&gt;</m:mo><m:mn>1</m:mn><m:mo>,</m:mo></m:mrow></m:math> we know that <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is analytic everywhere in <m:math overflow="scroll"><m:msup><m:mi>S</m:mi><m:mn>0</m:mn></m:msup></m:math> except at the two points
+<m:math overflow="scroll"><m:mrow><m:msub><m:mi>c</m:mi><m:mn>1</m:mn></m:msub><m:mo>=</m:mo><m:msup><m:mi>e</m:mi><m:mrow><m:mi>i</m:mi><m:mi>π</m:mi><m:mo>/</m:mo><m:mn>4</m:mn></m:mrow></m:msup></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:msub><m:mi>c</m:mi><m:mn>2</m:mn></m:msub><m:mo>=</m:mo><m:msup><m:mi>e</m:mi><m:mrow><m:mn>3</m:mn><m:mi>i</m:mi><m:mi>π</m:mi><m:mo>/</m:mo><m:mn>4</m:mn></m:mrow></m:msup><m:mo>,</m:mo></m:mrow></m:math> so that the
+contour integral of <m:math overflow="scroll"><m:mi>f</m:mi></m:math> around the boundary of <m:math overflow="scroll"><m:msub><m:mi>S</m:mi><m:mi>B</m:mi></m:msub></m:math> is given by</para>
+    <equation id="id72632">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:msub>
+            <m:mo>∫</m:mo>
+            <m:msub>
+              <m:mi>C</m:mi>
+              <m:msub>
+                <m:mi>S</m:mi>
+                <m:mi>B</m:mi>
+              </m:msub>
+            </m:msub>
+          </m:msub>
+          <m:mfrac>
+            <m:mn>1</m:mn>
+            <m:mrow>
+              <m:mn>1</m:mn>
+              <m:mo>+</m:mo>
+              <m:msup>
+                <m:mi>ζ</m:mi>
+                <m:mn>4</m:mn>
+              </m:msup>
+            </m:mrow>
+          </m:mfrac>
+          <m:mspace width="0.166667em"/>
+          <m:mi>d</m:mi>
+          <m:mi>ζ</m:mi>
+          <m:mo>=</m:mo>
+          <m:msub>
+            <m:mi>R</m:mi>
+            <m:mi>f</m:mi>
+          </m:msub>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:msub>
+              <m:mi>c</m:mi>
+              <m:mn>1</m:mn>
+            </m:msub>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>+</m:mo>
+          <m:msub>
+            <m:mi>R</m:mi>
+            <m:mi>f</m:mi>
+          </m:msub>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:msub>
+              <m:mi>c</m:mi>
+              <m:mn>2</m:mn>
+            </m:msub>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>.</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id72732">Now, this contour integral consists of four parts, the line integrals along the bottom, the two sides, and the top.
+The magic here is that the integrals along the sides, and the integral along the top,
+all tend to 0 as <m:math overflow="scroll"><m:mi>B</m:mi></m:math> tends to infinity, so that the integral along the bottom, which after all is what we
+originally were interested in, is in the limit just the sum of the residues inside the geometric set.</para>
+</example>
+<exercise id="fs-id1165920841094"><problem id="fs-id1165919152407">
+    <para id="id72750">
+Verify the details of the preceding example.</para>
+    <list id="id72762" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid31"> Show that
+<equation id="id72778"><m:math overflow="scroll" mode="display"><m:mrow><m:munder><m:mo movablelimits="true" form="prefix">lim</m:mo><m:mrow><m:mi>B</m:mi><m:mo>→</m:mo><m:mi>∞</m:mi></m:mrow></m:munder><m:msubsup><m:mo>∫</m:mo><m:mn>0</m:mn><m:mi>B</m:mi></m:msubsup><m:mfrac><m:mn>1</m:mn><m:mrow><m:mn>1</m:mn><m:mo>+</m:mo><m:msup><m:mrow><m:mo>(</m:mo><m:mi>B</m:mi><m:mo>+</m:mo><m:mi>i</m:mi><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mn>4</m:mn></m:msup></m:mrow></m:mfrac><m:mspace width="0.166667em"/><m:mi>d</m:mi><m:mi>t</m:mi><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math></equation></item>
+      <item id="uid32"> Verify that
+<equation id="id72871"><m:math overflow="scroll" mode="display"><m:mrow><m:munder><m:mo movablelimits="true" form="prefix">lim</m:mo><m:mrow><m:mi>B</m:mi><m:mo>→</m:mo><m:mi>∞</m:mi></m:mrow></m:munder><m:msubsup><m:mo>∫</m:mo><m:mrow><m:mo>-</m:mo><m:mi>B</m:mi></m:mrow><m:mi>B</m:mi></m:msubsup><m:mfrac><m:mn>1</m:mn><m:mrow><m:mn>1</m:mn><m:mo>+</m:mo><m:msup><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>+</m:mo><m:mi>i</m:mi><m:mi>B</m:mi><m:mo>)</m:mo></m:mrow><m:mn>4</m:mn></m:msup></m:mrow></m:mfrac><m:mspace width="0.166667em"/><m:mi>d</m:mi><m:mi>t</m:mi><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math></equation></item>
+      <item id="uid33"> Show that
+<equation id="id72968"><m:math overflow="scroll" mode="display"><m:mrow><m:msubsup><m:mo>∫</m:mo><m:mrow><m:mo>-</m:mo><m:mi>∞</m:mi></m:mrow><m:mi>∞</m:mi></m:msubsup><m:mfrac><m:mn>1</m:mn><m:mrow><m:mn>1</m:mn><m:mo>+</m:mo><m:msup><m:mi>x</m:mi><m:mn>4</m:mn></m:msup></m:mrow></m:mfrac><m:mspace width="0.166667em"/><m:mi>d</m:mi><m:mi>x</m:mi><m:mo>=</m:mo><m:mi>π</m:mi><m:msqrt><m:mn>2</m:mn></m:msqrt><m:mo>.</m:mo></m:mrow></m:math></equation></item>
+    </list>
+</problem></exercise>
+    <para id="id73028">Methods similar to that employed in the previous example and exercise
+often suffice to compute integrals of real-valued functions.
+However, the method may have to be varied.
+For instance, sometimes the appropriate geometric set is a rectangle
+below the <m:math overflow="scroll"><m:mi>x</m:mi></m:math>-axis instead of above it, sometimes it should be a semicircle instead of a rectangle, etc.
+Indeed, the choice of contour (geometric set) can be quite subtle.
+The following exercise may shed some light.</para>
+<exercise id="fs-id1165929595652"><problem id="fs-id1165926129728">
+    <list id="id73055" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid34"> Compute
+<equation id="id73071"><m:math overflow="scroll" mode="display"><m:mrow><m:msubsup><m:mo>∫</m:mo><m:mrow><m:mo>-</m:mo><m:mi>∞</m:mi></m:mrow><m:mi>∞</m:mi></m:msubsup><m:mfrac><m:msup><m:mi>e</m:mi><m:mrow><m:mi>i</m:mi><m:mi>x</m:mi></m:mrow></m:msup><m:mrow><m:mn>1</m:mn><m:mo>+</m:mo><m:msup><m:mi>x</m:mi><m:mn>4</m:mn></m:msup></m:mrow></m:mfrac><m:mspace width="0.166667em"/><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:math></equation>
+and
+<equation id="id73134"><m:math overflow="scroll" mode="display"><m:mrow><m:msubsup><m:mo>∫</m:mo><m:mrow><m:mo>-</m:mo><m:mi>∞</m:mi></m:mrow><m:mi>∞</m:mi></m:msubsup><m:mfrac><m:msup><m:mi>e</m:mi><m:mrow><m:mo>-</m:mo><m:mi>i</m:mi><m:mi>x</m:mi></m:mrow></m:msup><m:mrow><m:mn>1</m:mn><m:mo>+</m:mo><m:msup><m:mi>x</m:mi><m:mn>4</m:mn></m:msup></m:mrow></m:mfrac><m:mspace width="0.166667em"/><m:mi>d</m:mi><m:mi>x</m:mi><m:mo>.</m:mo></m:mrow></m:math></equation></item>
+      <item id="uid35"> Compute
+<equation id="id73208"><m:math overflow="scroll" mode="display"><m:mrow><m:msubsup><m:mo>∫</m:mo><m:mrow><m:mo>-</m:mo><m:mi>∞</m:mi></m:mrow><m:mi>∞</m:mi></m:msubsup><m:mfrac><m:mrow><m:mo form="prefix">sin</m:mo><m:mo>(</m:mo><m:mo>-</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mrow><m:mn>1</m:mn><m:mo>+</m:mo><m:msup><m:mi>x</m:mi><m:mn>3</m:mn></m:msup></m:mrow></m:mfrac><m:mspace width="0.166667em"/><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:math></equation>
+and
+<equation id="id73274"><m:math overflow="scroll" mode="display"><m:mrow><m:msubsup><m:mo>∫</m:mo><m:mrow><m:mo>-</m:mo><m:mi>∞</m:mi></m:mrow><m:mi>∞</m:mi></m:msubsup><m:mfrac><m:mrow><m:mo form="prefix">sin</m:mo><m:mi>x</m:mi></m:mrow><m:mrow><m:mn>1</m:mn><m:mo>+</m:mo><m:msup><m:mi>x</m:mi><m:mn>3</m:mn></m:msup></m:mrow></m:mfrac><m:mspace width="0.166667em"/><m:mi>d</m:mi><m:mi>x</m:mi><m:mo>.</m:mo></m:mrow></m:math></equation></item>
+    </list>
+</problem></exercise>
+<example id="fs-id1165920517413">
+    <para id="id73332">
+An historically famous integral in analysis is <m:math overflow="scroll"><m:mrow><m:msubsup><m:mo>∫</m:mo><m:mrow><m:mo>-</m:mo><m:mi>∞</m:mi></m:mrow><m:mi>∞</m:mi></m:msubsup><m:mo form="prefix">sin</m:mo><m:mi>x</m:mi><m:mo>/</m:mo><m:mi>x</m:mi><m:mspace width="0.166667em"/><m:mi>d</m:mi><m:mi>x</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+The techniques described above don't immediately apply to this function, for, even replacing the <m:math overflow="scroll"><m:mi>x</m:mi></m:math> by a <m:math overflow="scroll"><m:mrow><m:mi>z</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+this function has no poles, so that the Residue Theorem wouldn't seem to be much help.
+Though the point 0 is a singularity, it is a removable one,
+so that this function <m:math overflow="scroll"><m:mrow><m:mo form="prefix">sin</m:mo><m:mi>z</m:mi><m:mo>/</m:mo><m:mi>z</m:mi></m:mrow></m:math> is essentially analytic everywhere in the complex plane.
+However, even in a case like this we can obtain information about integrals of
+real-valued functions from theorems about integrals of complex-valued functions.</para>
+    <para id="id73427">Notice first that <m:math overflow="scroll"><m:mrow><m:msubsup><m:mo>∫</m:mo><m:mrow><m:mo>-</m:mo><m:mi>∞</m:mi></m:mrow><m:mi>∞</m:mi></m:msubsup><m:mo form="prefix">sin</m:mo><m:mi>x</m:mi><m:mo>/</m:mo><m:mi>x</m:mi><m:mspace width="0.166667em"/><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:math> is the imaginary part
+of <m:math overflow="scroll"><m:mrow><m:msubsup><m:mo>∫</m:mo><m:mrow><m:mo>-</m:mo><m:mi>∞</m:mi></m:mrow><m:mi>∞</m:mi></m:msubsup><m:msup><m:mi>e</m:mi><m:mrow><m:mi>i</m:mi><m:mi>x</m:mi></m:mrow></m:msup><m:mo>/</m:mo><m:mi>x</m:mi><m:mspace width="0.166667em"/><m:mi>d</m:mi><m:mi>x</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+so that we may as well evaluate the integral of this function.
+Let <m:math overflow="scroll"><m:mi>f</m:mi></m:math> be the function defined by <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>e</m:mi><m:mrow><m:mi>i</m:mi><m:mi>z</m:mi></m:mrow></m:msup><m:mo>/</m:mo><m:mi>z</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+and note that 0 is a pole of order 1 of <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+and that the residue <m:math overflow="scroll"><m:mrow><m:msub><m:mi>R</m:mi><m:mi>f</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mn>0</m:mn><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>2</m:mn><m:mi>π</m:mi><m:mi>i</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Now, for each <m:math overflow="scroll"><m:mrow><m:mi>B</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>δ</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn></m:mrow></m:math> define a geometric set <m:math overflow="scroll"><m:mrow><m:msub><m:mi>S</m:mi><m:mrow><m:mi>B</m:mi><m:mo>,</m:mo><m:mi>δ</m:mi></m:mrow></m:msub><m:mo>,</m:mo></m:mrow></m:math> determined
+by the interval <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mo>-</m:mo><m:mi>B</m:mi><m:mo>,</m:mo><m:mi>B</m:mi><m:mo>]</m:mo><m:mo>,</m:mo></m:mrow></m:math> as follows:
+The upper bounding function <m:math overflow="scroll"><m:msub><m:mi>u</m:mi><m:mrow><m:mi>B</m:mi><m:mo>,</m:mo><m:mi>δ</m:mi></m:mrow></m:msub></m:math> is given by <m:math overflow="scroll"><m:mrow><m:msub><m:mi>u</m:mi><m:mrow><m:mi>B</m:mi><m:mo>,</m:mo><m:mi>δ</m:mi></m:mrow></m:msub><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>B</m:mi><m:mo>,</m:mo></m:mrow></m:math> and the
+lower bounding function <m:math overflow="scroll"><m:msub><m:mi>l</m:mi><m:mrow><m:mi>B</m:mi><m:mo>,</m:mo><m:mi>δ</m:mi></m:mrow></m:msub></m:math> is given by <m:math overflow="scroll"><m:mrow><m:msub><m:mi>l</m:mi><m:mrow><m:mi>B</m:mi><m:mo>,</m:mo><m:mi>δ</m:mi></m:mrow></m:msub><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math> for <m:math overflow="scroll"><m:mrow><m:mo>-</m:mo><m:mi>B</m:mi><m:mo>≤</m:mo><m:mi>x</m:mi><m:mo>≤</m:mo><m:mo>-</m:mo><m:mi>δ</m:mi></m:mrow></m:math> and
+<m:math overflow="scroll"><m:mrow><m:mi>δ</m:mi><m:mo>≤</m:mo><m:mi>x</m:mi><m:mo>≤</m:mo><m:mi>B</m:mi><m:mo>,</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:msub><m:mi>l</m:mi><m:mrow><m:mi>B</m:mi><m:mo>,</m:mo><m:mi>δ</m:mi></m:mrow></m:msub><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>δ</m:mi><m:msup><m:mi>e</m:mi><m:mrow><m:mi>i</m:mi><m:mi>π</m:mi><m:mi>x</m:mi><m:mo>/</m:mo><m:mi>δ</m:mi></m:mrow></m:msup></m:mrow></m:math>
+for <m:math overflow="scroll"><m:mrow><m:mo>-</m:mo><m:mi>δ</m:mi><m:mo>&lt;</m:mo><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mi>δ</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+That is, <m:math overflow="scroll"><m:msub><m:mi>S</m:mi><m:mrow><m:mi>B</m:mi><m:mo>,</m:mo><m:mi>δ</m:mi></m:mrow></m:msub></m:math> is just like the rectangle <m:math overflow="scroll"><m:msub><m:mi>S</m:mi><m:mi>B</m:mi></m:msub></m:math> in Example 1 above,
+except that the lower boundary is not a straight line.
+Rather, the lower boundary is a straight line from <m:math overflow="scroll"><m:mrow><m:mo>-</m:mo><m:mi>B</m:mi></m:mrow></m:math> to <m:math overflow="scroll"><m:mrow><m:mo>-</m:mo><m:mi>δ</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+a semicircle below the <m:math overflow="scroll"><m:mi>x</m:mi></m:math>-axis of radius <m:math overflow="scroll"><m:mi>δ</m:mi></m:math> from <m:math overflow="scroll"><m:mrow><m:mo>-</m:mo><m:mi>δ</m:mi></m:mrow></m:math> to <m:math overflow="scroll"><m:mrow><m:mi>δ</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+and a straight line again from <m:math overflow="scroll"><m:mi>δ</m:mi></m:math> to <m:math overflow="scroll"><m:mrow><m:mi>B</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+    <para id="id74035">By the Residue Theorem, the contour integral</para>
+    <equation id="id74039">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:msub>
+            <m:mo>∫</m:mo>
+            <m:msub>
+              <m:mi>C</m:mi>
+              <m:msub>
+                <m:mi>S</m:mi>
+                <m:mrow>
+                  <m:mi>B</m:mi>
+                  <m:mo>,</m:mo>
+                  <m:mi>δ</m:mi>
+                </m:mrow>
+              </m:msub>
+            </m:msub>
+          </m:msub>
+          <m:mi>f</m:mi>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>ζ</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mspace width="0.166667em"/>
+          <m:mi>d</m:mi>
+          <m:mi>ζ</m:mi>
+          <m:mo>=</m:mo>
+          <m:msub>
+            <m:mi>R</m:mi>
+            <m:mi>f</m:mi>
+          </m:msub>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mn>0</m:mn>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>=</m:mo>
+          <m:mn>2</m:mn>
+          <m:mi>π</m:mi>
+          <m:mi>i</m:mi>
+          <m:mo>.</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id74117">As in the previous example, the contour integrals along the two sides and across the
+top of <m:math overflow="scroll"><m:msub><m:mi>S</m:mi><m:mrow><m:mi>B</m:mi><m:mo>,</m:mo><m:mi>δ</m:mi></m:mrow></m:msub></m:math> tend to 0 as <m:math overflow="scroll"><m:mi>B</m:mi></m:math> tends to infinity.
+Finally, according to part (e) of <link target-id="fs-id1168528394716" document="m36230"/>,
+the contour integral of <m:math overflow="scroll"><m:mi>f</m:mi></m:math> along the semicircle in the lower boundary is <m:math overflow="scroll"><m:mrow><m:mi>π</m:mi><m:mi>i</m:mi></m:mrow></m:math> independent of the value of <m:math overflow="scroll"><m:mrow><m:mi>δ</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+So,</para>
+    <equation id="id74187">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:munder>
+            <m:mo movablelimits="true" form="prefix">lim</m:mo>
+            <m:mrow>
+              <m:mi>B</m:mi>
+              <m:mo>→</m:mo>
+              <m:mi>∞</m:mi>
+            </m:mrow>
+          </m:munder>
+          <m:munder>
+            <m:mo movablelimits="true" form="prefix">lim</m:mo>
+            <m:mrow>
+              <m:mi>δ</m:mi>
+              <m:mo>→</m:mo>
+              <m:mn>0</m:mn>
+            </m:mrow>
+          </m:munder>
+          <m:msub>
+            <m:mo>∫</m:mo>
+            <m:mrow>
+              <m:mtext>graph</m:mtext>
+              <m:mo>(</m:mo>
+              <m:msub>
+                <m:mi>l</m:mi>
+                <m:mrow>
+                  <m:mi>B</m:mi>
+                  <m:mo>,</m:mo>
+                  <m:mi>δ</m:mi>
+                </m:mrow>
+              </m:msub>
+              <m:mo>)</m:mo>
+            </m:mrow>
+          </m:msub>
+          <m:mfrac>
+            <m:msup>
+              <m:mi>e</m:mi>
+              <m:mrow>
+                <m:mi>i</m:mi>
+                <m:mi>ζ</m:mi>
+              </m:mrow>
+            </m:msup>
+            <m:mi>ζ</m:mi>
+          </m:mfrac>
+          <m:mspace width="0.166667em"/>
+          <m:mi>d</m:mi>
+          <m:mi>ζ</m:mi>
+          <m:mo>=</m:mo>
+          <m:mi>π</m:mi>
+          <m:mi>i</m:mi>
+          <m:mo>,</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id74291">implying then that</para>
+    <equation id="id74296">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:msubsup>
+            <m:mo>∫</m:mo>
+            <m:mrow>
+              <m:mo>-</m:mo>
+              <m:mi>∞</m:mi>
+            </m:mrow>
+            <m:mi>∞</m:mi>
+          </m:msubsup>
+          <m:mfrac>
+            <m:mrow>
+              <m:mo form="prefix">sin</m:mo>
+              <m:mi>x</m:mi>
+            </m:mrow>
+            <m:mi>x</m:mi>
+          </m:mfrac>
+          <m:mspace width="0.166667em"/>
+          <m:mi>d</m:mi>
+          <m:mi>x</m:mi>
+          <m:mo>=</m:mo>
+          <m:mi>π</m:mi>
+          <m:mo>.</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+</example>
+<exercise id="fs-id1165918085227"><problem id="fs-id1165926173527">
+    <list id="id74358" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid36"> Justify the steps in the preceding example.
+In particular, verify that
+<equation id="id74374"><m:math overflow="scroll" mode="display"><m:mrow><m:munder><m:mo movablelimits="true" form="prefix">lim</m:mo><m:mrow><m:mi>B</m:mi><m:mo>→</m:mo><m:mi>∞</m:mi></m:mrow></m:munder><m:msubsup><m:mo>∫</m:mo><m:mn>0</m:mn><m:mi>B</m:mi></m:msubsup><m:mfrac><m:msup><m:mi>e</m:mi><m:mrow><m:mi>i</m:mi><m:mo>(</m:mo><m:mi>B</m:mi><m:mo>+</m:mo><m:mi>i</m:mi><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:msup><m:mrow><m:mi>B</m:mi><m:mo>+</m:mo><m:mi>i</m:mi><m:mi>t</m:mi></m:mrow></m:mfrac><m:mspace width="0.166667em"/><m:mi>d</m:mi><m:mi>t</m:mi><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math></equation><equation id="id74460"><m:math overflow="scroll" mode="display"><m:mrow><m:munder><m:mo movablelimits="true" form="prefix">lim</m:mo><m:mrow><m:mi>B</m:mi><m:mo>→</m:mo><m:mi>∞</m:mi></m:mrow></m:munder><m:msubsup><m:mo>∫</m:mo><m:mrow><m:mo>-</m:mo><m:mi>B</m:mi></m:mrow><m:mi>B</m:mi></m:msubsup><m:mfrac><m:msup><m:mi>e</m:mi><m:mrow><m:mi>i</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>+</m:mo><m:mi>i</m:mi><m:mi>B</m:mi><m:mo>)</m:mo></m:mrow></m:msup><m:mrow><m:mi>t</m:mi><m:mo>+</m:mo><m:mi>i</m:mi><m:mi>B</m:mi></m:mrow></m:mfrac><m:mspace width="0.166667em"/><m:mi>d</m:mi><m:mi>t</m:mi><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math></equation>
+and
+<equation id="id74554"><m:math overflow="scroll" mode="display"><m:mrow><m:msub><m:mo>∫</m:mo><m:msub><m:mi>C</m:mi><m:mi>δ</m:mi></m:msub></m:msub><m:mfrac><m:msup><m:mi>e</m:mi><m:mrow><m:mi>i</m:mi><m:mi>ζ</m:mi></m:mrow></m:msup><m:mi>ζ</m:mi></m:mfrac><m:mspace width="0.166667em"/><m:mi>d</m:mi><m:mi>ζ</m:mi><m:mo>=</m:mo><m:mi>π</m:mi><m:mi>i</m:mi><m:mo>,</m:mo></m:mrow></m:math></equation>
+where <m:math overflow="scroll"><m:msub><m:mi>C</m:mi><m:mi>δ</m:mi></m:msub></m:math> is the semicircle of radius <m:math overflow="scroll"><m:mrow><m:mi>δ</m:mi><m:mo>,</m:mo></m:mrow></m:math> centered at the origin and lying below the <m:math overflow="scroll"><m:mi>x</m:mi></m:math>-axis.
+</item>
+      <item id="uid37"> Evaluate
+<equation id="id74663"><m:math overflow="scroll" mode="display"><m:mrow><m:msubsup><m:mo>∫</m:mo><m:mrow><m:mo>-</m:mo><m:mi>∞</m:mi></m:mrow><m:mi>∞</m:mi></m:msubsup><m:mfrac><m:mrow><m:msup><m:mo form="prefix">sin</m:mo><m:mn>2</m:mn></m:msup><m:mi>x</m:mi></m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mfrac><m:mspace width="0.166667em"/><m:mi>d</m:mi><m:mi>x</m:mi><m:mo>.</m:mo></m:mrow></m:math></equation></item>
+    </list>
+</problem></exercise>
+  </content>
+</document>

@@ -1,0 +1,1727 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML">
+  <title>Integrable Functions</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m36209</md:content-id>
+  <md:title>Integrable Functions</md:title>
+  <md:abstract>We now wish to extend the definition of the integral
+to a wider class of functions. This class will consist of those
+functions that are uniform limits of step functions.
+The requirement that these limits be uniform is crucial.
+Pointwise limits of step functions doesn't work,
+as we will see in the first exercise.
+The initial step in carrying out this generalization is the following.</md:abstract>
+  <md:uuid>a4e583e7-bd62-43c2-9153-8dce538f7d12</md:uuid>
+</metadata>
+
+<content>
+    <para id="id114348">We now wish to extend the definition of the integral
+to a wider class of functions. This class will consist of those
+functions that are <emphasis effect="bold">uniform limits</emphasis> of step functions.
+The requirement that these limits be uniform is crucial.
+Pointwise limits of step functions doesn't work,
+as we will see in <link target-id="fs-id1170771403368"/> below.
+The initial step in carrying out this generalization is the following.</para>
+<rule id="fs-id1170762567188" type="theorem"><statement id="fs-id1170765501350">
+    <para id="id114362"> Let <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow></m:math> be a closed bounded interval, and let
+<m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>h</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> be a sequence of step functions that converges uniformly to a function <m:math overflow="scroll"><m:mi>f</m:mi></m:math> on <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Then the sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:mo>∫</m:mo><m:msub><m:mi>h</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> is a convergent sequence of real numbers.</para>
+</statement>
+<proof id="fs-id1170765106872">
+    <para id="id114793"> We will show that <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:mo>∫</m:mo><m:msub><m:mi>h</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> is a Cauchy sequence in <m:math overflow="scroll"><m:mrow><m:mi>R</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Thus, given an <m:math overflow="scroll"><m:mrow><m:mi>ϵ</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> choose an <m:math overflow="scroll"><m:mi>N</m:mi></m:math> such that for any <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>≥</m:mo><m:mi>N</m:mi></m:mrow></m:math> and any <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>,</m:mo></m:mrow></m:math> we have</para>
+    <equation id="id115079">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mrow>
+            <m:mo>|</m:mo>
+            <m:mi>f</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>x</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>-</m:mo>
+          </m:mrow>
+          <m:msub>
+            <m:mi>h</m:mi>
+            <m:mi>n</m:mi>
+          </m:msub>
+          <m:mrow>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>x</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>|</m:mo>
+            <m:mo>&lt;</m:mo>
+          </m:mrow>
+          <m:mfrac>
+            <m:mi>ϵ</m:mi>
+            <m:mrow>
+              <m:mn>2</m:mn>
+              <m:mo>(</m:mo>
+              <m:mi>b</m:mi>
+              <m:mo>-</m:mo>
+              <m:mi>a</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+          </m:mfrac>
+          <m:mo>.</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id115143">Then, for any <m:math overflow="scroll"><m:mi>m</m:mi></m:math> and <m:math overflow="scroll"><m:mi>n</m:mi></m:math> both <m:math overflow="scroll"><m:mrow><m:mo>≥</m:mo><m:mi>N</m:mi></m:mrow></m:math> and any <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>,</m:mo></m:mrow></m:math> we have</para>
+    <equation id="id115199">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mrow>
+            <m:mo>|</m:mo>
+          </m:mrow>
+          <m:msub>
+            <m:mi>h</m:mi>
+            <m:mi>n</m:mi>
+          </m:msub>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>x</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>-</m:mo>
+          <m:msub>
+            <m:mi>h</m:mi>
+            <m:mi>m</m:mi>
+          </m:msub>
+          <m:mrow>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>x</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>|</m:mo>
+            <m:mo>≤</m:mo>
+            <m:mo>|</m:mo>
+          </m:mrow>
+          <m:msub>
+            <m:mi>h</m:mi>
+            <m:mi>n</m:mi>
+          </m:msub>
+          <m:mrow>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>x</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>-</m:mo>
+            <m:mi>f</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>x</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>|</m:mo>
+            <m:mo>+</m:mo>
+            <m:mo>|</m:mo>
+            <m:mi>f</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>x</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>-</m:mo>
+          </m:mrow>
+          <m:msub>
+            <m:mi>h</m:mi>
+            <m:mi>m</m:mi>
+          </m:msub>
+          <m:mrow>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>x</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>|</m:mo>
+            <m:mo>&lt;</m:mo>
+          </m:mrow>
+          <m:mfrac>
+            <m:mi>ϵ</m:mi>
+            <m:mrow>
+              <m:mi>b</m:mi>
+              <m:mo>-</m:mo>
+              <m:mi>a</m:mi>
+            </m:mrow>
+          </m:mfrac>
+          <m:mo>.</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id115330">Therefore,</para>
+    <equation id="id115336">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mrow>
+            <m:mo>|</m:mo>
+            <m:mo>∫</m:mo>
+          </m:mrow>
+          <m:msub>
+            <m:mi>h</m:mi>
+            <m:mi>n</m:mi>
+          </m:msub>
+          <m:mo>-</m:mo>
+          <m:mo>∫</m:mo>
+          <m:msub>
+            <m:mi>h</m:mi>
+            <m:mi>m</m:mi>
+          </m:msub>
+          <m:mrow>
+            <m:mo>|</m:mo>
+            <m:mo>=</m:mo>
+            <m:mo>|</m:mo>
+            <m:mo>∫</m:mo>
+          </m:mrow>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:msub>
+              <m:mi>h</m:mi>
+              <m:mi>n</m:mi>
+            </m:msub>
+            <m:mo>-</m:mo>
+            <m:msub>
+              <m:mi>h</m:mi>
+              <m:mi>m</m:mi>
+            </m:msub>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mrow>
+            <m:mo>|</m:mo>
+            <m:mo>≤</m:mo>
+            <m:mo>∫</m:mo>
+            <m:mo>|</m:mo>
+          </m:mrow>
+          <m:msub>
+            <m:mi>h</m:mi>
+            <m:mi>n</m:mi>
+          </m:msub>
+          <m:mo>-</m:mo>
+          <m:msub>
+            <m:mi>h</m:mi>
+            <m:mi>m</m:mi>
+          </m:msub>
+          <m:mrow>
+            <m:mo>|</m:mo>
+            <m:mo>≤</m:mo>
+            <m:mo>∫</m:mo>
+          </m:mrow>
+          <m:mfrac>
+            <m:mi>ϵ</m:mi>
+            <m:mrow>
+              <m:mi>b</m:mi>
+              <m:mo>-</m:mo>
+              <m:mi>a</m:mi>
+            </m:mrow>
+          </m:mfrac>
+          <m:mo>=</m:mo>
+          <m:mi>ϵ</m:mi>
+          <m:mo>,</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id115453">as desired.</para>
+</proof></rule>
+    <para id="id115458">The preceding theorem provides us with a perfectly good idea
+of how to define the integral of a function <m:math overflow="scroll"><m:mi>f</m:mi></m:math> that is the uniform limit of a
+sequence of step functions.
+However, we first need to establish another kind of consistency result.</para>
+<rule id="fs-id1170761295338" type="theorem"><statement id="fs-id1170764626939">
+    <para id="id115472"> If <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>h</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>k</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> are two sequences of step functions on <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>,</m:mo></m:mrow></m:math> each converging uniformly to the same function <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+then</para>
+    <equation id="id115548">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mo movablelimits="true" form="prefix">lim</m:mo>
+          <m:mo>∫</m:mo>
+          <m:msub>
+            <m:mi>h</m:mi>
+            <m:mi>n</m:mi>
+          </m:msub>
+          <m:mo>=</m:mo>
+          <m:mo movablelimits="true" form="prefix">lim</m:mo>
+          <m:mo>∫</m:mo>
+          <m:msub>
+            <m:mi>k</m:mi>
+            <m:mi>n</m:mi>
+          </m:msub>
+          <m:mo>.</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+</statement>
+<proof id="fs-id1170764644657">
+    <para id="id115592">
+Given <m:math overflow="scroll"><m:mrow><m:mi>ϵ</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> choose <m:math overflow="scroll"><m:mi>N</m:mi></m:math> so that
+if <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>≥</m:mo><m:mi>N</m:mi><m:mo>,</m:mo></m:mrow></m:math> then
+<m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msub><m:mi>h</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>-</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mi>ϵ</m:mi><m:mo>/</m:mo><m:mrow><m:mo>(</m:mo><m:mn>2</m:mn><m:mrow><m:mo>(</m:mo><m:mi>b</m:mi><m:mo>-</m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>,</m:mo></m:mrow></m:math> and such that
+<m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>-</m:mo></m:mrow><m:msub><m:mi>k</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mi>ϵ</m:mi><m:mo>/</m:mo><m:mrow><m:mo>(</m:mo><m:mn>2</m:mn><m:mrow><m:mo>(</m:mo><m:mi>b</m:mi><m:mo>-</m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Then, <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msub><m:mi>h</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>-</m:mo><m:msub><m:mi>k</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mi>ϵ</m:mi><m:mo>/</m:mo><m:mrow><m:mo>(</m:mo><m:mi>b</m:mi><m:mo>-</m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow></m:math> if <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>≥</m:mo><m:mi>N</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+So,</para>
+    <equation id="id115917">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mrow>
+            <m:mo>|</m:mo>
+            <m:mo>∫</m:mo>
+          </m:mrow>
+          <m:msub>
+            <m:mi>h</m:mi>
+            <m:mi>n</m:mi>
+          </m:msub>
+          <m:mo>-</m:mo>
+          <m:mo>∫</m:mo>
+          <m:msub>
+            <m:mi>k</m:mi>
+            <m:mi>n</m:mi>
+          </m:msub>
+          <m:mrow>
+            <m:mo>|</m:mo>
+            <m:mo>≤</m:mo>
+            <m:mo>∫</m:mo>
+            <m:mo>|</m:mo>
+          </m:mrow>
+          <m:msub>
+            <m:mi>h</m:mi>
+            <m:mi>n</m:mi>
+          </m:msub>
+          <m:mo>-</m:mo>
+          <m:msub>
+            <m:mi>k</m:mi>
+            <m:mi>n</m:mi>
+          </m:msub>
+          <m:mrow>
+            <m:mo>|</m:mo>
+            <m:mo>≤</m:mo>
+            <m:mo>∫</m:mo>
+          </m:mrow>
+          <m:mfrac>
+            <m:mi>ϵ</m:mi>
+            <m:mrow>
+              <m:mi>b</m:mi>
+              <m:mo>-</m:mo>
+              <m:mi>a</m:mi>
+            </m:mrow>
+          </m:mfrac>
+          <m:mo>=</m:mo>
+          <m:mi>ϵ</m:mi>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id116001">if <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>≥</m:mo><m:mi>N</m:mi><m:mo>.</m:mo></m:mrow></m:math> Taking limits gives</para>
+    <equation id="id116021">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mrow>
+            <m:mo>|</m:mo>
+            <m:mo movablelimits="true" form="prefix">lim</m:mo>
+            <m:mo>∫</m:mo>
+          </m:mrow>
+          <m:msub>
+            <m:mi>h</m:mi>
+            <m:mi>n</m:mi>
+          </m:msub>
+          <m:mo>-</m:mo>
+          <m:mo movablelimits="true" form="prefix">lim</m:mo>
+          <m:mo>∫</m:mo>
+          <m:msub>
+            <m:mi>k</m:mi>
+            <m:mi>n</m:mi>
+          </m:msub>
+          <m:mrow>
+            <m:mo>|</m:mo>
+            <m:mo>≤</m:mo>
+            <m:mi>ϵ</m:mi>
+            <m:mo>.</m:mo>
+          </m:mrow>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id116077">Since this is true for arbitrary <m:math overflow="scroll"><m:mrow><m:mi>ϵ</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> it follows that
+<m:math overflow="scroll"><m:mrow><m:mo movablelimits="true" form="prefix">lim</m:mo><m:mo>∫</m:mo><m:msub><m:mi>h</m:mi><m:mi>n</m:mi></m:msub><m:mo>=</m:mo><m:mo movablelimits="true" form="prefix">lim</m:mo><m:mo>∫</m:mo><m:msub><m:mi>k</m:mi><m:mi>n</m:mi></m:msub><m:mo>,</m:mo></m:mrow></m:math> as desired.</para>
+</proof></rule>
+<definition id="fs-id1170779774840"><term/><meaning id="fs-id1170762901958">
+    <para id="id116140"> Let <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow></m:math> be a closed bounded interval of real numbers.
+A function <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>:</m:mo><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>→</m:mo><m:mi>R</m:mi></m:mrow></m:math> is called
+<emphasis effect="italics">integrable</emphasis> on <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow></m:math> if it is the uniform limit
+of a sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>h</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> of step functions.</para>
+    <para id="id116240">Let <m:math overflow="scroll"><m:mrow><m:mi>I</m:mi><m:mo>(</m:mo><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>)</m:mo></m:mrow></m:math> denote the set of all functions that are integrable on <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+If
+<m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>∈</m:mo><m:mi>I</m:mi><m:mo>(</m:mo><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math> define the <emphasis effect="italics">integral</emphasis> of <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>,</m:mo></m:mrow></m:math> denoted <m:math overflow="scroll"><m:mrow><m:mo>∫</m:mo><m:mi>f</m:mi><m:mo>,</m:mo></m:mrow></m:math> by</para>
+    <equation id="id116347">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mo>∫</m:mo>
+          <m:mi>f</m:mi>
+          <m:mo>=</m:mo>
+          <m:mo movablelimits="true" form="prefix">lim</m:mo>
+          <m:mo>∫</m:mo>
+          <m:msub>
+            <m:mi>h</m:mi>
+            <m:mi>n</m:mi>
+          </m:msub>
+          <m:mo>,</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id116380">where <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>h</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> is some (any) sequence of step functions that converges uniformly to <m:math overflow="scroll"><m:mi>f</m:mi></m:math> on <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>.</m:mo></m:mrow></m:math></para>
+    <para id="id116431">As in the case of step functions, we use the following notations:</para>
+    <equation id="id116435">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mo>∫</m:mo>
+          <m:mi>f</m:mi>
+          <m:mo>=</m:mo>
+          <m:msubsup>
+            <m:mo>∫</m:mo>
+            <m:mi>a</m:mi>
+            <m:mi>b</m:mi>
+          </m:msubsup>
+          <m:mi>f</m:mi>
+          <m:mo>=</m:mo>
+          <m:msubsup>
+            <m:mo>∫</m:mo>
+            <m:mi>a</m:mi>
+            <m:mi>b</m:mi>
+          </m:msubsup>
+          <m:mi>f</m:mi>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>t</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mspace width="0.166667em"/>
+          <m:mi>d</m:mi>
+          <m:mi>t</m:mi>
+          <m:mo>.</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+</meaning></definition>
+<rule id="fs-id1170762684961"><label/><statement id="fs-id1170788565156">
+    <para id="id116495"><emphasis effect="bold">REMARK</emphasis> Note that <link target-id="fs-id1170761295338"/> is crucial
+in order that this definition be unambiguous.
+Indeed, we will see below that this critical consistency
+result is one place where uniform limits of step functions works while
+pointwise limits do not.
+See parts (c) and (d) of <link target-id="fs-id1170771403368"/>.
+Note also that it follows from this definition that <m:math overflow="scroll"><m:mrow><m:msubsup><m:mo>∫</m:mo><m:mi>a</m:mi><m:mi>a</m:mi></m:msubsup><m:mi>f</m:mi><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math>
+because <m:math overflow="scroll"><m:mrow><m:msubsup><m:mo>∫</m:mo><m:mi>a</m:mi><m:mi>a</m:mi></m:msubsup><m:mi>h</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math> for any step function.
+In fact, we will derive almost everything about the integral of a general integrable function
+from the corresponding results about the integral of a step function.
+No surprise. This is the essence of mathematical analysis, approximation.</para>
+</statement></rule>
+<exercise id="fs-id1170771403368"><problem id="fs-id1170761692949">
+    <para id="id116559"> Define a function <m:math overflow="scroll"><m:mi>f</m:mi></m:math> on the closed interval <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>1</m:mn><m:mo>]</m:mo></m:mrow></m:math> by
+<m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mn>1</m:mn></m:mrow></m:math> if <m:math overflow="scroll"><m:mi>x</m:mi></m:math> is a rational number and <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math>
+if <m:math overflow="scroll"><m:mi>x</m:mi></m:math> is an irrational number.</para>
+    <list id="id116658" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid1"> Suppose <m:math overflow="scroll"><m:mi>h</m:mi></m:math> is a step function on <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>1</m:mn><m:mo>]</m:mo><m:mo>.</m:mo></m:mrow></m:math> Prove that there must exist
+an <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mo>[</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>1</m:mn><m:mo>]</m:mo></m:mrow></m:math> such that <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>-</m:mo><m:mi>h</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>|</m:mo><m:mo>≥</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mn>2</m:mn><m:mo>.</m:mo></m:mrow></m:math>
+HINT: Let <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:msub><m:mi>x</m:mi><m:mrow><m:mi>i</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mi>i</m:mi></m:msub><m:mo>)</m:mo></m:mrow></m:math> be an interval on which <m:math overflow="scroll"><m:mi>h</m:mi></m:math> is a constant <m:math overflow="scroll"><m:mrow><m:mi>c</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Now use the fact that there are both rationals and irrationals in this interval.
+</item>
+      <item id="uid2"> Prove that <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is not the uniform limit of a sequence of step functions.
+That is, <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is <emphasis effect="bold">not</emphasis> an integrable function.
+</item>
+      <item id="uid3"> Consider the two sequences <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>h</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>k</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> of step functions defined
+on the interval <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>1</m:mn><m:mo>]</m:mo></m:mrow></m:math> by
+<m:math overflow="scroll"><m:mrow><m:msub><m:mi>h</m:mi><m:mi>n</m:mi></m:msub><m:mo>=</m:mo><m:msub><m:mi>χ</m:mi><m:mrow><m:mo>(</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>n</m:mi><m:mo>)</m:mo></m:mrow></m:msub><m:mo>,</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:msub><m:mi>k</m:mi><m:mi>n</m:mi></m:msub><m:mo>=</m:mo><m:mi>n</m:mi><m:msub><m:mi>χ</m:mi><m:mrow><m:mo>(</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>n</m:mi><m:mo>)</m:mo></m:mrow></m:msub><m:mo>.</m:mo></m:mrow></m:math>
+Show that both sequences <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>h</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>k</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> converge pointwise
+to the 0 function on <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>1</m:mn><m:mo>]</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+HINT: All functions are 0 at <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math>
+For <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> choose <m:math overflow="scroll"><m:mi>N</m:mi></m:math> so that <m:math overflow="scroll"><m:mrow><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>N</m:mi><m:mo>&lt;</m:mo><m:mi>x</m:mi><m:mo>.</m:mo></m:mrow></m:math> Then, for any <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>≥</m:mo><m:mi>N</m:mi><m:mo>,</m:mo></m:mrow></m:math><m:math overflow="scroll"><m:mrow><m:msub><m:mi>h</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msub><m:mi>k</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid4"> Let <m:math overflow="scroll"><m:msub><m:mi>h</m:mi><m:mi>n</m:mi></m:msub></m:math> and <m:math overflow="scroll"><m:msub><m:mi>k</m:mi><m:mi>n</m:mi></m:msub></m:math> be as in part (c).
+Show that <m:math overflow="scroll"><m:mrow><m:mo movablelimits="true" form="prefix">lim</m:mo><m:mo>∫</m:mo><m:msub><m:mi>h</m:mi><m:mi>n</m:mi></m:msub><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> but <m:math overflow="scroll"><m:mrow><m:mo movablelimits="true" form="prefix">lim</m:mo><m:mo>∫</m:mo><m:msub><m:mi>k</m:mi><m:mi>n</m:mi></m:msub><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>.</m:mo></m:mrow></m:math>
+Conclude that the consistency result in <link target-id="fs-id1170761295338"/>
+does not hold for pointwise limits of step functions.
+</item>
+    </list>
+</problem></exercise>
+<exercise id="fs-id1170783539870"><problem id="fs-id1170782820473">
+    <para id="id117313"> Define a function <m:math overflow="scroll"><m:mi>f</m:mi></m:math> on the closed interval <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>1</m:mn><m:mo>]</m:mo></m:mrow></m:math> by
+<m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mi>x</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+    <list id="id117372" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid5"> For each positive integer <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>,</m:mo></m:mrow></m:math> let <m:math overflow="scroll"><m:msub><m:mi>P</m:mi><m:mi>n</m:mi></m:msub></m:math> be the partition
+of <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>1</m:mn><m:mo>]</m:mo></m:mrow></m:math> given by the points <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:mn>0</m:mn><m:mo>&lt;</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>n</m:mi><m:mo>&lt;</m:mo><m:mn>2</m:mn><m:mo>/</m:mo><m:mi>n</m:mi><m:mo>&lt;</m:mo><m:mn>3</m:mn><m:mo>/</m:mo><m:mi>n</m:mi><m:mo>&lt;</m:mo><m:mo>...</m:mo><m:mo>&lt;</m:mo><m:mo>(</m:mo><m:mi>n</m:mi><m:mo>-</m:mo><m:mn>1</m:mn><m:mo>)</m:mo><m:mo>/</m:mo><m:mi>n</m:mi><m:mo>&lt;</m:mo><m:mn>1</m:mn><m:mo>}</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Define a step function
+<m:math overflow="scroll"><m:msub><m:mi>h</m:mi><m:mi>n</m:mi></m:msub></m:math> on <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>1</m:mn><m:mo>]</m:mo></m:mrow></m:math> by setting <m:math overflow="scroll"><m:mrow><m:msub><m:mi>h</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>i</m:mi><m:mo>/</m:mo><m:mi>n</m:mi></m:mrow></m:math> if
+<m:math overflow="scroll"><m:mrow><m:mstyle scriptlevel="0" displaystyle="false"><m:mfrac><m:mrow><m:mi>i</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow><m:mi>n</m:mi></m:mfrac></m:mstyle><m:mo>&lt;</m:mo><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mstyle scriptlevel="0" displaystyle="false"><m:mfrac><m:mi>i</m:mi><m:mi>n</m:mi></m:mfrac></m:mstyle><m:mo>,</m:mo></m:mrow></m:math>
+and <m:math overflow="scroll"><m:mrow><m:msub><m:mi>h</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>i</m:mi><m:mo>/</m:mo><m:mi>n</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>i</m:mi><m:mo>/</m:mo><m:mi>n</m:mi></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mn>0</m:mn><m:mo>≤</m:mo><m:mi>i</m:mi><m:mo>≤</m:mo><m:mi>n</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Prove that <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>-</m:mo></m:mrow><m:msub><m:mi>h</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>n</m:mi></m:mrow></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mo>[</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>1</m:mn><m:mo>]</m:mo><m:mo>,</m:mo></m:mrow></m:math>
+and then conclude that <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is the uniform limit of the <m:math overflow="scroll"><m:msub><m:mi>h</m:mi><m:mi>n</m:mi></m:msub></m:math>'s whence <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>∈</m:mo><m:mi>I</m:mi><m:mo>(</m:mo><m:mo>[</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>1</m:mn><m:mo>]</m:mo><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid6"> Show that
+<equation id="id117809"><m:math overflow="scroll" mode="display"><m:mrow><m:mo>∫</m:mo><m:msub><m:mi>h</m:mi><m:mi>n</m:mi></m:msub><m:mo>=</m:mo><m:munderover><m:mo>∑</m:mo><m:mrow><m:mi>i</m:mi><m:mo>=</m:mo><m:mn>1</m:mn></m:mrow><m:mi>n</m:mi></m:munderover><m:mfrac><m:mi>i</m:mi><m:msup><m:mi>n</m:mi><m:mn>2</m:mn></m:msup></m:mfrac><m:mo>=</m:mo><m:mfrac><m:mrow><m:mi>n</m:mi><m:mo>(</m:mo><m:mi>n</m:mi><m:mo>+</m:mo><m:mn>1</m:mn><m:mo>)</m:mo></m:mrow><m:mrow><m:mn>2</m:mn><m:msup><m:mi>n</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:mfrac><m:mo>.</m:mo></m:mrow></m:math></equation></item>
+      <item id="uid7"> Show that <m:math overflow="scroll"><m:mrow><m:msubsup><m:mo>∫</m:mo><m:mn>0</m:mn><m:mn>1</m:mn></m:msubsup><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mspace width="0.166667em"/><m:mi>d</m:mi><m:mi>t</m:mi><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mn>2</m:mn><m:mo>.</m:mo></m:mrow></m:math>
+The next exercise establishes some additional properties of
+integrable functions on an interval <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>.</m:mo></m:mrow></m:math></item>
+    </list>
+</problem></exercise>
+<exercise id="fs-id1170766144622"><problem id="fs-id1170769469684">
+    <para id="id117975"> Let <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow></m:math> be a closed and bounded interval,
+and let <m:math overflow="scroll"><m:mi>f</m:mi></m:math> be an element of <m:math overflow="scroll"><m:mrow><m:mi>I</m:mi><m:mo>(</m:mo><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math></para>
+    <list id="id118038" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid8"> Show that, for each <m:math overflow="scroll"><m:mrow><m:mi>ϵ</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn></m:mrow></m:math> there exists a
+step function <m:math overflow="scroll"><m:mi>h</m:mi></m:math> on <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow></m:math> such that
+<m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>-</m:mo><m:mi>h</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mi>ϵ</m:mi></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid9"> For each positive integer <m:math overflow="scroll"><m:mi>n</m:mi></m:math> let <m:math overflow="scroll"><m:msub><m:mi>h</m:mi><m:mi>n</m:mi></m:msub></m:math> be a step
+function satisfying the conclusion of part (a) for <m:math overflow="scroll"><m:mrow><m:mi>ϵ</m:mi><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>n</m:mi><m:mo>.</m:mo></m:mrow></m:math> Define
+<m:math overflow="scroll"><m:mrow><m:msub><m:mi>k</m:mi><m:mi>n</m:mi></m:msub><m:mo>=</m:mo><m:msub><m:mi>h</m:mi><m:mi>n</m:mi></m:msub><m:mo>-</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>n</m:mi></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:msub><m:mi>l</m:mi><m:mi>n</m:mi></m:msub><m:mo>=</m:mo><m:msub><m:mi>h</m:mi><m:mi>n</m:mi></m:msub><m:mo>+</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>n</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Show that <m:math overflow="scroll"><m:msub><m:mi>k</m:mi><m:mi>n</m:mi></m:msub></m:math> and <m:math overflow="scroll"><m:msub><m:mi>l</m:mi><m:mi>n</m:mi></m:msub></m:math> are step functions, that
+<m:math overflow="scroll"><m:mrow><m:msub><m:mi>k</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>&lt;</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>&lt;</m:mo><m:msub><m:mi>l</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>,</m:mo></m:mrow></m:math> and that
+<m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msub><m:mi>l</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>-</m:mo><m:msub><m:mi>k</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>|</m:mo><m:mo>=</m:mo></m:mrow><m:msub><m:mi>l</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>-</m:mo><m:msub><m:mi>k</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>2</m:mn><m:mo>/</m:mo><m:mi>n</m:mi></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Hence, <m:math overflow="scroll"><m:mrow><m:msubsup><m:mo>∫</m:mo><m:mi>a</m:mi><m:mi>b</m:mi></m:msubsup><m:mrow><m:mo>(</m:mo><m:msub><m:mi>l</m:mi><m:mi>n</m:mi></m:msub><m:mo>-</m:mo><m:msub><m:mi>k</m:mi><m:mi>n</m:mi></m:msub><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac><m:mn>2</m:mn><m:mi>n</m:mi></m:mfrac><m:mrow><m:mo>(</m:mo><m:mi>b</m:mi><m:mo>-</m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid10"> Conclude from part (b) that, given any <m:math overflow="scroll"><m:mrow><m:mi>ϵ</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> there exist step functions <m:math overflow="scroll"><m:mi>k</m:mi></m:math> and <m:math overflow="scroll"><m:mi>l</m:mi></m:math> such that
+<m:math overflow="scroll"><m:mrow><m:mi>k</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>≤</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>≤</m:mo><m:mi>l</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:math>
+for which <m:math overflow="scroll"><m:mrow><m:mo>∫</m:mo><m:mo>(</m:mo><m:mi>l</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>-</m:mo><m:mi>k</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>)</m:mo><m:mo>&lt;</m:mo><m:mi>ϵ</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid11"> Prove that there exists a sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>j</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> of step functions on <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>,</m:mo></m:mrow></m:math>
+for which <m:math overflow="scroll"><m:mrow><m:msub><m:mi>j</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>≤</m:mo><m:msub><m:mi>j</m:mi><m:mrow><m:mi>n</m:mi><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>≤</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>,</m:mo></m:mrow></m:math> that converges
+uniformly to <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Show also that there exists a sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msubsup><m:mi>j</m:mi><m:mi>n</m:mi><m:mo>'</m:mo></m:msubsup><m:mo>}</m:mo></m:mrow></m:math> of step functions on <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>,</m:mo></m:mrow></m:math>
+for which <m:math overflow="scroll"><m:mrow><m:msubsup><m:mi>j</m:mi><m:mi>n</m:mi><m:mo>'</m:mo></m:msubsup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>≥</m:mo><m:msubsup><m:mi>j</m:mi><m:mrow><m:mi>n</m:mi><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow><m:mo>'</m:mo></m:msubsup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>≥</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>,</m:mo></m:mrow></m:math> that converges uniformly to <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+That is, if <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>∈</m:mo><m:mi>I</m:mi><m:mo>(</m:mo><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math> then <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is the uniform limit
+of a nondecreasing sequence of step functions and also is the uniform
+limit of a nonincreasing sequence of step functions.
+HINT: To construct the <m:math overflow="scroll"><m:msub><m:mi>j</m:mi><m:mi>n</m:mi></m:msub></m:math>'s and <m:math overflow="scroll"><m:msubsup><m:mi>j</m:mi><m:mi>n</m:mi><m:mo>'</m:mo></m:msubsup></m:math>'s,
+use the step functions <m:math overflow="scroll"><m:msub><m:mi>k</m:mi><m:mi>n</m:mi></m:msub></m:math> and <m:math overflow="scroll"><m:msub><m:mi>l</m:mi><m:mi>n</m:mi></m:msub></m:math> of part (b),
+and recall that the maximum and minimum of step functions is again a step function.
+</item>
+      <item id="uid12"> Show that if <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>≥</m:mo><m:mn>0</m:mn></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>,</m:mo></m:mrow></m:math>
+and <m:math overflow="scroll"><m:mi>g</m:mi></m:math> is defined by <m:math overflow="scroll"><m:mrow><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msqrt><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:msqrt><m:mo>,</m:mo></m:mrow></m:math>
+then <m:math overflow="scroll"><m:mrow><m:mi>g</m:mi><m:mo>∈</m:mo><m:mi>I</m:mi><m:mo>(</m:mo><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+HINT: Write <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>=</m:mo><m:mo movablelimits="true" form="prefix">lim</m:mo><m:msub><m:mi>h</m:mi><m:mi>n</m:mi></m:msub></m:mrow></m:math> where <m:math overflow="scroll"><m:mrow><m:msub><m:mi>h</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>≥</m:mo><m:mn>0</m:mn></m:mrow></m:math> for all <m:math overflow="scroll"><m:mi>x</m:mi></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Then use part (g) of Exercise 3.28.
+</item>
+      <item id="uid13"> (Riemann sums again.)
+Show that, given an <m:math overflow="scroll"><m:mrow><m:mi>ϵ</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> there exists a partition <m:math overflow="scroll"><m:mi>P</m:mi></m:math> such that
+if <m:math overflow="scroll"><m:mrow><m:mi>Q</m:mi><m:mo>=</m:mo><m:mo>{</m:mo><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub><m:mo>&lt;</m:mo><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>&lt;</m:mo><m:mo>...</m:mo><m:mo>&lt;</m:mo><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> is any partition finer than <m:math overflow="scroll"><m:mrow><m:mi>P</m:mi><m:mo>,</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>w</m:mi><m:mi>i</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> are any points for which <m:math overflow="scroll"><m:mrow><m:msub><m:mi>w</m:mi><m:mi>i</m:mi></m:msub><m:mo>∈</m:mo><m:mrow><m:mo>(</m:mo><m:msub><m:mi>x</m:mi><m:mrow><m:mi>i</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mi>i</m:mi></m:msub><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> then
+<equation id="id119424"><m:math overflow="scroll" mode="display"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msubsup><m:mo>∫</m:mo><m:mi>a</m:mi><m:mi>b</m:mi></m:msubsup><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mspace width="0.166667em"/><m:mi>d</m:mi><m:mi>t</m:mi><m:mo>-</m:mo><m:munderover><m:mo>∑</m:mo><m:mrow><m:mi>i</m:mi><m:mo>=</m:mo><m:mn>1</m:mn></m:mrow><m:mi>n</m:mi></m:munderover><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:msub><m:mi>w</m:mi><m:mi>i</m:mi></m:msub><m:mo>)</m:mo></m:mrow><m:mrow><m:mo>(</m:mo><m:msub><m:mi>x</m:mi><m:mi>i</m:mi></m:msub><m:mo>-</m:mo><m:msub><m:mi>x</m:mi><m:mrow><m:mi>i</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>)</m:mo></m:mrow><m:mrow><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mi>ϵ</m:mi><m:mo>.</m:mo></m:mrow></m:mrow></m:math></equation>
+HINT: Let <m:math overflow="scroll"><m:mi>P</m:mi></m:math> be a partition for which both the step functions <m:math overflow="scroll"><m:mi>k</m:mi></m:math> and <m:math overflow="scroll"><m:mi>l</m:mi></m:math> of part (c)
+are constant on the open subintervals of <m:math overflow="scroll"><m:mrow><m:mi>P</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Verify that for any finer partition <m:math overflow="scroll"><m:mrow><m:mi>Q</m:mi><m:mo>,</m:mo></m:mrow></m:math><m:math overflow="scroll"><m:mrow><m:mi>l</m:mi><m:mrow><m:mo>(</m:mo><m:msub><m:mi>w</m:mi><m:mi>i</m:mi></m:msub><m:mo>)</m:mo></m:mrow><m:mo>≥</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:msub><m:mi>w</m:mi><m:mi>i</m:mi></m:msub><m:mo>)</m:mo></m:mrow><m:mo>≥</m:mo><m:mi>k</m:mi><m:mrow><m:mo>(</m:mo><m:msub><m:mi>w</m:mi><m:mi>i</m:mi></m:msub><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> and hence
+<equation id="id119652"><m:math overflow="scroll" mode="display"><m:mrow><m:munder><m:mo>∑</m:mo><m:mi>i</m:mi></m:munder><m:mi>l</m:mi><m:mrow><m:mo>(</m:mo><m:msub><m:mi>w</m:mi><m:mi>i</m:mi></m:msub><m:mo>)</m:mo></m:mrow><m:mrow><m:mo>(</m:mo><m:msub><m:mi>x</m:mi><m:mi>i</m:mi></m:msub><m:mo>-</m:mo><m:msub><m:mi>x</m:mi><m:mrow><m:mi>i</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>)</m:mo></m:mrow><m:mo>≥</m:mo><m:munder><m:mo>∑</m:mo><m:mi>i</m:mi></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:msub><m:mi>w</m:mi><m:mi>i</m:mi></m:msub><m:mo>)</m:mo></m:mrow><m:mrow><m:mo>(</m:mo><m:msub><m:mi>x</m:mi><m:mi>i</m:mi></m:msub><m:mo>-</m:mo><m:msub><m:mi>x</m:mi><m:mrow><m:mi>i</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>)</m:mo></m:mrow><m:mo>≥</m:mo><m:munder><m:mo>∑</m:mo><m:mi>i</m:mi></m:munder><m:mi>k</m:mi><m:mrow><m:mo>(</m:mo><m:msub><m:mi>w</m:mi><m:mi>i</m:mi></m:msub><m:mo>)</m:mo></m:mrow><m:mrow><m:mo>(</m:mo><m:msub><m:mi>x</m:mi><m:mi>i</m:mi></m:msub><m:mo>-</m:mo><m:msub><m:mi>x</m:mi><m:mrow><m:mi>i</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></equation></item>
+    </list>
+</problem></exercise>
+<definition id="fs-id3424345"><term/><meaning id="fs-id1170767923826">
+    <para id="id119821">
+A bounded real-valued function <m:math overflow="scroll"><m:mi>f</m:mi></m:math> on a closed bounded interval <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow></m:math> is called
+<emphasis effect="italics">Riemann-integrable</emphasis>
+if, given any <m:math overflow="scroll"><m:mrow><m:mi>ϵ</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> there exist step functions <m:math overflow="scroll"><m:mi>k</m:mi></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>l</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+on <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow></m:math> for which <m:math overflow="scroll"><m:mrow><m:mi>k</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>≤</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>≤</m:mo><m:mi>l</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>,</m:mo></m:mrow></m:math> such that
+<m:math overflow="scroll"><m:mrow><m:mo>∫</m:mo><m:mo>(</m:mo><m:mi>l</m:mi><m:mo>-</m:mo><m:mi>k</m:mi><m:mo>)</m:mo><m:mo>&lt;</m:mo><m:mi>ϵ</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+We denote the set of all functions on <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow></m:math> that are
+Riemann-integrable by <m:math overflow="scroll"><m:mrow><m:msub><m:mi>I</m:mi><m:mi>R</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></para>
+</meaning></definition>
+<rule id="fs-id1170761695225"><label/><statement id="fs-id7570528">
+    <para id="id120049"><emphasis effect="bold">REMARK</emphasis>
+The notion of Riemann-integrability was introduced by
+Riemann in the mid nineteenth century and was the first formal definition of integrability.
+Since then several other definitions have been given for an integral, culminating in the
+theory of Lebesgue integration.
+The definition of integrability that we are using in this book is
+slightly different and less general from that of Riemann, and both of these are very different and less general from
+the definition given by Lebesgue in the early twentieth century.
+Part (c) of <link target-id="fs-id1170766144622"/> above shows that the functions we are calling integrable
+are necessarily Riemann-integrable.
+We will see in <link target-id="fs-id1170766969008"/> that there are Riemann-integrable functions that are <emphasis effect="bold">not</emphasis> integrable in our sense.
+In both cases, Riemann's and ours, an integrable function <m:math overflow="scroll"><m:mi>f</m:mi></m:math> must be
+trapped between two step functions <m:math overflow="scroll"><m:mi>k</m:mi></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>l</m:mi><m:mo>.</m:mo></m:mrow></m:math> In our definition, we must have <m:math overflow="scroll"><m:mrow><m:mi>l</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>-</m:mo><m:mi>k</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>&lt;</m:mo><m:mi>ϵ</m:mi></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>,</m:mo></m:mrow></m:math>
+while in Riemann's definition, we only need that <m:math overflow="scroll"><m:mrow><m:mo>∫</m:mo><m:mi>l</m:mi><m:mo>-</m:mo><m:mi>k</m:mi><m:mo>&lt;</m:mo><m:mi>ϵ</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+The distinction is that a small step function must have a small integral,
+but it isn't necessary for a step function to be (uniformly) small in order for it to
+have a small integral. It only has to be small on most of the interval <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>.</m:mo></m:mrow></m:math></para>
+    <para id="id120201">On the other hand, all the definitions of integrability on
+<m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow></m:math> include among the integrable functions the continuous ones.
+And, all the different definitions of integral give the same value to a continuous function.
+The differences then in these definitions shows up
+at the point of saying
+exactly which functions are integrable.
+Perhaps the most enlightening thing to say in this connection is that
+it is impossible to make a “good” definition of integrability
+in such a way that every function is integrable.
+Subtle points in set theory arise in such attempts,
+and many fascinating and deep mathematical ideas have come from them.
+However, we will stick with our definition, since it is simpler than Riemann's and is completely sufficient for our purposes.</para>
+</statement></rule>
+<rule id="fs-id1170765950456" type="theorem"><statement id="fs-id1170770570708">
+    <para id="id120234"> Let <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow></m:math> be a fixed closed and bounded interval,
+and let <m:math overflow="scroll"><m:mrow><m:mi>I</m:mi><m:mo>(</m:mo><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>)</m:mo></m:mrow></m:math> denote the set of integrable functions on <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>.</m:mo></m:mrow></m:math> Then:</para>
+    <list id="id120306" display="block" list-type="enumerated">
+      <item id="uid14">Every element of <m:math overflow="scroll"><m:mrow><m:mi>I</m:mi><m:mo>(</m:mo><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>)</m:mo></m:mrow></m:math> is a bounded function.
+That is, integrable functions are necessarily bounded functions.
+</item>
+      <item id="uid15"> <m:math overflow="scroll"><m:mrow><m:mi>I</m:mi><m:mo>(</m:mo><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>)</m:mo></m:mrow></m:math> is a vector space of functions.
+</item>
+      <item id="uid16"> <m:math overflow="scroll"><m:mrow><m:mi>I</m:mi><m:mo>(</m:mo><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>)</m:mo></m:mrow></m:math> is closed under multiplication; i.e.,
+if <m:math overflow="scroll"><m:mi>f</m:mi></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>g</m:mi><m:mo>∈</m:mo><m:mi>I</m:mi><m:mo>(</m:mo><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math> then <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mi>g</m:mi><m:mo>∈</m:mo><m:mi>I</m:mi><m:mo>(</m:mo><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid17">Every step function is in <m:math overflow="scroll"><m:mrow><m:mi>I</m:mi><m:mo>(</m:mo><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid18">If <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is a continuous real-valued function on <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>,</m:mo></m:mrow></m:math>
+then <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is in <m:math overflow="scroll"><m:mrow><m:mi>I</m:mi><m:mo>(</m:mo><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+That is, every continuous real-valued function on <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow></m:math> is integrable on <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>.</m:mo></m:mrow></m:math></item>
+    </list>
+</statement>
+<proof id="fs-id1170769203371">
+    <para id="id120649">
+Let <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>∈</m:mo><m:mi>I</m:mi><m:mo>(</m:mo><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math> and write <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>=</m:mo><m:mo movablelimits="true" form="prefix">lim</m:mo><m:msub><m:mi>h</m:mi><m:mi>n</m:mi></m:msub><m:mo>,</m:mo></m:mrow></m:math> where
+<m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>h</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> is a sequence of step functions that converges
+uniformly to <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>.</m:mo></m:mrow></m:math> Given the positive number <m:math overflow="scroll"><m:mrow><m:mi>ϵ</m:mi><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>,</m:mo></m:mrow></m:math>
+choose <m:math overflow="scroll"><m:mi>N</m:mi></m:math> so that <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>-</m:mo></m:mrow><m:msub><m:mi>h</m:mi><m:mi>N</m:mi></m:msub><m:mrow><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mn>1</m:mn></m:mrow></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Then <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>|</m:mo><m:mo>≤</m:mo><m:mo>|</m:mo></m:mrow><m:msub><m:mi>h</m:mi><m:mi>N</m:mi></m:msub><m:mrow><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>|</m:mo><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Because <m:math overflow="scroll"><m:msub><m:mi>h</m:mi><m:mi>N</m:mi></m:msub></m:math> is a step function, its range is a finite set,
+so that there exists a number <m:math overflow="scroll"><m:mi>M</m:mi></m:math> for which <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msub><m:mi>h</m:mi><m:mi>N</m:mi></m:msub><m:mrow><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>|</m:mo><m:mo>≤</m:mo><m:mi>M</m:mi></m:mrow></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Hence, <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>|</m:mo><m:mo>≤</m:mo><m:mi>M</m:mi><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>,</m:mo></m:mrow></m:math>
+and this proves part (1).</para>
+    <para id="id121056">Next, let <m:math overflow="scroll"><m:mi>f</m:mi></m:math> and <m:math overflow="scroll"><m:mi>g</m:mi></m:math> be integrable, and write
+<m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>=</m:mo><m:mo movablelimits="true" form="prefix">lim</m:mo><m:msub><m:mi>h</m:mi><m:mi>n</m:mi></m:msub></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>g</m:mi><m:mo>=</m:mo><m:mo movablelimits="true" form="prefix">lim</m:mo><m:msub><m:mi>k</m:mi><m:mi>n</m:mi></m:msub><m:mo>,</m:mo></m:mrow></m:math> where <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>h</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>k</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math>
+are sequences of step functions that converge uniformly to <m:math overflow="scroll"><m:mi>f</m:mi></m:math> and <m:math overflow="scroll"><m:mi>g</m:mi></m:math> respectively.
+If <m:math overflow="scroll"><m:mi>s</m:mi></m:math> and <m:math overflow="scroll"><m:mi>t</m:mi></m:math> are real numbers, then
+the sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:mi>s</m:mi><m:msub><m:mi>h</m:mi><m:mi>n</m:mi></m:msub><m:mo>+</m:mo><m:mi>t</m:mi><m:msub><m:mi>k</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> converges uniformly to the function <m:math overflow="scroll"><m:mrow><m:mi>s</m:mi><m:mi>f</m:mi><m:mo>+</m:mo><m:mi>t</m:mi><m:mi>g</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+See parts (c) and (d) of <link target-id="fs-id1167590429104" document="m36178"/>.
+Therefore, <m:math overflow="scroll"><m:mrow><m:mi>s</m:mi><m:mi>f</m:mi><m:mo>+</m:mo><m:mi>t</m:mi><m:mi>g</m:mi><m:mo>∈</m:mo><m:mi>I</m:mi><m:mo>(</m:mo><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>I</m:mi><m:mo>(</m:mo><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>)</m:mo></m:mrow></m:math> is a vector space, proving part (2).</para>
+    <para id="id121328">Note that part (3) does not follow immediately from <link target-id="fs-id1167590429104" document="m36178"/>;
+the product of uniformly convergent sequences may not be uniformly convergent.
+To see it for this case, let <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>=</m:mo><m:mo movablelimits="true" form="prefix">lim</m:mo><m:msub><m:mi>h</m:mi><m:mi>n</m:mi></m:msub></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>g</m:mi><m:mo>=</m:mo><m:mo movablelimits="true" form="prefix">lim</m:mo><m:msub><m:mi>k</m:mi><m:mi>n</m:mi></m:msub></m:mrow></m:math> be elements of <m:math overflow="scroll"><m:mrow><m:mi>I</m:mi><m:mo>(</m:mo><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+By part (1), both <m:math overflow="scroll"><m:mi>f</m:mi></m:math> and <m:math overflow="scroll"><m:mi>g</m:mi></m:math> are bounded, and we write
+<m:math overflow="scroll"><m:msub><m:mi>M</m:mi><m:mi>f</m:mi></m:msub></m:math> and <m:math overflow="scroll"><m:msub><m:mi>M</m:mi><m:mi>g</m:mi></m:msub></m:math> for numbers that satisfy
+<m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>|</m:mo></m:mrow><m:mo>≤</m:mo><m:msub><m:mi>M</m:mi><m:mi>f</m:mi></m:msub></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>|</m:mo></m:mrow><m:mo>≤</m:mo><m:msub><m:mi>M</m:mi><m:mi>g</m:mi></m:msub></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Because the sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>k</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> converges uniformly to <m:math overflow="scroll"><m:mrow><m:mi>g</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+there exists an <m:math overflow="scroll"><m:mi>N</m:mi></m:math> such that if <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>≥</m:mo><m:mi>N</m:mi></m:mrow></m:math> we have
+<m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>-</m:mo></m:mrow><m:msub><m:mi>k</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mn>1</m:mn></m:mrow></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>.</m:mo></m:mrow></m:math> This implies that, if
+<m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>≥</m:mo><m:mi>N</m:mi><m:mo>,</m:mo></m:mrow></m:math> then <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msub><m:mi>k</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>|</m:mo><m:mo>≤</m:mo></m:mrow><m:msub><m:mi>M</m:mi><m:mi>g</m:mi></m:msub><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>.</m:mo></m:mrow></m:math></para>
+    <para id="id121757">Now we show that <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mi>g</m:mi></m:mrow></m:math> is the uniform limit of the sequence <m:math overflow="scroll"><m:mrow><m:msub><m:mi>h</m:mi><m:mi>n</m:mi></m:msub><m:msub><m:mi>k</m:mi><m:mi>n</m:mi></m:msub><m:mo>.</m:mo></m:mrow></m:math>
+For, if <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>≥</m:mo><m:mi>N</m:mi><m:mo>,</m:mo></m:mrow></m:math> then</para>
+    <equation id="uid19">
+      <m:math overflow="scroll" mode="display">
+        <m:mtable displaystyle="true">
+          <m:mtr>
+            <m:mtd columnalign="right">
+              <m:mrow>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                  <m:mi>f</m:mi>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>x</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mi>g</m:mi>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>x</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>-</m:mo>
+                </m:mrow>
+                <m:msub>
+                  <m:mi>h</m:mi>
+                  <m:mi>n</m:mi>
+                </m:msub>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>x</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:msub>
+                  <m:mi>k</m:mi>
+                  <m:mi>n</m:mi>
+                </m:msub>
+                <m:mrow>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>x</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                  <m:mi>f</m:mi>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>x</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mi>g</m:mi>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>x</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>-</m:mo>
+                  <m:mi>f</m:mi>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>x</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                </m:mrow>
+                <m:msub>
+                  <m:mi>k</m:mi>
+                  <m:mi>n</m:mi>
+                </m:msub>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>x</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mo>+</m:mo>
+                <m:mi>f</m:mi>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>x</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:msub>
+                  <m:mi>k</m:mi>
+                  <m:mi>n</m:mi>
+                </m:msub>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>x</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mo>-</m:mo>
+                <m:msub>
+                  <m:mi>h</m:mi>
+                  <m:mi>n</m:mi>
+                </m:msub>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>x</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:msub>
+                  <m:mi>k</m:mi>
+                  <m:mi>n</m:mi>
+                </m:msub>
+                <m:mrow>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>x</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>≤</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                  <m:mi>f</m:mi>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>x</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>|</m:mo>
+                  <m:mo>|</m:mo>
+                  <m:mi>g</m:mi>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>x</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                </m:mrow>
+                <m:mo>-</m:mo>
+                <m:msub>
+                  <m:mi>k</m:mi>
+                  <m:mi>n</m:mi>
+                </m:msub>
+                <m:mrow>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>x</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>|</m:mo>
+                  <m:mo>+</m:mo>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:msub>
+                  <m:mi>k</m:mi>
+                  <m:mi>n</m:mi>
+                </m:msub>
+                <m:mrow>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>x</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>|</m:mo>
+                  <m:mo>|</m:mo>
+                  <m:mi>f</m:mi>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>x</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                </m:mrow>
+                <m:mo>-</m:mo>
+                <m:msub>
+                  <m:mi>h</m:mi>
+                  <m:mi>n</m:mi>
+                </m:msub>
+                <m:mrow>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>x</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>≤</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:msub>
+                  <m:mi>M</m:mi>
+                  <m:mi>f</m:mi>
+                </m:msub>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                  <m:mi>g</m:mi>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>x</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>-</m:mo>
+                </m:mrow>
+                <m:msub>
+                  <m:mi>k</m:mi>
+                  <m:mi>n</m:mi>
+                </m:msub>
+                <m:mrow>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>x</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>|</m:mo>
+                  <m:mo>+</m:mo>
+                </m:mrow>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:msub>
+                    <m:mi>M</m:mi>
+                    <m:mi>g</m:mi>
+                  </m:msub>
+                  <m:mo>+</m:mo>
+                  <m:mn>1</m:mn>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                  <m:mi>f</m:mi>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>x</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>-</m:mo>
+                  <m:msub>
+                    <m:mi>h</m:mi>
+                    <m:mi>n</m:mi>
+                  </m:msub>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>x</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:mo>,</m:mo>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+        </m:mtable>
+      </m:math>
+    </equation>
+    <para id="id122226">which implies that <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mi>g</m:mi><m:mo>=</m:mo><m:mo movablelimits="true" form="prefix">lim</m:mo><m:mo>(</m:mo><m:msub><m:mi>h</m:mi><m:mi>n</m:mi></m:msub><m:msub><m:mi>k</m:mi><m:mi>n</m:mi></m:msub><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math></para>
+    <para id="id122273">If <m:math overflow="scroll"><m:mi>h</m:mi></m:math> is itself a step function, then
+it is obviously the uniform limit of the constant sequence
+<m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:mi>h</m:mi><m:mo>}</m:mo><m:mo>,</m:mo></m:mrow></m:math> which implies that <m:math overflow="scroll"><m:mi>h</m:mi></m:math> is integrable.</para>
+    <para id="id122312">Finally, if <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is continuous on <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>,</m:mo></m:mrow></m:math> it follows from
+<link target-id="fs-id1167583148827" document="m36178"/> that <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is the uniform limit of a sequence of step functions,
+whence <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>∈</m:mo><m:mi>I</m:mi><m:mo>(</m:mo><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math></para>
+</proof></rule>
+<exercise id="fs-id1170766969008"><problem id="fs-id1170768019435">
+    <para id="id122384"> Let <m:math overflow="scroll"><m:mi>f</m:mi></m:math> be the function defined on <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>1</m:mn><m:mo>]</m:mo></m:mrow></m:math> by
+<m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mo form="prefix">sin</m:mo><m:mo>(</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:math> if <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>≠</m:mo><m:mn>0</m:mn></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mn>0</m:mn><m:mo>)</m:mo><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math></para>
+    <list id="id122494" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid20"> Show that <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is continuous at every nonzero <m:math overflow="scroll"><m:mi>x</m:mi></m:math>
+and discontinuous at <m:math overflow="scroll"><m:mrow><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math>
+HINT: Observe that, on any interval <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mi>δ</m:mi><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math> the function <m:math overflow="scroll"><m:mrow><m:mo form="prefix">sin</m:mo><m:mo>(</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:math>
+attains both the values 1 and <m:math overflow="scroll"><m:mrow><m:mo>-</m:mo><m:mn>1</m:mn><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid21"> Show that <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is not integrable on <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>1</m:mn><m:mo>]</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+HINT: Suppose <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>=</m:mo><m:mo movablelimits="true" form="prefix">lim</m:mo><m:msub><m:mi>h</m:mi><m:mi>n</m:mi></m:msub><m:mo>.</m:mo></m:mrow></m:math>
+Choose <m:math overflow="scroll"><m:mi>N</m:mi></m:math> so that <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>-</m:mo></m:mrow><m:msub><m:mi>h</m:mi><m:mi>N</m:mi></m:msub><m:mrow><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mn>2</m:mn></m:mrow></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mo>[</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>1</m:mn><m:mo>]</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Let <m:math overflow="scroll"><m:mi>P</m:mi></m:math> be a partition for which <m:math overflow="scroll"><m:msub><m:mi>h</m:mi><m:mi>N</m:mi></m:msub></m:math> is constant on its open subintervals,
+and examine the situation for <m:math overflow="scroll"><m:mi>x</m:mi></m:math>'s in the interval <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid22"> Show that <m:math overflow="scroll"><m:mi>f</m:mi></m:math><emphasis effect="bold">is</emphasis> Riemann-integrable on <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>1</m:mn><m:mo>]</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Conclude that <m:math overflow="scroll"><m:mrow><m:mi>I</m:mi><m:mo>(</m:mo><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>)</m:mo></m:mrow></m:math> is a proper subset of <m:math overflow="scroll"><m:mrow><m:msub><m:mi>I</m:mi><m:mi>R</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></item>
+    </list>
+</problem></exercise>
+<exercise id="fs-id1170765565230"><problem id="fs-id1170784537305">
+    <list id="id122934" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid23"> Let <m:math overflow="scroll"><m:mi>f</m:mi></m:math> be an integrable function on <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Suppose <m:math overflow="scroll"><m:mi>g</m:mi></m:math> is a function for which
+<m:math overflow="scroll"><m:mrow><m:mi>g</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow></m:math> except for one point <m:math overflow="scroll"><m:mrow><m:mi>c</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Prove that <m:math overflow="scroll"><m:mi>g</m:mi></m:math> is integrable and that
+<m:math overflow="scroll"><m:mrow><m:mo>∫</m:mo><m:mi>g</m:mi><m:mo>=</m:mo><m:mo>∫</m:mo><m:mi>f</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+HINT: If <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>=</m:mo><m:mo movablelimits="true" form="prefix">lim</m:mo><m:msub><m:mi>h</m:mi><m:mi>n</m:mi></m:msub><m:mo>,</m:mo></m:mrow></m:math> define <m:math overflow="scroll"><m:mrow><m:msub><m:mi>k</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msub><m:mi>h</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>≠</m:mo><m:mi>c</m:mi></m:mrow></m:math>
+and <m:math overflow="scroll"><m:mrow><m:msub><m:mi>k</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math>
+Then use <link target-id="fs-id1164056907852" document="m36208"/>.
+</item>
+      <item id="uid24"> Again, let <m:math overflow="scroll"><m:mi>f</m:mi></m:math> be an integrable function on <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Suppose <m:math overflow="scroll"><m:mi>g</m:mi></m:math> is a function for which
+<m:math overflow="scroll"><m:mrow><m:mi>g</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:math> for all but a finite number of points
+<m:math overflow="scroll"><m:mrow><m:msub><m:mi>c</m:mi><m:mn>1</m:mn></m:msub><m:mo>,</m:mo><m:mo>...</m:mo><m:mo>,</m:mo><m:msub><m:mi>c</m:mi><m:mi>N</m:mi></m:msub><m:mo>∈</m:mo><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math> Prove that
+<m:math overflow="scroll"><m:mrow><m:mi>g</m:mi><m:mo>∈</m:mo><m:mi>I</m:mi><m:mo>(</m:mo><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math> and that <m:math overflow="scroll"><m:mrow><m:mo>∫</m:mo><m:mi>g</m:mi><m:mo>=</m:mo><m:mo>∫</m:mo><m:mi>f</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid25"> Suppose <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is a function on the closed interval <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>,</m:mo></m:mrow></m:math>
+that is uniformly continuous on the open interval <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Prove that <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is integrable on <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+HINT: Just reproduce the proof to <link target-id="fs-id1167583148827" document="m36178"/>.
+</item>
+    </list>
+</problem></exercise>
+<rule id="fs-id1170766239766"><label/><statement id="fs-id1170765675669">
+    <para id="id123475"><emphasis effect="bold">REMARK</emphasis>
+In view of part (b) of the preceding exercise, we see that
+whether a function <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is integrable or not is totally independent of the
+values of the function at a fixed finite set of points.
+Indeed, the function needn't even be defined at a fixed finite set of points, and still it can be integrable.
+This observation is helpful in many instances, e.g., in parts (d) and (e) of <link target-id="fs-id1164272774987" document="m36222"/>.</para>
+</statement></rule>
+<rule id="fs-id1170767945547" type="theorem"><statement id="fs-id1170767653994">
+    <para id="id123495"> The assignment <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>→</m:mo><m:mo>∫</m:mo><m:mi>f</m:mi></m:mrow></m:math> on <m:math overflow="scroll"><m:mrow><m:mi>I</m:mi><m:mo>(</m:mo><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>)</m:mo></m:mrow></m:math> satisfies the following properties.</para>
+    <list id="id123545" display="block" list-type="enumerated">
+      <item id="uid26"> (Linearity)  <m:math overflow="scroll"><m:mrow><m:mi>I</m:mi><m:mo>(</m:mo><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>)</m:mo></m:mrow></m:math> is a vector space, and
+<m:math overflow="scroll"><m:mrow><m:mo>∫</m:mo><m:mo>(</m:mo><m:mi>α</m:mi><m:mi>f</m:mi><m:mo>+</m:mo><m:mi>β</m:mi><m:mi>g</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mi>α</m:mi><m:mo>∫</m:mo><m:mi>f</m:mi><m:mo>+</m:mo><m:mi>β</m:mi><m:mo>∫</m:mo><m:mi>g</m:mi></m:mrow></m:math> for all
+<m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>,</m:mo><m:mi>g</m:mi><m:mo>∈</m:mo><m:mi>I</m:mi><m:mo>(</m:mo><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>)</m:mo></m:mrow></m:math>and <m:math overflow="scroll"><m:mrow><m:mi>α</m:mi><m:mo>,</m:mo><m:mi>β</m:mi><m:mo>∈</m:mo><m:mi>R</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid27"> (Positivity) If <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>≥</m:mo><m:mn>0</m:mn></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>,</m:mo></m:mrow></m:math> then <m:math overflow="scroll"><m:mrow><m:mo>∫</m:mo><m:mi>f</m:mi><m:mo>≥</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid28"> (Order-preserving) If <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>,</m:mo><m:mi>g</m:mi><m:mo>∈</m:mo><m:mi>I</m:mi><m:mo>(</m:mo><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>)</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>≤</m:mo><m:mi>g</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>,</m:mo></m:mrow></m:math>
+then <m:math overflow="scroll"><m:mrow><m:mo>∫</m:mo><m:mi>f</m:mi><m:mo>≤</m:mo><m:mo>∫</m:mo><m:mi>g</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid29">If <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>∈</m:mo><m:mi>I</m:mi><m:mo>(</m:mo><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math> then so is <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>f</m:mi><m:mo>|</m:mo><m:mo>,</m:mo></m:mrow></m:math>
+and <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mo>∫</m:mo><m:mi>f</m:mi><m:mo>|</m:mo><m:mo>≤</m:mo><m:mo>∫</m:mo><m:mo>|</m:mo><m:mi>f</m:mi><m:mo>|</m:mo><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid30">If <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is the uniform limit of functions <m:math overflow="scroll"><m:mrow><m:msub><m:mi>f</m:mi><m:mi>n</m:mi></m:msub><m:mo>,</m:mo></m:mrow></m:math>
+each of which is in <m:math overflow="scroll"><m:mrow><m:mi>I</m:mi><m:mo>(</m:mo><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math> then <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>∈</m:mo><m:mi>I</m:mi><m:mo>(</m:mo><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>)</m:mo></m:mrow></m:math>
+and <m:math overflow="scroll"><m:mrow><m:mo>∫</m:mo><m:mi>f</m:mi><m:mo>=</m:mo><m:mo movablelimits="true" form="prefix">lim</m:mo><m:mo>∫</m:mo><m:msub><m:mi>f</m:mi><m:mi>n</m:mi></m:msub><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid31">Let <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>u</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> be a sequence of functions in <m:math overflow="scroll"><m:mrow><m:mi>I</m:mi><m:mo>(</m:mo><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Suppose that for each <m:math overflow="scroll"><m:mi>n</m:mi></m:math> there is a number
+<m:math overflow="scroll"><m:mrow><m:msub><m:mi>m</m:mi><m:mi>n</m:mi></m:msub><m:mo>,</m:mo></m:mrow></m:math> for which <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msub><m:mi>u</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>|</m:mo><m:mo>≤</m:mo></m:mrow><m:msub><m:mi>m</m:mi><m:mi>n</m:mi></m:msub></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>,</m:mo></m:mrow></m:math>
+and such that the infinite series <m:math overflow="scroll"><m:mrow><m:mo>∑</m:mo><m:msub><m:mi>m</m:mi><m:mi>n</m:mi></m:msub></m:mrow></m:math> converges.
+Then the infinite series <m:math overflow="scroll"><m:mrow><m:mo>∑</m:mo><m:msub><m:mi>u</m:mi><m:mi>n</m:mi></m:msub></m:mrow></m:math> converges uniformly to an integrable function,
+and <m:math overflow="scroll"><m:mrow><m:mo>∫</m:mo><m:mo>∑</m:mo><m:msub><m:mi>u</m:mi><m:mi>n</m:mi></m:msub><m:mo>=</m:mo><m:mo>∑</m:mo><m:mo>∫</m:mo><m:msub><m:mi>u</m:mi><m:mi>n</m:mi></m:msub><m:mo>.</m:mo></m:mrow></m:math></item>
+    </list>
+</statement><proof id="fs-id1170781025883">
+    <para id="id124319">That <m:math overflow="scroll"><m:mrow><m:mi>I</m:mi><m:mo>(</m:mo><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>)</m:mo></m:mrow></m:math> is a vector space was proved in part (2) of <link target-id="fs-id1170765950456"/>.
+Let <m:math overflow="scroll"><m:mi>f</m:mi></m:math> and <m:math overflow="scroll"><m:mi>g</m:mi></m:math> be in <m:math overflow="scroll"><m:mrow><m:mi>I</m:mi><m:mo>(</m:mo><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math> and write
+<m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>=</m:mo><m:mo movablelimits="true" form="prefix">lim</m:mo><m:msub><m:mi>h</m:mi><m:mi>n</m:mi></m:msub></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>g</m:mi><m:mo>=</m:mo><m:mo movablelimits="true" form="prefix">lim</m:mo><m:msub><m:mi>k</m:mi><m:mi>n</m:mi></m:msub><m:mo>,</m:mo></m:mrow></m:math> where
+the <m:math overflow="scroll"><m:msub><m:mi>h</m:mi><m:mi>n</m:mi></m:msub></m:math>'s
+and the <m:math overflow="scroll"><m:msub><m:mi>k</m:mi><m:mi>n</m:mi></m:msub></m:math>'s are step functions.
+Then <m:math overflow="scroll"><m:mrow><m:mi>α</m:mi><m:mi>f</m:mi><m:mo>+</m:mo><m:mi>β</m:mi><m:mi>g</m:mi><m:mo>=</m:mo><m:mo movablelimits="true" form="prefix">lim</m:mo><m:mo>(</m:mo><m:mi>α</m:mi><m:msub><m:mi>h</m:mi><m:mi>n</m:mi></m:msub><m:mo>+</m:mo><m:mi>β</m:mi><m:msub><m:mi>k</m:mi><m:mi>n</m:mi></m:msub><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math>
+so that,
+by <link target-id="fs-id1164042787601" document="m36208"/> and the definition of the integral, we have</para>
+    <equation id="uid32">
+      <m:math overflow="scroll" mode="display">
+        <m:mtable displaystyle="true">
+          <m:mtr>
+            <m:mtd columnalign="right">
+              <m:mrow>
+                <m:mo>∫</m:mo>
+                <m:mo>(</m:mo>
+                <m:mi>α</m:mi>
+                <m:mi>f</m:mi>
+                <m:mo>+</m:mo>
+                <m:mi>β</m:mi>
+                <m:mi>g</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+            </m:mtd>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mo movablelimits="true" form="prefix">lim</m:mo>
+                <m:mo>∫</m:mo>
+                <m:mo>(</m:mo>
+                <m:mi>α</m:mi>
+                <m:msub>
+                  <m:mi>h</m:mi>
+                  <m:mi>n</m:mi>
+                </m:msub>
+                <m:mo>+</m:mo>
+                <m:mi>β</m:mi>
+                <m:msub>
+                  <m:mi>k</m:mi>
+                  <m:mi>n</m:mi>
+                </m:msub>
+                <m:mo>)</m:mo>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mo movablelimits="true" form="prefix">lim</m:mo>
+                <m:mo>(</m:mo>
+                <m:mi>α</m:mi>
+                <m:mo>∫</m:mo>
+                <m:msub>
+                  <m:mi>h</m:mi>
+                  <m:mi>n</m:mi>
+                </m:msub>
+                <m:mo>+</m:mo>
+                <m:mi>β</m:mi>
+                <m:mo>∫</m:mo>
+                <m:msub>
+                  <m:mi>k</m:mi>
+                  <m:mi>n</m:mi>
+                </m:msub>
+                <m:mo>)</m:mo>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mi>α</m:mi>
+                <m:mo movablelimits="true" form="prefix">lim</m:mo>
+                <m:mo>∫</m:mo>
+                <m:msub>
+                  <m:mi>h</m:mi>
+                  <m:mi>n</m:mi>
+                </m:msub>
+                <m:mo>+</m:mo>
+                <m:mi>β</m:mi>
+                <m:mo movablelimits="true" form="prefix">lim</m:mo>
+                <m:mo>∫</m:mo>
+                <m:msub>
+                  <m:mi>k</m:mi>
+                  <m:mi>n</m:mi>
+                </m:msub>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mi>α</m:mi>
+                <m:mo>∫</m:mo>
+                <m:mi>f</m:mi>
+                <m:mo>+</m:mo>
+                <m:mi>β</m:mi>
+                <m:mo>∫</m:mo>
+                <m:mi>g</m:mi>
+                <m:mo>,</m:mo>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+        </m:mtable>
+      </m:math>
+    </equation>
+    <para id="id124743">which proves part (1).</para>
+    <para id="id124749">Next, if <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>∈</m:mo><m:mi>I</m:mi><m:mo>(</m:mo><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>)</m:mo></m:mrow></m:math> satisfies <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>≥</m:mo><m:mn>0</m:mn></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>,</m:mo></m:mrow></m:math> let <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>l</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math>
+be a nonincreasing sequence of step functions that converges uniformly to <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+See part (d) of <link target-id="fs-id1170766144622"/>.
+Then <m:math overflow="scroll"><m:mrow><m:msub><m:mi>l</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>≥</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>≥</m:mo><m:mn>0</m:mn></m:mrow></m:math> for all <m:math overflow="scroll"><m:mi>x</m:mi></m:math> and all <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+So, again by <link target-id="fs-id1164042787601" document="m36208"/>, we have that</para>
+    <equation id="id124922">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mo>∫</m:mo>
+          <m:mi>f</m:mi>
+          <m:mo>=</m:mo>
+          <m:mo movablelimits="true" form="prefix">lim</m:mo>
+          <m:mo>∫</m:mo>
+          <m:msub>
+            <m:mi>l</m:mi>
+            <m:mi>n</m:mi>
+          </m:msub>
+          <m:mo>≥</m:mo>
+          <m:mn>0</m:mn>
+          <m:mo>.</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id124960">This proves part (2).</para>
+    <para id="id124966">Part (3) now follows by combining parts (1) and (2) just as in the proof of <link target-id="fs-id1164042787601" document="m36208"/>.</para>
+    <para id="id124970">To see part (4), let <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>∈</m:mo><m:mi>I</m:mi><m:mo>(</m:mo><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>)</m:mo></m:mrow></m:math> be given.
+Write <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>=</m:mo><m:mo movablelimits="true" form="prefix">lim</m:mo><m:msub><m:mi>h</m:mi><m:mi>n</m:mi></m:msub><m:mo>.</m:mo></m:mrow></m:math> Then <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo><m:mi>f</m:mi><m:mo>|</m:mo><m:mo>=</m:mo><m:mo movablelimits="true" form="prefix">lim</m:mo><m:mo>|</m:mo></m:mrow><m:msub><m:mi>h</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mo>|</m:mo><m:mo>.</m:mo></m:mrow></m:mrow></m:math> For</para>
+    <equation id="id125070">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mrow>
+            <m:mo>|</m:mo>
+            <m:mo>|</m:mo>
+            <m:mi>f</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>x</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>|</m:mo>
+            <m:mo>-</m:mo>
+            <m:mo>|</m:mo>
+          </m:mrow>
+          <m:msub>
+            <m:mi>h</m:mi>
+            <m:mi>n</m:mi>
+          </m:msub>
+          <m:mrow>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>x</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>|</m:mo>
+            <m:mo>|</m:mo>
+            <m:mo>≤</m:mo>
+            <m:mo>|</m:mo>
+            <m:mi>f</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>x</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>-</m:mo>
+          </m:mrow>
+          <m:msub>
+            <m:mi>h</m:mi>
+            <m:mi>n</m:mi>
+          </m:msub>
+          <m:mrow>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>x</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>|</m:mo>
+            <m:mo>.</m:mo>
+          </m:mrow>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id125158">Therefore, <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>f</m:mi><m:mo>|</m:mo></m:mrow></m:math> is integrable.
+Also,</para>
+    <equation id="id125178">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mrow>
+            <m:mo>∫</m:mo>
+            <m:mo>|</m:mo>
+            <m:mi>f</m:mi>
+            <m:mo>|</m:mo>
+            <m:mo>=</m:mo>
+            <m:mo movablelimits="true" form="prefix">lim</m:mo>
+            <m:mo>∫</m:mo>
+            <m:mo>|</m:mo>
+          </m:mrow>
+          <m:msub>
+            <m:mi>h</m:mi>
+            <m:mi>n</m:mi>
+          </m:msub>
+          <m:mrow>
+            <m:mo>|</m:mo>
+            <m:mo>≥</m:mo>
+            <m:mo movablelimits="true" form="prefix">lim</m:mo>
+            <m:mo>|</m:mo>
+            <m:mo>∫</m:mo>
+          </m:mrow>
+          <m:msub>
+            <m:mi>h</m:mi>
+            <m:mi>n</m:mi>
+          </m:msub>
+          <m:mrow>
+            <m:mo>|</m:mo>
+            <m:mo>=</m:mo>
+            <m:mo>|</m:mo>
+            <m:mo movablelimits="true" form="prefix">lim</m:mo>
+            <m:mo>∫</m:mo>
+          </m:mrow>
+          <m:msub>
+            <m:mi>h</m:mi>
+            <m:mi>n</m:mi>
+          </m:msub>
+          <m:mrow>
+            <m:mo>|</m:mo>
+            <m:mo>=</m:mo>
+            <m:mo>|</m:mo>
+            <m:mo>∫</m:mo>
+            <m:mi>f</m:mi>
+            <m:mo>|</m:mo>
+            <m:mo>.</m:mo>
+          </m:mrow>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id125283">To see part (5), let <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>f</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> be a sequence
+of elements of <m:math overflow="scroll"><m:mrow><m:mi>I</m:mi><m:mo>(</m:mo><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math> and suppose that <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>=</m:mo><m:mo movablelimits="true" form="prefix">lim</m:mo><m:msub><m:mi>f</m:mi><m:mi>n</m:mi></m:msub><m:mo>.</m:mo></m:mrow></m:math>
+For each <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>,</m:mo></m:mrow></m:math> let <m:math overflow="scroll"><m:msub><m:mi>h</m:mi><m:mi>n</m:mi></m:msub></m:math> be a step function on <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow></m:math>
+such that <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msub><m:mi>f</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>-</m:mo><m:msub><m:mi>h</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>n</m:mi></m:mrow></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Note also that it follows from parts (3) and (4) that</para>
+    <equation id="id125487">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mrow>
+            <m:mo>|</m:mo>
+            <m:mo>∫</m:mo>
+          </m:mrow>
+          <m:msub>
+            <m:mi>f</m:mi>
+            <m:mi>n</m:mi>
+          </m:msub>
+          <m:mo>-</m:mo>
+          <m:mo>∫</m:mo>
+          <m:msub>
+            <m:mi>h</m:mi>
+            <m:mi>n</m:mi>
+          </m:msub>
+          <m:mrow>
+            <m:mo>|</m:mo>
+            <m:mo>&lt;</m:mo>
+          </m:mrow>
+          <m:mfrac>
+            <m:mrow>
+              <m:mi>b</m:mi>
+              <m:mo>-</m:mo>
+              <m:mi>a</m:mi>
+            </m:mrow>
+            <m:mi>n</m:mi>
+          </m:mfrac>
+          <m:mo>.</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id125540">Now <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>h</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> converges uniformly to <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>.</m:mo></m:mrow></m:math> For,</para>
+    <equation id="uid33">
+      <m:math overflow="scroll" mode="display">
+        <m:mtable displaystyle="true">
+          <m:mtr>
+            <m:mtd columnalign="right">
+              <m:mrow>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                  <m:mi>f</m:mi>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>x</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>-</m:mo>
+                </m:mrow>
+                <m:msub>
+                  <m:mi>h</m:mi>
+                  <m:mi>n</m:mi>
+                </m:msub>
+                <m:mrow>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>x</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+            <m:mtd>
+              <m:mo>≤</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                  <m:mi>f</m:mi>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>x</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>-</m:mo>
+                </m:mrow>
+                <m:msub>
+                  <m:mi>f</m:mi>
+                  <m:mi>n</m:mi>
+                </m:msub>
+                <m:mrow>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>x</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>|</m:mo>
+                  <m:mo>+</m:mo>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:msub>
+                  <m:mi>f</m:mi>
+                  <m:mi>n</m:mi>
+                </m:msub>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>x</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mo>-</m:mo>
+                <m:msub>
+                  <m:mi>h</m:mi>
+                  <m:mi>n</m:mi>
+                </m:msub>
+                <m:mrow>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>x</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>&lt;</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                  <m:mi>f</m:mi>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>x</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>-</m:mo>
+                </m:mrow>
+                <m:msub>
+                  <m:mi>f</m:mi>
+                  <m:mi>n</m:mi>
+                </m:msub>
+                <m:mrow>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>x</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>|</m:mo>
+                  <m:mo>+</m:mo>
+                </m:mrow>
+                <m:mfrac>
+                  <m:mn>1</m:mn>
+                  <m:mi>n</m:mi>
+                </m:mfrac>
+                <m:mo>,</m:mo>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+        </m:mtable>
+      </m:math>
+    </equation>
+    <para id="id125767">showing that <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>=</m:mo><m:mo movablelimits="true" form="prefix">lim</m:mo><m:msub><m:mi>h</m:mi><m:mi>n</m:mi></m:msub><m:mo>.</m:mo></m:mrow></m:math>
+Therefore, <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>∈</m:mo><m:mi>I</m:mi><m:mo>(</m:mo><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math> Moreover,
+<m:math overflow="scroll"><m:mrow><m:mo>∫</m:mo><m:mi>f</m:mi><m:mo>=</m:mo><m:mo movablelimits="true" form="prefix">lim</m:mo><m:mo>∫</m:mo><m:msub><m:mi>h</m:mi><m:mi>n</m:mi></m:msub><m:mo>.</m:mo></m:mrow></m:math>
+Finally, <m:math overflow="scroll"><m:mrow><m:mo>∫</m:mo><m:mi>f</m:mi><m:mo>=</m:mo><m:mo movablelimits="true" form="prefix">lim</m:mo><m:mo>∫</m:mo><m:msub><m:mi>f</m:mi><m:mi>n</m:mi></m:msub><m:mo>,</m:mo></m:mrow></m:math> for</para>
+    <equation id="uid34">
+      <m:math overflow="scroll" mode="display">
+        <m:mtable displaystyle="true">
+          <m:mtr>
+            <m:mtd columnalign="right">
+              <m:mrow>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                  <m:mo>∫</m:mo>
+                  <m:mi>f</m:mi>
+                  <m:mo>-</m:mo>
+                  <m:mo>∫</m:mo>
+                </m:mrow>
+                <m:msub>
+                  <m:mi>f</m:mi>
+                  <m:mi>n</m:mi>
+                </m:msub>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+            <m:mtd>
+              <m:mo>≤</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                  <m:mo>∫</m:mo>
+                  <m:mi>f</m:mi>
+                  <m:mo>-</m:mo>
+                  <m:mo>∫</m:mo>
+                </m:mrow>
+                <m:msub>
+                  <m:mi>h</m:mi>
+                  <m:mi>n</m:mi>
+                </m:msub>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                  <m:mo>+</m:mo>
+                  <m:mo>|</m:mo>
+                  <m:mo>∫</m:mo>
+                </m:mrow>
+                <m:msub>
+                  <m:mi>h</m:mi>
+                  <m:mi>n</m:mi>
+                </m:msub>
+                <m:mo>-</m:mo>
+                <m:mo>∫</m:mo>
+                <m:msub>
+                  <m:mi>f</m:mi>
+                  <m:mi>n</m:mi>
+                </m:msub>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>≤</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                  <m:mo>∫</m:mo>
+                  <m:mi>f</m:mi>
+                  <m:mo>-</m:mo>
+                  <m:mo>∫</m:mo>
+                </m:mrow>
+                <m:msub>
+                  <m:mi>h</m:mi>
+                  <m:mi>n</m:mi>
+                </m:msub>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                  <m:mo>+</m:mo>
+                </m:mrow>
+                <m:mfrac>
+                  <m:mrow>
+                    <m:mi>b</m:mi>
+                    <m:mo>-</m:mo>
+                    <m:mi>a</m:mi>
+                  </m:mrow>
+                  <m:mi>n</m:mi>
+                </m:mfrac>
+                <m:mo>.</m:mo>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+        </m:mtable>
+      </m:math>
+    </equation>
+    <para id="id126053">This completes the proof of part (5).</para>
+    <para id="id126058">Part (6) follows directly from part (5) and the Weierstrass M Test (<link target-id="fs-id2892663" document="m36178"/>).
+For, part (1) of that theorem implies that the infinite series <m:math overflow="scroll"><m:mrow><m:mo>∑</m:mo><m:msub><m:mi>u</m:mi><m:mi>n</m:mi></m:msub></m:mrow></m:math> converges uniformly,
+and then <m:math overflow="scroll"><m:mrow><m:mo>∫</m:mo><m:mo>∑</m:mo><m:msub><m:mi>u</m:mi><m:mi>n</m:mi></m:msub><m:mo>=</m:mo><m:mo>∑</m:mo><m:mo>∫</m:mo><m:msub><m:mi>u</m:mi><m:mi>n</m:mi></m:msub></m:mrow></m:math> follows from part (5) of this theorem.</para>
+</proof></rule>
+    <para id="id126115">As a final extension of our notion of integral, we define
+the integral of certain complex-valued functions.</para>
+<definition id="fs-id1170788106768"><term/><meaning id="fs-id1170765927338">
+    <para id="id126120"> Let <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow></m:math> be a fixed bounded and closed interval.
+A complex-valued function <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>=</m:mo><m:mi>u</m:mi><m:mo>+</m:mo><m:mi>i</m:mi><m:mi>v</m:mi></m:mrow></m:math> is called <emphasis effect="italics">integrable</emphasis> if its
+real and imaginary parts <m:math overflow="scroll"><m:mi>u</m:mi></m:math> and <m:math overflow="scroll"><m:mi>v</m:mi></m:math> are integrable.
+In this case, we define</para>
+    <equation id="id126192">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:msubsup>
+            <m:mo>∫</m:mo>
+            <m:mi>a</m:mi>
+            <m:mi>b</m:mi>
+          </m:msubsup>
+          <m:mi>f</m:mi>
+          <m:mo>=</m:mo>
+          <m:msubsup>
+            <m:mo>∫</m:mo>
+            <m:mi>a</m:mi>
+            <m:mi>b</m:mi>
+          </m:msubsup>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>u</m:mi>
+            <m:mo>+</m:mo>
+            <m:mi>i</m:mi>
+            <m:mi>v</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>=</m:mo>
+          <m:msubsup>
+            <m:mo>∫</m:mo>
+            <m:mi>a</m:mi>
+            <m:mi>b</m:mi>
+          </m:msubsup>
+          <m:mi>u</m:mi>
+          <m:mo>+</m:mo>
+          <m:mi>i</m:mi>
+          <m:msubsup>
+            <m:mo>∫</m:mo>
+            <m:mi>a</m:mi>
+            <m:mi>b</m:mi>
+          </m:msubsup>
+          <m:mi>v</m:mi>
+          <m:mo>.</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+</meaning></definition>
+<rule id="fs-id1170766971850" type="theorem"><statement id="fs-id1170763103721">
+    <list id="id126282" display="block" list-type="enumerated">
+      <item id="uid35">The set of all integrable complex-valued functions on <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow></m:math>
+is a vector space over the field of complex numbers, and
+<equation id="id126318"><m:math overflow="scroll" mode="display"><m:mrow><m:msubsup><m:mo>∫</m:mo><m:mi>a</m:mi><m:mi>b</m:mi></m:msubsup><m:mrow><m:mo>(</m:mo><m:mi>α</m:mi><m:mi>f</m:mi><m:mo>+</m:mo><m:mi>β</m:mi><m:mi>g</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>α</m:mi><m:msubsup><m:mo>∫</m:mo><m:mi>a</m:mi><m:mi>b</m:mi></m:msubsup><m:mi>f</m:mi><m:mo>+</m:mo><m:mi>β</m:mi><m:msubsup><m:mo>∫</m:mo><m:mi>a</m:mi><m:mi>b</m:mi></m:msubsup><m:mi>g</m:mi></m:mrow></m:math></equation>
+for all integrable complex-valued functions <m:math overflow="scroll"><m:mi>f</m:mi></m:math> and <m:math overflow="scroll"><m:mi>g</m:mi></m:math> and all
+complex numbers <m:math overflow="scroll"><m:mi>α</m:mi></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>β</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid36">If <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is an integrable complex-valued function on <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>,</m:mo></m:mrow></m:math>
+then so is <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>f</m:mi><m:mo>|</m:mo><m:mo>,</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msubsup><m:mo>∫</m:mo><m:mi>a</m:mi><m:mi>b</m:mi></m:msubsup><m:mrow><m:mi>f</m:mi><m:mo>|</m:mo><m:mo>≤</m:mo></m:mrow><m:msubsup><m:mo>∫</m:mo><m:mi>a</m:mi><m:mi>b</m:mi></m:msubsup><m:mrow><m:mo>|</m:mo><m:mi>f</m:mi><m:mo>|</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></item>
+    </list>
+</statement>
+<proof id="fs-id1170765039925">
+    <para id="id126541"> We leave the verification of part (1) to the exercise that follows.</para>
+    <para id="id126549">To see part (2), suppose that <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is integrable,
+and write <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>=</m:mo><m:mi>u</m:mi><m:mo>+</m:mo><m:mi>i</m:mi><m:mi>v</m:mi><m:mo>.</m:mo></m:mrow></m:math> Then <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo><m:mi>f</m:mi><m:mo>|</m:mo></m:mrow><m:mo>=</m:mo><m:msqrt><m:mrow><m:msup><m:mi>u</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mi>v</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:msqrt><m:mo>,</m:mo></m:mrow></m:math>
+so that <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>f</m:mi><m:mo>|</m:mo></m:mrow></m:math> is integrable by <link target-id="fs-id1170765950456"/> and part (e) of <link target-id="fs-id1170766144622"/>.
+Now write <m:math overflow="scroll"><m:mrow><m:mi>z</m:mi><m:mo>=</m:mo><m:msubsup><m:mo>∫</m:mo><m:mi>a</m:mi><m:mi>b</m:mi></m:msubsup><m:mi>f</m:mi><m:mo>,</m:mo></m:mrow></m:math> and write <m:math overflow="scroll"><m:mi>z</m:mi></m:math> in polar coordinates as <m:math overflow="scroll"><m:mrow><m:mi>z</m:mi><m:mo>=</m:mo><m:mi>r</m:mi><m:msup><m:mi>e</m:mi><m:mrow><m:mi>i</m:mi><m:mi>θ</m:mi></m:mrow></m:msup><m:mo>,</m:mo></m:mrow></m:math>
+where <m:math overflow="scroll"><m:mrow><m:mrow><m:mi>r</m:mi><m:mo>=</m:mo><m:mo>|</m:mo><m:mi>z</m:mi><m:mo>|</m:mo><m:mo>=</m:mo><m:mo>|</m:mo></m:mrow><m:msubsup><m:mo>∫</m:mo><m:mi>a</m:mi><m:mi>b</m:mi></m:msubsup><m:mrow><m:mi>f</m:mi><m:mo>|</m:mo><m:mo>.</m:mo></m:mrow></m:mrow></m:math>
+(See <link target-id="fs-id1172016573702" document="m36196"/>.)
+Define a function <m:math overflow="scroll"><m:mi>g</m:mi></m:math> by <m:math overflow="scroll"><m:mrow><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>e</m:mi><m:mrow><m:mo>-</m:mo><m:mi>i</m:mi><m:mi>θ</m:mi></m:mrow></m:msup><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> and
+notice that <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>g</m:mi><m:mo>|</m:mo><m:mo>=</m:mo><m:mo>|</m:mo><m:mi>f</m:mi><m:mo>|</m:mo><m:mo>.</m:mo></m:mrow></m:math> Then <m:math overflow="scroll"><m:mrow><m:msubsup><m:mo>∫</m:mo><m:mi>a</m:mi><m:mi>b</m:mi></m:msubsup><m:mi>g</m:mi><m:mo>=</m:mo><m:msup><m:mi>e</m:mi><m:mrow><m:mo>-</m:mo><m:mi>i</m:mi><m:mi>θ</m:mi></m:mrow></m:msup><m:msubsup><m:mo>∫</m:mo><m:mi>a</m:mi><m:mi>b</m:mi></m:msubsup><m:mi>f</m:mi><m:mo>=</m:mo><m:mi>r</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+which is a real number.
+Writing <m:math overflow="scroll"><m:mrow><m:mi>g</m:mi><m:mo>=</m:mo><m:mover accent="true"><m:mi>u</m:mi><m:mo>^</m:mo></m:mover><m:mo>+</m:mo><m:mi>i</m:mi><m:mover accent="true"><m:mi>v</m:mi><m:mo>^</m:mo></m:mover><m:mo>,</m:mo></m:mrow></m:math> we then have that
+<m:math overflow="scroll"><m:mrow><m:mi>r</m:mi><m:mo>=</m:mo><m:mo>∫</m:mo><m:mover accent="true"><m:mi>u</m:mi><m:mo>^</m:mo></m:mover><m:mo>+</m:mo><m:mi>i</m:mi><m:mo>∫</m:mo><m:mover accent="true"><m:mi>v</m:mi><m:mo>^</m:mo></m:mover><m:mo>,</m:mo></m:mrow></m:math> implying that <m:math overflow="scroll"><m:mrow><m:mo>∫</m:mo><m:mover accent="true"><m:mi>v</m:mi><m:mo>^</m:mo></m:mover><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math> So,</para>
+    <equation id="uid37">
+      <m:math overflow="scroll" mode="display">
+        <m:mtable displaystyle="true">
+          <m:mtr>
+            <m:mtd columnalign="right">
+              <m:mrow>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:msubsup>
+                  <m:mo>∫</m:mo>
+                  <m:mi>a</m:mi>
+                  <m:mi>b</m:mi>
+                </m:msubsup>
+                <m:mrow>
+                  <m:mi>f</m:mi>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mi>r</m:mi>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:msubsup>
+                  <m:mo>∫</m:mo>
+                  <m:mi>a</m:mi>
+                  <m:mi>b</m:mi>
+                </m:msubsup>
+                <m:mi>g</m:mi>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:msubsup>
+                  <m:mo>∫</m:mo>
+                  <m:mi>a</m:mi>
+                  <m:mi>b</m:mi>
+                </m:msubsup>
+                <m:mover accent="true">
+                  <m:mi>u</m:mi>
+                  <m:mo>^</m:mo>
+                </m:mover>
+                <m:mo>+</m:mo>
+                <m:mi>i</m:mi>
+                <m:msubsup>
+                  <m:mo>∫</m:mo>
+                  <m:mi>a</m:mi>
+                  <m:mi>b</m:mi>
+                </m:msubsup>
+                <m:mover accent="true">
+                  <m:mi>v</m:mi>
+                  <m:mo>^</m:mo>
+                </m:mover>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:msubsup>
+                  <m:mo>∫</m:mo>
+                  <m:mi>a</m:mi>
+                  <m:mi>b</m:mi>
+                </m:msubsup>
+                <m:mover accent="true">
+                  <m:mi>u</m:mi>
+                  <m:mo>^</m:mo>
+                </m:mover>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:msubsup>
+                  <m:mo>∫</m:mo>
+                  <m:mi>a</m:mi>
+                  <m:mi>b</m:mi>
+                </m:msubsup>
+                <m:mover accent="true">
+                  <m:mi>u</m:mi>
+                  <m:mo>^</m:mo>
+                </m:mover>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>≤</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:msubsup>
+                  <m:mo>∫</m:mo>
+                  <m:mi>a</m:mi>
+                  <m:mi>b</m:mi>
+                </m:msubsup>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                  <m:mover accent="true">
+                    <m:mi>u</m:mi>
+                    <m:mo>^</m:mo>
+                  </m:mover>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>≤</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:msubsup>
+                  <m:mo>∫</m:mo>
+                  <m:mi>a</m:mi>
+                  <m:mi>b</m:mi>
+                </m:msubsup>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                  <m:mi>g</m:mi>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:msubsup>
+                  <m:mo>∫</m:mo>
+                  <m:mi>a</m:mi>
+                  <m:mi>b</m:mi>
+                </m:msubsup>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                  <m:mi>f</m:mi>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:mo>,</m:mo>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+        </m:mtable>
+      </m:math>
+    </equation>
+    <para id="id127264">as desired.</para>
+</proof></rule>
+<exercise id="fs-id1170766382204"><problem id="fs-id1170768823449">
+    <para id="id127270"> Prove part (1) of the preceding theorem.</para>
+    <para id="id127283">HINT: Break <m:math overflow="scroll"><m:mrow><m:mi>α</m:mi><m:mo>,</m:mo><m:mi>β</m:mi><m:mo>,</m:mo><m:mo>∫</m:mo><m:mi>f</m:mi><m:mo>,</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mo>∫</m:mo><m:mi>g</m:mi></m:mrow></m:math> into real and imaginary parts.</para>
+</problem></exercise>
+  </content>
+</document>

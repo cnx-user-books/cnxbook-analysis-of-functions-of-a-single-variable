@@ -1,0 +1,302 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML">
+  <title>Deeper Analytic Properties of Continuous Functions</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m36167</md:content-id>
+  <md:title>Deeper Analytic Properties of Continuous Functions</md:title>
+  <md:abstract>We collect here some theorems that show some of the consequences
+of continuity.
+Some of the theorems apply to functions either of
+a real variable or of a complex variable,
+while others apply only to functions of a real variable.
+We begin with what may be the most famous such result, and this one is about functions of a real variable.</md:abstract>
+  <md:uuid>cacbb3ae-c328-448c-bdaf-b116060a1151</md:uuid>
+</metadata>
+
+<content>
+    <para id="id62159">We collect here some theorems that show some of the consequences
+of continuity.
+Some of the theorems apply to functions either of
+a real variable or of a complex variable,
+while others apply only to functions of a real variable.
+We begin with what may be the most famous such result, and this one is about functions of a real variable.</para>
+<rule id="fs-id3847303" type="theorem"><title>Intermediate Value Theorem</title><statement id="fs-id1169185688552">
+    <para id="id62167">
+If <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>:</m:mo><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>→</m:mo><m:mi>R</m:mi></m:mrow></m:math> is a
+real-valued function that is continuous at each point of the closed interval <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>,</m:mo></m:mrow></m:math>
+and if <m:math overflow="scroll"><m:mi>v</m:mi></m:math> is a number (value) between the numbers <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>b</m:mi><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math> then there exists a point <m:math overflow="scroll"><m:mi>c</m:mi></m:math> between <m:math overflow="scroll"><m:mi>a</m:mi></m:math> and <m:math overflow="scroll"><m:mi>b</m:mi></m:math> such that <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mi>v</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+</statement>
+<proof id="fs-id1169171303589">
+    <para id="id62830">If <m:math overflow="scroll"><m:mrow><m:mi>v</m:mi><m:mo>=</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow></m:math> or <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>b</m:mi><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math> we are done. Suppose then, without loss of generality, that <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo><m:mo>&lt;</m:mo><m:mi>v</m:mi><m:mo>&lt;</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>b</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math> Let <m:math overflow="scroll"><m:mi>S</m:mi></m:math> be the set of all
+<m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow></m:math> such that <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>≤</m:mo><m:mi>v</m:mi><m:mo>,</m:mo></m:mrow></m:math> and note that <m:math overflow="scroll"><m:mi>S</m:mi></m:math> is nonempty and bounded above.
+(<m:math overflow="scroll"><m:mrow><m:mi>a</m:mi><m:mo>∈</m:mo><m:mi>S</m:mi><m:mo>,</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mi>b</m:mi></m:math> is an upper bound for <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math>)
+Let <m:math overflow="scroll"><m:mrow><m:mi>c</m:mi><m:mo>=</m:mo><m:mo movablelimits="true" form="prefix">sup</m:mo><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math> Then there exists a sequence
+<m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> of elements of <m:math overflow="scroll"><m:mi>S</m:mi></m:math> that converges to <m:math overflow="scroll"><m:mrow><m:mi>c</m:mi><m:mo>.</m:mo></m:mrow></m:math> (See <link target-id="fs-id1172694598035" document="m36157"/>.)
+So, <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mo movablelimits="true" form="prefix">lim</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mo>)</m:mo></m:mrow></m:mrow></m:math> by <link target-id="fs-id1166304708413" document="m36150"/>.
+Hence, <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo><m:mo>≤</m:mo><m:mi>v</m:mi><m:mo>.</m:mo></m:mrow></m:math> (Why?)</para>
+    <para id="id63121">Now, arguing by contradiction, if <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo><m:mo>&lt;</m:mo><m:mi>v</m:mi><m:mo>,</m:mo></m:mrow></m:math> let <m:math overflow="scroll"><m:mi>ϵ</m:mi></m:math> be the positive number <m:math overflow="scroll"><m:mrow><m:mi>v</m:mi><m:mo>-</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Because <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is continuous at <m:math overflow="scroll"><m:mrow><m:mi>c</m:mi><m:mo>,</m:mo></m:mrow></m:math> there must exist a <m:math overflow="scroll"><m:mrow><m:mi>δ</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn></m:mrow></m:math> such that <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>y</m:mi><m:mo>)</m:mo><m:mo>-</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mi>ϵ</m:mi></m:mrow></m:math> whenever <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>y</m:mi><m:mo>-</m:mo><m:mi>c</m:mi><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mi>δ</m:mi></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>y</m:mi><m:mo>∈</m:mo><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Since any smaller <m:math overflow="scroll"><m:mi>δ</m:mi></m:math> satisfies the same condition, we may
+also assume that <m:math overflow="scroll"><m:mrow><m:mi>δ</m:mi><m:mo>&lt;</m:mo><m:mi>b</m:mi><m:mo>-</m:mo><m:mi>c</m:mi><m:mo>.</m:mo></m:mrow></m:math> Consider <m:math overflow="scroll"><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mi>c</m:mi><m:mo>+</m:mo><m:mi>δ</m:mi><m:mo>/</m:mo><m:mn>2</m:mn><m:mo>.</m:mo></m:mrow></m:math>
+Then <m:math overflow="scroll"><m:mrow><m:mi>y</m:mi><m:mo>∈</m:mo><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>,</m:mo><m:mspace width="3.33333pt"/><m:mo>|</m:mo><m:mi>y</m:mi><m:mo>-</m:mo><m:mi>c</m:mi><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mi>δ</m:mi><m:mo>,</m:mo></m:mrow></m:math> and so <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>y</m:mi><m:mo>)</m:mo><m:mo>-</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mi>ϵ</m:mi><m:mo>.</m:mo></m:mrow></m:math> Hence <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>y</m:mi><m:mo>)</m:mo><m:mo>&lt;</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo><m:mo>+</m:mo><m:mi>ϵ</m:mi><m:mo>=</m:mo><m:mi>v</m:mi><m:mo>,</m:mo></m:mrow></m:math> which implies that <m:math overflow="scroll"><m:mrow><m:mi>y</m:mi><m:mo>∈</m:mo><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+But, since <m:math overflow="scroll"><m:mrow><m:mi>c</m:mi><m:mo>=</m:mo><m:mo movablelimits="true" form="prefix">sup</m:mo><m:mi>S</m:mi><m:mo>,</m:mo></m:mrow></m:math><m:math overflow="scroll"><m:mi>c</m:mi></m:math> must satisfy
+<m:math overflow="scroll"><m:mrow><m:mi>c</m:mi><m:mo>≥</m:mo><m:mi>y</m:mi><m:mo>=</m:mo><m:mi>c</m:mi><m:mo>+</m:mo><m:mi>δ</m:mi><m:mo>/</m:mo><m:mn>2</m:mn><m:mo>.</m:mo></m:mrow></m:math> This is a contradiction, so <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mi>v</m:mi><m:mo>,</m:mo></m:mrow></m:math> and the theorem is proved.</para>
+</proof></rule>
+    <para id="id63552">The Intermediate Value Theorem tells us something qualitative about the range of a continuous function
+on an interval <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>.</m:mo></m:mrow></m:math> It tells us that the range is “connected;”
+i.e., if the range contains two points <m:math overflow="scroll"><m:mi>c</m:mi></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>d</m:mi><m:mo>,</m:mo></m:mrow></m:math> then the range contains all the points between <m:math overflow="scroll"><m:mi>c</m:mi></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>d</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+It is difficult to think what the analogous assertion would be for functions of a complex variable,
+since “between” doesn't mean anything for complex numbers.
+We will eventually prove something called the Open Mapping Theorem in <link document="m36240"/>
+that could be regarded as the complex analog of the Intermediate Value Theorem.</para>
+    <para id="id63621">The next theorem is about functions of either a real or a complex variable.</para>
+<rule id="fs-id1169165815795" type="theorem"><statement id="fs-id1169186125747">
+    <para id="id63625">
+Let <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>:</m:mo><m:mi>S</m:mi><m:mo>→</m:mo><m:mi>C</m:mi></m:mrow></m:math> be a continuous function,
+and let <m:math overflow="scroll"><m:mi>C</m:mi></m:math> be a compact (closed and bounded) subset of <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Then the image <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>C</m:mi><m:mo>)</m:mo></m:mrow></m:math> of <m:math overflow="scroll"><m:mi>C</m:mi></m:math> is also compact.
+That is, the continuous image of a compact set is compact.</para>
+</statement>
+<proof id="fs-id4289837">
+    <para id="id63701">First, suppose <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>C</m:mi><m:mo>)</m:mo></m:mrow></m:math> is not bounded. Thus, let <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> be a sequence of elements of <m:math overflow="scroll"><m:mi>C</m:mi></m:math> such that, for each <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>,</m:mo></m:mrow></m:math><m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mo>)</m:mo><m:mo>|</m:mo><m:mo>&gt;</m:mo><m:mi>n</m:mi><m:mo>.</m:mo></m:mrow></m:math> By the
+Bolzano-Weierstrass Theorem, the sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> has a convergent subsequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>x</m:mi><m:msub><m:mi>n</m:mi><m:mi>k</m:mi></m:msub></m:msub><m:mo>}</m:mo><m:mo>.</m:mo></m:mrow></m:math> Let <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mo movablelimits="true" form="prefix">lim</m:mo><m:msub><m:mi>x</m:mi><m:msub><m:mi>n</m:mi><m:mi>k</m:mi></m:msub></m:msub><m:mo>.</m:mo></m:mrow></m:math> Then <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mi>C</m:mi></m:mrow></m:math> because <m:math overflow="scroll"><m:mi>C</m:mi></m:math>is a closed subset of <m:math overflow="scroll"><m:mrow><m:mi>C</m:mi><m:mo>.</m:mo></m:mrow></m:math> Co, <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mo movablelimits="true" form="prefix">lim</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:msub><m:mi>x</m:mi><m:msub><m:mi>n</m:mi><m:mi>k</m:mi></m:msub></m:msub><m:mo>)</m:mo></m:mrow></m:mrow></m:math> by <link target-id="fs-id1172694598035" document="m36157"/>. But since <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo><m:mi>f</m:mi></m:mrow><m:mrow><m:mo>(</m:mo><m:msub><m:mi>x</m:mi><m:msub><m:mi>n</m:mi><m:mi>k</m:mi></m:msub></m:msub><m:mo>)</m:mo></m:mrow><m:mrow><m:mo>|</m:mo><m:mo>&gt;</m:mo></m:mrow><m:msub><m:mi>n</m:mi><m:mi>k</m:mi></m:msub><m:mo>,</m:mo></m:mrow></m:math> the sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:msub><m:mi>x</m:mi><m:msub><m:mi>n</m:mi><m:mi>k</m:mi></m:msub></m:msub><m:mo>)</m:mo></m:mrow><m:mo>}</m:mo></m:mrow></m:math> is not bounded, so cannot be convergent.
+Hence, we have arrived at a contradiction, and the set <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>C</m:mi><m:mo>)</m:mo></m:mrow></m:math> must be bounded.</para>
+    <para id="id64046">Now, we must show that the image <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>C</m:mi><m:mo>)</m:mo></m:mrow></m:math> is closed.
+Thus, let <m:math overflow="scroll"><m:mi>y</m:mi></m:math> be a limit point of the image <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>C</m:mi><m:mo>)</m:mo></m:mrow></m:math> of <m:math overflow="scroll"><m:mrow><m:mi>C</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+and let <m:math overflow="scroll"><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mo movablelimits="true" form="prefix">lim</m:mo><m:msub><m:mi>y</m:mi><m:mi>n</m:mi></m:msub></m:mrow></m:math> where each <m:math overflow="scroll"><m:mrow><m:msub><m:mi>y</m:mi><m:mi>n</m:mi></m:msub><m:mo>∈</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>C</m:mi><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math>
+For each <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>,</m:mo></m:mrow></m:math> let <m:math overflow="scroll"><m:mrow><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mo>∈</m:mo><m:mi>C</m:mi></m:mrow></m:math> satisfy <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msub><m:mi>y</m:mi><m:mi>n</m:mi></m:msub><m:mo>.</m:mo></m:mrow></m:math>
+Again, using the Bolzano-Weierstrass Theorem, let <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>x</m:mi><m:msub><m:mi>n</m:mi><m:mi>k</m:mi></m:msub></m:msub><m:mo>}</m:mo></m:mrow></m:math>
+be a convergent subsequence of the bounded sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo><m:mo>,</m:mo></m:mrow></m:math>
+and write <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mo movablelimits="true" form="prefix">lim</m:mo><m:msub><m:mi>x</m:mi><m:msub><m:mi>n</m:mi><m:mi>k</m:mi></m:msub></m:msub><m:mo>.</m:mo></m:mrow></m:math>
+Then <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mi>C</m:mi><m:mo>,</m:mo></m:mrow></m:math> since <m:math overflow="scroll"><m:mi>C</m:mi></m:math> is closed, and from <link target-id="fs-id1172694598035" document="m36157"/></para>
+    <equation id="id64328">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mi>y</m:mi>
+          <m:mo>=</m:mo>
+          <m:mo movablelimits="true" form="prefix">lim</m:mo>
+          <m:mi>f</m:mi>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:msub>
+              <m:mi>x</m:mi>
+              <m:mi>n</m:mi>
+            </m:msub>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>=</m:mo>
+          <m:mo movablelimits="true" form="prefix">lim</m:mo>
+          <m:mi>f</m:mi>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:msub>
+              <m:mi>x</m:mi>
+              <m:msub>
+                <m:mi>n</m:mi>
+                <m:mi>k</m:mi>
+              </m:msub>
+            </m:msub>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>=</m:mo>
+          <m:mi>f</m:mi>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>x</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>,</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id64406">showing that <m:math overflow="scroll"><m:mrow><m:mi>y</m:mi><m:mo>∈</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>C</m:mi><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math> implying that <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>C</m:mi><m:mo>)</m:mo></m:mrow></m:math> is closed.</para>
+</proof></rule>
+
+    <para id="id64452">This theorem tells us something about the range of a continuous function of a real or complex variable.
+It says that if a subset of the domain is closed and bounded, so is the image of that subset.</para>
+    <para id="id64457">The next theorem is about continuous real-valued functions of a complex variable,
+and it is one of the theorems to remember.</para>
+<rule id="fs-id1169166022775" type="theorem"><statement id="fs-id1169180013382">
+    <para id="id64461">
+Let <m:math overflow="scroll"><m:mi>f</m:mi></m:math> be a continuous real-valued function on a compact
+subset <m:math overflow="scroll"><m:mi>S</m:mi></m:math> of <m:math overflow="scroll"><m:mrow><m:mi>C</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Then <m:math overflow="scroll"><m:mi>f</m:mi></m:math> attains both a maximum and a minimum
+value on <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+That is, there exist points <m:math overflow="scroll"><m:msub><m:mi>z</m:mi><m:mn>1</m:mn></m:msub></m:math> and <m:math overflow="scroll"><m:msub><m:mi>z</m:mi><m:mn>2</m:mn></m:msub></m:math> in <m:math overflow="scroll"><m:mi>S</m:mi></m:math> such that
+<m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:msub><m:mi>z</m:mi><m:mn>1</m:mn></m:msub><m:mo>)</m:mo></m:mrow><m:mo>≤</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>≤</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:msub><m:mi>z</m:mi><m:mn>2</m:mn></m:msub><m:mo>)</m:mo></m:mrow></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>z</m:mi><m:mo>∈</m:mo><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+</statement>
+<proof id="fs-id1169179912658">
+    <para id="id64632">
+We prove that <m:math overflow="scroll"><m:mi>f</m:mi></m:math> attains a maximum value, leaving the
+fact that <m:math overflow="scroll"><m:mi>f</m:mi></m:math> attains a minimum value to the exercise that follows.
+Let <m:math overflow="scroll"><m:msub><m:mi>M</m:mi><m:mn>0</m:mn></m:msub></m:math> be the supremum of the set of all numbers <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:math> for <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math> (How do we know that this supremum
+exists?) We will show that there exists an <m:math overflow="scroll"><m:mrow><m:msub><m:mi>z</m:mi><m:mn>2</m:mn></m:msub><m:mo>∈</m:mo><m:mi>S</m:mi></m:mrow></m:math> such that <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:msub><m:mi>z</m:mi><m:mn>2</m:mn></m:msub><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msub><m:mi>M</m:mi><m:mn>0</m:mn></m:msub><m:mo>.</m:mo></m:mrow></m:math>
+This will finish the proof, since we would then have
+<m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:msub><m:mi>z</m:mi><m:mn>2</m:mn></m:msub><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msub><m:mi>M</m:mi><m:mn>0</m:mn></m:msub><m:mo>≥</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>z</m:mi><m:mo>∈</m:mo><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Thus, let <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>y</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> be a sequence of elements
+in the range of <m:math overflow="scroll"><m:mi>f</m:mi></m:math> for which the sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>y</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> converges to <m:math overflow="scroll"><m:mrow><m:msub><m:mi>M</m:mi><m:mn>0</m:mn></m:msub><m:mo>.</m:mo></m:mrow></m:math>
+(This is Exercise 2.20 again.)
+For each <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>,</m:mo></m:mrow></m:math> let <m:math overflow="scroll"><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub></m:math> be an element of <m:math overflow="scroll"><m:mi>S</m:mi></m:math>
+such that <m:math overflow="scroll"><m:mrow><m:msub><m:mi>y</m:mi><m:mi>n</m:mi></m:msub><m:mo>=</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math>
+Then the sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mo>)</m:mo></m:mrow><m:mo>}</m:mo></m:mrow></m:math> converges to <m:math overflow="scroll"><m:mrow><m:msub><m:mi>M</m:mi><m:mn>0</m:mn></m:msub><m:mo>.</m:mo></m:mrow></m:math> Let <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>x</m:mi><m:msub><m:mi>n</m:mi><m:mi>k</m:mi></m:msub></m:msub><m:mo>}</m:mo></m:mrow></m:math> be a convergent subsequence
+of <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo><m:mo>.</m:mo></m:mrow></m:math> (How?) Let <m:math overflow="scroll"><m:mrow><m:msub><m:mi>z</m:mi><m:mn>2</m:mn></m:msub><m:mo>=</m:mo><m:mo movablelimits="true" form="prefix">lim</m:mo><m:msub><m:mi>x</m:mi><m:msub><m:mi>n</m:mi><m:mi>k</m:mi></m:msub></m:msub><m:mo>.</m:mo></m:mrow></m:math>
+Then <m:math overflow="scroll"><m:mrow><m:msub><m:mi>z</m:mi><m:mn>2</m:mn></m:msub><m:mo>∈</m:mo><m:mi>S</m:mi><m:mo>,</m:mo></m:mrow></m:math> because <m:math overflow="scroll"><m:mi>S</m:mi></m:math> is closed, and
+<m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:msub><m:mi>z</m:mi><m:mn>2</m:mn></m:msub><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mo movablelimits="true" form="prefix">lim</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:msub><m:mi>x</m:mi><m:msub><m:mi>n</m:mi><m:mi>k</m:mi></m:msub></m:msub><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> because <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is continuous.
+Hence, <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:msub><m:mi>z</m:mi><m:mn>2</m:mn></m:msub><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msub><m:mi>M</m:mi><m:mn>0</m:mn></m:msub><m:mo>,</m:mo></m:mrow></m:math>
+as desired.</para>
+</proof></rule>
+<exercise id="fs-id4134997"><problem id="fs-id1169167499088">
+    <list id="id65228" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid1"> Prove that the <m:math overflow="scroll"><m:mi>f</m:mi></m:math> of the preceding theorem attains
+a minimum value on <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid2"> Give an alternate proof of <link target-id="fs-id1169166022775"/> by
+using <link target-id="fs-id1169165815795"/>, and then proving that a closed and bounded subset of <m:math overflow="scroll"><m:mi>R</m:mi></m:math>
+contains both its supremum and its infimum.
+</item>
+      <item id="uid3"> Let <m:math overflow="scroll"><m:mi>S</m:mi></m:math> be a compact subset of <m:math overflow="scroll"><m:mrow><m:mi>C</m:mi><m:mo>,</m:mo></m:mrow></m:math> and let <m:math overflow="scroll"><m:mi>c</m:mi></m:math>
+be a point of <m:math overflow="scroll"><m:mi>C</m:mi></m:math> that is not in <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Prove that there is a closest point to <m:math overflow="scroll"><m:mi>c</m:mi></m:math> in <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+That is, show that there exists a point <m:math overflow="scroll"><m:mrow><m:mi>w</m:mi><m:mo>∈</m:mo><m:mi>S</m:mi></m:mrow></m:math> such that <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>w</m:mi><m:mo>-</m:mo><m:mi>c</m:mi><m:mo>|</m:mo><m:mo>≤</m:mo><m:mo>|</m:mo><m:mi>z</m:mi><m:mo>-</m:mo><m:mi>c</m:mi><m:mo>|</m:mo></m:mrow></m:math> for all points <m:math overflow="scroll"><m:mrow><m:mi>z</m:mi><m:mo>∈</m:mo><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+HINT: The function <m:math overflow="scroll"><m:mrow><m:mi>z</m:mi><m:mo>→</m:mo><m:mo>|</m:mo><m:mi>z</m:mi><m:mo>-</m:mo><m:mi>c</m:mi><m:mo>|</m:mo></m:mrow></m:math> is continuous on the set <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+    </list>
+</problem></exercise>
+<exercise id="fs-id1169169131215"><problem id="fs-id1169179454192">
+    <para id="id65501">
+Let <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>:</m:mo><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>→</m:mo><m:mi>R</m:mi></m:mrow></m:math> be a real-valued function that is
+continuous at each point of <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>.</m:mo></m:mrow></m:math></para>
+
+
+    <list id="id65564" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid4"> Prove that the range of <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is a closed interval
+<m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:msup><m:mi>a</m:mi><m:mo>'</m:mo></m:msup><m:mo>,</m:mo><m:msup><m:mi>b</m:mi><m:mo>'</m:mo></m:msup><m:mo>]</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Show by example that the four numbers <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo><m:mo>,</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>b</m:mi><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math><m:math overflow="scroll"><m:msup><m:mi>a</m:mi><m:mo>'</m:mo></m:msup></m:math> and <m:math overflow="scroll"><m:msup><m:mi>b</m:mi><m:mo>'</m:mo></m:msup></m:math> can be distinct.
+</item>
+      <item id="uid5"> Suppose <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is 1-1. Show that, if <m:math overflow="scroll"><m:mi>c</m:mi></m:math> is in the open interval <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math>
+then <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow></m:math> is in the open interval <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:msup><m:mi>a</m:mi><m:mo>'</m:mo></m:msup><m:mo>,</m:mo><m:msup><m:mi>b</m:mi><m:mo>'</m:mo></m:msup><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math></item>
+    </list>
+</problem></exercise>
+    <para id="id65776">We introduce next a different kind of continuity called uniform continuity.
+The difference between regular continuity and uniform continuity is a bit subtle,
+and well worth some thought.</para>
+<definition id="fs-id1169182082297"><term/><meaning id="fs-id1169185533829">
+    <para id="id65781">
+A function <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>:</m:mo><m:mi>S</m:mi><m:mo>→</m:mo><m:mi>C</m:mi></m:mrow></m:math> is called
+<emphasis effect="italics">uniformly continuous</emphasis> on <m:math overflow="scroll"><m:mi>S</m:mi></m:math> if for each positive number <m:math overflow="scroll"><m:mrow><m:mi>ϵ</m:mi><m:mo>,</m:mo></m:mrow></m:math> there exists
+a positive number <m:math overflow="scroll"><m:mi>δ</m:mi></m:math> such that <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>-</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>y</m:mi><m:mo>)</m:mo><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mi>ϵ</m:mi></m:mrow></m:math>
+for all <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>,</m:mo><m:mi>y</m:mi><m:mo>∈</m:mo><m:mi>S</m:mi></m:mrow></m:math> satisfying <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>x</m:mi><m:mo>-</m:mo><m:mi>y</m:mi><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mi>δ</m:mi><m:mo>.</m:mo></m:mrow></m:math></para></meaning></definition>
+    <para id="id65931">Basically, the difference between regular continuity and uniform conintuity is that
+the same <m:math overflow="scroll"><m:mi>δ</m:mi></m:math> works for all points in <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+    <para id="id65955">Here is another theorem worth remembering.</para>
+<rule id="fs-id1169193164426" type="theorem"><statement id="fs-id1169173855178">
+    <para id="id65959">
+A continuous complex-valued function on a compact subset <m:math overflow="scroll"><m:mi>S</m:mi></m:math> of <m:math overflow="scroll"><m:mi>C</m:mi></m:math> is
+uniformly continuous.</para>
+</statement>
+<proof id="fs-id1777905">
+    <para id="id65993">
+We argue by contradiction. Thus, suppose <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is continuous on <m:math overflow="scroll"><m:mi>S</m:mi></m:math> but not uniformly continuous.
+Then, there exists an <m:math overflow="scroll"><m:mrow><m:mi>ϵ</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn></m:mrow></m:math> for which no positive number <m:math overflow="scroll"><m:mi>δ</m:mi></m:math>
+satisfies the uniform continuity definition.
+Therefore, thinking of the <m:math overflow="scroll"><m:mi>δ</m:mi></m:math>'s as ranging through the numbers <m:math overflow="scroll"><m:mrow><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>n</m:mi><m:mo>,</m:mo></m:mrow></m:math> we know that for each positive integer <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>,</m:mo></m:mrow></m:math> there exist two
+points <m:math overflow="scroll"><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub></m:math> and <m:math overflow="scroll"><m:msub><m:mi>y</m:mi><m:mi>n</m:mi></m:msub></m:math> in <m:math overflow="scroll"><m:mi>S</m:mi></m:math> so that</para>
+    <list id="id66118" display="block" list-type="enumerated">
+      <item id="uid6"> <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msub><m:mi>y</m:mi><m:mi>n</m:mi></m:msub><m:mo>-</m:mo><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>n</m:mi><m:mo>,</m:mo></m:mrow></m:mrow></m:math> and
+</item>
+      <item id="uid7"> <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo><m:mi>f</m:mi></m:mrow><m:mrow><m:mo>(</m:mo><m:msub><m:mi>y</m:mi><m:mi>n</m:mi></m:msub><m:mo>)</m:mo></m:mrow><m:mo>-</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mo>)</m:mo></m:mrow><m:mrow><m:mo>|</m:mo><m:mo>≥</m:mo><m:mi>ϵ</m:mi><m:mo>.</m:mo></m:mrow></m:mrow></m:math></item>
+    </list>
+    <para id="id66241">Otherwise, some <m:math overflow="scroll"><m:mrow><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>n</m:mi></m:mrow></m:math> would suffice for a <m:math overflow="scroll"><m:mrow><m:mi>δ</m:mi><m:mo>.</m:mo></m:mrow></m:math> Let <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>x</m:mi><m:msub><m:mi>n</m:mi><m:mi>k</m:mi></m:msub></m:msub><m:mo>}</m:mo></m:mrow></m:math> be a convergent subsequence of <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> with limit <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>.</m:mo></m:mrow></m:math> By (1)
+and the triangle inequality, we deduce that <m:math overflow="scroll"><m:mi>x</m:mi></m:math> is also the limit of the corresponding subsequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>y</m:mi><m:msub><m:mi>n</m:mi><m:mi>k</m:mi></m:msub></m:msub><m:mo>}</m:mo></m:mrow></m:math> of <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>y</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+But then <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mo movablelimits="true" form="prefix">lim</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:msub><m:mi>x</m:mi><m:msub><m:mi>n</m:mi><m:mi>k</m:mi></m:msub></m:msub><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mo movablelimits="true" form="prefix">lim</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:msub><m:mi>y</m:mi><m:msub><m:mi>n</m:mi><m:mi>k</m:mi></m:msub></m:msub><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> implying that
+<m:math overflow="scroll"><m:mrow><m:mrow><m:mn>0</m:mn><m:mo>=</m:mo><m:mo movablelimits="true" form="prefix">lim</m:mo><m:mo>|</m:mo><m:mi>f</m:mi></m:mrow><m:mrow><m:mo>(</m:mo><m:msub><m:mi>y</m:mi><m:msub><m:mi>n</m:mi><m:mi>k</m:mi></m:msub></m:msub><m:mo>)</m:mo></m:mrow><m:mo>-</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:msub><m:mi>x</m:mi><m:msub><m:mi>n</m:mi><m:mi>k</m:mi></m:msub></m:msub><m:mo>)</m:mo></m:mrow><m:mrow><m:mo>|</m:mo><m:mo>,</m:mo></m:mrow></m:mrow></m:math> which implies that <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo><m:mi>f</m:mi></m:mrow><m:mrow><m:mo>(</m:mo><m:msub><m:mi>y</m:mi><m:msub><m:mi>n</m:mi><m:mi>k</m:mi></m:msub></m:msub><m:mo>)</m:mo></m:mrow><m:mo>-</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:msub><m:mi>x</m:mi><m:msub><m:mi>n</m:mi><m:mi>k</m:mi></m:msub></m:msub><m:mo>)</m:mo></m:mrow><m:mrow><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mi>ϵ</m:mi></m:mrow></m:mrow></m:math> for all large enough
+<m:math overflow="scroll"><m:mrow><m:mi>k</m:mi><m:mo>.</m:mo></m:mrow></m:math> But that contradicts (2), and this completes the proof.</para>
+</proof></rule>
+    <para id="id66607">Continuous functions whose domains are not compact sets may or may not
+be uniformly continuous, as the next exercise shows.</para>
+<exercise id="fs-id1169176750058"><problem id="fs-id1169188489692">
+    <list id="id66622" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid8"> Let <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>:</m:mo><m:mo>(</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>1</m:mn><m:mo>)</m:mo><m:mo>→</m:mo><m:mi>R</m:mi></m:mrow></m:math> be defined by <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>x</m:mi><m:mo>.</m:mo></m:mrow></m:math> Prove that <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is continuous at each <m:math overflow="scroll"><m:mi>x</m:mi></m:math> in its domain
+but that <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is not uniformly continuous there.
+HINT:
+Set <m:math overflow="scroll"><m:mrow><m:mi>ϵ</m:mi><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>,</m:mo></m:mrow></m:math> and consider the pairs of points <m:math overflow="scroll"><m:mrow><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>n</m:mi></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:msub><m:mi>y</m:mi><m:mi>n</m:mi></m:msub><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mrow><m:mo>(</m:mo><m:mi>n</m:mi><m:mo>+</m:mo><m:mn>1</m:mn><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid9"> Let <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>:</m:mo><m:mo>[</m:mo><m:mn>1</m:mn><m:mo>,</m:mo><m:mi>∞</m:mi><m:mo>)</m:mo><m:mo>→</m:mo><m:mo>[</m:mo><m:mn>1</m:mn><m:mo>,</m:mo><m:mi>∞</m:mi><m:mo>)</m:mo></m:mrow></m:math> be defined by <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msqrt><m:mi>x</m:mi></m:msqrt><m:mo>.</m:mo></m:mrow></m:math>
+Prove that <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is not bounded, but is nevertheless uniformly continuous on its domain.
+HINT: Take <m:math overflow="scroll"><m:mrow><m:mi>δ</m:mi><m:mo>=</m:mo><m:mi>ϵ</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+    </list>
+</problem></exercise>
+<rule id="fs-id8649209" type="theorem"><statement id="fs-id1169165761537">
+    <para id="id66912">
+Let <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>:</m:mo><m:mi>S</m:mi><m:mo>→</m:mo><m:mi>T</m:mi></m:mrow></m:math> be a continuous 1-1 function from a
+compact (closed and bounded) subset of <m:math overflow="scroll"><m:mi>C</m:mi></m:math> onto the (compact) set <m:math overflow="scroll"><m:mrow><m:mi>T</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Let <m:math overflow="scroll"><m:mrow><m:mi>g</m:mi><m:mo>:</m:mo><m:mi>T</m:mi><m:mo>→</m:mo><m:mi>S</m:mi></m:mrow></m:math> denote the inverse function <m:math overflow="scroll"><m:msup><m:mi>f</m:mi><m:mrow><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msup></m:math> of <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Then <m:math overflow="scroll"><m:mi>g</m:mi></m:math> is continuous.
+The inverse of a continuous function, that has a compact domain, is also continuous.</para>
+</statement>
+<proof id="fs-id1169165381786">
+    <para id="id67026">We prove that <m:math overflow="scroll"><m:mi>g</m:mi></m:math> is continuous by using <link target-id="fs-id1164777274406" document="m36152"/>;
+i.e., we will show that <m:math overflow="scroll"><m:mrow><m:msup><m:mi>g</m:mi><m:mrow><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msup><m:mrow><m:mo>(</m:mo><m:mi>A</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> is closed whenever <m:math overflow="scroll"><m:mi>A</m:mi></m:math> is a closed subset of <m:math overflow="scroll"><m:mrow><m:mi>C</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+But this is easy, since
+<m:math overflow="scroll"><m:mrow><m:msup><m:mi>g</m:mi><m:mrow><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msup><m:mrow><m:mo>(</m:mo><m:mi>A</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>g</m:mi><m:mrow><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msup><m:mrow><m:mo>(</m:mo><m:mi>A</m:mi><m:mo>∩</m:mo><m:mi>S</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>A</m:mi><m:mo>∩</m:mo><m:mi>S</m:mi><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math>
+and this is a closed set by <link target-id="fs-id1169165815795"/>,
+because <m:math overflow="scroll"><m:mrow><m:mi>A</m:mi><m:mo>∩</m:mo><m:mi>S</m:mi></m:mrow></m:math> is compact. See part (e) of <link target-id="fs-id1164797997554" document="m36157"/>.</para>
+</proof></rule>
+<rule id="fs-id1169179391564"><label/><statement id="fs-id1169174724598">
+    <para id="id67181"><emphasis effect="bold">REMARK</emphasis>
+Using the preceding theorem, and the exercise
+below, we will show that taking <m:math overflow="scroll"><m:mi>n</m:mi></m:math>th roots
+is a continuous function. that is, the function <m:math overflow="scroll"><m:mi>f</m:mi></m:math>
+defined by <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mrow><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>n</m:mi></m:mrow></m:msup></m:mrow></m:math> is continuous.</para>
+</statement></rule>
+<exercise id="fs-id1169175191776"><problem id="fs-id1169186119656">
+    <para id="id67240">
+Use the preceding theorem to show the continuity of the following functions.</para>
+    <list id="id67253" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid10"> Show that if <m:math overflow="scroll"><m:mi>n</m:mi></m:math> is an odd positive integer,
+then there exists a continuous function
+<m:math overflow="scroll"><m:mi>g</m:mi></m:math> defined on all of <m:math overflow="scroll"><m:mi>R</m:mi></m:math> such that <m:math overflow="scroll"><m:mrow><m:mi>g</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:math> is an <m:math overflow="scroll"><m:mi>n</m:mi></m:math>th root
+of <m:math overflow="scroll"><m:mi>x</m:mi></m:math> for all real numbers <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+That is, <m:math overflow="scroll"><m:mrow><m:msup><m:mrow><m:mo>(</m:mo><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>)</m:mo></m:mrow><m:mi>n</m:mi></m:msup><m:mo>=</m:mo><m:mi>x</m:mi></m:mrow></m:math> for all real <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+(The function <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mi>n</m:mi></m:msup></m:mrow></m:math> is 1-1 and continuous.)
+</item>
+      <item id="uid11"> Show that if <m:math overflow="scroll"><m:mi>n</m:mi></m:math> is any positive integer
+then there exists a unique continuous function <m:math overflow="scroll"><m:mi>g</m:mi></m:math>
+defined on <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mi>∞</m:mi><m:mo>)</m:mo></m:mrow></m:math>
+such that <m:math overflow="scroll"><m:mrow><m:mi>g</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:math> is an <m:math overflow="scroll"><m:mi>n</m:mi></m:math>th root of <m:math overflow="scroll"><m:mi>x</m:mi></m:math> for all nonnegative <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid12"> Let <m:math overflow="scroll"><m:mrow><m:mi>r</m:mi><m:mo>=</m:mo><m:mi>p</m:mi><m:mo>/</m:mo><m:mi>q</m:mi></m:mrow></m:math> be a rational number.
+Prove that there exists a continuous function
+<m:math overflow="scroll"><m:mrow><m:mi>g</m:mi><m:mo>:</m:mo><m:mo>[</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mi>∞</m:mi><m:mo>)</m:mo><m:mo>→</m:mo><m:mo>[</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mi>∞</m:mi><m:mo>)</m:mo></m:mrow></m:math> such that <m:math overflow="scroll"><m:mrow><m:mi>g</m:mi><m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mi>q</m:mi></m:msup><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mi>p</m:mi></m:msup></m:mrow></m:math>
+for all <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>≥</m:mo><m:mn>0</m:mn><m:mo>;</m:mo></m:mrow></m:math> i.e., <m:math overflow="scroll"><m:mrow><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mi>r</m:mi></m:msup></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>≥</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math></item>
+    </list>
+</problem></exercise>
+<rule id="fs-id1169172121798" type="theorem"><statement id="fs-id1169167001092">
+    <para id="id67675">
+Let <m:math overflow="scroll"><m:mi>f</m:mi></m:math> be a continuous 1-1 function from the interval <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow></m:math>
+onto the interval <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>c</m:mi><m:mo>,</m:mo><m:mi>d</m:mi><m:mo>]</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Then <m:math overflow="scroll"><m:mi>f</m:mi></m:math> must be strictly monotonic, i.e., strictly increasing everywhere or strictly decreasing everywhere.</para>
+</statement>
+<proof id="fs-id1169182279804">
+    <para id="id67741">
+Since <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is 1-1, we clearly have that <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo><m:mo>≠</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>b</m:mi><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math>
+and, without loss of generality, let us assume that <m:math overflow="scroll"><m:mrow><m:mi>c</m:mi><m:mo>=</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo><m:mo>&lt;</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>b</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mi>d</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+It will suffice to show that if <m:math overflow="scroll"><m:mi>α</m:mi></m:math> and <m:math overflow="scroll"><m:mi>β</m:mi></m:math> belong to the open interval <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math>
+and <m:math overflow="scroll"><m:mrow><m:mi>α</m:mi><m:mo>&lt;</m:mo><m:mi>β</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+then <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>α</m:mi><m:mo>)</m:mo><m:mo>≤</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>β</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+(Why will this suffice?)
+Suppose by way of contradiction that there exists <m:math overflow="scroll"><m:mrow><m:mi>α</m:mi><m:mo>&lt;</m:mo><m:mi>β</m:mi></m:mrow></m:math>
+in <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo></m:mrow></m:math> for which <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>α</m:mi><m:mo>)</m:mo><m:mo>&gt;</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>β</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+We use the intermediate value theorem to derive a contradiction.
+Consider the four points <m:math overflow="scroll"><m:mrow><m:mi>a</m:mi><m:mo>&lt;</m:mo><m:mi>α</m:mi><m:mo>&lt;</m:mo><m:mi>β</m:mi><m:mo>&lt;</m:mo><m:mi>b</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Either <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo><m:mo>&lt;</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>α</m:mi><m:mo>)</m:mo></m:mrow></m:math> or <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>β</m:mi><m:mo>)</m:mo><m:mo>&lt;</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>b</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math> (Why?)
+In the first case (<m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo><m:mo>&lt;</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>α</m:mi><m:mo>)</m:mo></m:mrow></m:math>), <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>α</m:mi><m:mo>]</m:mo><m:mo>)</m:mo></m:mrow></m:math> contains every value between <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>α</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+And, <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mo>[</m:mo><m:mi>α</m:mi><m:mo>,</m:mo><m:mi>β</m:mi><m:mo>]</m:mo><m:mo>)</m:mo></m:mrow></m:math> contains every value between
+<m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>α</m:mi><m:mo>)</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>β</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math> So, let <m:math overflow="scroll"><m:mi>v</m:mi></m:math> be a number such that
+<m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo><m:mo>&lt;</m:mo><m:mi>v</m:mi><m:mo>,</m:mo></m:mrow></m:math><m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>β</m:mi><m:mo>)</m:mo><m:mo>&lt;</m:mo><m:mi>v</m:mi><m:mo>,</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>v</m:mi><m:mo>&lt;</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>α</m:mi><m:mo>)</m:mo></m:mrow></m:math>
+(why does such a number <m:math overflow="scroll"><m:mi>v</m:mi></m:math> exist?).
+By the Intermediate Value Theorem, there exists <m:math overflow="scroll"><m:mrow><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>∈</m:mo><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>α</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> such that <m:math overflow="scroll"><m:mrow><m:mi>v</m:mi><m:mo>=</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math>
+and there exists an <m:math overflow="scroll"><m:mrow><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:mo>∈</m:mo><m:mrow><m:mo>(</m:mo><m:mi>α</m:mi><m:mo>,</m:mo><m:mi>β</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> such that <m:math overflow="scroll"><m:mrow><m:mi>v</m:mi><m:mo>=</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+But this contradicts the hypothesis that <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is 1-1, since <m:math overflow="scroll"><m:mrow><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>≠</m:mo><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:mo>.</m:mo></m:mrow></m:math>
+A similar argument leads to a contradiction in the second case <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>β</m:mi><m:mo>)</m:mo><m:mo>&lt;</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>b</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+(See the following exercise.)
+Hence, there can exist no such <m:math overflow="scroll"><m:mi>α</m:mi></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>β</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+implying that <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is strictly increasing on <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>.</m:mo></m:mrow></m:math></para></proof></rule>
+<exercise id="fs-id1169176610845"><problem id="fs-id1169182007402">
+    <para id="id68523">
+Derive a contradiction from the assumption
+that <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>β</m:mi><m:mo>)</m:mo><m:mo>&lt;</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>b</m:mi><m:mo>)</m:mo></m:mrow></m:math> in the preceding proof.</para>
+</problem></exercise>
+  </content>
+</document>

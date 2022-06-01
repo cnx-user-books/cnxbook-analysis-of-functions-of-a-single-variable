@@ -1,0 +1,40 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML">
+  <title>Definition of the Number e</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m36117</md:content-id>
+  <md:title>Definition of the Number e</md:title>
+  <md:abstract>A brief introduction of limits with links to important theorems.</md:abstract>
+  <md:uuid>1fe9e651-5b80-44b5-b22f-45a01069eb8f</md:uuid>
+</metadata>
+
+<content>
+    <para id="id62155">This chapter contains the beginnings of the most important, and probably the most subtle, notion
+in mathematical analysis,
+i.e., the concept of a limit.
+Though Newton and Leibniz discovered the calculus with its
+tangent lines described as limits of secant lines, and though the
+Greeks were already estimating areas of regions by a kind of limiting process,
+the precise notion of limit that we use today was not formulated
+until the 19th century by Cauchy and Weierstrass.</para>
+    <para id="id62162">The main results of this chapter are the following:</para>
+    <list id="id62169" display="block" list-type="enumerated"><item id="uid1">The definition of the <emphasis effect="bold">limit of a sequence</emphasis>,
+</item>
+      <item id="uid2">The definition of the real number <m:math overflow="scroll"><m:mi>e</m:mi></m:math> (<link document="m36124" target-id="fs-id1171134940519"/>),
+</item>
+      <item id="uid3">The <emphasis effect="bold">Squeeze Theorem</emphasis> (<link document="m36126" target-id="fs-id1164168890640"/>),
+</item>
+      <item id="uid4">the <emphasis effect="bold">Bolzano Weierstrass Theorem</emphasis> (<link document="m36129" target-id="fs-id1165799319451"/> and <link document="m36157" target-id="fs-id1172694593561"/>),
+</item>
+      <item id="uid5">The <emphasis effect="bold">Cauchy Criterion</emphasis> (<link document="m36129" target-id="fs-id1171849247156"/>),
+</item>
+      <item id="uid6">the definition of an <emphasis effect="bold">infinite series</emphasis>,
+</item>
+      <item id="uid7">the <emphasis effect="bold">Comparison Test</emphasis> (<link document="m36135" target-id="fs-id6679703"/>), and
+</item>
+      <item id="uid8">the <emphasis effect="bold">Alternating Series Test</emphasis> (<link document="m36135" target-id="fs-id1172701831076"/>).
+</item>
+    </list>
+    <para id="id62647">These are powerful basic results about limits that will serve us well in later chapters.</para>
+    <!--empty paragraphs get left behind.-->
+  </content>
+</document>

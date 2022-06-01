@@ -1,0 +1,1636 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML">
+  <title>Integrals of Step Functions</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m36208</md:content-id>
+  <md:title>Integrals of Step Functions</md:title>
+  <md:abstract>We begin by defining the integral of certain (but not all) bounded, real-valued functions
+whose domains are closed bounded intervals.
+Later, we will extend the definition of integral to certain kinds of unbounded
+complex-valued functions
+whose domains are still intervals,
+but which need not be either closed or bounded.</md:abstract>
+  <md:uuid>5e161e6b-62fd-4131-b8ff-22ef701869ec</md:uuid>
+</metadata>
+
+<content>
+    <para id="id97350">We begin by defining the integral of certain (but not all) bounded, real-valued functions
+whose domains are closed bounded intervals.
+Later, we will extend the definition of integral to certain kinds of unbounded
+complex-valued functions
+whose domains are still intervals,
+but which need not be either closed or bounded.
+First, we recall from <link document="m36131"/> the following definitions.</para>
+<definition id="fs-id1164042246328"><term/><meaning id="fs-id1164044319582">
+    <para id="id97359">
+Let <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow></m:math> be a closed bounded interval of real numbers.
+By a <emphasis effect="italics">partition</emphasis> of <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow></m:math> we mean a finite set
+<m:math overflow="scroll"><m:mrow><m:mi>P</m:mi><m:mo>=</m:mo><m:mo>{</m:mo><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub><m:mo>&lt;</m:mo><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>&lt;</m:mo><m:mo>...</m:mo><m:mo>&lt;</m:mo><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> of <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow></m:math> points,
+where <m:math overflow="scroll"><m:mrow><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub><m:mo>=</m:mo><m:mi>a</m:mi></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mo>=</m:mo><m:mi>b</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+    <para id="id97843">The <m:math overflow="scroll"><m:mi>n</m:mi></m:math> intervals <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:mrow><m:mo>[</m:mo><m:msub><m:mi>x</m:mi><m:mrow><m:mi>i</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mi>i</m:mi></m:msub><m:mo>]</m:mo></m:mrow><m:mo>}</m:mo></m:mrow></m:math> are called the <emphasis effect="italics">closed subintervals</emphasis>
+of the partition <m:math overflow="scroll"><m:mrow><m:mi>P</m:mi><m:mo>,</m:mo></m:mrow></m:math> and
+the <m:math overflow="scroll"><m:mi>n</m:mi></m:math> intervals <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:mrow><m:mo>(</m:mo><m:msub><m:mi>x</m:mi><m:mrow><m:mi>i</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mi>i</m:mi></m:msub><m:mo>)</m:mo></m:mrow><m:mo>}</m:mo></m:mrow></m:math> are called the <emphasis effect="italics">open subintervals</emphasis>
+or <emphasis effect="italics">elements</emphasis> of <m:math overflow="scroll"><m:mrow><m:mi>P</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+    <para id="id98155">We write <m:math overflow="scroll"><m:mrow><m:mo>∥</m:mo><m:mi>P</m:mi><m:mo>∥</m:mo></m:mrow></m:math> for the maximum of the numbers (lengths of the subintervals) <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>x</m:mi><m:mi>i</m:mi></m:msub><m:mo>-</m:mo><m:msub><m:mi>x</m:mi><m:mrow><m:mi>i</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>}</m:mo><m:mo>,</m:mo></m:mrow></m:math>
+and call <m:math overflow="scroll"><m:mrow><m:mo>∥</m:mo><m:mi>P</m:mi><m:mo>∥</m:mo></m:mrow></m:math> the <emphasis effect="italics">mesh size</emphasis> of the partition <m:math overflow="scroll"><m:mrow><m:mi>P</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+    <para id="id98236">If a partition <m:math overflow="scroll"><m:mrow><m:mi>P</m:mi><m:mo>=</m:mo><m:mo>{</m:mo><m:msub><m:mi>x</m:mi><m:mi>i</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> is contained in another partition <m:math overflow="scroll"><m:mrow><m:mi>Q</m:mi><m:mo>=</m:mo><m:mo>{</m:mo><m:msub><m:mi>y</m:mi><m:mi>j</m:mi></m:msub><m:mo>}</m:mo><m:mo>,</m:mo></m:mrow></m:math>
+i.e., each <m:math overflow="scroll"><m:msub><m:mi>x</m:mi><m:mi>i</m:mi></m:msub></m:math> equals some <m:math overflow="scroll"><m:mrow><m:msub><m:mi>y</m:mi><m:mi>j</m:mi></m:msub><m:mo>,</m:mo></m:mrow></m:math>
+then we say that <m:math overflow="scroll"><m:mi>Q</m:mi></m:math> is <emphasis effect="italics">finer</emphasis> than <m:math overflow="scroll"><m:mrow><m:mi>P</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+    <para id="id98340">Let <m:math overflow="scroll"><m:mi>f</m:mi></m:math> be a function on an interval <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>,</m:mo></m:mrow></m:math> and let <m:math overflow="scroll"><m:mrow><m:mi>P</m:mi><m:mo>=</m:mo><m:mo>{</m:mo><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub><m:mo>&lt;</m:mo><m:mo>...</m:mo><m:mo>&lt;</m:mo><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> be a
+partition of <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Physicists often consider
+sums of the form</para>
+    <equation id="id98427">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:msub>
+            <m:mi>S</m:mi>
+            <m:mrow>
+              <m:mi>P</m:mi>
+              <m:mo>,</m:mo>
+              <m:mo>{</m:mo>
+              <m:msub>
+                <m:mi>y</m:mi>
+                <m:mi>i</m:mi>
+              </m:msub>
+              <m:mo>}</m:mo>
+            </m:mrow>
+          </m:msub>
+          <m:mo>=</m:mo>
+          <m:munderover>
+            <m:mo>∑</m:mo>
+            <m:mrow>
+              <m:mi>i</m:mi>
+              <m:mo>=</m:mo>
+              <m:mn>1</m:mn>
+            </m:mrow>
+            <m:mi>n</m:mi>
+          </m:munderover>
+          <m:mi>f</m:mi>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:msub>
+              <m:mi>y</m:mi>
+              <m:mi>i</m:mi>
+            </m:msub>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:msub>
+              <m:mi>x</m:mi>
+              <m:mi>i</m:mi>
+            </m:msub>
+            <m:mo>-</m:mo>
+            <m:msub>
+              <m:mi>x</m:mi>
+              <m:mrow>
+                <m:mi>i</m:mi>
+                <m:mo>-</m:mo>
+                <m:mn>1</m:mn>
+              </m:mrow>
+            </m:msub>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>,</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id98521">where <m:math overflow="scroll"><m:msub><m:mi>y</m:mi><m:mi>i</m:mi></m:msub></m:math> is a point in the subinterval <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:msub><m:mi>x</m:mi><m:mrow><m:mi>i</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mi>i</m:mi></m:msub><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+These sums (called Riemann sums) are approximations of physical quantities,
+and the limit of these sums, as the mesh of the partition becomes smaller and smaller,
+should represent a precise value of the physical quantity.
+What precisely is meant by the “ limit” of such sums is already a subtle question,
+but even having decided on what that definition should be, it is
+as important and difficult to determine whether or not such a limit exists for many (or even any) functions <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+We approach this question from a slightly different point of view,
+but we will revisit Riemann sums in the end.</para>
+</meaning></definition>
+    <para id="id98595">Again we recall from <link document="m36131"/> the following.</para>
+<definition id="fs-id1164037382028"><term/><meaning id="fs-id1164048196474">
+    <para id="id98599">
+Let <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow></m:math> be a closed bounded interval in <m:math overflow="scroll"><m:mrow><m:mi>R</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+A real-valued function <m:math overflow="scroll"><m:mrow><m:mi>h</m:mi><m:mo>:</m:mo><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>→</m:mo><m:mi>R</m:mi></m:mrow></m:math> is called a <emphasis effect="italics">step function</emphasis>
+if there exists a partition <m:math overflow="scroll"><m:mrow><m:mi>P</m:mi><m:mo>=</m:mo><m:mo>{</m:mo><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub><m:mo>&lt;</m:mo><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>&lt;</m:mo><m:mo>...</m:mo><m:mo>&lt;</m:mo><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> of <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow></m:math> such that
+for each <m:math overflow="scroll"><m:mrow><m:mn>1</m:mn><m:mo>≤</m:mo><m:mi>i</m:mi><m:mo>≤</m:mo><m:mi>n</m:mi></m:mrow></m:math> there exists a number <m:math overflow="scroll"><m:msub><m:mi>a</m:mi><m:mi>i</m:mi></m:msub></m:math> such that
+<m:math overflow="scroll"><m:mrow><m:mi>h</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msub><m:mi>a</m:mi><m:mi>i</m:mi></m:msub></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mo>(</m:mo><m:msub><m:mi>x</m:mi><m:mrow><m:mi>i</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mi>i</m:mi></m:msub><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math></para>
+</meaning></definition>
+<rule id="fs-id1164045867795"><label/><statement id="fs-id1164043156644">
+    <para id="id98840"><emphasis effect="bold">REMARK</emphasis> A step function <m:math overflow="scroll"><m:mi>h</m:mi></m:math> is constant on the open subintervals
+(or elements) of a certain partition. Of course, the partition is not unique.
+Indeed, if <m:math overflow="scroll"><m:mi>P</m:mi></m:math> is such a partition, we may add more points to it, making
+a larger partition having more
+subintervals, and the function <m:math overflow="scroll"><m:mi>h</m:mi></m:math> will still be constant on these new open subintervals.
+That is, a given step function can be described using various distinct partitions.</para>
+    <para id="id98874">Also, the values of a step function at the partition points themselves is irrelevant.
+We only require that it be constant on the open subintervals.</para>
+</statement></rule>
+<exercise id="fs-id1164047541944"><problem id="fs-id1164061703350">
+    <para id="id98879"> Let <m:math overflow="scroll"><m:mi>h</m:mi></m:math> be a step function on <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>,</m:mo></m:mrow></m:math>
+and let <m:math overflow="scroll"><m:mrow><m:mi>P</m:mi><m:mo>=</m:mo><m:mo>{</m:mo><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub><m:mo>&lt;</m:mo><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>&lt;</m:mo><m:mo>...</m:mo><m:mo>&lt;</m:mo><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> be a partition of <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow></m:math> such that <m:math overflow="scroll"><m:mrow><m:mi>h</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msub><m:mi>a</m:mi><m:mi>i</m:mi></m:msub></m:mrow></m:math>
+on the subinterval <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:msub><m:mi>x</m:mi><m:mrow><m:mi>i</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mi>i</m:mi></m:msub><m:mo>)</m:mo></m:mrow></m:math> determined by <m:math overflow="scroll"><m:mrow><m:mi>P</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+    <list id="id99051" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid1"> Prove that the range of <m:math overflow="scroll"><m:mi>h</m:mi></m:math> is a finite set.
+What is an upper bound on the cardinality of this range?
+</item>
+      <item id="uid2"> Prove that <m:math overflow="scroll"><m:mi>h</m:mi></m:math> is differentiable at all but a finite number of points in <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+What is the value of <m:math overflow="scroll"><m:msup><m:mi>h</m:mi><m:mo>'</m:mo></m:msup></m:math> at such a point?
+</item>
+      <item id="uid3"> Let <m:math overflow="scroll"><m:mi>f</m:mi></m:math> be a function on <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Prove that <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is a step function if and only if
+<m:math overflow="scroll"><m:mrow><m:msup><m:mi>f</m:mi><m:mo>'</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> exists and <m:math overflow="scroll"><m:mrow><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math> for every <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo></m:mrow></m:math>
+except possibly for a finite number of points.
+</item>
+      <item id="uid4"> What can be said about the values of <m:math overflow="scroll"><m:mi>h</m:mi></m:math> at the endpoints <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>x</m:mi><m:mi>i</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math>
+of the subintervals of <m:math overflow="scroll"><m:mrow><m:mi>P</m:mi><m:mo>?</m:mo></m:mrow></m:math></item>
+      <item id="uid5">(e) Let <m:math overflow="scroll"><m:mi>h</m:mi></m:math> be a step function on <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>,</m:mo></m:mrow></m:math> and let <m:math overflow="scroll"><m:mi>j</m:mi></m:math> be a function on <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow></m:math> for which <m:math overflow="scroll"><m:mrow><m:mi>h</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mi>j</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:math>
+for all <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow></m:math> except for one point <m:math overflow="scroll"><m:mrow><m:mi>c</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Show that <m:math overflow="scroll"><m:mi>j</m:mi></m:math> is also a step function.
+</item>
+      <item id="uid6"> If <m:math overflow="scroll"><m:mi>k</m:mi></m:math> is a function on <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow></m:math> that agrees with a step function <m:math overflow="scroll"><m:mi>h</m:mi></m:math> except at a finite number of
+points <m:math overflow="scroll"><m:mrow><m:msub><m:mi>c</m:mi><m:mn>1</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>c</m:mi><m:mn>2</m:mn></m:msub><m:mo>,</m:mo><m:mo>...</m:mo><m:mo>,</m:mo><m:msub><m:mi>c</m:mi><m:mi>N</m:mi></m:msub><m:mo>,</m:mo></m:mrow></m:math>
+show that <m:math overflow="scroll"><m:mi>k</m:mi></m:math> is also a step function.
+</item>
+    </list>
+</problem></exercise>
+<exercise id="fs-id1164045902958"><problem id="fs-id1164041608856">
+    <para id="id99513">
+Let <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow></m:math> be a fixed closed bounded interval in <m:math overflow="scroll"><m:mrow><m:mi>R</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+and let <m:math overflow="scroll"><m:mrow><m:mi>H</m:mi><m:mo>(</m:mo><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>)</m:mo></m:mrow></m:math> denote the set of all step functions on <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>.</m:mo></m:mrow></m:math></para>
+    <list id="id99606" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid7"> Using Part (c) of <link target-id="fs-id1164047541944"/>,
+prove that the set <m:math overflow="scroll"><m:mrow><m:mi>H</m:mi><m:mo>(</m:mo><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>)</m:mo></m:mrow></m:math> is a vector space of functions;
+i.e., it is closed under addition and scalar multiplication.
+</item>
+      <item id="uid8"> Show that <m:math overflow="scroll"><m:mrow><m:mi>H</m:mi><m:mo>(</m:mo><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>)</m:mo></m:mrow></m:math> is closed under multiplication;
+i.e., if <m:math overflow="scroll"><m:mrow><m:msub><m:mi>h</m:mi><m:mn>1</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>h</m:mi><m:mn>2</m:mn></m:msub><m:mo>∈</m:mo><m:mi>H</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> then <m:math overflow="scroll"><m:mrow><m:msub><m:mi>h</m:mi><m:mn>1</m:mn></m:msub><m:msub><m:mi>h</m:mi><m:mn>2</m:mn></m:msub><m:mo>∈</m:mo><m:mi>H</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid9"> Show that <m:math overflow="scroll"><m:mrow><m:mi>H</m:mi><m:mo>(</m:mo><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>)</m:mo></m:mrow></m:math> is closed under taking maximum and minimum
+and that it contains all the real-valued constant functions.
+</item>
+      <item id="uid10"> We call a function <m:math overflow="scroll"><m:mi>χ</m:mi></m:math> an <emphasis effect="italics">indicator function</emphasis> if it equals 1 on an interval <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>,</m:mo><m:mi>d</m:mi><m:mo>)</m:mo></m:mrow></m:math>
+and is 0 outside <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>c</m:mi><m:mo>,</m:mo><m:mi>d</m:mi><m:mo>]</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+To be precise, we will denote this indicator function by <m:math overflow="scroll"><m:mrow><m:msub><m:mi>χ</m:mi><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>,</m:mo><m:mi>d</m:mi><m:mo>)</m:mo></m:mrow></m:msub><m:mo>.</m:mo></m:mrow></m:math>
+Prove that every indicator function is a step function, and show also that every step function <m:math overflow="scroll"><m:mi>h</m:mi></m:math> is a linear combination
+of indicator functions:
+<equation id="id99920"><m:math overflow="scroll" mode="display"><m:mrow><m:mi>h</m:mi><m:mo>=</m:mo><m:munderover><m:mo>∑</m:mo><m:mrow><m:mi>j</m:mi><m:mo>=</m:mo><m:mn>1</m:mn></m:mrow><m:mi>n</m:mi></m:munderover><m:msub><m:mi>a</m:mi><m:mi>j</m:mi></m:msub><m:msub><m:mi>χ</m:mi><m:mrow><m:mo>(</m:mo><m:msub><m:mi>c</m:mi><m:mi>j</m:mi></m:msub><m:mo>,</m:mo><m:msub><m:mi>d</m:mi><m:mi>j</m:mi></m:msub><m:mo>)</m:mo></m:mrow></m:msub><m:mo>.</m:mo></m:mrow></m:math></equation></item>
+      <item id="uid11"> Define a function <m:math overflow="scroll"><m:mi>k</m:mi></m:math> on <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>1</m:mn><m:mo>]</m:mo></m:mrow></m:math> by
+setting <m:math overflow="scroll"><m:mrow><m:mi>k</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math> if <m:math overflow="scroll"><m:mi>x</m:mi></m:math> is a rational number and <m:math overflow="scroll"><m:mrow><m:mi>k</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mn>1</m:mn></m:mrow></m:math>
+if <m:math overflow="scroll"><m:mi>x</m:mi></m:math> is an irrational number. Prove that the range of <m:math overflow="scroll"><m:mi>k</m:mi></m:math>
+is a finite set, but that <m:math overflow="scroll"><m:mi>k</m:mi></m:math> is <emphasis effect="bold">not</emphasis> a step function.
+</item>
+    </list>
+</problem></exercise>
+    <para id="id100110">Our first theorem in this chapter is a fundamental consistency result
+about the “area under the graph” of a step function.
+Of course, the graph of a step function looks like a collection of horizontal line segments,
+and the region under this graph is just a collection of rectangles.
+Actually, in this remark, we are
+implicitly thinking that the values <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>a</m:mi><m:mi>i</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> of the step function
+are positive. If some of these values are negative, then
+we must re-think what we mean by the area under the graph.
+We first introduce the following bit of notation.</para>
+<definition id="fs-id1164057057510"><term/><meaning id="fs-id1164052531548">
+    <para id="id100141">
+Let <m:math overflow="scroll"><m:mi>h</m:mi></m:math> be a step function on the closed interval <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Suppose <m:math overflow="scroll"><m:mrow><m:mi>P</m:mi><m:mo>=</m:mo><m:mo>{</m:mo><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub><m:mo>&lt;</m:mo><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>&lt;</m:mo><m:mo>...</m:mo><m:mo>&lt;</m:mo><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math>
+is a partition of <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow></m:math> such that <m:math overflow="scroll"><m:mrow><m:mi>h</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msub><m:mi>a</m:mi><m:mi>i</m:mi></m:msub></m:mrow></m:math> on the interval
+<m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:msub><m:mi>x</m:mi><m:mrow><m:mi>i</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mi>i</m:mi></m:msub><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Define the <emphasis effect="italics">weighted average</emphasis> of <m:math overflow="scroll"><m:mi>h</m:mi></m:math><emphasis effect="italics">relative to</emphasis><m:math overflow="scroll"><m:mi>P</m:mi></m:math>
+to be the number <m:math overflow="scroll"><m:mrow><m:msub><m:mi>S</m:mi><m:mi>P</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>h</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> defined by</para>
+    <equation id="id100361">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:msub>
+            <m:mi>S</m:mi>
+            <m:mi>P</m:mi>
+          </m:msub>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>h</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>=</m:mo>
+          <m:munderover>
+            <m:mo>∑</m:mo>
+            <m:mrow>
+              <m:mi>i</m:mi>
+              <m:mo>=</m:mo>
+              <m:mn>1</m:mn>
+            </m:mrow>
+            <m:mi>n</m:mi>
+          </m:munderover>
+          <m:msub>
+            <m:mi>a</m:mi>
+            <m:mi>i</m:mi>
+          </m:msub>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:msub>
+              <m:mi>x</m:mi>
+              <m:mi>i</m:mi>
+            </m:msub>
+            <m:mo>-</m:mo>
+            <m:msub>
+              <m:mi>x</m:mi>
+              <m:mrow>
+                <m:mi>i</m:mi>
+                <m:mo>-</m:mo>
+                <m:mn>1</m:mn>
+              </m:mrow>
+            </m:msub>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>.</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+</meaning></definition>
+<rule id="fs-id1164039991909"><label/><statement id="fs-id1164065252793">
+    <para id="id100442"><emphasis effect="bold">REMARK</emphasis> Notice the similarity between the formula
+for a weighted average and the formula for a Riemann sum.
+Note also that if the interval is a single point,
+i.e., <m:math overflow="scroll"><m:mrow><m:mi>a</m:mi><m:mo>=</m:mo><m:mi>b</m:mi><m:mo>,</m:mo></m:mrow></m:math> then the only partition <m:math overflow="scroll"><m:mi>P</m:mi></m:math>
+of the interval consists of the single point <m:math overflow="scroll"><m:mrow><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub><m:mo>=</m:mo><m:mi>a</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+and every weighted average <m:math overflow="scroll"><m:mrow><m:msub><m:mi>S</m:mi><m:mi>P</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>h</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math></para>
+</statement></rule>
+    <para id="id100526">The next theorem is not a surprise, although its proof
+takes some careful thinking.
+It is simply the assertion that the weighted averages are independent of the choice of partition.</para>
+<rule id="fs-id1164041580652" type="theorem"><statement id="fs-id1164047755390">
+    <para id="id100530"> Let <m:math overflow="scroll"><m:mi>h</m:mi></m:math> be a step function on the closed interval <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Suppose <m:math overflow="scroll"><m:mrow><m:mi>P</m:mi><m:mo>=</m:mo><m:mo>{</m:mo><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub><m:mo>&lt;</m:mo><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>&lt;</m:mo><m:mo>...</m:mo><m:mo>&lt;</m:mo><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math>
+is a partition of <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow></m:math> such that <m:math overflow="scroll"><m:mrow><m:mi>h</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msub><m:mi>a</m:mi><m:mi>i</m:mi></m:msub></m:mrow></m:math> on the interval
+<m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:msub><m:mi>x</m:mi><m:mrow><m:mi>i</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mi>i</m:mi></m:msub><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math>
+and suppose <m:math overflow="scroll"><m:mrow><m:mi>Q</m:mi><m:mo>=</m:mo><m:mo>{</m:mo><m:msub><m:mi>y</m:mi><m:mn>0</m:mn></m:msub><m:mo>&lt;</m:mo><m:msub><m:mi>y</m:mi><m:mn>1</m:mn></m:msub><m:mo>&lt;</m:mo><m:mo>...</m:mo><m:mo>&lt;</m:mo><m:msub><m:mi>y</m:mi><m:mi>m</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math>
+is another partition of <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow></m:math> such that <m:math overflow="scroll"><m:mrow><m:mi>h</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msub><m:mi>b</m:mi><m:mi>j</m:mi></m:msub></m:mrow></m:math> on the
+interval <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:msub><m:mi>y</m:mi><m:mrow><m:mi>j</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>,</m:mo><m:msub><m:mi>y</m:mi><m:mi>j</m:mi></m:msub><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Then the weighted average of <m:math overflow="scroll"><m:mi>h</m:mi></m:math> relative to <m:math overflow="scroll"><m:mi>P</m:mi></m:math>
+is the same as the weighted average of <m:math overflow="scroll"><m:mi>h</m:mi></m:math> relative to <m:math overflow="scroll"><m:mrow><m:mi>Q</m:mi><m:mo>.</m:mo></m:mrow></m:math> That is,
+<m:math overflow="scroll"><m:mrow><m:msub><m:mi>S</m:mi><m:mi>P</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>h</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msub><m:mi>S</m:mi><m:mi>Q</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>h</m:mi><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></para>
+</statement>
+<proof id="fs-id1164043923531">
+    <para id="id100909">
+Suppose first that the partition <m:math overflow="scroll"><m:mi>Q</m:mi></m:math> is obtained from the partition <m:math overflow="scroll"><m:mi>P</m:mi></m:math>
+by adding one additional point.
+Then <m:math overflow="scroll"><m:mrow><m:mi>m</m:mi><m:mo>=</m:mo><m:mi>n</m:mi><m:mo>+</m:mo><m:mn>1</m:mn><m:mo>,</m:mo></m:mrow></m:math> and there exists an <m:math overflow="scroll"><m:msub><m:mi>i</m:mi><m:mn>0</m:mn></m:msub></m:math> between 1 and <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:math> such that</para>
+    <list id="id100984" display="block" list-type="enumerated">
+      <item id="uid12">for <m:math overflow="scroll"><m:mrow><m:mn>0</m:mn><m:mo>≤</m:mo><m:mi>i</m:mi><m:mo>≤</m:mo><m:msub><m:mi>i</m:mi><m:mn>0</m:mn></m:msub></m:mrow></m:math> we have <m:math overflow="scroll"><m:mrow><m:msub><m:mi>y</m:mi><m:mi>i</m:mi></m:msub><m:mo>=</m:mo><m:msub><m:mi>x</m:mi><m:mi>i</m:mi></m:msub><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid13">   <m:math overflow="scroll"><m:mrow><m:msub><m:mi>x</m:mi><m:msub><m:mi>i</m:mi><m:mn>0</m:mn></m:msub></m:msub><m:mo>&lt;</m:mo><m:msub><m:mi>y</m:mi><m:mrow><m:msub><m:mi>i</m:mi><m:mn>0</m:mn></m:msub><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>&lt;</m:mo><m:msub><m:mi>x</m:mi><m:mrow><m:msub><m:mi>i</m:mi><m:mn>0</m:mn></m:msub><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid14">For <m:math overflow="scroll"><m:mrow><m:msub><m:mi>i</m:mi><m:mn>0</m:mn></m:msub><m:mo>&lt;</m:mo><m:mi>i</m:mi><m:mo>≤</m:mo><m:mi>n</m:mi></m:mrow></m:math> we have <m:math overflow="scroll"><m:mrow><m:msub><m:mi>x</m:mi><m:mi>i</m:mi></m:msub><m:mo>=</m:mo><m:msub><m:mi>y</m:mi><m:mrow><m:mi>i</m:mi><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>.</m:mo></m:mrow></m:math></item>
+    </list>
+    <para id="id101194">In other words, <m:math overflow="scroll"><m:msub><m:mi>y</m:mi><m:mrow><m:msub><m:mi>i</m:mi><m:mn>0</m:mn></m:msub><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow></m:msub></m:math> is the only point of <m:math overflow="scroll"><m:mi>Q</m:mi></m:math> that is not a point
+of <m:math overflow="scroll"><m:mrow><m:mi>P</m:mi><m:mo>,</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:msub><m:mi>y</m:mi><m:mrow><m:msub><m:mi>i</m:mi><m:mn>0</m:mn></m:msub><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow></m:msub></m:math> lies strictly between <m:math overflow="scroll"><m:msub><m:mi>x</m:mi><m:msub><m:mi>i</m:mi><m:mn>0</m:mn></m:msub></m:msub></m:math> and <m:math overflow="scroll"><m:mrow><m:msub><m:mi>x</m:mi><m:mrow><m:msub><m:mi>i</m:mi><m:mn>0</m:mn></m:msub><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>.</m:mo></m:mrow></m:math></para>
+    <para id="id101314">Because <m:math overflow="scroll"><m:mi>h</m:mi></m:math> is constant on the interval <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>(</m:mo><m:msub><m:mi>x</m:mi><m:msub><m:mi>i</m:mi><m:mn>0</m:mn></m:msub></m:msub><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mrow><m:msub><m:mi>i</m:mi><m:mn>0</m:mn></m:msub><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mrow><m:mo>(</m:mo><m:msub><m:mi>y</m:mi><m:msub><m:mi>i</m:mi><m:mn>0</m:mn></m:msub></m:msub><m:mo>,</m:mo><m:msub><m:mi>y</m:mi><m:mrow><m:msub><m:mi>i</m:mi><m:mn>0</m:mn></m:msub><m:mo>+</m:mo><m:mn>2</m:mn></m:mrow></m:msub><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math>
+it follows that</para>
+    <list id="id101415" display="block" list-type="enumerated">
+      <item id="uid15">For <m:math overflow="scroll"><m:mrow><m:mn>1</m:mn><m:mo>≤</m:mo><m:mi>i</m:mi><m:mo>≤</m:mo><m:msub><m:mi>i</m:mi><m:mn>0</m:mn></m:msub><m:mo>,</m:mo></m:mrow></m:math><m:math overflow="scroll"><m:mrow><m:msub><m:mi>a</m:mi><m:mi>i</m:mi></m:msub><m:mo>=</m:mo><m:msub><m:mi>b</m:mi><m:mi>i</m:mi></m:msub><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid16">   <m:math overflow="scroll"><m:mrow><m:msub><m:mi>b</m:mi><m:mrow><m:msub><m:mi>i</m:mi><m:mn>0</m:mn></m:msub><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>=</m:mo><m:msub><m:mi>b</m:mi><m:mrow><m:msub><m:mi>i</m:mi><m:mn>0</m:mn></m:msub><m:mo>+</m:mo><m:mn>2</m:mn></m:mrow></m:msub><m:mo>=</m:mo><m:msub><m:mi>a</m:mi><m:mrow><m:msub><m:mi>i</m:mi><m:mn>0</m:mn></m:msub><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid17">For <m:math overflow="scroll"><m:mrow><m:msub><m:mi>i</m:mi><m:mn>0</m:mn></m:msub><m:mo>+</m:mo><m:mn>1</m:mn><m:mo>≤</m:mo><m:mi>i</m:mi><m:mo>≤</m:mo><m:mi>n</m:mi><m:mo>,</m:mo></m:mrow></m:math><m:math overflow="scroll"><m:mrow><m:msub><m:mi>a</m:mi><m:mi>i</m:mi></m:msub><m:mo>=</m:mo><m:msub><m:mi>b</m:mi><m:mrow><m:mi>i</m:mi><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>.</m:mo></m:mrow></m:math></item>
+    </list>
+    <para id="id101636">So,</para>
+    <equation id="uid18">
+      <m:math overflow="scroll" mode="display">
+        <m:mtable displaystyle="true">
+          <m:mtr>
+            <m:mtd columnalign="right">
+              <m:mrow>
+                <m:msub>
+                  <m:mi>S</m:mi>
+                  <m:mi>P</m:mi>
+                </m:msub>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>h</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:munderover>
+                  <m:mo>∑</m:mo>
+                  <m:mrow>
+                    <m:mi>i</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                  <m:mi>n</m:mi>
+                </m:munderover>
+                <m:msub>
+                  <m:mi>a</m:mi>
+                  <m:mi>i</m:mi>
+                </m:msub>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:msub>
+                    <m:mi>x</m:mi>
+                    <m:mi>i</m:mi>
+                  </m:msub>
+                  <m:mo>-</m:mo>
+                  <m:msub>
+                    <m:mi>x</m:mi>
+                    <m:mrow>
+                      <m:mi>i</m:mi>
+                      <m:mo>-</m:mo>
+                      <m:mn>1</m:mn>
+                    </m:mrow>
+                  </m:msub>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:munderover>
+                  <m:mo>∑</m:mo>
+                  <m:mrow>
+                    <m:mi>i</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                  <m:msub>
+                    <m:mi>i</m:mi>
+                    <m:mn>0</m:mn>
+                  </m:msub>
+                </m:munderover>
+                <m:msub>
+                  <m:mi>a</m:mi>
+                  <m:mi>i</m:mi>
+                </m:msub>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:msub>
+                    <m:mi>x</m:mi>
+                    <m:mi>i</m:mi>
+                  </m:msub>
+                  <m:mo>-</m:mo>
+                  <m:msub>
+                    <m:mi>x</m:mi>
+                    <m:mrow>
+                      <m:mi>i</m:mi>
+                      <m:mo>-</m:mo>
+                      <m:mn>1</m:mn>
+                    </m:mrow>
+                  </m:msub>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mo>+</m:mo>
+                <m:msub>
+                  <m:mi>a</m:mi>
+                  <m:mrow>
+                    <m:msub>
+                      <m:mi>i</m:mi>
+                      <m:mn>0</m:mn>
+                    </m:msub>
+                    <m:mo>+</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                </m:msub>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:msub>
+                    <m:mi>x</m:mi>
+                    <m:mrow>
+                      <m:msub>
+                        <m:mi>i</m:mi>
+                        <m:mn>0</m:mn>
+                      </m:msub>
+                      <m:mo>+</m:mo>
+                      <m:mn>1</m:mn>
+                    </m:mrow>
+                  </m:msub>
+                  <m:mo>-</m:mo>
+                  <m:msub>
+                    <m:mi>x</m:mi>
+                    <m:msub>
+                      <m:mi>i</m:mi>
+                      <m:mn>0</m:mn>
+                    </m:msub>
+                  </m:msub>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd/>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mspace width="1.em"/>
+                <m:mspace width="1.em"/>
+                <m:mo>+</m:mo>
+                <m:munderover>
+                  <m:mo>∑</m:mo>
+                  <m:mrow>
+                    <m:mi>i</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:msub>
+                      <m:mi>i</m:mi>
+                      <m:mn>0</m:mn>
+                    </m:msub>
+                    <m:mo>+</m:mo>
+                    <m:mn>2</m:mn>
+                  </m:mrow>
+                  <m:mi>n</m:mi>
+                </m:munderover>
+                <m:msub>
+                  <m:mi>a</m:mi>
+                  <m:mi>i</m:mi>
+                </m:msub>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:msub>
+                    <m:mi>x</m:mi>
+                    <m:mi>i</m:mi>
+                  </m:msub>
+                  <m:mo>-</m:mo>
+                  <m:msub>
+                    <m:mi>x</m:mi>
+                    <m:mrow>
+                      <m:mi>i</m:mi>
+                      <m:mo>-</m:mo>
+                      <m:mn>1</m:mn>
+                    </m:mrow>
+                  </m:msub>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:munderover>
+                  <m:mo>∑</m:mo>
+                  <m:mrow>
+                    <m:mi>i</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                  <m:msub>
+                    <m:mi>i</m:mi>
+                    <m:mn>0</m:mn>
+                  </m:msub>
+                </m:munderover>
+                <m:msub>
+                  <m:mi>b</m:mi>
+                  <m:mi>i</m:mi>
+                </m:msub>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:msub>
+                    <m:mi>y</m:mi>
+                    <m:mi>i</m:mi>
+                  </m:msub>
+                  <m:mo>-</m:mo>
+                  <m:msub>
+                    <m:mi>y</m:mi>
+                    <m:mrow>
+                      <m:mi>i</m:mi>
+                      <m:mo>-</m:mo>
+                      <m:mn>1</m:mn>
+                    </m:mrow>
+                  </m:msub>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mo>+</m:mo>
+                <m:msub>
+                  <m:mi>a</m:mi>
+                  <m:mrow>
+                    <m:msub>
+                      <m:mi>i</m:mi>
+                      <m:mn>0</m:mn>
+                    </m:msub>
+                    <m:mo>+</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                </m:msub>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:msub>
+                    <m:mi>y</m:mi>
+                    <m:mrow>
+                      <m:msub>
+                        <m:mi>i</m:mi>
+                        <m:mn>0</m:mn>
+                      </m:msub>
+                      <m:mo>+</m:mo>
+                      <m:mn>2</m:mn>
+                    </m:mrow>
+                  </m:msub>
+                  <m:mo>-</m:mo>
+                  <m:msub>
+                    <m:mi>y</m:mi>
+                    <m:msub>
+                      <m:mi>i</m:mi>
+                      <m:mn>0</m:mn>
+                    </m:msub>
+                  </m:msub>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd/>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mspace width="1.em"/>
+                <m:mspace width="1.em"/>
+                <m:mo>+</m:mo>
+                <m:munderover>
+                  <m:mo>∑</m:mo>
+                  <m:mrow>
+                    <m:mi>i</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:msub>
+                      <m:mi>i</m:mi>
+                      <m:mn>0</m:mn>
+                    </m:msub>
+                    <m:mo>+</m:mo>
+                    <m:mn>2</m:mn>
+                  </m:mrow>
+                  <m:mi>n</m:mi>
+                </m:munderover>
+                <m:msub>
+                  <m:mi>b</m:mi>
+                  <m:mrow>
+                    <m:mi>i</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                </m:msub>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:msub>
+                    <m:mi>y</m:mi>
+                    <m:mrow>
+                      <m:mi>i</m:mi>
+                      <m:mo>+</m:mo>
+                      <m:mn>1</m:mn>
+                    </m:mrow>
+                  </m:msub>
+                  <m:mo>-</m:mo>
+                  <m:msub>
+                    <m:mi>y</m:mi>
+                    <m:mi>i</m:mi>
+                  </m:msub>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:munderover>
+                  <m:mo>∑</m:mo>
+                  <m:mrow>
+                    <m:mi>i</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                  <m:msub>
+                    <m:mi>i</m:mi>
+                    <m:mn>0</m:mn>
+                  </m:msub>
+                </m:munderover>
+                <m:msub>
+                  <m:mi>b</m:mi>
+                  <m:mi>i</m:mi>
+                </m:msub>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:msub>
+                    <m:mi>y</m:mi>
+                    <m:mi>i</m:mi>
+                  </m:msub>
+                  <m:mo>-</m:mo>
+                  <m:msub>
+                    <m:mi>y</m:mi>
+                    <m:mrow>
+                      <m:mi>i</m:mi>
+                      <m:mo>-</m:mo>
+                      <m:mn>1</m:mn>
+                    </m:mrow>
+                  </m:msub>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mo>+</m:mo>
+                <m:msub>
+                  <m:mi>a</m:mi>
+                  <m:mrow>
+                    <m:msub>
+                      <m:mi>i</m:mi>
+                      <m:mn>0</m:mn>
+                    </m:msub>
+                    <m:mo>+</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                </m:msub>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:msub>
+                    <m:mi>y</m:mi>
+                    <m:mrow>
+                      <m:msub>
+                        <m:mi>i</m:mi>
+                        <m:mn>0</m:mn>
+                      </m:msub>
+                      <m:mo>+</m:mo>
+                      <m:mn>2</m:mn>
+                    </m:mrow>
+                  </m:msub>
+                  <m:mo>-</m:mo>
+                  <m:msub>
+                    <m:mi>y</m:mi>
+                    <m:mrow>
+                      <m:msub>
+                        <m:mi>i</m:mi>
+                        <m:mn>0</m:mn>
+                      </m:msub>
+                      <m:mo>+</m:mo>
+                      <m:mn>1</m:mn>
+                    </m:mrow>
+                  </m:msub>
+                  <m:mo>+</m:mo>
+                  <m:msub>
+                    <m:mi>y</m:mi>
+                    <m:mrow>
+                      <m:msub>
+                        <m:mi>i</m:mi>
+                        <m:mn>0</m:mn>
+                      </m:msub>
+                      <m:mo>+</m:mo>
+                      <m:mn>1</m:mn>
+                    </m:mrow>
+                  </m:msub>
+                  <m:mo>-</m:mo>
+                  <m:msub>
+                    <m:mi>y</m:mi>
+                    <m:msub>
+                      <m:mi>i</m:mi>
+                      <m:mn>0</m:mn>
+                    </m:msub>
+                  </m:msub>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd/>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mspace width="1.em"/>
+                <m:mspace width="1.em"/>
+                <m:mo>+</m:mo>
+                <m:munderover>
+                  <m:mo>∑</m:mo>
+                  <m:mrow>
+                    <m:mi>i</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:msub>
+                      <m:mi>i</m:mi>
+                      <m:mn>0</m:mn>
+                    </m:msub>
+                    <m:mo>+</m:mo>
+                    <m:mn>3</m:mn>
+                  </m:mrow>
+                  <m:mrow>
+                    <m:mi>n</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                </m:munderover>
+                <m:msub>
+                  <m:mi>b</m:mi>
+                  <m:mi>i</m:mi>
+                </m:msub>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:msub>
+                    <m:mi>y</m:mi>
+                    <m:mi>i</m:mi>
+                  </m:msub>
+                  <m:mo>-</m:mo>
+                  <m:msub>
+                    <m:mi>y</m:mi>
+                    <m:mrow>
+                      <m:mi>i</m:mi>
+                      <m:mo>-</m:mo>
+                      <m:mn>1</m:mn>
+                    </m:mrow>
+                  </m:msub>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:munderover>
+                  <m:mo>∑</m:mo>
+                  <m:mrow>
+                    <m:mi>i</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                  <m:msub>
+                    <m:mi>i</m:mi>
+                    <m:mn>0</m:mn>
+                  </m:msub>
+                </m:munderover>
+                <m:msub>
+                  <m:mi>b</m:mi>
+                  <m:mi>i</m:mi>
+                </m:msub>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:msub>
+                    <m:mi>y</m:mi>
+                    <m:mi>i</m:mi>
+                  </m:msub>
+                  <m:mo>-</m:mo>
+                  <m:msub>
+                    <m:mi>y</m:mi>
+                    <m:mrow>
+                      <m:mi>i</m:mi>
+                      <m:mo>-</m:mo>
+                      <m:mn>1</m:mn>
+                    </m:mrow>
+                  </m:msub>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mo>+</m:mo>
+                <m:msub>
+                  <m:mi>b</m:mi>
+                  <m:mrow>
+                    <m:msub>
+                      <m:mi>i</m:mi>
+                      <m:mn>0</m:mn>
+                    </m:msub>
+                    <m:mo>+</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                </m:msub>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:msub>
+                    <m:mi>y</m:mi>
+                    <m:mrow>
+                      <m:msub>
+                        <m:mi>i</m:mi>
+                        <m:mn>0</m:mn>
+                      </m:msub>
+                      <m:mo>+</m:mo>
+                      <m:mn>1</m:mn>
+                    </m:mrow>
+                  </m:msub>
+                  <m:mo>-</m:mo>
+                  <m:msub>
+                    <m:mi>y</m:mi>
+                    <m:msub>
+                      <m:mi>i</m:mi>
+                      <m:mn>0</m:mn>
+                    </m:msub>
+                  </m:msub>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mo>+</m:mo>
+                <m:msub>
+                  <m:mi>b</m:mi>
+                  <m:mrow>
+                    <m:msub>
+                      <m:mi>i</m:mi>
+                      <m:mn>0</m:mn>
+                    </m:msub>
+                    <m:mo>+</m:mo>
+                    <m:mn>2</m:mn>
+                  </m:mrow>
+                </m:msub>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:msub>
+                    <m:mi>y</m:mi>
+                    <m:mrow>
+                      <m:msub>
+                        <m:mi>i</m:mi>
+                        <m:mn>0</m:mn>
+                      </m:msub>
+                      <m:mo>+</m:mo>
+                      <m:mn>2</m:mn>
+                    </m:mrow>
+                  </m:msub>
+                  <m:mo>-</m:mo>
+                  <m:msub>
+                    <m:mi>y</m:mi>
+                    <m:mrow>
+                      <m:msub>
+                        <m:mi>i</m:mi>
+                        <m:mn>0</m:mn>
+                      </m:msub>
+                      <m:mo>+</m:mo>
+                      <m:mn>1</m:mn>
+                    </m:mrow>
+                  </m:msub>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd/>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mspace width="1.em"/>
+                <m:mspace width="1.em"/>
+                <m:mo>+</m:mo>
+                <m:munderover>
+                  <m:mo>∑</m:mo>
+                  <m:mrow>
+                    <m:mi>i</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:msub>
+                      <m:mi>i</m:mi>
+                      <m:mn>0</m:mn>
+                    </m:msub>
+                    <m:mo>+</m:mo>
+                    <m:mn>3</m:mn>
+                  </m:mrow>
+                  <m:mi>m</m:mi>
+                </m:munderover>
+                <m:msub>
+                  <m:mi>b</m:mi>
+                  <m:mi>i</m:mi>
+                </m:msub>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:msub>
+                    <m:mi>y</m:mi>
+                    <m:mi>i</m:mi>
+                  </m:msub>
+                  <m:mo>-</m:mo>
+                  <m:msub>
+                    <m:mi>y</m:mi>
+                    <m:mrow>
+                      <m:mi>i</m:mi>
+                      <m:mo>-</m:mo>
+                      <m:mn>1</m:mn>
+                    </m:mrow>
+                  </m:msub>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:munderover>
+                  <m:mo>∑</m:mo>
+                  <m:mrow>
+                    <m:mi>i</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                  <m:mi>m</m:mi>
+                </m:munderover>
+                <m:msub>
+                  <m:mi>b</m:mi>
+                  <m:mi>i</m:mi>
+                </m:msub>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:msub>
+                    <m:mi>y</m:mi>
+                    <m:mi>i</m:mi>
+                  </m:msub>
+                  <m:mo>-</m:mo>
+                  <m:msub>
+                    <m:mi>y</m:mi>
+                    <m:mrow>
+                      <m:mi>i</m:mi>
+                      <m:mo>-</m:mo>
+                      <m:mn>1</m:mn>
+                    </m:mrow>
+                  </m:msub>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:msub>
+                  <m:mi>S</m:mi>
+                  <m:mi>Q</m:mi>
+                </m:msub>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>h</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mo>,</m:mo>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+        </m:mtable>
+      </m:math>
+    </equation>
+    <para id="id102748">which proves the theorem in this special case where <m:math overflow="scroll"><m:mi>Q</m:mi></m:math> is obtained from
+<m:math overflow="scroll"><m:mi>P</m:mi></m:math> by adding just one more point.</para>
+    <para id="id102773">It follows easily now by induction that if <m:math overflow="scroll"><m:mi>Q</m:mi></m:math> is obtained from <m:math overflow="scroll"><m:mi>P</m:mi></m:math> by adding
+any finite number of additional points, then
+<m:math overflow="scroll"><m:mi>h</m:mi></m:math> is constant on each of the open subintervals
+determined by <m:math overflow="scroll"><m:mrow><m:mi>Q</m:mi><m:mo>,</m:mo></m:mrow></m:math> and
+<m:math overflow="scroll"><m:mrow><m:msub><m:mi>S</m:mi><m:mi>Q</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>h</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msub><m:mi>S</m:mi><m:mi>P</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>h</m:mi><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></para>
+    <para id="id102856">Finally, let <m:math overflow="scroll"><m:mrow><m:mi>Q</m:mi><m:mo>=</m:mo><m:mo>{</m:mo><m:msub><m:mi>y</m:mi><m:mn>0</m:mn></m:msub><m:mo>&lt;</m:mo><m:msub><m:mi>y</m:mi><m:mn>1</m:mn></m:msub><m:mo>&lt;</m:mo><m:mo>...</m:mo><m:mo>&lt;</m:mo><m:msub><m:mi>y</m:mi><m:mi>m</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> be an arbitrary partition of <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>,</m:mo></m:mrow></m:math>
+for which <m:math overflow="scroll"><m:mi>h</m:mi></m:math> is constant on each of the open subintervals <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:msub><m:mi>y</m:mi><m:mrow><m:mi>j</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>,</m:mo><m:msub><m:mi>y</m:mi><m:mi>j</m:mi></m:msub><m:mo>)</m:mo></m:mrow></m:math> determined by <m:math overflow="scroll"><m:mrow><m:mi>Q</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Define
+<m:math overflow="scroll"><m:mi>R</m:mi></m:math> to be the partition of <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow></m:math> obtained by taking the union of the partition points
+<m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>x</m:mi><m:mi>i</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>y</m:mi><m:mi>j</m:mi></m:msub><m:mo>}</m:mo><m:mo>.</m:mo></m:mrow></m:math> Then <m:math overflow="scroll"><m:mi>R</m:mi></m:math> is a partition of <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow></m:math>
+that is obtained by adding a finite number of points to the
+partition <m:math overflow="scroll"><m:mrow><m:mi>P</m:mi><m:mo>,</m:mo></m:mrow></m:math> whence <m:math overflow="scroll"><m:mrow><m:msub><m:mi>S</m:mi><m:mi>R</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>h</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msub><m:mi>S</m:mi><m:mi>P</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>h</m:mi><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math>
+Likewise, <m:math overflow="scroll"><m:mi>R</m:mi></m:math> is obtained from the partition <m:math overflow="scroll"><m:mi>Q</m:mi></m:math> by
+adding a finite number of points, whence <m:math overflow="scroll"><m:mrow><m:msub><m:mi>S</m:mi><m:mi>R</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>h</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msub><m:mi>S</m:mi><m:mi>Q</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>h</m:mi><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math>
+and this proves that <m:math overflow="scroll"><m:mrow><m:msub><m:mi>S</m:mi><m:mi>Q</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>h</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msub><m:mi>S</m:mi><m:mi>P</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>h</m:mi><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> as desired.</para>
+</proof></rule>
+<definition id="fs-id1164041689843"><term/><meaning id="fs-id1164042073449">
+    <para id="id103237">
+Let <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow></m:math> be a fixed closed bounded interval in <m:math overflow="scroll"><m:mrow><m:mi>R</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+We define the <emphasis effect="italics">integral</emphasis> of a step function <m:math overflow="scroll"><m:mi>h</m:mi></m:math> on <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>,</m:mo></m:mrow></m:math> and denote it by <m:math overflow="scroll"><m:mrow><m:mo>∫</m:mo><m:mi>h</m:mi><m:mo>,</m:mo></m:mrow></m:math> as follows:
+If <m:math overflow="scroll"><m:mrow><m:mi>P</m:mi><m:mo>=</m:mo><m:mo>{</m:mo><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub><m:mo>&lt;</m:mo><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>&lt;</m:mo><m:mo>...</m:mo><m:mo>&lt;</m:mo><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> is a partition of <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>,</m:mo></m:mrow></m:math> for which
+<m:math overflow="scroll"><m:mrow><m:mi>h</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msub><m:mi>a</m:mi><m:mi>i</m:mi></m:msub></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mo>(</m:mo><m:msub><m:mi>x</m:mi><m:mrow><m:mi>i</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mi>i</m:mi></m:msub><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math> then</para>
+    <equation id="id103470">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mo>∫</m:mo>
+          <m:mi>h</m:mi>
+          <m:mo>=</m:mo>
+          <m:msub>
+            <m:mi>S</m:mi>
+            <m:mi>P</m:mi>
+          </m:msub>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>h</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>=</m:mo>
+          <m:munderover>
+            <m:mo>∑</m:mo>
+            <m:mrow>
+              <m:mi>i</m:mi>
+              <m:mo>=</m:mo>
+              <m:mn>1</m:mn>
+            </m:mrow>
+            <m:mi>n</m:mi>
+          </m:munderover>
+          <m:msub>
+            <m:mi>a</m:mi>
+            <m:mi>i</m:mi>
+          </m:msub>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:msub>
+              <m:mi>x</m:mi>
+              <m:mi>i</m:mi>
+            </m:msub>
+            <m:mo>-</m:mo>
+            <m:msub>
+              <m:mi>x</m:mi>
+              <m:mrow>
+                <m:mi>i</m:mi>
+                <m:mo>-</m:mo>
+                <m:mn>1</m:mn>
+              </m:mrow>
+            </m:msub>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>.</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+</meaning></definition>
+<rule id="fs-id1164041897606"><label/><statement id="fs-id1164039755502">
+    <para id="id103557"><emphasis effect="bold">REMARK</emphasis> The integral of a step function <m:math overflow="scroll"><m:mi>h</m:mi></m:math> is defined to be the
+weighted average of <m:math overflow="scroll"><m:mi>h</m:mi></m:math> relative to a partition <m:math overflow="scroll"><m:mi>P</m:mi></m:math> of <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Notice that the
+preceding theorem is crucial in order that this definition of <m:math overflow="scroll"><m:mrow><m:mo>∫</m:mo><m:mi>h</m:mi></m:mrow></m:math> be
+unambiguously defined. The integral of a step function
+should <emphasis effect="bold">not</emphasis> depend on which partition is used.
+<link target-id="fs-id1164041580652"/> asserts precisely this fact.</para>
+    <para id="id103632">Note also that if the interval is a single point, i.e., <m:math overflow="scroll"><m:mrow><m:mi>a</m:mi><m:mo>=</m:mo><m:mi>b</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+then the integral of every step function <m:math overflow="scroll"><m:mi>h</m:mi></m:math> is 0.</para>
+    <para id="id103661">We use a variety of notations for the integral of <m:math overflow="scroll"><m:mrow><m:mi>h</m:mi><m:mo>:</m:mo></m:mrow></m:math></para>
+    <equation id="id103676">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mo>∫</m:mo>
+          <m:mi>h</m:mi>
+          <m:mo>=</m:mo>
+          <m:msubsup>
+            <m:mo>∫</m:mo>
+            <m:mi>a</m:mi>
+            <m:mi>b</m:mi>
+          </m:msubsup>
+          <m:mi>h</m:mi>
+          <m:mo>=</m:mo>
+          <m:msubsup>
+            <m:mo>∫</m:mo>
+            <m:mi>a</m:mi>
+            <m:mi>b</m:mi>
+          </m:msubsup>
+          <m:mi>h</m:mi>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>t</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mspace width="0.166667em"/>
+          <m:mi>d</m:mi>
+          <m:mi>t</m:mi>
+          <m:mo>.</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id103737">The following exercise provides a very
+useful way of describing the integral of a step function.
+Not only does it show that the integral of a step function looks like a Riemann sum,
+but it provides a description of the integral that makes certain calculations easier.
+See, for example, the proof of the next theorem.</para>
+</statement></rule>
+<exercise id="fs-id1164035844774"><problem id="fs-id1164035844775">
+    <para id="id103743"> Suppose <m:math overflow="scroll"><m:mi>h</m:mi></m:math> is a step function on <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow></m:math>
+and that <m:math overflow="scroll"><m:mrow><m:mi>R</m:mi><m:mo>=</m:mo><m:mo>{</m:mo><m:msub><m:mi>z</m:mi><m:mn>0</m:mn></m:msub><m:mo>&lt;</m:mo><m:msub><m:mi>z</m:mi><m:mn>1</m:mn></m:msub><m:mo>&lt;</m:mo><m:mo>...</m:mo><m:mo>&lt;</m:mo><m:msub><m:mi>z</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> is a partition of <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow></m:math>
+for which <m:math overflow="scroll"><m:mi>h</m:mi></m:math> is constant on each subinterval <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:msub><m:mi>z</m:mi><m:mrow><m:mi>i</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>,</m:mo><m:msub><m:mi>z</m:mi><m:mi>i</m:mi></m:msub><m:mo>)</m:mo></m:mrow></m:math> of <m:math overflow="scroll"><m:mrow><m:mi>R</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+    <list id="id103905" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid19"> Prove that
+<equation id="id103920"><m:math overflow="scroll" mode="display"><m:mrow><m:mo>∫</m:mo><m:mi>h</m:mi><m:mo>=</m:mo><m:msub><m:mi>S</m:mi><m:mi>R</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>h</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:munderover><m:mo>∑</m:mo><m:mrow><m:mi>i</m:mi><m:mo>=</m:mo><m:mn>1</m:mn></m:mrow><m:mi>n</m:mi></m:munderover><m:mi>h</m:mi><m:mrow><m:mo>(</m:mo><m:msub><m:mi>w</m:mi><m:mi>i</m:mi></m:msub><m:mo>)</m:mo></m:mrow><m:mrow><m:mo>(</m:mo><m:msub><m:mi>z</m:mi><m:mi>i</m:mi></m:msub><m:mo>-</m:mo><m:msub><m:mi>z</m:mi><m:mrow><m:mi>i</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math></equation>
+where, for each <m:math overflow="scroll"><m:mrow><m:mn>1</m:mn><m:mo>≤</m:mo><m:mi>i</m:mi><m:mo>≤</m:mo><m:mi>n</m:mi><m:mo>,</m:mo></m:mrow></m:math><m:math overflow="scroll"><m:msub><m:mi>w</m:mi><m:mi>i</m:mi></m:msub></m:math> is any point in <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:msub><m:mi>z</m:mi><m:mrow><m:mi>i</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>,</m:mo><m:msub><m:mi>z</m:mi><m:mi>i</m:mi></m:msub><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+(Note then that the integral of a step function takes the
+form of a Riemann sum.)
+</item>
+      <item id="uid20"> Show that <m:math overflow="scroll"><m:mrow><m:mo>∫</m:mo><m:mi>h</m:mi></m:mrow></m:math> is independent of the
+values of <m:math overflow="scroll"><m:mi>h</m:mi></m:math> at the points <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>z</m:mi><m:mi>i</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> of the partition <m:math overflow="scroll"><m:mrow><m:mi>R</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+    </list>
+</problem></exercise>
+<exercise id="fs-id1164056907852"><problem id="fs-id1164063831161">
+    <para id="id104158"> Let <m:math overflow="scroll"><m:msub><m:mi>h</m:mi><m:mn>1</m:mn></m:msub></m:math> and <m:math overflow="scroll"><m:msub><m:mi>h</m:mi><m:mn>2</m:mn></m:msub></m:math> be two step functions
+on <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>.</m:mo></m:mrow></m:math></para>
+    <list id="id104216" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid21"> Suppose that <m:math overflow="scroll"><m:mrow><m:msub><m:mi>h</m:mi><m:mn>1</m:mn></m:msub><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msub><m:mi>h</m:mi><m:mn>2</m:mn></m:msub><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow></m:math> except for one point <m:math overflow="scroll"><m:mrow><m:mi>c</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Prove that <m:math overflow="scroll"><m:mrow><m:mo>∫</m:mo><m:msub><m:mi>h</m:mi><m:mn>1</m:mn></m:msub><m:mo>=</m:mo><m:mo>∫</m:mo><m:msub><m:mi>h</m:mi><m:mn>2</m:mn></m:msub><m:mo>.</m:mo></m:mrow></m:math>
+HINT: Let <m:math overflow="scroll"><m:mi>P</m:mi></m:math> be a partition of <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>,</m:mo></m:mrow></m:math> for which both <m:math overflow="scroll"><m:msub><m:mi>h</m:mi><m:mn>1</m:mn></m:msub></m:math> and <m:math overflow="scroll"><m:msub><m:mi>h</m:mi><m:mn>2</m:mn></m:msub></m:math>
+are constant on its open subintervals, and for which <m:math overflow="scroll"><m:mi>c</m:mi></m:math> is one of the points of <m:math overflow="scroll"><m:mrow><m:mi>P</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Now use the preceding exercise to calculate the two integrals.
+</item>
+      <item id="uid22"> Suppose <m:math overflow="scroll"><m:mrow><m:msub><m:mi>h</m:mi><m:mn>1</m:mn></m:msub><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msub><m:mi>h</m:mi><m:mn>2</m:mn></m:msub><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> for all but a finite number of points
+<m:math overflow="scroll"><m:mrow><m:msub><m:mi>c</m:mi><m:mn>1</m:mn></m:msub><m:mo>,</m:mo><m:mo>...</m:mo><m:mo>,</m:mo><m:msub><m:mi>c</m:mi><m:mi>N</m:mi></m:msub><m:mo>∈</m:mo><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math> Prove that
+<m:math overflow="scroll"><m:mrow><m:mo>∫</m:mo><m:msub><m:mi>h</m:mi><m:mn>1</m:mn></m:msub><m:mo>=</m:mo><m:mo>∫</m:mo><m:msub><m:mi>h</m:mi><m:mn>2</m:mn></m:msub><m:mo>.</m:mo></m:mrow></m:math></item>
+    </list>
+</problem></exercise>
+    <para id="id104550">We have used the terminology “weighted average” of a step function relative
+to a partition <m:math overflow="scroll"><m:mrow><m:mi>P</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+The next exercise shows how the integral of a step
+function can be related to an actual average value of the function.</para>
+<exercise id="fs-id1164042981605"><problem id="fs-id1164053239824">
+    <para id="id104568">Let <m:math overflow="scroll"><m:mi>h</m:mi></m:math> be a step function on the closed interval <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>,</m:mo></m:mrow></m:math>
+and let <m:math overflow="scroll"><m:mrow><m:mi>P</m:mi><m:mo>=</m:mo><m:mo>{</m:mo><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub><m:mo>&lt;</m:mo><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>&lt;</m:mo><m:mo>...</m:mo><m:mo>&lt;</m:mo><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> be a partition of <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow></m:math>
+for which <m:math overflow="scroll"><m:mrow><m:mi>h</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msub><m:mi>a</m:mi><m:mi>i</m:mi></m:msub></m:mrow></m:math> on the interval <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:msub><m:mi>x</m:mi><m:mrow><m:mi>i</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mi>i</m:mi></m:msub><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Let us think of the interval <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow></m:math> as an interval of time,
+and suppose that the function <m:math overflow="scroll"><m:mi>h</m:mi></m:math> assumes the value <m:math overflow="scroll"><m:msub><m:mi>a</m:mi><m:mi>i</m:mi></m:msub></m:math> for the interval of time between
+<m:math overflow="scroll"><m:msub><m:mi>x</m:mi><m:mrow><m:mi>i</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msub></m:math> and <m:math overflow="scroll"><m:mrow><m:msub><m:mi>x</m:mi><m:mi>i</m:mi></m:msub><m:mo>.</m:mo></m:mrow></m:math>
+Show that the average value <m:math overflow="scroll"><m:mrow><m:mi>A</m:mi><m:mo>(</m:mo><m:mi>h</m:mi><m:mo>)</m:mo></m:mrow></m:math> taken on by <m:math overflow="scroll"><m:mi>h</m:mi></m:math>
+throughout the entire interval (<m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow></m:math>) of time is given by</para>
+    <equation id="id104862">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mi>A</m:mi>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>h</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>=</m:mo>
+          <m:mfrac>
+            <m:mrow>
+              <m:mo>∫</m:mo>
+              <m:mi>h</m:mi>
+            </m:mrow>
+            <m:mrow>
+              <m:mi>b</m:mi>
+              <m:mo>-</m:mo>
+              <m:mi>a</m:mi>
+            </m:mrow>
+          </m:mfrac>
+          <m:mo>.</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+</problem></exercise>
+<rule id="fs-id1164042787601" type="theorem"><statement id="fs-id1164050565622">
+    <para id="id104902"> Let <m:math overflow="scroll"><m:mrow><m:mi>H</m:mi><m:mo>(</m:mo><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>)</m:mo></m:mrow></m:math> denote the vector space of all step functions
+on the closed interval <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Then the assignment <m:math overflow="scroll"><m:mrow><m:mi>h</m:mi><m:mo>→</m:mo><m:mo>∫</m:mo><m:mi>h</m:mi></m:mrow></m:math> of <m:math overflow="scroll"><m:mrow><m:mi>H</m:mi><m:mo>(</m:mo><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>)</m:mo></m:mrow></m:math> into <m:math overflow="scroll"><m:mi>R</m:mi></m:math>
+has the following properties:</para>
+    <list id="id105014" display="block" list-type="enumerated"><item id="uid23"> (Linearity)  <m:math overflow="scroll"><m:mrow><m:mi>H</m:mi><m:mo>(</m:mo><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>)</m:mo></m:mrow></m:math> is a vector space. Furthermore,
+<m:math overflow="scroll"><m:mrow><m:mo>∫</m:mo><m:mrow><m:mo>(</m:mo><m:msub><m:mi>h</m:mi><m:mn>1</m:mn></m:msub><m:mo>+</m:mo><m:msub><m:mi>h</m:mi><m:mn>2</m:mn></m:msub><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mo>∫</m:mo><m:msub><m:mi>h</m:mi><m:mn>1</m:mn></m:msub><m:mo>+</m:mo><m:mo>∫</m:mo><m:msub><m:mi>h</m:mi><m:mn>2</m:mn></m:msub><m:mo>,</m:mo></m:mrow></m:math>
+and <m:math overflow="scroll"><m:mrow><m:mo>∫</m:mo><m:mi>c</m:mi><m:mi>h</m:mi><m:mo>=</m:mo><m:mi>c</m:mi><m:mo>∫</m:mo><m:mi>h</m:mi></m:mrow></m:math>
+for all <m:math overflow="scroll"><m:mrow><m:msub><m:mi>h</m:mi><m:mn>1</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>h</m:mi><m:mn>2</m:mn></m:msub><m:mo>,</m:mo><m:mi>h</m:mi><m:mo>∈</m:mo><m:mi>H</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> and
+for all real numbers <m:math overflow="scroll"><m:mrow><m:mi>c</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid24">If <m:math overflow="scroll"><m:mrow><m:mi>h</m:mi><m:mo>=</m:mo><m:msubsup><m:mo>∑</m:mo><m:mrow><m:mi>i</m:mi><m:mo>=</m:mo><m:mn>1</m:mn></m:mrow><m:mi>n</m:mi></m:msubsup><m:msub><m:mi>a</m:mi><m:mi>i</m:mi></m:msub><m:msub><m:mi>χ</m:mi><m:mrow><m:mo>(</m:mo><m:msub><m:mi>c</m:mi><m:mi>i</m:mi></m:msub><m:mo>,</m:mo><m:msub><m:mi>d</m:mi><m:mi>i</m:mi></m:msub><m:mo>)</m:mo></m:mrow></m:msub></m:mrow></m:math> is a linear combination of
+indicator functions (See part (d) of <link target-id="fs-id1164045902958"/>),
+then <m:math overflow="scroll"><m:mrow><m:mo>∫</m:mo><m:mi>h</m:mi><m:mo>=</m:mo><m:msubsup><m:mo>∑</m:mo><m:mrow><m:mi>i</m:mi><m:mo>=</m:mo><m:mn>1</m:mn></m:mrow><m:mi>n</m:mi></m:msubsup><m:msub><m:mi>a</m:mi><m:mi>i</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:msub><m:mi>d</m:mi><m:mi>i</m:mi></m:msub><m:mo>-</m:mo><m:msub><m:mi>c</m:mi><m:mi>i</m:mi></m:msub><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid25"> (Positivity) If <m:math overflow="scroll"><m:mrow><m:mi>h</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>≥</m:mo><m:mn>0</m:mn></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>,</m:mo></m:mrow></m:math> then <m:math overflow="scroll"><m:mrow><m:mo>∫</m:mo><m:mi>h</m:mi><m:mo>≥</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid26"> (Order-preserving) If <m:math overflow="scroll"><m:msub><m:mi>h</m:mi><m:mn>1</m:mn></m:msub></m:math> and <m:math overflow="scroll"><m:msub><m:mi>h</m:mi><m:mn>2</m:mn></m:msub></m:math> are step functions
+for which <m:math overflow="scroll"><m:mrow><m:msub><m:mi>h</m:mi><m:mn>1</m:mn></m:msub><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>≤</m:mo><m:msub><m:mi>h</m:mi><m:mn>2</m:mn></m:msub><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>,</m:mo></m:mrow></m:math> then <m:math overflow="scroll"><m:mrow><m:mo>∫</m:mo><m:msub><m:mi>h</m:mi><m:mn>1</m:mn></m:msub><m:mo>≤</m:mo><m:mo>∫</m:mo><m:msub><m:mi>h</m:mi><m:mn>2</m:mn></m:msub><m:mo>.</m:mo></m:mrow></m:math></item>
+    </list>
+</statement>
+<proof id="fs-id1164035973120">
+    <para id="id105550">That <m:math overflow="scroll"><m:mrow><m:mi>H</m:mi><m:mo>(</m:mo><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>)</m:mo></m:mrow></m:math> is a vector space was proved in part (a) of
+<link target-id="fs-id1164045902958"/>.
+Suppose <m:math overflow="scroll"><m:mrow><m:mi>P</m:mi><m:mo>=</m:mo><m:mo>{</m:mo><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub><m:mo>&lt;</m:mo><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>&lt;</m:mo><m:mo>...</m:mo><m:mo>&lt;</m:mo><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> is a partition
+of <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow></m:math> such that <m:math overflow="scroll"><m:mrow><m:msub><m:mi>h</m:mi><m:mn>1</m:mn></m:msub><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> is constant for all <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mo>(</m:mo><m:msub><m:mi>x</m:mi><m:mrow><m:mi>i</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mi>i</m:mi></m:msub><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math>
+and suppose <m:math overflow="scroll"><m:mrow><m:mi>Q</m:mi><m:mo>=</m:mo><m:mo>{</m:mo><m:msub><m:mi>y</m:mi><m:mn>0</m:mn></m:msub><m:mo>&lt;</m:mo><m:msub><m:mi>y</m:mi><m:mn>1</m:mn></m:msub><m:mo>&lt;</m:mo><m:mo>...</m:mo><m:mo>&lt;</m:mo><m:msub><m:mi>y</m:mi><m:mi>m</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> is a partition of <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow></m:math>
+such that <m:math overflow="scroll"><m:mrow><m:msub><m:mi>h</m:mi><m:mn>2</m:mn></m:msub><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> is constant for all <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mo>(</m:mo><m:msub><m:mi>y</m:mi><m:mrow><m:mi>j</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>,</m:mo><m:msub><m:mi>y</m:mi><m:mi>j</m:mi></m:msub><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Let <m:math overflow="scroll"><m:mrow><m:mi>R</m:mi><m:mo>=</m:mo><m:mo>{</m:mo><m:msub><m:mi>z</m:mi><m:mn>0</m:mn></m:msub><m:mo>&lt;</m:mo><m:msub><m:mi>z</m:mi><m:mn>1</m:mn></m:msub><m:mo>&lt;</m:mo><m:mo>...</m:mo><m:mo>&lt;</m:mo><m:msub><m:mi>z</m:mi><m:mi>r</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> be the partition of <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow></m:math> obtained by taking the
+union of the <m:math overflow="scroll"><m:msub><m:mi>x</m:mi><m:mi>i</m:mi></m:msub></m:math>'s and the <m:math overflow="scroll"><m:msub><m:mi>y</m:mi><m:mi>j</m:mi></m:msub></m:math>'s.
+Then <m:math overflow="scroll"><m:msub><m:mi>h</m:mi><m:mn>1</m:mn></m:msub></m:math> and <m:math overflow="scroll"><m:msub><m:mi>h</m:mi><m:mn>2</m:mn></m:msub></m:math> are both constant on each open subinterval of <m:math overflow="scroll"><m:mrow><m:mi>R</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+since each such subinterval is contained in some open subinterval of <m:math overflow="scroll"><m:mi>P</m:mi></m:math> and also is contained in
+some open subinterval of <m:math overflow="scroll"><m:mrow><m:mi>Q</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Therefore, <m:math overflow="scroll"><m:mrow><m:msub><m:mi>h</m:mi><m:mn>1</m:mn></m:msub><m:mo>+</m:mo><m:msub><m:mi>h</m:mi><m:mn>2</m:mn></m:msub></m:mrow></m:math> is constant on each open subinterval of <m:math overflow="scroll"><m:mrow><m:mi>R</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Now, using <link target-id="fs-id1164035844774"/>, we have that</para>
+    <equation id="uid27">
+      <m:math overflow="scroll" mode="display">
+        <m:mtable displaystyle="true">
+          <m:mtr>
+            <m:mtd columnalign="right">
+              <m:mrow>
+                <m:mo>∫</m:mo>
+                <m:mo>(</m:mo>
+                <m:msub>
+                  <m:mi>h</m:mi>
+                  <m:mn>1</m:mn>
+                </m:msub>
+                <m:mo>+</m:mo>
+                <m:msub>
+                  <m:mi>h</m:mi>
+                  <m:mn>2</m:mn>
+                </m:msub>
+                <m:mo>)</m:mo>
+              </m:mrow>
+            </m:mtd>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:munderover>
+                  <m:mo>∑</m:mo>
+                  <m:mrow>
+                    <m:mi>k</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                  <m:mi>r</m:mi>
+                </m:munderover>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:msub>
+                      <m:mi>h</m:mi>
+                      <m:mn>1</m:mn>
+                    </m:msub>
+                    <m:mo>+</m:mo>
+                    <m:msub>
+                      <m:mi>h</m:mi>
+                      <m:mn>2</m:mn>
+                    </m:msub>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:msub>
+                      <m:mi>w</m:mi>
+                      <m:mi>k</m:mi>
+                    </m:msub>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:msub>
+                    <m:mi>z</m:mi>
+                    <m:mi>k</m:mi>
+                  </m:msub>
+                  <m:mo>-</m:mo>
+                  <m:msub>
+                    <m:mi>z</m:mi>
+                    <m:mrow>
+                      <m:mi>k</m:mi>
+                      <m:mo>-</m:mo>
+                      <m:mn>1</m:mn>
+                    </m:mrow>
+                  </m:msub>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:munderover>
+                  <m:mo>∑</m:mo>
+                  <m:mrow>
+                    <m:mi>k</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                  <m:mi>r</m:mi>
+                </m:munderover>
+                <m:msub>
+                  <m:mi>h</m:mi>
+                  <m:mn>1</m:mn>
+                </m:msub>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:msub>
+                    <m:mi>w</m:mi>
+                    <m:mi>k</m:mi>
+                  </m:msub>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:msub>
+                    <m:mi>z</m:mi>
+                    <m:mi>k</m:mi>
+                  </m:msub>
+                  <m:mo>-</m:mo>
+                  <m:msub>
+                    <m:mi>z</m:mi>
+                    <m:mrow>
+                      <m:mi>k</m:mi>
+                      <m:mo>-</m:mo>
+                      <m:mn>1</m:mn>
+                    </m:mrow>
+                  </m:msub>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mo>+</m:mo>
+                <m:munderover>
+                  <m:mo>∑</m:mo>
+                  <m:mrow>
+                    <m:mi>k</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                  <m:mi>r</m:mi>
+                </m:munderover>
+                <m:msub>
+                  <m:mi>h</m:mi>
+                  <m:mn>2</m:mn>
+                </m:msub>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:msub>
+                    <m:mi>w</m:mi>
+                    <m:mi>k</m:mi>
+                  </m:msub>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:msub>
+                    <m:mi>z</m:mi>
+                    <m:mi>k</m:mi>
+                  </m:msub>
+                  <m:mo>-</m:mo>
+                  <m:msub>
+                    <m:mi>z</m:mi>
+                    <m:mrow>
+                      <m:mi>k</m:mi>
+                      <m:mo>-</m:mo>
+                      <m:mn>1</m:mn>
+                    </m:mrow>
+                  </m:msub>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mo>∫</m:mo>
+                <m:msub>
+                  <m:mi>h</m:mi>
+                  <m:mn>1</m:mn>
+                </m:msub>
+                <m:mo>+</m:mo>
+                <m:mo>∫</m:mo>
+                <m:msub>
+                  <m:mi>h</m:mi>
+                  <m:mn>2</m:mn>
+                </m:msub>
+                <m:mo>.</m:mo>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+        </m:mtable>
+      </m:math>
+    </equation>
+    <para id="id106351">This proves the first assertion of part (1).</para>
+    <para id="id106357">Next, let <m:math overflow="scroll"><m:mrow><m:mi>P</m:mi><m:mo>=</m:mo><m:mo>{</m:mo><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub><m:mo>&lt;</m:mo><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>&lt;</m:mo><m:mo>...</m:mo><m:mo>&lt;</m:mo><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> be a partition of <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow></m:math>
+such that <m:math overflow="scroll"><m:mrow><m:mi>h</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:math> is constant on each open subinterval of <m:math overflow="scroll"><m:mrow><m:mi>P</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Then <m:math overflow="scroll"><m:mrow><m:mi>c</m:mi><m:mi>h</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:math> is constant on each open subinterval of <m:math overflow="scroll"><m:mrow><m:mi>P</m:mi><m:mo>,</m:mo></m:mrow></m:math> and
+using <link target-id="fs-id1164035844774"/> again, we have that</para>
+    <equation id="uid28">
+      <m:math overflow="scroll" mode="display">
+        <m:mtable displaystyle="true">
+          <m:mtr>
+            <m:mtd columnalign="right">
+              <m:mrow>
+                <m:mo>∫</m:mo>
+                <m:mo>(</m:mo>
+                <m:mi>c</m:mi>
+                <m:mi>h</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+            </m:mtd>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:munderover>
+                  <m:mo>∑</m:mo>
+                  <m:mrow>
+                    <m:mi>i</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                  <m:mi>n</m:mi>
+                </m:munderover>
+                <m:mi>c</m:mi>
+                <m:mi>h</m:mi>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:msub>
+                    <m:mi>w</m:mi>
+                    <m:mi>i</m:mi>
+                  </m:msub>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:msub>
+                    <m:mi>x</m:mi>
+                    <m:mi>i</m:mi>
+                  </m:msub>
+                  <m:mo>-</m:mo>
+                  <m:msub>
+                    <m:mi>x</m:mi>
+                    <m:mrow>
+                      <m:mi>i</m:mi>
+                      <m:mo>-</m:mo>
+                      <m:mn>1</m:mn>
+                    </m:mrow>
+                  </m:msub>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mi>c</m:mi>
+                <m:munderover>
+                  <m:mo>∑</m:mo>
+                  <m:mrow>
+                    <m:mi>i</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                  <m:mi>n</m:mi>
+                </m:munderover>
+                <m:mi>h</m:mi>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:msub>
+                    <m:mi>w</m:mi>
+                    <m:mi>i</m:mi>
+                  </m:msub>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:msub>
+                    <m:mi>x</m:mi>
+                    <m:mi>i</m:mi>
+                  </m:msub>
+                  <m:mo>-</m:mo>
+                  <m:msub>
+                    <m:mi>x</m:mi>
+                    <m:mrow>
+                      <m:mi>i</m:mi>
+                      <m:mo>-</m:mo>
+                      <m:mn>1</m:mn>
+                    </m:mrow>
+                  </m:msub>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mi>c</m:mi>
+                <m:mo>∫</m:mo>
+                <m:mi>h</m:mi>
+                <m:mo>,</m:mo>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+        </m:mtable>
+      </m:math>
+    </equation>
+    <para id="id106677">which completes the proof of the other half of part (1).</para>
+    <para id="id106684">To see part (2), we need only verify that
+<m:math overflow="scroll"><m:mrow><m:mo>∫</m:mo><m:msub><m:mi>χ</m:mi><m:mrow><m:mo>(</m:mo><m:msub><m:mi>c</m:mi><m:mi>i</m:mi></m:msub><m:mo>,</m:mo><m:msub><m:mi>d</m:mi><m:mi>i</m:mi></m:msub><m:mo>)</m:mo></m:mrow></m:msub><m:mo>=</m:mo><m:msub><m:mi>d</m:mi><m:mi>i</m:mi></m:msub><m:mo>-</m:mo><m:msub><m:mi>c</m:mi><m:mi>i</m:mi></m:msub><m:mo>,</m:mo></m:mrow></m:math>
+for then part (2) will follow from part (1).
+But <m:math overflow="scroll"><m:msub><m:mi>χ</m:mi><m:mrow><m:mo>(</m:mo><m:msub><m:mi>c</m:mi><m:mi>i</m:mi></m:msub><m:mo>,</m:mo><m:msub><m:mi>d</m:mi><m:mi>i</m:mi></m:msub><m:mo>)</m:mo></m:mrow></m:msub></m:math> is just a step function determined by the four point partition <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:msub><m:mi>c</m:mi><m:mi>i</m:mi></m:msub><m:mo>,</m:mo><m:msub><m:mi>d</m:mi><m:mi>i</m:mi></m:msub><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>}</m:mo></m:mrow></m:math> and values 0 on <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:msub><m:mi>c</m:mi><m:mi>i</m:mi></m:msub><m:mo>)</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:msub><m:mi>d</m:mi><m:mi>i</m:mi></m:msub><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo></m:mrow></m:math> and 1 on <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:msub><m:mi>c</m:mi><m:mi>i</m:mi></m:msub><m:mo>,</m:mo><m:msub><m:mi>d</m:mi><m:mi>i</m:mi></m:msub><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Therefore, we have that <m:math overflow="scroll"><m:mrow><m:mo>∫</m:mo><m:msub><m:mi>χ</m:mi><m:mrow><m:mo>(</m:mo><m:msub><m:mi>c</m:mi><m:mi>i</m:mi></m:msub><m:mo>,</m:mo><m:msub><m:mi>d</m:mi><m:mi>i</m:mi></m:msub><m:mo>)</m:mo></m:mrow></m:msub><m:mo>=</m:mo><m:msub><m:mi>d</m:mi><m:mi>i</m:mi></m:msub><m:mo>-</m:mo><m:msub><m:mi>c</m:mi><m:mi>i</m:mi></m:msub><m:mo>.</m:mo></m:mrow></m:math></para>
+    <para id="id106957">If <m:math overflow="scroll"><m:mrow><m:mi>h</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>≥</m:mo><m:mn>0</m:mn></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+and <m:math overflow="scroll"><m:mrow><m:mi>P</m:mi><m:mo>=</m:mo><m:mo>{</m:mo><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub><m:mo>&lt;</m:mo><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>&lt;</m:mo><m:mo>...</m:mo><m:mo>&lt;</m:mo><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> is as
+above, then</para>
+    <equation id="id107042">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mo>∫</m:mo>
+          <m:mi>h</m:mi>
+          <m:mo>=</m:mo>
+          <m:munderover>
+            <m:mo>∑</m:mo>
+            <m:mrow>
+              <m:mi>i</m:mi>
+              <m:mo>=</m:mo>
+              <m:mn>1</m:mn>
+            </m:mrow>
+            <m:mi>n</m:mi>
+          </m:munderover>
+          <m:mi>h</m:mi>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:msub>
+              <m:mi>w</m:mi>
+              <m:mi>i</m:mi>
+            </m:msub>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:msub>
+              <m:mi>x</m:mi>
+              <m:mi>i</m:mi>
+            </m:msub>
+            <m:mo>-</m:mo>
+            <m:msub>
+              <m:mi>x</m:mi>
+              <m:mrow>
+                <m:mi>i</m:mi>
+                <m:mo>-</m:mo>
+                <m:mn>1</m:mn>
+              </m:mrow>
+            </m:msub>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>≥</m:mo>
+          <m:mn>0</m:mn>
+          <m:mo>,</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id107124">and this proves part (3).</para>
+    <para id="id107130">Finally, suppose <m:math overflow="scroll"><m:mrow><m:msub><m:mi>h</m:mi><m:mn>1</m:mn></m:msub><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>≤</m:mo><m:msub><m:mi>h</m:mi><m:mn>2</m:mn></m:msub><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+By <link target-id="fs-id1164045902958"/>, we know that the function <m:math overflow="scroll"><m:mrow><m:msub><m:mi>h</m:mi><m:mn>3</m:mn></m:msub><m:mo>=</m:mo><m:msub><m:mi>h</m:mi><m:mn>2</m:mn></m:msub><m:mo>-</m:mo><m:msub><m:mi>h</m:mi><m:mn>1</m:mn></m:msub></m:mrow></m:math>
+is a step function on
+<m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Also, <m:math overflow="scroll"><m:mrow><m:msub><m:mi>h</m:mi><m:mn>3</m:mn></m:msub><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>≥</m:mo><m:mn>0</m:mn></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+So, by part (3), <m:math overflow="scroll"><m:mrow><m:mo>∫</m:mo><m:msub><m:mi>h</m:mi><m:mn>3</m:mn></m:msub><m:mo>≥</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math>
+Then, by part (1),</para>
+    <equation id="id107330">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mn>0</m:mn>
+          <m:mo>≤</m:mo>
+          <m:mo>∫</m:mo>
+          <m:msub>
+            <m:mi>h</m:mi>
+            <m:mn>3</m:mn>
+          </m:msub>
+          <m:mo>=</m:mo>
+          <m:mo>∫</m:mo>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:msub>
+              <m:mi>h</m:mi>
+              <m:mn>2</m:mn>
+            </m:msub>
+            <m:mo>-</m:mo>
+            <m:msub>
+              <m:mi>h</m:mi>
+              <m:mn>1</m:mn>
+            </m:msub>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>=</m:mo>
+          <m:mo>∫</m:mo>
+          <m:msub>
+            <m:mi>h</m:mi>
+            <m:mn>2</m:mn>
+          </m:msub>
+          <m:mo>-</m:mo>
+          <m:mo>∫</m:mo>
+          <m:msub>
+            <m:mi>h</m:mi>
+            <m:mn>1</m:mn>
+          </m:msub>
+          <m:mo>,</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id107407">which implies that <m:math overflow="scroll"><m:mrow><m:mo>∫</m:mo><m:msub><m:mi>h</m:mi><m:mn>1</m:mn></m:msub><m:mo>≤</m:mo><m:mo>∫</m:mo><m:msub><m:mi>h</m:mi><m:mn>2</m:mn></m:msub><m:mo>,</m:mo></m:mrow></m:math> as desired.</para>
+</proof></rule>
+<exercise id="fs-id1164038521634"><problem id="fs-id1164053984714">
+    <list id="id107456" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid29"> Let <m:math overflow="scroll"><m:mi>h</m:mi></m:math> be the constant function <m:math overflow="scroll"><m:mi>c</m:mi></m:math> on <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Show that <m:math overflow="scroll"><m:mrow><m:mo>∫</m:mo><m:mi>h</m:mi><m:mo>=</m:mo><m:mi>c</m:mi><m:mo>(</m:mo><m:mi>b</m:mi><m:mo>-</m:mo><m:mi>a</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid30"> Let <m:math overflow="scroll"><m:mrow><m:mi>a</m:mi><m:mo>&lt;</m:mo><m:mi>c</m:mi><m:mo>&lt;</m:mo><m:mi>d</m:mi><m:mo>&lt;</m:mo><m:mi>b</m:mi></m:mrow></m:math> be real numbers, and let <m:math overflow="scroll"><m:mi>h</m:mi></m:math> be the step function on
+<m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow></m:math> that equals <m:math overflow="scroll"><m:mi>r</m:mi></m:math> for <m:math overflow="scroll"><m:mrow><m:mi>c</m:mi><m:mo>&lt;</m:mo><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mi>d</m:mi></m:mrow></m:math> and 0 otherwise.
+Prove that <m:math overflow="scroll"><m:mrow><m:msubsup><m:mo>∫</m:mo><m:mi>a</m:mi><m:mi>b</m:mi></m:msubsup><m:mi>h</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mspace width="0.166667em"/><m:mi>d</m:mi><m:mi>t</m:mi><m:mo>=</m:mo><m:mi>r</m:mi><m:mrow><m:mo>(</m:mo><m:mi>d</m:mi><m:mo>-</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid31"> Let <m:math overflow="scroll"><m:mi>h</m:mi></m:math> be a step function on <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Prove that <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>h</m:mi><m:mo>|</m:mo></m:mrow></m:math> is a step function, and that
+<m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mo>∫</m:mo><m:mi>h</m:mi><m:mo>|</m:mo><m:mo>≤</m:mo><m:mo>∫</m:mo><m:mo>|</m:mo><m:mi>h</m:mi><m:mo>|</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+HINT: Note that <m:math overflow="scroll"><m:mrow><m:mo>-</m:mo><m:mo>|</m:mo><m:mi>h</m:mi><m:mo>|</m:mo><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>≤</m:mo><m:mi>h</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>≤</m:mo><m:mo>|</m:mo><m:mi>h</m:mi><m:mo>|</m:mo><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Now use the preceding theorem.
+</item>
+      <item id="uid32"> Suppose <m:math overflow="scroll"><m:mi>h</m:mi></m:math> is a step function on <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow></m:math>
+and that <m:math overflow="scroll"><m:mi>c</m:mi></m:math> is a constant for which <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>h</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>|</m:mo><m:mo>≤</m:mo><m:mi>c</m:mi></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Prove that <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mo>∫</m:mo><m:mi>h</m:mi><m:mo>|</m:mo><m:mo>≤</m:mo><m:mi>c</m:mi><m:mo>(</m:mo><m:mi>b</m:mi><m:mo>-</m:mo><m:mi>a</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math></item>
+    </list>
+</problem></exercise>
+  </content>
+</document>

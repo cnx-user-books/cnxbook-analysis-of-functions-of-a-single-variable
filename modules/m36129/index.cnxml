@@ -1,0 +1,452 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML">
+  <title>Subsequences and Cluster Points</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m36129</md:content-id>
+  <md:title>Subsequences and Cluster Points</md:title>
+  <md:abstract>An introduction of the convergence of subsequences, the bolzano-weierstrass theorem, cluster sets, suprema, infima, and the catchy criterion. Multiple exercises and proofs are included.</md:abstract>
+  <md:uuid>a5995249-015c-4cf6-8dba-ea4ac6ce70c3</md:uuid>
+</metadata>
+
+<content>
+<definition id="fs-id1169740171540"><term/><meaning id="fs-id1169739382601">
+    <para id="id62159">Let <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> be a sequence of real or complex numbers.
+A <emphasis effect="italics">subsequence</emphasis> of <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> is
+a sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>b</m:mi><m:mi>k</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> that is
+determined by the sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math>
+together with a strictly increasing sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>n</m:mi><m:mi>k</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> of natural numbers.
+The sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>b</m:mi><m:mi>k</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> is defined by
+<m:math overflow="scroll"><m:mrow><m:msub><m:mi>b</m:mi><m:mi>k</m:mi></m:msub><m:mo>=</m:mo><m:msub><m:mi>a</m:mi><m:msub><m:mi>n</m:mi><m:mi>k</m:mi></m:msub></m:msub><m:mo>.</m:mo></m:mrow></m:math>
+That is, the <m:math overflow="scroll"><m:mi>k</m:mi></m:math>th term of the sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>b</m:mi><m:mi>k</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> is the <m:math overflow="scroll"><m:msub><m:mi>n</m:mi><m:mi>k</m:mi></m:msub></m:math>th term of the original sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo><m:mo>.</m:mo></m:mrow></m:math></para>
+</meaning></definition>
+<exercise id="fs-id1169739656344"><problem id="fs-id1169739463268">
+    <para id="id62714">
+Prove that a subsequence of a subsequence of <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> is itself
+a subsequence of <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo><m:mo>.</m:mo></m:mrow></m:math> Thus,
+let <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> be a sequence of numbers, and let
+<m:math overflow="scroll"><m:mrow><m:mrow><m:mo>{</m:mo><m:msub><m:mi>b</m:mi><m:mi>k</m:mi></m:msub><m:mo>}</m:mo></m:mrow><m:mo>=</m:mo><m:mrow><m:mo>{</m:mo><m:msub><m:mi>a</m:mi><m:msub><m:mi>n</m:mi><m:mi>k</m:mi></m:msub></m:msub><m:mo>}</m:mo></m:mrow></m:mrow></m:math> be a subsequence of <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo><m:mo>.</m:mo></m:mrow></m:math> Suppose <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>{</m:mo><m:msub><m:mi>c</m:mi><m:mi>j</m:mi></m:msub><m:mo>}</m:mo></m:mrow><m:mo>=</m:mo><m:mrow><m:mo>{</m:mo><m:msub><m:mi>b</m:mi><m:msub><m:mi>k</m:mi><m:mi>j</m:mi></m:msub></m:msub><m:mo>}</m:mo></m:mrow></m:mrow></m:math> is a
+subsequence of the sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>b</m:mi><m:mi>k</m:mi></m:msub><m:mo>}</m:mo><m:mo>.</m:mo></m:mrow></m:math> Prove that <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>c</m:mi><m:mi>j</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math>
+is a subsequence of <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo><m:mo>.</m:mo></m:mrow></m:math> What is the strictly
+increasing sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>m</m:mi><m:mi>j</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> of natural numbers for which <m:math overflow="scroll"><m:mrow><m:msub><m:mi>c</m:mi><m:mi>j</m:mi></m:msub><m:mo>=</m:mo><m:msub><m:mi>a</m:mi><m:msub><m:mi>m</m:mi><m:mi>j</m:mi></m:msub></m:msub><m:mo>?</m:mo></m:mrow></m:math></para></problem></exercise>
+
+    <para id="id62993">Here is an interesting generalization of the notion of the limit of a sequence.</para>
+
+<definition id="fs-id1169739589270"><term/><meaning id="fs-id1169739353282">
+    <para id="id62997">Let <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> be a sequence of real or complex numbers.
+A number <m:math overflow="scroll"><m:mi>x</m:mi></m:math> is called a <emphasis effect="italics">cluster point</emphasis> of the sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> if there exists a subsequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>b</m:mi><m:mi>k</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> of <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> such that <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mo movablelimits="true" form="prefix">lim</m:mo><m:msub><m:mi>b</m:mi><m:mi>k</m:mi></m:msub><m:mo>.</m:mo></m:mrow></m:math>
+The
+set of all cluster points of a sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> is called the <emphasis effect="italics">cluster set</emphasis> of the sequence.</para>
+</meaning></definition>
+<exercise id="fs-id1169740113103"><problem id="fs-id1169741185836">
+    <list id="id63153" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid1"> Give an example of a sequence whose cluster set contains two points.
+Give an example of a sequence whose cluster set contains exactly <m:math overflow="scroll"><m:mi>n</m:mi></m:math> points.
+Can you think of a sequence whose cluster set is infinite?
+</item>
+      <item id="uid2"> Let <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> be a sequence with cluster set <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+What is the cluster set for the sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:mo>-</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo><m:mo>?</m:mo></m:mrow></m:math>
+What is the cluster set for the sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msubsup><m:mi>a</m:mi><m:mi>n</m:mi><m:mn>2</m:mn></m:msubsup><m:mo>}</m:mo><m:mo>?</m:mo></m:mrow></m:math></item>
+      <item id="uid3"> If <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>b</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> is a sequence for which <m:math overflow="scroll"><m:mrow><m:mi>b</m:mi><m:mo>=</m:mo><m:mo movablelimits="true" form="prefix">lim</m:mo><m:msub><m:mi>b</m:mi><m:mi>n</m:mi></m:msub><m:mo>,</m:mo></m:mrow></m:math>
+and <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> is another sequence,
+what is the cluster set of the sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:msub><m:mi>b</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo><m:mo>?</m:mo></m:mrow></m:math></item>
+      <item id="uid4"> Give an example of a sequence whose cluster set is empty.
+</item>
+      <item id="uid5"> Show that if the sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> is bounded above, then
+the cluster set <m:math overflow="scroll"><m:mi>S</m:mi></m:math> is bounded above.
+Show also that if <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> is bounded below, then <m:math overflow="scroll"><m:mi>S</m:mi></m:math> is bounded below.
+</item>
+      <item id="uid6"> Give an example of a sequence whose cluster set <m:math overflow="scroll"><m:mi>S</m:mi></m:math> is
+bounded above but not bounded below.
+</item>
+      <item id="uid7"> Give an example of a sequence that is not bounded, and which has
+exactly one cluster point.
+</item>
+    </list>
+</problem></exercise>
+<rule id="fs-id6229503" type="theorem"><statement id="fs-id1169739985157">
+    <para id="id63658">Suppose <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> is a sequence of real or complex numbers.</para>
+    <list id="id63684" display="block" list-type="enumerated">
+      <item id="uid8">(Uniqueness of limits) Suppose <m:math overflow="scroll"><m:mrow><m:mo movablelimits="true" form="prefix">lim</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>=</m:mo><m:mi>L</m:mi><m:mo>,</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mo movablelimits="true" form="prefix">lim</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>=</m:mo><m:mi>M</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Then <m:math overflow="scroll"><m:mrow><m:mi>L</m:mi><m:mo>=</m:mo><m:mi>M</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+That is, if the limit of a sequence exists, it is unique.
+</item>
+      <item id="uid9">If <m:math overflow="scroll"><m:mrow><m:mi>L</m:mi><m:mo>=</m:mo><m:mo movablelimits="true" form="prefix">lim</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>,</m:mo></m:mrow></m:math> and if <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>b</m:mi><m:mi>k</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> is a subsequence
+of <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo><m:mo>,</m:mo></m:mrow></m:math>
+then the sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>b</m:mi><m:mi>k</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> is convergent, and
+<m:math overflow="scroll"><m:mrow><m:mo movablelimits="true" form="prefix">lim</m:mo><m:msub><m:mi>b</m:mi><m:mi>k</m:mi></m:msub><m:mo>=</m:mo><m:mi>L</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+That is, if a sequence has a limit, then every subsequence
+is convergent and converges to that same limit.
+</item>
+    </list>
+</statement>
+<proof id="fs-id1169740171060">
+    <para id="id63893">Suppose <m:math overflow="scroll"><m:mrow><m:mo movablelimits="true" form="prefix">lim</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>=</m:mo><m:mi>L</m:mi><m:mtext>and</m:mtext><m:mo movablelimits="true" form="prefix">lim</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>=</m:mo><m:mi>M</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Let <m:math overflow="scroll"><m:mi>ϵ</m:mi></m:math> be a positive number, and choose <m:math overflow="scroll"><m:msub><m:mi>N</m:mi><m:mn>1</m:mn></m:msub></m:math> so that
+<m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mo>-</m:mo><m:mi>L</m:mi><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mi>ϵ</m:mi><m:mo>/</m:mo><m:mn>2</m:mn></m:mrow></m:mrow></m:math> if <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>≥</m:mo><m:msub><m:mi>N</m:mi><m:mn>1</m:mn></m:msub><m:mo>,</m:mo></m:mrow></m:math> and choose
+<m:math overflow="scroll"><m:msub><m:mi>N</m:mi><m:mn>2</m:mn></m:msub></m:math> so that <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mo>-</m:mo><m:mi>M</m:mi><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mi>ϵ</m:mi><m:mo>/</m:mo><m:mn>2</m:mn></m:mrow></m:mrow></m:math> if <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>≥</m:mo><m:msub><m:mi>N</m:mi><m:mn>2</m:mn></m:msub><m:mo>.</m:mo></m:mrow></m:math>
+Choose an <m:math overflow="scroll"><m:mi>n</m:mi></m:math> larger than both <m:math overflow="scroll"><m:mrow><m:msub><m:mi>N</m:mi><m:mn>1</m:mn></m:msub><m:mtext>and</m:mtext><m:msub><m:mi>N</m:mi><m:mn>2</m:mn></m:msub><m:mo>.</m:mo></m:mrow></m:math>
+Then</para>
+    <equation id="id64134">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mrow>
+            <m:mo>|</m:mo>
+            <m:mi>L</m:mi>
+            <m:mo>-</m:mo>
+            <m:mi>M</m:mi>
+            <m:mo>|</m:mo>
+            <m:mo>=</m:mo>
+            <m:mo>|</m:mo>
+            <m:mi>L</m:mi>
+            <m:mo>-</m:mo>
+          </m:mrow>
+          <m:msub>
+            <m:mi>a</m:mi>
+            <m:mi>n</m:mi>
+          </m:msub>
+          <m:mo>+</m:mo>
+          <m:msub>
+            <m:mi>a</m:mi>
+            <m:mi>n</m:mi>
+          </m:msub>
+          <m:mrow>
+            <m:mo>-</m:mo>
+            <m:mi>M</m:mi>
+            <m:mo>|</m:mo>
+            <m:mo>≤</m:mo>
+            <m:mo>|</m:mo>
+            <m:mi>L</m:mi>
+            <m:mo>-</m:mo>
+          </m:mrow>
+          <m:msub>
+            <m:mi>a</m:mi>
+            <m:mi>n</m:mi>
+          </m:msub>
+          <m:mrow>
+            <m:mo>|</m:mo>
+            <m:mo>+</m:mo>
+            <m:mo>|</m:mo>
+          </m:mrow>
+          <m:msub>
+            <m:mi>a</m:mi>
+            <m:mi>n</m:mi>
+          </m:msub>
+          <m:mrow>
+            <m:mo>-</m:mo>
+            <m:mi>M</m:mi>
+            <m:mo>|</m:mo>
+            <m:mo>&lt;</m:mo>
+            <m:mi>ϵ</m:mi>
+            <m:mo>.</m:mo>
+          </m:mrow>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id64234">Therefore, since <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>L</m:mi><m:mo>-</m:mo><m:mi>M</m:mi><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mi>ϵ</m:mi></m:mrow></m:math> for every positive <m:math overflow="scroll"><m:mrow><m:mi>ϵ</m:mi><m:mo>,</m:mo></m:mrow></m:math> it follows that
+<m:math overflow="scroll"><m:mrow><m:mi>L</m:mi><m:mo>-</m:mo><m:mi>M</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math> or <m:math overflow="scroll"><m:mrow><m:mi>L</m:mi><m:mo>=</m:mo><m:mi>M</m:mi><m:mo>.</m:mo></m:mrow></m:math> This proves part (1).</para>
+    <para id="id64311">Next, suppose <m:math overflow="scroll"><m:mrow><m:mo movablelimits="true" form="prefix">lim</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>=</m:mo><m:mi>L</m:mi></m:mrow></m:math> and let <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>b</m:mi><m:mi>k</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> be a subsequence of <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+We wish to show that <m:math overflow="scroll"><m:mrow><m:mo movablelimits="true" form="prefix">lim</m:mo><m:msub><m:mi>b</m:mi><m:mi>k</m:mi></m:msub><m:mo>=</m:mo><m:mi>L</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Let <m:math overflow="scroll"><m:mrow><m:mi>ϵ</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn></m:mrow></m:math> be given, and choose an <m:math overflow="scroll"><m:mi>N</m:mi></m:math> such that
+<m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mo>-</m:mo><m:mi>L</m:mi><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mi>ϵ</m:mi></m:mrow></m:mrow></m:math> if <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>≥</m:mo><m:mi>N</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Choose a <m:math overflow="scroll"><m:mi>K</m:mi></m:math> so that <m:math overflow="scroll"><m:mrow><m:msub><m:mi>n</m:mi><m:mi>K</m:mi></m:msub><m:mo>≥</m:mo><m:mi>N</m:mi></m:mrow></m:math>.
+(How?) Then, if <m:math overflow="scroll"><m:mrow><m:mi>k</m:mi><m:mo>≥</m:mo><m:mi>K</m:mi><m:mo>,</m:mo></m:mrow></m:math> we have <m:math overflow="scroll"><m:mrow><m:msub><m:mi>n</m:mi><m:mi>k</m:mi></m:msub><m:mo>≥</m:mo><m:msub><m:mi>n</m:mi><m:mi>K</m:mi></m:msub><m:mo>≥</m:mo><m:mi>N</m:mi><m:mo>,</m:mo></m:mrow></m:math> whence <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msub><m:mi>b</m:mi><m:mi>k</m:mi></m:msub><m:mrow><m:mo>-</m:mo><m:mi>L</m:mi><m:mo>|</m:mo><m:mo>=</m:mo><m:mo>|</m:mo></m:mrow><m:msub><m:mi>a</m:mi><m:msub><m:mi>n</m:mi><m:mi>k</m:mi></m:msub></m:msub><m:mrow><m:mo>-</m:mo><m:mi>L</m:mi><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mi>ϵ</m:mi><m:mo>,</m:mo></m:mrow></m:mrow></m:math>
+which shows that <m:math overflow="scroll"><m:mrow><m:mo movablelimits="true" form="prefix">lim</m:mo><m:msub><m:mi>b</m:mi><m:mi>k</m:mi></m:msub><m:mo>=</m:mo><m:mi>L</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+This proves part (2).</para>
+</proof></rule>
+<rule id="fs-id1169739790485"><label/><statement id="fs-id7328762">
+    <para id="id64644"><emphasis effect="bold">REMARK</emphasis>
+The preceding theorem has the following interpretation.
+It says that if a sequence converges to a number <m:math overflow="scroll"><m:mrow><m:mi>L</m:mi><m:mo>,</m:mo></m:mrow></m:math> then the cluster set of the sequence
+contains only one number, and that number is <m:math overflow="scroll"><m:mrow><m:mi>L</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Indeed, if <m:math overflow="scroll"><m:mi>x</m:mi></m:math> is a cluster point of the sequence, then there must
+be some subsequence that converges to <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>.</m:mo></m:mrow></m:math> But, by part (2), every subsequence converges to <m:math overflow="scroll"><m:mrow><m:mi>L</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Then, by part (1), <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mi>L</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Part (g) of <link target-id="fs-id1169740113103"/> shows that the converse of this theorem
+is not valid. that is, the cluster set may contain only one point, and yet the sequence is not convergent.</para>
+</statement></rule>
+    <para id="id64730">We give next what is probably the most useful fundamental result about sequences,
+the Bolzano-Weierstrass Theorem. It is this theorem that will
+enable us to derive many of the important properties of continuity, differentiability, and integrability.</para>
+<rule id="fs-id1165799319451" type="theorem"><title>Bolzano-Weierstrass</title><statement id="fs-id1165807012119">
+    <para id="id64735"> Every bounded sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> of real or complex numbers has a cluster point.
+In other words, every bounded sequence has a convergent subsequence.</para>
+
+    <para id="id64764">The Bolzano-Weierstrass Theorem is, perhaps not surprisingly, a very difficult theorem to prove.
+We begin with a technical, but very helpful, lemma.</para>
+<rule id="fs-id1165798489872" type="lemma"><statement id="fs-id1165799258767"><para id="fs-id1165799265223">Let <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> be a bounded sequence of real numbers;
+i.e., assume that there exists an <m:math overflow="scroll"><m:mi>M</m:mi></m:math> such that <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mo>|</m:mo><m:mo>≤</m:mo><m:mi>M</m:mi></m:mrow></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+For each <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>≥</m:mo><m:mn>1</m:mn><m:mo>,</m:mo></m:mrow></m:math> let <m:math overflow="scroll"><m:msub><m:mi>S</m:mi><m:mi>n</m:mi></m:msub></m:math> be the set whose elements are <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>,</m:mo><m:msub><m:mi>a</m:mi><m:mrow><m:mi>n</m:mi><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>,</m:mo><m:msub><m:mi>a</m:mi><m:mrow><m:mi>n</m:mi><m:mo>+</m:mo><m:mn>2</m:mn></m:mrow></m:msub><m:mo>,</m:mo><m:mo>...</m:mo><m:mo>}</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+That is, <m:math overflow="scroll"><m:msub><m:mi>S</m:mi><m:mi>n</m:mi></m:msub></m:math> is just the elements of the tail of the sequence from <m:math overflow="scroll"><m:mi>n</m:mi></m:math> on.
+Define <m:math overflow="scroll"><m:mrow><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mo>=</m:mo><m:mo movablelimits="true" form="prefix">sup</m:mo><m:msub><m:mi>S</m:mi><m:mi>n</m:mi></m:msub><m:mo>=</m:mo><m:msub><m:mo movablelimits="true" form="prefix">sup</m:mo><m:mrow><m:mi>k</m:mi><m:mo>≥</m:mo><m:mi>n</m:mi></m:mrow></m:msub><m:msub><m:mi>a</m:mi><m:mi>k</m:mi></m:msub><m:mo>.</m:mo></m:mrow></m:math>
+Then</para>
+    <list id="id65012" display="block" list-type="enumerated">
+      <item id="uid10">The sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> is bounded (above and below).
+</item>
+      <item id="uid11">The sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> is non-increasing.
+</item>
+      <item id="uid12">The sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> converges to a number <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid13">The limit <m:math overflow="scroll"><m:mi>x</m:mi></m:math> of the sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math>
+is a cluster point of the sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+That is, there exists a subsequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>b</m:mi><m:mi>k</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> of the sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> that converges to <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid14">If <m:math overflow="scroll"><m:mi>y</m:mi></m:math> is any cluster point of the sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo><m:mo>,</m:mo></m:mrow></m:math> then <m:math overflow="scroll"><m:mrow><m:mi>y</m:mi><m:mo>≤</m:mo><m:mi>x</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+where <m:math overflow="scroll"><m:mi>x</m:mi></m:math> is the cluster point of part (4).
+That is, <m:math overflow="scroll"><m:mi>x</m:mi></m:math> is the maximum of all cluster points of the sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo><m:mo>.</m:mo></m:mrow></m:math></item>
+    </list>
+</statement>
+<proof id="fs-id1165803237592">
+    <para id="id65337">Since <m:math overflow="scroll"><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub></m:math> is the supremum of the set <m:math overflow="scroll"><m:mrow><m:msub><m:mi>S</m:mi><m:mi>n</m:mi></m:msub><m:mo>,</m:mo></m:mrow></m:math> and since each element of that set is bounded between <m:math overflow="scroll"><m:mrow><m:mo>-</m:mo><m:mi>M</m:mi></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>M</m:mi><m:mo>,</m:mo></m:mrow></m:math> part (1) is immediate.</para>
+    <para id="id65401">Since <m:math overflow="scroll"><m:mrow><m:msub><m:mi>S</m:mi><m:mrow><m:mi>n</m:mi><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>⊆</m:mo><m:msub><m:mi>S</m:mi><m:mi>n</m:mi></m:msub><m:mo>,</m:mo></m:mrow></m:math> it is clear that</para>
+    <equation id="id65437">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:msub>
+            <m:mi>x</m:mi>
+            <m:mrow>
+              <m:mi>n</m:mi>
+              <m:mo>+</m:mo>
+              <m:mn>1</m:mn>
+            </m:mrow>
+          </m:msub>
+          <m:mo>=</m:mo>
+          <m:mo movablelimits="true" form="prefix">sup</m:mo>
+          <m:msub>
+            <m:mi>S</m:mi>
+            <m:mrow>
+              <m:mi>n</m:mi>
+              <m:mo>+</m:mo>
+              <m:mn>1</m:mn>
+            </m:mrow>
+          </m:msub>
+          <m:mo>≤</m:mo>
+          <m:mo movablelimits="true" form="prefix">sup</m:mo>
+          <m:msub>
+            <m:mi>S</m:mi>
+            <m:mi>n</m:mi>
+          </m:msub>
+          <m:mo>=</m:mo>
+          <m:msub>
+            <m:mi>x</m:mi>
+            <m:mi>n</m:mi>
+          </m:msub>
+          <m:mo>,</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id65509">showing part (2).</para>
+    <para id="id65514">The fact that the sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> converges to a number <m:math overflow="scroll"><m:mi>x</m:mi></m:math> is then a consequence of <link target-id="fs-id1170684226813" document="m36120"/>.</para>
+    <para id="id65548">We have to show that the limit <m:math overflow="scroll"><m:mi>x</m:mi></m:math> of the sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> is a cluster point of <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Notice that <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> may not itself be a subsequence of <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo><m:mo>,</m:mo></m:mrow></m:math>
+each <m:math overflow="scroll"><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub></m:math> may or may not be one of the numbers <m:math overflow="scroll"><m:mrow><m:msub><m:mi>a</m:mi><m:mi>k</m:mi></m:msub><m:mo>,</m:mo></m:mrow></m:math>
+so that there really is something to prove.
+In fact, this is the hard part of this lemma.
+To finish the proof of part (4), we must define an increasing sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>n</m:mi><m:mi>k</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> of
+natural numbers for which the corresponding subsequence <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>{</m:mo><m:msub><m:mi>b</m:mi><m:mi>k</m:mi></m:msub><m:mo>}</m:mo></m:mrow><m:mo>=</m:mo><m:mrow><m:mo>{</m:mo><m:msub><m:mi>a</m:mi><m:msub><m:mi>n</m:mi><m:mi>k</m:mi></m:msub></m:msub><m:mo>}</m:mo></m:mrow></m:mrow></m:math>
+of <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> converges to <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+We will choose these natural numbers <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>n</m:mi><m:mi>k</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> so that
+<m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo><m:mi>x</m:mi><m:mo>-</m:mo></m:mrow><m:msub><m:mi>a</m:mi><m:msub><m:mi>n</m:mi><m:mi>k</m:mi></m:msub></m:msub><m:mrow><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>k</m:mi><m:mo>.</m:mo></m:mrow></m:mrow></m:math>
+Once we have accomplished this, the fact that
+the corresponding subsequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>a</m:mi><m:msub><m:mi>n</m:mi><m:mi>k</m:mi></m:msub></m:msub><m:mo>}</m:mo></m:mrow></m:math> converges to <m:math overflow="scroll"><m:mi>x</m:mi></m:math> will be clear.
+We choose the <m:math overflow="scroll"><m:msub><m:mi>n</m:mi><m:mi>k</m:mi></m:msub></m:math>'s inductively.
+First, using the fact that <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mo movablelimits="true" form="prefix">lim</m:mo><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mo>,</m:mo></m:mrow></m:math> choose an <m:math overflow="scroll"><m:mi>n</m:mi></m:math> so that <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mo>-</m:mo><m:mi>x</m:mi><m:mo>|</m:mo><m:mo>=</m:mo></m:mrow><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mo>-</m:mo><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mn>1</m:mn><m:mo>.</m:mo></m:mrow></m:math>
+Then, because <m:math overflow="scroll"><m:mrow><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mo>=</m:mo><m:mo movablelimits="true" form="prefix">sup</m:mo><m:msub><m:mi>S</m:mi><m:mi>n</m:mi></m:msub><m:mo>,</m:mo></m:mrow></m:math>
+we may choose by <link target-id="fs-id1170177642504" document="m36085"/> some <m:math overflow="scroll"><m:mrow><m:mi>m</m:mi><m:mo>≥</m:mo><m:mi>n</m:mi></m:mrow></m:math> such that <m:math overflow="scroll"><m:mrow><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mo>≥</m:mo><m:msub><m:mi>a</m:mi><m:mi>m</m:mi></m:msub><m:mo>&gt;</m:mo><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mo>-</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mn>1</m:mn><m:mo>.</m:mo></m:mrow></m:math>
+But then
+<m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msub><m:mi>a</m:mi><m:mi>m</m:mi></m:msub><m:mrow><m:mo>-</m:mo><m:mi>x</m:mi><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mn>1</m:mn><m:mo>.</m:mo></m:mrow></m:mrow></m:math>
+(Why?) This <m:math overflow="scroll"><m:mi>m</m:mi></m:math> we call <m:math overflow="scroll"><m:mrow><m:msub><m:mi>n</m:mi><m:mn>1</m:mn></m:msub><m:mo>.</m:mo></m:mrow></m:math>
+We have that <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msub><m:mi>a</m:mi><m:msub><m:mi>n</m:mi><m:mn>1</m:mn></m:msub></m:msub><m:mrow><m:mo>-</m:mo><m:mi>x</m:mi><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mn>1</m:mn><m:mo>.</m:mo></m:mrow></m:mrow></m:math></para>
+    <para id="id66168">Next, again using the fact that <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mo movablelimits="true" form="prefix">lim</m:mo><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mo>,</m:mo></m:mrow></m:math> choose another <m:math overflow="scroll"><m:mi>n</m:mi></m:math> so that <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>&gt;</m:mo><m:msub><m:mi>n</m:mi><m:mn>1</m:mn></m:msub></m:mrow></m:math> and so that <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mo>-</m:mo><m:mi>x</m:mi><m:mo>|</m:mo><m:mo>=</m:mo></m:mrow><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mo>-</m:mo><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mn>2</m:mn><m:mo>.</m:mo></m:mrow></m:math>
+Then, since this <m:math overflow="scroll"><m:mrow><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mo>=</m:mo><m:mo movablelimits="true" form="prefix">sup</m:mo><m:msub><m:mi>S</m:mi><m:mi>n</m:mi></m:msub><m:mo>,</m:mo></m:mrow></m:math>
+we may choose another <m:math overflow="scroll"><m:mrow><m:mi>m</m:mi><m:mo>≥</m:mo><m:mi>n</m:mi></m:mrow></m:math> such that <m:math overflow="scroll"><m:mrow><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mo>≥</m:mo><m:msub><m:mi>a</m:mi><m:mi>m</m:mi></m:msub><m:mo>&gt;</m:mo><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mo>-</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mn>2</m:mn><m:mo>.</m:mo></m:mrow></m:math>
+This <m:math overflow="scroll"><m:mi>m</m:mi></m:math> we call <m:math overflow="scroll"><m:mrow><m:msub><m:mi>n</m:mi><m:mn>2</m:mn></m:msub><m:mo>.</m:mo></m:mrow></m:math>
+Note that we have <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msub><m:mi>a</m:mi><m:msub><m:mi>n</m:mi><m:mn>2</m:mn></m:msub></m:msub><m:mrow><m:mo>-</m:mo><m:mi>x</m:mi><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mn>2</m:mn><m:mo>.</m:mo></m:mrow></m:mrow></m:math></para>
+    <para id="id66440">Arguing by induction, if we have found an increasing set <m:math overflow="scroll"><m:mrow><m:msub><m:mi>n</m:mi><m:mn>1</m:mn></m:msub><m:mo>&lt;</m:mo><m:msub><m:mi>n</m:mi><m:mn>2</m:mn></m:msub><m:mo>&lt;</m:mo><m:mo>.</m:mo><m:mo>.</m:mo><m:mo>.</m:mo><m:mo>&lt;</m:mo><m:msub><m:mi>n</m:mi><m:mi>j</m:mi></m:msub><m:mo>,</m:mo></m:mrow></m:math> for which
+<m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msub><m:mi>a</m:mi><m:msub><m:mi>n</m:mi><m:mi>i</m:mi></m:msub></m:msub><m:mrow><m:mo>-</m:mo><m:mi>x</m:mi><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>i</m:mi></m:mrow></m:mrow></m:math> for <m:math overflow="scroll"><m:mrow><m:mn>1</m:mn><m:mo>≤</m:mo><m:mi>i</m:mi><m:mo>≤</m:mo><m:mi>j</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+choose an <m:math overflow="scroll"><m:mi>n</m:mi></m:math> larger than <m:math overflow="scroll"><m:msub><m:mi>n</m:mi><m:mi>j</m:mi></m:msub></m:math> such that <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mo>-</m:mo><m:mi>x</m:mi><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mrow><m:mo>(</m:mo><m:mi>j</m:mi><m:mo>+</m:mo><m:mn>1</m:mn><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:mrow></m:math>
+Then, since <m:math overflow="scroll"><m:mrow><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mo>=</m:mo><m:mo movablelimits="true" form="prefix">sup</m:mo><m:msub><m:mi>S</m:mi><m:mi>n</m:mi></m:msub><m:mo>,</m:mo></m:mrow></m:math>
+choose an <m:math overflow="scroll"><m:mrow><m:mi>m</m:mi><m:mo>≥</m:mo><m:mi>n</m:mi></m:mrow></m:math> so that <m:math overflow="scroll"><m:mrow><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mo>≥</m:mo><m:msub><m:mi>a</m:mi><m:mi>m</m:mi></m:msub><m:mo>&gt;</m:mo><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mo>-</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mrow><m:mo>(</m:mo><m:mi>j</m:mi><m:mo>+</m:mo><m:mn>1</m:mn><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math>
+Then <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msub><m:mi>a</m:mi><m:mi>m</m:mi></m:msub><m:mrow><m:mo>-</m:mo><m:mi>x</m:mi><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mrow><m:mo>(</m:mo><m:mi>j</m:mi><m:mo>+</m:mo><m:mn>1</m:mn><m:mo>)</m:mo></m:mrow></m:mrow></m:mrow></m:math>, and we let <m:math overflow="scroll"><m:msub><m:mi>n</m:mi><m:mrow><m:mi>j</m:mi><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow></m:msub></m:math> be this <m:math overflow="scroll"><m:mrow><m:mi>m</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+It follows that <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msub><m:mi>a</m:mi><m:msub><m:mi>n</m:mi><m:mrow><m:mi>j</m:mi><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow></m:msub></m:msub><m:mrow><m:mo>-</m:mo><m:mi>x</m:mi><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mrow><m:mo>(</m:mo><m:mi>j</m:mi><m:mo>+</m:mo><m:mn>1</m:mn><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:mrow></m:math></para>
+    <para id="id66855">So, by recursive definition, we have constructed a subsequence of <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> that converges to <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>,</m:mo></m:mrow></m:math> and this completes the proof of part (4) of the lemma.</para>
+    <para id="id66891">Finally, if <m:math overflow="scroll"><m:mi>y</m:mi></m:math> is any cluster point of <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo><m:mo>,</m:mo></m:mrow></m:math> and if <m:math overflow="scroll"><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mo movablelimits="true" form="prefix">lim</m:mo><m:msub><m:mi>a</m:mi><m:msub><m:mi>n</m:mi><m:mi>k</m:mi></m:msub></m:msub><m:mo>,</m:mo></m:mrow></m:math> then
+<m:math overflow="scroll"><m:mrow><m:msub><m:mi>n</m:mi><m:mi>k</m:mi></m:msub><m:mo>≥</m:mo><m:mi>k</m:mi><m:mo>,</m:mo></m:mrow></m:math> and so <m:math overflow="scroll"><m:mrow><m:msub><m:mi>a</m:mi><m:msub><m:mi>n</m:mi><m:mi>k</m:mi></m:msub></m:msub><m:mo>≤</m:mo><m:msub><m:mi>x</m:mi><m:mi>k</m:mi></m:msub><m:mo>,</m:mo></m:mrow></m:math>
+implying that <m:math overflow="scroll"><m:mrow><m:msub><m:mi>x</m:mi><m:mi>k</m:mi></m:msub><m:mo>-</m:mo><m:msub><m:mi>a</m:mi><m:msub><m:mi>n</m:mi><m:mi>k</m:mi></m:msub></m:msub><m:mo>≥</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math>
+Hence, taking limits on <m:math overflow="scroll"><m:mrow><m:mi>k</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+we see that <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>-</m:mo><m:mi>y</m:mi><m:mo>≥</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> and this proves part (5).</para>
+    <para id="id67083">Now, using the lemma, we can give the proof of the Bolzano-Weierstrass Theorem.</para>
+</proof></rule>
+</statement>
+<proof id="fs-id1165799516052">
+    <para id="id67087"> If <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> is a sequence of real numbers, this theorem is an immediate consequence of part (4) of the preceding lemma.</para>
+    <para id="id67116">If <m:math overflow="scroll"><m:mrow><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>=</m:mo><m:msub><m:mi>b</m:mi><m:mi>n</m:mi></m:msub><m:mo>+</m:mo><m:msub><m:mi>c</m:mi><m:mi>n</m:mi></m:msub><m:mi>i</m:mi></m:mrow></m:math> is a sequence of complex numbers,
+and if <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> is bounded,
+then <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>b</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>c</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> are both
+bounded sequences of real numbers.
+See <link target-id="fs-id1165800080539" document="m36113"/>.
+So, by the preceding paragraph, there exists a subsequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>b</m:mi><m:msub><m:mi>n</m:mi><m:mi>k</m:mi></m:msub></m:msub><m:mo>}</m:mo></m:mrow></m:math> of <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>b</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> that converges to a real number <m:math overflow="scroll"><m:mrow><m:mi>b</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Now, the subsequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>c</m:mi><m:msub><m:mi>n</m:mi><m:mi>k</m:mi></m:msub></m:msub><m:mo>}</m:mo></m:mrow></m:math> is itself a bounded sequence of real numbers, so there is a subsequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>c</m:mi><m:msub><m:mi>n</m:mi><m:msub><m:mi>k</m:mi><m:mi>j</m:mi></m:msub></m:msub></m:msub><m:mo>}</m:mo></m:mrow></m:math> that converges
+to
+a real number <m:math overflow="scroll"><m:mrow><m:mi>c</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+By part (2) of <link target-id="fs-id6229503"/>, we also have that the subsequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>b</m:mi><m:msub><m:mi>n</m:mi><m:msub><m:mi>k</m:mi><m:mi>j</m:mi></m:msub></m:msub></m:msub><m:mo>}</m:mo></m:mrow></m:math> converges to <m:math overflow="scroll"><m:mrow><m:mi>b</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+So the subsequence <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>{</m:mo><m:msub><m:mi>a</m:mi><m:msub><m:mi>n</m:mi><m:msub><m:mi>k</m:mi><m:mi>j</m:mi></m:msub></m:msub></m:msub><m:mo>}</m:mo></m:mrow><m:mo>=</m:mo><m:mrow><m:mo>{</m:mo><m:msub><m:mi>b</m:mi><m:msub><m:mi>n</m:mi><m:msub><m:mi>k</m:mi><m:mi>j</m:mi></m:msub></m:msub></m:msub><m:mo>+</m:mo><m:msub><m:mi>c</m:mi><m:msub><m:mi>n</m:mi><m:msub><m:mi>k</m:mi><m:mi>j</m:mi></m:msub></m:msub></m:msub><m:mi>i</m:mi><m:mo>}</m:mo></m:mrow></m:mrow></m:math> of <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> converges to the complex number <m:math overflow="scroll"><m:mrow><m:mi>b</m:mi><m:mo>+</m:mo><m:mi>c</m:mi><m:mi>i</m:mi><m:mo>;</m:mo></m:mrow></m:math> i.e., <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> has a cluster point.
+This completes the proof.</para></proof></rule>
+    <para id="id67526">There is an important result that is
+analogous to the Lemma above, and its proof is easily adapted from the proof of that lemma.</para>
+<exercise id="fs-id1171869617493"><problem id="fs-id1171869617494">
+    <para id="id67530">
+Let <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> be a bounded sequence of real numbers.
+Define a sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>y</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> by <m:math overflow="scroll"><m:mrow><m:msub><m:mi>y</m:mi><m:mi>n</m:mi></m:msub><m:mo>=</m:mo><m:mi>i</m:mi><m:mi>n</m:mi><m:msub><m:mi>f</m:mi><m:mrow><m:mi>k</m:mi><m:mo>≥</m:mo><m:mi>n</m:mi></m:mrow></m:msub><m:msub><m:mi>a</m:mi><m:mi>k</m:mi></m:msub><m:mo>.</m:mo></m:mrow></m:math>
+Prove that:</para>
+    <list id="id67627" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid15"> <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>y</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> is nondecreasing and bounded above.
+</item>
+      <item id="uid16"> <m:math overflow="scroll"><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mo movablelimits="true" form="prefix">lim</m:mo><m:msub><m:mi>y</m:mi><m:mi>n</m:mi></m:msub></m:mrow></m:math> is a cluster point of <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid17"> If <m:math overflow="scroll"><m:mi>z</m:mi></m:math> is any cluster point of <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo><m:mo>,</m:mo></m:mrow></m:math>
+then <m:math overflow="scroll"><m:mrow><m:mi>y</m:mi><m:mo>≤</m:mo><m:mi>z</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+That is, <m:math overflow="scroll"><m:mi>y</m:mi></m:math> is the minimum of all the cluster points of the sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+HINT: Let <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>{</m:mo><m:msub><m:mi>α</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow><m:mo>=</m:mo><m:mrow><m:mo>{</m:mo><m:mo>-</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> and apply the preceding
+lemma to <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>α</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo><m:mo>.</m:mo></m:mrow></m:math> This exercise will then follow from that.
+</item>
+    </list>
+</problem></exercise>
+    <para id="id67880">The Bolzano-Wierstrass Theorem shows that
+the cluster set of a bounded sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> is nonempty.
+It is also a bounded set itself.</para>
+    <para id="id67904">The following definition is only for sequences of real numbers.
+However, like the Bolzano-Weierstrass Theorem, it is of very basic
+importance and will be used several times in the sequel.</para>
+<definition id="fs-id1171869727448"><term/><meaning id="fs-id1171872340004">
+    <para id="id67909"> Let <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> be a sequence of real numbers and let <m:math overflow="scroll"><m:mi>S</m:mi></m:math> denote its cluster set.</para>
+    <para id="id67947">If <m:math overflow="scroll"><m:mi>S</m:mi></m:math> is nonempty and bounded above,
+we define <m:math overflow="scroll"><m:mrow><m:mo movablelimits="true" form="prefix">lim sup</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub></m:mrow></m:math> to be the supremum <m:math overflow="scroll"><m:mrow><m:mo movablelimits="true" form="prefix">sup</m:mo><m:mi>S</m:mi></m:mrow></m:math> of <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+    <para id="id68009">If <m:math overflow="scroll"><m:mi>S</m:mi></m:math> is nonempty and bounded below, we define
+<m:math overflow="scroll"><m:mrow><m:mo movablelimits="true" form="prefix">lim inf</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub></m:mrow></m:math> to be the infimum <m:math overflow="scroll"><m:mrow><m:mi>i</m:mi><m:mi>n</m:mi><m:mi>f</m:mi><m:mi>S</m:mi></m:mrow></m:math> of <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+    <para id="id68070">If the sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> of real numbers is not bounded above, we define <m:math overflow="scroll"><m:mrow><m:mo movablelimits="true" form="prefix">lim sup</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub></m:mrow></m:math> to be <m:math overflow="scroll"><m:mrow><m:mi>∞</m:mi><m:mo>,</m:mo></m:mrow></m:math> and if <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> is not bounded below, we
+define
+<m:math overflow="scroll"><m:mrow><m:mo movablelimits="true" form="prefix">lim inf</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub></m:mrow></m:math> to be <m:math overflow="scroll"><m:mrow><m:mo>-</m:mo><m:mi>∞</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+    <para id="id68183">If <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> diverges to <m:math overflow="scroll"><m:mrow><m:mi>∞</m:mi><m:mo>,</m:mo></m:mrow></m:math> then we define <m:math overflow="scroll"><m:mrow><m:mo movablelimits="true" form="prefix">lim sup</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mo movablelimits="true" form="prefix">lim inf</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub></m:mrow></m:math> both to be <m:math overflow="scroll"><m:mrow><m:mi>∞</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+And, if <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> diverges to <m:math overflow="scroll"><m:mrow><m:mo>-</m:mo><m:mi>∞</m:mi><m:mo>,</m:mo></m:mrow></m:math> we define <m:math overflow="scroll"><m:mrow><m:mo movablelimits="true" form="prefix">lim sup</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mo movablelimits="true" form="prefix">lim inf</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub></m:mrow></m:math> both to be <m:math overflow="scroll"><m:mrow><m:mo>-</m:mo><m:mi>∞</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+    <para id="id68367">We call <m:math overflow="scroll"><m:mrow><m:mo movablelimits="true" form="prefix">lim sup</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub></m:mrow></m:math> the <emphasis effect="italics">limit superior</emphasis>
+of the sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math>, and <m:math overflow="scroll"><m:mrow><m:mo movablelimits="true" form="prefix">lim inf</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub></m:mrow></m:math> the <emphasis effect="italics">limit inferior</emphasis>
+of <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo><m:mo>.</m:mo></m:mrow></m:math></para>
+</meaning></definition>
+<exercise id="fs-id1171850874419"><problem id="fs-id1171850874420">
+    <list id="id68478" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid18"> Suppose <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> is a bounded sequence of real numbers.
+Prove that the sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> of the lemma following <link target-id="fs-id1165799319451"/> converges to <m:math overflow="scroll"><m:mrow><m:mo movablelimits="true" form="prefix">lim sup</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>.</m:mo></m:mrow></m:math>
+Show also that the sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>y</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> of <link target-id="fs-id1171869617493"/> converges to <m:math overflow="scroll"><m:mrow><m:mo movablelimits="true" form="prefix">lim inf</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid19"> Let <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> be a not necessarily bounded sequence of real numbers.
+Prove that
+<equation id="id68635"><m:math overflow="scroll" mode="display"><m:mrow><m:mo movablelimits="true" form="prefix">lim sup</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>=</m:mo><m:munder><m:mo movablelimits="true" form="prefix">inf</m:mo><m:mi>n</m:mi></m:munder><m:munder><m:mo movablelimits="true" form="prefix">sup</m:mo><m:mrow><m:mi>k</m:mi><m:mo>≥</m:mo><m:mi>n</m:mi></m:mrow></m:munder><m:msub><m:mi>a</m:mi><m:mi>k</m:mi></m:msub><m:mo>=</m:mo><m:munder><m:mo movablelimits="true" form="prefix">lim</m:mo><m:mi>n</m:mi></m:munder><m:munder><m:mo movablelimits="true" form="prefix">sup</m:mo><m:mrow><m:mi>k</m:mi><m:mo>≥</m:mo><m:mi>n</m:mi></m:mrow></m:munder><m:msub><m:mi>a</m:mi><m:mi>k</m:mi></m:msub><m:mo>.</m:mo></m:mrow></m:math></equation>
+and
+<equation id="id68745"><m:math overflow="scroll" mode="display"><m:mrow><m:mo movablelimits="true" form="prefix">lim inf</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>=</m:mo><m:munder><m:mo movablelimits="true" form="prefix">sup</m:mo><m:mi>n</m:mi></m:munder><m:munder><m:mo movablelimits="true" form="prefix">inf</m:mo><m:mrow><m:mi>k</m:mi><m:mo>≥</m:mo><m:mi>n</m:mi></m:mrow></m:munder><m:msub><m:mi>a</m:mi><m:mi>k</m:mi></m:msub><m:mo>=</m:mo><m:munder><m:mo movablelimits="true" form="prefix">lim</m:mo><m:mi>n</m:mi></m:munder><m:mo movablelimits="true" form="prefix">inf</m:mo><m:mrow><m:mi>k</m:mi><m:mo>≥</m:mo><m:mi>n</m:mi></m:mrow><m:msub><m:mi>a</m:mi><m:mi>k</m:mi></m:msub><m:mo>.</m:mo></m:mrow></m:math></equation>
+HINT: Check all cases, and use <link target-id="fs-id1165798489872"/>
+and <link target-id="fs-id1171869617493"/>.
+</item>
+      <item id="uid20"> Let <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> be a sequence of real numbers. Prove that
+<equation id="id68885"><m:math overflow="scroll" mode="display"><m:mrow><m:mo movablelimits="true" form="prefix">lim sup</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>=</m:mo><m:mo>-</m:mo><m:mo movablelimits="true" form="prefix">lim inf</m:mo><m:mrow><m:mo>(</m:mo><m:mo>-</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></equation></item>
+      <item id="uid21"> Give examples to show that all four of the following
+possibilities can happen.
+<list id="id68950" display="block" list-type="enumerated"><item id="uid22"> <m:math overflow="scroll"><m:mrow><m:mo movablelimits="true" form="prefix">lim sup</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub></m:mrow></m:math> is finite, and <m:math overflow="scroll"><m:mrow><m:mo movablelimits="true" form="prefix">lim inf</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>=</m:mo><m:mo>-</m:mo><m:mi>∞</m:mi><m:mo>.</m:mo></m:mrow></m:math></item><item id="uid23"> <m:math overflow="scroll"><m:mrow><m:mo movablelimits="true" form="prefix">lim sup</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>=</m:mo><m:mi>∞</m:mi></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mo movablelimits="true" form="prefix">lim inf</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub></m:mrow></m:math> is finite.
+</item><item id="uid24"> <m:math overflow="scroll"><m:mrow><m:mo movablelimits="true" form="prefix">lim sup</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>=</m:mo><m:mi>∞</m:mi></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mo movablelimits="true" form="prefix">lim inf</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>=</m:mo><m:mo>-</m:mo><m:mi>∞</m:mi><m:mo>.</m:mo></m:mrow></m:math></item><item id="uid25">both <m:math overflow="scroll"><m:mrow><m:mo movablelimits="true" form="prefix">lim sup</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mo movablelimits="true" form="prefix">lim inf</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub></m:mrow></m:math> are finite.
+</item></list></item>
+    </list>
+</problem></exercise>
+
+    <para id="id69206">The notions of limsup and liminf are perhaps mysterious, and they
+are in fact difficult to grasp.
+The previous exercise describes them as the resultof a kind of two-level process, and there are occasions when
+this description is a great help. However, the
+limsup and liminf can also be characterized in other ways that are more reminiscent of the definition of a limit.
+These other ways are indicated in the next exercise.</para>
+<exercise id="fs-id1171853905124"><problem id="fs-id1171853905125">
+    <para id="id62474">
+Let <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> be a bounded sequence of real numbers with</para>
+    <para id="id62508"><m:math overflow="scroll"><m:mrow><m:mo movablelimits="true" form="prefix">lim sup</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>=</m:mo><m:mi>L</m:mi></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mo movablelimits="true" form="prefix">lim inf</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>=</m:mo><m:mi>l</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Prove that <m:math overflow="scroll"><m:mi>L</m:mi></m:math> and <m:math overflow="scroll"><m:mi>l</m:mi></m:math> satisfy the following properties.</para>
+    <list id="id69393" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid26"> For each <m:math overflow="scroll"><m:mrow><m:mi>ϵ</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> there exists an <m:math overflow="scroll"><m:mi>N</m:mi></m:math> such that <m:math overflow="scroll"><m:mrow><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>&lt;</m:mo><m:mi>L</m:mi><m:mo>+</m:mo><m:mi>ϵ</m:mi></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>≥</m:mo><m:mi>N</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+HINT: Use the fact that <m:math overflow="scroll"><m:mrow><m:mo movablelimits="true" form="prefix">lim sup</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>=</m:mo><m:mi>L</m:mi></m:mrow></m:math> is the number <m:math overflow="scroll"><m:mi>x</m:mi></m:math> of the lemma following Theorem 2.8,
+and that <m:math overflow="scroll"><m:mi>x</m:mi></m:math> is the limit of a specific sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid27"> For each <m:math overflow="scroll"><m:mrow><m:mi>ϵ</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> and any natural number <m:math overflow="scroll"><m:mrow><m:mi>k</m:mi><m:mo>,</m:mo></m:mrow></m:math> there
+exists a natural number <m:math overflow="scroll"><m:mrow><m:mi>j</m:mi><m:mo>≥</m:mo><m:mi>k</m:mi></m:mrow></m:math> such that <m:math overflow="scroll"><m:mrow><m:msub><m:mi>a</m:mi><m:mi>j</m:mi></m:msub><m:mo>&gt;</m:mo><m:mi>L</m:mi><m:mo>-</m:mo><m:mi>ϵ</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Same hint as for part (a).
+</item>
+      <item id="uid28"> For each <m:math overflow="scroll"><m:mrow><m:mi>ϵ</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> there exists an <m:math overflow="scroll"><m:mi>N</m:mi></m:math> such that <m:math overflow="scroll"><m:mrow><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>&gt;</m:mo><m:mi>l</m:mi><m:mo>-</m:mo><m:mi>ϵ</m:mi></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>≥</m:mo><m:mi>N</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid29"> For each <m:math overflow="scroll"><m:mrow><m:mi>ϵ</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> and any natural number <m:math overflow="scroll"><m:mrow><m:mi>k</m:mi><m:mo>,</m:mo></m:mrow></m:math> there exists a natural number <m:math overflow="scroll"><m:mrow><m:mi>j</m:mi><m:mo>&gt;</m:mo><m:mi>k</m:mi></m:mrow></m:math> such that <m:math overflow="scroll"><m:mrow><m:msub><m:mi>a</m:mi><m:mi>j</m:mi></m:msub><m:mo>&lt;</m:mo><m:mi>l</m:mi><m:mo>+</m:mo><m:mi>ϵ</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid30"> Suppose <m:math overflow="scroll"><m:msup><m:mi>L</m:mi><m:mo>'</m:mo></m:msup></m:math> is a number that satisfies parts (a) and (b).
+Prove that <m:math overflow="scroll"><m:msup><m:mi>L</m:mi><m:mo>'</m:mo></m:msup></m:math> is the limsup of <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+HINT: Use part (a) to show that <m:math overflow="scroll"><m:msup><m:mi>L</m:mi><m:mo>'</m:mo></m:msup></m:math> is greater than or equal to
+every cluster point of <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo><m:mo>.</m:mo></m:mrow></m:math> Then use part (b) to show that <m:math overflow="scroll"><m:msup><m:mi>L</m:mi><m:mo>'</m:mo></m:msup></m:math> is less than or equal to some cluster point.
+</item>
+      <item id="uid31"> If <m:math overflow="scroll"><m:msup><m:mi>l</m:mi><m:mo>'</m:mo></m:msup></m:math> is any number that satisfies parts (c) and (d),
+show that <m:math overflow="scroll"><m:msup><m:mi>l</m:mi><m:mo>'</m:mo></m:msup></m:math> is the liminf of the sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo><m:mo>.</m:mo></m:mrow></m:math></item>
+    </list>
+</problem></exercise>
+<exercise id="fs-id1171869828212"><problem id="fs-id1171869558110">
+    <list id="id69975" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid32"> Let <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>b</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> be two bounded sequences of real numbers,
+and write <m:math overflow="scroll"><m:mrow><m:mi>L</m:mi><m:mo>=</m:mo><m:mo movablelimits="true" form="prefix">lim sup</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>M</m:mi><m:mo>=</m:mo><m:mo movablelimits="true" form="prefix">lim sup</m:mo><m:msub><m:mi>b</m:mi><m:mi>n</m:mi></m:msub><m:mo>.</m:mo></m:mrow></m:math>
+Prove that <m:math overflow="scroll"><m:mrow><m:mo movablelimits="true" form="prefix">lim sup</m:mo><m:mrow><m:mo>(</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>+</m:mo><m:msub><m:mi>b</m:mi><m:mi>n</m:mi></m:msub><m:mo>)</m:mo></m:mrow><m:mo>≤</m:mo><m:mo movablelimits="true" form="prefix">lim sup</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>+</m:mo><m:mo movablelimits="true" form="prefix">lim sup</m:mo><m:msub><m:mi>b</m:mi><m:mi>n</m:mi></m:msub><m:mo>.</m:mo></m:mrow></m:math>
+HINT: Using part (a) of the preceding exercise, show that
+for every <m:math overflow="scroll"><m:mrow><m:mi>ϵ</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn></m:mrow></m:math> there exists a <m:math overflow="scroll"><m:mi>N</m:mi></m:math> such that
+<m:math overflow="scroll"><m:mrow><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>+</m:mo><m:msub><m:mi>b</m:mi><m:mi>n</m:mi></m:msub><m:mo>&lt;</m:mo><m:mi>L</m:mi><m:mo>+</m:mo><m:mi>M</m:mi><m:mo>+</m:mo><m:mi>ϵ</m:mi></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>≥</m:mo><m:mi>N</m:mi><m:mo>,</m:mo></m:mrow></m:math> and conclude from this
+that every cluster point <m:math overflow="scroll"><m:mi>y</m:mi></m:math> of the sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>+</m:mo><m:msub><m:mi>b</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> is less than or equal to <m:math overflow="scroll"><m:mrow><m:mi>L</m:mi><m:mo>+</m:mo><m:mi>M</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+This will finish the proof, since <m:math overflow="scroll"><m:mrow><m:mo movablelimits="true" form="prefix">lim sup</m:mo><m:mo>(</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>+</m:mo><m:msub><m:mi>b</m:mi><m:mi>n</m:mi></m:msub><m:mo>)</m:mo></m:mrow></m:math> is a cluster point of that sequence.
+</item>
+      <item id="uid33"> Again, let <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>b</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> be two bounded sequences of real numbers,
+and write <m:math overflow="scroll"><m:mrow><m:mi>l</m:mi><m:mo>=</m:mo><m:mo movablelimits="true" form="prefix">lim inf</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>m</m:mi><m:mo>=</m:mo><m:mo movablelimits="true" form="prefix">lim inf</m:mo><m:msub><m:mi>b</m:mi><m:mi>n</m:mi></m:msub><m:mo>.</m:mo></m:mrow></m:math>
+Prove that <m:math overflow="scroll"><m:mrow><m:mo movablelimits="true" form="prefix">lim inf</m:mo><m:mrow><m:mo>(</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>+</m:mo><m:msub><m:mi>b</m:mi><m:mi>n</m:mi></m:msub><m:mo>)</m:mo></m:mrow><m:mo>≥</m:mo><m:mo movablelimits="true" form="prefix">lim inf</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>+</m:mo><m:mo movablelimits="true" form="prefix">lim inf</m:mo><m:msub><m:mi>b</m:mi><m:mi>n</m:mi></m:msub><m:mo>.</m:mo></m:mrow></m:math>
+HINT: Use part (c) of the previous exercise.
+</item>
+      <item id="uid34"> Find examples of sequences <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>b</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> for which
+<m:math overflow="scroll"><m:mrow><m:mo movablelimits="true" form="prefix">lim sup</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>=</m:mo><m:mo movablelimits="true" form="prefix">lim sup</m:mo><m:msub><m:mi>b</m:mi><m:mi>n</m:mi></m:msub><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>,</m:mo></m:mrow></m:math> but <m:math overflow="scroll"><m:mrow><m:mo movablelimits="true" form="prefix">lim sup</m:mo><m:mo>(</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>+</m:mo><m:msub><m:mi>b</m:mi><m:mi>n</m:mi></m:msub><m:mo>)</m:mo><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math></item>
+    </list>
+</problem></exercise>
+    <para id="id70657">We introduce next another property that a sequence can possess.
+It looks very like the definition of a convergent sequence, but it differs in a crucial way, and that
+is that this definition only concerns the elements of the
+sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> and not the limit <m:math overflow="scroll"><m:mrow><m:mi>L</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+<definition id="fs-id1171857394080"><term/><meaning id="fs-id1171832160784">
+    <para id="id70694">A sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> of real or complex numbers is a <emphasis effect="italics">Cauchy</emphasis> sequence if for every <m:math overflow="scroll"><m:mrow><m:mi>ϵ</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> there
+exists
+a natural number <m:math overflow="scroll"><m:mi>N</m:mi></m:math> such that if <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>≥</m:mo><m:mi>N</m:mi></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>m</m:mi><m:mo>≥</m:mo><m:mi>N</m:mi></m:mrow></m:math> then
+<m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>-</m:mo><m:msub><m:mi>a</m:mi><m:mi>m</m:mi></m:msub><m:mrow><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mi>ϵ</m:mi><m:mo>.</m:mo></m:mrow></m:mrow></m:math></para>
+</meaning></definition>
+<rule id="fs-id1171856512152"><label/><statement id="fs-id1171834416958">
+    <para id="id70819"><emphasis effect="bold">REMARK</emphasis>
+No doubt, this definition has something to do with limits.
+Any time there is a positive <m:math overflow="scroll"><m:mi>ϵ</m:mi></m:math> and an <m:math overflow="scroll"><m:mrow><m:mi>N</m:mi><m:mo>,</m:mo></m:mrow></m:math> we must be near some
+kind of limit notion.
+The point of the definition of a Cauchy sequence is that there is no
+explicit mention of what the limit is. It isn't that the
+terms of the sequence are getting closer and closer to some number <m:math overflow="scroll"><m:mrow><m:mi>L</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+it's that the terms of the sequence are getting closer and closer to each other.
+This subtle difference is worth some thought.</para></statement></rule>
+<exercise id="fs-id1171858769848"><problem id="fs-id1171833955022">
+    <para id="id70863">Prove that a Cauchy sequence is bounded.
+(Try to adjust the proof of <link target-id="fs-id1164146425836" document="m36126"/> to work for this situation.)</para></problem></exercise>
+    <para id="id70877">The next theorem, like the Bolzano-Weierstrass Theorem, seems to be quite
+abstract, but it also turns out to be a very useful tool for proving theorems about continity, differentiability, etc.
+In the proof, the completeness of the set of real numbers will be crucial.
+This theorem is not true in ordered fields that are not complete.</para>
+<rule id="fs-id1171849247156" type="theorem"><title>Cauchy Criterion</title><statement id="fs-id1171849849525">
+<para id="fs-id1171849953857"> A sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> of real or complex numbers is convergent if and only if it is a Cauchy sequence.</para>
+</statement>
+<proof id="fs-id2776868">
+    <para id="id70912"> If <m:math overflow="scroll"><m:mrow><m:mi>l</m:mi><m:mi>i</m:mi><m:mi>m</m:mi><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>=</m:mo><m:mi>a</m:mi></m:mrow></m:math> then given <m:math overflow="scroll"><m:mrow><m:mi>ϵ</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> choose <m:math overflow="scroll"><m:mi>N</m:mi></m:math> so that
+<m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msub><m:mi>a</m:mi><m:mi>k</m:mi></m:msub><m:mrow><m:mo>-</m:mo><m:mi>a</m:mi><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mi>ϵ</m:mi><m:mo>/</m:mo><m:mn>2</m:mn></m:mrow></m:mrow></m:math>
+if <m:math overflow="scroll"><m:mrow><m:mi>k</m:mi><m:mo>≥</m:mo><m:mi>N</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+From the triangle inequality, and by adding and subtracting <m:math overflow="scroll"><m:mrow><m:mi>a</m:mi><m:mo>,</m:mo></m:mrow></m:math> we obtain that
+<m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>-</m:mo><m:msub><m:mi>a</m:mi><m:mi>m</m:mi></m:msub><m:mrow><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mi>ϵ</m:mi></m:mrow></m:mrow></m:math>
+if <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>≥</m:mo><m:mi>N</m:mi></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>m</m:mi><m:mo>≥</m:mo><m:mi>N</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Hence, if <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> is convergent, then <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> is a Cauchy sequence.</para>
+    <para id="id71142">Conversely, if <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> is a cauchy sequence, then <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> is bounded by the previous exercise.
+Now we use the fact that <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> is a sequence
+of real or complex numbers.
+Let <m:math overflow="scroll"><m:mi>x</m:mi></m:math> be a cluster point of <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+We know that one exists by the Bolzano-Weierstrass Theorem.
+Let us show that in fact this number <m:math overflow="scroll"><m:mi>x</m:mi></m:math> not only is a cluster point
+but that it is in fact the limit of the sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Given <m:math overflow="scroll"><m:mrow><m:mi>ϵ</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> choose <m:math overflow="scroll"><m:mi>N</m:mi></m:math>so that <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>-</m:mo><m:msub><m:mi>a</m:mi><m:mi>m</m:mi></m:msub><m:mrow><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mi>ϵ</m:mi><m:mo>/</m:mo><m:mn>2</m:mn></m:mrow></m:mrow></m:math> whenever both <m:math overflow="scroll"><m:mi>n</m:mi></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>m</m:mi><m:mo>≥</m:mo><m:mi>N</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Let <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>a</m:mi><m:msub><m:mi>n</m:mi><m:mi>k</m:mi></m:msub></m:msub><m:mo>}</m:mo></m:mrow></m:math> be a subsequence of <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> that converges to <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Because <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>n</m:mi><m:mi>k</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> is strictly increasing, we may choose a <m:math overflow="scroll"><m:mi>k</m:mi></m:math> so that <m:math overflow="scroll"><m:mrow><m:msub><m:mi>n</m:mi><m:mi>k</m:mi></m:msub><m:mo>&gt;</m:mo><m:mi>N</m:mi></m:mrow></m:math> and also so that <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msub><m:mi>a</m:mi><m:msub><m:mi>n</m:mi><m:mi>k</m:mi></m:msub></m:msub><m:mrow><m:mo>-</m:mo><m:mi>x</m:mi><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mi>ϵ</m:mi><m:mo>/</m:mo><m:mn>2</m:mn><m:mo>.</m:mo></m:mrow></m:mrow></m:math>
+Then, if <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>≥</m:mo><m:mi>N</m:mi><m:mo>,</m:mo></m:mrow></m:math> then both <m:math overflow="scroll"><m:mi>n</m:mi></m:math> and this particular <m:math overflow="scroll"><m:msub><m:mi>n</m:mi><m:mi>k</m:mi></m:msub></m:math> are larger than or equal to <m:math overflow="scroll"><m:mrow><m:mi>N</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Therefore, <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mo>-</m:mo><m:mi>x</m:mi><m:mo>|</m:mo><m:mo>≤</m:mo><m:mo>|</m:mo></m:mrow><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>-</m:mo><m:msub><m:mi>a</m:mi><m:msub><m:mi>n</m:mi><m:mi>k</m:mi></m:msub></m:msub><m:mrow><m:mo>|</m:mo><m:mo>+</m:mo><m:mo>|</m:mo></m:mrow><m:msub><m:mi>a</m:mi><m:msub><m:mi>n</m:mi><m:mi>k</m:mi></m:msub></m:msub><m:mrow><m:mo>-</m:mo><m:mi>x</m:mi><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mi>ϵ</m:mi><m:mo>.</m:mo></m:mrow></m:mrow></m:math>
+this completes the proof that <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mo movablelimits="true" form="prefix">lim</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>.</m:mo></m:mrow></m:math></para></proof></rule>
+    <!--empty paragraphs get left behind.-->
+  </content>
+</document>

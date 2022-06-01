@@ -1,0 +1,27 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML">
+  <title>Definition of the Numbers 1, i, and the square root of 2</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m36082</md:content-id>
+  <md:title>Definition of the Numbers 1, i, and the square root of 2</md:title>
+  <md:abstract>The overview of the main points of the chapter on real and complex numbers: least upper bound, greatest lower bound, real numbers, geometric progression, the triangle inequality, and the binomial theorem.</md:abstract>
+  <md:uuid>54362474-aa06-4e9d-a5a4-352d06d2e0a5</md:uuid>
+</metadata>
+
+<content>
+      <para id="id171717">In order to make precise sense out of the concepts we study in mathematical analysis, we must first come to terms with what the "real numbers" are. Everything in mathematical analysis is based on these numbers, and their very definition and existence is quite deep. We will, in fact, not attempt to demonstrate (prove) the existence of the real numbers in the body of this text, but will content ourselves with a careful delineation of their properties, referring the interested reader to an appendix for the existence and uniqueness proofs.</para>
+      <para id="id171725">Although people may always have had an intuitive idea of what these
+real numbers were, it was not until the nineteenth century that mathematically precise definitions were given. The history of how mathematicians came to realize the necessity for such precision in their definitions is fascinating from a philosophical point of view as much as from a mathematical one. However, we will not pursue the philosophical aspects of the subject in this book, but will be content to concentrate our attention just on the mathematical facts. These precise definitions are quite complicated, but the powerful possibilities within mathematical analysis rely heavily on this precision, so we must pursue them. Toward our primary goals, we will in this chapter give definitions of the symbols (numbers) <m:math overflow="scroll"><m:mrow><m:mo>-</m:mo><m:mn>1</m:mn><m:mo>,</m:mo><m:mspace width="3.33333pt"/><m:mi>i</m:mi><m:mo>,</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:msqrt><m:mn>2</m:mn></m:msqrt><m:mo>.</m:mo></m:mrow></m:math></para>
+      <para id="id172104">The main points of this chapter are the following:</para>
+      <list id="id172108" display="block" list-type="enumerated"><item id="uid1">The notions of <emphasis effect="bold">least upper bound</emphasis> (<emphasis effect="italics">supremum</emphasis>) and <emphasis effect="bold">greatest lower bound</emphasis>
+(<emphasis effect="italics">infimum</emphasis>) of a set of numbers,
+</item>
+        <item id="uid2">The definition of the <emphasis effect="bold">real numbers</emphasis><m:math overflow="scroll"><m:mrow><m:mi>R</m:mi><m:mo>,</m:mo></m:mrow></m:math></item>
+        <item id="uid3">the formula for the sum of a <emphasis effect="bold">geometric progression</emphasis> (<link document="m36104" target-id="fs-id1168615573590"/>),
+</item>
+        <item id="uid4">the <emphasis effect="bold">Binomial Theorem</emphasis> (<link document="m36104" target-id="fs-id1170975717247"/>), and
+</item>
+        <item id="uid5">the <emphasis effect="bold">triangle inequality</emphasis> for complex numbers (<link document="m36113" target-id="fs-id1165815249837"/>).
+</item>
+      </list>
+  </content>
+</document>

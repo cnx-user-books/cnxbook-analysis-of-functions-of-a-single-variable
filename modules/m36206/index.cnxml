@@ -1,0 +1,2216 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML">
+  <title>More on Partial Derivatives</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m36206</md:content-id>
+  <md:title>More on Partial Derivatives</md:title>
+  <md:abstract>We close the chapter with a little more concerning
+partial derivatives.
+Thus far, we have discussed functions of a single variable, either real or complex.
+However, it is difficult not to think of a function of one complex variable <m:math overflow="scroll"><m:mrow><m:mi>z</m:mi><m:mo>=</m:mo><m:mi>x</m:mi><m:mo>+</m:mo><m:mi>i</m:mi><m:mi>y</m:mi></m:mrow></m:math>
+as equally well being a function of the two real variables <m:math overflow="scroll"><m:mi>x</m:mi></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>y</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+We will write <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>a</m:mi><m:mo>+</m:mo><m:mi>b</m:mi><m:mi>i</m:mi></m:mrow></m:math> to mean the same point in <m:math overflow="scroll"><m:mrow><m:mi>C</m:mi><m:mo>≡</m:mo><m:msup><m:mrow><m:mi>R</m:mi></m:mrow><m:mn>2</m:mn></m:msup><m:mo>,</m:mo></m:mrow></m:math>
+and we will write <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo><m:mo>|</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>a</m:mi><m:mo>+</m:mo><m:mi>b</m:mi><m:mi>i</m:mi><m:mo>|</m:mo></m:mrow></m:math> to indicate the same quantity, i.e., the absolute value of the complex number <m:math overflow="scroll"><m:mrow><m:mi>a</m:mi><m:mo>+</m:mo><m:mi>b</m:mi><m:mi>i</m:mi><m:mo>≡</m:mo><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+We have seen before that the only
+real-valued, differentiable functions of a complex variable are the constant functions.
+However, this is far from the case if we consider real-valued functions of
+two real variables, as is indicated previously.
+Consequently, we make the following definition of differentiability of a real-valued function of two real variables.
+Note that it is clearly different from the definition of differentiability
+of a function of a single complex variable,
+and though the various notations for these two kinds of differentiability are clearly ambiguous,
+we will leave it to the context to indicate which kind we are using.</md:abstract>
+  <md:uuid>5fc47ecf-6b73-4970-9390-12480f436504</md:uuid>
+</metadata>
+
+<content>
+    <para id="id62159">We close the chapter with a little more concerning
+partial derivatives.
+Thus far, we have discussed functions of a single variable, either real or complex.
+However, it is difficult not to think of a function of one complex variable <m:math overflow="scroll"><m:mrow><m:mi>z</m:mi><m:mo>=</m:mo><m:mi>x</m:mi><m:mo>+</m:mo><m:mi>i</m:mi><m:mi>y</m:mi></m:mrow></m:math>
+as equally well being a function of the two real variables <m:math overflow="scroll"><m:mi>x</m:mi></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>y</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+We will write <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>a</m:mi><m:mo>+</m:mo><m:mi>b</m:mi><m:mi>i</m:mi></m:mrow></m:math> to mean the same point in <m:math overflow="scroll"><m:mrow><m:mi>C</m:mi><m:mo>≡</m:mo><m:msup><m:mrow><m:mi>R</m:mi></m:mrow><m:mn>2</m:mn></m:msup><m:mo>,</m:mo></m:mrow></m:math>
+and we will write <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo><m:mo>|</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>a</m:mi><m:mo>+</m:mo><m:mi>b</m:mi><m:mi>i</m:mi><m:mo>|</m:mo></m:mrow></m:math> to indicate the same quantity, i.e., the absolute value of the complex number <m:math overflow="scroll"><m:mrow><m:mi>a</m:mi><m:mo>+</m:mo><m:mi>b</m:mi><m:mi>i</m:mi><m:mo>≡</m:mo><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+We have seen in <link target-id="fs-id1170285838639" document="m36186"/> that the only
+real-valued, differentiable functions of a complex variable are the constant functions.
+However, this is far from the case if we consider real-valued functions of
+two real variables, as is indicated in <link target-id="fs-id1170288455417" document="m36186"/>.
+Consequently, we make the following definition of differentiability of a real-valued function of two real variables.
+Note that it is clearly different from the definition of differentiability
+of a function of a single complex variable,
+and though the various notations for these two kinds of differentiability are clearly ambiguous,
+we will leave it to the context to indicate which kind we are using.</para>
+<definition id="fs-id1166167242575"><term/><meaning id="fs-id1166169337795">
+    <para id="id62869">
+Let <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>:</m:mo><m:mi>S</m:mi><m:mo>→</m:mo><m:mi>R</m:mi></m:mrow></m:math> be a function whose domain is a subset <m:math overflow="scroll"><m:mi>S</m:mi></m:math> of <m:math overflow="scroll"><m:mrow><m:msup><m:mrow><m:mi>R</m:mi></m:mrow><m:mn>2</m:mn></m:msup><m:mo>,</m:mo></m:mrow></m:math>
+and let <m:math overflow="scroll"><m:mrow><m:mi>c</m:mi><m:mo>=</m:mo><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo></m:mrow></m:math> be a point in the interior <m:math overflow="scroll"><m:msup><m:mi>S</m:mi><m:mn>0</m:mn></m:msup></m:math> of <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+We say that <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is <emphasis effect="italics">differentiable, as a function of two real variables,</emphasis> at the point <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo></m:mrow></m:math> if there exists a
+pair of real numbers <m:math overflow="scroll"><m:msub><m:mi>L</m:mi><m:mn>1</m:mn></m:msub></m:math> and <m:math overflow="scroll"><m:msub><m:mi>L</m:mi><m:mn>2</m:mn></m:msub></m:math> and a function
+<m:math overflow="scroll"><m:mi>θ</m:mi></m:math> such that</para>
+    <equation id="id63046"><m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mi>f</m:mi>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>a</m:mi>
+            <m:mo>+</m:mo>
+            <m:msub>
+              <m:mi>h</m:mi>
+              <m:mn>1</m:mn>
+            </m:msub>
+            <m:mo>,</m:mo>
+            <m:mi>b</m:mi>
+            <m:mo>+</m:mo>
+            <m:msub>
+              <m:mi>h</m:mi>
+              <m:mn>2</m:mn>
+            </m:msub>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>-</m:mo>
+          <m:mi>f</m:mi>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>a</m:mi>
+            <m:mo>,</m:mo>
+            <m:mi>b</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>=</m:mo>
+          <m:msub>
+            <m:mi>L</m:mi>
+            <m:mn>1</m:mn>
+          </m:msub>
+          <m:msub>
+            <m:mi>h</m:mi>
+            <m:mn>1</m:mn>
+          </m:msub>
+          <m:mo>+</m:mo>
+          <m:msub>
+            <m:mi>L</m:mi>
+            <m:mn>2</m:mn>
+          </m:msub>
+          <m:msub>
+            <m:mi>h</m:mi>
+            <m:mn>2</m:mn>
+          </m:msub>
+          <m:mo>+</m:mo>
+          <m:mi>θ</m:mi>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:msub>
+              <m:mi>h</m:mi>
+              <m:mn>1</m:mn>
+            </m:msub>
+            <m:mo>,</m:mo>
+            <m:msub>
+              <m:mi>h</m:mi>
+              <m:mn>2</m:mn>
+            </m:msub>
+            <m:mo>)</m:mo>
+          </m:mrow>
+        
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id63181">and</para>
+    <equation id="id63187"><m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:munder>
+            <m:mo movablelimits="true" form="prefix">lim</m:mo>
+            <m:mrow>
+              <m:mo>|</m:mo>
+              <m:mo>(</m:mo>
+              <m:msub>
+                <m:mi>h</m:mi>
+                <m:mn>1</m:mn>
+              </m:msub>
+              <m:mo>,</m:mo>
+              <m:msub>
+                <m:mi>h</m:mi>
+                <m:mn>2</m:mn>
+              </m:msub>
+              <m:mo>)</m:mo>
+              <m:mo>|</m:mo>
+              <m:mo>→</m:mo>
+              <m:mn>0</m:mn>
+            </m:mrow>
+          </m:munder>
+          <m:mfrac>
+            <m:mrow>
+              <m:mi>θ</m:mi>
+              <m:mo>(</m:mo>
+              <m:msub>
+                <m:mi>h</m:mi>
+                <m:mn>1</m:mn>
+              </m:msub>
+              <m:mo>,</m:mo>
+              <m:msub>
+                <m:mi>h</m:mi>
+                <m:mn>2</m:mn>
+              </m:msub>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mrow>
+              <m:mo>|</m:mo>
+              <m:mo>(</m:mo>
+              <m:msub>
+                <m:mi>h</m:mi>
+                <m:mn>1</m:mn>
+              </m:msub>
+              <m:mo>,</m:mo>
+              <m:msub>
+                <m:mi>h</m:mi>
+                <m:mn>2</m:mn>
+              </m:msub>
+              <m:mo>)</m:mo>
+              <m:mo>|</m:mo>
+            </m:mrow>
+          </m:mfrac>
+          <m:mo>=</m:mo>
+          <m:mn>0</m:mn>
+          <m:mo>.</m:mo>
+       
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id63312">One should compare this definition with part (3) of <link target-id="fs-id1170287829005" document="m36186"/>.</para>
+    <para id="id63316">Each partial derivative of a function <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is again a real-valued
+function of two real variables, and so it can have partial derivatives of its own.
+We use simplifying notation like <m:math overflow="scroll"><m:msub><m:mi>f</m:mi><m:mrow><m:mi>x</m:mi><m:mi>y</m:mi><m:mi>x</m:mi><m:mi>x</m:mi></m:mrow></m:msub></m:math> and <m:math overflow="scroll"><m:msub><m:mi>f</m:mi><m:mrow><m:mi>y</m:mi><m:mi>y</m:mi><m:mi>y</m:mi><m:mi>x</m:mi><m:mi>y</m:mi><m:mi>y</m:mi><m:mo>...</m:mo></m:mrow></m:msub></m:math>
+to indicate “higher order” mixed partial derivatives. For instance,
+<m:math overflow="scroll"><m:msub><m:mi>f</m:mi><m:mrow><m:mi>x</m:mi><m:mi>x</m:mi><m:mi>y</m:mi><m:mi>x</m:mi></m:mrow></m:msub></m:math> denotes the fourth partial derivative of <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+first with respect to <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+second with respect to <m:math overflow="scroll"><m:mi>x</m:mi></m:math> again, third with respect to <m:math overflow="scroll"><m:mrow><m:mi>y</m:mi><m:mo>,</m:mo></m:mrow></m:math> and finally fourth with respect to
+<m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+These higher order partial derivatives are called <emphasis effect="italics">mixed partial derivatives.</emphasis></para>
+</meaning></definition>
+<definition id="fs-id1166171096030"><term/><meaning id="fs-id1166176188465">
+    <para id="id63456">
+Suppose <m:math overflow="scroll"><m:mi>S</m:mi></m:math> is a subset of <m:math overflow="scroll"><m:mrow><m:msup><m:mrow><m:mi>R</m:mi></m:mrow><m:mn>2</m:mn></m:msup><m:mo>,</m:mo></m:mrow></m:math> and that <m:math overflow="scroll"><m:mi>f</m:mi></m:math>
+is a continuous real-valued function on <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math> If both partial derivatives of <m:math overflow="scroll"><m:mi>f</m:mi></m:math> exist at each point of the interior <m:math overflow="scroll"><m:msup><m:mi>S</m:mi><m:mn>0</m:mn></m:msup></m:math> of <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>,</m:mo></m:mrow></m:math> and both
+are continuous on <m:math overflow="scroll"><m:mrow><m:msup><m:mi>S</m:mi><m:mn>0</m:mn></m:msup><m:mo>,</m:mo></m:mrow></m:math>
+then <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is said to belong to <m:math overflow="scroll"><m:mrow><m:msup><m:mi>C</m:mi><m:mn>1</m:mn></m:msup><m:mrow><m:mo>(</m:mo><m:mi>S</m:mi><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math>
+If all <m:math overflow="scroll"><m:mi>k</m:mi></m:math>th order mixed partial derivatives exist at each point of <m:math overflow="scroll"><m:mrow><m:msup><m:mi>S</m:mi><m:mn>0</m:mn></m:msup><m:mo>,</m:mo></m:mrow></m:math> and all of them are continuous on <m:math overflow="scroll"><m:mrow><m:msup><m:mi>S</m:mi><m:mn>0</m:mn></m:msup><m:mo>,</m:mo></m:mrow></m:math>
+then <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is said to belong to <m:math overflow="scroll"><m:mrow><m:msup><m:mi>C</m:mi><m:mi>k</m:mi></m:msup><m:mrow><m:mo>(</m:mo><m:mi>S</m:mi><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math>
+Finally, if all mixed partial derivatives, of arbitrary orders, exist and are continuous on <m:math overflow="scroll"><m:mrow><m:msup><m:mi>S</m:mi><m:mn>0</m:mn></m:msup><m:mo>,</m:mo></m:mrow></m:math>
+then <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is said to belong to <m:math overflow="scroll"><m:mrow><m:msup><m:mi>C</m:mi><m:mi>∞</m:mi></m:msup><m:mrow><m:mo>(</m:mo><m:mi>S</m:mi><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></para>
+</meaning></definition>
+<exercise id="fs-id1166180380963"><problem id="fs-id1166173376504">
+    <list id="id63726" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid1"> Suppose <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is a real-valued function of
+two real variables and that it is differentiable,
+as a function of two real variables, at the point <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Show that the numbers <m:math overflow="scroll"><m:msub><m:mi>L</m:mi><m:mn>1</m:mn></m:msub></m:math> and <m:math overflow="scroll"><m:msub><m:mi>L</m:mi><m:mn>2</m:mn></m:msub></m:math> in the definition are exactly the
+partial derivatives of <m:math overflow="scroll"><m:mi>f</m:mi></m:math> at <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math> That is,
+<equation id="id63824"><m:math overflow="scroll" mode="display"><m:mrow><m:msub><m:mi>L</m:mi><m:mn>1</m:mn></m:msub><m:mo>=</m:mo><m:mfrac><m:mrow><m:mi>t</m:mi><m:mi>i</m:mi><m:mi>a</m:mi><m:mi>l</m:mi><m:mi>f</m:mi></m:mrow><m:mrow><m:mi>t</m:mi><m:mi>i</m:mi><m:mi>a</m:mi><m:mi>l</m:mi><m:mi>x</m:mi></m:mrow></m:mfrac><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:munder><m:mo movablelimits="true" form="prefix">lim</m:mo><m:mrow><m:mi>h</m:mi><m:mo>→</m:mo><m:mn>0</m:mn></m:mrow></m:munder><m:mfrac><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>+</m:mo><m:mi>h</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo><m:mo>-</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo></m:mrow><m:mi>h</m:mi></m:mfrac></m:mrow></m:math></equation>
+and
+<equation id="id63941"><m:math overflow="scroll" mode="display"><m:mrow><m:msub><m:mi>L</m:mi><m:mn>2</m:mn></m:msub><m:mo>=</m:mo><m:mfrac><m:mrow><m:mi>t</m:mi><m:mi>i</m:mi><m:mi>a</m:mi><m:mi>l</m:mi><m:mi>f</m:mi></m:mrow><m:mrow><m:mi>t</m:mi><m:mi>i</m:mi><m:mi>a</m:mi><m:mi>l</m:mi><m:mi>y</m:mi></m:mrow></m:mfrac><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:munder><m:mo movablelimits="true" form="prefix">lim</m:mo><m:mrow><m:mi>h</m:mi><m:mo>→</m:mo><m:mn>0</m:mn></m:mrow></m:munder><m:mfrac><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>+</m:mo><m:mi>h</m:mi><m:mo>)</m:mo><m:mo>-</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo></m:mrow><m:mi>h</m:mi></m:mfrac><m:mo>.</m:mo></m:mrow></m:math></equation></item>
+      <item id="uid2"> Define <m:math overflow="scroll"><m:mi>f</m:mi></m:math> on <m:math overflow="scroll"><m:msup><m:mrow><m:mi>R</m:mi></m:mrow><m:mn>2</m:mn></m:msup></m:math> as follows:
+<m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>0</m:mn><m:mo>)</m:mo><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> and if <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>,</m:mo><m:mi>y</m:mi><m:mo>)</m:mo><m:mo>≠</m:mo><m:mo>(</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>0</m:mn><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math> then <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>,</m:mo><m:mi>y</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>x</m:mi><m:mi>y</m:mi><m:mo>/</m:mo><m:mrow><m:mo>(</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mi>y</m:mi><m:mn>2</m:mn></m:msup><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math>
+Show that both partial derivatives of <m:math overflow="scroll"><m:mi>f</m:mi></m:math> at <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>0</m:mn><m:mo>)</m:mo></m:mrow></m:math> exist and are 0.
+Show also that <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is <emphasis effect="bold">not</emphasis>, as a function of two real variables, differentiable at <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>0</m:mn><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+HINT: Let <m:math overflow="scroll"><m:mi>h</m:mi></m:math> and <m:math overflow="scroll"><m:mi>k</m:mi></m:math> run through the numbers <m:math overflow="scroll"><m:mrow><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>n</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid3"> What do parts (a) and (b) tell about the relationship between a function of two real variables
+being differentiable at a point <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo></m:mrow></m:math> and its having
+both partial derivatives exist at <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo><m:mo>?</m:mo></m:mrow></m:math></item>
+      <item id="uid4"> Suppose <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>=</m:mo><m:mi>u</m:mi><m:mo>+</m:mo><m:mi>i</m:mi><m:mi>v</m:mi></m:mrow></m:math> is a complex-valued function of a complex variable,
+and assume that <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is differentiable, as a function of a complex variable, at a point <m:math overflow="scroll"><m:mrow><m:mi>c</m:mi><m:mo>=</m:mo><m:mi>a</m:mi><m:mo>+</m:mo><m:mi>b</m:mi><m:mi>i</m:mi><m:mo>≡</m:mo><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Prove that the real and imaginary parts <m:math overflow="scroll"><m:mi>u</m:mi></m:math> and <m:math overflow="scroll"><m:mi>v</m:mi></m:math> of <m:math overflow="scroll"><m:mi>f</m:mi></m:math> are differentiable, as functions of two real variables.
+Relate the five quantities
+<equation id="id64450"><m:math overflow="scroll" mode="display"><m:mrow><m:mfrac><m:mrow><m:mi>t</m:mi><m:mi>i</m:mi><m:mi>a</m:mi><m:mi>l</m:mi><m:mi>u</m:mi></m:mrow><m:mrow><m:mi>t</m:mi><m:mi>i</m:mi><m:mi>a</m:mi><m:mi>l</m:mi><m:mi>x</m:mi></m:mrow></m:mfrac><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo><m:mfrac><m:mrow><m:mi>t</m:mi><m:mi>i</m:mi><m:mi>a</m:mi><m:mi>l</m:mi><m:mi>u</m:mi></m:mrow><m:mrow><m:mi>t</m:mi><m:mi>i</m:mi><m:mi>a</m:mi><m:mi>l</m:mi><m:mi>y</m:mi></m:mrow></m:mfrac><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo><m:mfrac><m:mrow><m:mi>t</m:mi><m:mi>i</m:mi><m:mi>a</m:mi><m:mi>l</m:mi><m:mi>v</m:mi></m:mrow><m:mrow><m:mi>t</m:mi><m:mi>i</m:mi><m:mi>a</m:mi><m:mi>l</m:mi><m:mi>x</m:mi></m:mrow></m:mfrac><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo><m:mfrac><m:mrow><m:mi>t</m:mi><m:mi>i</m:mi><m:mi>a</m:mi><m:mi>l</m:mi><m:mi>v</m:mi></m:mrow><m:mrow><m:mi>t</m:mi><m:mi>i</m:mi><m:mi>a</m:mi><m:mi>l</m:mi><m:mi>y</m:mi></m:mrow></m:mfrac><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo><m:mspace width="4.pt"/><m:mtext>and</m:mtext><m:mspace width="4.pt"/><m:msup><m:mi>f</m:mi><m:mo>'</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></equation></item>
+    </list>
+</problem></exercise>
+    <para id="id64644">Perhaps the most interesting theorem about partial derivatives is the
+“mixed partials are equal” theorem. That is, <m:math overflow="scroll"><m:mrow><m:msub><m:mi>f</m:mi><m:mrow><m:mi>x</m:mi><m:mi>y</m:mi></m:mrow></m:msub><m:mo>=</m:mo><m:msub><m:mi>f</m:mi><m:mrow><m:mi>y</m:mi><m:mi>x</m:mi></m:mrow></m:msub><m:mo>.</m:mo></m:mrow></m:math>
+The point is that this is <emphasis effect="bold">not</emphasis> always the case. An extra
+hypothesis is necessary.</para>
+<rule id="fs-id1166169575517" type="theorem"><title>Theorem on mixed partials</title><statement id="fs-id1166174683240">
+    <para id="id64689">
+
+Let <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>:</m:mo><m:mi>S</m:mi><m:mo>→</m:mo><m:mi>R</m:mi></m:mrow></m:math> be such that both second order partials derivatives <m:math overflow="scroll"><m:msub><m:mi>f</m:mi><m:mrow><m:mi>x</m:mi><m:mi>y</m:mi></m:mrow></m:msub></m:math> and <m:math overflow="scroll"><m:msub><m:mi>f</m:mi><m:mrow><m:mi>y</m:mi><m:mi>x</m:mi></m:mrow></m:msub></m:math>
+exist at a point <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo></m:mrow></m:math> of the interior of <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>,</m:mo></m:mrow></m:math> and assume in
+addition that one of these second order partials exists at every point in a disk <m:math overflow="scroll"><m:mrow><m:msub><m:mi>B</m:mi><m:mi>r</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> around <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo></m:mrow></m:math>
+and that it is continuous at the point <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Then <m:math overflow="scroll"><m:mrow><m:msub><m:mi>f</m:mi><m:mrow><m:mi>x</m:mi><m:mi>y</m:mi></m:mrow></m:msub><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msub><m:mi>f</m:mi><m:mrow><m:mi>y</m:mi><m:mi>x</m:mi></m:mrow></m:msub><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></para>
+</statement>
+<proof id="fs-id1166171091912">
+    <para id="id64912">
+Suppose that it is <m:math overflow="scroll"><m:msub><m:mi>f</m:mi><m:mrow><m:mi>y</m:mi><m:mi>x</m:mi></m:mrow></m:msub></m:math> that is continuous at <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Let <m:math overflow="scroll"><m:mrow><m:mi>ϵ</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn></m:mrow></m:math> be given, and let <m:math overflow="scroll"><m:mrow><m:msub><m:mi>δ</m:mi><m:mn>1</m:mn></m:msub><m:mo>&gt;</m:mo><m:mn>0</m:mn></m:mrow></m:math> be such that
+if <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>,</m:mo><m:mi>d</m:mi><m:mo>)</m:mo></m:mrow><m:mo>-</m:mo><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo></m:mrow><m:mo>|</m:mo><m:mo>&lt;</m:mo></m:mrow><m:msub><m:mi>δ</m:mi><m:mn>1</m:mn></m:msub></m:mrow></m:math> then <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msub><m:mi>f</m:mi><m:mrow><m:mi>y</m:mi><m:mi>x</m:mi></m:mrow></m:msub><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>,</m:mo><m:mi>d</m:mi><m:mo>)</m:mo></m:mrow><m:mo>-</m:mo><m:msub><m:mi>f</m:mi><m:mrow><m:mi>y</m:mi><m:mi>x</m:mi></m:mrow></m:msub><m:mrow><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo></m:mrow><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mi>ϵ</m:mi><m:mo>.</m:mo></m:mrow></m:mrow></m:math>
+Next, choose a <m:math overflow="scroll"><m:msub><m:mi>δ</m:mi><m:mn>2</m:mn></m:msub></m:math> such that if <m:math overflow="scroll"><m:mrow><m:mrow><m:mn>0</m:mn><m:mo>&lt;</m:mo><m:mo>|</m:mo><m:mi>k</m:mi><m:mo>|</m:mo><m:mo>&lt;</m:mo></m:mrow><m:msub><m:mi>δ</m:mi><m:mn>2</m:mn></m:msub><m:mo>,</m:mo></m:mrow></m:math> then</para>
+    <equation id="id65155">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mrow>
+            <m:mo>|</m:mo>
+          </m:mrow>
+          <m:msub>
+            <m:mi>f</m:mi>
+            <m:mrow>
+              <m:mi>x</m:mi>
+              <m:mi>y</m:mi>
+            </m:mrow>
+          </m:msub>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>a</m:mi>
+            <m:mo>,</m:mo>
+            <m:mi>b</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>-</m:mo>
+          <m:mfrac>
+            <m:mrow>
+              <m:msub>
+                <m:mi>f</m:mi>
+                <m:mi>x</m:mi>
+              </m:msub>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>a</m:mi>
+                <m:mo>,</m:mo>
+                <m:mi>b</m:mi>
+                <m:mo>+</m:mo>
+                <m:mi>k</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:mo>-</m:mo>
+              <m:msub>
+                <m:mi>f</m:mi>
+                <m:mi>x</m:mi>
+              </m:msub>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>a</m:mi>
+                <m:mo>,</m:mo>
+                <m:mi>b</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+            </m:mrow>
+            <m:mi>k</m:mi>
+          </m:mfrac>
+          <m:mrow>
+            <m:mo>|</m:mo>
+            <m:mo>&lt;</m:mo>
+            <m:mi>ϵ</m:mi>
+            <m:mo>,</m:mo>
+          </m:mrow>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id65253">and fix such a <m:math overflow="scroll"><m:mrow><m:mi>k</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+We may also assume that <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo><m:mi>k</m:mi><m:mo>|</m:mo><m:mo>&lt;</m:mo></m:mrow><m:msub><m:mi>δ</m:mi><m:mn>1</m:mn></m:msub><m:mo>/</m:mo><m:mn>2</m:mn><m:mo>.</m:mo></m:mrow></m:math>
+Finally, choose a <m:math overflow="scroll"><m:mrow><m:msub><m:mi>δ</m:mi><m:mn>3</m:mn></m:msub><m:mo>&gt;</m:mo><m:mn>0</m:mn></m:mrow></m:math> such that if <m:math overflow="scroll"><m:mrow><m:mrow><m:mn>0</m:mn><m:mo>&lt;</m:mo><m:mo>|</m:mo><m:mi>h</m:mi><m:mo>|</m:mo><m:mo>&lt;</m:mo></m:mrow><m:msub><m:mi>δ</m:mi><m:mn>3</m:mn></m:msub><m:mo>,</m:mo></m:mrow></m:math> then</para>
+    <equation id="id65354">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mrow>
+            <m:mo>|</m:mo>
+          </m:mrow>
+          <m:msub>
+            <m:mi>f</m:mi>
+            <m:mi>x</m:mi>
+          </m:msub>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>a</m:mi>
+            <m:mo>,</m:mo>
+            <m:mi>b</m:mi>
+            <m:mo>+</m:mo>
+            <m:mi>k</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>-</m:mo>
+          <m:mfrac>
+            <m:mrow>
+              <m:mi>f</m:mi>
+              <m:mo>(</m:mo>
+              <m:mi>a</m:mi>
+              <m:mo>+</m:mo>
+              <m:mi>h</m:mi>
+              <m:mo>,</m:mo>
+              <m:mi>b</m:mi>
+              <m:mo>+</m:mo>
+              <m:mi>k</m:mi>
+              <m:mo>)</m:mo>
+              <m:mo>-</m:mo>
+              <m:mi>f</m:mi>
+              <m:mo>(</m:mo>
+              <m:mi>a</m:mi>
+              <m:mo>,</m:mo>
+              <m:mi>b</m:mi>
+              <m:mo>+</m:mo>
+              <m:mi>k</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mi>h</m:mi>
+          </m:mfrac>
+          <m:mrow>
+            <m:mo>|</m:mo>
+            <m:mo>&lt;</m:mo>
+            <m:mo>|</m:mo>
+            <m:mi>k</m:mi>
+            <m:mo>|</m:mo>
+            <m:mi>ϵ</m:mi>
+            <m:mo>,</m:mo>
+          </m:mrow>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id65456">and</para>
+    <equation id="id65461">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mrow>
+            <m:mo>|</m:mo>
+          </m:mrow>
+          <m:msub>
+            <m:mi>f</m:mi>
+            <m:mi>x</m:mi>
+          </m:msub>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>a</m:mi>
+            <m:mo>,</m:mo>
+            <m:mi>b</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>-</m:mo>
+          <m:mfrac>
+            <m:mrow>
+              <m:mi>f</m:mi>
+              <m:mo>(</m:mo>
+              <m:mi>a</m:mi>
+              <m:mo>+</m:mo>
+              <m:mi>h</m:mi>
+              <m:mo>,</m:mo>
+              <m:mi>b</m:mi>
+              <m:mo>)</m:mo>
+              <m:mo>-</m:mo>
+              <m:mi>f</m:mi>
+              <m:mo>(</m:mo>
+              <m:mi>a</m:mi>
+              <m:mo>,</m:mo>
+              <m:mi>b</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mi>h</m:mi>
+          </m:mfrac>
+          <m:mrow>
+            <m:mo>|</m:mo>
+            <m:mo>&lt;</m:mo>
+            <m:mo>|</m:mo>
+            <m:mi>k</m:mi>
+            <m:mo>|</m:mo>
+            <m:mi>ϵ</m:mi>
+            <m:mo>,</m:mo>
+          </m:mrow>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id65549">and fix such an <m:math overflow="scroll"><m:mrow><m:mi>h</m:mi><m:mo>.</m:mo></m:mrow></m:math> Again, we may also assume that <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo><m:mi>h</m:mi><m:mo>|</m:mo><m:mo>&lt;</m:mo></m:mrow><m:msub><m:mi>δ</m:mi><m:mn>1</m:mn></m:msub><m:mo>/</m:mo><m:mn>2</m:mn><m:mo>.</m:mo></m:mrow></m:math></para>
+    <para id="id65597">In the following calculation we will use the Mean Value Theorem twice.</para>
+    <equation id="uid5">
+      <m:math overflow="scroll" mode="display">
+        <m:mtable displaystyle="true">
+          <m:mtr>
+            <m:mtd columnalign="right">
+              <m:mn>0</m:mn>
+            </m:mtd>
+            <m:mtd>
+              <m:mo>≤</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:msub>
+                  <m:mi>f</m:mi>
+                  <m:mrow>
+                    <m:mi>x</m:mi>
+                    <m:mi>y</m:mi>
+                  </m:mrow>
+                </m:msub>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>a</m:mi>
+                  <m:mo>,</m:mo>
+                  <m:mi>b</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mo>-</m:mo>
+                <m:msub>
+                  <m:mi>f</m:mi>
+                  <m:mrow>
+                    <m:mi>y</m:mi>
+                    <m:mi>x</m:mi>
+                  </m:mrow>
+                </m:msub>
+                <m:mrow>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>a</m:mi>
+                    <m:mo>,</m:mo>
+                    <m:mi>b</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>≤</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:msub>
+                  <m:mi>f</m:mi>
+                  <m:mrow>
+                    <m:mi>x</m:mi>
+                    <m:mi>y</m:mi>
+                  </m:mrow>
+                </m:msub>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>a</m:mi>
+                  <m:mo>,</m:mo>
+                  <m:mi>b</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mo>-</m:mo>
+                <m:mfrac>
+                  <m:mrow>
+                    <m:msub>
+                      <m:mi>f</m:mi>
+                      <m:mi>x</m:mi>
+                    </m:msub>
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:mi>a</m:mi>
+                      <m:mo>,</m:mo>
+                      <m:mi>b</m:mi>
+                      <m:mo>+</m:mo>
+                      <m:mi>k</m:mi>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                    <m:mo>-</m:mo>
+                    <m:msub>
+                      <m:mi>f</m:mi>
+                      <m:mi>x</m:mi>
+                    </m:msub>
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:mi>a</m:mi>
+                      <m:mo>,</m:mo>
+                      <m:mi>b</m:mi>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                  </m:mrow>
+                  <m:mi>k</m:mi>
+                </m:mfrac>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd/>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mrow>
+                  <m:mspace width="1.em"/>
+                  <m:mspace width="1.em"/>
+                  <m:mo>+</m:mo>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:mfrac>
+                  <m:mrow>
+                    <m:msub>
+                      <m:mi>f</m:mi>
+                      <m:mi>x</m:mi>
+                    </m:msub>
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:mi>a</m:mi>
+                      <m:mo>,</m:mo>
+                      <m:mi>b</m:mi>
+                      <m:mo>+</m:mo>
+                      <m:mi>k</m:mi>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                    <m:mo>-</m:mo>
+                    <m:msub>
+                      <m:mi>f</m:mi>
+                      <m:mi>x</m:mi>
+                    </m:msub>
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:mi>a</m:mi>
+                      <m:mo>,</m:mo>
+                      <m:mi>b</m:mi>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                  </m:mrow>
+                  <m:mi>k</m:mi>
+                </m:mfrac>
+                <m:mo>-</m:mo>
+                <m:msub>
+                  <m:mi>f</m:mi>
+                  <m:mrow>
+                    <m:mi>y</m:mi>
+                    <m:mi>x</m:mi>
+                  </m:mrow>
+                </m:msub>
+                <m:mrow>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>a</m:mi>
+                    <m:mo>,</m:mo>
+                    <m:mi>b</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>≤</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mrow>
+                  <m:mi>ϵ</m:mi>
+                  <m:mo>+</m:mo>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:mfrac>
+                  <m:mrow>
+                    <m:msub>
+                      <m:mi>f</m:mi>
+                      <m:mi>x</m:mi>
+                    </m:msub>
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:mi>a</m:mi>
+                      <m:mo>,</m:mo>
+                      <m:mi>b</m:mi>
+                      <m:mo>+</m:mo>
+                      <m:mi>k</m:mi>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                    <m:mo>-</m:mo>
+                    <m:mfrac>
+                      <m:mrow>
+                        <m:mi>f</m:mi>
+                        <m:mo>(</m:mo>
+                        <m:mi>a</m:mi>
+                        <m:mo>+</m:mo>
+                        <m:mi>h</m:mi>
+                        <m:mo>,</m:mo>
+                        <m:mi>b</m:mi>
+                        <m:mo>+</m:mo>
+                        <m:mi>k</m:mi>
+                        <m:mo>)</m:mo>
+                        <m:mo>-</m:mo>
+                        <m:mi>f</m:mi>
+                        <m:mo>(</m:mo>
+                        <m:mi>a</m:mi>
+                        <m:mo>,</m:mo>
+                        <m:mi>b</m:mi>
+                        <m:mo>+</m:mo>
+                        <m:mi>k</m:mi>
+                        <m:mo>)</m:mo>
+                      </m:mrow>
+                      <m:mi>h</m:mi>
+                    </m:mfrac>
+                  </m:mrow>
+                  <m:mi>k</m:mi>
+                </m:mfrac>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd/>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mrow>
+                  <m:mspace width="1.em"/>
+                  <m:mspace width="1.em"/>
+                  <m:mo>+</m:mo>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:mfrac>
+                  <m:mrow>
+                    <m:mfrac>
+                      <m:mrow>
+                        <m:mi>f</m:mi>
+                        <m:mo>(</m:mo>
+                        <m:mi>a</m:mi>
+                        <m:mo>+</m:mo>
+                        <m:mi>h</m:mi>
+                        <m:mo>,</m:mo>
+                        <m:mi>b</m:mi>
+                        <m:mo>)</m:mo>
+                        <m:mo>-</m:mo>
+                        <m:mi>f</m:mi>
+                        <m:mo>(</m:mo>
+                        <m:mi>a</m:mi>
+                        <m:mo>,</m:mo>
+                        <m:mi>b</m:mi>
+                        <m:mo>)</m:mo>
+                      </m:mrow>
+                      <m:mi>h</m:mi>
+                    </m:mfrac>
+                    <m:mo>-</m:mo>
+                    <m:msub>
+                      <m:mi>f</m:mi>
+                      <m:mi>x</m:mi>
+                    </m:msub>
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:mi>a</m:mi>
+                      <m:mo>,</m:mo>
+                      <m:mi>b</m:mi>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                  </m:mrow>
+                  <m:mi>k</m:mi>
+                </m:mfrac>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd/>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mrow>
+                  <m:mspace width="1.em"/>
+                  <m:mspace width="1.em"/>
+                  <m:mo>+</m:mo>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:mfrac>
+                  <m:mrow>
+                    <m:mi>f</m:mi>
+                    <m:mo>(</m:mo>
+                    <m:mi>a</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mi>h</m:mi>
+                    <m:mo>,</m:mo>
+                    <m:mi>b</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mi>k</m:mi>
+                    <m:mo>)</m:mo>
+                    <m:mo>-</m:mo>
+                    <m:mi>f</m:mi>
+                    <m:mo>(</m:mo>
+                    <m:mi>a</m:mi>
+                    <m:mo>,</m:mo>
+                    <m:mi>b</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mi>k</m:mi>
+                    <m:mo>)</m:mo>
+                    <m:mo>+</m:mo>
+                    <m:mo>(</m:mo>
+                    <m:mi>f</m:mi>
+                    <m:mo>(</m:mo>
+                    <m:mi>a</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mi>h</m:mi>
+                    <m:mo>,</m:mo>
+                    <m:mi>b</m:mi>
+                    <m:mo>)</m:mo>
+                    <m:mo>-</m:mo>
+                    <m:mi>f</m:mi>
+                    <m:mo>(</m:mo>
+                    <m:mi>a</m:mi>
+                    <m:mo>,</m:mo>
+                    <m:mi>b</m:mi>
+                    <m:mo>)</m:mo>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mrow>
+                    <m:mi>h</m:mi>
+                    <m:mi>k</m:mi>
+                  </m:mrow>
+                </m:mfrac>
+                <m:mo>-</m:mo>
+                <m:msub>
+                  <m:mi>f</m:mi>
+                  <m:mrow>
+                    <m:mi>y</m:mi>
+                    <m:mi>x</m:mi>
+                  </m:mrow>
+                </m:msub>
+                <m:mrow>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>a</m:mi>
+                    <m:mo>,</m:mo>
+                    <m:mi>b</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>&lt;</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mrow>
+                  <m:mn>3</m:mn>
+                  <m:mi>ϵ</m:mi>
+                  <m:mo>+</m:mo>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:mfrac>
+                  <m:mrow>
+                    <m:mi>f</m:mi>
+                    <m:mo>(</m:mo>
+                    <m:mi>a</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mi>h</m:mi>
+                    <m:mo>,</m:mo>
+                    <m:mi>b</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mi>k</m:mi>
+                    <m:mo>)</m:mo>
+                    <m:mo>-</m:mo>
+                    <m:mi>f</m:mi>
+                    <m:mo>(</m:mo>
+                    <m:mi>a</m:mi>
+                    <m:mo>,</m:mo>
+                    <m:mi>b</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mi>k</m:mi>
+                    <m:mo>)</m:mo>
+                    <m:mo>+</m:mo>
+                    <m:mo>(</m:mo>
+                    <m:mi>f</m:mi>
+                    <m:mo>(</m:mo>
+                    <m:mi>a</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mi>h</m:mi>
+                    <m:mo>,</m:mo>
+                    <m:mi>b</m:mi>
+                    <m:mo>)</m:mo>
+                    <m:mo>-</m:mo>
+                    <m:mi>f</m:mi>
+                    <m:mo>(</m:mo>
+                    <m:mi>a</m:mi>
+                    <m:mo>,</m:mo>
+                    <m:mi>b</m:mi>
+                    <m:mo>)</m:mo>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mrow>
+                    <m:mi>h</m:mi>
+                    <m:mi>k</m:mi>
+                  </m:mrow>
+                </m:mfrac>
+                <m:mo>-</m:mo>
+                <m:msub>
+                  <m:mi>f</m:mi>
+                  <m:mrow>
+                    <m:mi>y</m:mi>
+                    <m:mi>x</m:mi>
+                  </m:mrow>
+                </m:msub>
+                <m:mrow>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>a</m:mi>
+                    <m:mo>,</m:mo>
+                    <m:mi>b</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mrow>
+                  <m:mn>3</m:mn>
+                  <m:mi>ϵ</m:mi>
+                  <m:mo>+</m:mo>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:mfrac>
+                  <m:mrow>
+                    <m:msub>
+                      <m:mi>f</m:mi>
+                      <m:mi>y</m:mi>
+                    </m:msub>
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:mi>a</m:mi>
+                      <m:mo>+</m:mo>
+                      <m:mi>h</m:mi>
+                      <m:mo>,</m:mo>
+                      <m:msup>
+                        <m:mi>b</m:mi>
+                        <m:mo>'</m:mo>
+                      </m:msup>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                    <m:mo>-</m:mo>
+                    <m:msub>
+                      <m:mi>f</m:mi>
+                      <m:mi>y</m:mi>
+                    </m:msub>
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:mi>a</m:mi>
+                      <m:mo>,</m:mo>
+                      <m:msup>
+                        <m:mi>b</m:mi>
+                        <m:mo>'</m:mo>
+                      </m:msup>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                  </m:mrow>
+                  <m:mi>h</m:mi>
+                </m:mfrac>
+                <m:mo>-</m:mo>
+                <m:msub>
+                  <m:mi>f</m:mi>
+                  <m:mrow>
+                    <m:mi>y</m:mi>
+                    <m:mi>x</m:mi>
+                  </m:mrow>
+                </m:msub>
+                <m:mrow>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>a</m:mi>
+                    <m:mo>,</m:mo>
+                    <m:mi>b</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mrow>
+                  <m:mn>3</m:mn>
+                  <m:mi>ϵ</m:mi>
+                  <m:mo>+</m:mo>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:msub>
+                  <m:mi>f</m:mi>
+                  <m:mrow>
+                    <m:mi>y</m:mi>
+                    <m:mi>x</m:mi>
+                  </m:mrow>
+                </m:msub>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:msup>
+                    <m:mi>a</m:mi>
+                    <m:mo>'</m:mo>
+                  </m:msup>
+                  <m:mo>,</m:mo>
+                  <m:msup>
+                    <m:mi>b</m:mi>
+                    <m:mo>'</m:mo>
+                  </m:msup>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mo>-</m:mo>
+                <m:msub>
+                  <m:mi>f</m:mi>
+                  <m:mrow>
+                    <m:mi>y</m:mi>
+                    <m:mi>x</m:mi>
+                  </m:mrow>
+                </m:msub>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>a</m:mi>
+                  <m:mo>,</m:mo>
+                  <m:mi>b</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>&lt;</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mn>4</m:mn>
+                <m:mi>ϵ</m:mi>
+                <m:mo>,</m:mo>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+        </m:mtable>
+      </m:math>
+    </equation>
+    <para id="id66536">because <m:math overflow="scroll"><m:msup><m:mi>b</m:mi><m:mo>'</m:mo></m:msup></m:math> is between <m:math overflow="scroll"><m:mi>b</m:mi></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>b</m:mi><m:mo>+</m:mo><m:mi>k</m:mi><m:mo>,</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:msup><m:mi>a</m:mi><m:mo>'</m:mo></m:msup></m:math> is between <m:math overflow="scroll"><m:mi>a</m:mi></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>a</m:mi><m:mo>+</m:mo><m:mi>h</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+so that <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:mrow><m:mo>(</m:mo><m:msup><m:mi>a</m:mi><m:mo>'</m:mo></m:msup><m:mo>,</m:mo><m:msup><m:mi>b</m:mi><m:mo>'</m:mo></m:msup><m:mo>)</m:mo></m:mrow><m:mo>-</m:mo><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo></m:mrow><m:mrow><m:mo>|</m:mo><m:mo>&lt;</m:mo></m:mrow><m:msub><m:mi>δ</m:mi><m:mn>1</m:mn></m:msub><m:mo>/</m:mo><m:msqrt><m:mn>2</m:mn></m:msqrt><m:mo>&lt;</m:mo><m:msub><m:mi>δ</m:mi><m:mn>1</m:mn></m:msub><m:mo>.</m:mo></m:mrow></m:math>
+Hence, <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msub><m:mi>f</m:mi><m:mrow><m:mi>x</m:mi><m:mi>y</m:mi></m:mrow></m:msub><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo></m:mrow><m:mo>-</m:mo><m:msub><m:mi>f</m:mi><m:mrow><m:mi>y</m:mi><m:mi>x</m:mi></m:mrow></m:msub><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo></m:mrow><m:mo>&lt;</m:mo><m:mn>4</m:mn><m:mi>ϵ</m:mi><m:mo>,</m:mo></m:mrow></m:math> for an arbitrary <m:math overflow="scroll"><m:mrow><m:mi>ϵ</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+and so the theorem is proved.</para>
+</proof></rule>
+<exercise id="fs-id1166169409893"><problem id="fs-id1166173736953">
+    <para id="id66779">
+Let <m:math overflow="scroll"><m:mi>f</m:mi></m:math> be defined on <m:math overflow="scroll"><m:msup><m:mrow><m:mi>R</m:mi></m:mrow><m:mn>2</m:mn></m:msup></m:math> by <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>0</m:mn><m:mo>)</m:mo><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math> and, for
+<m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>,</m:mo><m:mi>y</m:mi><m:mo>)</m:mo><m:mo>≠</m:mo><m:mo>(</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>0</m:mn><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math><m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>,</m:mo><m:mi>y</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>3</m:mn></m:msup><m:mi>y</m:mi><m:mo>/</m:mo><m:mrow><m:mo>(</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mi>y</m:mi><m:mn>2</m:mn></m:msup><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></para>
+    <list id="id66941" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid6"> Prove that both partial derivatives <m:math overflow="scroll"><m:msub><m:mi>f</m:mi><m:mi>x</m:mi></m:msub></m:math> and <m:math overflow="scroll"><m:msub><m:mi>f</m:mi><m:mi>y</m:mi></m:msub></m:math> exist
+at each point in the plane.
+</item>
+      <item id="uid7"> Show that <m:math overflow="scroll"><m:mrow><m:msub><m:mi>f</m:mi><m:mrow><m:mi>y</m:mi><m:mi>x</m:mi></m:mrow></m:msub><m:mrow><m:mo>(</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>0</m:mn><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>1</m:mn></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:msub><m:mi>f</m:mi><m:mrow><m:mi>x</m:mi><m:mi>y</m:mi></m:mrow></m:msub><m:mrow><m:mo>(</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>0</m:mn><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid8"> Show that <m:math overflow="scroll"><m:msub><m:mi>f</m:mi><m:mrow><m:mi>x</m:mi><m:mi>y</m:mi></m:mrow></m:msub></m:math> exists at each point in the plane, but that it is not continuous at <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>0</m:mn><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math></item>
+    </list>
+</problem></exercise>
+    <para id="id67116">The following exercise is an obvious generalization of the First Derivative Test for Extreme Values,
+<link target-id="fs-id1169864141590" document="m36203"/>, to real-valued functions of two real variables.</para>
+<exercise id="fs-id1166180514038"><problem id="fs-id1166176163668">
+    <para id="id67121">
+Let <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>:</m:mo><m:mi>S</m:mi><m:mo>→</m:mo><m:mi>R</m:mi></m:mrow></m:math> be a real-valued function of two real variables,
+and let <m:math overflow="scroll"><m:mrow><m:mi>c</m:mi><m:mo>=</m:mo><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo></m:mrow><m:mo>∈</m:mo><m:msup><m:mi>S</m:mi><m:mn>0</m:mn></m:msup></m:mrow></m:math>
+be a point at which <m:math overflow="scroll"><m:mi>f</m:mi></m:math> attains a local maximum or a local minimum.
+Show that if
+either of the partial derivatives <m:math overflow="scroll"><m:mrow><m:mi>t</m:mi><m:mi>i</m:mi><m:mi>a</m:mi><m:mi>l</m:mi><m:mi>f</m:mi><m:mo>/</m:mo><m:mi>t</m:mi><m:mi>i</m:mi><m:mi>a</m:mi><m:mi>l</m:mi><m:mi>x</m:mi></m:mrow></m:math> or <m:math overflow="scroll"><m:mrow><m:mi>t</m:mi><m:mi>i</m:mi><m:mi>a</m:mi><m:mi>l</m:mi><m:mi>f</m:mi><m:mo>/</m:mo><m:mi>t</m:mi><m:mi>i</m:mi><m:mi>a</m:mi><m:mi>l</m:mi><m:mi>y</m:mi></m:mrow></m:math> exists at <m:math overflow="scroll"><m:mrow><m:mi>c</m:mi><m:mo>,</m:mo></m:mrow></m:math> then it must be equal to 0.</para>
+    <para id="id67278">HINT: Just consider real-valued functions of a real variable like <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>→</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo></m:mrow></m:math> or <m:math overflow="scroll"><m:mrow><m:mi>y</m:mi><m:mo>→</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>y</m:mi><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math>
+and use <link target-id="" document=""/>.</para>
+</problem></exercise>
+    <para id="id67336">Whenever we make a new definition about functions, the question arises
+of how the definition fits with algebraic combinations of
+functions and how it fits with the operation of composition.
+In that light, the next theorem is an expected one.</para>
+<rule id="fs-id1166172020388" type="theorem"><statement id="fs-id1166166749580">
+    <para id="id67344"> (Chain Rule again)
+Suppose <m:math overflow="scroll"><m:mi>S</m:mi></m:math> is a subset of <m:math overflow="scroll"><m:mrow><m:msup><m:mrow><m:mi>R</m:mi></m:mrow><m:mn>2</m:mn></m:msup><m:mo>,</m:mo></m:mrow></m:math> that <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo></m:mrow></m:math> is a point in the interior of <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+and that <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>:</m:mo><m:mi>S</m:mi><m:mo>→</m:mo><m:mi>R</m:mi></m:mrow></m:math> is a real-valued function that is differentiable, as a function of two real variables, at the point <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Suppose that <m:math overflow="scroll"><m:mi>T</m:mi></m:math> is a subset of <m:math overflow="scroll"><m:mrow><m:mi>R</m:mi><m:mo>,</m:mo></m:mrow></m:math> that <m:math overflow="scroll"><m:mi>c</m:mi></m:math> belongs to the interior of <m:math overflow="scroll"><m:mrow><m:mi>T</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+and that <m:math overflow="scroll"><m:mrow><m:mi>φ</m:mi><m:mo>:</m:mo><m:mi>T</m:mi><m:mo>→</m:mo><m:msup><m:mrow><m:mi>R</m:mi></m:mrow><m:mn>2</m:mn></m:msup></m:mrow></m:math> is differentiable at the point <m:math overflow="scroll"><m:mi>c</m:mi></m:math>
+and <m:math overflow="scroll"><m:mrow><m:mi>φ</m:mi><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Write <m:math overflow="scroll"><m:mrow><m:mi>φ</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo><m:mo>,</m:mo><m:mi>y</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Then the composition <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>∘</m:mo><m:mi>φ</m:mi></m:mrow></m:math> is differentiable at <m:math overflow="scroll"><m:mi>c</m:mi></m:math> and</para>
+    <equation id="id67656">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mi>f</m:mi>
+          <m:mo>∘</m:mo>
+          <m:msup>
+            <m:mi>φ</m:mi>
+            <m:mo>'</m:mo>
+          </m:msup>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>c</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>=</m:mo>
+          <m:mfrac>
+            <m:mrow>
+              <m:mi>t</m:mi>
+              <m:mi>i</m:mi>
+              <m:mi>a</m:mi>
+              <m:mi>l</m:mi>
+              <m:mi>f</m:mi>
+            </m:mrow>
+            <m:mrow>
+              <m:mi>t</m:mi>
+              <m:mi>i</m:mi>
+              <m:mi>a</m:mi>
+              <m:mi>l</m:mi>
+              <m:mi>x</m:mi>
+            </m:mrow>
+          </m:mfrac>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>a</m:mi>
+            <m:mo>,</m:mo>
+            <m:mi>b</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:msup>
+            <m:mi>x</m:mi>
+            <m:mo>'</m:mo>
+          </m:msup>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>c</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>+</m:mo>
+          <m:mfrac>
+            <m:mrow>
+              <m:mi>t</m:mi>
+              <m:mi>i</m:mi>
+              <m:mi>a</m:mi>
+              <m:mi>l</m:mi>
+              <m:mi>f</m:mi>
+            </m:mrow>
+            <m:mrow>
+              <m:mi>t</m:mi>
+              <m:mi>i</m:mi>
+              <m:mi>a</m:mi>
+              <m:mi>l</m:mi>
+              <m:mi>y</m:mi>
+            </m:mrow>
+          </m:mfrac>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>a</m:mi>
+            <m:mo>,</m:mo>
+            <m:mi>b</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:msup>
+            <m:mi>y</m:mi>
+            <m:mo>'</m:mo>
+          </m:msup>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>c</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>=</m:mo>
+          <m:mfrac>
+            <m:mrow>
+              <m:mi>t</m:mi>
+              <m:mi>i</m:mi>
+              <m:mi>a</m:mi>
+              <m:mi>l</m:mi>
+              <m:mi>f</m:mi>
+            </m:mrow>
+            <m:mrow>
+              <m:mi>t</m:mi>
+              <m:mi>i</m:mi>
+              <m:mi>a</m:mi>
+              <m:mi>l</m:mi>
+              <m:mi>x</m:mi>
+            </m:mrow>
+          </m:mfrac>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>φ</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>c</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:msup>
+            <m:mi>x</m:mi>
+            <m:mo>'</m:mo>
+          </m:msup>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>c</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>+</m:mo>
+          <m:mfrac>
+            <m:mrow>
+              <m:mi>t</m:mi>
+              <m:mi>i</m:mi>
+              <m:mi>a</m:mi>
+              <m:mi>l</m:mi>
+              <m:mi>f</m:mi>
+            </m:mrow>
+            <m:mrow>
+              <m:mi>t</m:mi>
+              <m:mi>i</m:mi>
+              <m:mi>a</m:mi>
+              <m:mi>l</m:mi>
+              <m:mi>y</m:mi>
+            </m:mrow>
+          </m:mfrac>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>φ</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>c</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:msup>
+            <m:mi>y</m:mi>
+            <m:mo>'</m:mo>
+          </m:msup>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>c</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>.</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+</statement>
+<proof id="fs-id1166166693659">
+    <para id="id67913">
+From the definition of differentiability of a real-valued function of two real variables, write</para>
+    <equation id="id67922">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mi>f</m:mi>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>a</m:mi>
+            <m:mo>+</m:mo>
+            <m:msub>
+              <m:mi>h</m:mi>
+              <m:mn>1</m:mn>
+            </m:msub>
+            <m:mo>,</m:mo>
+            <m:mi>b</m:mi>
+            <m:mo>+</m:mo>
+            <m:msub>
+              <m:mi>h</m:mi>
+              <m:mn>2</m:mn>
+            </m:msub>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>-</m:mo>
+          <m:mi>f</m:mi>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>a</m:mi>
+            <m:mo>,</m:mo>
+            <m:mi>b</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>=</m:mo>
+          <m:msub>
+            <m:mi>L</m:mi>
+            <m:mn>1</m:mn>
+          </m:msub>
+          <m:msub>
+            <m:mi>h</m:mi>
+            <m:mn>1</m:mn>
+          </m:msub>
+          <m:mo>+</m:mo>
+          <m:msub>
+            <m:mi>L</m:mi>
+            <m:mn>2</m:mn>
+          </m:msub>
+          <m:msub>
+            <m:mi>h</m:mi>
+            <m:mn>2</m:mn>
+          </m:msub>
+          <m:mo>+</m:mo>
+          <m:msub>
+            <m:mi>θ</m:mi>
+            <m:mi>f</m:mi>
+          </m:msub>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:msub>
+              <m:mi>H</m:mi>
+              <m:mn>1</m:mn>
+            </m:msub>
+            <m:mo>,</m:mo>
+            <m:msub>
+              <m:mi>h</m:mi>
+              <m:mn>2</m:mn>
+            </m:msub>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>.</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id68049">and from part (3) of <link target-id="fs-id1170287829005" document="m36186"/>, write</para>
+    <equation id="id68055">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mi>φ</m:mi>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>c</m:mi>
+            <m:mo>+</m:mo>
+            <m:mi>h</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>-</m:mo>
+          <m:mi>φ</m:mi>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>c</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>=</m:mo>
+          <m:msup>
+            <m:mi>φ</m:mi>
+            <m:mo>'</m:mo>
+          </m:msup>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>c</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mi>h</m:mi>
+          <m:mo>+</m:mo>
+          <m:msub>
+            <m:mi>θ</m:mi>
+            <m:mi>φ</m:mi>
+          </m:msub>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>h</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>,</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id68130">or, in component form,</para>
+    <equation id="id68136">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mi>x</m:mi>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>c</m:mi>
+            <m:mo>+</m:mo>
+            <m:mi>h</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>-</m:mo>
+          <m:mi>x</m:mi>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>c</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>=</m:mo>
+          <m:mi>x</m:mi>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>c</m:mi>
+            <m:mo>+</m:mo>
+            <m:mi>h</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>-</m:mo>
+          <m:mi>a</m:mi>
+          <m:mo>=</m:mo>
+          <m:msup>
+            <m:mi>x</m:mi>
+            <m:mo>'</m:mo>
+          </m:msup>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>c</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mi>h</m:mi>
+          <m:mo>+</m:mo>
+          <m:msub>
+            <m:mi>θ</m:mi>
+            <m:mi>x</m:mi>
+          </m:msub>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>h</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id68229">and</para>
+    <equation id="id68234">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mi>y</m:mi>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>c</m:mi>
+            <m:mo>+</m:mo>
+            <m:mi>h</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>-</m:mo>
+          <m:mi>y</m:mi>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>c</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>=</m:mo>
+          <m:mi>y</m:mi>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>c</m:mi>
+            <m:mo>+</m:mo>
+            <m:mi>h</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>-</m:mo>
+          <m:mi>b</m:mi>
+          <m:mo>=</m:mo>
+          <m:msup>
+            <m:mi>y</m:mi>
+            <m:mo>'</m:mo>
+          </m:msup>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>c</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mi>h</m:mi>
+          <m:mo>+</m:mo>
+          <m:msub>
+            <m:mi>θ</m:mi>
+            <m:mi>y</m:mi>
+          </m:msub>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>h</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>.</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id68329">We also have that</para>
+    <equation id="id68334">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:munder>
+            <m:mo movablelimits="true" form="prefix">lim</m:mo>
+            <m:mrow>
+              <m:mo>|</m:mo>
+              <m:mo>(</m:mo>
+              <m:msub>
+                <m:mi>h</m:mi>
+                <m:mn>1</m:mn>
+              </m:msub>
+              <m:mo>,</m:mo>
+              <m:msub>
+                <m:mi>h</m:mi>
+                <m:mn>2</m:mn>
+              </m:msub>
+              <m:mo>)</m:mo>
+              <m:mo>|</m:mo>
+              <m:mo>→</m:mo>
+              <m:mn>0</m:mn>
+            </m:mrow>
+          </m:munder>
+          <m:mfrac>
+            <m:mrow>
+              <m:msub>
+                <m:mi>θ</m:mi>
+                <m:mi>f</m:mi>
+              </m:msub>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:msub>
+                    <m:mi>h</m:mi>
+                    <m:mn>1</m:mn>
+                  </m:msub>
+                  <m:mo>,</m:mo>
+                  <m:msub>
+                    <m:mi>h</m:mi>
+                    <m:mn>2</m:mn>
+                  </m:msub>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mo>)</m:mo>
+              </m:mrow>
+            </m:mrow>
+            <m:mrow>
+              <m:mo>|</m:mo>
+              <m:mo>(</m:mo>
+              <m:msub>
+                <m:mi>h</m:mi>
+                <m:mn>1</m:mn>
+              </m:msub>
+              <m:mo>,</m:mo>
+              <m:msub>
+                <m:mi>h</m:mi>
+                <m:mn>2</m:mn>
+              </m:msub>
+              <m:mo>)</m:mo>
+              <m:mo>|</m:mo>
+            </m:mrow>
+          </m:mfrac>
+          <m:mo>=</m:mo>
+          <m:mn>0</m:mn>
+          <m:mo>,</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <equation id="id68457">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:munder>
+            <m:mo movablelimits="true" form="prefix">lim</m:mo>
+            <m:mrow>
+              <m:mi>h</m:mi>
+              <m:mo>→</m:mo>
+              <m:mn>0</m:mn>
+            </m:mrow>
+          </m:munder>
+          <m:mfrac>
+            <m:mrow>
+              <m:msub>
+                <m:mi>θ</m:mi>
+                <m:mi>x</m:mi>
+              </m:msub>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>h</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+            </m:mrow>
+            <m:mi>h</m:mi>
+          </m:mfrac>
+          <m:mo>=</m:mo>
+          <m:mn>0</m:mn>
+          <m:mo>,</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id68511">and</para>
+    <equation id="id68516">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:munder>
+            <m:mo movablelimits="true" form="prefix">lim</m:mo>
+            <m:mrow>
+              <m:mi>h</m:mi>
+              <m:mo>→</m:mo>
+              <m:mn>0</m:mn>
+            </m:mrow>
+          </m:munder>
+          <m:mfrac>
+            <m:mrow>
+              <m:msub>
+                <m:mi>θ</m:mi>
+                <m:mi>y</m:mi>
+              </m:msub>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>h</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+            </m:mrow>
+            <m:mi>h</m:mi>
+          </m:mfrac>
+          <m:mo>=</m:mo>
+          <m:mn>0</m:mn>
+          <m:mo>.</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id68571">We will show that <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>∘</m:mo><m:mi>φ</m:mi></m:mrow></m:math> is differentiable at <m:math overflow="scroll"><m:mi>c</m:mi></m:math> by showing
+that there exists a number <m:math overflow="scroll"><m:mi>L</m:mi></m:math> and a function <m:math overflow="scroll"><m:mi>θ</m:mi></m:math> satisfying
+the two conditions of part (3) of <link target-id="fs-id1170287829005" document="m36186"/>.</para>
+    <para id="id68617">Define</para>
+    <equation id="id68620">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:msub>
+            <m:mi>k</m:mi>
+            <m:mn>1</m:mn>
+          </m:msub>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>h</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>,</m:mo>
+          <m:msub>
+            <m:mi>k</m:mi>
+            <m:mn>2</m:mn>
+          </m:msub>
+          <m:mrow>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>h</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>)</m:mo>
+            <m:mo>=</m:mo>
+            <m:mi>φ</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>c</m:mi>
+              <m:mo>+</m:mo>
+              <m:mi>h</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>-</m:mo>
+            <m:mi>φ</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>c</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>=</m:mo>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>x</m:mi>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>c</m:mi>
+                <m:mo>+</m:mo>
+                <m:mi>h</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:mo>-</m:mo>
+              <m:mi>x</m:mi>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>c</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:mo>,</m:mo>
+              <m:mi>y</m:mi>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>c</m:mi>
+                <m:mo>+</m:mo>
+                <m:mi>h</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:mo>-</m:mo>
+              <m:mi>y</m:mi>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>c</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>.</m:mo>
+          </m:mrow>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id68756">Thus, we have that</para>
+    <equation id="uid9">
+      <m:math overflow="scroll" mode="display">
+        <m:mtable displaystyle="true">
+          <m:mtr>
+            <m:mtd columnalign="right">
+              <m:mrow>
+                <m:mi>f</m:mi>
+                <m:mo>∘</m:mo>
+                <m:mi>φ</m:mi>
+                <m:mo>(</m:mo>
+                <m:mi>c</m:mi>
+                <m:mo>+</m:mo>
+                <m:mi>h</m:mi>
+                <m:mo>)</m:mo>
+                <m:mo>-</m:mo>
+                <m:mi>f</m:mi>
+                <m:mo>∘</m:mo>
+                <m:mi>φ</m:mi>
+                <m:mo>(</m:mo>
+                <m:mi>c</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+            </m:mtd>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mi>f</m:mi>
+                <m:mo>(</m:mo>
+                <m:mi>φ</m:mi>
+                <m:mo>(</m:mo>
+                <m:mi>c</m:mi>
+                <m:mo>+</m:mo>
+                <m:mi>h</m:mi>
+                <m:mo>)</m:mo>
+                <m:mo>)</m:mo>
+                <m:mo>-</m:mo>
+                <m:mi>f</m:mi>
+                <m:mo>(</m:mo>
+                <m:mi>φ</m:mi>
+                <m:mo>(</m:mo>
+                <m:mi>c</m:mi>
+                <m:mo>)</m:mo>
+                <m:mo>)</m:mo>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mi>f</m:mi>
+                <m:mo>(</m:mo>
+                <m:mi>x</m:mi>
+                <m:mo>(</m:mo>
+                <m:mi>c</m:mi>
+                <m:mo>+</m:mo>
+                <m:mi>h</m:mi>
+                <m:mo>)</m:mo>
+                <m:mo>,</m:mo>
+                <m:mi>y</m:mi>
+                <m:mo>(</m:mo>
+                <m:mi>c</m:mi>
+                <m:mo>+</m:mo>
+                <m:mi>h</m:mi>
+                <m:mo>)</m:mo>
+                <m:mo>)</m:mo>
+                <m:mo>-</m:mo>
+                <m:mi>f</m:mi>
+                <m:mo>(</m:mo>
+                <m:mi>x</m:mi>
+                <m:mo>(</m:mo>
+                <m:mi>c</m:mi>
+                <m:mo>)</m:mo>
+                <m:mo>,</m:mo>
+                <m:mi>y</m:mi>
+                <m:mo>(</m:mo>
+                <m:mi>c</m:mi>
+                <m:mo>)</m:mo>
+                <m:mo>)</m:mo>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mi>f</m:mi>
+                <m:mo>(</m:mo>
+                <m:mi>a</m:mi>
+                <m:mo>+</m:mo>
+                <m:msub>
+                  <m:mi>k</m:mi>
+                  <m:mn>1</m:mn>
+                </m:msub>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>h</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mo>,</m:mo>
+                <m:mi>b</m:mi>
+                <m:mo>+</m:mo>
+                <m:msub>
+                  <m:mi>k</m:mi>
+                  <m:mn>2</m:mn>
+                </m:msub>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>h</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mo>)</m:mo>
+                <m:mo>-</m:mo>
+                <m:mi>f</m:mi>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>a</m:mi>
+                  <m:mo>,</m:mo>
+                  <m:mi>b</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:msub>
+                  <m:mi>L</m:mi>
+                  <m:mn>1</m:mn>
+                </m:msub>
+                <m:msub>
+                  <m:mi>k</m:mi>
+                  <m:mn>1</m:mn>
+                </m:msub>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>h</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mo>+</m:mo>
+                <m:msub>
+                  <m:mi>L</m:mi>
+                  <m:mn>2</m:mn>
+                </m:msub>
+                <m:msub>
+                  <m:mi>k</m:mi>
+                  <m:mn>2</m:mn>
+                </m:msub>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>h</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mo>+</m:mo>
+                <m:msub>
+                  <m:mi>θ</m:mi>
+                  <m:mi>f</m:mi>
+                </m:msub>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:msub>
+                    <m:mi>k</m:mi>
+                    <m:mn>1</m:mn>
+                  </m:msub>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>h</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>,</m:mo>
+                  <m:msub>
+                    <m:mi>k</m:mi>
+                    <m:mn>2</m:mn>
+                  </m:msub>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>h</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:msub>
+                  <m:mi>l</m:mi>
+                  <m:mn>1</m:mn>
+                </m:msub>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>x</m:mi>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>c</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mi>h</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>-</m:mo>
+                  <m:mi>x</m:mi>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>c</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mo>+</m:mo>
+                <m:msub>
+                  <m:mi>L</m:mi>
+                  <m:mn>2</m:mn>
+                </m:msub>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>y</m:mi>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>c</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mi>h</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>-</m:mo>
+                  <m:mi>y</m:mi>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>c</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd/>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mspace width="1.em"/>
+                <m:mspace width="1.em"/>
+                <m:mo>+</m:mo>
+                <m:msub>
+                  <m:mi>θ</m:mi>
+                  <m:mi>f</m:mi>
+                </m:msub>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:msub>
+                    <m:mi>k</m:mi>
+                    <m:mn>1</m:mn>
+                  </m:msub>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>h</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>,</m:mo>
+                  <m:msub>
+                    <m:mi>k</m:mi>
+                    <m:mn>2</m:mn>
+                  </m:msub>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>h</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:msub>
+                  <m:mi>L</m:mi>
+                  <m:mn>1</m:mn>
+                </m:msub>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:msup>
+                    <m:mi>x</m:mi>
+                    <m:mo>'</m:mo>
+                  </m:msup>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>c</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mi>h</m:mi>
+                  <m:mo>+</m:mo>
+                  <m:msub>
+                    <m:mi>θ</m:mi>
+                    <m:mi>x</m:mi>
+                  </m:msub>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>h</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mo>+</m:mo>
+                <m:msub>
+                  <m:mi>L</m:mi>
+                  <m:mn>2</m:mn>
+                </m:msub>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:msup>
+                    <m:mi>y</m:mi>
+                    <m:mo>'</m:mo>
+                  </m:msup>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>c</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mi>h</m:mi>
+                  <m:mo>+</m:mo>
+                  <m:msub>
+                    <m:mi>θ</m:mi>
+                    <m:mi>y</m:mi>
+                  </m:msub>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>h</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd/>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mspace width="1.em"/>
+                <m:mspace width="1.em"/>
+                <m:mo>+</m:mo>
+                <m:msub>
+                  <m:mi>θ</m:mi>
+                  <m:mi>f</m:mi>
+                </m:msub>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:msub>
+                    <m:mi>k</m:mi>
+                    <m:mn>1</m:mn>
+                  </m:msub>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>h</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>,</m:mo>
+                  <m:msub>
+                    <m:mi>k</m:mi>
+                    <m:mn>2</m:mn>
+                  </m:msub>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>h</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:msub>
+                  <m:mi>L</m:mi>
+                  <m:mn>1</m:mn>
+                </m:msub>
+                <m:msup>
+                  <m:mi>x</m:mi>
+                  <m:mo>'</m:mo>
+                </m:msup>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>c</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mo>+</m:mo>
+                <m:msub>
+                  <m:mi>L</m:mi>
+                  <m:mn>2</m:mn>
+                </m:msub>
+                <m:msup>
+                  <m:mi>y</m:mi>
+                  <m:mo>'</m:mo>
+                </m:msup>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>c</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mo>)</m:mo>
+                <m:mi>h</m:mi>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd/>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mspace width="1.em"/>
+                <m:mspace width="1.em"/>
+                <m:mo>+</m:mo>
+                <m:msub>
+                  <m:mi>L</m:mi>
+                  <m:mn>1</m:mn>
+                </m:msub>
+                <m:msub>
+                  <m:mi>θ</m:mi>
+                  <m:mi>x</m:mi>
+                </m:msub>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>h</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mo>+</m:mo>
+                <m:msub>
+                  <m:mi>L</m:mi>
+                  <m:mn>2</m:mn>
+                </m:msub>
+                <m:msub>
+                  <m:mi>θ</m:mi>
+                  <m:mi>y</m:mi>
+                </m:msub>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>h</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mo>+</m:mo>
+                <m:msub>
+                  <m:mi>θ</m:mi>
+                  <m:mi>f</m:mi>
+                </m:msub>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:msub>
+                    <m:mi>k</m:mi>
+                    <m:mn>1</m:mn>
+                  </m:msub>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>h</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>,</m:mo>
+                  <m:msub>
+                    <m:mi>k</m:mi>
+                    <m:mn>2</m:mn>
+                  </m:msub>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>h</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mo>.</m:mo>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+        </m:mtable>
+      </m:math>
+    </equation>
+    <para id="id69604">We define <m:math overflow="scroll"><m:mrow><m:mi>L</m:mi><m:mo>=</m:mo><m:mo>(</m:mo><m:msub><m:mi>L</m:mi><m:mn>1</m:mn></m:msub><m:msup><m:mi>x</m:mi><m:mo>'</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:msub><m:mi>L</m:mi><m:mn>2</m:mn></m:msub><m:msup><m:mi>y</m:mi><m:mo>'</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>)</m:mo></m:mrow></m:math> and
+<m:math overflow="scroll"><m:mrow><m:mi>θ</m:mi><m:mrow><m:mo>(</m:mo><m:mi>h</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msub><m:mi>l</m:mi><m:mn>1</m:mn></m:msub><m:msub><m:mi>θ</m:mi><m:mi>x</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>h</m:mi><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:msub><m:mi>L</m:mi><m:mn>2</m:mn></m:msub><m:msub><m:mi>θ</m:mi><m:mi>y</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>h</m:mi><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:msub><m:mi>θ</m:mi><m:mi>f</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:msub><m:mi>k</m:mi><m:mn>1</m:mn></m:msub><m:mrow><m:mo>(</m:mo><m:mi>h</m:mi><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo><m:msub><m:mi>k</m:mi><m:mn>2</m:mn></m:msub><m:mrow><m:mo>(</m:mo><m:mi>h</m:mi><m:mo>)</m:mo></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math>
+By these definitions and the calculation above we have Equation (4.1)</para>
+    <equation id="id69790">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mi>f</m:mi>
+          <m:mo>∘</m:mo>
+          <m:mi>φ</m:mi>
+          <m:mo>(</m:mo>
+          <m:mi>c</m:mi>
+          <m:mo>+</m:mo>
+          <m:mi>h</m:mi>
+          <m:mo>)</m:mo>
+          <m:mo>-</m:mo>
+          <m:mi>f</m:mi>
+          <m:mo>∘</m:mo>
+          <m:mi>φ</m:mi>
+          <m:mo>(</m:mo>
+          <m:mi>c</m:mi>
+          <m:mo>)</m:mo>
+          <m:mo>=</m:mo>
+          <m:mi>L</m:mi>
+          <m:mi>h</m:mi>
+          <m:mo>+</m:mo>
+          <m:mi>θ</m:mi>
+          <m:mo>(</m:mo>
+          <m:mi>h</m:mi>
+          <m:mo>)</m:mo>
+          <m:mo>,</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id69853">so that it only remains to verify <link target-id="id94829" document="m36186"/> for the function <m:math overflow="scroll"><m:mrow><m:mi>θ</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+We have seen above that the first two parts of <m:math overflow="scroll"><m:mi>θ</m:mi></m:math> satisfy the desired limit condition,
+so that it is just the third part of <m:math overflow="scroll"><m:mi>θ</m:mi></m:math> that requires some proof.
+The required argument is analogous to the last part of the proof of the Chain Rule (<link target-id="fs-id1170297597909" document="m36186"/>),
+and we leave it as an exercise.</para>
+</proof></rule>
+<exercise id="fs-id1166169558623"><problem id="fs-id1166183192698">
+
+    <list id="id69902" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid10"> Finish the proof to the preceding theorem by showing that
+<equation id="id69918"><m:math overflow="scroll" mode="display"><m:mrow><m:munder><m:mo movablelimits="true" form="prefix">lim</m:mo><m:mrow><m:mi>h</m:mi><m:mo>→</m:mo><m:mn>0</m:mn></m:mrow></m:munder><m:mfrac><m:mrow><m:msub><m:mi>θ</m:mi><m:mi>f</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:msub><m:mi>k</m:mi><m:mn>1</m:mn></m:msub><m:mrow><m:mo>(</m:mo><m:mi>h</m:mi><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo><m:msub><m:mi>k</m:mi><m:mn>2</m:mn></m:msub><m:mrow><m:mo>(</m:mo><m:mi>h</m:mi><m:mo>)</m:mo></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mi>h</m:mi></m:mfrac><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math></equation>
+HINT: Review the corresponding part of the proof to <link target-id="fs-id1170297597909" document="m36186"/>.
+</item>
+      <item id="uid11"> Suppose <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>:</m:mo><m:mi>S</m:mi><m:mo>→</m:mo><m:mi>R</m:mi></m:mrow></m:math> is as in the preceding theorem and that
+<m:math overflow="scroll"><m:mi>φ</m:mi></m:math> is a
+real-valued function of a real variable.
+Suppose <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is differentiable, as a function of two real variables,
+at the point <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math> and that <m:math overflow="scroll"><m:mi>φ</m:mi></m:math> is differentiable
+at the point <m:math overflow="scroll"><m:mrow><m:mi>c</m:mi><m:mo>=</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Let <m:math overflow="scroll"><m:mrow><m:mi>g</m:mi><m:mo>=</m:mo><m:mi>φ</m:mi><m:mo>∘</m:mo><m:mi>f</m:mi><m:mo>.</m:mo></m:mrow></m:math> Find a formula for the partial derivatives of the
+real-valued function <m:math overflow="scroll"><m:mi>g</m:mi></m:math> of two real variables.
+</item>
+      <item id="uid12"> (A generalized Mean Value Theorem)
+Suppose <m:math overflow="scroll"><m:mi>u</m:mi></m:math> is a real-valued function of two real variables,
+both of whose partial derivatives exist at each point in a disk <m:math overflow="scroll"><m:mrow><m:msub><m:mi>B</m:mi><m:mi>r</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math>
+Show that, for any two points <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>,</m:mo><m:mi>y</m:mi><m:mo>)</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:msup><m:mi>x</m:mi><m:mo>'</m:mo></m:msup><m:mo>,</m:mo><m:msup><m:mi>y</m:mi><m:mo>'</m:mo></m:msup><m:mo>)</m:mo></m:mrow></m:math> in <m:math overflow="scroll"><m:mrow><m:msub><m:mi>B</m:mi><m:mi>r</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> there exists a point
+<m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mover accent="true"><m:mi>x</m:mi><m:mo>^</m:mo></m:mover><m:mo>,</m:mo><m:mover accent="true"><m:mi>y</m:mi><m:mo>^</m:mo></m:mover><m:mo>)</m:mo></m:mrow></m:math> on the line segment joining <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>,</m:mo><m:mi>y</m:mi><m:mo>)</m:mo></m:mrow></m:math> to <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:msup><m:mi>x</m:mi><m:mo>'</m:mo></m:msup><m:mo>,</m:mo><m:msup><m:mi>y</m:mi><m:mo>'</m:mo></m:msup><m:mo>)</m:mo></m:mrow></m:math> such that
+<equation id="id70362"><m:math overflow="scroll" mode="display"><m:mrow><m:mi>u</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>,</m:mo><m:mi>y</m:mi><m:mo>)</m:mo></m:mrow><m:mo>-</m:mo><m:mi>u</m:mi><m:mrow><m:mo>(</m:mo><m:msup><m:mi>x</m:mi><m:mo>'</m:mo></m:msup><m:mo>,</m:mo><m:msup><m:mi>y</m:mi><m:mo>'</m:mo></m:msup><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac><m:mrow><m:mi>t</m:mi><m:mi>i</m:mi><m:mi>a</m:mi><m:mi>l</m:mi><m:mi>u</m:mi></m:mrow><m:mrow><m:mi>t</m:mi><m:mi>i</m:mi><m:mi>a</m:mi><m:mi>l</m:mi><m:mi>x</m:mi></m:mrow></m:mfrac><m:mrow><m:mo>(</m:mo><m:mover accent="true"><m:mi>x</m:mi><m:mo>^</m:mo></m:mover><m:mo>,</m:mo><m:mover accent="true"><m:mi>y</m:mi><m:mo>^</m:mo></m:mover><m:mo>)</m:mo></m:mrow><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>-</m:mo><m:msup><m:mi>x</m:mi><m:mo>'</m:mo></m:msup><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mfrac><m:mrow><m:mi>t</m:mi><m:mi>i</m:mi><m:mi>a</m:mi><m:mi>l</m:mi><m:mi>u</m:mi></m:mrow><m:mrow><m:mi>t</m:mi><m:mi>i</m:mi><m:mi>a</m:mi><m:mi>l</m:mi><m:mi>y</m:mi></m:mrow></m:mfrac><m:mrow><m:mo>(</m:mo><m:mover accent="true"><m:mi>x</m:mi><m:mo>^</m:mo></m:mover><m:mo>,</m:mo><m:mover accent="true"><m:mi>y</m:mi><m:mo>^</m:mo></m:mover><m:mo>)</m:mo></m:mrow><m:mrow><m:mo>(</m:mo><m:mi>y</m:mi><m:mo>-</m:mo><m:msup><m:mi>y</m:mi><m:mo>'</m:mo></m:msup><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></equation>
+HINT: Let <m:math overflow="scroll"><m:mrow><m:mi>φ</m:mi><m:mo>:</m:mo><m:mrow><m:mo>[</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>1</m:mn><m:mo>]</m:mo></m:mrow><m:mo>→</m:mo><m:msup><m:mrow><m:mi>R</m:mi></m:mrow><m:mn>2</m:mn></m:msup></m:mrow></m:math> be defined by <m:math overflow="scroll"><m:mrow><m:mi>φ</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mrow><m:mo>(</m:mo><m:mn>1</m:mn><m:mo>-</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mrow><m:mo>(</m:mo><m:msup><m:mi>x</m:mi><m:mo>'</m:mo></m:msup><m:mo>,</m:mo><m:msup><m:mi>y</m:mi><m:mo>'</m:mo></m:msup><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mi>t</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>,</m:mo><m:mi>y</m:mi><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math>
+Now use the preceding theorem.
+</item>
+      <item id="uid13"> Verify that the assignment <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>→</m:mo><m:mi>t</m:mi><m:mi>i</m:mi><m:mi>a</m:mi><m:mi>l</m:mi><m:mi>f</m:mi><m:mo>/</m:mo><m:mi>t</m:mi><m:mi>i</m:mi><m:mi>a</m:mi><m:mi>l</m:mi><m:mi>x</m:mi></m:mrow></m:math> is linear; i.e., that
+<equation id="id70725"><m:math overflow="scroll" mode="display"><m:mrow><m:mfrac><m:mrow><m:mi>t</m:mi><m:mi>i</m:mi><m:mi>a</m:mi><m:mi>l</m:mi><m:mo>(</m:mo><m:mi>f</m:mi><m:mo>+</m:mo><m:mi>g</m:mi><m:mo>)</m:mo></m:mrow><m:mrow><m:mi>t</m:mi><m:mi>i</m:mi><m:mi>a</m:mi><m:mi>l</m:mi><m:mi>x</m:mi></m:mrow></m:mfrac><m:mo>=</m:mo><m:mfrac><m:mrow><m:mi>t</m:mi><m:mi>i</m:mi><m:mi>a</m:mi><m:mi>l</m:mi><m:mi>f</m:mi></m:mrow><m:mrow><m:mi>t</m:mi><m:mi>i</m:mi><m:mi>a</m:mi><m:mi>l</m:mi><m:mi>x</m:mi></m:mrow></m:mfrac><m:mo>+</m:mo><m:mfrac><m:mrow><m:mi>t</m:mi><m:mi>i</m:mi><m:mi>a</m:mi><m:mi>l</m:mi><m:mi>g</m:mi></m:mrow><m:mrow><m:mi>t</m:mi><m:mi>i</m:mi><m:mi>a</m:mi><m:mi>l</m:mi><m:mi>x</m:mi></m:mrow></m:mfrac><m:mo>.</m:mo></m:mrow></m:math></equation>
+Check that the same is true for partial derivatives with respect to <m:math overflow="scroll"><m:mrow><m:mi>y</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+    </list>
+</problem></exercise>
+  </content>
+</document>

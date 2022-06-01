@@ -1,0 +1,1213 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML">
+  <title>Consequences of Differentiability, the Mean Value Theorem</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m36203</md:content-id>
+  <md:title>Consequences of Differentiability, the Mean Value Theorem</md:title>
+  <md:abstract>The first derivative test for extreme values is proven, followed by the mean value theorem, the inverse function theorem, and some exercises pertaining to these theorems and proofs.</md:abstract>
+  <md:uuid>195e5daa-454e-4dad-9323-1c8f74ca213e</md:uuid>
+</metadata>
+
+<content>
+<definition id="fs-id1169894078812"><term/><meaning id="fs-id1169889905527">
+    <para id="id150223">
+Let <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>:</m:mo><m:mi>S</m:mi><m:mo>→</m:mo><m:mi>R</m:mi></m:mrow></m:math> be a real-valued
+function of a real variable, and let <m:math overflow="scroll"><m:mi>c</m:mi></m:math> be an element of the interior of <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Then <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is said to <emphasis effect="italics">attain a local maximum</emphasis> at <m:math overflow="scroll"><m:mi>c</m:mi></m:math> if
+there exists a <m:math overflow="scroll"><m:mrow><m:mi>δ</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn></m:mrow></m:math> such that <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>-</m:mo><m:mi>δ</m:mi><m:mo>,</m:mo><m:mi>c</m:mi><m:mo>+</m:mo><m:mi>δ</m:mi><m:mo>)</m:mo><m:mo>⊆</m:mo><m:mi>S</m:mi></m:mrow></m:math> and
+<m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo><m:mo>≥</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>-</m:mo><m:mi>δ</m:mi><m:mo>,</m:mo><m:mi>c</m:mi><m:mo>+</m:mo><m:mi>δ</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math></para>
+    <para id="id150736">The function <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is said to <emphasis effect="italics">attain a local minimum</emphasis> at <m:math overflow="scroll"><m:mi>c</m:mi></m:math>
+if there exists an interval <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>-</m:mo><m:mi>δ</m:mi><m:mo>,</m:mo><m:mi>c</m:mi><m:mo>+</m:mo><m:mi>δ</m:mi><m:mo>)</m:mo><m:mo>⊆</m:mo><m:mi>S</m:mi></m:mrow></m:math> such that
+<m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo><m:mo>≤</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>-</m:mo><m:mi>δ</m:mi><m:mo>,</m:mo><m:mi>c</m:mi><m:mo>+</m:mo><m:mi>δ</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math></para>
+</meaning></definition>
+    <para id="id150848">The next theorem should be a familiar result from calculus.</para>
+<rule id="fs-id1169864141590" type="theorem"><title>First Derivative Test for Extreme Values</title><statement id="fs-id1169863857178">
+    <para id="id150851"> 
+Let <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>:</m:mo><m:mi>S</m:mi><m:mo>→</m:mo><m:mi>R</m:mi></m:mrow></m:math> be a real-valued function of a real variable,
+and let <m:math overflow="scroll"><m:mrow><m:mi>c</m:mi><m:mo>∈</m:mo><m:mi>S</m:mi></m:mrow></m:math>
+be a point at which <m:math overflow="scroll"><m:mi>f</m:mi></m:math> attains a local maximum or a local minimum.
+If <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is differentiable at <m:math overflow="scroll"><m:mrow><m:mi>c</m:mi><m:mo>,</m:mo></m:mrow></m:math> then <m:math overflow="scroll"><m:mrow><m:msup><m:mi>f</m:mi><m:mo>'</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> must be <m:math overflow="scroll"><m:mrow><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math></para>
+</statement>
+<proof id="fs-id1169894230211">
+    <para id="id150189"> We prove the theorem when <m:math overflow="scroll"><m:mi>f</m:mi></m:math> attains a local maximum at <m:math overflow="scroll"><m:mrow><m:mi>c</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+The proof for the case when <m:math overflow="scroll"><m:mi>f</m:mi></m:math> attains a local minimum is completely analogous.</para>
+    <para id="id151171">Thus, let <m:math overflow="scroll"><m:mrow><m:mi>δ</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn></m:mrow></m:math> be such that <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo><m:mo>≥</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:math> for all <m:math overflow="scroll"><m:mi>x</m:mi></m:math> such that <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>x</m:mi><m:mo>-</m:mo><m:mi>c</m:mi><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mi>δ</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Note that, if <m:math overflow="scroll"><m:mi>n</m:mi></m:math> is sufficiently large, then both
+<m:math overflow="scroll"><m:mrow><m:mi>c</m:mi><m:mo>+</m:mo><m:mfrac><m:mn>1</m:mn><m:mi>n</m:mi></m:mfrac></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>c</m:mi><m:mo>-</m:mo><m:mfrac><m:mn>1</m:mn><m:mi>n</m:mi></m:mfrac></m:mrow></m:math> belong to the interval <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>-</m:mo><m:mi>δ</m:mi><m:mo>,</m:mo><m:mi>c</m:mi><m:mo>+</m:mo><m:mi>δ</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+We evaluate <m:math overflow="scroll"><m:mrow><m:msup><m:mi>f</m:mi><m:mo>'</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> in two ways. First,</para>
+    <equation id="id151338">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:msup>
+            <m:mi>f</m:mi>
+            <m:mo>'</m:mo>
+          </m:msup>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>c</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>=</m:mo>
+          <m:munder>
+            <m:mo movablelimits="true" form="prefix">lim</m:mo>
+            <m:mi>n</m:mi>
+          </m:munder>
+          <m:mfrac>
+            <m:mrow>
+              <m:mi>f</m:mi>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>c</m:mi>
+                <m:mo>+</m:mo>
+                <m:mfrac>
+                  <m:mn>1</m:mn>
+                  <m:mi>n</m:mi>
+                </m:mfrac>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:mo>-</m:mo>
+              <m:mi>f</m:mi>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>c</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+            </m:mrow>
+            <m:mfrac>
+              <m:mn>1</m:mn>
+              <m:mi>n</m:mi>
+            </m:mfrac>
+          </m:mfrac>
+          <m:mo>≤</m:mo>
+          <m:mn>0</m:mn>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id151419">because the numerator is always nonpositive and the
+denominator is always positive.
+On the other hand,</para>
+    <equation id="id151425">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:msup>
+            <m:mi>f</m:mi>
+            <m:mo>'</m:mo>
+          </m:msup>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>c</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>=</m:mo>
+          <m:munder>
+            <m:mo movablelimits="true" form="prefix">lim</m:mo>
+            <m:mi>n</m:mi>
+          </m:munder>
+          <m:mfrac>
+            <m:mrow>
+              <m:mi>f</m:mi>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>c</m:mi>
+                <m:mo>-</m:mo>
+                <m:mfrac>
+                  <m:mn>1</m:mn>
+                  <m:mi>n</m:mi>
+                </m:mfrac>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:mo>-</m:mo>
+              <m:mi>f</m:mi>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>c</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+            </m:mrow>
+            <m:mfrac>
+              <m:mrow>
+                <m:mo>-</m:mo>
+                <m:mn>1</m:mn>
+              </m:mrow>
+              <m:mi>n</m:mi>
+            </m:mfrac>
+          </m:mfrac>
+          <m:mo>≥</m:mo>
+          <m:mn>0</m:mn>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id151509">since both numerator and denominator are nonpositive.
+Therefore, <m:math overflow="scroll"><m:mrow><m:msup><m:mi>f</m:mi><m:mo>'</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> must be 0, as desired.</para>
+    
+</proof></rule>
+<para id="eip-518">Of course we do not need a result like <link target-id="fs-id1169864141590"/> for
+functions of a complex variable, since the derivative of every real-valued function of a complex variable necessarily is 0,
+independent of whether or not the function attains an extreme value.</para><rule id="fs-id1169874890169"><label/><statement id="fs-id1169862703206">
+    <para id="id151542"><emphasis effect="bold">REMARK</emphasis>
+As mentioned earlier, the zeroes of a function are often important numbers.
+The preceding theorem shows that the zeroes of the derivative <m:math overflow="scroll"><m:msup><m:mi>f</m:mi><m:mo>'</m:mo></m:msup></m:math> of a function <m:math overflow="scroll"><m:mi>f</m:mi></m:math>
+are intimately related to finding the extreme values of the function <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+The zeroes of <m:math overflow="scroll"><m:msup><m:mi>f</m:mi><m:mo>'</m:mo></m:msup></m:math> are often called the <emphasis effect="italics">critical points</emphasis> for <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Part (a) of the <link target-id="fs-id1169864141564"/> establishes the familiar procedure from calculus for determining
+the maximum and minimum of a continuous real-valued function on a closed interval.</para>
+</statement></rule>
+<exercise id="fs-id1169864141564"><problem id="fs-id1169890770281">
+
+    <list id="id151625" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid1"> Let <m:math overflow="scroll"><m:mi>f</m:mi></m:math> be a continuous real-valued function on a closed interval <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>,</m:mo></m:mrow></m:math>
+and assume that <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is differentiable at each point <m:math overflow="scroll"><m:mi>x</m:mi></m:math> in the open interval <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Let <m:math overflow="scroll"><m:mi>M</m:mi></m:math> be the maximum value of <m:math overflow="scroll"><m:mi>f</m:mi></m:math> on this interval, and <m:math overflow="scroll"><m:mi>m</m:mi></m:math>
+be its minimum value on this interval.
+Write <m:math overflow="scroll"><m:mi>S</m:mi></m:math> for the set of all <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo></m:mrow></m:math> for which <m:math overflow="scroll"><m:mrow><m:msup><m:mi>f</m:mi><m:mo>'</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math>
+Suppose <m:math overflow="scroll"><m:mi>x</m:mi></m:math> is a point of <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow></m:math> for which <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:math> is either <m:math overflow="scroll"><m:mi>M</m:mi></m:math> or <m:math overflow="scroll"><m:mrow><m:mi>m</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Prove that <m:math overflow="scroll"><m:mi>x</m:mi></m:math> either is an element of the set <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>,</m:mo></m:mrow></m:math> or <m:math overflow="scroll"><m:mi>x</m:mi></m:math> is one of the endpoints <m:math overflow="scroll"><m:mi>a</m:mi></m:math> or <m:math overflow="scroll"><m:mrow><m:mi>b</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid2"> Let <m:math overflow="scroll"><m:mi>f</m:mi></m:math> be the function defined on <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mn>2</m:mn><m:mo>)</m:mo></m:mrow></m:math> by <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mi>t</m:mi><m:mo>/</m:mo><m:mo>(</m:mo><m:mn>1</m:mn><m:mo>-</m:mo><m:mi>t</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Show that <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo><m:mo>&lt;</m:mo><m:mn>1</m:mn></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>t</m:mi><m:mo>∈</m:mo><m:mo>[</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mn>2</m:mn><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid3"> Let <m:math overflow="scroll"><m:mrow><m:mi>t</m:mi><m:mo>∈</m:mo><m:mo>(</m:mo><m:mo>-</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mn>2</m:mn><m:mo>,</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mn>2</m:mn><m:mo>)</m:mo></m:mrow></m:math> be given.
+Prove that there exists an <m:math overflow="scroll"><m:mrow><m:mi>r</m:mi><m:mo>&lt;</m:mo><m:mn>1</m:mn><m:mo>,</m:mo></m:mrow></m:math> depending on <m:math overflow="scroll"><m:mrow><m:mi>t</m:mi><m:mo>,</m:mo></m:mrow></m:math> such that <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>t</m:mi><m:mo>/</m:mo><m:mo>(</m:mo><m:mn>1</m:mn><m:mo>+</m:mo><m:mi>y</m:mi><m:mo>)</m:mo><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mi>r</m:mi></m:mrow></m:math>
+for all <m:math overflow="scroll"><m:mi>y</m:mi></m:math> between 0 and <m:math overflow="scroll"><m:mrow><m:mi>t</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid4"> Let <m:math overflow="scroll"><m:mi>t</m:mi></m:math> be a fixed number for which <m:math overflow="scroll"><m:mrow><m:mn>0</m:mn><m:mo>&lt;</m:mo><m:mi>t</m:mi><m:mo>&lt;</m:mo><m:mn>1</m:mn><m:mo>.</m:mo></m:mrow></m:math>
+Show that, for all <m:math overflow="scroll"><m:mrow><m:mn>0</m:mn><m:mo>≤</m:mo><m:mi>s</m:mi><m:mo>≤</m:mo><m:mi>t</m:mi><m:mo>,</m:mo></m:mrow></m:math><m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>-</m:mo><m:mi>s</m:mi><m:mo>)</m:mo><m:mo>/</m:mo><m:mo>(</m:mo><m:mn>1</m:mn><m:mo>+</m:mo><m:mi>s</m:mi><m:mo>)</m:mo><m:mo>≤</m:mo><m:mi>t</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+    </list>
+</problem></exercise>
+    <para id="id152234">Probably the most powerful theorem about differentiation is the next one.
+It is stated as an equation, but its power is usually as an inequality; i.e., the
+absolute value of the left hand side
+is less than or equal to the absolute value of the right hand side.</para>
+<rule id="fs-id1169889570814" type="theorem"><title>Mean Value Theorem</title><statement id="fs-id1169895951939">
+    <para id="id152239"> 
+Let <m:math overflow="scroll"><m:mi>f</m:mi></m:math> be a real-valued continuous function on a closed bounded interval <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>,</m:mo></m:mrow></m:math>
+and assume that <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is differentiable at each point <m:math overflow="scroll"><m:mi>x</m:mi></m:math> in the
+open interval <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Then there exists a point <m:math overflow="scroll"><m:mrow><m:mi>c</m:mi><m:mo>∈</m:mo><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo></m:mrow></m:math> such that</para>
+    <equation id="id152338">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mi>f</m:mi>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>b</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>-</m:mo>
+          <m:mi>f</m:mi>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>a</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>=</m:mo>
+          <m:msup>
+            <m:mi>f</m:mi>
+            <m:mo>'</m:mo>
+          </m:msup>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>c</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>b</m:mi>
+            <m:mo>-</m:mo>
+            <m:mi>a</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>.</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+</statement>
+<proof id="fs-id1169865101006">
+    <para id="id152400"> This proof is tricky.
+Define a function <m:math overflow="scroll"><m:mi>h</m:mi></m:math> on <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow></m:math> by</para>
+    <equation id="id152437">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mi>h</m:mi>
+          <m:mo>(</m:mo>
+          <m:mi>x</m:mi>
+          <m:mo>)</m:mo>
+          <m:mo>=</m:mo>
+          <m:mi>x</m:mi>
+          <m:mo>(</m:mo>
+          <m:mi>f</m:mi>
+          <m:mo>(</m:mo>
+          <m:mi>b</m:mi>
+          <m:mo>)</m:mo>
+          <m:mo>-</m:mo>
+          <m:mi>f</m:mi>
+          <m:mo>(</m:mo>
+          <m:mi>a</m:mi>
+          <m:mo>)</m:mo>
+          <m:mo>)</m:mo>
+          <m:mo>-</m:mo>
+          <m:mi>f</m:mi>
+          <m:mo>(</m:mo>
+          <m:mi>x</m:mi>
+          <m:mo>)</m:mo>
+          <m:mo>(</m:mo>
+          <m:mi>b</m:mi>
+          <m:mo>-</m:mo>
+          <m:mi>a</m:mi>
+          <m:mo>)</m:mo>
+          <m:mo>.</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id152506">Clearly, <m:math overflow="scroll"><m:mi>h</m:mi></m:math> is continuous on <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow></m:math> and is differentiable at each point <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Indeed,</para>
+    <equation id="id152563">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:msup>
+            <m:mi>h</m:mi>
+            <m:mo>'</m:mo>
+          </m:msup>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>x</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>=</m:mo>
+          <m:mi>f</m:mi>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>b</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>-</m:mo>
+          <m:mi>f</m:mi>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>a</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>-</m:mo>
+          <m:msup>
+            <m:mi>f</m:mi>
+            <m:mo>'</m:mo>
+          </m:msup>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>x</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>b</m:mi>
+            <m:mo>-</m:mo>
+            <m:mi>a</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>.</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id152643">It follows from this equation that the theorem will be proved
+if we can show that there exists a point <m:math overflow="scroll"><m:mrow><m:mi>c</m:mi><m:mo>∈</m:mo><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo></m:mrow></m:math> for which <m:math overflow="scroll"><m:mrow><m:msup><m:mi>h</m:mi><m:mo>'</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math>
+Note also that</para>
+    <equation id="id152702">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mi>h</m:mi>
+          <m:mo>(</m:mo>
+          <m:mi>a</m:mi>
+          <m:mo>)</m:mo>
+          <m:mo>=</m:mo>
+          <m:mi>a</m:mi>
+          <m:mo>(</m:mo>
+          <m:mi>f</m:mi>
+          <m:mo>(</m:mo>
+          <m:mi>b</m:mi>
+          <m:mo>)</m:mo>
+          <m:mo>-</m:mo>
+          <m:mi>f</m:mi>
+          <m:mo>(</m:mo>
+          <m:mi>a</m:mi>
+          <m:mo>)</m:mo>
+          <m:mo>)</m:mo>
+          <m:mo>-</m:mo>
+          <m:mi>f</m:mi>
+          <m:mo>(</m:mo>
+          <m:mi>a</m:mi>
+          <m:mo>)</m:mo>
+          <m:mo>(</m:mo>
+          <m:mi>b</m:mi>
+          <m:mo>-</m:mo>
+          <m:mi>a</m:mi>
+          <m:mo>)</m:mo>
+          <m:mo>=</m:mo>
+          <m:mi>a</m:mi>
+          <m:mi>f</m:mi>
+          <m:mo>(</m:mo>
+          <m:mi>b</m:mi>
+          <m:mo>)</m:mo>
+          <m:mo>-</m:mo>
+          <m:mi>b</m:mi>
+          <m:mi>f</m:mi>
+          <m:mo>(</m:mo>
+          <m:mi>a</m:mi>
+          <m:mo>)</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id152795">and</para>
+    <equation id="id152800">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mi>h</m:mi>
+          <m:mo>(</m:mo>
+          <m:mi>b</m:mi>
+          <m:mo>)</m:mo>
+          <m:mo>=</m:mo>
+          <m:mi>b</m:mi>
+          <m:mo>(</m:mo>
+          <m:mi>f</m:mi>
+          <m:mo>(</m:mo>
+          <m:mi>b</m:mi>
+          <m:mo>)</m:mo>
+          <m:mo>-</m:mo>
+          <m:mi>f</m:mi>
+          <m:mo>(</m:mo>
+          <m:mi>a</m:mi>
+          <m:mo>)</m:mo>
+          <m:mo>)</m:mo>
+          <m:mo>-</m:mo>
+          <m:mi>f</m:mi>
+          <m:mo>(</m:mo>
+          <m:mi>b</m:mi>
+          <m:mo>)</m:mo>
+          <m:mo>(</m:mo>
+          <m:mi>b</m:mi>
+          <m:mo>-</m:mo>
+          <m:mi>a</m:mi>
+          <m:mo>)</m:mo>
+          <m:mo>=</m:mo>
+          <m:mi>a</m:mi>
+          <m:mi>f</m:mi>
+          <m:mo>(</m:mo>
+          <m:mi>b</m:mi>
+          <m:mo>)</m:mo>
+          <m:mo>-</m:mo>
+          <m:mi>b</m:mi>
+          <m:mi>f</m:mi>
+          <m:mo>(</m:mo>
+          <m:mi>a</m:mi>
+          <m:mo>)</m:mo>
+          <m:mo>,</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id152896">showing that <m:math overflow="scroll"><m:mrow><m:mi>h</m:mi><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mi>h</m:mi><m:mo>(</m:mo><m:mi>b</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math></para>
+    <para id="id152929">Let <m:math overflow="scroll"><m:mi>m</m:mi></m:math> be the minimum value attained by the continuous function <m:math overflow="scroll"><m:mi>h</m:mi></m:math> on the compact interval <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow></m:math> and let
+<m:math overflow="scroll"><m:mi>M</m:mi></m:math> be the maximum value attained by <m:math overflow="scroll"><m:mi>h</m:mi></m:math> on <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+If <m:math overflow="scroll"><m:mrow><m:mi>m</m:mi><m:mo>=</m:mo><m:mi>M</m:mi><m:mo>,</m:mo></m:mrow></m:math> then <m:math overflow="scroll"><m:mi>h</m:mi></m:math> is a constant on <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:msup><m:mi>h</m:mi><m:mo>'</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math>
+for all <m:math overflow="scroll"><m:mrow><m:mi>c</m:mi><m:mo>∈</m:mo><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Hence, the theorem is true if <m:math overflow="scroll"><m:mrow><m:mi>M</m:mi><m:mo>=</m:mo><m:mi>m</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+and we could use any <m:math overflow="scroll"><m:mrow><m:mi>c</m:mi><m:mo>∈</m:mo><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+If <m:math overflow="scroll"><m:mrow><m:mi>m</m:mi><m:mo>≠</m:mo><m:mi>M</m:mi><m:mo>,</m:mo></m:mrow></m:math> then at least one of these two extreme values
+is not equal to <m:math overflow="scroll"><m:mrow><m:mi>h</m:mi><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Suppose <m:math overflow="scroll"><m:mrow><m:mi>m</m:mi><m:mo>≠</m:mo><m:mi>h</m:mi><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Of course, <m:math overflow="scroll"><m:mi>m</m:mi></m:math> is also not equal to <m:math overflow="scroll"><m:mrow><m:mi>h</m:mi><m:mo>(</m:mo><m:mi>b</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Let <m:math overflow="scroll"><m:mrow><m:mi>c</m:mi><m:mo>∈</m:mo><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow></m:math> be such that <m:math overflow="scroll"><m:mrow><m:mi>h</m:mi><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mi>m</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Then, in fact, <m:math overflow="scroll"><m:mrow><m:mi>c</m:mi><m:mo>∈</m:mo><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+By <link target-id="fs-id1169864141590"/>,
+<m:math overflow="scroll"><m:mrow><m:msup><m:mi>h</m:mi><m:mo>'</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math></para>
+    <para id="id153329">We have then that in every case there exists a point <m:math overflow="scroll"><m:mrow><m:mi>c</m:mi><m:mo>∈</m:mo><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo></m:mrow></m:math>
+for which <m:math overflow="scroll"><m:mrow><m:msup><m:mi>h</m:mi><m:mo>'</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math>
+This completes the proof.</para>
+</proof></rule>
+<rule id="fs-id1169890127561"><label/><statement id="fs-id1169871522416">
+    <para id="id153385"><emphasis effect="bold">REMARK</emphasis> The Mean Value Theorem is a theorem about
+real-valued functions of a real variable, and we will see later that it fails for
+complex-valued functions of a complex variable. (See part (f) of <link target-id="fs-id1172705368648" document="m36199"/>.)
+In fact, it can fail for a complex-valued function of a real variable.
+Indeed, if <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mi>u</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>+</m:mo><m:mi>i</m:mi><m:mi>v</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:math> is a continuous complex-valued function on the interval <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>,</m:mo></m:mrow></m:math>
+and differentiable on the open interval <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math>
+then the Mean Value Theorem certainly holds for the two real-valued functions
+<m:math overflow="scroll"><m:mi>u</m:mi></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>v</m:mi><m:mo>,</m:mo></m:mrow></m:math> so that we would have</para>
+    <equation id="id153498">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mi>f</m:mi>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>b</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>-</m:mo>
+          <m:mi>f</m:mi>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>a</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>=</m:mo>
+          <m:mi>u</m:mi>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>b</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>-</m:mo>
+          <m:mi>u</m:mi>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>a</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>+</m:mo>
+          <m:mi>i</m:mi>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>v</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>b</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>-</m:mo>
+            <m:mi>v</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>a</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>=</m:mo>
+          <m:msup>
+            <m:mi>u</m:mi>
+            <m:mo>'</m:mo>
+          </m:msup>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:msub>
+              <m:mi>c</m:mi>
+              <m:mn>1</m:mn>
+            </m:msub>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>b</m:mi>
+            <m:mo>-</m:mo>
+            <m:mi>a</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>+</m:mo>
+          <m:mi>i</m:mi>
+          <m:msup>
+            <m:mi>v</m:mi>
+            <m:mo>'</m:mo>
+          </m:msup>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:msub>
+              <m:mi>c</m:mi>
+              <m:mn>2</m:mn>
+            </m:msub>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>b</m:mi>
+            <m:mo>-</m:mo>
+            <m:mi>a</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>,</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id153656">which is not <m:math overflow="scroll"><m:mrow><m:msup><m:mi>f</m:mi><m:mo>'</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mrow><m:mo>(</m:mo><m:mi>b</m:mi><m:mo>-</m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> unless we can be sure that the two points
+<m:math overflow="scroll"><m:msub><m:mi>c</m:mi><m:mn>1</m:mn></m:msub></m:math> and <m:math overflow="scroll"><m:msub><m:mi>c</m:mi><m:mn>2</m:mn></m:msub></m:math> can be chosen to be equal.
+This simply is not always possible.
+Look at the function <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mi>i</m:mi><m:msup><m:mi>x</m:mi><m:mn>3</m:mn></m:msup></m:mrow></m:math> on the interval <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>1</m:mn><m:mo>]</m:mo><m:mo>.</m:mo></m:mrow></m:math></para>
+    <para id="id153784">On the other hand, if <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is a real-valued function of a complex variable
+(two real variables),
+then a generalized version of the Mean Value Theorem does hold.
+See part (c) of <link target-id="fs-id1166169558623" document="m36206"/>.</para>
+    <para id="id153798">One of the first applications of the Mean Value Theorem is to show
+that a function whose derivative is identically 0 is necessarily a constant function.
+This seemingly obvious fact is just <emphasis effect="bold">not</emphasis> obvious.
+The next exercise shows that this
+result holds for complex-valued functions of a complex variable, even though the
+Mean Value Theorem does not.</para>
+</statement></rule>
+<exercise id="fs-id1169880129412"><problem id="fs-id1169883162242">
+    <list id="id153820" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid5"> Suppose <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is a continuous real-valued function on <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo></m:mrow></m:math> and that
+<m:math overflow="scroll"><m:mrow><m:msup><m:mi>f</m:mi><m:mo>'</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math> Prove that
+<m:math overflow="scroll"><m:mi>f</m:mi></m:math> is a constant function on <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+HINT: Show that <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow></m:math>
+by using the Mean Value Theorem applied to the interval <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>x</m:mi><m:mo>]</m:mo><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid6"> Let <m:math overflow="scroll"><m:mi>f</m:mi></m:math> be a complex-valued function of a real variable.
+Suppose <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is differentiable at each point <m:math overflow="scroll"><m:mi>x</m:mi></m:math> in an open interval <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math>
+and assume that <m:math overflow="scroll"><m:mrow><m:msup><m:mi>f</m:mi><m:mo>'</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Prove that <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is a constant function.
+HINT: Use the real and imaginary parts of <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid7"> Let <m:math overflow="scroll"><m:mi>f</m:mi></m:math> be a complex-valued function of a complex variable,
+and suppose that <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is differentiable on a disk <m:math overflow="scroll"><m:mrow><m:msub><m:mi>B</m:mi><m:mi>r</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>⊆</m:mo><m:mi>C</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+and that <m:math overflow="scroll"><m:mrow><m:msup><m:mi>f</m:mi><m:mo>'</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>z</m:mi><m:mo>∈</m:mo><m:msub><m:mi>B</m:mi><m:mi>r</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math>
+Prove that <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow></m:math> is constant on <m:math overflow="scroll"><m:mrow><m:msub><m:mi>B</m:mi><m:mi>r</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math>
+HINT: Let <m:math overflow="scroll"><m:mi>z</m:mi></m:math> be an arbitrary point in <m:math overflow="scroll"><m:mrow><m:msub><m:mi>B</m:mi><m:mi>r</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> and define
+a function <m:math overflow="scroll"><m:mrow><m:mi>h</m:mi><m:mo>:</m:mo><m:mo>[</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>1</m:mn><m:mo>]</m:mo><m:mo>→</m:mo><m:mi>C</m:mi></m:mrow></m:math> by
+<m:math overflow="scroll"><m:mrow><m:mi>h</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:mo>(</m:mo><m:mn>1</m:mn><m:mo>-</m:mo><m:mi>t</m:mi><m:mo>)</m:mo><m:mi>c</m:mi><m:mo>+</m:mo><m:mi>t</m:mi><m:mi>z</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Apply part (b) to <m:math overflow="scroll"><m:mrow><m:mi>h</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+    </list>
+</problem></exercise>
+    <para id="id154454">The next exercise establishes, at last, two important identities.</para>
+<exercise id="fs-id1169864786397"><problem id="fs-id1169873552909">
+    <para id="id154457"> (<m:math overflow="scroll"><m:mrow><m:msup><m:mo form="prefix">cos</m:mo><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mo form="prefix">sin</m:mo><m:mn>2</m:mn></m:msup><m:mo>=</m:mo><m:mn>1</m:mn></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mo form="prefix">exp</m:mo><m:mo>(</m:mo><m:mrow><m:mi>i</m:mi><m:mi>π</m:mi></m:mrow><m:mo>=</m:mo><m:mo>-</m:mo><m:mn>1</m:mn><m:mo>.</m:mo></m:mrow></m:math>)</para>
+    <list id="id154531" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid8"> Prove that <m:math overflow="scroll"><m:mrow><m:msup><m:mo form="prefix">cos</m:mo><m:mn>2</m:mn></m:msup><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:msup><m:mo form="prefix">sin</m:mo><m:mn>2</m:mn></m:msup><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>1</m:mn></m:mrow></m:math> for all complex numbers <m:math overflow="scroll"><m:mrow><m:mi>z</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid9"> Prove that <m:math overflow="scroll"><m:mrow><m:mo form="prefix">cos</m:mo><m:mo>(</m:mo><m:mi>π</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mo>-</m:mo><m:mn>1</m:mn><m:mo>.</m:mo></m:mrow></m:math>
+HINT: We know from part (a) that <m:math overflow="scroll"><m:mrow><m:mo form="prefix">cos</m:mo><m:mo>(</m:mo><m:mi>π</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mo>±</m:mo><m:mn>1</m:mn><m:mo>.</m:mo></m:mrow></m:math>
+Using the Mean Value Theorem for the cosine function on the
+interval <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mi>π</m:mi><m:mo>]</m:mo><m:mo>,</m:mo></m:mrow></m:math> derive a contradiction from the assumption that <m:math overflow="scroll"><m:mrow><m:mo form="prefix">cos</m:mo><m:mo>(</m:mo><m:mi>π</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid10"> Prove that <m:math overflow="scroll"><m:mrow><m:mo form="prefix">exp</m:mo><m:mo>(</m:mo><m:mrow><m:mi>i</m:mi><m:mi>π</m:mi></m:mrow><m:mo>)</m:mo><m:mo>=</m:mo><m:mo>-</m:mo><m:mn>1</m:mn><m:mo>.</m:mo></m:mrow></m:math>
+HINT: Recall that <m:math overflow="scroll"><m:mrow><m:mo form="prefix">exp</m:mo><m:mo>(</m:mo><m:mrow><m:mi>i</m:mi><m:mi>z</m:mi></m:mrow><m:mo>)</m:mo><m:mo>=</m:mo><m:mo form="prefix">cos</m:mo><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo><m:mo>+</m:mo><m:mi>i</m:mi><m:mo form="prefix">sin</m:mo><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow></m:math> for all complex <m:math overflow="scroll"><m:mrow><m:mi>z</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+(Note that this does not yet tell us that <m:math overflow="scroll"><m:mrow><m:msup><m:mi>e</m:mi><m:mrow><m:mi>i</m:mi><m:mi>π</m:mi></m:mrow></m:msup><m:mo>=</m:mo><m:mo>-</m:mo><m:mn>1</m:mn><m:mo>.</m:mo></m:mrow></m:math>
+We do not yet know that <m:math overflow="scroll"><m:mrow><m:mo form="prefix">exp</m:mo><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>e</m:mi><m:mi>z</m:mi></m:msup><m:mo>.</m:mo></m:mrow></m:math>)
+</item>
+      <item id="uid11"> Prove that <m:math overflow="scroll"><m:mrow><m:msup><m:mo form="prefix">cosh</m:mo><m:mn>2</m:mn></m:msup><m:mi>z</m:mi><m:mo>-</m:mo><m:msup><m:mo form="prefix">sinh</m:mo><m:mn>2</m:mn></m:msup><m:mi>z</m:mi><m:mo>=</m:mo><m:mn>1</m:mn></m:mrow></m:math> for all complex numbers <m:math overflow="scroll"><m:mrow><m:mi>z</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid12"> Compute the derivatives of the tangent and hyperbolic tangent functions <m:math overflow="scroll"><m:mrow><m:mo form="prefix">tan</m:mo><m:mo>=</m:mo><m:mo form="prefix">sin</m:mo><m:mo>/</m:mo><m:mo form="prefix">cos</m:mo></m:mrow></m:math>
+and <m:math overflow="scroll"><m:mrow><m:mo form="prefix">tanh</m:mo><m:mo>=</m:mo><m:mo form="prefix">sinh</m:mo><m:mo>/</m:mo><m:mo form="prefix">cosh</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Show in fact that
+<equation id="id155018"><m:math overflow="scroll" mode="display"><m:mrow><m:msup><m:mo form="prefix">tan</m:mo><m:mo>'</m:mo></m:msup><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:msup><m:mo form="prefix">cos</m:mo><m:mn>2</m:mn></m:msup></m:mfrac><m:mspace width="4.pt"/><m:mtext>and</m:mtext><m:mspace width="4.pt"/><m:msup><m:mo form="prefix">tanh</m:mo><m:mo>'</m:mo></m:msup><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:msup><m:mo form="prefix">cosh</m:mo><m:mn>2</m:mn></m:msup></m:mfrac><m:mo>.</m:mo></m:mrow></m:math></equation></item>
+    </list>
+</problem></exercise>
+    <para id="id155092">Here are two more elementary consequences of the Mean Value Theorem.</para>
+<exercise id="fs-id1169875683686"><problem id="fs-id1169862845228">
+    <list id="id155107" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid13"> Suppose <m:math overflow="scroll"><m:mi>f</m:mi></m:math> and <m:math overflow="scroll"><m:mi>g</m:mi></m:math> are two complex-valued functions of
+a real (or complex) variable,
+and suppose that <m:math overflow="scroll"><m:mrow><m:msup><m:mi>f</m:mi><m:mo>'</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>g</m:mi><m:mo>'</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo></m:mrow></m:math>
+(or <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:msub><m:mi>B</m:mi><m:mi>r</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math>)
+Prove that there exists a constant <m:math overflow="scroll"><m:mi>k</m:mi></m:math> such that
+<m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mi>g</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>+</m:mo><m:mi>k</m:mi></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo></m:mrow></m:math>
+(or <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:msub><m:mi>B</m:mi><m:mi>r</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math>)
+</item>
+      <item id="uid14"> Suppose <m:math overflow="scroll"><m:mrow><m:msup><m:mi>f</m:mi><m:mo>'</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>c</m:mi><m:mo form="prefix">exp</m:mo><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>a</m:mi><m:mi>z</m:mi></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>z</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+where <m:math overflow="scroll"><m:mi>c</m:mi></m:math> and <m:math overflow="scroll"><m:mi>a</m:mi></m:math> are complex constants with <m:math overflow="scroll"><m:mrow><m:mi>a</m:mi><m:mo>≠</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math>
+Prove that there exists a constant <m:math overflow="scroll"><m:msup><m:mi>c</m:mi><m:mo>'</m:mo></m:msup></m:math> such that
+<m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mstyle scriptlevel="0" displaystyle="false"><m:mfrac><m:mi>c</m:mi><m:mi>a</m:mi></m:mfrac></m:mstyle><m:mo form="prefix">exp</m:mo><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:msup><m:mi>c</m:mi><m:mo>'</m:mo></m:msup><m:mo>.</m:mo></m:mrow></m:math>
+What if <m:math overflow="scroll"><m:mrow><m:mi>a</m:mi><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>?</m:mo></m:mrow></m:math></item>
+      <item id="uid15"> (A generalization of part (a)) Suppose <m:math overflow="scroll"><m:mi>f</m:mi></m:math> and <m:math overflow="scroll"><m:mi>g</m:mi></m:math> are continuous real-valued functions on
+the closed interval <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>,</m:mo></m:mrow></m:math> and suppose there exists a partition <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub><m:mo>&lt;</m:mo><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>&lt;</m:mo><m:mo>...</m:mo><m:mo>&lt;</m:mo><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math>
+of <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow></m:math> such that both <m:math overflow="scroll"><m:mi>f</m:mi></m:math> and <m:math overflow="scroll"><m:mi>g</m:mi></m:math> are differentiable on each subinterval <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:msub><m:mi>x</m:mi><m:mrow><m:mi>i</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mi>i</m:mi></m:msub><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+(That is, we do not assume that <m:math overflow="scroll"><m:mi>f</m:mi></m:math> and <m:math overflow="scroll"><m:mi>g</m:mi></m:math> are differentiable at the endpoints.)
+Suppose that <m:math overflow="scroll"><m:mrow><m:msup><m:mi>f</m:mi><m:mo>'</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>g</m:mi><m:mo>'</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> for every <m:math overflow="scroll"><m:mi>x</m:mi></m:math> in each open subinterval <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:msub><m:mi>x</m:mi><m:mrow><m:mi>i</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mi>i</m:mi></m:msub><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Prove that there exists a constant <m:math overflow="scroll"><m:mi>k</m:mi></m:math> such that <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mi>g</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>+</m:mo><m:mi>k</m:mi></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+HINT: Use part (a) to conclude that <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>=</m:mo><m:mi>g</m:mi><m:mo>+</m:mo><m:mi>h</m:mi></m:mrow></m:math>
+where <m:math overflow="scroll"><m:mi>h</m:mi></m:math> is a step function, and then observe that <m:math overflow="scroll"><m:mi>h</m:mi></m:math> must be continuous
+and hence a constant.
+</item>
+      <item id="uid16"> Suppose <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is a differentiable real-valued function on <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo></m:mrow></m:math>
+and assume that <m:math overflow="scroll"><m:mrow><m:msup><m:mi>f</m:mi><m:mo>'</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>≠</m:mo><m:mn>0</m:mn></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math> Prove that <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is 1-1 on <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math></item>
+    </list>
+</problem></exercise>
+<exercise id="fs-id1169862410269"><problem id="fs-id1169892867482">
+    <para id="id156014"> Let <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>:</m:mo><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>→</m:mo><m:mi>R</m:mi></m:mrow></m:math> be a function that is continuous
+on its domain <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow></m:math> and differentiable on <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+(We do not suppose that <m:math overflow="scroll"><m:msup><m:mi>f</m:mi><m:mo>'</m:mo></m:msup></m:math> is continuous on <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>)</para>
+    <list id="id156133" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid17"> Prove that <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is nondecreasing on <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow></m:math> if and only if
+<m:math overflow="scroll"><m:mrow><m:msup><m:mi>f</m:mi><m:mo>'</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>≥</m:mo><m:mn>0</m:mn></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Show also that <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is nonincreasing on <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow></m:math> if and only if
+<m:math overflow="scroll"><m:mrow><m:msup><m:mi>f</m:mi><m:mo>'</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>≤</m:mo><m:mn>0</m:mn></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid18"> Conclude that, if <m:math overflow="scroll"><m:msup><m:mi>f</m:mi><m:mo>'</m:mo></m:msup></m:math> takes on both positive and negative values on <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math>
+then <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is <emphasis effect="bold">not</emphasis> 1-1.
+(See the proof of <link target-id="fs-id1169172121798" document="m36167"/>.)
+</item>
+      <item id="uid19"> Show that, if <m:math overflow="scroll"><m:msup><m:mi>f</m:mi><m:mo>'</m:mo></m:msup></m:math> takes on both positive and negative
+values on <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math> then there must exist a point <m:math overflow="scroll"><m:mrow><m:mi>c</m:mi><m:mo>∈</m:mo><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo></m:mrow></m:math> for which <m:math overflow="scroll"><m:mrow><m:msup><m:mi>f</m:mi><m:mo>'</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math>
+(If <m:math overflow="scroll"><m:msup><m:mi>f</m:mi><m:mo>'</m:mo></m:msup></m:math> were continuous, this would follow from the Intermediate Value Theorem.
+But, we are not assuming here that <m:math overflow="scroll"><m:msup><m:mi>f</m:mi><m:mo>'</m:mo></m:msup></m:math> is continuous.)
+</item>
+      <item id="uid20"> Prove the <emphasis effect="italics">Intermediate Value Theorem for Derivatives:</emphasis>
+Suppose <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is continuous on the closed bounded interval <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow></m:math> and differentiable on the
+open interval <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+If <m:math overflow="scroll"><m:msup><m:mi>f</m:mi><m:mo>'</m:mo></m:msup></m:math> attains two distinct values <m:math overflow="scroll"><m:mrow><m:msub><m:mi>v</m:mi><m:mn>1</m:mn></m:msub><m:mo>=</m:mo><m:msup><m:mi>f</m:mi><m:mo>'</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>)</m:mo></m:mrow><m:mo>&lt;</m:mo><m:msub><m:mi>v</m:mi><m:mn>2</m:mn></m:msub><m:mo>=</m:mo><m:msup><m:mi>f</m:mi><m:mo>'</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math>
+then <m:math overflow="scroll"><m:msup><m:mi>f</m:mi><m:mo>'</m:mo></m:msup></m:math> attains every value <m:math overflow="scroll"><m:mi>v</m:mi></m:math> between <m:math overflow="scroll"><m:msub><m:mi>v</m:mi><m:mn>1</m:mn></m:msub></m:math> and <m:math overflow="scroll"><m:mrow><m:msub><m:mi>v</m:mi><m:mn>2</m:mn></m:msub><m:mo>.</m:mo></m:mrow></m:math>
+HINT: Suppose <m:math overflow="scroll"><m:mi>v</m:mi></m:math> is a value between <m:math overflow="scroll"><m:msub><m:mi>v</m:mi><m:mn>1</m:mn></m:msub></m:math> and <m:math overflow="scroll"><m:mrow><m:msub><m:mi>v</m:mi><m:mn>2</m:mn></m:msub><m:mo>.</m:mo></m:mrow></m:math>
+Define a function <m:math overflow="scroll"><m:mi>g</m:mi></m:math> on <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow></m:math> by
+<m:math overflow="scroll"><m:mrow><m:mi>g</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>-</m:mo><m:mi>v</m:mi><m:mi>x</m:mi><m:mo>.</m:mo></m:mrow></m:math> Now apply part (c) to <m:math overflow="scroll"><m:mrow><m:mi>g</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+    </list>
+</problem></exercise>
+    <para id="id156825">Here is another perfectly reasonable and expected theorem, but one whose
+proof is tough.</para>
+<rule id="fs-id1169880924650" type="theorem"><title>Inverse Function Theorem</title><statement id="fs-id1169890015607">
+    <para id="id156829">
+Suppose <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>:</m:mo><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo><m:mo>→</m:mo><m:mi>R</m:mi></m:mrow></m:math> is a function that is
+continuous and 1-1 from <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo></m:mrow></m:math> onto the interval <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:msup><m:mi>a</m:mi><m:mo>'</m:mo></m:msup><m:mo>,</m:mo><m:msup><m:mi>b</m:mi><m:mo>'</m:mo></m:msup><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Assume that <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is differentiable at a point <m:math overflow="scroll"><m:mrow><m:mi>c</m:mi><m:mo>∈</m:mo><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo></m:mrow></m:math>
+and that <m:math overflow="scroll"><m:mrow><m:msup><m:mi>f</m:mi><m:mo>'</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>≠</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math>
+Then <m:math overflow="scroll"><m:msup><m:mi>f</m:mi><m:mrow><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msup></m:math> is differentiable at the point <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math> and</para>
+    <equation id="id157020">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:msup>
+            <m:mrow>
+              <m:msup>
+                <m:mi>f</m:mi>
+                <m:mrow>
+                  <m:mo>-</m:mo>
+                  <m:mn>1</m:mn>
+                </m:mrow>
+              </m:msup>
+            </m:mrow>
+            <m:mo>'</m:mo>
+          </m:msup>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>f</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>c</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>=</m:mo>
+          <m:mfrac>
+            <m:mn>1</m:mn>
+            <m:mrow>
+              <m:msup>
+                <m:mi>f</m:mi>
+                <m:mo>'</m:mo>
+              </m:msup>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>c</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+            </m:mrow>
+          </m:mfrac>
+          <m:mo>.</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+</statement>
+<proof id="fs-id1169886120536">
+    <para id="id157086">The formula <m:math overflow="scroll"><m:mrow><m:msup><m:mrow><m:msup><m:mi>f</m:mi><m:mrow><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msup></m:mrow><m:mo>'</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:msup><m:mi>f</m:mi><m:mo>'</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> is no surprise.
+This follows directly from the Chain Rule. For, if <m:math overflow="scroll"><m:mrow><m:msup><m:mi>f</m:mi><m:mrow><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msup><m:mrow><m:mo>(</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>x</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+and <m:math overflow="scroll"><m:mi>f</m:mi></m:math> and <m:math overflow="scroll"><m:msup><m:mi>f</m:mi><m:mrow><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msup></m:math> are both differentiable,
+then <m:math overflow="scroll"><m:mrow><m:msup><m:mrow><m:msup><m:mi>f</m:mi><m:mrow><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msup></m:mrow><m:mo>'</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>)</m:mo></m:mrow><m:msup><m:mi>f</m:mi><m:mo>'</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>,</m:mo></m:mrow></m:math> which gives the formula.
+The difficulty with this theorem is in proving that the inverse function <m:math overflow="scroll"><m:msup><m:mi>f</m:mi><m:mrow><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msup></m:math> of <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is differentiable at <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+In fact, the first thing to check is that the point <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow></m:math> belongs to the interior of the domain of <m:math overflow="scroll"><m:mrow><m:msup><m:mi>f</m:mi><m:mrow><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msup><m:mo>,</m:mo></m:mrow></m:math>
+for that is essential if <m:math overflow="scroll"><m:msup><m:mi>f</m:mi><m:mrow><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msup></m:math> is to be differentiable there,
+and here is where the hypothesis that <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is a real-valued function of a real variable is important.
+According to <link target-id="fs-id1169169131215" document="m36167"/>, the 1-1 continuous function <m:math overflow="scroll"><m:mi>f</m:mi></m:math> maps <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow></m:math> onto an interval <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:msup><m:mi>a</m:mi><m:mo>'</m:mo></m:msup><m:mo>,</m:mo><m:msup><m:mi>b</m:mi><m:mo>'</m:mo></m:msup><m:mo>]</m:mo><m:mo>,</m:mo></m:mrow></m:math>
+and <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow></m:math> is in the open interval <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:msup><m:mi>a</m:mi><m:mo>'</m:mo></m:msup><m:mo>,</m:mo><m:msup><m:mi>b</m:mi><m:mo>'</m:mo></m:msup><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math> i.e., is in the interior of the domain of <m:math overflow="scroll"><m:mrow><m:msup><m:mi>f</m:mi><m:mrow><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msup><m:mo>.</m:mo></m:mrow></m:math></para>
+    <para id="id157521">According to part (2) of <link target-id="fs-id1170287829005" document="m36186"/>,
+we can prove that <m:math overflow="scroll"><m:msup><m:mi>f</m:mi><m:mrow><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msup></m:math> is differentiable at <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow></m:math> by showing that</para>
+    <equation id="id157558">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:munder>
+            <m:mo movablelimits="true" form="prefix">lim</m:mo>
+            <m:mrow>
+              <m:mi>x</m:mi>
+              <m:mo>→</m:mo>
+              <m:mi>f</m:mi>
+              <m:mo>(</m:mo>
+              <m:mi>c</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+          </m:munder>
+          <m:mfrac>
+            <m:mrow>
+              <m:msup>
+                <m:mi>f</m:mi>
+                <m:mrow>
+                  <m:mo>-</m:mo>
+                  <m:mn>1</m:mn>
+                </m:mrow>
+              </m:msup>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>x</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:mo>-</m:mo>
+              <m:msup>
+                <m:mi>f</m:mi>
+                <m:mrow>
+                  <m:mo>-</m:mo>
+                  <m:mn>1</m:mn>
+                </m:mrow>
+              </m:msup>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>f</m:mi>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>c</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mo>)</m:mo>
+              </m:mrow>
+            </m:mrow>
+            <m:mrow>
+              <m:mi>x</m:mi>
+              <m:mo>-</m:mo>
+              <m:mi>f</m:mi>
+              <m:mo>(</m:mo>
+              <m:mi>c</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+          </m:mfrac>
+          <m:mo>=</m:mo>
+          <m:mfrac>
+            <m:mn>1</m:mn>
+            <m:mrow>
+              <m:msup>
+                <m:mi>f</m:mi>
+                <m:mo>'</m:mo>
+              </m:msup>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>c</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+            </m:mrow>
+          </m:mfrac>
+          <m:mo>.</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id157679">That is, we need to show that, given an <m:math overflow="scroll"><m:mrow><m:mi>ϵ</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math>
+there exists a <m:math overflow="scroll"><m:mrow><m:mi>δ</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn></m:mrow></m:math> such that if <m:math overflow="scroll"><m:mrow><m:mn>0</m:mn><m:mo>&lt;</m:mo><m:mo>|</m:mo><m:mi>x</m:mi><m:mo>-</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mi>δ</m:mi></m:mrow></m:math> then</para>
+    <equation id="id157751">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mrow>
+            <m:mo>|</m:mo>
+          </m:mrow>
+          <m:mfrac>
+            <m:mrow>
+              <m:msup>
+                <m:mi>f</m:mi>
+                <m:mrow>
+                  <m:mo>-</m:mo>
+                  <m:mn>1</m:mn>
+                </m:mrow>
+              </m:msup>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>x</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:mo>-</m:mo>
+              <m:msup>
+                <m:mi>f</m:mi>
+                <m:mrow>
+                  <m:mo>-</m:mo>
+                  <m:mn>1</m:mn>
+                </m:mrow>
+              </m:msup>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>f</m:mi>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>c</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mo>)</m:mo>
+              </m:mrow>
+            </m:mrow>
+            <m:mrow>
+              <m:mi>x</m:mi>
+              <m:mo>-</m:mo>
+              <m:mi>f</m:mi>
+              <m:mo>(</m:mo>
+              <m:mi>c</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+          </m:mfrac>
+          <m:mo>-</m:mo>
+          <m:mfrac>
+            <m:mn>1</m:mn>
+            <m:mrow>
+              <m:msup>
+                <m:mi>f</m:mi>
+                <m:mo>'</m:mo>
+              </m:msup>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>c</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+            </m:mrow>
+          </m:mfrac>
+          <m:mrow>
+            <m:mo>|</m:mo>
+            <m:mo>&lt;</m:mo>
+            <m:mi>ϵ</m:mi>
+            <m:mo>.</m:mo>
+          </m:mrow>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id157859">First of all, because the function
+<m:math overflow="scroll"><m:mrow><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>q</m:mi></m:mrow></m:math> is continuous at the point <m:math overflow="scroll"><m:mrow><m:msup><m:mi>f</m:mi><m:mo>'</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> there exists an <m:math overflow="scroll"><m:mrow><m:msup><m:mi>ϵ</m:mi><m:mo>'</m:mo></m:msup><m:mo>&gt;</m:mo><m:mn>0</m:mn></m:mrow></m:math> such that if
+<m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo><m:mi>q</m:mi><m:mo>-</m:mo></m:mrow><m:msup><m:mi>f</m:mi><m:mo>'</m:mo></m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>|</m:mo><m:mo>&lt;</m:mo></m:mrow><m:msup><m:mi>ϵ</m:mi><m:mo>'</m:mo></m:msup><m:mo>,</m:mo></m:mrow></m:math> then</para>
+    <equation id="id157971"><m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mrow>
+            <m:mo>|</m:mo>
+          </m:mrow>
+          <m:mfrac>
+            <m:mn>1</m:mn>
+            <m:mi>q</m:mi>
+          </m:mfrac>
+          <m:mo>-</m:mo>
+          <m:mfrac>
+            <m:mn>1</m:mn>
+            <m:mrow>
+              <m:msup>
+                <m:mi>f</m:mi>
+                <m:mo>'</m:mo>
+              </m:msup>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>c</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+            </m:mrow>
+          </m:mfrac>
+          <m:mrow>
+            <m:mo>|</m:mo>
+            <m:mo>&lt;</m:mo>
+            <m:mi>ϵ</m:mi>
+         
+          </m:mrow>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id158041">Next, because <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is differentiable at <m:math overflow="scroll"><m:mrow><m:mi>c</m:mi><m:mo>,</m:mo></m:mrow></m:math> there exists
+a <m:math overflow="scroll"><m:mrow><m:msup><m:mi>δ</m:mi><m:mo>'</m:mo></m:msup><m:mo>&gt;</m:mo><m:mn>0</m:mn></m:mrow></m:math> such that if <m:math overflow="scroll"><m:mrow><m:mrow><m:mn>0</m:mn><m:mo>&lt;</m:mo><m:mo>|</m:mo><m:mi>y</m:mi><m:mo>-</m:mo><m:mi>c</m:mi><m:mo>|</m:mo><m:mo>&lt;</m:mo></m:mrow><m:msup><m:mi>δ</m:mi><m:mo>'</m:mo></m:msup></m:mrow></m:math> then</para>
+    <equation id="id158122"><m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mrow>
+            <m:mo>|</m:mo>
+          </m:mrow>
+          <m:mfrac>
+            <m:mrow>
+              <m:mi>f</m:mi>
+              <m:mo>(</m:mo>
+              <m:mi>y</m:mi>
+              <m:mo>)</m:mo>
+              <m:mo>-</m:mo>
+              <m:mi>f</m:mi>
+              <m:mo>(</m:mo>
+              <m:mi>c</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mrow>
+              <m:mi>y</m:mi>
+              <m:mo>-</m:mo>
+              <m:mi>c</m:mi>
+            </m:mrow>
+          </m:mfrac>
+          <m:mo>-</m:mo>
+          <m:msup>
+            <m:mi>f</m:mi>
+            <m:mo>'</m:mo>
+          </m:msup>
+          <m:mrow>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>c</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>|</m:mo>
+            <m:mo>&lt;</m:mo>
+          </m:mrow>
+          <m:msup>
+            <m:mi>ϵ</m:mi>
+            <m:mo>'</m:mo>
+          </m:msup>
+         
+          <m:mo>.</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id158215">Now, by <link target-id="fs-id8649209" document="m36167"/>, <m:math overflow="scroll"><m:msup><m:mi>f</m:mi><m:mrow><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msup></m:math> is continuous at the point <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math>
+and therefore there exists a <m:math overflow="scroll"><m:mrow><m:mi>δ</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn></m:mrow></m:math> such that if <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>x</m:mi><m:mo>-</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mi>δ</m:mi></m:mrow></m:math>
+then</para>
+    <equation id="id158301"><m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mrow>
+            <m:mo>|</m:mo>
+          </m:mrow>
+          <m:msup>
+            <m:mi>f</m:mi>
+            <m:mrow>
+              <m:mo>-</m:mo>
+              <m:mn>1</m:mn>
+            </m:mrow>
+          </m:msup>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>x</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>-</m:mo>
+          <m:msup>
+            <m:mi>f</m:mi>
+            <m:mrow>
+              <m:mo>-</m:mo>
+              <m:mn>1</m:mn>
+            </m:mrow>
+          </m:msup>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>f</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>c</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>|</m:mo>
+          </m:mrow>
+          <m:mo>&lt;</m:mo>
+          <m:msup>
+            <m:mi>δ</m:mi>
+            <m:mo>'</m:mo>
+          </m:msup>
+        
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id158390">So, if <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>x</m:mi><m:mo>-</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mi>δ</m:mi><m:mo>,</m:mo></m:mrow></m:math> then</para>
+    <equation id="id158428">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mrow>
+            <m:mo>|</m:mo>
+          </m:mrow>
+          <m:msup>
+            <m:mi>f</m:mi>
+            <m:mrow>
+              <m:mo>-</m:mo>
+              <m:mn>1</m:mn>
+            </m:mrow>
+          </m:msup>
+          <m:mrow>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>x</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>-</m:mo>
+            <m:mi>c</m:mi>
+            <m:mo>|</m:mo>
+            <m:mo>=</m:mo>
+            <m:mo>|</m:mo>
+          </m:mrow>
+          <m:msup>
+            <m:mi>f</m:mi>
+            <m:mrow>
+              <m:mo>-</m:mo>
+              <m:mn>1</m:mn>
+            </m:mrow>
+          </m:msup>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>x</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>-</m:mo>
+          <m:msup>
+            <m:mi>f</m:mi>
+            <m:mrow>
+              <m:mo>-</m:mo>
+              <m:mn>1</m:mn>
+            </m:mrow>
+          </m:msup>
+          <m:mrow>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>f</m:mi>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>c</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>|</m:mo>
+            <m:mo>&lt;</m:mo>
+          </m:mrow>
+          <m:msup>
+            <m:mi>δ</m:mi>
+            <m:mo>'</m:mo>
+          </m:msup>
+          <m:mo>.</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id158532">But then, by <link target-id="id158122"/>,</para>
+    <equation id="id158538">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mrow>
+            <m:mo>|</m:mo>
+          </m:mrow>
+          <m:mfrac>
+            <m:mrow>
+              <m:mi>f</m:mi>
+              <m:mo>(</m:mo>
+              <m:msup>
+                <m:mi>f</m:mi>
+                <m:mrow>
+                  <m:mo>-</m:mo>
+                  <m:mn>1</m:mn>
+                </m:mrow>
+              </m:msup>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>x</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:mo>)</m:mo>
+              <m:mo>-</m:mo>
+              <m:mi>f</m:mi>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>c</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+            </m:mrow>
+            <m:mrow>
+              <m:msup>
+                <m:mi>f</m:mi>
+                <m:mrow>
+                  <m:mo>-</m:mo>
+                  <m:mn>1</m:mn>
+                </m:mrow>
+              </m:msup>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>x</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:mo>-</m:mo>
+              <m:mi>c</m:mi>
+            </m:mrow>
+          </m:mfrac>
+          <m:mo>-</m:mo>
+          <m:msup>
+            <m:mi>f</m:mi>
+            <m:mo>'</m:mo>
+          </m:msup>
+          <m:mrow>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>c</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>|</m:mo>
+            <m:mo>&lt;</m:mo>
+          </m:mrow>
+          <m:msup>
+            <m:mi>ϵ</m:mi>
+            <m:mo>'</m:mo>
+          </m:msup>
+          <m:mo>,</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id158647">from which it follows, using <link target-id="id157971"/>, that</para>
+    <equation id="id158653">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mrow>
+            <m:mo>|</m:mo>
+          </m:mrow>
+          <m:mfrac>
+            <m:mrow>
+              <m:msup>
+                <m:mi>f</m:mi>
+                <m:mrow>
+                  <m:mo>-</m:mo>
+                  <m:mn>1</m:mn>
+                </m:mrow>
+              </m:msup>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>x</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:mo>-</m:mo>
+              <m:msup>
+                <m:mi>f</m:mi>
+                <m:mrow>
+                  <m:mo>-</m:mo>
+                  <m:mn>1</m:mn>
+                </m:mrow>
+              </m:msup>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>f</m:mi>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>c</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mo>)</m:mo>
+              </m:mrow>
+            </m:mrow>
+            <m:mrow>
+              <m:mi>x</m:mi>
+              <m:mo>-</m:mo>
+              <m:mi>f</m:mi>
+              <m:mo>(</m:mo>
+              <m:mi>c</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+          </m:mfrac>
+          <m:mo>-</m:mo>
+          <m:mfrac>
+            <m:mn>1</m:mn>
+            <m:mrow>
+              <m:msup>
+                <m:mi>f</m:mi>
+                <m:mo>'</m:mo>
+              </m:msup>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>c</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+            </m:mrow>
+          </m:mfrac>
+          <m:mrow>
+            <m:mo>|</m:mo>
+            <m:mo>&lt;</m:mo>
+            <m:mi>ϵ</m:mi>
+            <m:mo>,</m:mo>
+          </m:mrow>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id158761">as desired.</para>
+</proof></rule>
+<rule id="fs-id1169880616884"><label/><statement id="fs-id1169864100682">
+    <para id="id158767"><emphasis effect="bold">REMARK</emphasis>
+A result very like <link target-id="fs-id1169880924650"/> is actually true for complex-valued functions of a complex variable.
+We will have to show that if <m:math overflow="scroll"><m:mi>c</m:mi></m:math> is in the interior of the domain <m:math overflow="scroll"><m:mi>S</m:mi></m:math> of
+a one-to-one, continuously differentiable, complex-valued function <m:math overflow="scroll"><m:mi>f</m:mi></m:math>
+of a complex variable,
+then <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow></m:math> is in the interior of the domain <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>S</m:mi><m:mo>)</m:mo></m:mrow></m:math> of <m:math overflow="scroll"><m:mrow><m:msup><m:mi>f</m:mi><m:mrow><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msup><m:mo>.</m:mo></m:mrow></m:math>
+But, in the complex variable case, this requires a somewhat more difficult argument.
+Once that fact is established, the proof that <m:math overflow="scroll"><m:msup><m:mi>f</m:mi><m:mrow><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msup></m:math> is differentiable at <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow></m:math>
+will be the same for complex-valued functions of complex variables as it is
+here for real-valued functions of a real variable.
+Though the proof of <link target-id="fs-id1169880924650"/> is reasonably complicated for real-valued functions of a real variable,
+the corresponding result for complex functions is much more deep, and that proof
+will have to be postponed to a later chapter.
+See <link target-id="fs-id1167524484222" document="m36240"/>.</para>
+</statement></rule>
+  </content>
+</document>

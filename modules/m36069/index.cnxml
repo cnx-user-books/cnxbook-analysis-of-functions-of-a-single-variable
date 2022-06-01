@@ -1,0 +1,259 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML">
+  <title>The Real Numbers</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m36069</md:content-id>
+  <md:title>The Real Numbers</md:title>
+  <md:abstract>Algebraic and positivity probabilities of real numbers. Ordered fields, isomorphism, bounded below, bounded above, supremum, infimum, and complete are defined.</md:abstract>
+  <md:uuid>59b5d11f-a72e-4db5-853d-2acec3c72ce9</md:uuid>
+</metadata>
+
+<content>
+    <para id="id286312">What are the real numbers?
+From a geometric point of view (and a historical one as well) real numbers are quantities, i.e., lengths of segments, areas of surfaces,
+volumes of solids, etc.
+For example, once we have settled on a unit of length,
+i.e., a segment whose length we call 1, we can, using a compass
+and straightedge, construct segments of any rational length <m:math overflow="scroll"><m:mrow><m:mi>k</m:mi><m:mo>/</m:mo><m:mi>n</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+In some obvious sense then, the rational numbers
+are real numbers. Apparently it was an intellectual shock to
+the Pythagoreans to discover that there are some other real
+numbers, the so-called irrational ones.
+Indeed, the square root of 2 is a real number, since we
+can construct a segment the square of whose length is 2
+by making a right triangle each of whose legs
+has length 1.
+(By the Pythagorean Theorem of plane geometry, the square of the hypotenuse of this triangle must equal 2.)
+And, Pythagoras proved that there is no rational number
+whose square is 2, thereby establishing that there are real numbers tha are not rational.
+See part (c) of <link target-id="fs-id5983575"/>.</para>
+    <para id="id286342">Similarly, the area of a circle of radius 1 should be a real number;
+i.e., <m:math overflow="scroll"><m:mi>π</m:mi></m:math> should be a real number.
+It wasn't until the late 1800's that Hermite showed that <m:math overflow="scroll"><m:mi>π</m:mi></m:math> is not a rational number.
+One difficulty is that to define <m:math overflow="scroll"><m:mi>π</m:mi></m:math> as the
+area of a circle of radius 1
+we must first define what is meant by the “ area" of a circle, and this
+turns out to be no easy task.
+In fact, this naive, geometric approach to the definition
+of the real numbers turns out to be unsatisfactory in the sense that we are not able to prove or derive from these
+first principles certain intuitively obvious arithmetic results.
+For instance, how can we multiply or divide an area by a volume?
+How can we construct a segment of length the cube root of 2?
+And, what about negative numbers?</para>
+    <para id="id286715">Let us begin by presenting two properties we expect any set
+that we call the real numbers ought to possess.</para>
+    <para id="id286719"><title>Algebraic Properties</title>We should be able to add, multiply, divide, etc., real numbers.
+In short, we require the set of real numbers to be a field.</para>
+    <para id="id286728"><title>Positivity Properties</title>The second aspect of any set we think of as the real numbers is that it has some notion
+of direction, some notion of positivity.
+It is this aspect that will allow us to “compare” numbers, e.g., one number is larger than another.
+The mathematically precise way to discuss this notion is the following.</para>
+<definition id="fs-id1170737788782"><term/><meaning id="fs-id1170752807564">    
+<para id="id286740">A field <m:math overflow="scroll"><m:mi>F</m:mi></m:math> is called an <emphasis effect="italics">ordered field</emphasis> if there exists a subset <m:math overflow="scroll"><m:mrow><m:mi>P</m:mi><m:mo>⊆</m:mo><m:mi>F</m:mi></m:mrow></m:math> that satisfies the following two properties:</para>
+    <list id="id286774" display="block" list-type="enumerated">
+      <item id="uid1">If <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>,</m:mo><m:mi>y</m:mi><m:mo>∈</m:mo><m:mi>P</m:mi><m:mo>,</m:mo></m:mrow></m:math> then <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>+</m:mo><m:mi>y</m:mi></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mi>y</m:mi></m:mrow></m:math> are in <m:math overflow="scroll"><m:mrow><m:mi>P</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid2">If <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mi>F</m:mi><m:mo>,</m:mo></m:mrow></m:math> then one and only one of
+the following three statements is true.
+<list id="id286870" display="block" list-type="enumerated" number-style="lower-roman"><item id="uid3"> <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mi>P</m:mi><m:mo>,</m:mo></m:mrow></m:math></item><item id="uid4"> <m:math overflow="scroll"><m:mrow><m:mo>-</m:mo><m:mi>x</m:mi><m:mo>∈</m:mo><m:mi>P</m:mi><m:mo>,</m:mo></m:mrow></m:math> and
+</item><item id="uid5"> <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math>
+(This property is known as the <emphasis effect="italics">law of tricotomy</emphasis>.)
+</item></list></item>
+    </list>
+</meaning></definition>
+    <para id="id286962">The elements of the set <m:math overflow="scroll"><m:mi>P</m:mi></m:math> are called <emphasis effect="italics">positive</emphasis> elements of <m:math overflow="scroll"><m:mrow><m:mi>F</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+and the elements <m:math overflow="scroll"><m:mi>x</m:mi></m:math> for which <m:math overflow="scroll"><m:mrow><m:mo>-</m:mo><m:mi>x</m:mi></m:mrow></m:math> belong to <m:math overflow="scroll"><m:mi>P</m:mi></m:math> are called <emphasis effect="italics">negative</emphasis> elements of <m:math overflow="scroll"><m:mrow><m:mi>F</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+    <para id="id287031">As a consequence of these properties of <m:math overflow="scroll"><m:mrow><m:mi>P</m:mi><m:mo>,</m:mo></m:mrow></m:math> we may introduce in <m:math overflow="scroll"><m:mi>F</m:mi></m:math> a notion of order.</para>
+<definition id="fs-id1166093629414"><term/><meaning id="fs-id1166082232339">
+    <para id="id287054">If <m:math overflow="scroll"><m:mi>F</m:mi></m:math> is an ordered field, and <m:math overflow="scroll"><m:mi>x</m:mi></m:math> and <m:math overflow="scroll"><m:mi>y</m:mi></m:math> are elements of <m:math overflow="scroll"><m:mrow><m:mi>F</m:mi><m:mo>,</m:mo></m:mrow></m:math> we say that <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mi>y</m:mi></m:mrow></m:math> if <m:math overflow="scroll"><m:mrow><m:mi>y</m:mi><m:mo>-</m:mo><m:mi>x</m:mi><m:mo>∈</m:mo><m:mi>P</m:mi><m:mo>.</m:mo></m:mrow></m:math> We say that <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>≤</m:mo><m:mi>y</m:mi></m:mrow></m:math> if either <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mi>y</m:mi></m:mrow></m:math> or <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mi>y</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+    <para id="id287170">We say that <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>&gt;</m:mo><m:mi>y</m:mi></m:mrow></m:math> if <m:math overflow="scroll"><m:mrow><m:mi>y</m:mi><m:mo>&lt;</m:mo><m:mi>x</m:mi><m:mo>,</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>≥</m:mo><m:mi>y</m:mi></m:mrow></m:math> if <m:math overflow="scroll"><m:mrow><m:mi>y</m:mi><m:mo>≤</m:mo><m:mi>x</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+</meaning></definition>
+    <para id="id287229">An ordered field satisfies the familiar laws of inequalities. They are consequences of the two properties of the set <m:math overflow="scroll"><m:mrow><m:mi>P</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+    
+<exercise id="fs-id1166093017647"><problem id="fs-id1166083472994"><para id="id287243">Using the positivity properties above for an ordered field <m:math overflow="scroll"><m:mrow><m:mi>F</m:mi><m:mo>,</m:mo></m:mrow></m:math> together with the axioms for a field, derive the familiar laws of inequalities:</para>
+    <list id="id287263" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid6"> (Transitivity) If <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mi>y</m:mi></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>y</m:mi><m:mo>&lt;</m:mo><m:mi>z</m:mi><m:mo>,</m:mo></m:mrow></m:math> then <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mi>z</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid7"> (Adding like inequalities) If <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mi>y</m:mi></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>z</m:mi><m:mo>&lt;</m:mo><m:mi>w</m:mi><m:mo>,</m:mo></m:mrow></m:math> then <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>+</m:mo><m:mi>z</m:mi><m:mo>&lt;</m:mo><m:mi>y</m:mi><m:mo>+</m:mo><m:mi>w</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid8"> If <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mi>y</m:mi></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>a</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> then <m:math overflow="scroll"><m:mrow><m:mi>a</m:mi><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mi>a</m:mi><m:mi>y</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid9"> If <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mi>y</m:mi></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>a</m:mi><m:mo>&lt;</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> then <m:math overflow="scroll"><m:mrow><m:mi>a</m:mi><m:mi>y</m:mi><m:mo>&lt;</m:mo><m:mi>a</m:mi><m:mi>x</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid10"> If <m:math overflow="scroll"><m:mrow><m:mn>0</m:mn><m:mo>&lt;</m:mo><m:mi>a</m:mi><m:mo>&lt;</m:mo><m:mi>b</m:mi></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mn>0</m:mn><m:mo>&lt;</m:mo><m:mi>c</m:mi><m:mo>&lt;</m:mo><m:mi>d</m:mi><m:mo>,</m:mo></m:mrow></m:math> then
+<m:math overflow="scroll"><m:mrow><m:mi>a</m:mi><m:mi>c</m:mi><m:mo>&lt;</m:mo><m:mi>b</m:mi><m:mi>d</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid11"> Verify parts (a) through (e) with <m:math overflow="scroll"><m:mo>&lt;</m:mo></m:math> replaced by <m:math overflow="scroll"><m:mrow><m:mo>≤</m:mo><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid12"> If <m:math overflow="scroll"><m:mi>x</m:mi></m:math> and <m:math overflow="scroll"><m:mi>y</m:mi></m:math> are elements of <m:math overflow="scroll"><m:mrow><m:mi>F</m:mi><m:mo>,</m:mo></m:mrow></m:math> show that one and only one of the following three relations can hold: (i) <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mi>y</m:mi><m:mo>,</m:mo></m:mrow></m:math> (ii) <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>&gt;</m:mo><m:mi>y</m:mi><m:mo>,</m:mo></m:mrow></m:math> (iii) <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mi>y</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid13"> Suppose <m:math overflow="scroll"><m:mi>x</m:mi></m:math> and <m:math overflow="scroll"><m:mi>y</m:mi></m:math> are elements of <m:math overflow="scroll"><m:mrow><m:mi>F</m:mi><m:mo>,</m:mo></m:mrow></m:math> and assume that
+<m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>≤</m:mo><m:mi>y</m:mi></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>y</m:mi><m:mo>≤</m:mo><m:mi>x</m:mi><m:mo>.</m:mo></m:mrow></m:math> Prove that <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mi>y</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+    </list>
+</problem></exercise>
+<exercise id="fs-id1166089624930"><problem id="fs-id1166090116225">
+    
+    <list id="id287951" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid14"> If <m:math overflow="scroll"><m:mi>F</m:mi></m:math> is an ordered field, show that <m:math overflow="scroll"><m:mrow><m:mn>1</m:mn><m:mo>∈</m:mo><m:mi>P</m:mi><m:mo>;</m:mo></m:mrow></m:math> i.e., that <m:math overflow="scroll"><m:mrow><m:mn>0</m:mn><m:mo>&lt;</m:mo><m:mn>1</m:mn><m:mo>.</m:mo></m:mrow></m:math>
+HINT: By the law of tricotomy,
+only one of the three possibilities holds for <m:math overflow="scroll"><m:mrow><m:mn>1</m:mn><m:mo>.</m:mo></m:mrow></m:math>
+Rule out the last two.
+</item>
+      <item id="uid15"> Show that <m:math overflow="scroll"><m:msub><m:mi>F</m:mi><m:mn>7</m:mn></m:msub></m:math> of <link document="m36061" target-id="eip-82"/>
+is not an ordered field; i.e., there is no subset <m:math overflow="scroll"><m:mrow><m:mi>P</m:mi><m:mo>⊆</m:mo><m:msub><m:mi>F</m:mi><m:mn>7</m:mn></m:msub></m:mrow></m:math>
+such that the two positivity properties can hold.
+HINT: Use part (a) and positivity property (1).
+</item>
+      <item id="uid16"> Prove that <m:math overflow="scroll"><m:mi>Q</m:mi></m:math> is an ordered field,
+where the set <m:math overflow="scroll"><m:mi>P</m:mi></m:math> is taken to be the usual set of positive rational numbers.
+That is, <m:math overflow="scroll"><m:mi>P</m:mi></m:math> consists of those rational numbers <m:math overflow="scroll"><m:mrow><m:mi>a</m:mi><m:mo>/</m:mo><m:mi>b</m:mi></m:mrow></m:math> for which both <m:math overflow="scroll"><m:mi>a</m:mi></m:math> and <m:math overflow="scroll"><m:mi>b</m:mi></m:math>
+are natural numbers.
+</item>
+      <item id="uid17"> Suppose <m:math overflow="scroll"><m:mi>F</m:mi></m:math> is an ordered field and that <m:math overflow="scroll"><m:mi>x</m:mi></m:math> is a nonzero element of <m:math overflow="scroll"><m:mrow><m:mi>F</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Show that for all natural numbers <m:math overflow="scroll"><m:mi>n</m:mi></m:math><m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mi>x</m:mi><m:mo>≠</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid18">(e) Show that, in an ordered field, every nonzero square is positive;
+i.e., if <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>≠</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> then <m:math overflow="scroll"><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>∈</m:mo><m:mi>P</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+    </list>
+</problem></exercise>
+    <para id="id288271">We remarked earlier that there are many different examples of fields,
+and many of these are also ordered fields.
+Some fields, though technically different from each other, are really
+indistinguishable from the algebraic point of view, and
+we make this mathematically precise with the following definition.</para>
+<definition id="fs-id1564407"><term/><meaning id="fs-id1165204526931">
+    <para id="id288277"> Let <m:math overflow="scroll"><m:msub><m:mi>F</m:mi><m:mn>1</m:mn></m:msub></m:math> and <m:math overflow="scroll"><m:msub><m:mi>F</m:mi><m:mn>2</m:mn></m:msub></m:math> be two ordered fields,
+and write <m:math overflow="scroll"><m:msub><m:mi>P</m:mi><m:mn>1</m:mn></m:msub></m:math> and <m:math overflow="scroll"><m:msub><m:mi>P</m:mi><m:mn>2</m:mn></m:msub></m:math> for the set of positive elements in <m:math overflow="scroll"><m:msub><m:mi>F</m:mi><m:mn>1</m:mn></m:msub></m:math> and <m:math overflow="scroll"><m:msub><m:mi>F</m:mi><m:mn>2</m:mn></m:msub></m:math> respectively. A 1-1 correspondence <m:math overflow="scroll"><m:mi>J</m:mi></m:math> between <m:math overflow="scroll"><m:msub><m:mi>F</m:mi><m:mn>1</m:mn></m:msub></m:math> and <m:math overflow="scroll"><m:msub><m:mi>F</m:mi><m:mn>2</m:mn></m:msub></m:math> is called an <emphasis effect="italics">isomorphism</emphasis> if
+<list id="eip-id1168859751237" list-type="enumerated" number-style="arabic"><item id="uid19"> <m:math overflow="scroll"><m:mrow><m:mi>J</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>+</m:mo><m:mi>y</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mi>J</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>+</m:mo><m:mi>J</m:mi><m:mo>(</m:mo><m:mi>y</m:mi><m:mo>)</m:mo></m:mrow></m:math>
+for all <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>,</m:mo><m:mi>y</m:mi><m:mo>∈</m:mo><m:msub><m:mi>F</m:mi><m:mn>1</m:mn></m:msub><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid20"> <m:math overflow="scroll"><m:mrow><m:mi>J</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mi>y</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mi>J</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mi>J</m:mi><m:mo>(</m:mo><m:mi>y</m:mi><m:mo>)</m:mo></m:mrow></m:math>
+for all <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>,</m:mo><m:mi>y</m:mi><m:mo>∈</m:mo><m:msub><m:mi>F</m:mi><m:mn>1</m:mn></m:msub><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid21"> <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:msub><m:mi>P</m:mi><m:mn>1</m:mn></m:msub></m:mrow></m:math> if and only if <m:math overflow="scroll"><m:mrow><m:mi>J</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>∈</m:mo><m:msub><m:mi>P</m:mi><m:mn>2</m:mn></m:msub><m:mo>.</m:mo></m:mrow></m:math></item>
+    </list></para>
+</meaning></definition>
+    
+
+    <rule id="fs-id1163946605634"><label/>
+<statement id="fs-id1163942057338"><para id="id288631"><emphasis effect="bold">REMARK.</emphasis> In general, if <m:math overflow="scroll"><m:msub><m:mi>A</m:mi><m:mn>1</m:mn></m:msub></m:math> and <m:math overflow="scroll"><m:msub><m:mi>A</m:mi><m:mn>2</m:mn></m:msub></m:math> are two algebraic systems, then a 1-1 correspondence between <m:math overflow="scroll"><m:msub><m:mi>A</m:mi><m:mn>1</m:mn></m:msub></m:math> and <m:math overflow="scroll"><m:msub><m:mi>A</m:mi><m:mn>2</m:mn></m:msub></m:math> is called an <emphasis effect="italics">isomorphism</emphasis>
+if it converts the algebraic structure on <m:math overflow="scroll"><m:msub><m:mi>A</m:mi><m:mn>1</m:mn></m:msub></m:math> into the
+corresponding algebraic structure on <m:math overflow="scroll"><m:mrow><m:msub><m:mi>A</m:mi><m:mn>2</m:mn></m:msub><m:mo>.</m:mo></m:mrow></m:math></para></statement></rule>
+<exercise id="fs-id1163947415926"><problem id="fs-id1163942737477">
+    
+    <list id="id288744" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid22"> Let <m:math overflow="scroll"><m:mi>F</m:mi></m:math> be an ordered field. Define a function <m:math overflow="scroll"><m:mrow><m:mi>J</m:mi><m:mo>:</m:mo><m:mi>N</m:mi><m:mo>→</m:mo><m:mi>F</m:mi></m:mrow></m:math> by <m:math overflow="scroll"><m:mrow><m:mi>J</m:mi><m:mo>(</m:mo><m:mi>n</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mi>n</m:mi><m:mo>·</m:mo><m:mn>1</m:mn><m:mo>.</m:mo></m:mrow></m:math> Prove that <m:math overflow="scroll"><m:mi>J</m:mi></m:math> is an isomorphism of <m:math overflow="scroll"><m:mi>N</m:mi></m:math> onto a subset <m:math overflow="scroll"><m:mover accent="true"><m:mi>N</m:mi><m:mo>˜</m:mo></m:mover></m:math> of <m:math overflow="scroll"><m:mrow><m:mi>F</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+That is, show that this correspondence is one-to-one
+and converts addition and multiplication
+in <m:math overflow="scroll"><m:mi>N</m:mi></m:math> into addition and multiplication in <m:math overflow="scroll"><m:mrow><m:mi>F</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Give an example to show that this result is not true
+if <m:math overflow="scroll"><m:mi>F</m:mi></m:math> is merely a field and not an ordered field.
+</item>
+      <item id="uid23"> Let <m:math overflow="scroll"><m:mi>F</m:mi></m:math> be an ordered field.
+Define a function <m:math overflow="scroll"><m:mrow><m:mi>J</m:mi><m:mo>:</m:mo><m:mi>Q</m:mi><m:mo>→</m:mo><m:mi>F</m:mi></m:mrow></m:math> by <m:math overflow="scroll"><m:mrow><m:mi>J</m:mi><m:mrow><m:mo>(</m:mo><m:mi>k</m:mi><m:mo>/</m:mo><m:mi>n</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>k</m:mi><m:mo>·</m:mo><m:mn>1</m:mn><m:mo>×</m:mo><m:msup><m:mrow><m:mo>(</m:mo><m:mi>n</m:mi><m:mo>·</m:mo><m:mn>1</m:mn><m:mo>)</m:mo></m:mrow><m:mrow><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msup><m:mo>.</m:mo></m:mrow></m:math>
+Prove that <m:math overflow="scroll"><m:mi>J</m:mi></m:math> is an isomorphism of the ordered field <m:math overflow="scroll"><m:mi>Q</m:mi></m:math>
+onto a subset <m:math overflow="scroll"><m:mover accent="true"><m:mi>Q</m:mi><m:mo>˜</m:mo></m:mover></m:math> of the ordered field <m:math overflow="scroll"><m:mrow><m:mi>F</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Conclude that every ordered field <m:math overflow="scroll"><m:mi>F</m:mi></m:math> contains a subset
+that is isomorphic to the ordered field <m:math overflow="scroll"><m:mrow><m:mi>Q</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+    </list>
+</problem></exercise>
+<rule id="fs-id1163946602926"><label/>
+<statement id="fs-id1163942056560">
+    <para id="id289115"><emphasis effect="bold">REMARK.</emphasis> Part (b) of <link target-id="uid23"/> shows that the ordered
+field <m:math overflow="scroll"><m:mi>Q</m:mi></m:math> is the smallest possible ordered field, in the sense that every other ordered field contains an isomorphic copy of <m:math overflow="scroll"><m:mrow><m:mi>Q</m:mi><m:mo>.</m:mo></m:mrow></m:math> However, as mentioned earlier, the ordered field <m:math overflow="scroll"><m:mi>Q</m:mi></m:math> cannot suffice as the set of real numbers. There is no rational number whose square is 2, and we want the square root of 2 to be a real number. See <link target-id="fs-id5983575"/> below. What extra property is there about an ordered field <m:math overflow="scroll"><m:mi>F</m:mi></m:math> that will allow us to prove that numbers like <m:math overflow="scroll"><m:mrow><m:msqrt><m:mn>2</m:mn></m:msqrt><m:mo>,</m:mo></m:mrow></m:math><m:math overflow="scroll"><m:mrow><m:mi>π</m:mi><m:mo>,</m:mo></m:mrow></m:math> and so on are elements of <m:math overflow="scroll"><m:mrow><m:mi>F</m:mi><m:mo>?</m:mo></m:mrow></m:math> It turns out that the extra property we need is related to a quite subtle point concerning upper and lower bounds of sets. It gives us some initial indication that the known-to-be subtle concept of a <emphasis effect="bold">limit</emphasis> may be fundamental to our very notion of what the real numbers are.</para>
+</statement></rule>
+<definition id="fs-id1163942055559"><term/><meaning id="fs-id1163942985162">
+    <para id="id289233">If <m:math overflow="scroll"><m:mi>S</m:mi></m:math> is a subset of an ordered field <m:math overflow="scroll"><m:mrow><m:mi>F</m:mi><m:mo>,</m:mo></m:mrow></m:math> then
+an element <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mi>F</m:mi></m:mrow></m:math> is called an <emphasis effect="italics">upper bound</emphasis> for <m:math overflow="scroll"><m:mi>S</m:mi></m:math> if <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>≥</m:mo><m:mi>y</m:mi></m:mrow></m:math> for every <m:math overflow="scroll"><m:mrow><m:mi>y</m:mi><m:mo>∈</m:mo><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math> An element <m:math overflow="scroll"><m:mi>z</m:mi></m:math> is called a <emphasis effect="italics">lower bound</emphasis>
+for <m:math overflow="scroll"><m:mi>S</m:mi></m:math> if <m:math overflow="scroll"><m:mrow><m:mi>z</m:mi><m:mo>≤</m:mo><m:mi>y</m:mi></m:mrow></m:math> for every <m:math overflow="scroll"><m:mrow><m:mi>y</m:mi><m:mo>∈</m:mo><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+
+    <para id="id289376">A subset <m:math overflow="scroll"><m:mi>S</m:mi></m:math> of an ordered field <m:math overflow="scroll"><m:mi>F</m:mi></m:math> is called
+<emphasis effect="italics">bounded above</emphasis> if it has an upper bound;
+it is called <emphasis effect="italics">bounded below</emphasis> if it has a lower bound;
+and it is called <emphasis effect="italics">bounded</emphasis> if it has both an upper bound
+and a lower bound.</para>
+    <para id="id289415">An element <m:math overflow="scroll"><m:mi>M</m:mi></m:math> is called the <emphasis effect="italics">least upper bound</emphasis> or <emphasis effect="italics">supremum</emphasis> of a set <m:math overflow="scroll"><m:mi>S</m:mi></m:math> if it is an upper bound for <m:math overflow="scroll"><m:mi>S</m:mi></m:math> and if <m:math overflow="scroll"><m:mrow><m:mi>M</m:mi><m:mo>≤</m:mo><m:mi>x</m:mi></m:mrow></m:math> for every other upper bound <m:math overflow="scroll"><m:mi>x</m:mi></m:math> of <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math> That is, <m:math overflow="scroll"><m:mi>M</m:mi></m:math> is less than or equal to any other upper bound of <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+    <para id="id289513">Similarly, an element <m:math overflow="scroll"><m:mi>m</m:mi></m:math> is called
+the <emphasis effect="italics">greatest lower bound</emphasis> or <emphasis effect="italics">infimum</emphasis> of <m:math overflow="scroll"><m:mi>S</m:mi></m:math> if
+it is a lower bound for <m:math overflow="scroll"><m:mi>S</m:mi></m:math> and if <m:math overflow="scroll"><m:mrow><m:mi>z</m:mi><m:mo>≤</m:mo><m:mi>m</m:mi></m:mrow></m:math> for every other lower bound <m:math overflow="scroll"><m:mi>z</m:mi></m:math> of <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+That is, <m:math overflow="scroll"><m:mi>m</m:mi></m:math> is greater than or equal to any other lower bound of <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+</meaning></definition>
+
+    <para id="id289610">Clearly, the supremum and infimum of a set <m:math overflow="scroll"><m:mi>S</m:mi></m:math> are unique.
+For instance, if <m:math overflow="scroll"><m:mi>M</m:mi></m:math> and <m:math overflow="scroll"><m:msup><m:mi>M</m:mi><m:mo>'</m:mo></m:msup></m:math> are both least upper bounds of a set <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+then they are both upper bounds of <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+We would then have <m:math overflow="scroll"><m:mrow><m:mi>M</m:mi><m:mo>≤</m:mo><m:msup><m:mi>M</m:mi><m:mo>'</m:mo></m:msup></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:msup><m:mi>M</m:mi><m:mo>'</m:mo></m:msup><m:mo>≤</m:mo><m:mi>M</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Therefore, by part (h) of <link target-id="fs-id1166093017647"/>, <m:math overflow="scroll"><m:mrow><m:mi>M</m:mi><m:mo>=</m:mo><m:msup><m:mi>M</m:mi><m:mo>'</m:mo></m:msup><m:mo>.</m:mo></m:mrow></m:math></para>
+    <para id="id289733">It is important to keep in mind that an upper bound of a set <m:math overflow="scroll"><m:mi>S</m:mi></m:math> need not be an element of <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>,</m:mo></m:mrow></m:math> and in particular, the least upper bound of <m:math overflow="scroll"><m:mi>S</m:mi></m:math> <emphasis effect="bold">may or may not</emphasis> actually belong to <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+    <para id="id289784">If <m:math overflow="scroll"><m:mi>M</m:mi></m:math> is the supremum of a set <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>,</m:mo></m:mrow></m:math> we denote <m:math overflow="scroll"><m:mi>M</m:mi></m:math> by <m:math overflow="scroll"><m:mrow><m:mo movablelimits="true" form="prefix">sup</m:mo><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math> If <m:math overflow="scroll"><m:mi>m</m:mi></m:math> is the infimum of a set <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>,</m:mo></m:mrow></m:math> we denote it by <m:math overflow="scroll"><m:mrow><m:mo movablelimits="true" form="prefix">inf</m:mo><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+<exercise id="fs-id1163941364388"><problem id="fs-id1163966642572">
+   
+    <list id="id289885" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid24"> Suppose <m:math overflow="scroll"><m:mi>S</m:mi></m:math> is a nonempty subset of an ordered field <m:math overflow="scroll"><m:mi>F</m:mi></m:math> and that <m:math overflow="scroll"><m:mi>x</m:mi></m:math> is an element of <m:math overflow="scroll"><m:mrow><m:mi>F</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+What does it mean to say that “<m:math overflow="scroll"><m:mi>x</m:mi></m:math> is not an upper bound for <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:msup><m:mo>?</m:mo><m:mrow><m:mo>'</m:mo><m:mo>'</m:mo></m:mrow></m:msup></m:mrow></m:math></item>
+      <item id="uid25"> Let <m:math overflow="scroll"><m:mi>F</m:mi></m:math> be an ordered field, and let <m:math overflow="scroll"><m:mi>S</m:mi></m:math>
+be the empty set, thought of as a subset of <m:math overflow="scroll"><m:mrow><m:mi>F</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Prove that every element <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mi>F</m:mi></m:mrow></m:math> is an upper bound for <m:math overflow="scroll"><m:mi>S</m:mi></m:math>
+and that every element <m:math overflow="scroll"><m:mrow><m:mi>y</m:mi><m:mo>∈</m:mo><m:mi>F</m:mi></m:mrow></m:math> is a lower bound for <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+HINT: If not, then what?
+</item>
+      <item id="uid26"> If <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>=</m:mo><m:mi>∅</m:mi><m:mo>,</m:mo></m:mrow></m:math> show that <m:math overflow="scroll"><m:mi>S</m:mi></m:math> has no least upper bound and no greatest lower bound.
+</item>
+    </list>
+</problem></exercise>
+<rule id="fs-id1163947416430"><label/>
+<statement id="fs-id1163942983265">
+    <para id="id290104"><emphasis effect="bold">REMARK.</emphasis> The preceding exercise shows that peculiar things about upper and lower bounds happen when <m:math overflow="scroll"><m:mi>S</m:mi></m:math> is the empty set.
+One point is that just because a set has an upper bound
+does not mean it has to have a least upper bound.
+That is, no matter which
+upper bound we choose, there is always another one that is strictly smaller.
+This is a very subtle point, and
+it is in fact quite difficult to give a simple concrete example of this phenomenon.
+See the remark following <link document="m36085" target-id="fs-id1170178787854"/>.
+However, part (d) of <link target-id="fs-id5983575"/> contains the seed of an example.</para>
+</statement></rule>
+<exercise id="fs-id5983575"><problem id="fs-id1163950632622">
+    <para id="id290125">
+A natural number <m:math overflow="scroll"><m:mi>a</m:mi></m:math> is called <emphasis effect="italics">even</emphasis> if
+there exists a natural number <m:math overflow="scroll"><m:mi>c</m:mi></m:math> such that <m:math overflow="scroll"><m:mrow><m:mi>a</m:mi><m:mo>=</m:mo><m:mn>2</m:mn><m:mi>c</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+and <m:math overflow="scroll"><m:mi>a</m:mi></m:math> is called <emphasis effect="italics">odd</emphasis> if there
+exists a natural number <m:math overflow="scroll"><m:mi>c</m:mi></m:math> such that <m:math overflow="scroll"><m:mrow><m:mi>a</m:mi><m:mo>=</m:mo><m:mn>2</m:mn><m:mi>c</m:mi><m:mo>+</m:mo><m:mn>1</m:mn><m:mo>.</m:mo></m:mrow></m:math></para>
+    <list id="id290225" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid27"> Prove by induction that every natural number is either odd or even.
+</item>
+      <item id="uid28"> Prove that a natural number <m:math overflow="scroll"><m:mi>a</m:mi></m:math> is even if and only if <m:math overflow="scroll"><m:mrow><m:msup><m:mi>a</m:mi><m:mn>2</m:mn></m:msup><m:mo>=</m:mo><m:mi>a</m:mi><m:mo>×</m:mo><m:mi>a</m:mi></m:mrow></m:math> is even.
+</item>
+      <item id="uid29"> Prove that there is no element <m:math overflow="scroll"><m:mi>x</m:mi></m:math> of <m:math overflow="scroll"><m:mi>Q</m:mi></m:math>
+whose square is 2.
+That is, the square root of 2 is not a rational number.
+HINT: Argue by contradiction. Suppose there is a rational number
+<m:math overflow="scroll"><m:mrow><m:mi>k</m:mi><m:mo>/</m:mo><m:mi>n</m:mi></m:mrow></m:math> for which <m:math overflow="scroll"><m:mrow><m:msup><m:mi>k</m:mi><m:mn>2</m:mn></m:msup><m:mo>/</m:mo><m:msup><m:mi>n</m:mi><m:mn>2</m:mn></m:msup><m:mo>=</m:mo><m:mn>2</m:mn><m:mo>,</m:mo></m:mrow></m:math>
+and assume, as we may, that the natural numbers <m:math overflow="scroll"><m:mi>k</m:mi></m:math> and <m:math overflow="scroll"><m:mi>n</m:mi></m:math> have no common factor.
+Observe that <m:math overflow="scroll"><m:mi>k</m:mi></m:math> must be even, and then observe that <m:math overflow="scroll"><m:mi>n</m:mi></m:math> also must be even.
+</item>
+      <item id="uid30"> Let <m:math overflow="scroll"><m:mi>S</m:mi></m:math> be the set of all positive rational numbers
+<m:math overflow="scroll"><m:mi>x</m:mi></m:math> for which <m:math overflow="scroll"><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>=</m:mo><m:mi>x</m:mi><m:mo>×</m:mo><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mn>2</m:mn><m:mo>.</m:mo></m:mrow></m:math>
+Prove that <m:math overflow="scroll"><m:mi>S</m:mi></m:math> has an upper bound and a lower bound.
+Can you determine whether or not <m:math overflow="scroll"><m:mi>S</m:mi></m:math> has a least upper bound?
+</item>
+    </list>
+
+    <para id="id290490">The existence of least upper bounds and greatest lower bounds of bounded sets
+turns out to be the critical idea in defining the real numbers.
+It is precisely the existence of such suprema and infimas that enables us to define as real numbers
+quantities such as <m:math overflow="scroll"><m:mrow><m:msqrt><m:mn>2</m:mn></m:msqrt><m:mo>,</m:mo></m:mrow></m:math><m:math overflow="scroll"><m:mrow><m:mi>π</m:mi><m:mo>,</m:mo></m:mrow></m:math><m:math overflow="scroll"><m:mrow><m:mi>e</m:mi><m:mo>,</m:mo></m:mrow></m:math> and so on.</para>
+</problem></exercise>
+<definition id="fs-id1163942054466"><term/><meaning id="fs-id1163973117351">
+    <para id="id290533">An ordered field <m:math overflow="scroll"><m:mi>F</m:mi></m:math> is called <emphasis effect="italics">complete</emphasis>
+if every nonempty subset <m:math overflow="scroll"><m:mi>S</m:mi></m:math> of <m:math overflow="scroll"><m:mi>F</m:mi></m:math> that has an upper bound
+has a least upper bound.</para>
+</meaning></definition>
+<rule id="fs-id1163942056926"><label/>
+<statement id="fs-id1163957647537">
+    <para id="id290574"><emphasis effect="bold">REMARK.</emphasis>
+Although <m:math overflow="scroll"><m:mi>Q</m:mi></m:math> is an
+ordered field, we will see that it is not a complete ordered field. In fact, the answer to part (d) of <link target-id="fs-id5983575"/> is no.
+The set described there, though bounded above,
+has no least upper bound.
+In fact, it was one of nineteenth century mathematicians' major achievements to prove the following theorem.</para>
+</statement></rule>
+<rule id="fs-id1163946669399" type="theorem"><statement id="fs-id1163946671334">
+    <para id="id290602"> There exists a complete ordered field.</para>
+    <para id="id290609">We leave the proof of this theorem to the appendix.</para>
+    <para id="id290613">Perhaps the most reassuring result along these lines is the following companion theorem,
+whose proof we also leave to the appendix.</para>
+</statement></rule>
+<rule id="fs-id1163942040469" type="theorem"><statement id="fs-id1163950558572">
+    <para id="id290617"> If <m:math overflow="scroll"><m:msub><m:mi>F</m:mi><m:mn>1</m:mn></m:msub></m:math> and <m:math overflow="scroll"><m:msub><m:mi>F</m:mi><m:mn>2</m:mn></m:msub></m:math> are two complete ordered fields,
+then they are isomorphic.</para>
+</statement></rule>
+    <para id="id290655">Taken together, the content of the two preceding theorems is
+that, up to isomorphism, there exists one and only one complete ordered field. For no other reason that that, this special field should be an important object in mathematics. Our definition of the real numbers is then the following:</para>
+    <definition id="fs-id1170194844548"><term/><meaning id="fs-id1170178868008"><para id="id290660">By the set <m:math overflow="scroll"><m:mi>R</m:mi></m:math> of <emphasis effect="italics">real numbers</emphasis> we mean the (unique) complete ordered field.</para></meaning></definition>
+   
+  </content>
+</document>

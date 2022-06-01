@@ -1,0 +1,754 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML">
+  <title>Polynomial Functions</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m36147</md:content-id>
+  <md:title>Polynomial Functions</md:title>
+  <md:abstract>A module about polynomial functions, with a theorem establishing some elementary properties of polynomial functions, such as the uniqueness of coefficients and the behavior at infinity.</md:abstract>
+  <md:uuid>ca5bb51c-bad8-4f99-90b4-8fee71bbf906</md:uuid>
+</metadata>
+
+<content>
+    <para id="id273034">If <m:math overflow="scroll"><m:mrow><m:mi>p</m:mi><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msubsup><m:mo>∑</m:mo><m:mrow><m:mi>k</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow><m:mi>n</m:mi></m:msubsup><m:msub><m:mi>a</m:mi><m:mi>k</m:mi></m:msub><m:msup><m:mi>z</m:mi><m:mi>k</m:mi></m:msup></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>q</m:mi><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msubsup><m:mo>∑</m:mo><m:mrow><m:mi>j</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow><m:mi>m</m:mi></m:msubsup><m:msub><m:mi>b</m:mi><m:mi>j</m:mi></m:msub><m:msup><m:mi>z</m:mi><m:mi>j</m:mi></m:msup></m:mrow></m:math> are
+two polynomials, it certainly seems clear that they determine the same function
+only if they have identical coefficients. This is true,
+but by no means an obvious fact.
+Also, it seems clear that, as <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>z</m:mi><m:mo>|</m:mo></m:mrow></m:math> gets larger and larger,
+a polynomial function is more and more comparable to its leading term <m:math overflow="scroll"><m:mrow><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:msup><m:mi>z</m:mi><m:mi>n</m:mi></m:msup><m:mo>.</m:mo></m:mrow></m:math>
+We collect in the next theorem some elementary properties
+of polynomial functions, and in particular we verify the above “uniqueness of coefficients” result
+and the “behavior at infinity” result.</para>
+<rule id="fs-id1171768351772" type="theorem"><statement id="fs-id4541442">
+    <list id="id273527" display="block" list-type="enumerated">
+      <item id="uid1">Suppose <m:math overflow="scroll"><m:mrow><m:mi>p</m:mi><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msubsup><m:mo>∑</m:mo><m:mrow><m:mi>k</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow><m:mi>n</m:mi></m:msubsup><m:msub><m:mi>a</m:mi><m:mi>k</m:mi></m:msub><m:msup><m:mi>z</m:mi><m:mi>k</m:mi></m:msup></m:mrow></m:math> is a nonconstant polynomial of degree <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math>
+Then <m:math overflow="scroll"><m:mrow><m:mi>p</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math> for at most <m:math overflow="scroll"><m:mi>n</m:mi></m:math> distinct complex numbers.
+</item>
+      <item id="uid2">If <m:math overflow="scroll"><m:mi>r</m:mi></m:math> is a polynomial for which <m:math overflow="scroll"><m:mrow><m:mi>r</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math> for
+an infinite number of distinct points, then <m:math overflow="scroll"><m:mi>r</m:mi></m:math> is the zero polynomial.
+That is, all of its coefficients are 0.
+</item>
+      <item id="uid3">Suppose <m:math overflow="scroll"><m:mi>p</m:mi></m:math> and <m:math overflow="scroll"><m:mi>q</m:mi></m:math> are nonzero polynomials, and assume
+that <m:math overflow="scroll"><m:mrow><m:mi>p</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mi>q</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow></m:math> for an infinite number of distinct points.
+Then <m:math overflow="scroll"><m:mrow><m:mi>p</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mi>q</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>z</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+and <m:math overflow="scroll"><m:mi>p</m:mi></m:math> and <m:math overflow="scroll"><m:mi>q</m:mi></m:math> have the same coefficients.
+That is, they are the same polynomial.
+</item>
+      <item id="uid4">Let <m:math overflow="scroll"><m:mrow><m:mi>p</m:mi><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msubsup><m:mo>∑</m:mo><m:mrow><m:mi>j</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow><m:mi>n</m:mi></m:msubsup><m:msub><m:mi>c</m:mi><m:mi>j</m:mi></m:msub><m:msup><m:mi>z</m:mi><m:mi>j</m:mi></m:msup></m:mrow></m:math> be a polynomial of degree <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math>
+Then there exist positive constants <m:math overflow="scroll"><m:mi>m</m:mi></m:math> and <m:math overflow="scroll"><m:mi>B</m:mi></m:math> such that
+<equation id="id274060"><m:math overflow="scroll" mode="display"><m:mrow><m:mfrac><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msub><m:mi>c</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mo>|</m:mo></m:mrow></m:mrow><m:mn>2</m:mn></m:mfrac><m:msup><m:mrow><m:mo>|</m:mo><m:mi>z</m:mi><m:mo>|</m:mo></m:mrow><m:mi>n</m:mi></m:msup><m:mo>≤</m:mo><m:mrow><m:mo>|</m:mo><m:mi>p</m:mi><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>|</m:mo></m:mrow><m:mo>≤</m:mo><m:msup><m:mrow><m:mi>M</m:mi><m:mo>|</m:mo><m:mi>z</m:mi><m:mo>|</m:mo></m:mrow><m:mi>n</m:mi></m:msup></m:mrow></m:math></equation>
+for all complex numbers <m:math overflow="scroll"><m:mi>z</m:mi></m:math> for which
+<m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>z</m:mi><m:mo>|</m:mo><m:mo>≥</m:mo><m:mi>B</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+That is, For all complex numbers <m:math overflow="scroll"><m:mi>z</m:mi></m:math> with <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>z</m:mi><m:mo>|</m:mo><m:mo>≥</m:mo><m:mi>B</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+the numbers <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>p</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo><m:mo>|</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:msup><m:mrow><m:mo>|</m:mo><m:mi>z</m:mi><m:mo>|</m:mo></m:mrow><m:mi>n</m:mi></m:msup></m:math> are “comparable.”
+</item>
+      <item id="uid5">If <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>:</m:mo><m:mo>[</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mi>∞</m:mi><m:mo>)</m:mo><m:mo>→</m:mo><m:mi>C</m:mi></m:mrow></m:math> is defined by <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msqrt><m:mi>x</m:mi></m:msqrt><m:mo>,</m:mo></m:mrow></m:math>
+then there is no polynomial <m:math overflow="scroll"><m:mi>p</m:mi></m:math> for which <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mi>p</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>≥</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math>
+That is, the square root function does not agree with any polynomial function.
+</item>
+    </list>
+</statement>
+<proof id="fs-id1171786807560">
+    <para id="id274353">We prove part (1) using an argument by contradiction.
+Thus, suppose there does exist a counterexample to the claim, i.e., a nonzero polynomial <m:math overflow="scroll"><m:mi>p</m:mi></m:math> of degree <m:math overflow="scroll"><m:mi>n</m:mi></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow></m:math> distinct points <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>c</m:mi><m:mn>1</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>c</m:mi><m:mn>2</m:mn></m:msub><m:mo>,</m:mo><m:mo>...</m:mo><m:mo>,</m:mo><m:msub><m:mi>c</m:mi><m:mrow><m:mi>n</m:mi><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>}</m:mo></m:mrow></m:math> for which
+<m:math overflow="scroll"><m:mrow><m:mi>p</m:mi><m:mo>(</m:mo><m:msub><m:mi>c</m:mi><m:mi>j</m:mi></m:msub><m:mo>)</m:mo><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mn>1</m:mn><m:mo>≤</m:mo><m:mi>j</m:mi><m:mo>≤</m:mo><m:mi>n</m:mi><m:mo>+</m:mo><m:mn>1</m:mn><m:mo>.</m:mo></m:mrow></m:math>
+From the set of all such counterexamples, let <m:math overflow="scroll"><m:msub><m:mi>p</m:mi><m:mn>0</m:mn></m:msub></m:math> be one with minimum degree <m:math overflow="scroll"><m:mrow><m:msub><m:mi>n</m:mi><m:mn>0</m:mn></m:msub><m:mo>.</m:mo></m:mrow></m:math>
+That is, the claim in part (1) is true for any polynomial whose degree is smaller than <m:math overflow="scroll"><m:mrow><m:msub><m:mi>n</m:mi><m:mn>0</m:mn></m:msub><m:mo>.</m:mo></m:mrow></m:math>
+We write</para>
+    <equation id="id274534">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:msub>
+            <m:mi>p</m:mi>
+            <m:mn>0</m:mn>
+          </m:msub>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>z</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>=</m:mo>
+          <m:munderover>
+            <m:mo>∑</m:mo>
+            <m:mrow>
+              <m:mi>k</m:mi>
+              <m:mo>=</m:mo>
+              <m:mn>0</m:mn>
+            </m:mrow>
+            <m:msub>
+              <m:mi>n</m:mi>
+              <m:mn>0</m:mn>
+            </m:msub>
+          </m:munderover>
+          <m:msub>
+            <m:mi>a</m:mi>
+            <m:mi>k</m:mi>
+          </m:msub>
+          <m:msup>
+            <m:mi>z</m:mi>
+            <m:mi>k</m:mi>
+          </m:msup>
+          <m:mo>,</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id274599">and we suppose that <m:math overflow="scroll"><m:mrow><m:msub><m:mi>p</m:mi><m:mn>0</m:mn></m:msub><m:mrow><m:mo>(</m:mo><m:msub><m:mi>c</m:mi><m:mi>j</m:mi></m:msub><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math> for <m:math overflow="scroll"><m:mrow><m:mi>j</m:mi><m:mo>=</m:mo><m:mn>1</m:mn></m:mrow></m:math> to <m:math overflow="scroll"><m:mrow><m:msub><m:mi>n</m:mi><m:mn>0</m:mn></m:msub><m:mo>+</m:mo><m:mn>1</m:mn><m:mo>,</m:mo></m:mrow></m:math>
+where these <m:math overflow="scroll"><m:msub><m:mi>c</m:mi><m:mi>k</m:mi></m:msub></m:math>'s are distinct complex numbers.
+We use next the Root Theorem (part (d) of <link target-id="fs-id1172704529252" document="m36141"/>) to write
+<m:math overflow="scroll"><m:mrow><m:msub><m:mi>p</m:mi><m:mn>0</m:mn></m:msub><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>-</m:mo><m:msub><m:mi>c</m:mi><m:mrow><m:msub><m:mi>n</m:mi><m:mn>0</m:mn></m:msub><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>)</m:mo></m:mrow><m:mi>q</m:mi><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> where
+<m:math overflow="scroll"><m:mrow><m:mi>q</m:mi><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msubsup><m:mo>∑</m:mo><m:mrow><m:mi>k</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow><m:mrow><m:msub><m:mi>n</m:mi><m:mn>0</m:mn></m:msub><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msubsup><m:msub><m:mi>b</m:mi><m:mi>k</m:mi></m:msub><m:msup><m:mi>z</m:mi><m:mi>k</m:mi></m:msup><m:mo>.</m:mo></m:mrow></m:math>
+We have that <m:math overflow="scroll"><m:mi>q</m:mi></m:math>
+is a polynomial of degree <m:math overflow="scroll"><m:mrow><m:msub><m:mi>n</m:mi><m:mn>0</m:mn></m:msub><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:math> and the leading coefficient
+<m:math overflow="scroll"><m:msub><m:mi>a</m:mi><m:msub><m:mi>n</m:mi><m:mn>0</m:mn></m:msub></m:msub></m:math> of <m:math overflow="scroll"><m:msub><m:mi>p</m:mi><m:mn>0</m:mn></m:msub></m:math> equals the leading coefficient <m:math overflow="scroll"><m:msub><m:mi>b</m:mi><m:mrow><m:msub><m:mi>n</m:mi><m:mn>0</m:mn></m:msub><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msub></m:math> of <m:math overflow="scroll"><m:mrow><m:mi>q</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Note that for <m:math overflow="scroll"><m:mrow><m:mn>1</m:mn><m:mo>≤</m:mo><m:mi>j</m:mi><m:mo>≤</m:mo><m:msub><m:mi>n</m:mi><m:mn>0</m:mn></m:msub></m:mrow></m:math> we have</para>
+    <equation id="id274925">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mn>0</m:mn>
+          <m:mo>=</m:mo>
+          <m:msub>
+            <m:mi>p</m:mi>
+            <m:mn>0</m:mn>
+          </m:msub>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:msub>
+              <m:mi>c</m:mi>
+              <m:mi>j</m:mi>
+            </m:msub>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>=</m:mo>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:msub>
+              <m:mi>c</m:mi>
+              <m:mi>j</m:mi>
+            </m:msub>
+            <m:mo>-</m:mo>
+            <m:msub>
+              <m:mi>c</m:mi>
+              <m:mrow>
+                <m:msub>
+                  <m:mi>n</m:mi>
+                  <m:mn>0</m:mn>
+                </m:msub>
+                <m:mo>+</m:mo>
+                <m:mn>1</m:mn>
+              </m:mrow>
+            </m:msub>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mi>q</m:mi>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:msub>
+              <m:mi>c</m:mi>
+              <m:mi>j</m:mi>
+            </m:msub>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>,</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id275010">which implies that <m:math overflow="scroll"><m:mrow><m:mi>q</m:mi><m:mo>(</m:mo><m:msub><m:mi>c</m:mi><m:mi>j</m:mi></m:msub><m:mo>)</m:mo><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math> for <m:math overflow="scroll"><m:mrow><m:mn>1</m:mn><m:mo>≤</m:mo><m:mi>j</m:mi><m:mo>≤</m:mo><m:msub><m:mi>n</m:mi><m:mn>0</m:mn></m:msub><m:mo>,</m:mo></m:mrow></m:math>
+since <m:math overflow="scroll"><m:mrow><m:msub><m:mi>c</m:mi><m:mi>j</m:mi></m:msub><m:mo>-</m:mo><m:msub><m:mi>c</m:mi><m:mrow><m:msub><m:mi>n</m:mi><m:mn>0</m:mn></m:msub><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>≠</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math>
+But, since <m:math overflow="scroll"><m:mrow><m:mtext>deg</m:mtext><m:mrow><m:mo>(</m:mo><m:mi>q</m:mi><m:mo>)</m:mo></m:mrow><m:mo>&lt;</m:mo><m:msub><m:mi>n</m:mi><m:mn>0</m:mn></m:msub><m:mo>,</m:mo></m:mrow></m:math> the nonzero polynomial <m:math overflow="scroll"><m:mi>q</m:mi></m:math>
+can not be a counterexample to part (1), implying that <m:math overflow="scroll"><m:mrow><m:mi>q</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math>
+for at most <m:math overflow="scroll"><m:mrow><m:msub><m:mi>n</m:mi><m:mn>0</m:mn></m:msub><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:math> distinct points.
+We have arrived at a contradiction, and part (1) is proved.</para>
+    <para id="id275182">Next, let <m:math overflow="scroll"><m:mi>r</m:mi></m:math> be a polynomial for which <m:math overflow="scroll"><m:mrow><m:mi>r</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math> for an infinite number of
+distinct points.
+It follows from part (1) that <m:math overflow="scroll"><m:mi>r</m:mi></m:math> cannot be a nonzero polynomial,
+for in that case it would have a degree <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>≥</m:mo><m:mn>0</m:mn></m:mrow></m:math> and could be
+0 for at most <m:math overflow="scroll"><m:mi>n</m:mi></m:math> distinct points. Hence, <m:math overflow="scroll"><m:mi>r</m:mi></m:math> is the
+zero polynomial, and part (2) is proved.</para>
+    <para id="id275252">Now, to see part (3), set <m:math overflow="scroll"><m:mrow><m:mi>r</m:mi><m:mo>=</m:mo><m:mi>p</m:mi><m:mo>-</m:mo><m:mi>q</m:mi><m:mo>.</m:mo></m:mrow></m:math> Then <m:math overflow="scroll"><m:mi>r</m:mi></m:math> is a polynomial for which <m:math overflow="scroll"><m:mrow><m:mi>r</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math>
+for infinitely many <m:math overflow="scroll"><m:mi>z</m:mi></m:math>'s. By part (2), it follows then that <m:math overflow="scroll"><m:mrow><m:mi>r</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>z</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+whence <m:math overflow="scroll"><m:mrow><m:mi>p</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mi>q</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>z</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Moreover, <m:math overflow="scroll"><m:mrow><m:mi>p</m:mi><m:mo>-</m:mo><m:mi>q</m:mi></m:mrow></m:math> is the zero polynomial, all of whose
+coefficients are 0, and this implies that the coefficients for
+<m:math overflow="scroll"><m:mi>p</m:mi></m:math> and <m:math overflow="scroll"><m:mi>q</m:mi></m:math> are identical.</para>
+    <para id="id275410">To prove the first inequality in part (4), suppose that <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>z</m:mi><m:mo>|</m:mo><m:mo>&gt;</m:mo><m:mn>1</m:mn><m:mo>,</m:mo></m:mrow></m:math>
+and from the backwards triangle inequality, note that</para>
+    <equation id="uid6">
+      <m:math overflow="scroll" mode="display">
+        <m:mtable displaystyle="true">
+          <m:mtr>
+            <m:mtd columnalign="right">
+              <m:mrow>
+                <m:mo>|</m:mo>
+                <m:mi>p</m:mi>
+                <m:mo>(</m:mo>
+                <m:mi>z</m:mi>
+                <m:mo>)</m:mo>
+                <m:mo>|</m:mo>
+              </m:mrow>
+            </m:mtd>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:munderover>
+                  <m:mo>∑</m:mo>
+                  <m:mrow>
+                    <m:mi>k</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mn>0</m:mn>
+                  </m:mrow>
+                  <m:mi>n</m:mi>
+                </m:munderover>
+                <m:msub>
+                  <m:mi>c</m:mi>
+                  <m:mi>k</m:mi>
+                </m:msub>
+                <m:msup>
+                  <m:mi>z</m:mi>
+                  <m:mi>k</m:mi>
+                </m:msup>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:msup>
+                  <m:mrow>
+                    <m:mo>|</m:mo>
+                    <m:mi>z</m:mi>
+                    <m:mo>|</m:mo>
+                  </m:mrow>
+                  <m:mi>n</m:mi>
+                </m:msup>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                  <m:munderover>
+                    <m:mo>∑</m:mo>
+                    <m:mrow>
+                      <m:mi>k</m:mi>
+                      <m:mo>=</m:mo>
+                      <m:mn>0</m:mn>
+                    </m:mrow>
+                    <m:mi>n</m:mi>
+                  </m:munderover>
+                  <m:mfrac>
+                    <m:msub>
+                      <m:mi>c</m:mi>
+                      <m:mi>k</m:mi>
+                    </m:msub>
+                    <m:msup>
+                      <m:mi>z</m:mi>
+                      <m:mrow>
+                        <m:mi>n</m:mi>
+                        <m:mo>-</m:mo>
+                        <m:mi>k</m:mi>
+                      </m:mrow>
+                    </m:msup>
+                  </m:mfrac>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:msup>
+                  <m:mrow>
+                    <m:mo>|</m:mo>
+                    <m:mi>z</m:mi>
+                    <m:mo>|</m:mo>
+                  </m:mrow>
+                  <m:mi>n</m:mi>
+                </m:msup>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:munderover>
+                      <m:mo>∑</m:mo>
+                      <m:mrow>
+                        <m:mi>k</m:mi>
+                        <m:mo>=</m:mo>
+                        <m:mn>0</m:mn>
+                      </m:mrow>
+                      <m:mrow>
+                        <m:mi>n</m:mi>
+                        <m:mo>-</m:mo>
+                        <m:mn>1</m:mn>
+                      </m:mrow>
+                    </m:munderover>
+                    <m:mfrac>
+                      <m:msub>
+                        <m:mi>c</m:mi>
+                        <m:mi>k</m:mi>
+                      </m:msub>
+                      <m:msup>
+                        <m:mi>z</m:mi>
+                        <m:mrow>
+                          <m:mi>n</m:mi>
+                          <m:mo>-</m:mo>
+                          <m:mi>k</m:mi>
+                        </m:mrow>
+                      </m:msup>
+                    </m:mfrac>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>+</m:mo>
+                  <m:msub>
+                    <m:mi>c</m:mi>
+                    <m:mi>n</m:mi>
+                  </m:msub>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>≥</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:msup>
+                  <m:mrow>
+                    <m:mo>|</m:mo>
+                    <m:mi>z</m:mi>
+                    <m:mo>|</m:mo>
+                  </m:mrow>
+                  <m:mi>n</m:mi>
+                </m:msup>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:msub>
+                  <m:mi>c</m:mi>
+                  <m:mi>n</m:mi>
+                </m:msub>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                  <m:mo>-</m:mo>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:munderover>
+                  <m:mo>∑</m:mo>
+                  <m:mrow>
+                    <m:mi>k</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mn>0</m:mn>
+                  </m:mrow>
+                  <m:mrow>
+                    <m:mi>n</m:mi>
+                    <m:mo>-</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                </m:munderover>
+                <m:mfrac>
+                  <m:msub>
+                    <m:mi>c</m:mi>
+                    <m:mi>k</m:mi>
+                  </m:msub>
+                  <m:msup>
+                    <m:mi>z</m:mi>
+                    <m:mrow>
+                      <m:mi>n</m:mi>
+                      <m:mo>-</m:mo>
+                      <m:mi>k</m:mi>
+                    </m:mrow>
+                  </m:msup>
+                </m:mfrac>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>≥</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:msup>
+                  <m:mrow>
+                    <m:mo>|</m:mo>
+                    <m:mi>z</m:mi>
+                    <m:mo>|</m:mo>
+                  </m:mrow>
+                  <m:mi>n</m:mi>
+                </m:msup>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:msub>
+                  <m:mi>c</m:mi>
+                  <m:mi>n</m:mi>
+                </m:msub>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                  <m:mo>-</m:mo>
+                  <m:munderover>
+                    <m:mo>∑</m:mo>
+                    <m:mrow>
+                      <m:mi>k</m:mi>
+                      <m:mo>=</m:mo>
+                      <m:mn>0</m:mn>
+                    </m:mrow>
+                    <m:mrow>
+                      <m:mi>n</m:mi>
+                      <m:mo>-</m:mo>
+                      <m:mn>1</m:mn>
+                    </m:mrow>
+                  </m:munderover>
+                  <m:mfrac>
+                    <m:mrow>
+                      <m:mrow>
+                        <m:mo>|</m:mo>
+                      </m:mrow>
+                      <m:msub>
+                        <m:mi>c</m:mi>
+                        <m:mi>k</m:mi>
+                      </m:msub>
+                      <m:mrow>
+                        <m:mo>|</m:mo>
+                      </m:mrow>
+                    </m:mrow>
+                    <m:msup>
+                      <m:mrow>
+                        <m:mo>|</m:mo>
+                        <m:mi>z</m:mi>
+                        <m:mo>|</m:mo>
+                      </m:mrow>
+                      <m:mrow>
+                        <m:mi>n</m:mi>
+                        <m:mo>-</m:mo>
+                        <m:mi>k</m:mi>
+                      </m:mrow>
+                    </m:msup>
+                  </m:mfrac>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>≥</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:msup>
+                  <m:mrow>
+                    <m:mo>|</m:mo>
+                    <m:mi>z</m:mi>
+                    <m:mo>|</m:mo>
+                  </m:mrow>
+                  <m:mi>n</m:mi>
+                </m:msup>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:msub>
+                  <m:mi>c</m:mi>
+                  <m:mi>n</m:mi>
+                </m:msub>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                  <m:mo>-</m:mo>
+                  <m:munderover>
+                    <m:mo>∑</m:mo>
+                    <m:mrow>
+                      <m:mi>k</m:mi>
+                      <m:mo>=</m:mo>
+                      <m:mn>0</m:mn>
+                    </m:mrow>
+                    <m:mrow>
+                      <m:mi>n</m:mi>
+                      <m:mo>-</m:mo>
+                      <m:mn>1</m:mn>
+                    </m:mrow>
+                  </m:munderover>
+                  <m:mfrac>
+                    <m:mrow>
+                      <m:mrow>
+                        <m:mo>|</m:mo>
+                      </m:mrow>
+                      <m:msub>
+                        <m:mi>c</m:mi>
+                        <m:mi>k</m:mi>
+                      </m:msub>
+                      <m:mrow>
+                        <m:mo>|</m:mo>
+                      </m:mrow>
+                    </m:mrow>
+                    <m:mrow>
+                      <m:mo>|</m:mo>
+                      <m:mi>z</m:mi>
+                      <m:mo>|</m:mo>
+                    </m:mrow>
+                  </m:mfrac>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>≥</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:msup>
+                  <m:mrow>
+                    <m:mo>|</m:mo>
+                    <m:mi>z</m:mi>
+                    <m:mo>|</m:mo>
+                  </m:mrow>
+                  <m:mi>n</m:mi>
+                </m:msup>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:msub>
+                  <m:mi>c</m:mi>
+                  <m:mi>n</m:mi>
+                </m:msub>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                  <m:mo>-</m:mo>
+                </m:mrow>
+                <m:mfrac>
+                  <m:mn>1</m:mn>
+                  <m:mrow>
+                    <m:mo>|</m:mo>
+                    <m:mi>z</m:mi>
+                    <m:mo>|</m:mo>
+                  </m:mrow>
+                </m:mfrac>
+                <m:munderover>
+                  <m:mo>∑</m:mo>
+                  <m:mrow>
+                    <m:mi>k</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mn>0</m:mn>
+                  </m:mrow>
+                  <m:mrow>
+                    <m:mi>n</m:mi>
+                    <m:mo>-</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                </m:munderover>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:msub>
+                  <m:mi>c</m:mi>
+                  <m:mi>k</m:mi>
+                </m:msub>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mo>.</m:mo>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+        </m:mtable>
+      </m:math>
+    </equation>
+    <para id="id276040">Set <m:math overflow="scroll"><m:mi>B</m:mi></m:math> equal to the constant <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>(</m:mo><m:mn>2</m:mn><m:mo>/</m:mo><m:mo>|</m:mo></m:mrow><m:msub><m:mi>c</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mo>|</m:mo><m:mo>)</m:mo></m:mrow><m:msubsup><m:mo>∑</m:mo><m:mrow><m:mi>j</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow><m:mrow><m:mi>n</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msubsup><m:mrow><m:mo>|</m:mo><m:msub><m:mi>c</m:mi><m:mi>j</m:mi></m:msub><m:mo>|</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math>
+Then, replacing the <m:math overflow="scroll"><m:mrow><m:mn>1</m:mn><m:mo>/</m:mo><m:mo>|</m:mo><m:mi>z</m:mi><m:mo>|</m:mo></m:mrow></m:math> in the preceding calculation by <m:math overflow="scroll"><m:mrow><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>B</m:mi><m:mo>,</m:mo></m:mrow></m:math> we obtain</para>
+    <equation id="id276156">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mrow>
+            <m:mo>|</m:mo>
+            <m:mi>p</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>z</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>|</m:mo>
+          </m:mrow>
+          <m:mo>≥</m:mo>
+          <m:msup>
+            <m:mrow>
+              <m:mi>m</m:mi>
+              <m:mo>|</m:mo>
+              <m:mi>z</m:mi>
+              <m:mo>|</m:mo>
+            </m:mrow>
+            <m:mi>n</m:mi>
+          </m:msup>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id276199">for every <m:math overflow="scroll"><m:mi>z</m:mi></m:math> for which <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>z</m:mi><m:mo>|</m:mo><m:mo>≥</m:mo><m:mi>B</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+This proves the first half of part (4).</para>
+    <para id="id276235">To get the other half of part (4), suppose again that <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>z</m:mi><m:mo>|</m:mo><m:mo>&gt;</m:mo><m:mn>1</m:mn><m:mo>.</m:mo></m:mrow></m:math>
+We have</para>
+    <equation id="id276259">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mrow>
+            <m:mo>|</m:mo>
+            <m:mi>p</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>z</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>|</m:mo>
+          </m:mrow>
+          <m:mo>≤</m:mo>
+          <m:munderover>
+            <m:mo>∑</m:mo>
+            <m:mrow>
+              <m:mi>k</m:mi>
+              <m:mo>=</m:mo>
+              <m:mn>0</m:mn>
+            </m:mrow>
+            <m:mi>n</m:mi>
+          </m:munderover>
+          <m:mrow>
+            <m:mo>|</m:mo>
+          </m:mrow>
+          <m:msub>
+            <m:mi>c</m:mi>
+            <m:mi>k</m:mi>
+          </m:msub>
+          <m:msup>
+            <m:mrow>
+              <m:mo>|</m:mo>
+              <m:mo>|</m:mo>
+              <m:mi>z</m:mi>
+              <m:mo>|</m:mo>
+            </m:mrow>
+            <m:mi>k</m:mi>
+          </m:msup>
+          <m:mo>≤</m:mo>
+          <m:munderover>
+            <m:mo>∑</m:mo>
+            <m:mrow>
+              <m:mi>k</m:mi>
+              <m:mo>=</m:mo>
+              <m:mn>0</m:mn>
+            </m:mrow>
+            <m:mi>n</m:mi>
+          </m:munderover>
+          <m:mrow>
+            <m:mo>|</m:mo>
+          </m:mrow>
+          <m:msub>
+            <m:mi>c</m:mi>
+            <m:mi>k</m:mi>
+          </m:msub>
+          <m:msup>
+            <m:mrow>
+              <m:mo>|</m:mo>
+              <m:mo>|</m:mo>
+              <m:mi>z</m:mi>
+              <m:mo>|</m:mo>
+            </m:mrow>
+            <m:mi>n</m:mi>
+          </m:msup>
+          <m:mo>,</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id276374">so that we get the other half of part (4) by setting <m:math overflow="scroll"><m:mrow><m:mi>M</m:mi><m:mo>=</m:mo><m:msubsup><m:mo>∑</m:mo><m:mrow><m:mi>k</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow><m:mi>n</m:mi></m:msubsup><m:mrow><m:mo>|</m:mo><m:msub><m:mi>c</m:mi><m:mi>k</m:mi></m:msub><m:mo>|</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></para>
+    <para id="id276423">Finally, to see part (5), suppose that there does exist a polynomial <m:math overflow="scroll"><m:mi>p</m:mi></m:math> of degree <m:math overflow="scroll"><m:mi>n</m:mi></m:math>
+such that <m:math overflow="scroll"><m:mrow><m:msqrt><m:mi>x</m:mi></m:msqrt><m:mo>=</m:mo><m:mi>p</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>≥</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math>
+Then <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:msup><m:mrow><m:mo>(</m:mo><m:mi>p</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>)</m:mo></m:mrow><m:mn>2</m:mn></m:msup></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>≥</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math>
+Now <m:math overflow="scroll"><m:msup><m:mi>p</m:mi><m:mn>2</m:mn></m:msup></m:math> is a polynomial of degree <m:math overflow="scroll"><m:mrow><m:mn>2</m:mn><m:mi>n</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+By part (2), the two polynomials <m:math overflow="scroll"><m:mrow><m:mi>q</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mi>x</m:mi></m:mrow></m:math> and <m:math overflow="scroll"><m:msup><m:mrow><m:mo>(</m:mo><m:mi>p</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>)</m:mo></m:mrow><m:mn>2</m:mn></m:msup></m:math> must be the same, implying that they have the same degree.
+However, the degree of <m:math overflow="scroll"><m:mi>q</m:mi></m:math> is 1, which is odd, and the
+degree of <m:math overflow="scroll"><m:msup><m:mi>p</m:mi><m:mn>2</m:mn></m:msup></m:math> is <m:math overflow="scroll"><m:mrow><m:mn>2</m:mn><m:mi>n</m:mi><m:mo>,</m:mo></m:mrow></m:math> which is even.
+Hence, we have arrived at a contradiction.</para>
+</proof></rule>
+<exercise id="fs-id1171763106785"><problem id="fs-id1171766544836">
+    <list id="id276657" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid7"> Let <m:math overflow="scroll"><m:mrow><m:mi>r</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mi>p</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo><m:mo>/</m:mo><m:mi>q</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:msup><m:mi>r</m:mi><m:mo>'</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>p</m:mi><m:mo>'</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>/</m:mo><m:msup><m:mi>q</m:mi><m:mo>'</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math>
+be two rational functions. Suppose <m:math overflow="scroll"><m:mrow><m:mi>r</m:mi><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>r</m:mi><m:mo>'</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> for infinitely many
+<m:math overflow="scroll"><m:mi>z</m:mi></m:math>'s. Prove that <m:math overflow="scroll"><m:mrow><m:mi>r</m:mi><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>r</m:mi><m:mo>'</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> for all <m:math overflow="scroll"><m:mi>z</m:mi></m:math> in the intersection of their domains.
+Is it true that <m:math overflow="scroll"><m:mrow><m:mi>p</m:mi><m:mo>=</m:mo><m:msup><m:mi>p</m:mi><m:mo>'</m:mo></m:msup></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>q</m:mi><m:mo>=</m:mo><m:msup><m:mi>q</m:mi><m:mo>'</m:mo></m:msup><m:mo>?</m:mo></m:mrow></m:math></item>
+      <item id="uid8"> Let <m:math overflow="scroll"><m:mi>p</m:mi></m:math> and <m:math overflow="scroll"><m:mi>q</m:mi></m:math> be polynomials of degree <m:math overflow="scroll"><m:mi>n</m:mi></m:math> and <m:math overflow="scroll"><m:mi>m</m:mi></m:math> respectively,
+and define a rational function <m:math overflow="scroll"><m:mi>r</m:mi></m:math> by <m:math overflow="scroll"><m:mrow><m:mi>r</m:mi><m:mo>=</m:mo><m:mi>p</m:mi><m:mo>/</m:mo><m:mi>q</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Prove that there exist positive constants <m:math overflow="scroll"><m:mi>C</m:mi></m:math> and <m:math overflow="scroll"><m:mi>B</m:mi></m:math>
+such that <m:math overflow="scroll"><m:msup><m:mrow><m:mo>|</m:mo><m:mi>r</m:mi><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mi>C</m:mi><m:mo>|</m:mo><m:mi>z</m:mi><m:mo>|</m:mo></m:mrow><m:mrow><m:mi>n</m:mi><m:mo>-</m:mo><m:mi>m</m:mi></m:mrow></m:msup></m:math> for all complex
+numbers <m:math overflow="scroll"><m:mi>z</m:mi></m:math> for which <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>z</m:mi><m:mo>|</m:mo><m:mo>&gt;</m:mo><m:mi>B</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid9"> Define <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>:</m:mo><m:mo>[</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mi>∞</m:mi><m:mo>)</m:mo><m:mo>→</m:mo><m:mi>R</m:mi></m:mrow></m:math> by <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msqrt><m:mi>x</m:mi></m:msqrt><m:mo>.</m:mo></m:mrow></m:math>
+Show that there is no rational function
+<m:math overflow="scroll"><m:mi>r</m:mi></m:math> such that <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mi>r</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>≥</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math>
+That is, the square root function does not agree with a rational function.
+</item>
+      <item id="uid10"> Define the real-valued function <m:math overflow="scroll"><m:mi>r</m:mi></m:math> on <m:math overflow="scroll"><m:mi>R</m:mi></m:math> by <m:math overflow="scroll"><m:mrow><m:mi>r</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mrow><m:mo>(</m:mo><m:mn>1</m:mn><m:mo>+</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math>
+Prove that there is no polynomial <m:math overflow="scroll"><m:mi>p</m:mi></m:math> such that <m:math overflow="scroll"><m:mrow><m:mi>p</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mi>r</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:math>
+for infinitely many real numbers <m:math overflow="scroll"><m:mi>x</m:mi></m:math>.
+</item>
+      <item id="uid11"> If <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is the real-valued function of a real variable given by <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mo>|</m:mo><m:mi>x</m:mi><m:mo>|</m:mo><m:mo>,</m:mo></m:mrow></m:math> show that <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is <emphasis effect="bold">not</emphasis> a rational function.
+HINT: Suppose <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>x</m:mi><m:mo>|</m:mo><m:mo>=</m:mo><m:mi>p</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>/</m:mo><m:mi>q</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math> Then <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>x</m:mi><m:mo>|</m:mo><m:mi>q</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mi>p</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:math>
+implying that <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>x</m:mi><m:mo>|</m:mo><m:mi>q</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:math> is a polynomial <m:math overflow="scroll"><m:mrow><m:mi>s</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Now use Theorem 3.1 to conclude that <m:math overflow="scroll"><m:mrow><m:mi>p</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mi>x</m:mi><m:mi>q</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:math> for
+all <m:math overflow="scroll"><m:mi>x</m:mi></m:math> and that <m:math overflow="scroll"><m:mrow><m:mi>p</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mo>-</m:mo><m:mi>x</m:mi><m:mi>q</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid12"> Let <m:math overflow="scroll"><m:mi>f</m:mi></m:math> be any complex-valued function of a complex variable, and let <m:math overflow="scroll"><m:mrow><m:msub><m:mi>c</m:mi><m:mn>1</m:mn></m:msub><m:mo>,</m:mo><m:mo>...</m:mo><m:mo>,</m:mo><m:msub><m:mi>c</m:mi><m:mi>n</m:mi></m:msub></m:mrow></m:math> be <m:math overflow="scroll"><m:mi>n</m:mi></m:math> distinct complex numbers that belong to the domain of <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Show that there does exist a polynomial <m:math overflow="scroll"><m:mi>p</m:mi></m:math> of degree <m:math overflow="scroll"><m:mi>n</m:mi></m:math> such that <m:math overflow="scroll"><m:mrow><m:mi>p</m:mi><m:mrow><m:mo>(</m:mo><m:msub><m:mi>c</m:mi><m:mi>j</m:mi></m:msub><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:msub><m:mi>c</m:mi><m:mi>j</m:mi></m:msub><m:mo>)</m:mo></m:mrow></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mn>1</m:mn><m:mo>≤</m:mo><m:mi>j</m:mi><m:mo>≤</m:mo><m:mi>n</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+HINT: Describe <m:math overflow="scroll"><m:mi>p</m:mi></m:math> in factored form.
+</item>
+      <item id="uid13"> Give examples to show that the maximum and minimum of two polynomials
+need not be a polynomial or even a rational function.
+</item>
+    </list>
+</problem></exercise>
+
+    <para id="id277750">Very important is the definition of the <emphasis effect="italics">composition</emphasis><m:math overflow="scroll"><m:mrow><m:mi>g</m:mi><m:mo>∘</m:mo><m:mi>f</m:mi></m:mrow></m:math> of two functions <m:math overflow="scroll"><m:mi>f</m:mi></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>g</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+<definition id="fs-id1171781051522"><term/><meaning id="fs-id1171759717929">
+    <para id="id277795">
+Let <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>:</m:mo><m:mi>S</m:mi><m:mo>→</m:mo><m:mi>T</m:mi></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>g</m:mi><m:mo>:</m:mo><m:mi>T</m:mi><m:mo>→</m:mo><m:mi>U</m:mi></m:mrow></m:math> be functions. We define a function <m:math overflow="scroll"><m:mrow><m:mi>g</m:mi><m:mo>∘</m:mo><m:mi>f</m:mi><m:mo>,</m:mo></m:mrow></m:math> with domain <m:math overflow="scroll"><m:mi>S</m:mi></m:math> and codomain <m:math overflow="scroll"><m:mrow><m:mi>U</m:mi><m:mo>,</m:mo></m:mrow></m:math> by <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>g</m:mi><m:mo>∘</m:mo><m:mi>f</m:mi><m:mo>)</m:mo><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mi>g</m:mi><m:mo>(</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math></para>
+    <para id="id277921">If <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>:</m:mo><m:mi>S</m:mi><m:mo>→</m:mo><m:mi>T</m:mi><m:mo>,</m:mo></m:mrow></m:math><m:math overflow="scroll"><m:mrow><m:mi>g</m:mi><m:mo>:</m:mo><m:mi>T</m:mi><m:mo>→</m:mo><m:mi>S</m:mi><m:mo>,</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>g</m:mi><m:mo>∘</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mi>x</m:mi></m:mrow></m:math>
+for all <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mi>S</m:mi><m:mo>,</m:mo></m:mrow></m:math> then <m:math overflow="scroll"><m:mi>g</m:mi></m:math> is called a <emphasis effect="italics">left inverse</emphasis> of <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+If <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>∘</m:mo><m:mi>g</m:mi><m:mo>(</m:mo><m:mi>y</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mi>y</m:mi></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>y</m:mi><m:mo>∈</m:mo><m:mi>T</m:mi><m:mo>,</m:mo></m:mrow></m:math> then <m:math overflow="scroll"><m:mi>g</m:mi></m:math>
+is called a <emphasis effect="italics">right inverse</emphasis> for <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>.</m:mo></m:mrow></m:math> If <m:math overflow="scroll"><m:mi>g</m:mi></m:math> is both a
+left inverse and a right inverse, then <m:math overflow="scroll"><m:mi>g</m:mi></m:math> is called an <emphasis effect="italics">inverse</emphasis> for <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>,</m:mo></m:mrow></m:math><m:math overflow="scroll"><m:mi>f</m:mi></m:math> is called <emphasis effect="italics">invertible</emphasis>, and we denote <m:math overflow="scroll"><m:mi>g</m:mi></m:math> by <m:math overflow="scroll"><m:mrow><m:msup><m:mi>f</m:mi><m:mrow><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msup><m:mo>.</m:mo></m:mrow></m:math></para>
+</meaning></definition>
+<exercise id="fs-id1171772118353"><problem id="fs-id1171784615352">
+    <list id="id278191" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid14"> Suppose <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>:</m:mo><m:mi>S</m:mi><m:mo>→</m:mo><m:mi>T</m:mi></m:mrow></m:math> has a left inverse.
+Prove that <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is 1-1.
+</item>
+      <item id="uid15"> Suppose <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>:</m:mo><m:mi>S</m:mi><m:mo>→</m:mo><m:mi>T</m:mi></m:mrow></m:math> has a right inverse.
+Prove that <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is onto.
+</item>
+      <item id="uid16"> Show that the composition of two polynomials is a polynomial
+and that the composition of two rational functions is a rational function.
+HINT: If <m:math overflow="scroll"><m:mi>p</m:mi></m:math> is a polynomial, show by induction that <m:math overflow="scroll"><m:msup><m:mi>p</m:mi><m:mi>n</m:mi></m:msup></m:math> is a polynomial.
+Now use <link target-id="fs-id1172704529252" document="m36141"/>.
+</item>
+      <item id="uid17"> Find formulas for <m:math overflow="scroll"><m:mrow><m:mi>g</m:mi><m:mo>∘</m:mo><m:mi>f</m:mi></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>∘</m:mo><m:mi>g</m:mi></m:mrow></m:math> for the following. What are the domains of these compositions?
+<list id="id278359" display="block" list-type="enumerated" number-style="lower-roman"><item id="uid18"> <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>+</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:msup><m:mrow><m:mo>(</m:mo><m:mn>1</m:mn><m:mo>+</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mrow><m:mn>1</m:mn><m:mo>/</m:mo><m:mn>2</m:mn></m:mrow></m:msup><m:mo>.</m:mo></m:mrow></m:math></item><item id="uid19"> <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mi>x</m:mi><m:mo>/</m:mo><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>1</m:mn><m:mo>)</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>g</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mi>x</m:mi><m:mo>/</m:mo><m:mo>(</m:mo><m:mn>1</m:mn><m:mo>-</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math></item><item id="uid20"> <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mi>a</m:mi><m:mi>x</m:mi><m:mo>+</m:mo><m:mi>b</m:mi></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>g</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mi>c</m:mi><m:mi>x</m:mi><m:mo>+</m:mo><m:mi>d</m:mi><m:mo>.</m:mo></m:mrow></m:math></item></list></item>
+    </list>
+</problem></exercise>
+  </content>
+</document>

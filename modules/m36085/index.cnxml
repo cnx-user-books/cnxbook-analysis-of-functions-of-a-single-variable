@@ -1,0 +1,554 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML">
+  <title>Properties of the Real Numbers</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m36085</md:content-id>
+  <md:title>Properties of the Real Numbers</md:title>
+  <md:abstract>Properties of the real numbers, discussing isomorphic subsets, nonempty subsets with a greatest lower bound, least upper bound properties, positive square roots,  and other aspects of real numbers.</md:abstract>
+  <md:uuid>d23f9e2d-62ba-4b25-a945-d38cdc4c7f81</md:uuid>
+</metadata>
+
+<content>
+<rule id="fs-id1172057816690" type="theorem"><statement id="fs-id8795165">
+    <para id="id62841">The set <m:math overflow="scroll"><m:mi>R</m:mi></m:math> contains a subset that is
+isomorphic to the ordered field <m:math overflow="scroll"><m:mi>Q</m:mi></m:math>
+of rational numbers, and hence subsets that are
+isomorphic to <m:math overflow="scroll"><m:mi>N</m:mi></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>Z</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+</statement></rule>
+<rule id="fs-id1172040765152"><label/>
+<statement id="fs-id1172041352839">
+    <para id="id63252"><emphasis effect="bold">REMARK.</emphasis>
+The proof of <link target-id="fs-id8795165"/> is immediate from part (b) of Exercise 1.7.
+In view of this theorem, we will simply think of the
+natural numbers, the integers, and the rational numbers as subsets of the real numbers.</para>
+</statement></rule>
+    <para id="id63261">Having made a definition of the set of real numbers,
+it is incumbent upon us now to verify that this set <m:math overflow="scroll"><m:mi>R</m:mi></m:math>
+satisfies our intuitive notions about the reals.
+Indeed, we will show that <m:math overflow="scroll"><m:msqrt><m:mn>2</m:mn></m:msqrt></m:math> is an element of <m:math overflow="scroll"><m:mi>R</m:mi></m:math>
+and hence is a real number
+(as plane geometry indicates it should be),
+and we will show in later chapters that there are elements
+of <m:math overflow="scroll"><m:mi>R</m:mi></m:math> that agree with our intuition about <m:math overflow="scroll"><m:mi>e</m:mi></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>π</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Before we can proceed to these tasks,
+we must establish some special properties of the field <m:math overflow="scroll"><m:mrow><m:mi>R</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+The first, the next theorem, is simply
+an analog for lower bounds of the least upper bound condition that comes from the completeness property.</para>
+   
+<rule id="fs-id1172048176086" type="theorem"><statement id="fs-id1172035748158">
+ <para id="id63540">
+      
+      <emphasis effect="italics">If <m:math overflow="scroll"><m:mi>S</m:mi></m:math> is a nonempty subset of <m:math overflow="scroll"><m:mi>R</m:mi></m:math> that is bounded below,
+then there exists a greatest lower bound for <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math></emphasis>
+    </para></statement>
+<proof id="fs-id1172037267936">
+    <para id="id63585">
+Define <m:math overflow="scroll"><m:mi>T</m:mi></m:math> to be the set of all real numbers <m:math overflow="scroll"><m:mi>x</m:mi></m:math> for which <m:math overflow="scroll"><m:mrow><m:mo>-</m:mo><m:mi>x</m:mi><m:mo>∈</m:mo><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+That is, <m:math overflow="scroll"><m:mi>T</m:mi></m:math> is the set <m:math overflow="scroll"><m:mrow><m:mo>-</m:mo><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+We claim first that <m:math overflow="scroll"><m:mi>T</m:mi></m:math> is bounded above.
+Thus, let <m:math overflow="scroll"><m:mi>m</m:mi></m:math> be a lower bound for the set <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+and let us show that the number <m:math overflow="scroll"><m:mrow><m:mo>-</m:mo><m:mi>m</m:mi></m:mrow></m:math> is an upper bound for <m:math overflow="scroll"><m:mrow><m:mi>T</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+If <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mi>T</m:mi><m:mo>,</m:mo></m:mrow></m:math> then <m:math overflow="scroll"><m:mrow><m:mo>-</m:mo><m:mi>x</m:mi><m:mo>∈</m:mo><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math> So, <m:math overflow="scroll"><m:mrow><m:mi>m</m:mi><m:mo>≤</m:mo><m:mo>-</m:mo><m:mi>x</m:mi><m:mo>,</m:mo></m:mrow></m:math> implying that <m:math overflow="scroll"><m:mrow><m:mo>-</m:mo><m:mi>m</m:mi><m:mo>≥</m:mo><m:mi>x</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Since this is true for all <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mi>T</m:mi><m:mo>,</m:mo></m:mrow></m:math> the number <m:math overflow="scroll"><m:mrow><m:mo>-</m:mo><m:mi>m</m:mi></m:mrow></m:math> is an upper bound for <m:math overflow="scroll"><m:mrow><m:mi>T</m:mi><m:mo>.</m:mo></m:mrow></m:math></para></proof>
+</rule>
+    <para id="id63799">Now, by the completeness assumption, <m:math overflow="scroll"><m:mi>T</m:mi></m:math> has a least upper bound <m:math overflow="scroll"><m:mrow><m:msub><m:mi>M</m:mi><m:mn>0</m:mn></m:msub><m:mo>.</m:mo></m:mrow></m:math>
+We claim that the number <m:math overflow="scroll"><m:mrow><m:mo>-</m:mo><m:msub><m:mi>M</m:mi><m:mn>0</m:mn></m:msub></m:mrow></m:math> is the greatest lower bound for <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+To prove this, we must check two things.
+First, we must show that <m:math overflow="scroll"><m:mrow><m:mo>-</m:mo><m:msub><m:mi>M</m:mi><m:mn>0</m:mn></m:msub></m:mrow></m:math> is a lower bound for <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Thus, let <m:math overflow="scroll"><m:mi>y</m:mi></m:math> be an element of <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math> Then <m:math overflow="scroll"><m:mrow><m:mo>-</m:mo><m:mi>y</m:mi><m:mo>∈</m:mo><m:mi>T</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+and therefore <m:math overflow="scroll"><m:mrow><m:mo>-</m:mo><m:mi>y</m:mi><m:mo>≤</m:mo><m:msub><m:mi>M</m:mi><m:mn>0</m:mn></m:msub><m:mo>.</m:mo></m:mrow></m:math> Hence, <m:math overflow="scroll"><m:mrow><m:mo>-</m:mo><m:msub><m:mi>M</m:mi><m:mn>0</m:mn></m:msub><m:mo>≤</m:mo><m:mi>y</m:mi><m:mo>,</m:mo></m:mrow></m:math> showing that <m:math overflow="scroll"><m:mrow><m:mo>-</m:mo><m:msub><m:mi>M</m:mi><m:mn>0</m:mn></m:msub></m:mrow></m:math>
+is a lower bound for <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+    <para id="id63991">Finally, we must show that <m:math overflow="scroll"><m:mrow><m:mo>-</m:mo><m:msub><m:mi>M</m:mi><m:mn>0</m:mn></m:msub></m:mrow></m:math> is the greatest lower bound for <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Thus, let <m:math overflow="scroll"><m:mi>m</m:mi></m:math> be a lower bound for <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+We saw above that this implies that <m:math overflow="scroll"><m:mrow><m:mo>-</m:mo><m:mi>m</m:mi></m:mrow></m:math> is an upper bound for <m:math overflow="scroll"><m:mrow><m:mi>T</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Hence, because <m:math overflow="scroll"><m:msub><m:mi>M</m:mi><m:mn>0</m:mn></m:msub></m:math> is the least upper bound for <m:math overflow="scroll"><m:mrow><m:mi>T</m:mi><m:mo>,</m:mo></m:mrow></m:math> we have that
+<m:math overflow="scroll"><m:mrow><m:mo>-</m:mo><m:mi>m</m:mi><m:mo>≥</m:mo><m:msub><m:mi>M</m:mi><m:mn>0</m:mn></m:msub><m:mo>,</m:mo></m:mrow></m:math> implying that <m:math overflow="scroll"><m:mrow><m:mi>m</m:mi><m:mo>≤</m:mo><m:mo>-</m:mo><m:msub><m:mi>M</m:mi><m:mn>0</m:mn></m:msub><m:mo>,</m:mo></m:mrow></m:math>
+and this proves that <m:math overflow="scroll"><m:mrow><m:mo>-</m:mo><m:msub><m:mi>M</m:mi><m:mn>0</m:mn></m:msub></m:mrow></m:math> is the infimum of the set <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+    <para id="id64159">The following is the most basic and frequently used property of least upper bounds.
+It is our first glimpse of “ limits.”
+Though the argument is remarkably short and sweet, it will provide the mechanism for many of our later proofs,
+so master this one.</para>
+<rule id="fs-id1170177642504" type="theorem"><statement id="fs-id1170192012882">
+    <para id="id64166">
+      
+      <emphasis effect="italics">Let <m:math overflow="scroll"><m:mi>S</m:mi></m:math> be a nonempty subset of <m:math overflow="scroll"><m:mi>R</m:mi></m:math> that is bounded above, and Let <m:math overflow="scroll"><m:msub><m:mi>M</m:mi><m:mn>0</m:mn></m:msub></m:math> denote the least upper bound of <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>;</m:mo></m:mrow></m:math> i.e., <m:math overflow="scroll"><m:mrow><m:msub><m:mi>M</m:mi><m:mn>0</m:mn></m:msub><m:mo>=</m:mo><m:mo movablelimits="true" form="prefix">sup</m:mo><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math> Then, for any positive real number <m:math overflow="scroll"><m:mi>ϵ</m:mi></m:math> there exists an element <m:math overflow="scroll"><m:mi>t</m:mi></m:math> of <m:math overflow="scroll"><m:mi>S</m:mi></m:math> such that <m:math overflow="scroll"><m:mrow><m:mi>t</m:mi><m:mo>&gt;</m:mo><m:msub><m:mi>M</m:mi><m:mn>0</m:mn></m:msub><m:mo>-</m:mo><m:mi>ϵ</m:mi><m:mo>.</m:mo></m:mrow></m:math></emphasis>
+    </para></statement>
+<proof id="fs-id1170205476554">
+    <para id="id64299">Let <m:math overflow="scroll"><m:mrow><m:mi>ϵ</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn></m:mrow></m:math> be given.
+Since <m:math overflow="scroll"><m:mrow><m:msub><m:mi>M</m:mi><m:mn>0</m:mn></m:msub><m:mo>-</m:mo><m:mi>ϵ</m:mi><m:mo>&lt;</m:mo><m:msub><m:mi>M</m:mi><m:mn>0</m:mn></m:msub><m:mo>,</m:mo></m:mrow></m:math> it must be that <m:math overflow="scroll"><m:mrow><m:msub><m:mi>M</m:mi><m:mn>0</m:mn></m:msub><m:mo>-</m:mo><m:mi>ϵ</m:mi></m:mrow></m:math>
+is not an upper bound for <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+(<m:math overflow="scroll"><m:msub><m:mi>M</m:mi><m:mn>0</m:mn></m:msub></m:math> is necessarily less than or equal to any other upper bound of <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math>) Therefore, there exists an element <m:math overflow="scroll"><m:mrow><m:mi>t</m:mi><m:mo>∈</m:mo><m:mi>S</m:mi></m:mrow></m:math> for which <m:math overflow="scroll"><m:mrow><m:mi>t</m:mi><m:mo>&gt;</m:mo><m:msub><m:mi>M</m:mi><m:mn>0</m:mn></m:msub><m:mo>-</m:mo><m:mi>ϵ</m:mi><m:mo>.</m:mo></m:mrow></m:math> This is exactly what the theorem asserts.</para></proof>
+</rule>
+<exercise id="fs-id1170181982622">
+<problem id="fs-id1170185131763">
+    
+    <list id="id64454" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid1"> Let <m:math overflow="scroll"><m:mi>S</m:mi></m:math> be a nonempty subset of <m:math overflow="scroll"><m:mi>R</m:mi></m:math> which is bounded below,
+and let <m:math overflow="scroll"><m:msub><m:mi>m</m:mi><m:mn>0</m:mn></m:msub></m:math> denote the infimum of <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math> Prove
+that, for every positive <m:math overflow="scroll"><m:mrow><m:mi>δ</m:mi><m:mo>,</m:mo></m:mrow></m:math> there exists an element <m:math overflow="scroll"><m:mi>s</m:mi></m:math> of <m:math overflow="scroll"><m:mi>S</m:mi></m:math> such that <m:math overflow="scroll"><m:mrow><m:mi>s</m:mi><m:mo>&lt;</m:mo><m:msub><m:mi>m</m:mi><m:mn>0</m:mn></m:msub><m:mo>+</m:mo><m:mi>δ</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Mimic the proof to <link target-id="fs-id1170177642504"/>.
+</item>
+      <item id="uid2"> Let <m:math overflow="scroll"><m:mi>S</m:mi></m:math> be any bounded subset of <m:math overflow="scroll"><m:mrow><m:mi>R</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+and write <m:math overflow="scroll"><m:mrow><m:mo>-</m:mo><m:mi>S</m:mi></m:mrow></m:math> for the set of negatives of the elements of <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Prove that <m:math overflow="scroll"><m:mrow><m:mo movablelimits="true" form="prefix">sup</m:mo><m:mo>(</m:mo><m:mo>-</m:mo><m:mi>S</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mo>-</m:mo><m:mo movablelimits="true" form="prefix">inf</m:mo><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid3"> Use part (b) to give an alternate proof of part (a)
+by using <link target-id="fs-id1170177642504"/> and a minus sign.
+</item>
+    </list>
+</problem>
+</exercise>
+<exercise id="fs-id1170186546036">
+<problem id="fs-id1170190612953">
+    
+    <list id="id64696" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid4"> Let <m:math overflow="scroll"><m:mi>S</m:mi></m:math> be the set of all real numbers <m:math overflow="scroll"><m:mi>x</m:mi></m:math> for which <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mn>1</m:mn><m:mo>.</m:mo></m:mrow></m:math>
+Give an example of an upper bound for <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+What is the least upper bound of <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>?</m:mo></m:mrow></m:math> Is <m:math overflow="scroll"><m:mrow><m:mo movablelimits="true" form="prefix">sup</m:mo><m:mi>S</m:mi></m:mrow></m:math> an element of <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>?</m:mo></m:mrow></m:math></item>
+      <item id="uid5"> Let <m:math overflow="scroll"><m:mi>S</m:mi></m:math> be the set of all <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mi>R</m:mi></m:mrow></m:math> for which <m:math overflow="scroll"><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>≤</m:mo><m:mn>4</m:mn><m:mo>.</m:mo></m:mrow></m:math>
+Give an example of an upper bound for <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+What is the least upper bound of <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>?</m:mo></m:mrow></m:math>
+Does <m:math overflow="scroll"><m:mrow><m:mo movablelimits="true" form="prefix">sup</m:mo><m:mi>S</m:mi></m:mrow></m:math> belong to <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>?</m:mo></m:mrow></m:math></item>
+    </list>
+</problem></exercise>
+    <para id="id64917">We show now that <m:math overflow="scroll"><m:mi>R</m:mi></m:math> contains elements other than
+the rational numbers in <m:math overflow="scroll"><m:mrow><m:mi>Q</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Of course this holds for any complete ordered field.
+The next theorem makes this quite explicit.</para>
+<rule id="fs-id1170178787854" type="theorem"><statement id="fs-id1170178757734">
+    <para id="id64957"><emphasis effect="italics">If <m:math overflow="scroll"><m:mi>x</m:mi></m:math> is a positive real number, then there exists a positive real number <m:math overflow="scroll"><m:mi>y</m:mi></m:math> such that <m:math overflow="scroll"><m:mrow><m:msup><m:mi>y</m:mi><m:mn>2</m:mn></m:msup><m:mo>=</m:mo><m:mi>x</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+That is, every positive real number <m:math overflow="scroll"><m:mi>x</m:mi></m:math> has a positive
+square root in <m:math overflow="scroll"><m:mrow><m:mi>R</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Moreover, there is only one positive square root of <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>.</m:mo></m:mrow></m:math></emphasis>
+    </para>
+</statement>
+<proof id="fs-id1842293">
+    <para id="id65047">Let <m:math overflow="scroll"><m:mi>S</m:mi></m:math> be the set of positive real numbers <m:math overflow="scroll"><m:mi>t</m:mi></m:math> for which
+<m:math overflow="scroll"><m:mrow><m:msup><m:mi>t</m:mi><m:mn>2</m:mn></m:msup><m:mo>≤</m:mo><m:mi>x</m:mi><m:mo>.</m:mo></m:mrow></m:math> Then <m:math overflow="scroll"><m:mi>S</m:mi></m:math> is nonempty
+Indeed, If <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>&gt;</m:mo><m:mn>1</m:mn><m:mo>,</m:mo></m:mrow></m:math> then 1 is in <m:math overflow="scroll"><m:mi>S</m:mi></m:math>
+because <m:math overflow="scroll"><m:mrow><m:msup><m:mn>1</m:mn><m:mn>2</m:mn></m:msup><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>×</m:mo><m:mn>1</m:mn><m:mo>&lt;</m:mo><m:mn>1</m:mn><m:mo>×</m:mo><m:mi>x</m:mi><m:mo>=</m:mo><m:mi>x</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+And, if <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>≤</m:mo><m:mn>1</m:mn><m:mo>,</m:mo></m:mrow></m:math> then <m:math overflow="scroll"><m:mi>x</m:mi></m:math> itself is in <m:math overflow="scroll"><m:mi>S</m:mi></m:math>,
+because <m:math overflow="scroll"><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>=</m:mo><m:mi>x</m:mi><m:mo>×</m:mo><m:mi>x</m:mi><m:mo>≤</m:mo><m:mn>1</m:mn><m:mo>×</m:mo><m:mi>x</m:mi><m:mo>=</m:mo><m:mi>x</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+    <para id="id65241">Also, <m:math overflow="scroll"><m:mi>S</m:mi></m:math> is bounded above.
+In fact, the number <m:math overflow="scroll"><m:mrow><m:mn>1</m:mn><m:mo>+</m:mo><m:mi>x</m:mi><m:mo>/</m:mo><m:mn>2</m:mn></m:mrow></m:math> is an upper bound of <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Indeed, arguing by contradiction, suppose there were a <m:math overflow="scroll"><m:mi>t</m:mi></m:math> in <m:math overflow="scroll"><m:mi>S</m:mi></m:math> such that <m:math overflow="scroll"><m:mrow><m:mi>t</m:mi><m:mo>&gt;</m:mo><m:mn>1</m:mn><m:mo>+</m:mo><m:mi>x</m:mi><m:mo>/</m:mo><m:mn>2</m:mn><m:mo>.</m:mo></m:mrow></m:math>
+Then</para>
+    <equation id="id65327">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mi>x</m:mi>
+          <m:mo>≥</m:mo>
+          <m:msup>
+            <m:mi>t</m:mi>
+            <m:mn>2</m:mn>
+          </m:msup>
+          <m:mo>&gt;</m:mo>
+          <m:msup>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mn>1</m:mn>
+              <m:mo>+</m:mo>
+              <m:mi>x</m:mi>
+              <m:mo>/</m:mo>
+              <m:mn>2</m:mn>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mn>2</m:mn>
+          </m:msup>
+          <m:mo>=</m:mo>
+          <m:mn>1</m:mn>
+          <m:mo>+</m:mo>
+          <m:mi>x</m:mi>
+          <m:mo>+</m:mo>
+          <m:msup>
+            <m:mi>x</m:mi>
+            <m:mn>2</m:mn>
+          </m:msup>
+          <m:mo>/</m:mo>
+          <m:mn>4</m:mn>
+          <m:mo>&gt;</m:mo>
+          <m:mi>x</m:mi>
+          <m:mo>,</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id65401">which is a contradiction.
+Therefore, <m:math overflow="scroll"><m:mrow><m:mn>1</m:mn><m:mo>+</m:mo><m:mi>x</m:mi><m:mo>/</m:mo><m:mn>2</m:mn></m:mrow></m:math> is an upper bound of <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>,</m:mo></m:mrow></m:math> and so <m:math overflow="scroll"><m:mi>S</m:mi></m:math> is bounded above.</para>
+<para id="eip-id1172012170650">Now let <m:math overflow="scroll"><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mo movablelimits="true" form="prefix">sup</m:mo><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math> We wish to show that <m:math overflow="scroll"><m:mrow><m:msup><m:mi>y</m:mi><m:mn>2</m:mn></m:msup><m:mo>=</m:mo><m:mi>x</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+We show first that <m:math overflow="scroll"><m:mrow><m:msup><m:mi>y</m:mi><m:mn>2</m:mn></m:msup><m:mo>≤</m:mo><m:mi>x</m:mi><m:mo>,</m:mo></m:mrow></m:math> and then we will show that <m:math overflow="scroll"><m:mrow><m:msup><m:mi>y</m:mi><m:mn>2</m:mn></m:msup><m:mo>≥</m:mo><m:mi>x</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+It will then follow from the tricotomy law that <m:math overflow="scroll"><m:mrow><m:msup><m:mi>y</m:mi><m:mn>2</m:mn></m:msup><m:mo>=</m:mo><m:mi>x</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+We prove both these inequalities by contradiction.</para>
+<para id="eip-id1163835923491">So, assume first that <m:math overflow="scroll"><m:mrow><m:msup><m:mi>y</m:mi><m:mn>2</m:mn></m:msup><m:mo>&gt;</m:mo><m:mi>x</m:mi><m:mo>,</m:mo></m:mrow></m:math> and write
+<m:math overflow="scroll"><m:mi>α</m:mi></m:math> for the positive number <m:math overflow="scroll"><m:mrow><m:msup><m:mi>y</m:mi><m:mn>2</m:mn></m:msup><m:mo>-</m:mo><m:mi>x</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Let <m:math overflow="scroll"><m:mi>ϵ</m:mi></m:math> be the positive number <m:math overflow="scroll"><m:mrow><m:mi>α</m:mi><m:mo>/</m:mo><m:mo>(</m:mo><m:mn>2</m:mn><m:mi>y</m:mi><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math> and,
+using Theorem 1.5, choose a <m:math overflow="scroll"><m:mrow><m:mi>t</m:mi><m:mo>∈</m:mo><m:mi>S</m:mi></m:mrow></m:math> such that <m:math overflow="scroll"><m:mrow><m:mi>t</m:mi><m:mo>&gt;</m:mo><m:mi>y</m:mi><m:mo>-</m:mo><m:mi>ϵ</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Then <m:math overflow="scroll"><m:mrow><m:mi>y</m:mi><m:mo>+</m:mo><m:mi>t</m:mi><m:mo>≤</m:mo><m:mo>(</m:mo><m:mn>2</m:mn><m:mi>y</m:mi><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>y</m:mi><m:mo>-</m:mo><m:mi>t</m:mi><m:mo>&lt;</m:mo><m:mi>ϵ</m:mi><m:mo>=</m:mo><m:mi>α</m:mi><m:mo>/</m:mo><m:mn>2</m:mn><m:mi>y</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+So,</para>
+<para id="eip-id1166433881979"><m:math overflow="scroll" mode="display">
+        <m:mtable displaystyle="true">
+          <m:mtr>
+            <m:mtd columnalign="right">
+              <m:mi>α</m:mi>
+            </m:mtd>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:msup>
+                  <m:mi>y</m:mi>
+                  <m:mn>2</m:mn>
+                </m:msup>
+                <m:mo>-</m:mo>
+                <m:mi>x</m:mi>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:msup>
+                  <m:mi>y</m:mi>
+                  <m:mn>2</m:mn>
+                </m:msup>
+                <m:mo>-</m:mo>
+                <m:msup>
+                  <m:mi>t</m:mi>
+                  <m:mn>2</m:mn>
+                </m:msup>
+                <m:mo>+</m:mo>
+                <m:msup>
+                  <m:mi>t</m:mi>
+                  <m:mn>2</m:mn>
+                </m:msup>
+                <m:mo>-</m:mo>
+                <m:mi>x</m:mi>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>≤</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:msup>
+                  <m:mi>y</m:mi>
+                  <m:mn>2</m:mn>
+                </m:msup>
+                <m:mo>-</m:mo>
+                <m:msup>
+                  <m:mi>t</m:mi>
+                  <m:mn>2</m:mn>
+                </m:msup>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>y</m:mi>
+                <m:mo>+</m:mo>
+                <m:mi>t</m:mi>
+                <m:mo>)</m:mo>
+                <m:mo>(</m:mo>
+                <m:mi>y</m:mi>
+                <m:mo>-</m:mo>
+                <m:mi>t</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>≤</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mn>2</m:mn>
+                <m:mi>y</m:mi>
+                <m:mo>(</m:mo>
+                <m:mi>y</m:mi>
+                <m:mo>-</m:mo>
+                <m:mi>t</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>&lt;</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mn>2</m:mn>
+                <m:mi>y</m:mi>
+                <m:mi>ϵ</m:mi>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>&lt;</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mn>2</m:mn>
+                <m:mi>y</m:mi>
+                <m:mo>×</m:mo>
+                <m:mfrac>
+                  <m:mi>α</m:mi>
+                  <m:mrow>
+                    <m:mn>2</m:mn>
+                    <m:mi>y</m:mi>
+                  </m:mrow>
+                </m:mfrac>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mi>α</m:mi>
+                <m:mo>,</m:mo>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+        </m:mtable>
+      </m:math>
+    </para>
+<para id="eip-id1170743907878">which is a contradiction. Therefore <m:math overflow="scroll"><m:msup><m:mi>y</m:mi><m:mn>2</m:mn></m:msup></m:math> is not greater than <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+<para id="eip-id1165801995933">Now we show that <m:math overflow="scroll"><m:msup><m:mi>y</m:mi><m:mn>2</m:mn></m:msup></m:math> is not less than <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>.</m:mo></m:mrow></m:math> Again,
+arguing by contradiction, suppose it is,
+and let <m:math overflow="scroll"><m:mi>ϵ</m:mi></m:math> be the positive number <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>-</m:mo><m:msup><m:mi>y</m:mi><m:mn>2</m:mn></m:msup><m:mo>.</m:mo></m:mrow></m:math>
+Choose a positive number <m:math overflow="scroll"><m:mi>δ</m:mi></m:math> that is less than <m:math overflow="scroll"><m:mi>y</m:mi></m:math>
+and also less than <m:math overflow="scroll"><m:mrow><m:mi>ϵ</m:mi><m:mo>/</m:mo><m:mo>(</m:mo><m:mn>3</m:mn><m:mi>y</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Let <m:math overflow="scroll"><m:mrow><m:mi>s</m:mi><m:mo>=</m:mo><m:mi>y</m:mi><m:mo>+</m:mo><m:mi>δ</m:mi><m:mo>.</m:mo></m:mrow></m:math> Then <m:math overflow="scroll"><m:mi>s</m:mi></m:math> is not in <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>,</m:mo></m:mrow></m:math> whence <m:math overflow="scroll"><m:mrow><m:msup><m:mi>s</m:mi><m:mn>2</m:mn></m:msup><m:mo>&gt;</m:mo><m:mi>x</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+so that we must have</para>
+<para id="eip-id1170447175815"><m:math overflow="scroll" mode="display">
+        <m:mtable displaystyle="true">
+          <m:mtr>
+            <m:mtd columnalign="right">
+              <m:mi>ϵ</m:mi>
+            </m:mtd>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mi>x</m:mi>
+                <m:mo>-</m:mo>
+                <m:msup>
+                  <m:mi>y</m:mi>
+                  <m:mn>2</m:mn>
+                </m:msup>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mi>x</m:mi>
+                <m:mo>-</m:mo>
+                <m:msup>
+                  <m:mi>s</m:mi>
+                  <m:mn>2</m:mn>
+                </m:msup>
+                <m:mo>+</m:mo>
+                <m:msup>
+                  <m:mi>s</m:mi>
+                  <m:mn>2</m:mn>
+                </m:msup>
+                <m:mo>-</m:mo>
+                <m:msup>
+                  <m:mi>y</m:mi>
+                  <m:mn>2</m:mn>
+                </m:msup>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>≤</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:msup>
+                  <m:mi>s</m:mi>
+                  <m:mn>2</m:mn>
+                </m:msup>
+                <m:mo>-</m:mo>
+                <m:msup>
+                  <m:mi>y</m:mi>
+                  <m:mn>2</m:mn>
+                </m:msup>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>s</m:mi>
+                <m:mo>+</m:mo>
+                <m:mi>y</m:mi>
+                <m:mo>)</m:mo>
+                <m:mo>(</m:mo>
+                <m:mi>s</m:mi>
+                <m:mo>-</m:mo>
+                <m:mi>y</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mn>2</m:mn>
+                <m:mi>y</m:mi>
+                <m:mo>+</m:mo>
+                <m:mi>δ</m:mi>
+                <m:mo>)</m:mo>
+                <m:mi>δ</m:mi>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>&lt;</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mn>3</m:mn>
+                <m:mi>y</m:mi>
+                <m:mi>δ</m:mi>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>&lt;</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mi>ϵ</m:mi>
+                <m:mo>,</m:mo>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+        </m:mtable>
+      </m:math>
+    </para>
+<para id="eip-id1170344321095">which again is a contradiction.</para>
+<para id="eip-id1166432812497">This completes the proof that <m:math overflow="scroll"><m:mrow><m:msup><m:mi>y</m:mi><m:mn>2</m:mn></m:msup><m:mo>=</m:mo><m:mi>x</m:mi><m:mo>;</m:mo></m:mrow></m:math> i.e., that <m:math overflow="scroll"><m:mi>x</m:mi></m:math>
+has a positive square root.</para>
+<para id="eip-id1170764197897">Finally, if <m:math overflow="scroll"><m:msup><m:mi>y</m:mi><m:mo>'</m:mo></m:msup></m:math> were another positive number for which <m:math overflow="scroll"><m:mrow><m:msup><m:mrow><m:msup><m:mi>y</m:mi><m:mo>'</m:mo></m:msup></m:mrow><m:mn>2</m:mn></m:msup><m:mo>=</m:mo><m:mi>x</m:mi><m:mo>,</m:mo></m:mrow></m:math> we show that
+<m:math overflow="scroll"><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:msup><m:mi>y</m:mi><m:mo>'</m:mo></m:msup></m:mrow></m:math> by ruling out the other two cases: <m:math overflow="scroll"><m:mrow><m:mi>y</m:mi><m:mo>&lt;</m:mo><m:msup><m:mi>y</m:mi><m:mo>'</m:mo></m:msup></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>y</m:mi><m:mo>&gt;</m:mo><m:msup><m:mi>y</m:mi><m:mo>'</m:mo></m:msup><m:mo>.</m:mo></m:mrow></m:math>
+For instance, if <m:math overflow="scroll"><m:mrow><m:mi>y</m:mi><m:mo>&lt;</m:mo><m:msup><m:mi>y</m:mi><m:mo>'</m:mo></m:msup><m:mo>,</m:mo></m:mrow></m:math> then we would have that <m:math overflow="scroll"><m:mrow><m:msup><m:mi>y</m:mi><m:mn>2</m:mn></m:msup><m:mo>&lt;</m:mo><m:msup><m:mrow><m:msup><m:mi>y</m:mi><m:mo>'</m:mo></m:msup></m:mrow><m:mn>2</m:mn></m:msup><m:mo>,</m:mo></m:mrow></m:math> giving that</para>
+<para id="eip-id1172051302006"><m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mi>x</m:mi>
+          <m:mo>=</m:mo>
+          <m:msup>
+            <m:mi>y</m:mi>
+            <m:mn>2</m:mn>
+          </m:msup>
+          <m:mo>&lt;</m:mo>
+          <m:msup>
+            <m:mrow>
+              <m:msup>
+                <m:mi>y</m:mi>
+                <m:mo>'</m:mo>
+              </m:msup>
+            </m:mrow>
+            <m:mn>2</m:mn>
+          </m:msup>
+          <m:mo>=</m:mo>
+          <m:mi>x</m:mi>
+          <m:mo>,</m:mo>
+        </m:mrow>
+      </m:math>
+    </para>
+<para id="eip-id1165800424061">implying that <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mi>x</m:mi><m:mo>,</m:mo></m:mrow></m:math> and this is a contradiction.</para>
+</proof></rule>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <definition id="fs-id1171014648466"><term/><meaning id="fs-id1171028058525">
+    <para id="id66558">
+If <m:math overflow="scroll"><m:mi>x</m:mi></m:math> is a positive real number, then the symbol
+<m:math overflow="scroll"><m:msqrt><m:mi>x</m:mi></m:msqrt></m:math> will denote the unique positive number <m:math overflow="scroll"><m:mi>y</m:mi></m:math> for which <m:math overflow="scroll"><m:mrow><m:msup><m:mi>y</m:mi><m:mn>2</m:mn></m:msup><m:mo>=</m:mo><m:mi>x</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Of course, <m:math overflow="scroll"><m:msqrt><m:mn>0</m:mn></m:msqrt></m:math> denotes the number 0.</para>
+</meaning></definition>
+
+<rule id="fs-id1165788551706"><label/>
+<statement id="fs-id1165795236312">
+    <para id="id66625"><emphasis effect="bold">REMARK</emphasis>
+Part (c) of <link document="m36069" target-id="fs-id5983575"/> shows that the field <m:math overflow="scroll"><m:mi>Q</m:mi></m:math> contains no number whose square
+is 2, and <link target-id="fs-id1170178787854"/> shows that the field <m:math overflow="scroll"><m:mi>R</m:mi></m:math> does contain a number whose square is 2.
+We have therefore “proved” that the real numbers is a larger
+set than the rational numbers.
+It may come as a surprise to learn that we only now have been
+able to prove that. Look back through the chapter to be sure.
+It follows also that <m:math overflow="scroll"><m:mi>Q</m:mi></m:math> itself is not a complete
+ordered field. If it were, it would be isomorphic to <m:math overflow="scroll"><m:mrow><m:mi>R</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+by Theorem 1.2, so that it would have to contain a
+square root of 2, which it does not.</para>
+   </statement></rule>
+<definition id="fs-id1165790977763"><term/><meaning id="fs-id1165793481243">
+ <para id="id66709">A real number <m:math overflow="scroll"><m:mi>x</m:mi></m:math> that is not a rational number,
+i.e., is not an element of the subset <m:math overflow="scroll"><m:mi>Q</m:mi></m:math> of <m:math overflow="scroll"><m:mrow><m:mi>R</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+is called an <emphasis effect="italics">irrational number.</emphasis></para>
+</meaning></definition>
+<exercise id="fs-id1165795229697"><problem id="fs-id1165792259592">    
+
+    <list id="id66777" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid8"> Prove that every positive real number has exactly 2 square roots,
+one positive (<m:math overflow="scroll"><m:msqrt><m:mi>x</m:mi></m:msqrt></m:math>) and the other negative (<m:math overflow="scroll"><m:mrow><m:mo>-</m:mo><m:msqrt><m:mi>x</m:mi></m:msqrt></m:mrow></m:math>).
+</item>
+      <item id="uid9"> Prove that if <m:math overflow="scroll"><m:mi>x</m:mi></m:math> is a negative real number,
+then there is no real number <m:math overflow="scroll"><m:mi>y</m:mi></m:math> such that <m:math overflow="scroll"><m:mrow><m:msup><m:mi>y</m:mi><m:mn>2</m:mn></m:msup><m:mo>=</m:mo><m:mi>x</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid10"> Prove that the product of a nonzero rational number and an
+arbitrary irrational
+number must be irrational.
+Show by example that the sum and product of irrational numbers can be rational.
+</item>
+    </list>
+</problem></exercise>
+  </content>
+</document>

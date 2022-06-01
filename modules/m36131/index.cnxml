@@ -1,0 +1,40 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML">
+  <title>Functions and Continuity Definition of the Number π</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m36131</md:content-id>
+  <md:title>Functions and Continuity Definition of the Number π</md:title>
+  <md:abstract>An introduction, with links, to a subcollection about functions and continuity.</md:abstract>
+  <md:uuid>3d0b2075-cd3d-4c75-83dc-287f7eef80ce</md:uuid>
+</metadata>
+
+<content>
+    <para id="id62155">The concept of a function is perhaps the most basic one
+in mathematical analysis. The objects of interest in our subject can
+often be represented as functions, and the “ unknowns” in
+our equations are frequently functions.
+Therefore, we will spend some time developing and understanding various kinds
+of functions,
+including functions defined by polynomials, by power series, and as
+limits of other functions.
+In particular, we introduce in this chapter the elementary transcendental functions.
+We begin with the familiar set theoretical notion of a function,
+and then move quickly to their analytical properties, specifically that of continuity.</para>
+    <para id="id62166">The main theorems of this chapter include:</para>
+    <list id="id62173" display="block" list-type="enumerated"><item id="uid1">The <emphasis effect="bold">Intermediate Value Theorem</emphasis> (<link target-id="fs-id3847303" document="m36167"/>),
+</item>
+      <item id="uid2">the theorem that asserts that a <emphasis effect="bold">continuous real-valued function
+on a compact set attains a maximum and minimum value</emphasis> (<link target-id="fs-id1169166022775" document="m36167"/>),
+</item>
+      <item id="uid3">A <emphasis effect="bold">continuous function on a compact set is uniformly continuous</emphasis> (<link target-id="" document=""/>),
+</item>
+      <item id="uid4">The <emphasis effect="bold">Identity Theorem for Power Series Functions</emphasis> (<link target-id="fs-id1171757680912" document="m36165"/>),
+</item>
+      <item id="uid5">The definition of the real number <m:math overflow="scroll"><m:mrow><m:mi>π</m:mi><m:mo>,</m:mo></m:mrow></m:math></item>
+      <item id="uid6">The theorem that asserts that the
+<emphasis effect="bold">uniform limit of a sequence of continuous functions is continuous</emphasis> (<link target-id="fs-id8597860" document="m36178"/>), and
+</item>
+      <item id="uid7">the <emphasis effect="bold">Weierstrass <m:math overflow="scroll"><m:mi>M</m:mi></m:math>-Test</emphasis> (<link target-id="fs-id2892663" document="m36178"/>).
+</item>
+    </list>
+  </content>
+</document>

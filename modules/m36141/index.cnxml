@@ -1,0 +1,613 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML">
+  <title>Functions</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m36141</md:content-id>
+  <md:title>Functions</md:title>
+  <md:abstract>A module about functions. Many terms, such as graph, real-valued, complex-valued, imaginary, bounded, even, odd, and others are defined. An exercise at the end involves some practice by proving statements and theorems related to these definitions of functions.</md:abstract>
+  <md:uuid>de059f76-bc20-4205-ae3b-511266948324</md:uuid>
+</metadata>
+
+<content>
+<definition id="fs-id1172703682858"><term/><meaning id="fs-id1172694551608">
+    <para id="id314199">
+Let <m:math overflow="scroll"><m:mi>S</m:mi></m:math> and <m:math overflow="scroll"><m:mi>T</m:mi></m:math> be sets. A <emphasis effect="italics">function</emphasis> from <m:math overflow="scroll"><m:mi>S</m:mi></m:math> into <m:math overflow="scroll"><m:mi>T</m:mi></m:math> (notation <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>:</m:mo><m:mi>S</m:mi><m:mo>→</m:mo><m:mi>T</m:mi></m:mrow></m:math>) is a rule that assigns to each
+element <m:math overflow="scroll"><m:mi>x</m:mi></m:math> in <m:math overflow="scroll"><m:mi>S</m:mi></m:math> a unique element denoted by <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:math> in <m:math overflow="scroll"><m:mrow><m:mi>T</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+    <para id="id314643">It is useful to think of a function as a mechanism or black box.
+We use the elements of <m:math overflow="scroll"><m:mi>S</m:mi></m:math> as inputs to the function, and the outputs
+are elements of the set <m:math overflow="scroll"><m:mrow><m:mi>T</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+    <para id="id314665">If <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>:</m:mo><m:mi>S</m:mi><m:mo>→</m:mo><m:mi>T</m:mi></m:mrow></m:math> is a function, then <m:math overflow="scroll"><m:mi>S</m:mi></m:math> is called the <emphasis effect="italics">domain</emphasis> of <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+and the set <m:math overflow="scroll"><m:mi>T</m:mi></m:math> is called the <emphasis effect="italics">codomain</emphasis> of <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+The <emphasis effect="italics">range</emphasis> or <emphasis effect="italics">image</emphasis> of <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is the
+set of all elements <m:math overflow="scroll"><m:mi>y</m:mi></m:math> in the codomain <m:math overflow="scroll"><m:mi>T</m:mi></m:math> for which there exists an <m:math overflow="scroll"><m:mi>x</m:mi></m:math> in the domain <m:math overflow="scroll"><m:mi>S</m:mi></m:math> such that <m:math overflow="scroll"><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+We denote the range by <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>S</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+The codomain is the set of all potential outputs,
+while the range is the set of actual outputs.</para>
+    <para id="id314824">Suppose <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is a function from a set <m:math overflow="scroll"><m:mi>S</m:mi></m:math> into a set <m:math overflow="scroll"><m:mrow><m:mi>T</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+If <m:math overflow="scroll"><m:mrow><m:mi>A</m:mi><m:mo>⊆</m:mo><m:mi>S</m:mi><m:mo>,</m:mo></m:mrow></m:math> we write <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>A</m:mi><m:mo>)</m:mo></m:mrow></m:math> for the
+subset of <m:math overflow="scroll"><m:mi>T</m:mi></m:math>
+containing all the elements <m:math overflow="scroll"><m:mrow><m:mi>t</m:mi><m:mo>∈</m:mo><m:mi>T</m:mi></m:mrow></m:math> for which there exists an <m:math overflow="scroll"><m:mrow><m:mi>s</m:mi><m:mo>∈</m:mo><m:mi>A</m:mi></m:mrow></m:math> such that <m:math overflow="scroll"><m:mrow><m:mi>t</m:mi><m:mo>=</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>s</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+We call <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>A</m:mi><m:mo>)</m:mo></m:mrow></m:math> the <emphasis effect="italics">image</emphasis> of <m:math overflow="scroll"><m:mi>A</m:mi></m:math> under <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Similarly, if <m:math overflow="scroll"><m:mrow><m:mi>B</m:mi><m:mo>⊆</m:mo><m:mi>T</m:mi><m:mo>,</m:mo></m:mrow></m:math> we write <m:math overflow="scroll"><m:mrow><m:msup><m:mi>f</m:mi><m:mrow><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msup><m:mrow><m:mo>(</m:mo><m:mi>B</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math>
+for the subset of <m:math overflow="scroll"><m:mi>S</m:mi></m:math>
+containing all the elements <m:math overflow="scroll"><m:mrow><m:mi>s</m:mi><m:mo>∈</m:mo><m:mi>S</m:mi></m:mrow></m:math> such that <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>s</m:mi><m:mo>)</m:mo><m:mo>∈</m:mo><m:mi>B</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+and we call the set <m:math overflow="scroll"><m:mrow><m:msup><m:mi>f</m:mi><m:mrow><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msup><m:mrow><m:mo>(</m:mo><m:mi>B</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> the <emphasis effect="italics">inverse image</emphasis> or <emphasis effect="italics">preimage</emphasis> of <m:math overflow="scroll"><m:mrow><m:mi>B</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+The symbol <m:math overflow="scroll"><m:mrow><m:msup><m:mi>f</m:mi><m:mrow><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msup><m:mrow><m:mo>(</m:mo><m:mi>B</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> is a little confusing, since it could be
+misinterpreted as the image of the set <m:math overflow="scroll"><m:mi>B</m:mi></m:math> under a function called <m:math overflow="scroll"><m:mrow><m:msup><m:mi>f</m:mi><m:mrow><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msup><m:mo>.</m:mo></m:mrow></m:math>
+We will discuss inverse functions later on, but this notation is
+not meant to imply that the function <m:math overflow="scroll"><m:mi>f</m:mi></m:math> has an inverse.</para>
+    <para id="id315351">If <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>:</m:mo><m:mi>S</m:mi><m:mo>→</m:mo><m:mi>T</m:mi><m:mo>,</m:mo></m:mrow></m:math> then the <emphasis effect="italics">graph</emphasis> of <m:math overflow="scroll"><m:mi>f</m:mi></m:math>
+is the subset <m:math overflow="scroll"><m:mi>G</m:mi></m:math> of the Cartesian product <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>×</m:mo><m:mi>T</m:mi></m:mrow></m:math> consisting
+of all the pairs of the form <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>,</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math></para>
+    <para id="id315433">If <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>:</m:mo><m:mi>S</m:mi><m:mo>→</m:mo><m:mi>R</m:mi></m:mrow></m:math> is a function, then we call <m:math overflow="scroll"><m:mi>f</m:mi></m:math>
+a <emphasis effect="italics">real-valued</emphasis> function, and if <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>:</m:mo><m:mi>S</m:mi><m:mo>→</m:mo><m:mi>C</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+then we call <m:math overflow="scroll"><m:mi>f</m:mi></m:math> a <emphasis effect="italics">complex-valued</emphasis> function.
+If <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>:</m:mo><m:mi>S</m:mi><m:mo>→</m:mo><m:mi>C</m:mi></m:mrow></m:math> is a complex-valued function,
+then for each <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mi>S</m:mi></m:mrow></m:math> the complex number <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:math> can be written
+as <m:math overflow="scroll"><m:mrow><m:mi>u</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>+</m:mo><m:mi>i</m:mi><m:mi>v</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math> where <m:math overflow="scroll"><m:mrow><m:mi>u</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>v</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:math> are the real and imaginary parts of the complex number <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+The two real-valued functions <m:math overflow="scroll"><m:mrow><m:mi>u</m:mi><m:mo>:</m:mo><m:mi>S</m:mi><m:mo>→</m:mo><m:mi>R</m:mi></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>v</m:mi><m:mo>:</m:mo><m:mi>S</m:mi><m:mo>→</m:mo><m:mi>R</m:mi></m:mrow></m:math> are called
+respectively the <emphasis effect="italics">real</emphasis> and <emphasis effect="italics">imaginary</emphasis> parts
+of the complex-valued function <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+    <para id="id315716">If <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>:</m:mo><m:mi>S</m:mi><m:mo>→</m:mo><m:mi>T</m:mi></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>⊆</m:mo><m:mi>R</m:mi><m:mo>,</m:mo></m:mrow></m:math> then <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is called a function
+of a <emphasis effect="italics">real variable</emphasis>, and if <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>⊆</m:mo><m:mi>C</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+then <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is called a function of a <emphasis effect="italics">complex variable</emphasis>.</para>
+    <para id="id315810">If the range of <m:math overflow="scroll"><m:mi>f</m:mi></m:math> equals the codomain, then <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is called
+<emphasis effect="italics">onto</emphasis>.</para>
+    <para id="id315835">The function <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>:</m:mo><m:mi>S</m:mi><m:mo>→</m:mo><m:mi>T</m:mi></m:mrow></m:math> is called one-to-one
+if <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:mo>)</m:mo></m:mrow></m:mrow></m:math>
+implies that <m:math overflow="scroll"><m:mrow><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>=</m:mo><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:mo>.</m:mo></m:mrow></m:math></para>
+</meaning></definition>
+
+    <para id="id315919">The domain of <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is the set of <m:math overflow="scroll"><m:mi>x</m:mi></m:math>'s for which <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:math> is defined. If we are
+given a function <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>:</m:mo><m:mi>S</m:mi><m:mo>→</m:mo><m:mi>T</m:mi><m:mo>,</m:mo></m:mrow></m:math> we are free to regard <m:math overflow="scroll"><m:mi>f</m:mi></m:math> as having a smaller domain, i.e., a subset <m:math overflow="scroll"><m:msup><m:mi>S</m:mi><m:mo>'</m:mo></m:msup></m:math> of <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math> Although this
+restricted function is in reality a different function, we usually continue to call it by the same name <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>.</m:mo></m:mrow></m:math> Enlarging the domain
+of a function, in some consistent manner, is often impossible, but is nevertheless frequently of great importance.
+The codomain of <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is distinguished from the range of f, which is
+frequently a proper subset of the codomain.
+For example, since every real number is a complex number,
+any real-valued function <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>:</m:mo><m:mi>S</m:mi><m:mo>→</m:mo><m:mi>R</m:mi></m:mrow></m:math> is also
+a (special kind of) complex-valued function.</para>
+    <para id="id316064">We consider in this book functions either of a real variable or of
+complex variable. that is, the domains of functions here will be subsets either of <m:math overflow="scroll"><m:mi>R</m:mi></m:math> or of <m:math overflow="scroll"><m:mrow><m:mi>C</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Frequently, we will indicate what kind of variable we are thinking of
+by denoting real variables with the letter <m:math overflow="scroll"><m:mi>x</m:mi></m:math> and complex variables with the letter <m:math overflow="scroll"><m:mrow><m:mi>z</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Be careful about this, for this distinction is <emphasis effect="bold">not always</emphasis> made.</para>
+    <para id="id316132">Many functions,
+though not all by any means, are defined by a single equation:</para>
+    <equation id="id316136">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mi>y</m:mi>
+          <m:mo>=</m:mo>
+          <m:mn>3</m:mn>
+          <m:mi>x</m:mi>
+          <m:mo>-</m:mo>
+          <m:mn>7</m:mn>
+          <m:mo>,</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <equation id="id316161">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mi>y</m:mi>
+          <m:mo>=</m:mo>
+          <m:msup>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:msup>
+                <m:mi>x</m:mi>
+                <m:mn>2</m:mn>
+              </m:msup>
+              <m:mo>+</m:mo>
+              <m:mi>x</m:mi>
+              <m:mo>+</m:mo>
+              <m:mn>1</m:mn>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mrow>
+              <m:mn>2</m:mn>
+              <m:mo>/</m:mo>
+              <m:mn>3</m:mn>
+            </m:mrow>
+          </m:msup>
+          <m:mo>,</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <equation id="id316210">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:msup>
+            <m:mi>x</m:mi>
+            <m:mn>2</m:mn>
+          </m:msup>
+          <m:mo>+</m:mo>
+          <m:msup>
+            <m:mi>y</m:mi>
+            <m:mn>2</m:mn>
+          </m:msup>
+          <m:mo>=</m:mo>
+          <m:mn>4</m:mn>
+          <m:mo>,</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id316243">(How does this last equation define a function?)</para>
+    <equation id="id316249">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:msup>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mn>1</m:mn>
+              <m:mo>-</m:mo>
+              <m:msup>
+                <m:mi>x</m:mi>
+                <m:mn>7</m:mn>
+              </m:msup>
+              <m:msup>
+                <m:mi>y</m:mi>
+                <m:mn>11</m:mn>
+              </m:msup>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mrow>
+              <m:mn>2</m:mn>
+              <m:mo>/</m:mo>
+              <m:mn>3</m:mn>
+            </m:mrow>
+          </m:msup>
+          <m:mo>=</m:mo>
+          <m:msup>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>x</m:mi>
+              <m:mo>/</m:mo>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mn>1</m:mn>
+                <m:mo>-</m:mo>
+                <m:mi>y</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mrow>
+              <m:mn>8</m:mn>
+              <m:mo>/</m:mo>
+              <m:mn>17</m:mn>
+            </m:mrow>
+          </m:msup>
+          <m:mo>.</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id316330">(How does this equation determine a function?)</para>
+    <para id="id316336">There are various types of functions, and they can be combined in
+a variety of ways to produce other functions.
+It is necessary therefore to spend a fair amount of time at the
+beginning of this chapter to present these definitions.</para>
+<definition id="fs-id1172695384468"><term/><meaning id="fs-id1172699571889">
+    <para id="id316341">
+If <m:math overflow="scroll"><m:mi>f</m:mi></m:math> and <m:math overflow="scroll"><m:mi>g</m:mi></m:math> are two complex-valued functions with the same domain <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>,</m:mo></m:mrow></m:math> i.e., <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>:</m:mo><m:mi>S</m:mi><m:mo>→</m:mo><m:mi>C</m:mi></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>g</m:mi><m:mo>:</m:mo><m:mi>S</m:mi><m:mo>→</m:mo><m:mi>C</m:mi><m:mo>,</m:mo></m:mrow></m:math> and
+if <m:math overflow="scroll"><m:mi>c</m:mi></m:math> is a complex number, we define <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>+</m:mo><m:mi>g</m:mi><m:mo>,</m:mo><m:mspace width="3.33333pt"/><m:mi>f</m:mi><m:mi>g</m:mi><m:mo>,</m:mo><m:mspace width="3.33333pt"/><m:mi>f</m:mi><m:mo>/</m:mo><m:mi>g</m:mi></m:mrow></m:math> (if <m:math overflow="scroll"><m:mrow><m:mi>g</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:math> is never 0), and <m:math overflow="scroll"><m:mrow><m:mi>c</m:mi><m:mi>f</m:mi></m:mrow></m:math> by the familiar formulas:</para>
+    <equation id="id316508">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mo>(</m:mo>
+          <m:mi>f</m:mi>
+          <m:mo>+</m:mo>
+          <m:mi>g</m:mi>
+          <m:mo>)</m:mo>
+          <m:mo>(</m:mo>
+          <m:mi>x</m:mi>
+          <m:mo>)</m:mo>
+          <m:mo>=</m:mo>
+          <m:mi>f</m:mi>
+          <m:mo>(</m:mo>
+          <m:mi>x</m:mi>
+          <m:mo>)</m:mo>
+          <m:mo>+</m:mo>
+          <m:mi>g</m:mi>
+          <m:mo>(</m:mo>
+          <m:mi>x</m:mi>
+          <m:mo>)</m:mo>
+          <m:mo>,</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <equation id="id316558">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mo>(</m:mo>
+          <m:mi>f</m:mi>
+          <m:mi>g</m:mi>
+          <m:mo>)</m:mo>
+          <m:mo>(</m:mo>
+          <m:mi>x</m:mi>
+          <m:mo>)</m:mo>
+          <m:mo>=</m:mo>
+          <m:mi>f</m:mi>
+          <m:mo>(</m:mo>
+          <m:mi>x</m:mi>
+          <m:mo>)</m:mo>
+          <m:mi>g</m:mi>
+          <m:mo>(</m:mo>
+          <m:mi>x</m:mi>
+          <m:mo>)</m:mo>
+          <m:mo>,</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <equation id="id316604">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mo>(</m:mo>
+          <m:mi>f</m:mi>
+          <m:mo>/</m:mo>
+          <m:mi>g</m:mi>
+          <m:mo>)</m:mo>
+          <m:mo>(</m:mo>
+          <m:mi>x</m:mi>
+          <m:mo>)</m:mo>
+          <m:mo>=</m:mo>
+          <m:mi>f</m:mi>
+          <m:mo>(</m:mo>
+          <m:mi>x</m:mi>
+          <m:mo>)</m:mo>
+          <m:mo>/</m:mo>
+          <m:mi>g</m:mi>
+          <m:mo>(</m:mo>
+          <m:mi>x</m:mi>
+          <m:mo>)</m:mo>
+          <m:mo>,</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id316654">and</para>
+    <equation id="id316660">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mo>(</m:mo>
+          <m:mi>c</m:mi>
+          <m:mi>f</m:mi>
+          <m:mo>)</m:mo>
+          <m:mo>(</m:mo>
+          <m:mi>x</m:mi>
+          <m:mo>)</m:mo>
+          <m:mo>=</m:mo>
+          <m:mi>c</m:mi>
+          <m:mi>f</m:mi>
+          <m:mo>(</m:mo>
+          <m:mi>x</m:mi>
+          <m:mo>)</m:mo>
+          <m:mo>.</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id316700">If <m:math overflow="scroll"><m:mi>f</m:mi></m:math> and <m:math overflow="scroll"><m:mi>g</m:mi></m:math> are real-valued functions, we define functions <m:math overflow="scroll"><m:mrow><m:mo movablelimits="true" form="prefix">max</m:mo><m:mo>(</m:mo><m:mi>f</m:mi><m:mo>,</m:mo><m:mi>g</m:mi><m:mo>)</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mo movablelimits="true" form="prefix">min</m:mo><m:mo>(</m:mo><m:mi>f</m:mi><m:mo>,</m:mo><m:mi>g</m:mi><m:mo>)</m:mo></m:mrow></m:math> by</para>
+    <equation id="id316770">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mo>[</m:mo>
+          <m:mo movablelimits="true" form="prefix">max</m:mo>
+          <m:mo>(</m:mo>
+          <m:mi>f</m:mi>
+          <m:mo>,</m:mo>
+          <m:mi>g</m:mi>
+          <m:mo>)</m:mo>
+          <m:mo>]</m:mo>
+          <m:mo>(</m:mo>
+          <m:mi>x</m:mi>
+          <m:mo>)</m:mo>
+          <m:mo>=</m:mo>
+          <m:mo movablelimits="true" form="prefix">max</m:mo>
+          <m:mo>(</m:mo>
+          <m:mi>f</m:mi>
+          <m:mo>(</m:mo>
+          <m:mi>x</m:mi>
+          <m:mo>)</m:mo>
+          <m:mo>,</m:mo>
+          <m:mi>g</m:mi>
+          <m:mo>(</m:mo>
+          <m:mi>x</m:mi>
+          <m:mo>)</m:mo>
+          <m:mo>)</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id316840">(the maximum of the numbers <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>g</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:math>), and</para>
+    <equation id="id316879">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mo>[</m:mo>
+          <m:mo movablelimits="true" form="prefix">min</m:mo>
+          <m:mo>(</m:mo>
+          <m:mi>f</m:mi>
+          <m:mo>,</m:mo>
+          <m:mi>g</m:mi>
+          <m:mo>)</m:mo>
+          <m:mo>]</m:mo>
+          <m:mo>(</m:mo>
+          <m:mi>x</m:mi>
+          <m:mo>)</m:mo>
+          <m:mo>=</m:mo>
+          <m:mo movablelimits="true" form="prefix">min</m:mo>
+          <m:mo>(</m:mo>
+          <m:mi>f</m:mi>
+          <m:mo>(</m:mo>
+          <m:mi>x</m:mi>
+          <m:mo>)</m:mo>
+          <m:mo>,</m:mo>
+          <m:mi>g</m:mi>
+          <m:mo>(</m:mo>
+          <m:mi>x</m:mi>
+          <m:mo>)</m:mo>
+          <m:mo>)</m:mo>
+          <m:mo>,</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id316951">(the minimum of the two numbers <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>g</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:math>).</para>
+    <para id="id316990">If <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is either a real-valued or a complex-valued function on a domain <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+then we say that <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is <emphasis effect="italics">bounded</emphasis> if there exists a positive number <m:math overflow="scroll"><m:mi>M</m:mi></m:math> such that <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>|</m:mo><m:mo>≤</m:mo><m:mi>M</m:mi></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+</meaning></definition>
+    <para id="id317078">There are two special types of functions of a real or complex variable,
+the even functions and the odd functions.
+In fact, every function that is defined on all of <m:math overflow="scroll"><m:mi>R</m:mi></m:math> or <m:math overflow="scroll"><m:mi>C</m:mi></m:math>
+(or, more generally, any function whose domain <m:math overflow="scroll"><m:mi>S</m:mi></m:math> equals <m:math overflow="scroll"><m:mrow><m:mo>-</m:mo><m:mi>S</m:mi></m:mrow></m:math>)
+can be written uniquely as a sum of an even part and an odd part.
+This decomposition of a general function into simpler parts is frequently helpful.</para>
+<definition id="fs-id1172693747243"><term/><meaning id="fs-id1172694432636">
+    <para id="id317138">
+A function <m:math overflow="scroll"><m:mi>f</m:mi></m:math> whose domain <m:math overflow="scroll"><m:mi>S</m:mi></m:math> equals <m:math overflow="scroll"><m:mrow><m:mo>-</m:mo><m:mi>S</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+is called an <emphasis effect="italics">even</emphasis> function if <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mo>-</m:mo><m:mi>z</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow></m:math>
+for all <m:math overflow="scroll"><m:mi>z</m:mi></m:math> in its domain. It is called an <emphasis effect="italics">odd</emphasis> function if
+<m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mo>-</m:mo><m:mi>z</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mo>-</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow></m:math> for all <m:math overflow="scroll"><m:mi>z</m:mi></m:math> in its domain.</para>
+</meaning></definition>
+
+    <para id="id317268">We next give the definition for perhaps the most familiar
+kinds of functions.</para>
+<definition id="fs-id1172709995431"><term/><meaning id="fs-id1172705987183">
+    <para id="id317272">
+A nonzero <emphasis effect="italics">polynomial</emphasis> or <emphasis effect="italics">polynomial function</emphasis> is a complex-valued
+function of a complex variable, <m:math overflow="scroll"><m:mrow><m:mi>p</m:mi><m:mo>:</m:mo><m:mi>C</m:mi><m:mo>→</m:mo><m:mi>C</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+that is defined by a formula of the form</para>
+    <equation id="id317329">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mi>p</m:mi>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>z</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>=</m:mo>
+          <m:munderover>
+            <m:mo>∑</m:mo>
+            <m:mrow>
+              <m:mi>k</m:mi>
+              <m:mo>=</m:mo>
+              <m:mn>0</m:mn>
+            </m:mrow>
+            <m:mi>n</m:mi>
+          </m:munderover>
+          <m:msub>
+            <m:mi>a</m:mi>
+            <m:mi>k</m:mi>
+          </m:msub>
+          <m:msup>
+            <m:mi>z</m:mi>
+            <m:mi>k</m:mi>
+          </m:msup>
+          <m:mo>=</m:mo>
+          <m:msub>
+            <m:mi>a</m:mi>
+            <m:mn>0</m:mn>
+          </m:msub>
+          <m:mo>+</m:mo>
+          <m:msub>
+            <m:mi>a</m:mi>
+            <m:mn>1</m:mn>
+          </m:msub>
+          <m:mi>z</m:mi>
+          <m:mo>+</m:mo>
+          <m:msub>
+            <m:mi>a</m:mi>
+            <m:mn>2</m:mn>
+          </m:msub>
+          <m:msup>
+            <m:mi>z</m:mi>
+            <m:mn>2</m:mn>
+          </m:msup>
+          <m:mo>+</m:mo>
+          <m:mo>...</m:mo>
+          <m:mo>+</m:mo>
+          <m:msub>
+            <m:mi>a</m:mi>
+            <m:mi>n</m:mi>
+          </m:msub>
+          <m:msup>
+            <m:mi>z</m:mi>
+            <m:mi>n</m:mi>
+          </m:msup>
+          <m:mo>,</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id317443">where the <m:math overflow="scroll"><m:msub><m:mi>a</m:mi><m:mi>k</m:mi></m:msub></m:math>'s are complex numbers and <m:math overflow="scroll"><m:mrow><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>≠</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math>
+The integer <m:math overflow="scroll"><m:mi>n</m:mi></m:math> is called the <emphasis effect="italics">degree</emphasis>
+of the polynomial <m:math overflow="scroll"><m:mi>p</m:mi></m:math> and is denoted by <m:math overflow="scroll"><m:mrow><m:mtext>deg</m:mtext><m:mo>(</m:mo><m:mi>p</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+The numbers <m:math overflow="scroll"><m:mrow><m:msub><m:mi>a</m:mi><m:mn>0</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>a</m:mi><m:mn>1</m:mn></m:msub><m:mo>,</m:mo><m:mo>...</m:mo><m:mo>,</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub></m:mrow></m:math> are called the <emphasis effect="italics">coefficients</emphasis> of the
+polynomial.
+The domain of a polynomial function is all of <m:math overflow="scroll"><m:mrow><m:mi>C</m:mi><m:mo>;</m:mo></m:mrow></m:math>
+i.e., <m:math overflow="scroll"><m:mrow><m:mi>p</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow></m:math> is defined for every complex number <m:math overflow="scroll"><m:mrow><m:mi>z</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+    <para id="id317620">For technical reasons of consistency,
+the identically 0 function is called the <emphasis effect="italics">zero polynomial</emphasis>. All of its
+coefficients are 0 and its degree is defined to be <m:math overflow="scroll"><m:mrow><m:mo>-</m:mo><m:mi>∞</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+    <para id="id317643">A <emphasis effect="italics">rational function</emphasis> is a function <m:math overflow="scroll"><m:mi>r</m:mi></m:math> that is given
+by an equation of the form <m:math overflow="scroll"><m:mrow><m:mi>r</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mi>p</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo><m:mo>/</m:mo><m:mi>q</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math>
+where <m:math overflow="scroll"><m:mi>q</m:mi></m:math> is a nonzero polynomial and <m:math overflow="scroll"><m:mi>p</m:mi></m:math> is a (possibly zero) polynomial.
+The domain of a rational function
+is the set <m:math overflow="scroll"><m:mi>S</m:mi></m:math> of all <m:math overflow="scroll"><m:mrow><m:mi>z</m:mi><m:mo>∈</m:mo><m:mi>C</m:mi></m:mrow></m:math> for which
+<m:math overflow="scroll"><m:mrow><m:mi>q</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo><m:mo>≠</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> i.e., for which <m:math overflow="scroll"><m:mrow><m:mi>r</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow></m:math> is defined.</para>
+</meaning></definition>
+    <para id="id317790">Two other kinds of functions that are simple and important are step functions and polygonal functions.</para>
+<definition id="fs-id1172712129828"><term/><meaning id="fs-id1172699155507">
+    <para id="id317794">
+Let <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow></m:math> be a closed bounded interval of real numbers.
+By a <emphasis effect="italics">partition</emphasis> of <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow></m:math> we mean a finite set
+<m:math overflow="scroll"><m:mrow><m:mi>P</m:mi><m:mo>=</m:mo><m:mo>{</m:mo><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub><m:mo>&lt;</m:mo><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>&lt;</m:mo><m:mo>...</m:mo><m:mo>&lt;</m:mo><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> of <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow></m:math> points,
+where <m:math overflow="scroll"><m:mrow><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub><m:mo>=</m:mo><m:mi>a</m:mi></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mo>=</m:mo><m:mi>b</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+    <para id="id317949">The <m:math overflow="scroll"><m:mi>n</m:mi></m:math> intervals <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:mrow><m:mo>[</m:mo><m:msub><m:mi>x</m:mi><m:mrow><m:mi>i</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mi>i</m:mi></m:msub><m:mo>]</m:mo></m:mrow><m:mo>}</m:mo><m:mo>,</m:mo></m:mrow></m:math> for <m:math overflow="scroll"><m:mrow><m:mn>1</m:mn><m:mo>≤</m:mo><m:mi>i</m:mi><m:mo>≤</m:mo><m:mi>n</m:mi><m:mo>,</m:mo></m:mrow></m:math> are called the <emphasis effect="italics">closed subintervals</emphasis>
+of the partition <m:math overflow="scroll"><m:mrow><m:mi>P</m:mi><m:mo>,</m:mo></m:mrow></m:math> and
+the <m:math overflow="scroll"><m:mi>n</m:mi></m:math> intervals <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:mrow><m:mo>(</m:mo><m:msub><m:mi>x</m:mi><m:mrow><m:mi>i</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mi>i</m:mi></m:msub><m:mo>)</m:mo></m:mrow><m:mo>}</m:mo></m:mrow></m:math> are called the <emphasis effect="italics">open subintervals</emphasis>
+of <m:math overflow="scroll"><m:mrow><m:mi>P</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+    <para id="id318108">We write <m:math overflow="scroll"><m:mrow><m:mo>∥</m:mo><m:mi>P</m:mi><m:mo>∥</m:mo></m:mrow></m:math> for the maximum of the numbers (lengths of the subintervals) <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>x</m:mi><m:mi>i</m:mi></m:msub><m:mo>-</m:mo><m:msub><m:mi>x</m:mi><m:mrow><m:mi>i</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>}</m:mo><m:mo>,</m:mo></m:mrow></m:math>
+and call the number <m:math overflow="scroll"><m:mrow><m:mo>∥</m:mo><m:mi>P</m:mi><m:mo>∥</m:mo></m:mrow></m:math> the <emphasis effect="italics">mesh size</emphasis> of the partition <m:math overflow="scroll"><m:mrow><m:mi>P</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+    <para id="id318195">A function <m:math overflow="scroll"><m:mrow><m:mi>h</m:mi><m:mo>:</m:mo><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>→</m:mo><m:mi>C</m:mi></m:mrow></m:math> is called a <emphasis effect="italics">step function</emphasis>
+if there exists a partition <m:math overflow="scroll"><m:mrow><m:mi>P</m:mi><m:mo>=</m:mo><m:mo>{</m:mo><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub><m:mo>&lt;</m:mo><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>&lt;</m:mo><m:mo>...</m:mo><m:mo>&lt;</m:mo><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> of <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow></m:math>
+and <m:math overflow="scroll"><m:mi>n</m:mi></m:math> numbers <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>a</m:mi><m:mn>1</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>a</m:mi><m:mn>2</m:mn></m:msub><m:mo>,</m:mo><m:mo>...</m:mo><m:mo>,</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> such that
+<m:math overflow="scroll"><m:mrow><m:mi>h</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msub><m:mi>a</m:mi><m:mi>i</m:mi></m:msub></m:mrow></m:math> if <m:math overflow="scroll"><m:mrow><m:msub><m:mi>x</m:mi><m:mrow><m:mi>i</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>&lt;</m:mo><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:msub><m:mi>x</m:mi><m:mi>i</m:mi></m:msub><m:mo>.</m:mo></m:mrow></m:math>
+That is, <m:math overflow="scroll"><m:mi>h</m:mi></m:math> is a step function if it is a constant function on each of the (open) subintervals <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:msub><m:mi>x</m:mi><m:mrow><m:mi>i</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mi>i</m:mi></m:msub><m:mo>)</m:mo></m:mrow></m:math>
+determined by a partition <m:math overflow="scroll"><m:mrow><m:mi>P</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Note that the values of a step function at the points <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>x</m:mi><m:mi>i</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> of the partition are not restricted in any way.</para>
+    <para id="id318499">A function <m:math overflow="scroll"><m:mrow><m:mi>l</m:mi><m:mo>:</m:mo><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>→</m:mo><m:mi>R</m:mi></m:mrow></m:math> is called a <emphasis effect="italics">polygonal function</emphasis>,
+or a <emphasis effect="italics">piecewise linear function</emphasis>,
+if there exists a partition <m:math overflow="scroll"><m:mrow><m:mi>P</m:mi><m:mo>=</m:mo><m:mo>{</m:mo><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub><m:mo>&lt;</m:mo><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>&lt;</m:mo><m:mo>...</m:mo><m:mo>&lt;</m:mo><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> of <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow></m:math>
+and <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow></m:math> numbers <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>y</m:mi><m:mn>0</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>y</m:mi><m:mn>1</m:mn></m:msub><m:mo>,</m:mo><m:mo>...</m:mo><m:mo>,</m:mo><m:msub><m:mi>y</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> such that
+for each <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mo>[</m:mo><m:msub><m:mi>x</m:mi><m:mrow><m:mi>i</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mi>i</m:mi></m:msub><m:mo>]</m:mo><m:mo>,</m:mo></m:mrow></m:math><m:math overflow="scroll"><m:mrow><m:mi>l</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:math> is given by the linear equation</para>
+    <equation id="id318732">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mi>l</m:mi>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>x</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>=</m:mo>
+          <m:msub>
+            <m:mi>y</m:mi>
+            <m:mrow>
+              <m:mi>i</m:mi>
+              <m:mo>-</m:mo>
+              <m:mn>1</m:mn>
+            </m:mrow>
+          </m:msub>
+          <m:mo>+</m:mo>
+          <m:msub>
+            <m:mi>m</m:mi>
+            <m:mi>i</m:mi>
+          </m:msub>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>x</m:mi>
+            <m:mo>-</m:mo>
+            <m:msub>
+              <m:mi>x</m:mi>
+              <m:mrow>
+                <m:mi>i</m:mi>
+                <m:mo>-</m:mo>
+                <m:mn>1</m:mn>
+              </m:mrow>
+            </m:msub>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>,</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id318800">where <m:math overflow="scroll"><m:mrow><m:msub><m:mi>m</m:mi><m:mi>i</m:mi></m:msub><m:mo>=</m:mo><m:mrow><m:mo>(</m:mo><m:msub><m:mi>y</m:mi><m:mi>i</m:mi></m:msub><m:mo>-</m:mo><m:msub><m:mi>y</m:mi><m:msub><m:mi>i</m:mi><m:mn>1</m:mn></m:msub></m:msub><m:mo>)</m:mo></m:mrow><m:mo>/</m:mo><m:mrow><m:mo>(</m:mo><m:msub><m:mi>x</m:mi><m:mi>i</m:mi></m:msub><m:mo>-</m:mo><m:msub><m:mi>x</m:mi><m:mrow><m:mi>i</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math>
+That is, <m:math overflow="scroll"><m:mi>l</m:mi></m:math> is a polygonal function if it is a linear function on each of the closed subintervals <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:msub><m:mi>x</m:mi><m:mrow><m:mi>i</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mi>i</m:mi></m:msub><m:mo>]</m:mo></m:mrow></m:math>
+determined by a partition <m:math overflow="scroll"><m:mrow><m:mi>P</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Note that the values of a piecewise linear function at the points <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>x</m:mi><m:mi>i</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> of the partition <m:math overflow="scroll"><m:mi>P</m:mi></m:math>
+are the same, whether we think of <m:math overflow="scroll"><m:msub><m:mi>x</m:mi><m:mi>i</m:mi></m:msub></m:math> in the interval <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:msub><m:mi>x</m:mi><m:mrow><m:mi>i</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mi>i</m:mi></m:msub><m:mo>]</m:mo></m:mrow></m:math> or <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:msub><m:mi>x</m:mi><m:mi>i</m:mi></m:msub><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mrow><m:mi>i</m:mi><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>]</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+(Check the two formulas for <m:math overflow="scroll"><m:mrow><m:mi>l</m:mi><m:mo>(</m:mo><m:msub><m:mi>x</m:mi><m:mi>i</m:mi></m:msub><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>)</para>
+    <para id="id319077">The graph of a piecewise linear function is the polygonal line joining the <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow></m:math> points <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:mrow><m:mo>(</m:mo><m:msub><m:mi>x</m:mi><m:mi>i</m:mi></m:msub><m:mo>,</m:mo><m:msub><m:mi>y</m:mi><m:mi>i</m:mi></m:msub><m:mo>)</m:mo></m:mrow><m:mo>}</m:mo><m:mo>.</m:mo></m:mrow></m:math></para>
+    <para id="id319131">There is a natural generalization of the notion of a step
+function that works for any domain <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+e.g., a rectangle in the plane <m:math overflow="scroll"><m:mrow><m:mi>C</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Thus, if <m:math overflow="scroll"><m:mi>S</m:mi></m:math> is a set, we define a <emphasis effect="italics">partition</emphasis> of <m:math overflow="scroll"><m:mi>S</m:mi></m:math> to be a finite collection <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>E</m:mi><m:mn>1</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>E</m:mi><m:mn>2</m:mn></m:msub><m:mo>,</m:mo><m:mo>...</m:mo><m:mo>,</m:mo><m:msub><m:mi>E</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> of subsets of <m:math overflow="scroll"><m:mi>S</m:mi></m:math> for which</para>
+    <list id="id319243" display="block" list-type="enumerated">
+      <item id="uid1"> <m:math overflow="scroll"><m:mrow><m:msubsup><m:mo>∪</m:mo><m:mrow><m:mi>i</m:mi><m:mo>=</m:mo><m:mn>1</m:mn></m:mrow><m:mi>n</m:mi></m:msubsup><m:msub><m:mi>E</m:mi><m:mi>i</m:mi></m:msub><m:mo>=</m:mo><m:mi>S</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+and
+</item>
+      <item id="uid2"> <m:math overflow="scroll"><m:mrow><m:msub><m:mi>E</m:mi><m:mi>i</m:mi></m:msub><m:mo>∩</m:mo><m:msub><m:mi>E</m:mi><m:mi>j</m:mi></m:msub><m:mo>=</m:mo><m:mi>∅</m:mi></m:mrow></m:math> if <m:math overflow="scroll"><m:mrow><m:mi>i</m:mi><m:mo>≠</m:mo><m:mi>j</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+    </list>
+    <para id="id319355">Then, a <emphasis effect="italics">step function</emphasis> on <m:math overflow="scroll"><m:mi>S</m:mi></m:math> would be a function <m:math overflow="scroll"><m:mi>h</m:mi></m:math> that is constant on each subset <m:math overflow="scroll"><m:mrow><m:msub><m:mi>E</m:mi><m:mi>i</m:mi></m:msub><m:mo>.</m:mo></m:mrow></m:math>
+We will encounter an even more elaborate generalized notion of a step function in Chapter V, but for now we will restrict our attention
+to step functions defined on intervals <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>.</m:mo></m:mrow></m:math></para>
+    <para id="id319420">The set of polynomials and the set of step functions
+are both closed under addition
+and multiplication, and
+the set of rational functions is closed under addition,
+multiplication, and division.</para>
+</meaning></definition>
+<exercise id="fs-id1172704529252"><problem id="fs-id1172704698590">
+    <list id="id319435" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid3"> Prove that the sum and product of two polynomials is
+again a polynomial.
+Show that <m:math overflow="scroll"><m:mrow><m:mtext>deg</m:mtext><m:mo>(</m:mo><m:mi>p</m:mi><m:mo>+</m:mo><m:mi>q</m:mi><m:mo>)</m:mo><m:mo>≤</m:mo><m:mo movablelimits="true" form="prefix">max</m:mo><m:mo>(</m:mo><m:mtext>deg</m:mtext><m:mo>(</m:mo><m:mi>p</m:mi><m:mo>)</m:mo><m:mo>,</m:mo><m:mtext>deg</m:mtext><m:mo>(</m:mo><m:mi>q</m:mi><m:mo>)</m:mo><m:mo>)</m:mo></m:mrow></m:math> and
+<m:math overflow="scroll"><m:mrow><m:mtext>deg</m:mtext><m:mo>(</m:mo><m:mi>p</m:mi><m:mi>q</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mtext>deg</m:mtext><m:mo>(</m:mo><m:mi>p</m:mi><m:mo>)</m:mo><m:mo>+</m:mo><m:mtext>deg</m:mtext><m:mo>(</m:mo><m:mi>q</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Show that a constant function is a polynomial, and that
+the degree of a nonzero constant function is 0.
+</item>
+      <item id="uid4"> Show that the set of step functions is closed under addition and
+multiplication. Show also that the maximum and minimum of two
+step functions is again a step function.
+(Be careful to note that different step functions may be determined by
+different partitions.
+For instance, a partition determining the sum of two step functions
+may be different from the partitions determining the two individual step functions.)
+Note, in fact, that a step function can be determined by infinitely many different partitions.
+Prove that the sum, the maximum, and the minimum of two piecewise linear functions is again a
+piecewise linear function.
+Show by example that the product of two piecewise linear functions need not be piecewise linear.
+</item>
+      <item id="uid5"> Prove that the sum, product, and quotient of two rational
+functions is again a rational function.
+</item>
+      <item id="uid6"> Prove the <emphasis effect="bold">Root Theorem:</emphasis>
+If <m:math overflow="scroll"><m:mrow><m:mi>p</m:mi><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msubsup><m:mo>∑</m:mo><m:mrow><m:mi>k</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow><m:mi>n</m:mi></m:msubsup><m:msub><m:mi>a</m:mi><m:mi>k</m:mi></m:msub><m:msup><m:mi>z</m:mi><m:mi>k</m:mi></m:msup></m:mrow></m:math> is a nonzero polynomial of degree <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+and if <m:math overflow="scroll"><m:mi>c</m:mi></m:math> is a complex number
+for which <m:math overflow="scroll"><m:mrow><m:mi>p</m:mi><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> then there exists
+a nonzero polynomial <m:math overflow="scroll"><m:mrow><m:mi>q</m:mi><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msubsup><m:mo>∑</m:mo><m:mrow><m:mi>j</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow><m:mrow><m:mi>n</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msubsup><m:msub><m:mi>b</m:mi><m:mi>j</m:mi></m:msub><m:msup><m:mi>z</m:mi><m:mi>j</m:mi></m:msup></m:mrow></m:math> of degree <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:math>
+such that
+<m:math overflow="scroll"><m:mrow><m:mi>p</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>-</m:mo><m:mi>c</m:mi><m:mo>)</m:mo><m:mi>q</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>z</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+That is, if <m:math overflow="scroll"><m:mi>c</m:mi></m:math> is a “root” of <m:math overflow="scroll"><m:mrow><m:mi>p</m:mi><m:mo>,</m:mo></m:mrow></m:math> then <m:math overflow="scroll"><m:mrow><m:mi>z</m:mi><m:mo>-</m:mo><m:mi>c</m:mi></m:mrow></m:math> is a factor of <m:math overflow="scroll"><m:mrow><m:mi>p</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Show also that the leading coefficient <m:math overflow="scroll"><m:msub><m:mi>b</m:mi><m:mrow><m:mi>n</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msub></m:math> of <m:math overflow="scroll"><m:mi>q</m:mi></m:math>
+equals the leading coefficient <m:math overflow="scroll"><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub></m:math> of <m:math overflow="scroll"><m:mrow><m:mi>p</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+HINT: Write
+<equation id="id319918"><m:math overflow="scroll" mode="display"><m:mrow><m:mi>p</m:mi><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>p</m:mi><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>-</m:mo><m:mi>p</m:mi><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:munderover><m:mo>∑</m:mo><m:mrow><m:mi>k</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow><m:mi>n</m:mi></m:munderover><m:msub><m:mi>a</m:mi><m:mi>k</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:msup><m:mi>z</m:mi><m:mi>k</m:mi></m:msup><m:mo>-</m:mo><m:msup><m:mi>c</m:mi><m:mi>k</m:mi></m:msup><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mo>...</m:mo><m:mo>.</m:mo></m:mrow></m:math></equation></item>
+      <item id="uid7"> Let <m:math overflow="scroll"><m:mi>f</m:mi></m:math> be a function whose domain <m:math overflow="scroll"><m:mi>S</m:mi></m:math> equals <m:math overflow="scroll"><m:mrow><m:mo>-</m:mo><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Define functions <m:math overflow="scroll"><m:msub><m:mi>f</m:mi><m:mi>e</m:mi></m:msub></m:math> and <m:math overflow="scroll"><m:msub><m:mi>f</m:mi><m:mi>o</m:mi></m:msub></m:math> by the formulas
+<equation id="id320088"><m:math overflow="scroll" mode="display"><m:mrow><m:msub><m:mi>f</m:mi><m:mi>e</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo><m:mo>+</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:mo>-</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mn>2</m:mn></m:mfrac><m:mspace width="4.pt"/><m:mtext>and</m:mtext><m:mspace width="4.pt"/><m:msub><m:mi>f</m:mi><m:mi>o</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo><m:mo>-</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:mo>-</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mn>2</m:mn></m:mfrac><m:mo>.</m:mo></m:mrow></m:math></equation>
+Show that <m:math overflow="scroll"><m:msub><m:mi>f</m:mi><m:mi>e</m:mi></m:msub></m:math> is an even function, that <m:math overflow="scroll"><m:msub><m:mi>f</m:mi><m:mi>o</m:mi></m:msub></m:math> is an odd function,
+and that <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>=</m:mo><m:msub><m:mi>f</m:mi><m:mi>e</m:mi></m:msub><m:mo>+</m:mo><m:msub><m:mi>f</m:mi><m:mi>o</m:mi></m:msub><m:mo>.</m:mo></m:mrow></m:math>
+Show also that, if <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>=</m:mo><m:mi>g</m:mi><m:mo>+</m:mo><m:mi>h</m:mi><m:mo>,</m:mo></m:mrow></m:math> where <m:math overflow="scroll"><m:mi>g</m:mi></m:math> is an even function and
+<m:math overflow="scroll"><m:mi>h</m:mi></m:math> is an odd function, then <m:math overflow="scroll"><m:mrow><m:mi>g</m:mi><m:mo>=</m:mo><m:msub><m:mi>f</m:mi><m:mi>e</m:mi></m:msub></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>h</m:mi><m:mo>=</m:mo><m:msub><m:mi>f</m:mi><m:mi>o</m:mi></m:msub><m:mo>.</m:mo></m:mrow></m:math>
+That is, there is only one way to write <m:math overflow="scroll"><m:mi>f</m:mi></m:math> as the sum of an even function and an odd function.
+</item>
+      <item id="uid8"> Use part (e) to show that a polynomial <m:math overflow="scroll"><m:mi>p</m:mi></m:math> is an even function if and only if its only
+nonzero coefficients are even ones, i.e., the <m:math overflow="scroll"><m:msub><m:mi>a</m:mi><m:mrow><m:mn>2</m:mn><m:mi>k</m:mi></m:mrow></m:msub></m:math>'s.
+Show also that a polynomial is an odd function if and only if its
+only nonzero coefficients are odd ones, i.e., the <m:math overflow="scroll"><m:msub><m:mi>a</m:mi><m:mrow><m:mn>2</m:mn><m:mi>k</m:mi><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow></m:msub></m:math>'s.
+</item>
+      <item id="uid9"> Suppose <m:math overflow="scroll"><m:mrow><m:mi>p</m:mi><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msubsup><m:mo>∑</m:mo><m:mrow><m:mi>k</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow><m:mi>n</m:mi></m:msubsup><m:msub><m:mi>a</m:mi><m:mrow><m:mn>2</m:mn><m:mi>k</m:mi></m:mrow></m:msub><m:msup><m:mi>z</m:mi><m:mrow><m:mn>2</m:mn><m:mi>k</m:mi></m:mrow></m:msup></m:mrow></m:math> is a polynomial that is an even function.
+Show that
+<equation id="id320482"><m:math overflow="scroll" mode="display"><m:mrow><m:mi>p</m:mi><m:mrow><m:mo>(</m:mo><m:mi>i</m:mi><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:munderover><m:mo>∑</m:mo><m:mrow><m:mi>k</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow><m:mi>n</m:mi></m:munderover><m:msup><m:mrow><m:mo>(</m:mo><m:mo>-</m:mo><m:mn>1</m:mn><m:mo>)</m:mo></m:mrow><m:mi>k</m:mi></m:msup><m:msub><m:mi>a</m:mi><m:mrow><m:mn>2</m:mn><m:mi>k</m:mi></m:mrow></m:msub><m:msup><m:mi>z</m:mi><m:mrow><m:mn>2</m:mn><m:mi>k</m:mi></m:mrow></m:msup><m:mo>=</m:mo><m:msup><m:mi>p</m:mi><m:mi>a</m:mi></m:msup><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math></equation>
+where <m:math overflow="scroll"><m:msup><m:mi>p</m:mi><m:mi>a</m:mi></m:msup></m:math> is the polynomial obtained from <m:math overflow="scroll"><m:mi>p</m:mi></m:math> by alternating the signs of its nonzero coefficients.
+</item>
+      <item id="uid10"> If <m:math overflow="scroll"><m:mrow><m:mi>q</m:mi><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msubsup><m:mo>∑</m:mo><m:mrow><m:mi>k</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow><m:mi>n</m:mi></m:msubsup><m:msub><m:mi>a</m:mi><m:mrow><m:mn>2</m:mn><m:mi>k</m:mi><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:msup><m:mi>z</m:mi><m:mrow><m:mn>2</m:mn><m:mi>k</m:mi><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow></m:msup></m:mrow></m:math> is a polynomial
+that is an odd function, show that
+<equation id="id320684"><m:math overflow="scroll" mode="display"><m:mrow><m:mi>q</m:mi><m:mrow><m:mo>(</m:mo><m:mi>i</m:mi><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>i</m:mi><m:munderover><m:mo>∑</m:mo><m:mrow><m:mi>k</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow><m:mi>n</m:mi></m:munderover><m:msup><m:mrow><m:mo>(</m:mo><m:mo>-</m:mo><m:mn>1</m:mn><m:mo>)</m:mo></m:mrow><m:mi>k</m:mi></m:msup><m:msub><m:mi>a</m:mi><m:mrow><m:mn>2</m:mn><m:mi>k</m:mi><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:msup><m:mi>z</m:mi><m:mrow><m:mn>2</m:mn><m:mi>k</m:mi><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow></m:msup><m:mo>=</m:mo><m:mi>i</m:mi><m:msup><m:mi>q</m:mi><m:mi>a</m:mi></m:msup><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math></equation>
+where again <m:math overflow="scroll"><m:msup><m:mi>q</m:mi><m:mi>a</m:mi></m:msup></m:math> is the polynomial obtained from <m:math overflow="scroll"><m:mi>q</m:mi></m:math> by alternating the signs of its nonzero coefficients.
+</item>
+      <item id="uid11"> If <m:math overflow="scroll"><m:mi>p</m:mi></m:math> is any polynomial, show that
+<equation id="id320843"><m:math overflow="scroll" mode="display"><m:mrow><m:mi>p</m:mi><m:mrow><m:mo>(</m:mo><m:mi>i</m:mi><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msub><m:mi>p</m:mi><m:mi>e</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>i</m:mi><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:msub><m:mi>p</m:mi><m:mi>o</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>i</m:mi><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msubsup><m:mi>p</m:mi><m:mi>e</m:mi><m:mi>a</m:mi></m:msubsup><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mi>i</m:mi><m:msubsup><m:mi>p</m:mi><m:mi>o</m:mi><m:mi>a</m:mi></m:msubsup><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math></equation>
+and hence that <m:math overflow="scroll"><m:mrow><m:msub><m:mi>p</m:mi><m:mi>e</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>i</m:mi><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msubsup><m:mi>p</m:mi><m:mi>e</m:mi><m:mi>a</m:mi></m:msubsup><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math>
+and <m:math overflow="scroll"><m:mrow><m:msub><m:mi>p</m:mi><m:mi>o</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>i</m:mi><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>i</m:mi><m:msubsup><m:mi>p</m:mi><m:mi>o</m:mi><m:mi>a</m:mi></m:msubsup><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></item>
+    </list>
+</problem></exercise>
+  </content>
+</document>

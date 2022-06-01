@@ -1,0 +1,325 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML">
+  <title>Higher Order Derivatives</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m36192</md:content-id>
+  <md:title>Higher Order Derivatives</md:title>
+  <md:abstract>A series of definitions of terminology used to describe higher-order derivatives, and a formula for the coefficients of a taylor series function.</md:abstract>
+  <md:uuid>efdfd9b7-d27a-4aad-9b90-68b40c54cd59</md:uuid>
+</metadata>
+
+<content>
+<definition id="fs-id1170914492756"><term/><meaning id="fs-id1170917227628">
+    <para id="id62159">
+Let <m:math overflow="scroll"><m:mi>S</m:mi></m:math> be a subset of <m:math overflow="scroll"><m:mi>R</m:mi></m:math> (or <m:math overflow="scroll"><m:mi>C</m:mi></m:math>),
+and Let <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>:</m:mo><m:mi>S</m:mi><m:mo>→</m:mo><m:mi>C</m:mi></m:mrow></m:math> be a function of a real (or complex) variable.
+We say that <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is <emphasis effect="italics">continuously differentiable</emphasis> on <m:math overflow="scroll"><m:msup><m:mi>S</m:mi><m:mn>0</m:mn></m:msup></m:math> if <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is differentiable at each point
+<m:math overflow="scroll"><m:mi>x</m:mi></m:math> of <m:math overflow="scroll"><m:msup><m:mi>S</m:mi><m:mn>0</m:mn></m:msup></m:math> and the function <m:math overflow="scroll"><m:msup><m:mi>f</m:mi><m:mo>'</m:mo></m:msup></m:math> is continuous on <m:math overflow="scroll"><m:mrow><m:msup><m:mi>S</m:mi><m:mn>0</m:mn></m:msup><m:mo>.</m:mo></m:mrow></m:math>
+We say that <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>∈</m:mo><m:msup><m:mi>C</m:mi><m:mn>1</m:mn></m:msup><m:mrow><m:mo>(</m:mo><m:mi>S</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> if <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is continuous on <m:math overflow="scroll"><m:mi>S</m:mi></m:math> and continuously differentiable on <m:math overflow="scroll"><m:mrow><m:msup><m:mi>S</m:mi><m:mn>0</m:mn></m:msup><m:mo>.</m:mo></m:mrow></m:math>
+We say that <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is <emphasis effect="italics">2-times continuously differentiable</emphasis> on <m:math overflow="scroll"><m:msup><m:mi>S</m:mi><m:mn>0</m:mn></m:msup></m:math>
+if the first derivative <m:math overflow="scroll"><m:msup><m:mi>f</m:mi><m:mo>'</m:mo></m:msup></m:math> is itself continuously differentiable on <m:math overflow="scroll"><m:mrow><m:msup><m:mi>S</m:mi><m:mn>0</m:mn></m:msup><m:mo>.</m:mo></m:mrow></m:math>
+And, inductively, we say that <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is <emphasis effect="italics">k-times continuously differentiable</emphasis> on <m:math overflow="scroll"><m:msup><m:mi>S</m:mi><m:mn>0</m:mn></m:msup></m:math> if the <m:math overflow="scroll"><m:mrow><m:mi>k</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:math>st
+derivative of <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is itself continuously differentiable on <m:math overflow="scroll"><m:mrow><m:msup><m:mi>S</m:mi><m:mn>0</m:mn></m:msup><m:mo>.</m:mo></m:mrow></m:math>
+We write <m:math overflow="scroll"><m:msup><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>k</m:mi><m:mo>)</m:mo></m:mrow></m:msup></m:math> for the <m:math overflow="scroll"><m:mi>k</m:mi></m:math>th derivative of <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>,</m:mo></m:mrow></m:math> and we write <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>∈</m:mo><m:msup><m:mi>C</m:mi><m:mi>k</m:mi></m:msup><m:mrow><m:mo>(</m:mo><m:mi>S</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math>
+if <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is continuous on <m:math overflow="scroll"><m:mi>S</m:mi></m:math> and is <m:math overflow="scroll"><m:mi>k</m:mi></m:math> times continuously differentiable on <m:math overflow="scroll"><m:mrow><m:msup><m:mi>S</m:mi><m:mn>0</m:mn></m:msup><m:mo>.</m:mo></m:mrow></m:math>
+Of course, if <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>∈</m:mo><m:msup><m:mi>C</m:mi><m:mi>k</m:mi></m:msup><m:mrow><m:mo>(</m:mo><m:mi>S</m:mi><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> then all the derivatives <m:math overflow="scroll"><m:msup><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>j</m:mi><m:mo>)</m:mo></m:mrow></m:msup></m:math>, for <m:math overflow="scroll"><m:mrow><m:mi>j</m:mi><m:mo>≤</m:mo><m:mi>k</m:mi><m:mo>,</m:mo></m:mrow></m:math> exist nd are continuous on <m:math overflow="scroll"><m:mrow><m:msup><m:mi>S</m:mi><m:mn>0</m:mn></m:msup><m:mo>.</m:mo></m:mrow></m:math>
+(Why?)</para>
+    <para id="id63194">For completeness,
+we define <m:math overflow="scroll"><m:msup><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mn>0</m:mn><m:mo>)</m:mo></m:mrow></m:msup></m:math> to be <m:math overflow="scroll"><m:mi>f</m:mi></m:math> itself,
+and we say that <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>∈</m:mo><m:msup><m:mi>C</m:mi><m:mi>∞</m:mi></m:msup><m:mrow><m:mo>(</m:mo><m:mi>S</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> if <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is continuous on <m:math overflow="scroll"><m:mi>S</m:mi></m:math> and has infinitely many continuous
+derivatives on <m:math overflow="scroll"><m:mrow><m:msup><m:mi>S</m:mi><m:mn>0</m:mn></m:msup><m:mo>;</m:mo></m:mrow></m:math> i.e., all
+of its derivatives exist and are continuous on <m:math overflow="scroll"><m:mrow><m:msup><m:mi>S</m:mi><m:mn>0</m:mn></m:msup><m:mo>.</m:mo></m:mrow></m:math></para>
+    <para id="id63298">As in <link document="m36131"/>, we say that <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is <emphasis effect="italics">real-analytic</emphasis> (or <emphasis effect="italics">complex-analytic</emphasis>)
+on <m:math overflow="scroll"><m:mi>S</m:mi></m:math> if it is expandable in a Taylor series around each point <m:math overflow="scroll"><m:mrow><m:mi>c</m:mi><m:mo>∈</m:mo><m:msup><m:mi>S</m:mi><m:mn>0</m:mn></m:msup></m:mrow></m:math></para>
+</meaning></definition>
+<rule id="fs-id1170925432020"><label/><statement id="fs-id1170930297153">
+    <para id="id63345"><emphasis effect="bold">REMARK</emphasis>
+Keep in mind that the definition above,
+as applied to functions whose domain <m:math overflow="scroll"><m:mi>S</m:mi></m:math> is a nontrivial subset of <m:math overflow="scroll"><m:mrow><m:mi>C</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+has to do with functions of a complex variable
+that are continuously differentiable on the set <m:math overflow="scroll"><m:mrow><m:msup><m:mi>S</m:mi><m:mn>0</m:mn></m:msup><m:mo>.</m:mo></m:mrow></m:math>
+We have seen that this is quite different from a function having continuous partial derivatives on <m:math overflow="scroll"><m:mrow><m:msup><m:mi>S</m:mi><m:mn>0</m:mn></m:msup><m:mo>.</m:mo></m:mrow></m:math>
+We will return to partial derivatives at the end of this chapter.</para>
+</statement></rule>
+<rule id="fs-id7582339" type="theorem"><statement id="fs-id1170919138040">
+    <para id="id63415">
+Let <m:math overflow="scroll"><m:mi>S</m:mi></m:math> be an open subset of <m:math overflow="scroll"><m:mi>R</m:mi></m:math> (or <m:math overflow="scroll"><m:mi>C</m:mi></m:math>).</para>
+    <list id="id63460" display="block" list-type="enumerated">
+      <item id="uid1">Suppose <m:math overflow="scroll"><m:mrow><m:mi>W</m:mi><m:mi>S</m:mi></m:mrow></m:math> is a subset of <m:math overflow="scroll"><m:mrow><m:mi>R</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Then, for each <m:math overflow="scroll"><m:mrow><m:mi>k</m:mi><m:mo>≥</m:mo><m:mn>1</m:mn><m:mo>,</m:mo></m:mrow></m:math> there exists a function in <m:math overflow="scroll"><m:mrow><m:msup><m:mi>C</m:mi><m:mi>k</m:mi></m:msup><m:mrow><m:mo>(</m:mo><m:mi>S</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> that is not in <m:math overflow="scroll"><m:mrow><m:msup><m:mi>C</m:mi><m:mrow><m:mi>k</m:mi><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow></m:msup><m:mrow><m:mo>(</m:mo><m:mi>S</m:mi><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math>
+That is, <m:math overflow="scroll"><m:mrow><m:msup><m:mi>C</m:mi><m:mrow><m:mi>k</m:mi><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow></m:msup><m:mrow><m:mo>(</m:mo><m:mi>S</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> is a proper subset of <m:math overflow="scroll"><m:mrow><m:msup><m:mi>C</m:mi><m:mi>k</m:mi></m:msup><m:mrow><m:mo>(</m:mo><m:mi>S</m:mi><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid2">If <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is real-analytic (or complex-analytic) on <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+then <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>∈</m:mo><m:msup><m:mi>C</m:mi><m:mi>∞</m:mi></m:msup><m:mrow><m:mo>(</m:mo><m:mi>S</m:mi><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid3">There exists a function in <m:math overflow="scroll"><m:mrow><m:msup><m:mi>C</m:mi><m:mi>∞</m:mi></m:msup><m:mrow><m:mo>(</m:mo><m:mi>R</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> that is not real-analytic on <m:math overflow="scroll"><m:mrow><m:mi>R</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+That is, the set of real-analytic functions on <m:math overflow="scroll"><m:mi>R</m:mi></m:math> is a proper subset
+of the set <m:math overflow="scroll"><m:mrow><m:msup><m:mi>C</m:mi><m:mi>∞</m:mi></m:msup><m:mrow><m:mo>(</m:mo><m:mi>R</m:mi><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></item>
+    </list>
+    <para id="id63783"><emphasis effect="bold">REMARK</emphasis>
+Suppose <m:math overflow="scroll"><m:mi>S</m:mi></m:math> is an open subset of <m:math overflow="scroll"><m:mrow><m:mi>C</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+It is a famous result from the Theory of Complex Variables that
+if <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is in <m:math overflow="scroll"><m:mrow><m:msup><m:mi>C</m:mi><m:mn>1</m:mn></m:msup><m:mrow><m:mo>(</m:mo><m:mi>S</m:mi><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> then <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is necessarily complex analytic on <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+We will prove this amazing result in <link target-id="fs-id1167472693549" document="m36237"/>.
+Part (3) of the theorem shows that the situation is quite different for real-valued functions of a real variable.</para>
+</statement>
+<proof id="fs-id1170914729556">
+    <para id="id63869">For part (1), see the exercise below. Part (2) is immediate from
+part (c) of <link target-id="fs-id1170309702469" document="m36186"/>. Before finishing the proof of part (3), we present the
+following lemma:</para>
+</proof>
+</rule>
+<rule id="fs-id1170919638294" type="lemma"><statement id="fs-id1170920028076">
+    <para id="id63878"> Let <m:math overflow="scroll"><m:mi>f</m:mi></m:math> be the function defined on all of <m:math overflow="scroll"><m:mi>R</m:mi></m:math> as follows.</para>
+    <equation id="id63910">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mi>f</m:mi>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>x</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>=</m:mo>
+          <m:mo>{</m:mo>
+          <m:mn>0</m:mn>
+          <m:mi>x</m:mi>
+          <m:mo>≤</m:mo>
+          <m:mn>0</m:mn>
+          <m:mfrac>
+            <m:mrow>
+              <m:mi>p</m:mi>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>x</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:msup>
+                <m:mi>e</m:mi>
+                <m:mrow>
+                  <m:mo>-</m:mo>
+                  <m:mn>1</m:mn>
+                  <m:mo>/</m:mo>
+                  <m:mi>x</m:mi>
+                </m:mrow>
+              </m:msup>
+            </m:mrow>
+            <m:msup>
+              <m:mi>x</m:mi>
+              <m:mi>n</m:mi>
+            </m:msup>
+          </m:mfrac>
+          <m:mi>x</m:mi>
+          <m:mo>&gt;</m:mo>
+          <m:mn>0</m:mn>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id63984">where <m:math overflow="scroll"><m:mrow><m:mi>p</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:math> is a fixed polynomial function and <m:math overflow="scroll"><m:mi>n</m:mi></m:math> is a fixed nonnegative integer.
+Then <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is continuous at each point <m:math overflow="scroll"><m:mi>x</m:mi></m:math> of <m:math overflow="scroll"><m:mrow><m:mi>R</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+</statement>
+<proof id="fs-id1170927644180">
+    <para id="id64052">The assertion of the lemma is clear if <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>≠</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math>
+To see that <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is continuous at 0, it will suffice to prove that</para>
+    <equation id="id64086">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:munder>
+            <m:mo movablelimits="true" form="prefix">lim</m:mo>
+            <m:mrow>
+              <m:mi>x</m:mi>
+              <m:mo>→</m:mo>
+              <m:mn>0</m:mn>
+              <m:mo>+</m:mo>
+              <m:mn>0</m:mn>
+            </m:mrow>
+          </m:munder>
+          <m:mfrac>
+            <m:mrow>
+              <m:mi>p</m:mi>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>x</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:msup>
+                <m:mi>e</m:mi>
+                <m:mrow>
+                  <m:mo>-</m:mo>
+                  <m:mn>1</m:mn>
+                  <m:mo>/</m:mo>
+                  <m:mi>x</m:mi>
+                </m:mrow>
+              </m:msup>
+            </m:mrow>
+            <m:msup>
+              <m:mi>x</m:mi>
+              <m:mi>n</m:mi>
+            </m:msup>
+          </m:mfrac>
+          <m:mo>=</m:mo>
+          <m:mn>0</m:mn>
+          <m:mo>.</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id64158">(Why?) But, for <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> we know from part (b) of <link target-id="fs-id1164719117949" document="m36160"/> that
+<m:math overflow="scroll"><m:mrow><m:msup><m:mi>e</m:mi><m:mrow><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>x</m:mi></m:mrow></m:msup><m:mo>&gt;</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mrow><m:mo>(</m:mo><m:msup><m:mi>x</m:mi><m:mrow><m:mi>n</m:mi><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow></m:msup><m:mrow><m:mo>(</m:mo><m:mi>n</m:mi><m:mo>+</m:mo><m:mn>1</m:mn><m:mo>)</m:mo></m:mrow><m:mo>!</m:mo><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math>
+implying that <m:math overflow="scroll"><m:mrow><m:msup><m:mi>e</m:mi><m:mrow><m:mo>-</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>x</m:mi></m:mrow></m:msup><m:mo>&lt;</m:mo><m:msup><m:mi>x</m:mi><m:mrow><m:mi>n</m:mi><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow></m:msup><m:mrow><m:mo>(</m:mo><m:mi>n</m:mi><m:mo>+</m:mo><m:mn>1</m:mn><m:mo>)</m:mo></m:mrow><m:mo>!</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Hence, for <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math></para>
+    <equation id="id64312">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mrow>
+            <m:mo>|</m:mo>
+            <m:mi>f</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>x</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>|</m:mo>
+          </m:mrow>
+          <m:mo>=</m:mo>
+          <m:mfrac>
+            <m:mrow>
+              <m:mrow>
+                <m:mo>|</m:mo>
+                <m:mi>p</m:mi>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>x</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mo>|</m:mo>
+              </m:mrow>
+              <m:msup>
+                <m:mi>e</m:mi>
+                <m:mrow>
+                  <m:mo>-</m:mo>
+                  <m:mn>1</m:mn>
+                  <m:mo>/</m:mo>
+                  <m:mi>x</m:mi>
+                </m:mrow>
+              </m:msup>
+            </m:mrow>
+            <m:msup>
+              <m:mi>x</m:mi>
+              <m:mi>n</m:mi>
+            </m:msup>
+          </m:mfrac>
+          <m:mo>&lt;</m:mo>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>n</m:mi>
+            <m:mo>+</m:mo>
+            <m:mn>1</m:mn>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>!</m:mo>
+          <m:mi>x</m:mi>
+          <m:mrow>
+            <m:mo>|</m:mo>
+            <m:mi>p</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>x</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>|</m:mo>
+          </m:mrow>
+          <m:mo>,</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id64415">and this tends to 0 as <m:math overflow="scroll"><m:mi>x</m:mi></m:math> approaches
+0 from the right, as desired.</para>
+</proof></rule>
+    <para id="id64430">Returning to the proof of <link target-id="fs-id7582339"/>,
+we verify part (3) by observing that if <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is as in the preceding lemma then <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is actually differentiable, and its
+derivative <m:math overflow="scroll"><m:msup><m:mi>f</m:mi><m:mo>'</m:mo></m:msup></m:math> is a function of the same sort. (Why?) It follows that any such function belongs to <m:math overflow="scroll"><m:mrow><m:msup><m:mi>C</m:mi><m:mi>∞</m:mi></m:msup><m:mrow><m:mo>(</m:mo><m:mi>R</m:mi><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math> On the other hand,
+a nontrivial such <m:math overflow="scroll"><m:mi>f</m:mi></m:math> cannot be
+expandable in a Taylor series around 0
+because of the Identity Theorem. (Take <m:math overflow="scroll"><m:mrow><m:msub><m:mi>x</m:mi><m:mi>k</m:mi></m:msub><m:mo>=</m:mo><m:mo>-</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>k</m:mi><m:mo>.</m:mo></m:mrow></m:math>)
+This completes the proof.</para>
+<exercise id="fs-id1170921676961"><problem id="fs-id1170922346182">
+    <list id="id64548" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid4"> Prove part (1) of <link target-id="fs-id7582339"/>.
+Use functions of the form <m:math overflow="scroll"><m:mrow><m:msup><m:mi>x</m:mi><m:mi>n</m:mi></m:msup><m:mo form="prefix">sin</m:mo><m:mrow><m:mo>(</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid5"> Prove that any function of the form of the <m:math overflow="scroll"><m:mi>f</m:mi></m:math> in the lemma above
+is everywhere differentiable on <m:math overflow="scroll"><m:mrow><m:mi>R</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+and its derivative has the same form.
+Conclude that any such function belongs to <m:math overflow="scroll"><m:mrow><m:msup><m:mi>C</m:mi><m:mi>∞</m:mi></m:msup><m:mrow><m:mo>(</m:mo><m:mi>R</m:mi><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid6"> For each positive integer <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>,</m:mo></m:mrow></m:math> define a function <m:math overflow="scroll"><m:msub><m:mi>f</m:mi><m:mi>n</m:mi></m:msub></m:math> on the interval <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mo>-</m:mo><m:mn>1</m:mn><m:mo>,</m:mo><m:mn>1</m:mn></m:mrow></m:math> by
+<m:math overflow="scroll"><m:mrow><m:msub><m:mi>f</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mrow><m:mo>|</m:mo><m:mi>x</m:mi><m:mo>|</m:mo></m:mrow><m:mrow><m:mn>1</m:mn><m:mo>+</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>n</m:mi></m:mrow></m:msup><m:mo>.</m:mo></m:mrow></m:math>
+Prove that each <m:math overflow="scroll"><m:msub><m:mi>f</m:mi><m:mi>n</m:mi></m:msub></m:math> is differentiable at every point in <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mo>-</m:mo><m:mn>1</m:mn><m:mo>,</m:mo><m:mn>1</m:mn><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math> including <m:math overflow="scroll"><m:mrow><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math>
+Prove also that the sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>f</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> converges uniformly to the function <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mo>|</m:mo><m:mi>x</m:mi><m:mo>|</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+(See part (h) of <link target-id="fs-id1167590429104" document="m36178"/>.)
+Conclude that the uniform limit of differentiable functions of a real variable need not be differentiable.
+(Again, for functions of a complex variable, the situation is very different. In that case,
+the uniform limit of differentiable functions <emphasis effect="bold">is</emphasis> differentiable. See <link target-id="fs-id1167524382662" document="m36240"/>.)
+</item>
+    </list>
+</problem></exercise>
+<exercise id="fs-id1170918702796"><title>A smooth approximation to a step function.</title><problem id="fs-id1170916818117">
+    <para id="id64881">
+Suppose <m:math overflow="scroll"><m:mrow><m:mi>a</m:mi><m:mo>&lt;</m:mo><m:mi>b</m:mi><m:mo>&lt;</m:mo><m:mi>c</m:mi><m:mo>&lt;</m:mo><m:mi>d</m:mi></m:mrow></m:math> are real numbers. Show that there exists a function
+<m:math overflow="scroll"><m:mi>χ</m:mi></m:math> in <m:math overflow="scroll"><m:mrow><m:msup><m:mi>C</m:mi><m:mi>∞</m:mi></m:msup><m:mrow><m:mo>(</m:mo><m:mi>R</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> such that <m:math overflow="scroll"><m:mrow><m:mn>0</m:mn><m:mo>≤</m:mo><m:mi>χ</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>≤</m:mo><m:mn>1</m:mn></m:mrow></m:math>
+for all <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>,</m:mo></m:mrow></m:math><m:math overflow="scroll"><m:mrow><m:mi>χ</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>≡</m:mo><m:mn>1</m:mn></m:mrow></m:math> for
+<m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mo>[</m:mo><m:mi>b</m:mi><m:mo>,</m:mo><m:mi>c</m:mi><m:mo>]</m:mo><m:mo>,</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>χ</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>≡</m:mo><m:mn>0</m:mn></m:mrow></m:math> for <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∉</m:mo><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>d</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+(If <m:math overflow="scroll"><m:mi>a</m:mi></m:math> is close to <m:math overflow="scroll"><m:mi>b</m:mi></m:math> and <m:math overflow="scroll"><m:mi>c</m:mi></m:math> is close to <m:math overflow="scroll"><m:mrow><m:mi>d</m:mi><m:mo>,</m:mo></m:mrow></m:math> then this function is a <m:math overflow="scroll"><m:msup><m:mi>C</m:mi><m:mi>∞</m:mi></m:msup></m:math> approximation to the step function
+that is 1 on the interval <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>b</m:mi><m:mo>,</m:mo><m:mi>c</m:mi><m:mo>]</m:mo></m:mrow></m:math> and 0 elsewhere.)</para>
+    <list id="id65157" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid7"> Let <m:math overflow="scroll"><m:mi>f</m:mi></m:math> be a function like the one in the lemma.
+Think about the graphs of the functions <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>-</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>b</m:mi><m:mo>-</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Construct a <m:math overflow="scroll"><m:msup><m:mi>C</m:mi><m:mi>∞</m:mi></m:msup></m:math> function <m:math overflow="scroll"><m:mi>g</m:mi></m:math> that is 0 between <m:math overflow="scroll"><m:mi>b</m:mi></m:math> and <m:math overflow="scroll"><m:mi>c</m:mi></m:math> and positive everywhere else.
+</item>
+      <item id="uid8"> Construct a <m:math overflow="scroll"><m:msup><m:mi>C</m:mi><m:mi>∞</m:mi></m:msup></m:math> function <m:math overflow="scroll"><m:mi>h</m:mi></m:math> that is positive between <m:math overflow="scroll"><m:mi>a</m:mi></m:math> and <m:math overflow="scroll"><m:mi>d</m:mi></m:math> and 0 everywhere else.
+</item>
+      <item id="uid9"> Let <m:math overflow="scroll"><m:mi>g</m:mi></m:math> and <m:math overflow="scroll"><m:mi>h</m:mi></m:math> be as in parts (a) and (b).
+If <m:math overflow="scroll"><m:mrow><m:mi>j</m:mi><m:mo>=</m:mo><m:mi>g</m:mi><m:mo>+</m:mo><m:mi>h</m:mi><m:mo>,</m:mo></m:mrow></m:math> show that <m:math overflow="scroll"><m:mi>j</m:mi></m:math> is never 0, and write <m:math overflow="scroll"><m:mi>k</m:mi></m:math>
+for the <m:math overflow="scroll"><m:msup><m:mi>C</m:mi><m:mi>∞</m:mi></m:msup></m:math> function <m:math overflow="scroll"><m:mrow><m:mi>k</m:mi><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>j</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid10"> Examine the function <m:math overflow="scroll"><m:mrow><m:mi>h</m:mi><m:mi>k</m:mi><m:mo>,</m:mo></m:mrow></m:math> and show that it
+is the desired function <m:math overflow="scroll"><m:mrow><m:mi>χ</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+    </list>
+</problem></exercise>
+<rule id="fs-id1170919933864" type="theorem"><title>Formula for the coefficients of a Taylor Series function</title><statement id="fs-id1170933966692">
+    <para id="id65458"> 
+Let <m:math overflow="scroll"><m:mi>f</m:mi></m:math> be expandable in a Taylor series around a point <m:math overflow="scroll"><m:mrow><m:mi>c</m:mi><m:mo>:</m:mo></m:mrow></m:math></para>
+    <equation id="id65487">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mi>f</m:mi>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>x</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>=</m:mo>
+          <m:mo>∑</m:mo>
+          <m:msub>
+            <m:mi>a</m:mi>
+            <m:mi>n</m:mi>
+          </m:msub>
+          <m:msup>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>x</m:mi>
+              <m:mo>-</m:mo>
+              <m:mi>c</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mi>n</m:mi>
+          </m:msup>
+          <m:mo>.</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id65538">Then for each <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>,</m:mo></m:mrow></m:math><m:math overflow="scroll"><m:mrow><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>=</m:mo><m:msup><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>n</m:mi><m:mo>)</m:mo></m:mrow></m:msup><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>/</m:mo><m:mi>n</m:mi><m:mo>!</m:mo><m:mo>.</m:mo></m:mrow></m:math></para>
+</statement>
+<proof id="fs-id1170925931790">
+    <para id="id65600"> Because each derivative of a Taylor series function is again a Taylor series function, and because the value of a Taylor
+series function at the point <m:math overflow="scroll"><m:mi>c</m:mi></m:math> is equal to its constant term <m:math overflow="scroll"><m:mrow><m:msub><m:mi>a</m:mi><m:mn>0</m:mn></m:msub><m:mo>,</m:mo></m:mrow></m:math> we have that <m:math overflow="scroll"><m:mrow><m:msub><m:mi>a</m:mi><m:mn>1</m:mn></m:msub><m:mo>=</m:mo><m:msup><m:mi>f</m:mi><m:mo>'</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math>
+Computing the derivative of the derivative,
+we see that <m:math overflow="scroll"><m:mrow><m:mn>2</m:mn><m:msub><m:mi>a</m:mi><m:mn>2</m:mn></m:msub><m:mo>=</m:mo><m:msup><m:mrow><m:msup><m:mi>f</m:mi><m:mo>'</m:mo></m:msup></m:mrow><m:mo>'</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mn>2</m:mn><m:mo>)</m:mo></m:mrow></m:msup><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math>
+Continuing this, i.e., arguing by induction, we find that <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>!</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>=</m:mo><m:msup><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>n</m:mi><m:mo>)</m:mo></m:mrow></m:msup><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> which proves
+the theorem.</para>
+</proof></rule>
+    <!--empty paragraphs get left behind.-->
+  </content>
+</document>

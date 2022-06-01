@@ -1,0 +1,66 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML">
+  <title>Integration Over Smooth Curves in the Plane C=2π r</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m36224</md:content-id>
+  <md:title>Integration Over Smooth Curves in the Plane C=2π r</md:title>
+  <md:abstract>A brief introduction of the upcoming chapter by Lawrence Baggett. In this chapter we will define what we mean
+by a smooth curve in the plane and what is meant by its arc length.
+These definitions are a good bit more tricky than one might imagine.
+Indeed, it is the subtlety of the definition of arc length
+that prevented us from defining the trigonometric functions in terms of
+wrapping the real line around the circle, a definition frequently used in high school trigonometry courses.
+Having made a proper definition of arc length, we will then be able to establish the formula <m:math overflow="scroll"><m:mrow><m:mi>C</m:mi><m:mo>=</m:mo><m:mn>2</m:mn><m:mi>π</m:mi><m:mi>r</m:mi></m:mrow></m:math> for the circumference of a circle of radius <m:math overflow="scroll"><m:mrow><m:mi>r</m:mi><m:mo>.</m:mo></m:mrow></m:math></md:abstract>
+  <md:uuid>b8d2748f-7415-43c0-8ec4-aa7a8563f7ec</md:uuid>
+</metadata>
+
+<content>
+    <para id="id62155">In this chapter we will define what we mean
+by a smooth curve in the plane and what is meant by its arc length.
+These definitions are a good bit more tricky than one might imagine.
+Indeed, it is the subtlety of the definition of arc length
+that prevented us from defining the trigonometric functions in terms of
+wrapping the real line around the circle, a definition frequently used in high school trigonometry courses.
+Having made a proper definition of arc length, we will then be able to establish the formula <m:math overflow="scroll"><m:mrow><m:mi>C</m:mi><m:mo>=</m:mo><m:mn>2</m:mn><m:mi>π</m:mi><m:mi>r</m:mi></m:mrow></m:math> for the circumference of a circle of radius <m:math overflow="scroll"><m:mrow><m:mi>r</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+    <para id="id62194">By the “plane,” we will mean <m:math overflow="scroll"><m:mrow><m:msup><m:mrow><m:mi>R</m:mi></m:mrow><m:mn>2</m:mn></m:msup><m:mo>≡</m:mo><m:mi>C</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+and we will on occasion want to carefully distinguish between these two notions of the plane,
+i.e., two real variables <m:math overflow="scroll"><m:mi>x</m:mi></m:math> and <m:math overflow="scroll"><m:mi>y</m:mi></m:math> as opposed to one complex variable <m:math overflow="scroll"><m:mrow><m:mi>z</m:mi><m:mo>=</m:mo><m:mi>x</m:mi><m:mo>+</m:mo><m:mi>i</m:mi><m:mi>y</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+In various instances, for clarity,
+we will use notations like <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>+</m:mo><m:mi>i</m:mi><m:mi>y</m:mi></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>,</m:mo><m:mi>y</m:mi><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math> remembering that both of these represent the
+same point in the plane.
+As <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>+</m:mo><m:mi>i</m:mi><m:mi>y</m:mi><m:mo>,</m:mo></m:mrow></m:math> it is a single complex number, while as <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>,</m:mo><m:mi>y</m:mi><m:mo>)</m:mo></m:mrow></m:math>
+we may think of it as a vector in <m:math overflow="scroll"><m:msup><m:mrow><m:mi>R</m:mi></m:mrow><m:mn>2</m:mn></m:msup></m:math> having a magnitude and, if nonzero, a direction.</para>
+    <para id="id62884">We also will define in this chapter three different kinds of integrals
+over such curves.
+The first kind, called “integration with respect to arc length,”
+will be completely analogous to the integral defined
+in <link document=""/> for functions on a closed and bounded interval, and it will only
+deal with functions whose domain is the set consisting of the points on the curve.
+The second kind of integral, called a “contour integral,” is
+similar to the first one, but it emphasizes in a critical way that we are integrating
+a complex-valued function over a curve in the complex plane <m:math overflow="scroll"><m:mi>C</m:mi></m:math> and not simply over a subset of <m:math overflow="scroll"><m:mrow><m:msup><m:mrow><m:mi>R</m:mi></m:mrow><m:mn>2</m:mn></m:msup><m:mo>.</m:mo></m:mrow></m:math>
+The applications of contour integrals is usually to functions
+whose domains are open subsets of the plane that contain the curve as a proper subset,
+i.e., whose domains are larger than just the curve.
+The third kind of integral over a curve, called a “line integral,”
+is conceptually very different from the first two.
+In fact, we won't be integrating functions at all but rather a new notion that we call “differential forms.”
+This is actually the beginnings of the subject called differential geometry,
+whose intricacies and power are much more evident in higher dimensions than 2.</para>
+    <para id="id62943">The main points of this chapter include:</para>
+    <list id="id62946" display="block" list-type="enumerated"><item id="uid1">The definition of a <emphasis effect="bold">smooth curve</emphasis>,
+and the definition of its <emphasis effect="bold">arc length</emphasis>,
+</item>
+      <item id="uid2">the derivation of the formula <m:math overflow="scroll"><m:mrow><m:mi>C</m:mi><m:mo>=</m:mo><m:mn>2</m:mn><m:mi>π</m:mi><m:mi>r</m:mi></m:mrow></m:math> for the
+circumference of a circle of radius <m:math overflow="scroll"><m:mi>r</m:mi></m:math> (<link target-id="fs-id1164864632012" document="m36226"/>),
+</item>
+      <item id="uid3">the definition of the <emphasis effect="bold">integral with respect to arc length</emphasis>,
+</item>
+      <item id="uid4">the definition of a <emphasis effect="bold">contour integral</emphasis>,
+</item>
+      <item id="uid5">the definition of a <emphasis effect="bold">line integral</emphasis>, and
+</item>
+      <item id="uid6"><emphasis effect="bold">Green's Theorem</emphasis> (<link target-id="fs-id1169300816456" document="m36233"/>).
+</item>
+    </list>
+  </content>
+</document>

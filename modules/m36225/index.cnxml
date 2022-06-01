@@ -1,0 +1,1218 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML">
+  <title>Smooth Curves in the Plane</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m36225</md:content-id>
+  <md:title>Smooth Curves in the Plane</md:title>
+  <md:abstract>Our first project is to make a satisfactory definition of a smooth curve in the plane,
+for there is a good bit of subtlety to such a definition.
+In fact, the material in this chapter is all surprisingly tricky,
+and the proofs are good solid analytical arguments, with lots of <m:math overflow="scroll"><m:mi>ϵ</m:mi></m:math>'s and references
+to earlier theorems.</md:abstract>
+  <md:uuid>b39731fe-ccbf-459a-bce4-21c213d4e036</md:uuid>
+</metadata>
+
+<content>
+    <para id="id150564">Our first project is to make a satisfactory definition of a smooth curve in the plane,
+for there is a good bit of subtlety to such a definition.
+In fact, the material in this chapter is all surprisingly tricky,
+and the proofs are good solid analytical arguments, with lots of <m:math overflow="scroll"><m:mi>ϵ</m:mi></m:math>'s and references
+to earlier theorems.</para>
+    <para id="id150580">Whatever definition we adopt for a curve, we certainly want straight lines, circles, and other natural geometric objects to be covered by our definition.
+Our intuition is that a curve in the plane should be a “1-dimensional” subset, whatever that may mean.
+At this point, we have no definition of the dimension of a general set, so this is probably not the way to think about curves.
+On the other hand, from the point of view of a physicist, we might well define a curve as the trajectory followed
+by a particle moving in the plane, whatever that may be.
+As it happens, we do have some notion of how to describe mathematically the trajectory of a moving particle.
+We suppose that a particle moving in the plane proceeds in a continuous manner relative to time.
+That is, the position of the particle at time <m:math overflow="scroll"><m:mi>t</m:mi></m:math> is given by a continuous function <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mi>x</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo><m:mo>+</m:mo><m:mi>i</m:mi><m:mi>y</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo><m:mo>≡</m:mo><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo><m:mo>,</m:mo><m:mi>y</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math>
+as <m:math overflow="scroll"><m:mi>t</m:mi></m:math> ranges from time <m:math overflow="scroll"><m:mi>a</m:mi></m:math> to time <m:math overflow="scroll"><m:mrow><m:mi>b</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+A good first guess at a definition of a curve joining two points <m:math overflow="scroll"><m:msub><m:mi>z</m:mi><m:mn>1</m:mn></m:msub></m:math> and <m:math overflow="scroll"><m:msub><m:mi>z</m:mi><m:mn>2</m:mn></m:msub></m:math>
+might well be that it is the range <m:math overflow="scroll"><m:mi>C</m:mi></m:math> of a continuous
+function <m:math overflow="scroll"><m:mi>f</m:mi></m:math> that is defined on some closed bounded interval <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>.</m:mo></m:mrow></m:math> This would be a
+curve that joins the two points <m:math overflow="scroll"><m:mrow><m:msub><m:mi>z</m:mi><m:mn>1</m:mn></m:msub><m:mo>=</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:msub><m:mi>z</m:mi><m:mn>2</m:mn></m:msub><m:mo>=</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>b</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math>
+in the plane.
+Unfortunately, this is also not a satisfactory definition of a curve, because of the following
+surprising and bizarre mathematical example,
+first discovered by Guiseppe Peano in 1890.</para>
+    
+<rule id="fs-id8922870"><label/><statement id="fs-id1170768045305">
+      <para id="id151335"><emphasis>THE PEANO CURVE</emphasis> The so-called “Peano curve” is a continuous function <m:math overflow="scroll"><m:mi>f</m:mi></m:math> defined on the interval <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>1</m:mn><m:mo>]</m:mo><m:mo>,</m:mo></m:mrow></m:math> whose range
+is the entire unit square <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>1</m:mn><m:mo>]</m:mo><m:mo>×</m:mo><m:mo>[</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>1</m:mn><m:mo>]</m:mo></m:mrow></m:math> in <m:math overflow="scroll"><m:mrow><m:msup><m:mrow><m:mi>R</m:mi></m:mrow><m:mn>2</m:mn></m:msup><m:mo>.</m:mo></m:mrow></m:math></para>
+</statement></rule>
+      <para id="id151420">Be careful to realize that we're talking about the “range” of <m:math overflow="scroll"><m:mi>f</m:mi></m:math> and not its graph.
+The graph of a real-valued function could never be the entire square.
+This Peano function is a complex-valued function of a real variable.
+Anyway, whatever definition we settle on for a curve, we do not want the entire unit square to
+be a curve, so this first attempt at a definition is obviously not going to work.</para>
+      <para id="id151436">Let's go back to the particle tracing out a trajectory.
+The physicist would probably agree that the particle should have a continuously varying velocity at all times, or at nearly all times,
+i.e., the function <m:math overflow="scroll"><m:mi>f</m:mi></m:math> should be continuously differentiable.
+Recall that the velocity of the particle is defined to be the rate of change of the position
+of the particle, and that's just the derivative <m:math overflow="scroll"><m:msup><m:mi>f</m:mi><m:mo>'</m:mo></m:msup></m:math> of <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+We might also assume that the particle is never at rest as it traces out the curve, i.e., the
+derivative <m:math overflow="scroll"><m:mrow><m:msup><m:mi>f</m:mi><m:mo>'</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> is never 0.
+As a final simplification,
+we could suppose that the curve never crosses itself, i.e., the particle
+is never at the same position more than once during the time interval from <m:math overflow="scroll"><m:mrow><m:mi>t</m:mi><m:mo>=</m:mo><m:mi>a</m:mi></m:mrow></m:math> to <m:math overflow="scroll"><m:mrow><m:mi>t</m:mi><m:mo>=</m:mo><m:mi>b</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+In fact, these considerations inspire the formal definition of a curve that we will adopt below.</para>
+      <para id="id151528">Recall that a function <m:math overflow="scroll"><m:mi>f</m:mi></m:math> that is continuous on a closed interval
+<m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow></m:math> and continuously differentiable on the open interval <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo></m:mrow></m:math> is called a smooth function on <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+And, if there exists a partition <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>t</m:mi><m:mn>0</m:mn></m:msub><m:mo>&lt;</m:mo><m:msub><m:mi>t</m:mi><m:mn>1</m:mn></m:msub><m:mo>&lt;</m:mo><m:mo>...</m:mo><m:mo>&lt;</m:mo><m:msub><m:mi>t</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> of <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow></m:math> such that <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is smooth on each subinterval <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:msub><m:mi>t</m:mi><m:mrow><m:mi>i</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>,</m:mo><m:msub><m:mi>t</m:mi><m:mi>i</m:mi></m:msub><m:mo>]</m:mo><m:mo>,</m:mo></m:mrow></m:math>
+then <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is called piecewise smooth on <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Although the derivative of a smooth function is only defined and continuous on the open interval <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math>
+and hence possibly is unbounded,
+it follows from part (d) of <link target-id="fs-id1164267204474" document="m36222"/> that this derivative is improperly-integrable
+on that open interval.
+We recall also that just because a function is improperly-integrable on an open interval,
+its absolute value may not be improperly-integrable.
+Before giving the formal definition of a smooth curve,
+which apparently will be related to smooth or piecewise smooth functions,
+it is prudent to present an approximation theorem about smooth functions.
+<link target-id="fs-id1171756794069" document="m36165"/> asserts that every continuous function on a closed bounded interval
+is the uniform limit of a sequence of step functions.
+We give next a similar, but stronger, result about smooth functions.
+It asserts that a smooth function can be approximated “almost uniformly” by piecewise linear functions.</para>
+<rule id="fs-id1170766595499" type="theorem"><statement id="fs-id1170771116769">
+      <para id="id151760">
+Let <m:math overflow="scroll"><m:mi>f</m:mi></m:math> be a smooth function on a closed and bounded interval <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>,</m:mo></m:mrow></m:math>
+and assume that <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msup><m:mi>f</m:mi><m:mo>'</m:mo></m:msup><m:mrow><m:mo>|</m:mo></m:mrow></m:mrow></m:math> is improperly-integrable on the open interval <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Given an <m:math overflow="scroll"><m:mrow><m:mi>ϵ</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> there exists a
+piecewise linear function <m:math overflow="scroll"><m:mi>p</m:mi></m:math> for which</para>
+      <list id="id151859" display="block" list-type="enumerated">
+        <item id="uid2"> <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>-</m:mo><m:mi>p</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mi>ϵ</m:mi></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>.</m:mo></m:mrow></m:math></item>
+        <item id="uid3"> <m:math overflow="scroll"><m:mrow><m:msubsup><m:mo>∫</m:mo><m:mi>a</m:mi><m:mi>b</m:mi></m:msubsup><m:mrow><m:mo>|</m:mo><m:msup><m:mi>f</m:mi><m:mo>'</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>-</m:mo><m:msup><m:mi>p</m:mi><m:mo>'</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>|</m:mo></m:mrow><m:mspace width="0.166667em"/><m:mi>d</m:mi><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mi>ϵ</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+      </list>
+      <para id="id152014">That is, the functions <m:math overflow="scroll"><m:mi>f</m:mi></m:math> and <m:math overflow="scroll"><m:mi>p</m:mi></m:math> are close everywhere, and their
+derivatives are close on average in the sense that the
+integral of the absolute value of the difference of the derivatives is small.</para>
+</statement>
+<proof id="fs-id1170765814030">
+      <para id="id152034">
+Because <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is continuous on the compact set <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>,</m:mo></m:mrow></m:math> it is uniformly continuous.
+Hence, let <m:math overflow="scroll"><m:mrow><m:mi>δ</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn></m:mrow></m:math> be such that if <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>,</m:mo><m:mi>y</m:mi><m:mo>∈</m:mo><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>,</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>x</m:mi><m:mo>-</m:mo><m:mi>y</m:mi><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mi>δ</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+then <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>-</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>y</m:mi><m:mo>)</m:mo><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mi>ϵ</m:mi><m:mo>/</m:mo><m:mn>2</m:mn><m:mo>.</m:mo></m:mrow></m:math></para>
+      <para id="id152174">Because <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msup><m:mi>f</m:mi><m:mo>'</m:mo></m:msup><m:mrow><m:mo>|</m:mo></m:mrow></m:mrow></m:math> is improperly-integrable on the open interval <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math>
+we may use part (b) of <link target-id="fs-id1164267204474" document="m36222"/>
+to find a <m:math overflow="scroll"><m:mrow><m:msup><m:mi>δ</m:mi><m:mo>'</m:mo></m:msup><m:mo>&gt;</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> which may also be chosen to be
+<m:math overflow="scroll"><m:mrow><m:mo>&lt;</m:mo><m:mi>δ</m:mi><m:mo>,</m:mo></m:mrow></m:math> such that <m:math overflow="scroll"><m:mrow><m:msubsup><m:mo>∫</m:mo><m:mi>a</m:mi><m:mrow><m:mi>a</m:mi><m:mo>+</m:mo><m:msup><m:mi>δ</m:mi><m:mo>'</m:mo></m:msup></m:mrow></m:msubsup><m:mrow><m:mo>|</m:mo></m:mrow><m:msup><m:mi>f</m:mi><m:mo>'</m:mo></m:msup><m:mrow><m:mo>|</m:mo><m:mo>+</m:mo></m:mrow><m:msubsup><m:mo>∫</m:mo><m:mrow><m:mi>b</m:mi><m:mo>-</m:mo><m:msup><m:mi>δ</m:mi><m:mo>'</m:mo></m:msup></m:mrow><m:mi>b</m:mi></m:msubsup><m:mrow><m:mo>|</m:mo><m:msup><m:mi>f</m:mi><m:mo>'</m:mo></m:msup><m:mo>|</m:mo></m:mrow><m:mo>&lt;</m:mo><m:mi>ϵ</m:mi><m:mo>/</m:mo><m:mn>2</m:mn><m:mo>,</m:mo></m:mrow></m:math>
+and we fix such a <m:math overflow="scroll"><m:mrow><m:msup><m:mi>δ</m:mi><m:mo>'</m:mo></m:msup><m:mo>.</m:mo></m:mrow></m:math></para>
+      <para id="id152357">Now, because <m:math overflow="scroll"><m:msup><m:mi>f</m:mi><m:mo>'</m:mo></m:msup></m:math> is uniformly continuous on the compact set <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>+</m:mo><m:msup><m:mi>δ</m:mi><m:mo>'</m:mo></m:msup><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>-</m:mo><m:msup><m:mi>δ</m:mi><m:mo>'</m:mo></m:msup><m:mo>]</m:mo><m:mo>,</m:mo></m:mrow></m:math> there
+exists an <m:math overflow="scroll"><m:mrow><m:mi>α</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn></m:mrow></m:math> such that
+<m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msup><m:mi>f</m:mi><m:mo>'</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>-</m:mo><m:msup><m:mi>f</m:mi><m:mo>'</m:mo></m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mi>y</m:mi><m:mo>)</m:mo></m:mrow><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mi>ϵ</m:mi><m:mo>/</m:mo><m:mn>4</m:mn><m:mrow><m:mo>(</m:mo><m:mi>b</m:mi><m:mo>-</m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:mrow></m:math> if <m:math overflow="scroll"><m:mi>x</m:mi></m:math> and <m:math overflow="scroll"><m:mi>y</m:mi></m:math> belong to
+<m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>+</m:mo><m:msup><m:mi>δ</m:mi><m:mo>'</m:mo></m:msup><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>-</m:mo><m:msup><m:mi>δ</m:mi><m:mo>'</m:mo></m:msup><m:mo>]</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>x</m:mi><m:mo>-</m:mo><m:mi>y</m:mi><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mi>α</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Choose a partition <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub><m:mo>&lt;</m:mo><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>&lt;</m:mo><m:mo>...</m:mo><m:mo>&lt;</m:mo><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> of <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow></m:math>
+such that <m:math overflow="scroll"><m:mrow><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub><m:mo>=</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>=</m:mo><m:mi>a</m:mi><m:mo>+</m:mo><m:msup><m:mi>δ</m:mi><m:mo>'</m:mo></m:msup><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mrow><m:mi>n</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>=</m:mo><m:mi>b</m:mi><m:mo>-</m:mo><m:msup><m:mi>δ</m:mi><m:mo>'</m:mo></m:msup><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mo>=</m:mo><m:mi>b</m:mi><m:mo>,</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:msub><m:mi>x</m:mi><m:mi>i</m:mi></m:msub><m:mo>-</m:mo><m:msub><m:mi>x</m:mi><m:mrow><m:mi>i</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>&lt;</m:mo><m:mo movablelimits="true" form="prefix">min</m:mo><m:mrow><m:mo>(</m:mo><m:mi>δ</m:mi><m:mo>,</m:mo><m:mi>α</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> for <m:math overflow="scroll"><m:mrow><m:mn>2</m:mn><m:mo>≤</m:mo><m:mi>i</m:mi><m:mo>≤</m:mo><m:mi>n</m:mi><m:mo>-</m:mo><m:mn>1</m:mn><m:mo>.</m:mo></m:mrow></m:math>
+Define <m:math overflow="scroll"><m:mi>p</m:mi></m:math> to be the piecewise linear function on <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow></m:math> whose graph is the polygonal line joining the <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow></m:math> points
+<m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>)</m:mo></m:mrow><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math><m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:mrow><m:mo>(</m:mo><m:msub><m:mi>x</m:mi><m:mi>i</m:mi></m:msub><m:mo>,</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:msub><m:mi>x</m:mi><m:mi>i</m:mi></m:msub><m:mo>)</m:mo></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>}</m:mo></m:mrow></m:math> for <m:math overflow="scroll"><m:mrow><m:mn>1</m:mn><m:mo>≤</m:mo><m:mi>i</m:mi><m:mo>≤</m:mo><m:mi>n</m:mi><m:mo>-</m:mo><m:mn>1</m:mn><m:mo>,</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>b</m:mi><m:mo>,</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:msub><m:mi>x</m:mi><m:mrow><m:mi>n</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>)</m:mo></m:mrow><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+That is, <m:math overflow="scroll"><m:mi>p</m:mi></m:math> is constant on the outer subintervals <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>]</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:msub><m:mi>x</m:mi><m:mrow><m:mi>n</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow></m:math> determined by the partition, and its
+graph between <m:math overflow="scroll"><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub></m:math> and <m:math overflow="scroll"><m:msub><m:mi>x</m:mi><m:mrow><m:mi>n</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msub></m:math> is the polygonal line joining the points <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:mrow><m:mo>(</m:mo><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>,</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>)</m:mo></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo><m:mo>...</m:mo><m:mo>,</m:mo><m:mrow><m:mo>(</m:mo><m:msub><m:mi>x</m:mi><m:mrow><m:mi>n</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>,</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:msub><m:mi>x</m:mi><m:mrow><m:mi>n</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>)</m:mo></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>}</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+For example, for <m:math overflow="scroll"><m:mrow><m:mn>2</m:mn><m:mo>≤</m:mo><m:mi>i</m:mi><m:mo>≤</m:mo><m:mi>n</m:mi><m:mo>-</m:mo><m:mn>1</m:mn><m:mo>,</m:mo></m:mrow></m:math> the function <m:math overflow="scroll"><m:mi>p</m:mi></m:math> has the form</para>
+      <equation id="id153191">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:mi>p</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>x</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>=</m:mo>
+            <m:mi>f</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:msub>
+                <m:mi>x</m:mi>
+                <m:mrow>
+                  <m:mi>i</m:mi>
+                  <m:mo>-</m:mo>
+                  <m:mn>1</m:mn>
+                </m:mrow>
+              </m:msub>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>+</m:mo>
+            <m:mfrac>
+              <m:mrow>
+                <m:mi>f</m:mi>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:msub>
+                    <m:mi>x</m:mi>
+                    <m:mi>i</m:mi>
+                  </m:msub>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mo>-</m:mo>
+                <m:mi>f</m:mi>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:msub>
+                    <m:mi>x</m:mi>
+                    <m:mrow>
+                      <m:mi>i</m:mi>
+                      <m:mo>-</m:mo>
+                      <m:mn>1</m:mn>
+                    </m:mrow>
+                  </m:msub>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+              </m:mrow>
+              <m:mrow>
+                <m:msub>
+                  <m:mi>x</m:mi>
+                  <m:mi>i</m:mi>
+                </m:msub>
+                <m:mo>-</m:mo>
+                <m:msub>
+                  <m:mi>x</m:mi>
+                  <m:mrow>
+                    <m:mi>i</m:mi>
+                    <m:mo>-</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                </m:msub>
+              </m:mrow>
+            </m:mfrac>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>x</m:mi>
+              <m:mo>-</m:mo>
+              <m:msub>
+                <m:mi>x</m:mi>
+                <m:mrow>
+                  <m:mi>i</m:mi>
+                  <m:mo>-</m:mo>
+                  <m:mn>1</m:mn>
+                </m:mrow>
+              </m:msub>
+              <m:mo>)</m:mo>
+            </m:mrow>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id153322">on the interval <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:msub><m:mi>x</m:mi><m:mrow><m:mi>i</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mi>i</m:mi></m:msub><m:mo>]</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+So, <m:math overflow="scroll"><m:mrow><m:mi>p</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:math> lies between the numbers <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:msub><m:mi>x</m:mi><m:mrow><m:mi>i</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>)</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:msub><m:mi>x</m:mi><m:mi>i</m:mi></m:msub><m:mo>)</m:mo></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>i</m:mi><m:mo>.</m:mo></m:mrow></m:math> Therefore,</para>
+      <equation id="id153441">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:mrow>
+              <m:mo>|</m:mo>
+              <m:mi>f</m:mi>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>x</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:mo>-</m:mo>
+              <m:mi>p</m:mi>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>x</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:mo>|</m:mo>
+              <m:mo>≤</m:mo>
+              <m:mo>|</m:mo>
+              <m:mi>f</m:mi>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>x</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:mo>-</m:mo>
+              <m:mi>f</m:mi>
+            </m:mrow>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:msub>
+                <m:mi>x</m:mi>
+                <m:mi>i</m:mi>
+              </m:msub>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mrow>
+              <m:mo>|</m:mo>
+              <m:mo>+</m:mo>
+              <m:mo>|</m:mo>
+              <m:mi>f</m:mi>
+            </m:mrow>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:msub>
+                <m:mi>x</m:mi>
+                <m:mi>i</m:mi>
+              </m:msub>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>-</m:mo>
+            <m:mi>l</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>x</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mrow>
+              <m:mo>|</m:mo>
+              <m:mo>≤</m:mo>
+              <m:mo>|</m:mo>
+              <m:mi>f</m:mi>
+            </m:mrow>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>x</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>-</m:mo>
+            <m:mi>f</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:msub>
+                <m:mi>x</m:mi>
+                <m:mi>i</m:mi>
+              </m:msub>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mrow>
+              <m:mo>|</m:mo>
+              <m:mo>+</m:mo>
+              <m:mo>|</m:mo>
+              <m:mi>f</m:mi>
+            </m:mrow>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:msub>
+                <m:mi>x</m:mi>
+                <m:mi>i</m:mi>
+              </m:msub>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>-</m:mo>
+            <m:mi>f</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:msub>
+                <m:mi>x</m:mi>
+                <m:mrow>
+                  <m:mi>i</m:mi>
+                  <m:mo>-</m:mo>
+                  <m:mn>1</m:mn>
+                </m:mrow>
+              </m:msub>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mrow>
+              <m:mo>|</m:mo>
+              <m:mo>&lt;</m:mo>
+              <m:mi>ϵ</m:mi>
+              <m:mo>.</m:mo>
+            </m:mrow>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id153631">Since this inequality holds for all <m:math overflow="scroll"><m:mrow><m:mi>i</m:mi><m:mo>,</m:mo></m:mrow></m:math> part (1) is proved.</para>
+      <para id="id153650">Next, for <m:math overflow="scroll"><m:mrow><m:mn>2</m:mn><m:mo>≤</m:mo><m:mi>i</m:mi><m:mo>≤</m:mo><m:mi>n</m:mi><m:mo>-</m:mo><m:mn>1</m:mn><m:mo>,</m:mo></m:mrow></m:math> and for each <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mo>(</m:mo><m:msub><m:mi>x</m:mi><m:mrow><m:mi>i</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mi>i</m:mi></m:msub><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math> we have <m:math overflow="scroll"><m:mrow><m:msup><m:mi>p</m:mi><m:mo>'</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mrow><m:mo>(</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:msub><m:mi>x</m:mi><m:mi>i</m:mi></m:msub><m:mo>)</m:mo></m:mrow><m:mo>-</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:msub><m:mi>x</m:mi><m:mrow><m:mi>i</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>)</m:mo></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>/</m:mo><m:mrow><m:mo>(</m:mo><m:msub><m:mi>x</m:mi><m:mi>i</m:mi></m:msub><m:mo>-</m:mo><m:msub><m:mi>x</m:mi><m:mrow><m:mi>i</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> which,
+by the Mean Value Theorem, is equal to <m:math overflow="scroll"><m:mrow><m:msup><m:mi>f</m:mi><m:mo>'</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:msub><m:mi>y</m:mi><m:mi>i</m:mi></m:msub><m:mo>)</m:mo></m:mrow></m:mrow></m:math> for some <m:math overflow="scroll"><m:mrow><m:msub><m:mi>y</m:mi><m:mi>i</m:mi></m:msub><m:mo>∈</m:mo><m:mrow><m:mo>(</m:mo><m:msub><m:mi>x</m:mi><m:mrow><m:mi>i</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mi>i</m:mi></m:msub><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math>
+So, for each such <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mo>(</m:mo><m:msub><m:mi>x</m:mi><m:mrow><m:mi>i</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mi>i</m:mi></m:msub><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math> we have <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msup><m:mi>f</m:mi><m:mo>'</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>-</m:mo><m:msup><m:mi>p</m:mi><m:mo>'</m:mo></m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>|</m:mo><m:mo>=</m:mo><m:mo>|</m:mo></m:mrow><m:msup><m:mi>f</m:mi><m:mo>'</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>-</m:mo><m:msup><m:mi>f</m:mi><m:mo>'</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:msub><m:mi>y</m:mi><m:mi>i</m:mi></m:msub><m:mo>)</m:mo></m:mrow><m:mrow><m:mo>|</m:mo><m:mo>,</m:mo></m:mrow></m:mrow></m:math>
+and this is less than <m:math overflow="scroll"><m:mrow><m:mi>ϵ</m:mi><m:mo>/</m:mo><m:mn>4</m:mn><m:mo>(</m:mo><m:mi>b</m:mi><m:mo>-</m:mo><m:mi>a</m:mi><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math>
+because <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo><m:mi>x</m:mi><m:mo>-</m:mo></m:mrow><m:msub><m:mi>y</m:mi><m:mi>i</m:mi></m:msub><m:mrow><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mi>α</m:mi><m:mo>.</m:mo></m:mrow></m:mrow></m:math>
+On the two outer intervals, <m:math overflow="scroll"><m:mrow><m:mi>p</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:math> is a constant, so that <m:math overflow="scroll"><m:mrow><m:msup><m:mi>p</m:mi><m:mo>'</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math>
+Hence,</para>
+      <equation id="uid4">
+        <m:math overflow="scroll" mode="display">
+          <m:mtable displaystyle="true">
+            <m:mtr>
+              <m:mtd columnalign="right">
+                <m:mrow>
+                  <m:msubsup>
+                    <m:mo>∫</m:mo>
+                    <m:mi>a</m:mi>
+                    <m:mi>b</m:mi>
+                  </m:msubsup>
+                  <m:mrow>
+                    <m:mo>|</m:mo>
+                    <m:msup>
+                      <m:mi>f</m:mi>
+                      <m:mo>'</m:mo>
+                    </m:msup>
+                    <m:mo>-</m:mo>
+                    <m:msup>
+                      <m:mi>p</m:mi>
+                      <m:mo>'</m:mo>
+                    </m:msup>
+                    <m:mo>|</m:mo>
+                  </m:mrow>
+                </m:mrow>
+              </m:mtd>
+              <m:mtd>
+                <m:mo>=</m:mo>
+              </m:mtd>
+              <m:mtd columnalign="left">
+                <m:mrow>
+                  <m:munderover>
+                    <m:mo>∑</m:mo>
+                    <m:mrow>
+                      <m:mi>i</m:mi>
+                      <m:mo>=</m:mo>
+                      <m:mn>1</m:mn>
+                    </m:mrow>
+                    <m:mi>n</m:mi>
+                  </m:munderover>
+                  <m:msubsup>
+                    <m:mo>∫</m:mo>
+                    <m:mrow>
+                      <m:msub>
+                        <m:mi>x</m:mi>
+                        <m:mrow>
+                          <m:mi>i</m:mi>
+                          <m:mo>-</m:mo>
+                          <m:mn>1</m:mn>
+                        </m:mrow>
+                      </m:msub>
+                    </m:mrow>
+                    <m:msub>
+                      <m:mi>x</m:mi>
+                      <m:mi>i</m:mi>
+                    </m:msub>
+                  </m:msubsup>
+                  <m:mrow>
+                    <m:mo>|</m:mo>
+                    <m:msup>
+                      <m:mi>f</m:mi>
+                      <m:mo>'</m:mo>
+                    </m:msup>
+                    <m:mo>-</m:mo>
+                    <m:msup>
+                      <m:mi>p</m:mi>
+                      <m:mo>'</m:mo>
+                    </m:msup>
+                    <m:mo>|</m:mo>
+                  </m:mrow>
+                </m:mrow>
+              </m:mtd>
+            </m:mtr>
+            <m:mtr>
+              <m:mtd/>
+              <m:mtd>
+                <m:mo>=</m:mo>
+              </m:mtd>
+              <m:mtd columnalign="left">
+                <m:mrow>
+                  <m:msubsup>
+                    <m:mo>∫</m:mo>
+                    <m:mi>a</m:mi>
+                    <m:msub>
+                      <m:mi>x</m:mi>
+                      <m:mn>1</m:mn>
+                    </m:msub>
+                  </m:msubsup>
+                  <m:mrow>
+                    <m:mo>|</m:mo>
+                  </m:mrow>
+                  <m:msup>
+                    <m:mi>f</m:mi>
+                    <m:mo>'</m:mo>
+                  </m:msup>
+                  <m:mrow>
+                    <m:mo>|</m:mo>
+                    <m:mo>+</m:mo>
+                  </m:mrow>
+                  <m:munderover>
+                    <m:mo>∑</m:mo>
+                    <m:mrow>
+                      <m:mi>i</m:mi>
+                      <m:mo>=</m:mo>
+                      <m:mn>2</m:mn>
+                    </m:mrow>
+                    <m:mrow>
+                      <m:mi>n</m:mi>
+                      <m:mo>-</m:mo>
+                      <m:mn>1</m:mn>
+                    </m:mrow>
+                  </m:munderover>
+                  <m:mrow>
+                    <m:mo>|</m:mo>
+                  </m:mrow>
+                  <m:msup>
+                    <m:mi>f</m:mi>
+                    <m:mo>'</m:mo>
+                  </m:msup>
+                  <m:mo>-</m:mo>
+                  <m:msup>
+                    <m:mi>p</m:mi>
+                    <m:mo>'</m:mo>
+                  </m:msup>
+                  <m:mrow>
+                    <m:mo>|</m:mo>
+                    <m:mo>+</m:mo>
+                  </m:mrow>
+                  <m:msubsup>
+                    <m:mo>∫</m:mo>
+                    <m:mrow>
+                      <m:msub>
+                        <m:mi>x</m:mi>
+                        <m:mrow>
+                          <m:mi>n</m:mi>
+                          <m:mo>-</m:mo>
+                          <m:mn>1</m:mn>
+                        </m:mrow>
+                      </m:msub>
+                    </m:mrow>
+                    <m:mi>b</m:mi>
+                  </m:msubsup>
+                  <m:mrow>
+                    <m:mo>|</m:mo>
+                    <m:msup>
+                      <m:mi>f</m:mi>
+                      <m:mo>'</m:mo>
+                    </m:msup>
+                    <m:mo>|</m:mo>
+                  </m:mrow>
+                </m:mrow>
+              </m:mtd>
+            </m:mtr>
+            <m:mtr>
+              <m:mtd/>
+              <m:mtd>
+                <m:mo>≤</m:mo>
+              </m:mtd>
+              <m:mtd columnalign="left">
+                <m:mrow>
+                  <m:msubsup>
+                    <m:mo>∫</m:mo>
+                    <m:mi>a</m:mi>
+                    <m:mrow>
+                      <m:mi>a</m:mi>
+                      <m:mo>+</m:mo>
+                      <m:msup>
+                        <m:mi>δ</m:mi>
+                        <m:mo>'</m:mo>
+                      </m:msup>
+                    </m:mrow>
+                  </m:msubsup>
+                  <m:mrow>
+                    <m:mo>|</m:mo>
+                  </m:mrow>
+                  <m:msup>
+                    <m:mi>f</m:mi>
+                    <m:mo>'</m:mo>
+                  </m:msup>
+                  <m:mrow>
+                    <m:mo>|</m:mo>
+                    <m:mo>+</m:mo>
+                  </m:mrow>
+                  <m:msubsup>
+                    <m:mo>∫</m:mo>
+                    <m:mrow>
+                      <m:mi>b</m:mi>
+                      <m:mo>-</m:mo>
+                      <m:msup>
+                        <m:mi>δ</m:mi>
+                        <m:mo>'</m:mo>
+                      </m:msup>
+                    </m:mrow>
+                    <m:mi>b</m:mi>
+                  </m:msubsup>
+                  <m:mrow>
+                    <m:mo>|</m:mo>
+                    <m:msup>
+                      <m:mi>f</m:mi>
+                      <m:mo>'</m:mo>
+                    </m:msup>
+                    <m:mo>|</m:mo>
+                  </m:mrow>
+                  <m:mo>+</m:mo>
+                  <m:mfrac>
+                    <m:mi>ϵ</m:mi>
+                    <m:mrow>
+                      <m:mn>4</m:mn>
+                      <m:mo>(</m:mo>
+                      <m:mi>b</m:mi>
+                      <m:mo>-</m:mo>
+                      <m:mi>a</m:mi>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                  </m:mfrac>
+                  <m:msubsup>
+                    <m:mo>∫</m:mo>
+                    <m:mrow>
+                      <m:msub>
+                        <m:mi>x</m:mi>
+                        <m:mn>1</m:mn>
+                      </m:msub>
+                    </m:mrow>
+                    <m:msub>
+                      <m:mi>x</m:mi>
+                      <m:mrow>
+                        <m:mi>n</m:mi>
+                        <m:mo>-</m:mo>
+                        <m:mn>1</m:mn>
+                      </m:mrow>
+                    </m:msub>
+                  </m:msubsup>
+                  <m:mn>1</m:mn>
+                </m:mrow>
+              </m:mtd>
+            </m:mtr>
+            <m:mtr>
+              <m:mtd/>
+              <m:mtd>
+                <m:mo>&lt;</m:mo>
+              </m:mtd>
+              <m:mtd columnalign="left">
+                <m:mrow>
+                  <m:mi>ϵ</m:mi>
+                  <m:mo>.</m:mo>
+                </m:mrow>
+              </m:mtd>
+            </m:mtr>
+          </m:mtable>
+        </m:math>
+      </equation>
+      <para id="id154541">The proof is now complete.</para>
+</proof></rule>
+<rule id="fs-id1170764817791"><label/><statement id="fs-id5488123">
+      <para id="id154546"><emphasis effect="bold">REMARK</emphasis>
+It should be evident that the preceding theorem can
+easily be generalized to a piecewise smooth function <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+i.e., a function that is continuous on <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>,</m:mo></m:mrow></m:math>
+continuously differentiable on each subinterval <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:msub><m:mi>t</m:mi><m:mrow><m:mi>i</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>,</m:mo><m:msub><m:mi>t</m:mi><m:mi>i</m:mi></m:msub><m:mo>)</m:mo></m:mrow></m:math> of a partition <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>t</m:mi><m:mn>0</m:mn></m:msub><m:mo>&lt;</m:mo><m:msub><m:mi>t</m:mi><m:mn>1</m:mn></m:msub><m:mo>&lt;</m:mo><m:mo>...</m:mo><m:mo>&lt;</m:mo><m:msub><m:mi>t</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo><m:mo>,</m:mo></m:mrow></m:math>
+and whose derivative <m:math overflow="scroll"><m:msup><m:mi>f</m:mi><m:mo>'</m:mo></m:msup></m:math> is absolutely integrable on <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Indeed, just apply the theorem to each of the subintervals <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:msub><m:mi>t</m:mi><m:mrow><m:mi>i</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>,</m:mo><m:msub><m:mi>t</m:mi><m:mi>i</m:mi></m:msub><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math>
+and then carefully piece together the piecewise linear
+functions on those subintervals.</para>
+</statement></rule>
+      <para id="id154742">Now we are ready to define what a smooth curve is.</para>
+<definition id="fs-id1170760475080"><term/><meaning id="fs-id1170770626608">
+      <para id="id154746">
+By a <emphasis effect="italics">smooth curve</emphasis> from a point <m:math overflow="scroll"><m:msub><m:mi>z</m:mi><m:mn>1</m:mn></m:msub></m:math> to a different point <m:math overflow="scroll"><m:msub><m:mi>z</m:mi><m:mn>2</m:mn></m:msub></m:math> in the plane, we mean
+a set <m:math overflow="scroll"><m:mrow><m:mi>C</m:mi><m:mo>⊆</m:mo><m:mi>C</m:mi></m:mrow></m:math> that is the
+range of a 1-1, smooth, function <m:math overflow="scroll"><m:mrow><m:mi>φ</m:mi><m:mo>:</m:mo><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>→</m:mo><m:mi>C</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+where <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow></m:math> is a bounded closed interval in <m:math overflow="scroll"><m:mrow><m:mi>R</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+where <m:math overflow="scroll"><m:mrow><m:msub><m:mi>z</m:mi><m:mn>1</m:mn></m:msub><m:mo>=</m:mo><m:mi>φ</m:mi><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:msub><m:mi>z</m:mi><m:mn>2</m:mn></m:msub><m:mo>=</m:mo><m:mi>φ</m:mi><m:mrow><m:mo>(</m:mo><m:mi>b</m:mi><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math>
+and satisfying <m:math overflow="scroll"><m:mrow><m:msup><m:mi>φ</m:mi><m:mo>'</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>≠</m:mo><m:mn>0</m:mn></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>t</m:mi><m:mo>∈</m:mo><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math></para>
+      <para id="id154995">More generally, if <m:math overflow="scroll"><m:mrow><m:mi>φ</m:mi><m:mo>:</m:mo><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow><m:mo>→</m:mo><m:msup><m:mrow><m:mi>R</m:mi></m:mrow><m:mn>2</m:mn></m:msup></m:mrow></m:math> is
+1-1 and piecewise smooth on <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>,</m:mo></m:mrow></m:math>
+and if <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>t</m:mi><m:mn>0</m:mn></m:msub><m:mo>&lt;</m:mo><m:msub><m:mi>t</m:mi><m:mn>1</m:mn></m:msub><m:mo>&lt;</m:mo><m:mo>...</m:mo><m:mo>&lt;</m:mo><m:msub><m:mi>t</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> is a partition of <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow></m:math>
+such that <m:math overflow="scroll"><m:mrow><m:msup><m:mi>φ</m:mi><m:mo>'</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>≠</m:mo><m:mn>0</m:mn></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>t</m:mi><m:mo>∈</m:mo><m:mo>(</m:mo><m:msub><m:mi>t</m:mi><m:mrow><m:mi>i</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>,</m:mo><m:msub><m:mi>t</m:mi><m:mi>i</m:mi></m:msub><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math>
+then the range <m:math overflow="scroll"><m:mi>C</m:mi></m:math> of <m:math overflow="scroll"><m:mi>φ</m:mi></m:math> is called a <emphasis effect="italics">piecewise smooth curve</emphasis> from <m:math overflow="scroll"><m:mrow><m:msub><m:mi>z</m:mi><m:mn>1</m:mn></m:msub><m:mo>=</m:mo><m:mi>φ</m:mi><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> to <m:math overflow="scroll"><m:mrow><m:msub><m:mi>z</m:mi><m:mn>2</m:mn></m:msub><m:mo>=</m:mo><m:mi>φ</m:mi><m:mrow><m:mo>(</m:mo><m:mi>b</m:mi><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></para>
+      <para id="id155272">In either of these cases, <m:math overflow="scroll"><m:mi>φ</m:mi></m:math> is called a <emphasis effect="italics">parameterization</emphasis> of the curve <m:math overflow="scroll"><m:mrow><m:mi>C</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+</meaning></definition>
+      <para id="id155302">Note that we do not assume that <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msup><m:mi>φ</m:mi><m:mo>'</m:mo></m:msup><m:mrow><m:mo>|</m:mo></m:mrow></m:mrow></m:math> is improperly-integrable, though the preceding theorem might
+have made you think we would.</para>
+<rule id="fs-id1170756986976"><label/><statement id="fs-id1170775904025">
+      <para id="id155328"><emphasis effect="bold">REMARK</emphasis>
+Throughout this chapter we will be continually faced with the
+fact that a given curve can have many different parameterizations.
+Indeed, if <m:math overflow="scroll"><m:mrow><m:msub><m:mi>φ</m:mi><m:mn>1</m:mn></m:msub><m:mo>:</m:mo><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow><m:mo>→</m:mo><m:mi>C</m:mi></m:mrow></m:math> is a parameterization, and if
+<m:math overflow="scroll"><m:mrow><m:mi>g</m:mi><m:mo>:</m:mo><m:mo>[</m:mo><m:mi>c</m:mi><m:mo>,</m:mo><m:mi>d</m:mi><m:mo>]</m:mo><m:mo>→</m:mo><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow></m:math> is a smooth function having a nonzero derivative, then <m:math overflow="scroll"><m:mrow><m:msub><m:mi>φ</m:mi><m:mn>2</m:mn></m:msub><m:mrow><m:mo>(</m:mo><m:mi>s</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msub><m:mi>φ</m:mi><m:mn>1</m:mn></m:msub><m:mrow><m:mo>(</m:mo><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>s</m:mi><m:mo>)</m:mo></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math>
+is another parameterization of <m:math overflow="scroll"><m:mrow><m:mi>C</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Since our definitions and proofs about curves often involve a parametrization,
+we will frequently need to prove that the results we obtain are independent of the parameterization.
+The next theorem will help; it shows that any two parameterizations of <m:math overflow="scroll"><m:mi>C</m:mi></m:math> are connected
+exactly as above, i.e., there always is such a function <m:math overflow="scroll"><m:mi>g</m:mi></m:math>
+relating <m:math overflow="scroll"><m:msub><m:mi>φ</m:mi><m:mn>1</m:mn></m:msub></m:math> and <m:math overflow="scroll"><m:mrow><m:msub><m:mi>φ</m:mi><m:mn>2</m:mn></m:msub><m:mo>.</m:mo></m:mrow></m:math></para>
+</statement></rule>
+<rule id="fs-id1170784569728" type="theorem"><statement id="fs-id1170766291208">
+      <para id="id155518">
+Let <m:math overflow="scroll"><m:mrow><m:msub><m:mi>φ</m:mi><m:mn>1</m:mn></m:msub><m:mo>:</m:mo><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow><m:mo>→</m:mo><m:mi>C</m:mi></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:msub><m:mi>φ</m:mi><m:mn>2</m:mn></m:msub><m:mo>:</m:mo><m:mrow><m:mo>[</m:mo><m:mi>c</m:mi><m:mo>,</m:mo><m:mi>d</m:mi><m:mo>]</m:mo></m:mrow><m:mo>→</m:mo><m:mi>C</m:mi></m:mrow></m:math> be two parameterizations
+of a piecewise smooth curve <m:math overflow="scroll"><m:mi>C</m:mi></m:math> joining <m:math overflow="scroll"><m:msub><m:mi>z</m:mi><m:mn>1</m:mn></m:msub></m:math> to <m:math overflow="scroll"><m:mrow><m:msub><m:mi>z</m:mi><m:mn>2</m:mn></m:msub><m:mo>.</m:mo></m:mrow></m:math>
+Then there exists a piecewise smooth function <m:math overflow="scroll"><m:mrow><m:mi>g</m:mi><m:mo>:</m:mo><m:mo>[</m:mo><m:mi>c</m:mi><m:mo>,</m:mo><m:mi>d</m:mi><m:mo>]</m:mo><m:mo>→</m:mo><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow></m:math> such that <m:math overflow="scroll"><m:mrow><m:msub><m:mi>φ</m:mi><m:mn>2</m:mn></m:msub><m:mrow><m:mo>(</m:mo><m:mi>s</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msub><m:mi>φ</m:mi><m:mn>1</m:mn></m:msub><m:mrow><m:mo>(</m:mo><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>s</m:mi><m:mo>)</m:mo></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math>
+for all <m:math overflow="scroll"><m:mrow><m:mi>s</m:mi><m:mo>∈</m:mo><m:mo>[</m:mo><m:mi>c</m:mi><m:mo>,</m:mo><m:mi>d</m:mi><m:mo>]</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Moreover, the derivative <m:math overflow="scroll"><m:msup><m:mi>g</m:mi><m:mo>'</m:mo></m:msup></m:math> of <m:math overflow="scroll"><m:mi>g</m:mi></m:math> is nonzero for all but a finite number of points in <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>c</m:mi><m:mo>,</m:mo><m:mi>d</m:mi><m:mo>]</m:mo><m:mo>.</m:mo></m:mrow></m:math></para>
+</statement>
+<proof id="fs-id1170781061089">
+      <para id="id155785">Because both <m:math overflow="scroll"><m:msub><m:mi>φ</m:mi><m:mn>1</m:mn></m:msub></m:math> and <m:math overflow="scroll"><m:msub><m:mi>φ</m:mi><m:mn>2</m:mn></m:msub></m:math> are continuous and 1-1,
+it follows from <link target-id="fs-id8649209" document="m36167"/> that the function <m:math overflow="scroll"><m:mrow><m:mi>g</m:mi><m:mo>=</m:mo><m:msubsup><m:mi>φ</m:mi><m:mn>1</m:mn><m:mrow><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msubsup><m:mo>∘</m:mo><m:msub><m:mi>φ</m:mi><m:mn>2</m:mn></m:msub></m:mrow></m:math> is continuous
+and 1-1 from <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>c</m:mi><m:mo>,</m:mo><m:mi>d</m:mi><m:mo>]</m:mo></m:mrow></m:math> onto <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>.</m:mo></m:mrow></m:math> Moreover, from <link target-id="fs-id1169172121798" document="m36167"/>,
+it must also be that <m:math overflow="scroll"><m:mi>g</m:mi></m:math> is strictly increasing or strictly decreasing.
+Write <m:math overflow="scroll"><m:mrow><m:msub><m:mi>φ</m:mi><m:mn>1</m:mn></m:msub><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msub><m:mi>u</m:mi><m:mn>1</m:mn></m:msub><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mi>i</m:mi><m:msub><m:mi>v</m:mi><m:mn>1</m:mn></m:msub><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>≡</m:mo><m:mrow><m:mo>(</m:mo><m:msub><m:mi>u</m:mi><m:mn>1</m:mn></m:msub><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo><m:msub><m:mi>v</m:mi><m:mn>1</m:mn></m:msub><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> and
+<m:math overflow="scroll"><m:mrow><m:msub><m:mi>φ</m:mi><m:mn>2</m:mn></m:msub><m:mrow><m:mo>(</m:mo><m:mi>s</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msub><m:mi>u</m:mi><m:mn>2</m:mn></m:msub><m:mrow><m:mo>(</m:mo><m:mi>s</m:mi><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mi>i</m:mi><m:msub><m:mi>v</m:mi><m:mn>2</m:mn></m:msub><m:mrow><m:mo>(</m:mo><m:mi>s</m:mi><m:mo>)</m:mo></m:mrow><m:mo>≡</m:mo><m:mrow><m:mo>(</m:mo><m:msub><m:mi>u</m:mi><m:mn>2</m:mn></m:msub><m:mrow><m:mo>(</m:mo><m:mi>s</m:mi><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo><m:msub><m:mi>v</m:mi><m:mn>2</m:mn></m:msub><m:mrow><m:mo>(</m:mo><m:mi>s</m:mi><m:mo>)</m:mo></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math>
+Let <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub><m:mo>&lt;</m:mo><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>&lt;</m:mo><m:mo>...</m:mo><m:mo>&lt;</m:mo><m:msub><m:mi>x</m:mi><m:mi>p</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> be a partition of <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow></m:math> for which <m:math overflow="scroll"><m:msubsup><m:mi>φ</m:mi><m:mn>1</m:mn><m:mo>'</m:mo></m:msubsup></m:math> is continuous
+and nonzero
+on the subintervals <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:msub><m:mi>x</m:mi><m:mrow><m:mi>j</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mi>j</m:mi></m:msub><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math>
+and let <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>y</m:mi><m:mn>0</m:mn></m:msub><m:mo>&lt;</m:mo><m:msub><m:mi>y</m:mi><m:mn>1</m:mn></m:msub><m:mo>&lt;</m:mo><m:mo>...</m:mo><m:mo>&lt;</m:mo><m:msub><m:mi>y</m:mi><m:mi>q</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> be a partition of <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>c</m:mi><m:mo>,</m:mo><m:mi>d</m:mi><m:mo>]</m:mo></m:mrow></m:math>
+for which <m:math overflow="scroll"><m:msubsup><m:mi>φ</m:mi><m:mn>2</m:mn><m:mo>'</m:mo></m:msubsup></m:math> is continuous and nonzero
+on the subintervals <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:msub><m:mi>y</m:mi><m:mrow><m:mi>k</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>,</m:mo><m:msub><m:mi>y</m:mi><m:mi>k</m:mi></m:msub><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Then let <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>s</m:mi><m:mn>0</m:mn></m:msub><m:mo>&lt;</m:mo><m:msub><m:mi>s</m:mi><m:mn>1</m:mn></m:msub><m:mo>&lt;</m:mo><m:mo>...</m:mo><m:mo>&lt;</m:mo><m:msub><m:mi>s</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> be the partition of <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>c</m:mi><m:mo>,</m:mo><m:mi>d</m:mi><m:mo>]</m:mo></m:mrow></m:math> determined by
+the finitely many points <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>{</m:mo><m:msub><m:mi>y</m:mi><m:mi>k</m:mi></m:msub><m:mo>}</m:mo></m:mrow><m:mo>∪</m:mo><m:mrow><m:mo>{</m:mo><m:msup><m:mi>g</m:mi><m:mrow><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msup><m:mrow><m:mo>(</m:mo><m:msub><m:mi>x</m:mi><m:mi>j</m:mi></m:msub><m:mo>)</m:mo></m:mrow><m:mo>}</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math>
+We will show that <m:math overflow="scroll"><m:mi>g</m:mi></m:math> is continuously differentiable at each point <m:math overflow="scroll"><m:mi>s</m:mi></m:math> in the subintervals <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:msub><m:mi>s</m:mi><m:mrow><m:mi>i</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>,</m:mo><m:msub><m:mi>s</m:mi><m:mi>i</m:mi></m:msub><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math></para>
+      <para id="id156517">Fix an <m:math overflow="scroll"><m:mi>s</m:mi></m:math> in one of the intervals <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:msub><m:mi>s</m:mi><m:mrow><m:mi>i</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>,</m:mo><m:msub><m:mi>s</m:mi><m:mi>i</m:mi></m:msub><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math> and let <m:math overflow="scroll"><m:mrow><m:mi>t</m:mi><m:mo>=</m:mo><m:msubsup><m:mi>φ</m:mi><m:mn>1</m:mn><m:mrow><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msubsup><m:mrow><m:mo>(</m:mo><m:msub><m:mi>φ</m:mi><m:mn>2</m:mn></m:msub><m:mrow><m:mo>(</m:mo><m:mi>s</m:mi><m:mo>)</m:mo></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>s</m:mi><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math>
+Of course this means that
+<m:math overflow="scroll"><m:mrow><m:msub><m:mi>φ</m:mi><m:mn>1</m:mn></m:msub><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msub><m:mi>φ</m:mi><m:mn>2</m:mn></m:msub><m:mrow><m:mo>(</m:mo><m:mi>s</m:mi><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> or <m:math overflow="scroll"><m:mrow><m:msub><m:mi>u</m:mi><m:mn>1</m:mn></m:msub><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msub><m:mi>u</m:mi><m:mn>2</m:mn></m:msub><m:mrow><m:mo>(</m:mo><m:mi>s</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:msub><m:mi>v</m:mi><m:mn>1</m:mn></m:msub><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msub><m:mi>v</m:mi><m:mn>2</m:mn></m:msub><m:mrow><m:mo>(</m:mo><m:mi>s</m:mi><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math>
+Then <m:math overflow="scroll"><m:mi>t</m:mi></m:math> is in some one of the intervals <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:msub><m:mi>x</m:mi><m:mrow><m:mi>j</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mi>j</m:mi></m:msub><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math> so that we know that <m:math overflow="scroll"><m:mrow><m:msubsup><m:mi>φ</m:mi><m:mn>1</m:mn><m:mo>'</m:mo></m:msubsup><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>≠</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math>
+Therefore, we must have that at least one of <m:math overflow="scroll"><m:mrow><m:msubsup><m:mi>u</m:mi><m:mn>1</m:mn><m:mo>'</m:mo></m:msubsup><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> or <m:math overflow="scroll"><m:mrow><m:msubsup><m:mi>v</m:mi><m:mn>1</m:mn><m:mo>'</m:mo></m:msubsup><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> is nonzero.
+Suppose it is <m:math overflow="scroll"><m:mrow><m:msubsup><m:mi>v</m:mi><m:mn>1</m:mn><m:mo>'</m:mo></m:msubsup><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> that is nonzero.
+The argument, in case it is <m:math overflow="scroll"><m:mrow><m:msubsup><m:mi>u</m:mi><m:mn>1</m:mn><m:mo>'</m:mo></m:msubsup><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> that is nonzero, is completely analogous.
+Now, because <m:math overflow="scroll"><m:msubsup><m:mi>v</m:mi><m:mn>1</m:mn><m:mo>'</m:mo></m:msubsup></m:math> is continuous at <m:math overflow="scroll"><m:mi>t</m:mi></m:math> and <m:math overflow="scroll"><m:mrow><m:msubsup><m:mi>v</m:mi><m:mn>1</m:mn><m:mo>'</m:mo></m:msubsup><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>≠</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> it follows
+that <m:math overflow="scroll"><m:msub><m:mi>v</m:mi><m:mn>1</m:mn></m:msub></m:math> is strictly monotonic in some neighborhood <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>-</m:mo><m:mi>δ</m:mi><m:mo>,</m:mo><m:mi>t</m:mi><m:mo>+</m:mo><m:mi>δ</m:mi><m:mo>)</m:mo></m:mrow></m:math> of <m:math overflow="scroll"><m:mi>t</m:mi></m:math> and therefore is 1-1 on that interval.
+Then <m:math overflow="scroll"><m:msubsup><m:mi>v</m:mi><m:mn>1</m:mn><m:mrow><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msubsup></m:math> is continuous by <link target-id="fs-id8649209" document="m36167"/>, and is differentiable at the point <m:math overflow="scroll"><m:mrow><m:msub><m:mi>v</m:mi><m:mn>1</m:mn></m:msub><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math>
+by the Inverse Function Theorem.
+We will show that on this small interval <m:math overflow="scroll"><m:mrow><m:mi>g</m:mi><m:mo>=</m:mo><m:msubsup><m:mi>v</m:mi><m:mn>1</m:mn><m:mrow><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msubsup><m:mo>∘</m:mo><m:msub><m:mi>v</m:mi><m:mn>2</m:mn></m:msub><m:mo>,</m:mo></m:mrow></m:math> and this will prove that <m:math overflow="scroll"><m:mi>g</m:mi></m:math> is continuously differentiable at <m:math overflow="scroll"><m:mrow><m:mi>s</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+      <para id="id157146">Note first that if <m:math overflow="scroll"><m:mrow><m:msub><m:mi>φ</m:mi><m:mn>2</m:mn></m:msub><m:mrow><m:mo>(</m:mo><m:mi>σ</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>x</m:mi><m:mo>+</m:mo><m:mi>i</m:mi><m:mi>y</m:mi></m:mrow></m:math> is a point on the curve <m:math overflow="scroll"><m:mrow><m:mi>C</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+then <m:math overflow="scroll"><m:mrow><m:msub><m:mi>v</m:mi><m:mn>2</m:mn></m:msub><m:mrow><m:mo>(</m:mo><m:msubsup><m:mi>φ</m:mi><m:mn>2</m:mn><m:mrow><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msubsup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>+</m:mo><m:mi>i</m:mi><m:mi>y</m:mi><m:mo>)</m:mo></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>y</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Then, for any <m:math overflow="scroll"><m:mrow><m:mi>τ</m:mi><m:mo>∈</m:mo><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>,</m:mo></m:mrow></m:math> we have</para>
+      <equation id="uid5">
+        <m:math overflow="scroll" mode="display">
+          <m:mtable displaystyle="true">
+            <m:mtr>
+              <m:mtd columnalign="right">
+                <m:mrow>
+                  <m:msubsup>
+                    <m:mi>v</m:mi>
+                    <m:mn>1</m:mn>
+                    <m:mrow>
+                      <m:mo>-</m:mo>
+                      <m:mn>1</m:mn>
+                    </m:mrow>
+                  </m:msubsup>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:msub>
+                      <m:mi>v</m:mi>
+                      <m:mn>2</m:mn>
+                    </m:msub>
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:msup>
+                        <m:mi>g</m:mi>
+                        <m:mrow>
+                          <m:mo>-</m:mo>
+                          <m:mn>1</m:mn>
+                        </m:mrow>
+                      </m:msup>
+                      <m:mrow>
+                        <m:mo>(</m:mo>
+                        <m:mi>τ</m:mi>
+                        <m:mo>)</m:mo>
+                      </m:mrow>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                </m:mrow>
+              </m:mtd>
+              <m:mtd>
+                <m:mo>=</m:mo>
+              </m:mtd>
+              <m:mtd columnalign="left">
+                <m:mrow>
+                  <m:msubsup>
+                    <m:mi>v</m:mi>
+                    <m:mn>1</m:mn>
+                    <m:mrow>
+                      <m:mo>-</m:mo>
+                      <m:mn>1</m:mn>
+                    </m:mrow>
+                  </m:msubsup>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:msub>
+                      <m:mi>v</m:mi>
+                      <m:mn>2</m:mn>
+                    </m:msub>
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:msubsup>
+                        <m:mi>φ</m:mi>
+                        <m:mn>2</m:mn>
+                        <m:mrow>
+                          <m:mo>-</m:mo>
+                          <m:mn>1</m:mn>
+                        </m:mrow>
+                      </m:msubsup>
+                      <m:mrow>
+                        <m:mo>(</m:mo>
+                        <m:msub>
+                          <m:mi>φ</m:mi>
+                          <m:mn>1</m:mn>
+                        </m:msub>
+                        <m:mrow>
+                          <m:mo>(</m:mo>
+                          <m:mi>τ</m:mi>
+                          <m:mo>)</m:mo>
+                        </m:mrow>
+                        <m:mo>)</m:mo>
+                      </m:mrow>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                </m:mrow>
+              </m:mtd>
+            </m:mtr>
+            <m:mtr>
+              <m:mtd/>
+              <m:mtd>
+                <m:mo>=</m:mo>
+              </m:mtd>
+              <m:mtd columnalign="left">
+                <m:mrow>
+                  <m:msubsup>
+                    <m:mi>v</m:mi>
+                    <m:mn>1</m:mn>
+                    <m:mrow>
+                      <m:mo>-</m:mo>
+                      <m:mn>1</m:mn>
+                    </m:mrow>
+                  </m:msubsup>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:msub>
+                      <m:mi>v</m:mi>
+                      <m:mn>2</m:mn>
+                    </m:msub>
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:msubsup>
+                        <m:mi>φ</m:mi>
+                        <m:mn>2</m:mn>
+                        <m:mrow>
+                          <m:mo>-</m:mo>
+                          <m:mn>1</m:mn>
+                        </m:mrow>
+                      </m:msubsup>
+                      <m:mrow>
+                        <m:mo>(</m:mo>
+                        <m:msub>
+                          <m:mi>u</m:mi>
+                          <m:mn>1</m:mn>
+                        </m:msub>
+                        <m:mrow>
+                          <m:mo>(</m:mo>
+                          <m:mi>τ</m:mi>
+                          <m:mo>)</m:mo>
+                        </m:mrow>
+                        <m:mo>+</m:mo>
+                        <m:mi>i</m:mi>
+                        <m:msub>
+                          <m:mi>v</m:mi>
+                          <m:mn>1</m:mn>
+                        </m:msub>
+                        <m:mrow>
+                          <m:mo>(</m:mo>
+                          <m:mi>τ</m:mi>
+                          <m:mo>)</m:mo>
+                        </m:mrow>
+                        <m:mo>)</m:mo>
+                      </m:mrow>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                </m:mrow>
+              </m:mtd>
+            </m:mtr>
+            <m:mtr>
+              <m:mtd/>
+              <m:mtd>
+                <m:mo>=</m:mo>
+              </m:mtd>
+              <m:mtd columnalign="left">
+                <m:mrow>
+                  <m:msubsup>
+                    <m:mi>v</m:mi>
+                    <m:mn>1</m:mn>
+                    <m:mrow>
+                      <m:mo>-</m:mo>
+                      <m:mn>1</m:mn>
+                    </m:mrow>
+                  </m:msubsup>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:msub>
+                      <m:mi>v</m:mi>
+                      <m:mn>1</m:mn>
+                    </m:msub>
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:mi>τ</m:mi>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                </m:mrow>
+              </m:mtd>
+            </m:mtr>
+            <m:mtr>
+              <m:mtd/>
+              <m:mtd>
+                <m:mo>=</m:mo>
+              </m:mtd>
+              <m:mtd columnalign="left">
+                <m:mrow>
+                  <m:mi>τ</m:mi>
+                  <m:mo>,</m:mo>
+                </m:mrow>
+              </m:mtd>
+            </m:mtr>
+          </m:mtable>
+        </m:math>
+      </equation>
+      <para id="id157576">showing that <m:math overflow="scroll"><m:mrow><m:msubsup><m:mi>v</m:mi><m:mn>1</m:mn><m:mrow><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msubsup><m:mo>∘</m:mo><m:msub><m:mi>v</m:mi><m:mn>2</m:mn></m:msub><m:mo>=</m:mo><m:msup><m:mrow><m:msup><m:mi>g</m:mi><m:mrow><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msup></m:mrow><m:mrow><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msup><m:mo>=</m:mo><m:mi>g</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Hence <m:math overflow="scroll"><m:mi>g</m:mi></m:math> is continuously differentiable at every point <m:math overflow="scroll"><m:mi>s</m:mi></m:math> in the subintervals <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:msub><m:mi>s</m:mi><m:mrow><m:mi>i</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>,</m:mo><m:msub><m:mi>s</m:mi><m:mi>i</m:mi></m:msub><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Indeed <m:math overflow="scroll"><m:mrow><m:msup><m:mi>g</m:mi><m:mo>'</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>σ</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mrow><m:msubsup><m:mi>v</m:mi><m:mn>1</m:mn><m:mrow><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msubsup></m:mrow><m:mo>'</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:msub><m:mi>v</m:mi><m:mn>2</m:mn></m:msub><m:mrow><m:mo>(</m:mo><m:mi>σ</m:mi><m:mo>)</m:mo></m:mrow><m:mo>)</m:mo></m:mrow><m:msubsup><m:mi>v</m:mi><m:mn>2</m:mn><m:mo>'</m:mo></m:msubsup><m:mrow><m:mo>(</m:mo><m:mi>σ</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> for all <m:math overflow="scroll"><m:mi>σ</m:mi></m:math> near <m:math overflow="scroll"><m:mrow><m:mi>s</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+and hence <m:math overflow="scroll"><m:mi>g</m:mi></m:math> is piecewise smooth.</para>
+      <para id="id157812">Obviously, <m:math overflow="scroll"><m:mrow><m:msub><m:mi>φ</m:mi><m:mn>2</m:mn></m:msub><m:mrow><m:mo>(</m:mo><m:mi>s</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msub><m:mi>φ</m:mi><m:mn>1</m:mn></m:msub><m:mrow><m:mo>(</m:mo><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>s</m:mi><m:mo>)</m:mo></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>s</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+implying that <m:math overflow="scroll"><m:mrow><m:msubsup><m:mi>φ</m:mi><m:mn>2</m:mn><m:mo>'</m:mo></m:msubsup><m:mrow><m:mo>(</m:mo><m:mi>s</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msubsup><m:mi>φ</m:mi><m:mn>1</m:mn><m:mo>'</m:mo></m:msubsup><m:mrow><m:mo>(</m:mo><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>s</m:mi><m:mo>)</m:mo></m:mrow><m:mo>)</m:mo></m:mrow><m:msup><m:mi>g</m:mi><m:mo>'</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>s</m:mi><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math>
+Since <m:math overflow="scroll"><m:mrow><m:msubsup><m:mi>φ</m:mi><m:mn>2</m:mn><m:mo>'</m:mo></m:msubsup><m:mrow><m:mo>(</m:mo><m:mi>s</m:mi><m:mo>)</m:mo></m:mrow><m:mo>≠</m:mo><m:mn>0</m:mn></m:mrow></m:math> for all but a finite number of points <m:math overflow="scroll"><m:mrow><m:mi>s</m:mi><m:mo>,</m:mo></m:mrow></m:math> it follows that <m:math overflow="scroll"><m:mrow><m:msup><m:mi>g</m:mi><m:mo>'</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>s</m:mi><m:mo>)</m:mo></m:mrow><m:mo>≠</m:mo><m:mn>0</m:mn></m:mrow></m:math>
+for all but a finite number of points,
+and the theorem is proved.</para>
+</proof></rule>
+<rule id="fs-id1170770880596" type="corollary"><statement id="fs-id1170770917703">
+      <para id="id158018">
+Let <m:math overflow="scroll"><m:msub><m:mi>φ</m:mi><m:mn>1</m:mn></m:msub></m:math> and <m:math overflow="scroll"><m:msub><m:mi>φ</m:mi><m:mn>2</m:mn></m:msub></m:math> be as in the theorem.
+Then, for all but a finite number of points <m:math overflow="scroll"><m:mrow><m:mi>z</m:mi><m:mo>=</m:mo><m:msub><m:mi>φ</m:mi><m:mn>1</m:mn></m:msub><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msub><m:mi>φ</m:mi><m:mn>2</m:mn></m:msub><m:mrow><m:mo>(</m:mo><m:mi>s</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> on the curve <m:math overflow="scroll"><m:mrow><m:mi>C</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+we have</para>
+      <equation id="id158112">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:mfrac>
+              <m:mrow>
+                <m:msubsup>
+                  <m:mi>φ</m:mi>
+                  <m:mn>1</m:mn>
+                  <m:mo>'</m:mo>
+                </m:msubsup>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>t</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+              </m:mrow>
+              <m:mrow>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:msubsup>
+                  <m:mi>φ</m:mi>
+                  <m:mn>1</m:mn>
+                  <m:mo>'</m:mo>
+                </m:msubsup>
+                <m:mrow>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>t</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mfrac>
+            <m:mo>=</m:mo>
+            <m:mfrac>
+              <m:mrow>
+                <m:msubsup>
+                  <m:mi>φ</m:mi>
+                  <m:mn>2</m:mn>
+                  <m:mo>'</m:mo>
+                </m:msubsup>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>s</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+              </m:mrow>
+              <m:mrow>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:msubsup>
+                  <m:mi>φ</m:mi>
+                  <m:mn>2</m:mn>
+                  <m:mo>'</m:mo>
+                </m:msubsup>
+                <m:mrow>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>s</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mfrac>
+            <m:mo>.</m:mo>
+          </m:mrow>
+        </m:math>
+      </equation>
+</statement>
+<proof id="fs-id1170777654468">
+      <para id="id158221">From the theorem we have that</para>
+      <equation id="id158230">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:msubsup>
+              <m:mi>φ</m:mi>
+              <m:mn>2</m:mn>
+              <m:mo>'</m:mo>
+            </m:msubsup>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>s</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>=</m:mo>
+            <m:msubsup>
+              <m:mi>φ</m:mi>
+              <m:mn>1</m:mn>
+              <m:mo>'</m:mo>
+            </m:msubsup>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>g</m:mi>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>s</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:msup>
+              <m:mi>g</m:mi>
+              <m:mo>'</m:mo>
+            </m:msup>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>s</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>=</m:mo>
+            <m:msubsup>
+              <m:mi>φ</m:mi>
+              <m:mn>1</m:mn>
+              <m:mo>'</m:mo>
+            </m:msubsup>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>t</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:msup>
+              <m:mi>g</m:mi>
+              <m:mo>'</m:mo>
+            </m:msup>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>s</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id158338">for all but a finite number of points <m:math overflow="scroll"><m:mrow><m:mi>s</m:mi><m:mo>∈</m:mo><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>,</m:mo><m:mi>d</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math> Also, <m:math overflow="scroll"><m:mi>g</m:mi></m:math> is strictly increasing, so that
+<m:math overflow="scroll"><m:mrow><m:msup><m:mi>g</m:mi><m:mo>'</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>s</m:mi><m:mo>)</m:mo></m:mrow><m:mo>≥</m:mo><m:mn>0</m:mn></m:mrow></m:math> for all points <m:math overflow="scroll"><m:mi>s</m:mi></m:math> where <m:math overflow="scroll"><m:mi>g</m:mi></m:math> is differentiable.
+And in fact, <m:math overflow="scroll"><m:mrow><m:msup><m:mi>g</m:mi><m:mo>'</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>s</m:mi><m:mo>)</m:mo></m:mrow><m:mo>≠</m:mo><m:mn>0</m:mn></m:mrow></m:math> for all but a finite number of <m:math overflow="scroll"><m:mi>s</m:mi></m:math>'s, because <m:math overflow="scroll"><m:mrow><m:msup><m:mi>g</m:mi><m:mo>'</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>s</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math>
+is either <m:math overflow="scroll"><m:mrow><m:msup><m:mrow><m:mo>(</m:mo><m:msubsup><m:mi>v</m:mi><m:mn>1</m:mn><m:mrow><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msubsup><m:mo>∘</m:mo><m:msub><m:mi>v</m:mi><m:mn>2</m:mn></m:msub><m:mo>)</m:mo></m:mrow><m:mo>'</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>s</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> or <m:math overflow="scroll"><m:mrow><m:msup><m:mrow><m:mo>(</m:mo><m:msubsup><m:mi>u</m:mi><m:mn>1</m:mn><m:mrow><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msubsup><m:mo>∘</m:mo><m:msub><m:mi>u</m:mi><m:mn>2</m:mn></m:msub><m:mo>)</m:mo></m:mrow><m:mo>'</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>s</m:mi><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math>
+and these are nonzero except for a finite number of points.
+Now the corollary follows by direct substitution.</para>
+</proof></rule>
+<rule id="fs-id2073708"><label/><statement id="fs-id1170768128115">
+      <para id="id158585"><emphasis effect="bold">REMARK</emphasis>
+If we think of <m:math overflow="scroll"><m:mrow><m:msup><m:mi>φ</m:mi><m:mo>'</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mrow><m:mo>(</m:mo><m:msup><m:mi>x</m:mi><m:mo>'</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo><m:msup><m:mi>y</m:mi><m:mo>'</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> as a vector in the plane <m:math overflow="scroll"><m:mrow><m:msup><m:mrow><m:mi>R</m:mi></m:mrow><m:mn>2</m:mn></m:msup><m:mo>,</m:mo></m:mrow></m:math>
+then the corollary asserts that the direction of this vector is
+independent of the parameterization, at least at all but a finite number of points.
+This direction vector will come up again as the unit tangent of the curve.</para>
+</statement></rule>
+      <para id="id158685">The adjective “smooth” is meant to suggest that the curve is bending in
+some reasonable way, and specifically it should mean that the curve has a tangent, or tangential direction, at each point.
+We give the definition of tangential direction below, but we note that in the
+context of a moving particle, the tangential direction
+is that direction in which the particle would continue to move if the force
+that is keeping it on the curve were totally removed.
+If the derivative <m:math overflow="scroll"><m:mrow><m:msup><m:mi>φ</m:mi><m:mo>'</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>≠</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> then this vector is the velocity vector,
+and its direction is exactly what we should mean by the tangential direction.</para>
+      <para id="id158723">The adjective “piecewise” will allow us to consider curves that have a finite number
+of points where there is no tangential direction, e.g., where there are “corners.”</para>
+      <para id="id158729">We are carefully orienting our curves at the moment.
+A curve <m:math overflow="scroll"><m:mi>C</m:mi></m:math> from <m:math overflow="scroll"><m:msub><m:mi>z</m:mi><m:mn>1</m:mn></m:msub></m:math> to <m:math overflow="scroll"><m:msub><m:mi>z</m:mi><m:mn>2</m:mn></m:msub></m:math> is being distinguished from the same curve
+from <m:math overflow="scroll"><m:msub><m:mi>z</m:mi><m:mn>2</m:mn></m:msub></m:math> to <m:math overflow="scroll"><m:mrow><m:msub><m:mi>z</m:mi><m:mn>1</m:mn></m:msub><m:mo>,</m:mo></m:mrow></m:math> even though the set <m:math overflow="scroll"><m:mi>C</m:mi></m:math> is the same in both instances.
+Which way we traverse a curve will be of great importance at the end of this chapter,
+when we come to Green's Theorem.</para>
+<definition id="fs-id1170761501609"><term/><meaning id="fs-id1170765815538">
+      <para id="id158813">
+Let <m:math overflow="scroll"><m:mrow><m:mi>C</m:mi><m:mo>,</m:mo></m:mrow></m:math> the range of <m:math overflow="scroll"><m:mrow><m:mi>φ</m:mi><m:mo>:</m:mo><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>→</m:mo><m:mi>C</m:mi><m:mo>,</m:mo></m:mrow></m:math> be a piecewise smooth curve,
+and let <m:math overflow="scroll"><m:mrow><m:mi>z</m:mi><m:mo>=</m:mo><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>,</m:mo><m:mi>y</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mi>φ</m:mi><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow></m:math> be a point on the curve.
+We say that the curve <m:math overflow="scroll"><m:mi>C</m:mi></m:math> has a tangential direction at <m:math overflow="scroll"><m:mrow><m:mi>z</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+relative to the parameterization <m:math overflow="scroll"><m:mrow><m:mi>φ</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+if the following limit exists:</para>
+      <equation id="id158930">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:munder>
+              <m:mo movablelimits="true" form="prefix">lim</m:mo>
+              <m:mrow>
+                <m:mi>t</m:mi>
+                <m:mo>→</m:mo>
+                <m:mi>c</m:mi>
+              </m:mrow>
+            </m:munder>
+            <m:mfrac>
+              <m:mrow>
+                <m:mi>φ</m:mi>
+                <m:mo>(</m:mo>
+                <m:mi>t</m:mi>
+                <m:mo>)</m:mo>
+                <m:mo>-</m:mo>
+                <m:mi>z</m:mi>
+              </m:mrow>
+              <m:mrow>
+                <m:mo>|</m:mo>
+                <m:mi>φ</m:mi>
+                <m:mo>(</m:mo>
+                <m:mi>t</m:mi>
+                <m:mo>)</m:mo>
+                <m:mo>-</m:mo>
+                <m:mi>z</m:mi>
+                <m:mo>|</m:mo>
+              </m:mrow>
+            </m:mfrac>
+            <m:mo>=</m:mo>
+            <m:munder>
+              <m:mo movablelimits="true" form="prefix">lim</m:mo>
+              <m:mrow>
+                <m:mi>t</m:mi>
+                <m:mo>→</m:mo>
+                <m:mi>c</m:mi>
+              </m:mrow>
+            </m:munder>
+            <m:mfrac>
+              <m:mrow>
+                <m:mi>φ</m:mi>
+                <m:mo>(</m:mo>
+                <m:mi>t</m:mi>
+                <m:mo>)</m:mo>
+                <m:mo>-</m:mo>
+                <m:mi>φ</m:mi>
+                <m:mo>(</m:mo>
+                <m:mi>c</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:mrow>
+                <m:mo>|</m:mo>
+                <m:mi>φ</m:mi>
+                <m:mo>(</m:mo>
+                <m:mi>t</m:mi>
+                <m:mo>)</m:mo>
+                <m:mo>-</m:mo>
+                <m:mi>φ</m:mi>
+                <m:mo>(</m:mo>
+                <m:mi>c</m:mi>
+                <m:mo>)</m:mo>
+                <m:mo>|</m:mo>
+              </m:mrow>
+            </m:mfrac>
+            <m:mo>.</m:mo>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id159061">If this limit exists, it is a vector of length 1 in <m:math overflow="scroll"><m:mrow><m:msup><m:mrow><m:mi>R</m:mi></m:mrow><m:mn>2</m:mn></m:msup><m:mo>,</m:mo></m:mrow></m:math>
+and this unit vector is called the unit tangent (relative to the parameterization <m:math overflow="scroll"><m:mi>φ</m:mi></m:math>) to <m:math overflow="scroll"><m:mi>C</m:mi></m:math> at <m:math overflow="scroll"><m:mrow><m:mi>z</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+      <para id="id159123">The curve <m:math overflow="scroll"><m:mi>C</m:mi></m:math> has a <emphasis effect="italics">unit tangent</emphasis> at the point <m:math overflow="scroll"><m:mi>z</m:mi></m:math> if there exists
+a parameterization <m:math overflow="scroll"><m:mi>φ</m:mi></m:math> for which the unit tangent at <m:math overflow="scroll"><m:mi>z</m:mi></m:math> relative to <m:math overflow="scroll"><m:mi>φ</m:mi></m:math> exists.</para>
+</meaning></definition>
+<exercise id="fs-id1170766185649"><problem id="fs-id1170765842691">
+      <list id="id159188" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid6"> Restate the definition of tangential direction and unit tangent using the
+<m:math overflow="scroll"><m:msup><m:mrow><m:mi>R</m:mi></m:mrow><m:mn>2</m:mn></m:msup></m:math> version of the plane instead of the <m:math overflow="scroll"><m:mi>C</m:mi></m:math> version.
+That is, restate the definition in terms of pairs <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>,</m:mo><m:mi>y</m:mi><m:mo>)</m:mo></m:mrow></m:math> of real numbers instead of a complex number <m:math overflow="scroll"><m:mrow><m:mi>z</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+        <item id="uid7"> Suppose <m:math overflow="scroll"><m:mrow><m:mi>φ</m:mi><m:mo>:</m:mo><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>→</m:mo><m:mi>C</m:mi></m:mrow></m:math> is a parameterization of a piecewise smooth curve <m:math overflow="scroll"><m:mrow><m:mi>C</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+and that <m:math overflow="scroll"><m:mrow><m:mi>t</m:mi><m:mo>∈</m:mo><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo></m:mrow></m:math> is a point where <m:math overflow="scroll"><m:mi>φ</m:mi></m:math> is differentiable
+with <m:math overflow="scroll"><m:mrow><m:msup><m:mi>φ</m:mi><m:mo>'</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>≠</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math> Show that the unit tangent (relative to the parameterization <m:math overflow="scroll"><m:mi>φ</m:mi></m:math>)
+to <m:math overflow="scroll"><m:mi>C</m:mi></m:math> at <m:math overflow="scroll"><m:mrow><m:mi>z</m:mi><m:mo>=</m:mo><m:mi>φ</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:math> exists and equals
+<m:math overflow="scroll"><m:mrow><m:msup><m:mi>φ</m:mi><m:mo>'</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>/</m:mo><m:mrow><m:mo>|</m:mo><m:msup><m:mi>φ</m:mi><m:mo>'</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>|</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math>
+Conclude that, except possibly for a finite number of points, the unit tangent to <m:math overflow="scroll"><m:mi>C</m:mi></m:math> at <m:math overflow="scroll"><m:mi>z</m:mi></m:math> is independent of the parameterization.
+</item>
+        <item id="uid8"> Let <m:math overflow="scroll"><m:mi>C</m:mi></m:math> be the graph of the function <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mo>|</m:mo><m:mi>t</m:mi><m:mo>|</m:mo></m:mrow></m:math> for <m:math overflow="scroll"><m:mrow><m:mi>t</m:mi><m:mo>∈</m:mo><m:mo>[</m:mo><m:mo>-</m:mo><m:mn>1</m:mn><m:mo>,</m:mo><m:mn>1</m:mn><m:mo>]</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Is <m:math overflow="scroll"><m:mi>C</m:mi></m:math> a smooth curve?
+Is it a piecewise smooth curve?
+Does <m:math overflow="scroll"><m:mi>C</m:mi></m:math> have a unit tangent at every point?
+</item>
+        <item id="uid9"> Let <m:math overflow="scroll"><m:mi>C</m:mi></m:math> be the graph of the function <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>t</m:mi><m:mrow><m:mn>2</m:mn><m:mo>/</m:mo><m:mn>3</m:mn></m:mrow></m:msup><m:mo>=</m:mo><m:msup><m:mrow><m:mo>(</m:mo><m:msup><m:mi>t</m:mi><m:mrow><m:mn>1</m:mn><m:mo>/</m:mo><m:mn>3</m:mn></m:mrow></m:msup><m:mo>)</m:mo></m:mrow><m:mn>2</m:mn></m:msup></m:mrow></m:math> for <m:math overflow="scroll"><m:mrow><m:mi>t</m:mi><m:mo>∈</m:mo><m:mo>[</m:mo><m:mo>-</m:mo><m:mn>1</m:mn><m:mo>,</m:mo><m:mn>1</m:mn><m:mo>]</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Is <m:math overflow="scroll"><m:mi>C</m:mi></m:math> a smooth curve?
+Is it a piecewise smooth curve?
+Does <m:math overflow="scroll"><m:mi>C</m:mi></m:math> have a unit tangent at every point?
+</item>
+        <item id="uid10"> Consider the set <m:math overflow="scroll"><m:mi>C</m:mi></m:math> that is the right half of the unit circle in the plane.
+Let <m:math overflow="scroll"><m:mrow><m:msub><m:mi>φ</m:mi><m:mn>1</m:mn></m:msub><m:mo>:</m:mo><m:mrow><m:mo>[</m:mo><m:mo>-</m:mo><m:mn>1</m:mn><m:mo>,</m:mo><m:mn>1</m:mn><m:mo>]</m:mo></m:mrow><m:mo>→</m:mo><m:mi>C</m:mi></m:mrow></m:math> be defined by
+<equation id="id159765"><m:math overflow="scroll" mode="display"><m:mrow><m:msub><m:mi>φ</m:mi><m:mn>1</m:mn></m:msub><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mrow><m:mo>(</m:mo><m:mo form="prefix">cos</m:mo><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mfrac><m:mi>π</m:mi><m:mn>2</m:mn></m:mfrac><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo><m:mo form="prefix">sin</m:mo><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mfrac><m:mi>π</m:mi><m:mn>2</m:mn></m:mfrac><m:mo>)</m:mo></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math></equation>
+and let <m:math overflow="scroll"><m:mrow><m:msub><m:mi>φ</m:mi><m:mn>2</m:mn></m:msub><m:mo>:</m:mo><m:mrow><m:mo>[</m:mo><m:mo>-</m:mo><m:mn>1</m:mn><m:mo>,</m:mo><m:mn>1</m:mn><m:mo>]</m:mo></m:mrow><m:mo>→</m:mo><m:mi>C</m:mi></m:mrow></m:math> be defined by
+<equation id="id159881"><m:math overflow="scroll" mode="display"><m:mrow><m:msub><m:mi>φ</m:mi><m:mn>2</m:mn></m:msub><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mrow><m:mo>(</m:mo><m:mo form="prefix">cos</m:mo><m:mrow><m:mo>(</m:mo><m:msup><m:mi>t</m:mi><m:mn>3</m:mn></m:msup><m:mfrac><m:mi>π</m:mi><m:mn>2</m:mn></m:mfrac><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo><m:mo form="prefix">sin</m:mo><m:mrow><m:mo>(</m:mo><m:msup><m:mi>t</m:mi><m:mn>3</m:mn></m:msup><m:mfrac><m:mi>π</m:mi><m:mn>2</m:mn></m:mfrac><m:mo>)</m:mo></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></equation>
+Prove that <m:math overflow="scroll"><m:msub><m:mi>φ</m:mi><m:mn>1</m:mn></m:msub></m:math> and <m:math overflow="scroll"><m:msub><m:mi>φ</m:mi><m:mn>2</m:mn></m:msub></m:math> are both parameterizations of <m:math overflow="scroll"><m:mrow><m:mi>C</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Discuss the existence of a unit tangent at the point <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>(</m:mo><m:mn>1</m:mn><m:mo>,</m:mo><m:mn>0</m:mn><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msub><m:mi>φ</m:mi><m:mn>1</m:mn></m:msub><m:mrow><m:mo>(</m:mo><m:mn>0</m:mn><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msub><m:mi>φ</m:mi><m:mn>2</m:mn></m:msub><m:mrow><m:mo>(</m:mo><m:mn>0</m:mn><m:mo>)</m:mo></m:mrow></m:mrow></m:math> relative to these two parameterizations.
+</item>
+        <item id="uid11"> Suppose <m:math overflow="scroll"><m:mrow><m:mi>φ</m:mi><m:mo>:</m:mo><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>→</m:mo><m:mi>C</m:mi></m:mrow></m:math> is a parameterization of a curve <m:math overflow="scroll"><m:mi>C</m:mi></m:math>
+from <m:math overflow="scroll"><m:msub><m:mi>z</m:mi><m:mn>1</m:mn></m:msub></m:math> to <m:math overflow="scroll"><m:mrow><m:msub><m:mi>z</m:mi><m:mn>2</m:mn></m:msub><m:mo>.</m:mo></m:mrow></m:math>
+Define <m:math overflow="scroll"><m:mi>ψ</m:mi></m:math> on <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow></m:math> by <m:math overflow="scroll"><m:mrow><m:mi>ψ</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mi>φ</m:mi><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>+</m:mo><m:mi>b</m:mi><m:mo>-</m:mo><m:mi>t</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Show that <m:math overflow="scroll"><m:mi>ψ</m:mi></m:math> is a parameterization of a curve from <m:math overflow="scroll"><m:msub><m:mi>z</m:mi><m:mn>2</m:mn></m:msub></m:math> to <m:math overflow="scroll"><m:mrow><m:msub><m:mi>z</m:mi><m:mn>1</m:mn></m:msub><m:mo>.</m:mo></m:mrow></m:math></item>
+      </list>
+</problem></exercise>
+<exercise id="fs-id1910796"><problem id="fs-id1170767558993">
+      <list id="id160266" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid12"> Suppose <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is a
+smooth, real-valued function defined on the closed interval <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>,</m:mo></m:mrow></m:math>
+and let <m:math overflow="scroll"><m:mrow><m:mi>C</m:mi><m:mo>⊆</m:mo><m:msup><m:mrow><m:mi>R</m:mi></m:mrow><m:mn>2</m:mn></m:msup></m:mrow></m:math> be the graph of <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Show that <m:math overflow="scroll"><m:mi>C</m:mi></m:math> is a smooth curve, and find a “natural”
+parameterization <m:math overflow="scroll"><m:mrow><m:mi>φ</m:mi><m:mo>:</m:mo><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>→</m:mo><m:mi>C</m:mi></m:mrow></m:math> of <m:math overflow="scroll"><m:mrow><m:mi>C</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+What is the unit tangent to <m:math overflow="scroll"><m:mi>C</m:mi></m:math> at the point <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>,</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo><m:mo>)</m:mo><m:mo>?</m:mo></m:mrow></m:math></item>
+        <item id="uid13"> Let <m:math overflow="scroll"><m:msub><m:mi>z</m:mi><m:mn>1</m:mn></m:msub></m:math> and <m:math overflow="scroll"><m:msub><m:mi>z</m:mi><m:mn>2</m:mn></m:msub></m:math> be two distinct points in <m:math overflow="scroll"><m:mrow><m:mi>C</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+and define <m:math overflow="scroll"><m:mrow><m:mi>φ</m:mi><m:mo>:</m:mo><m:mo>[</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>1</m:mn><m:mo>]</m:mo><m:mo>→</m:mo><m:mi>c</m:mi></m:mrow></m:math> by <m:math overflow="scroll"><m:mrow><m:mi>φ</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mrow><m:mo>(</m:mo><m:mn>1</m:mn><m:mo>-</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:msub><m:mi>z</m:mi><m:mn>1</m:mn></m:msub><m:mo>+</m:mo><m:mi>t</m:mi><m:msub><m:mi>z</m:mi><m:mn>2</m:mn></m:msub><m:mo>.</m:mo></m:mrow></m:math>
+Show that <m:math overflow="scroll"><m:mi>φ</m:mi></m:math> is a parameterization of the straight line from the point <m:math overflow="scroll"><m:msub><m:mi>z</m:mi><m:mn>1</m:mn></m:msub></m:math> to the point <m:math overflow="scroll"><m:mrow><m:msub><m:mi>z</m:mi><m:mn>2</m:mn></m:msub><m:mo>.</m:mo></m:mrow></m:math>
+Consequently, a straight line is a smooth curve.
+(Indeed, what is the definition of a straight line?)
+</item>
+        <item id="uid14"> Define a function <m:math overflow="scroll"><m:mrow><m:mi>φ</m:mi><m:mo>:</m:mo><m:mrow><m:mo>[</m:mo><m:mo>-</m:mo><m:mi>r</m:mi><m:mo>,</m:mo><m:mi>r</m:mi><m:mo>]</m:mo></m:mrow><m:mo>→</m:mo><m:msup><m:mrow><m:mi>R</m:mi></m:mrow><m:mn>2</m:mn></m:msup></m:mrow></m:math> by
+<m:math overflow="scroll"><m:mrow><m:mi>φ</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>,</m:mo><m:msqrt><m:mrow><m:msup><m:mi>r</m:mi><m:mn>2</m:mn></m:msup><m:mo>-</m:mo><m:msup><m:mi>t</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:msqrt><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math> Show that the range <m:math overflow="scroll"><m:mi>C</m:mi></m:math> of <m:math overflow="scroll"><m:mi>φ</m:mi></m:math>
+is a smooth curve, and that <m:math overflow="scroll"><m:mi>φ</m:mi></m:math> is a parameterization of <m:math overflow="scroll"><m:mrow><m:mi>C</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+        <item id="uid15"> Define <m:math overflow="scroll"><m:mi>φ</m:mi></m:math> on <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mi>π</m:mi><m:mo>/</m:mo><m:mn>2</m:mn><m:mo>)</m:mo></m:mrow></m:math> by <m:math overflow="scroll"><m:mrow><m:mi>φ</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>e</m:mi><m:mrow><m:mi>i</m:mi><m:mi>t</m:mi></m:mrow></m:msup><m:mo>.</m:mo></m:mrow></m:math>
+For what curve is <m:math overflow="scroll"><m:mi>φ</m:mi></m:math> a parametrization?
+</item>
+        <item id="uid16"> Let <m:math overflow="scroll"><m:mrow><m:msub><m:mi>z</m:mi><m:mn>1</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>z</m:mi><m:mn>2</m:mn></m:msub><m:mo>,</m:mo><m:mo>...</m:mo><m:mo>,</m:mo><m:msub><m:mi>z</m:mi><m:mi>n</m:mi></m:msub></m:mrow></m:math> be <m:math overflow="scroll"><m:mi>n</m:mi></m:math> distinct points in the plane, and suppose
+that the polygonal line joing these points in order never crosses itself.
+Construct a parameterization of that polygonal line.
+</item>
+        <item id="uid17"> Let <m:math overflow="scroll"><m:mi>S</m:mi></m:math> be a piecewise smooth geometric set determined by the interval <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow></m:math> and the
+two piecewise smooth bounding functions <m:math overflow="scroll"><m:mi>u</m:mi></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>l</m:mi><m:mo>.</m:mo></m:mrow></m:math> Suppose <m:math overflow="scroll"><m:msub><m:mi>z</m:mi><m:mn>1</m:mn></m:msub></m:math> and <m:math overflow="scroll"><m:msub><m:mi>z</m:mi><m:mn>2</m:mn></m:msub></m:math>
+are two points in the interior <m:math overflow="scroll"><m:msup><m:mi>S</m:mi><m:mn>0</m:mn></m:msup></m:math> of <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math> Show that there exists a
+piecewise smooth curve <m:math overflow="scroll"><m:mi>C</m:mi></m:math> joining <m:math overflow="scroll"><m:msub><m:mi>z</m:mi><m:mn>1</m:mn></m:msub></m:math> to <m:math overflow="scroll"><m:mrow><m:msub><m:mi>z</m:mi><m:mn>2</m:mn></m:msub><m:mo>,</m:mo></m:mrow></m:math>
+i.e., a piecewise smooth function <m:math overflow="scroll"><m:mrow><m:mi>φ</m:mi><m:mo>:</m:mo><m:mo>[</m:mo><m:mover accent="true"><m:mi>a</m:mi><m:mo>^</m:mo></m:mover><m:mo>,</m:mo><m:mover accent="true"><m:mi>b</m:mi><m:mo>^</m:mo></m:mover><m:mo>]</m:mo><m:mo>→</m:mo><m:mi>C</m:mi></m:mrow></m:math> with <m:math overflow="scroll"><m:mrow><m:mi>φ</m:mi><m:mrow><m:mo>(</m:mo><m:mover accent="true"><m:mi>a</m:mi><m:mo>^</m:mo></m:mover><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msub><m:mi>z</m:mi><m:mn>1</m:mn></m:msub></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>φ</m:mi><m:mrow><m:mo>(</m:mo><m:mover accent="true"><m:mi>b</m:mi><m:mo>^</m:mo></m:mover><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msub><m:mi>z</m:mi><m:mn>2</m:mn></m:msub><m:mo>,</m:mo></m:mrow></m:math>
+that lies entirely in <m:math overflow="scroll"><m:mrow><m:msup><m:mi>S</m:mi><m:mn>0</m:mn></m:msup><m:mo>.</m:mo></m:mrow></m:math></item>
+        <item id="uid18"> Let <m:math overflow="scroll"><m:mi>C</m:mi></m:math> be a piecewise smooth curve, and suppose <m:math overflow="scroll"><m:mrow><m:mi>φ</m:mi><m:mo>:</m:mo><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>→</m:mo><m:mi>C</m:mi></m:mrow></m:math>
+is a parameterization of <m:math overflow="scroll"><m:mrow><m:mi>C</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Let <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>c</m:mi><m:mo>,</m:mo><m:mi>d</m:mi><m:mo>]</m:mo></m:mrow></m:math> be a subinterval of <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Show that the range of the restriction of <m:math overflow="scroll"><m:mi>φ</m:mi></m:math> to <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>c</m:mi><m:mo>,</m:mo><m:mi>d</m:mi><m:mo>]</m:mo></m:mrow></m:math> is a smooth curve.
+
+</item>
+      </list>
+</problem></exercise>
+<exercise id="fs-id2236312"><problem id="fs-id1170767608260">
+      <para id="id161344">
+Suppose <m:math overflow="scroll"><m:mi>C</m:mi></m:math> is a smooth curve, parameterized by <m:math overflow="scroll"><m:mrow><m:mi>φ</m:mi><m:mo>=</m:mo><m:mi>u</m:mi><m:mo>+</m:mo><m:mi>i</m:mi><m:mi>v</m:mi><m:mo>:</m:mo><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>→</m:mo><m:mi>C</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+      <list id="id161400" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid19"> Suppose that <m:math overflow="scroll"><m:mrow><m:msup><m:mi>u</m:mi><m:mo>'</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>≠</m:mo><m:mn>0</m:mn></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>t</m:mi><m:mo>∈</m:mo><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Prove that there exists a smooth, real-valued function <m:math overflow="scroll"><m:mi>f</m:mi></m:math> on some closed interval <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:msup><m:mi>a</m:mi><m:mo>'</m:mo></m:msup><m:mo>,</m:mo><m:msup><m:mi>b</m:mi><m:mo>'</m:mo></m:msup><m:mo>]</m:mo></m:mrow></m:math> such that
+<m:math overflow="scroll"><m:mi>C</m:mi></m:math> coincides with the graph of <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+HINT: <m:math overflow="scroll"><m:mi>f</m:mi></m:math> should be something like <m:math overflow="scroll"><m:mrow><m:mi>v</m:mi><m:mo>∘</m:mo><m:msup><m:mi>u</m:mi><m:mrow><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msup><m:mo>.</m:mo></m:mrow></m:math></item>
+        <item id="uid20"> What if <m:math overflow="scroll"><m:mrow><m:msup><m:mi>v</m:mi><m:mo>'</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>≠</m:mo><m:mn>0</m:mn></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>t</m:mi><m:mo>∈</m:mo><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo><m:mo>?</m:mo></m:mrow></m:math></item>
+      </list>
+</problem></exercise>
+<exercise id="fs-id1170783737170"><problem id="fs-id1453620">
+      <para id="id161636">
+Let <m:math overflow="scroll"><m:mi>C</m:mi></m:math> be the curve that is the
+range of the function <m:math overflow="scroll"><m:mrow><m:mi>φ</m:mi><m:mo>:</m:mo><m:mo>[</m:mo><m:mo>-</m:mo><m:mn>1</m:mn><m:mo>,</m:mo><m:mn>1</m:mn><m:mo>]</m:mo><m:mo>→</m:mo><m:mi>C</m:mi><m:mo>,</m:mo></m:mrow></m:math> where
+<m:math overflow="scroll"><m:mrow><m:mi>φ</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>t</m:mi><m:mn>3</m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mi>t</m:mi><m:mn>6</m:mn></m:msup><m:mrow><m:mi>i</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:mrow></m:math></para>
+      <list id="id161736" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid21"> Is <m:math overflow="scroll"><m:mi>C</m:mi></m:math> a piecewise smooth curve?
+Is it a smooth curve?
+What points <m:math overflow="scroll"><m:msub><m:mi>z</m:mi><m:mn>1</m:mn></m:msub></m:math> and <m:math overflow="scroll"><m:msub><m:mi>z</m:mi><m:mn>2</m:mn></m:msub></m:math> does it join?
+</item>
+        <item id="uid22"> Is <m:math overflow="scroll"><m:mi>φ</m:mi></m:math> a parameterization of <m:math overflow="scroll"><m:mrow><m:mi>C</m:mi><m:mo>?</m:mo></m:mrow></m:math></item>
+        <item id="uid23"> Find a parameterization for <m:math overflow="scroll"><m:mi>C</m:mi></m:math> by a function
+<m:math overflow="scroll"><m:mrow><m:mi>ψ</m:mi><m:mo>:</m:mo><m:mo>[</m:mo><m:mn>3</m:mn><m:mo>,</m:mo><m:mn>4</m:mn><m:mo>]</m:mo><m:mo>→</m:mo><m:mi>C</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+        <item id="uid24"> Find the unit tangent to <m:math overflow="scroll"><m:mi>C</m:mi></m:math> and the point <m:math overflow="scroll"><m:mrow><m:mn>0</m:mn><m:mo>+</m:mo><m:mn>0</m:mn><m:mi>i</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+      </list>
+</problem></exercise>
+<exercise id="fs-id1170761685886"><problem id="fs-id1170766824128">
+      <para id="id161924">Let <m:math overflow="scroll"><m:mi>C</m:mi></m:math> be the curve parameterized by <m:math overflow="scroll"><m:mrow><m:mi>φ</m:mi><m:mo>:</m:mo><m:mo>[</m:mo><m:mo>-</m:mo><m:mi>π</m:mi><m:mo>,</m:mo><m:mi>π</m:mi><m:mo>-</m:mo><m:mi>ϵ</m:mi><m:mo>]</m:mo><m:mo>→</m:mo><m:mi>C</m:mi></m:mrow></m:math> defined by <m:math overflow="scroll"><m:mrow><m:mi>φ</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>e</m:mi><m:mrow><m:mi>i</m:mi><m:mi>t</m:mi></m:mrow></m:msup><m:mo>=</m:mo><m:mo form="prefix">cos</m:mo><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mi>i</m:mi><m:mo form="prefix">sin</m:mo><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></para>
+      <list id="id162037" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid25"> What curve does <m:math overflow="scroll"><m:mi>φ</m:mi></m:math> parameterize?
+</item>
+        <item id="uid26"> Find another parameterization of this curve, but base on the interval <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>1</m:mn><m:mo>-</m:mo><m:mi>ϵ</m:mi><m:mo>]</m:mo><m:mo>.</m:mo></m:mrow></m:math></item>
+      </list>
+ </problem></exercise>
+  </content>
+</document>

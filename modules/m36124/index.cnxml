@@ -1,0 +1,662 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML">
+  <title>Definition of e</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m36124</md:content-id>
+  <md:title>Definition of e</md:title>
+  <md:abstract>The theorem of the definition of e is introduced and proven.</md:abstract>
+  <md:uuid>7d61fd79-4422-47c5-95c4-d79ab905260b</md:uuid>
+</metadata>
+
+<content>
+    <para id="id229002">Part (4) of <link target-id="fs-id1169173140996" document="m36120"/> raises an interesting point.
+Suppose we have a sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo><m:mo>,</m:mo></m:mrow></m:math> like <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:mi>n</m:mi><m:mo>}</m:mo><m:mo>,</m:mo></m:mrow></m:math> that is diverging to infinity,
+and suppose we have another sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>b</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo><m:mo>,</m:mo></m:mrow></m:math> like <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>n</m:mi><m:mo>}</m:mo><m:mo>,</m:mo></m:mrow></m:math> that is converging to 0.
+What can be said about the sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msubsup><m:mi>a</m:mi><m:mi>n</m:mi><m:msub><m:mi>b</m:mi><m:mi>n</m:mi></m:msub></m:msubsup><m:mo>}</m:mo><m:mo>?</m:mo></m:mrow></m:math>
+The base <m:math overflow="scroll"><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub></m:math> is blowing up, while the exponent <m:math overflow="scroll"><m:msub><m:mi>b</m:mi><m:mi>n</m:mi></m:msub></m:math> is going to 0.
+In other words, there are two competing processes going on.
+If <m:math overflow="scroll"><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub></m:math> is blowing up, then its powers ought to be blowing up as well.
+On the other hand, anything to the 0 power should be 1, so that,
+as the exponents of the elements of a sequence converge to 0,
+the sequence ought to converge to 1.
+This competition between the convergence of the base to infinity and the convergence of the exponent to 0 makes it
+subtle, if not impossibly difficult, to tell what the combination does.
+For the special case of part (4) of <link target-id="fs-id1169173140996" document="m36120"/>, the answer was 1, indicating that,
+in that case at least, the exponents going to 0 seem to be more important than
+the base going to infinity.
+One can think up all kinds of such examples:
+<m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msup><m:mrow><m:mo>(</m:mo><m:msup><m:mn>2</m:mn><m:mi>n</m:mi></m:msup><m:mo>)</m:mo></m:mrow><m:mrow><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>n</m:mi></m:mrow></m:msup><m:mo>}</m:mo><m:mo>,</m:mo></m:mrow></m:math><m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msup><m:mrow><m:mo>(</m:mo><m:mi>n</m:mi><m:mo>!</m:mo><m:mo>)</m:mo></m:mrow><m:mrow><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>n</m:mi></m:mrow></m:msup><m:mo>}</m:mo><m:mo>,</m:mo></m:mrow></m:math><m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msup><m:mrow><m:mo>(</m:mo><m:mi>n</m:mi><m:mo>!</m:mo><m:mo>)</m:mo></m:mrow><m:mrow><m:mn>1</m:mn><m:mo>/</m:mo><m:msup><m:mi>n</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:msup><m:mo>}</m:mo><m:mo>,</m:mo></m:mrow></m:math> and so on.
+We will see later that all sorts of things can happen.</para>
+    <para id="id229608">Of course there is the reverse situation. Suppose <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> is a sequence of numbers
+that decreases to 1, and suppose <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>b</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math>
+is a sequence of numbers that diverges to infinity.
+What can we say about the sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msup><m:mrow><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub></m:mrow><m:msub><m:mi>b</m:mi><m:mi>n</m:mi></m:msub></m:msup><m:mo>}</m:mo><m:mo>?</m:mo></m:mrow></m:math>
+The base is tending to 1, so that one might
+expect that the whole sequence also would be converging to 1.
+On the other hand the exponents are blowing up, so that
+one might think that the whole sequence should blow up as well.
+Again, there are lots of examples, and they don't all work the same way.
+Here is perhaps the most famous such example.</para>
+<rule id="fs-id1171134940519" type="theorem"><title>Definition of <m:math overflow="scroll"><m:mstyle mathvariant="script"><m:mstyle mathvariant="italics"><m:mi>e</m:mi></m:mstyle></m:mstyle></m:math>.</title><statement id="fs-id1171118565476">
+    <para id="id229686">
+For <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>≥</m:mo><m:mn>1</m:mn><m:mo>,</m:mo></m:mrow></m:math> define <m:math overflow="scroll"><m:mrow><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>=</m:mo><m:msup><m:mrow><m:mo>(</m:mo><m:mn>1</m:mn><m:mo>+</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>n</m:mi><m:mo>)</m:mo></m:mrow><m:mi>n</m:mi></m:msup><m:mo>.</m:mo></m:mrow></m:math>
+Then the sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> is nondecreasing and bounded
+above, whence it is convergent.
+(We will denote the limit of this special sequence by the letter <m:math overflow="scroll"><m:mrow><m:mi>e</m:mi><m:mo>.</m:mo></m:mrow></m:math>)</para>
+</statement>
+<proof id="fs-id1171122987528">
+    <para id="id229791">To see that <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> is nondecreasing,
+it will suffice to prove that <m:math overflow="scroll"><m:mrow><m:msub><m:mi>a</m:mi><m:mrow><m:mi>n</m:mi><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>/</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>≥</m:mo><m:mn>1</m:mn></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+In the computation below, we will use the fact (part (c)of <link target-id="fs-id1170978305094" document="m36104"/>) that if <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>&gt;</m:mo><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:math> then
+<m:math overflow="scroll"><m:mrow><m:msup><m:mrow><m:mo>(</m:mo><m:mn>1</m:mn><m:mo>+</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mi>n</m:mi></m:msup><m:mo>≥</m:mo><m:mn>1</m:mn><m:mo>+</m:mo><m:mi>n</m:mi><m:mi>x</m:mi><m:mo>.</m:mo></m:mrow></m:math> So,</para>
+    <equation id="uid1">
+      <m:math overflow="scroll" mode="display">
+        <m:mtable displaystyle="true">
+          <m:mtr>
+            <m:mtd columnalign="right">
+              <m:mrow>
+                <m:mrow>
+                  <m:mi>r</m:mi>
+                  <m:mi>c</m:mi>
+                  <m:mi>l</m:mi>
+                </m:mrow>
+                <m:mfrac>
+                  <m:msub>
+                    <m:mi>a</m:mi>
+                    <m:mrow>
+                      <m:mi>n</m:mi>
+                      <m:mo>+</m:mo>
+                      <m:mn>1</m:mn>
+                    </m:mrow>
+                  </m:msub>
+                  <m:msub>
+                    <m:mi>a</m:mi>
+                    <m:mi>n</m:mi>
+                  </m:msub>
+                </m:mfrac>
+              </m:mrow>
+            </m:mtd>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mfrac>
+                <m:msup>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mn>1</m:mn>
+                    <m:mo>+</m:mo>
+                    <m:mfrac>
+                      <m:mn>1</m:mn>
+                      <m:mrow>
+                        <m:mi>n</m:mi>
+                        <m:mo>+</m:mo>
+                        <m:mn>1</m:mn>
+                      </m:mrow>
+                    </m:mfrac>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mrow>
+                    <m:mi>n</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                </m:msup>
+                <m:msup>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mn>1</m:mn>
+                    <m:mo>+</m:mo>
+                    <m:mfrac>
+                      <m:mn>1</m:mn>
+                      <m:mi>n</m:mi>
+                    </m:mfrac>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mi>n</m:mi>
+                </m:msup>
+              </m:mfrac>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mfrac>
+                <m:msup>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mfrac>
+                      <m:mrow>
+                        <m:mi>n</m:mi>
+                        <m:mo>+</m:mo>
+                        <m:mn>2</m:mn>
+                      </m:mrow>
+                      <m:mrow>
+                        <m:mi>n</m:mi>
+                        <m:mo>+</m:mo>
+                        <m:mn>1</m:mn>
+                      </m:mrow>
+                    </m:mfrac>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mrow>
+                    <m:mi>n</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                </m:msup>
+                <m:msup>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mfrac>
+                      <m:mrow>
+                        <m:mi>n</m:mi>
+                        <m:mo>+</m:mo>
+                        <m:mn>1</m:mn>
+                      </m:mrow>
+                      <m:mi>n</m:mi>
+                    </m:mfrac>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mi>n</m:mi>
+                </m:msup>
+              </m:mfrac>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mfrac>
+                  <m:mrow>
+                    <m:mi>n</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                  <m:mi>n</m:mi>
+                </m:mfrac>
+                <m:mfrac>
+                  <m:mrow>
+                    <m:mfrac>
+                      <m:mrow>
+                        <m:mi>n</m:mi>
+                        <m:mo>+</m:mo>
+                        <m:mn>2</m:mn>
+                      </m:mrow>
+                      <m:mrow>
+                        <m:mi>n</m:mi>
+                        <m:mo>+</m:mo>
+                        <m:mn>1</m:mn>
+                      </m:mrow>
+                    </m:mfrac>
+                    <m:msup>
+                      <m:mrow>
+                        <m:mo>)</m:mo>
+                      </m:mrow>
+                      <m:mrow>
+                        <m:mi>n</m:mi>
+                        <m:mo>+</m:mo>
+                        <m:mn>1</m:mn>
+                      </m:mrow>
+                    </m:msup>
+                  </m:mrow>
+                  <m:msup>
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:mfrac>
+                        <m:mrow>
+                          <m:mi>n</m:mi>
+                          <m:mo>+</m:mo>
+                          <m:mn>1</m:mn>
+                        </m:mrow>
+                        <m:mi>n</m:mi>
+                      </m:mfrac>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                    <m:mrow>
+                      <m:mi>n</m:mi>
+                      <m:mo>+</m:mo>
+                      <m:mn>1</m:mn>
+                    </m:mrow>
+                  </m:msup>
+                </m:mfrac>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mfrac>
+                  <m:mrow>
+                    <m:mi>n</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                  <m:mi>n</m:mi>
+                </m:mfrac>
+                <m:msup>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mfrac>
+                      <m:mrow>
+                        <m:msup>
+                          <m:mi>n</m:mi>
+                          <m:mn>2</m:mn>
+                        </m:msup>
+                        <m:mo>+</m:mo>
+                        <m:mn>2</m:mn>
+                        <m:mi>n</m:mi>
+                      </m:mrow>
+                      <m:mrow>
+                        <m:msup>
+                          <m:mi>n</m:mi>
+                          <m:mn>2</m:mn>
+                        </m:msup>
+                        <m:mo>+</m:mo>
+                        <m:mn>2</m:mn>
+                        <m:mi>n</m:mi>
+                        <m:mo>+</m:mo>
+                        <m:mn>1</m:mn>
+                      </m:mrow>
+                    </m:mfrac>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mrow>
+                    <m:mi>n</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                </m:msup>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mfrac>
+                  <m:mrow>
+                    <m:mi>n</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                  <m:mi>n</m:mi>
+                </m:mfrac>
+                <m:msup>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mn>1</m:mn>
+                    <m:mo>-</m:mo>
+                    <m:mfrac>
+                      <m:mn>1</m:mn>
+                      <m:msup>
+                        <m:mrow>
+                          <m:mo>(</m:mo>
+                          <m:mi>n</m:mi>
+                          <m:mo>+</m:mo>
+                          <m:mn>1</m:mn>
+                          <m:mo>)</m:mo>
+                        </m:mrow>
+                        <m:mn>2</m:mn>
+                      </m:msup>
+                    </m:mfrac>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mrow>
+                    <m:mi>n</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                </m:msup>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>≥</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mfrac>
+                  <m:mrow>
+                    <m:mi>n</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                  <m:mi>n</m:mi>
+                </m:mfrac>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mn>1</m:mn>
+                  <m:mo>-</m:mo>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>n</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mn>1</m:mn>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:msup>
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:mfrac>
+                        <m:mn>1</m:mn>
+                        <m:mrow>
+                          <m:mi>n</m:mi>
+                          <m:mo>+</m:mo>
+                          <m:mn>1</m:mn>
+                        </m:mrow>
+                      </m:mfrac>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                    <m:mn>2</m:mn>
+                  </m:msup>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mfrac>
+                  <m:mrow>
+                    <m:mi>n</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                  <m:mi>n</m:mi>
+                </m:mfrac>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mn>1</m:mn>
+                  <m:mo>-</m:mo>
+                  <m:mfrac>
+                    <m:mn>1</m:mn>
+                    <m:mrow>
+                      <m:mi>n</m:mi>
+                      <m:mo>+</m:mo>
+                      <m:mn>1</m:mn>
+                    </m:mrow>
+                  </m:mfrac>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mfrac>
+                  <m:mrow>
+                    <m:mi>n</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                  <m:mi>n</m:mi>
+                </m:mfrac>
+                <m:mfrac>
+                  <m:mi>n</m:mi>
+                  <m:mrow>
+                    <m:mi>n</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                </m:mfrac>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mn>1</m:mn>
+                <m:mo>,</m:mo>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+        </m:mtable>
+      </m:math>
+    </equation>
+    <para id="id230648">as desired.</para>
+    <para id="id230653">We show next that <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> is bounded above.
+This time, we use the binomial theorem, the geometric progression, and <link target-id="fs-id1170981779636" document="m36104"/>.</para>
+    <equation id="uid2">
+      <m:math overflow="scroll" mode="display">
+        <m:mtable displaystyle="true">
+          <m:mtr>
+            <m:mtd columnalign="right">
+              <m:mrow>
+                <m:mrow>
+                  <m:mi>r</m:mi>
+                  <m:mi>c</m:mi>
+                  <m:mi>l</m:mi>
+                </m:mrow>
+                <m:msub>
+                  <m:mi>a</m:mi>
+                  <m:mi>n</m:mi>
+                </m:msub>
+              </m:mrow>
+            </m:mtd>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:msup>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mn>1</m:mn>
+                  <m:mo>+</m:mo>
+                  <m:mfrac>
+                    <m:mn>1</m:mn>
+                    <m:mi>n</m:mi>
+                  </m:mfrac>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mi>n</m:mi>
+              </m:msup>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:munderover>
+                  <m:mo>∑</m:mo>
+                  <m:mrow>
+                    <m:mi>k</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mn>0</m:mn>
+                  </m:mrow>
+                  <m:mi>n</m:mi>
+                </m:munderover>
+                <m:mfenced separators="" open="(" close=")">
+                  <m:mfrac linethickness="0pt">
+                    <m:mi>n</m:mi>
+                    <m:mi>k</m:mi>
+                  </m:mfrac>
+                </m:mfenced>
+                <m:msup>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mfrac>
+                      <m:mn>1</m:mn>
+                      <m:mi>n</m:mi>
+                    </m:mfrac>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mi>k</m:mi>
+                </m:msup>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>&lt;</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:munderover>
+                  <m:mo>∑</m:mo>
+                  <m:mrow>
+                    <m:mi>k</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mn>0</m:mn>
+                  </m:mrow>
+                  <m:mi>n</m:mi>
+                </m:munderover>
+                <m:mn>2</m:mn>
+                <m:mfrac>
+                  <m:msup>
+                    <m:mi>n</m:mi>
+                    <m:mi>k</m:mi>
+                  </m:msup>
+                  <m:msup>
+                    <m:mn>2</m:mn>
+                    <m:mi>k</m:mi>
+                  </m:msup>
+                </m:mfrac>
+                <m:msup>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mfrac>
+                      <m:mn>1</m:mn>
+                      <m:mi>n</m:mi>
+                    </m:mfrac>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mi>k</m:mi>
+                </m:msup>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mn>2</m:mn>
+                <m:munderover>
+                  <m:mo>∑</m:mo>
+                  <m:mrow>
+                    <m:mi>k</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mn>0</m:mn>
+                  </m:mrow>
+                  <m:mi>n</m:mi>
+                </m:munderover>
+                <m:msup>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mfrac>
+                      <m:mn>1</m:mn>
+                      <m:mn>2</m:mn>
+                    </m:mfrac>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mi>k</m:mi>
+                </m:msup>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mn>2</m:mn>
+                <m:mfrac>
+                  <m:mrow>
+                    <m:mn>1</m:mn>
+                    <m:mo>-</m:mo>
+                    <m:msup>
+                      <m:mrow>
+                        <m:mo>(</m:mo>
+                        <m:mfrac>
+                          <m:mn>1</m:mn>
+                          <m:mn>2</m:mn>
+                        </m:mfrac>
+                        <m:mo>)</m:mo>
+                      </m:mrow>
+                      <m:mrow>
+                        <m:mi>n</m:mi>
+                        <m:mo>+</m:mo>
+                        <m:mn>1</m:mn>
+                      </m:mrow>
+                    </m:msup>
+                  </m:mrow>
+                  <m:mrow>
+                    <m:mn>1</m:mn>
+                    <m:mo>-</m:mo>
+                    <m:mfrac>
+                      <m:mn>1</m:mn>
+                      <m:mn>2</m:mn>
+                    </m:mfrac>
+                  </m:mrow>
+                </m:mfrac>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>&lt;</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mn>4</m:mn>
+                <m:mo>,</m:mo>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+        </m:mtable>
+      </m:math>
+    </equation>
+    <para id="id230969">as desired.</para>
+    <para id="id230974">That the sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> converges is now a consequence of
+<link target-id="fs-id1170684226813" document="m36120"/>.</para>
+</proof></rule>
+<rule id="fs-id1171144248188"><label/><statement id="fs-id1171132384143">
+    <para id="id230996"><emphasis effect="bold">REMARK</emphasis> We have now defined the real number <m:math overflow="scroll"><m:mrow><m:mi>e</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Its central role in mathematics is not at all evident yet;
+at this point we have no definition of exponential function, logarithm,
+or trigonometric functions.
+It does follow from the proof above that <m:math overflow="scroll"><m:mi>e</m:mi></m:math> is between 2 and 4, and with a little
+more careful estimates we can show that actually <m:math overflow="scroll"><m:mrow><m:mi>e</m:mi><m:mo>≤</m:mo><m:mn>3</m:mn><m:mo>.</m:mo></m:mrow></m:math>
+For the moment, we will omit any further discussion of its precise value. Later,
+in <link target-id="fs-id1172705645638" document="m36199"/>, we will show that it is an irrational number.</para>
+</statement></rule>
+  </content>
+</document>

@@ -1,0 +1,698 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML">
+  <title>The Maximum Modulus Principle</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m36239</md:content-id>
+  <md:title>The Maximum Modulus Principle</md:title>
+  <md:abstract>Our next goal is to examine so-called “max/min” problems for coplex-valued functions
+of complex variables.
+Since order makes no sense for complex numbers, we will
+investigate max/min problems for the absolute value of a complex-valued function.
+For the corresponding question for real-valued functions of real variables, we
+have as our basic result
+the First Derivative Test.
+Indeed, when searching for the poinhts where a differentiable real-valued function <m:math overflow="scroll"><m:mi>f</m:mi></m:math> on an interval <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow></m:math> attains its
+extreme values, we consider first the poinhts where it attains a local max or min.
+Of course, to find the absolute minimum and maximum, we must also check the values of the function at the endpoints.</md:abstract>
+  <md:uuid>86ce4d20-bddb-41e2-a3f0-e88336439aa4</md:uuid>
+</metadata>
+
+<content>
+    <para id="id340038">Our next goal is to examine so-called “max/min” problems for coplex-valued functions
+of complex variables.
+Since order makes no sense for complex numbers, we will
+investigate max/min problems for the absolute value of a complex-valued function.
+For the corresponding question for real-valued functions of real variables, we
+have as our basic result
+the First Derivative Test (<link target-id="fs-id1169864141590" document="m36203"/>).
+Indeed, when searching for the poinhts where a differentiable real-valued function <m:math overflow="scroll"><m:mi>f</m:mi></m:math> on an interval <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow></m:math> attains its
+extreme values, we consider first the poinhts where it attains a local max or min, to which purpose end <link target-id="fs-id1169864141590" document="m36203"/> is useful.
+Of course, to find the absolute minimum and maximum, we must also check the values of the function at the endpoints.</para>
+    <para id="id340077">An analog of <link target-id="fs-id1169864141590" document="m36203"/> holds in the complex case, but in fact a much different result is really valid.
+Indeed, it is nearly impossible for the absolute value of
+a differentiable function of a complex variable to attain
+a local maximum or minimum.</para>
+<rule id="fs-id1172058848159" type="theorem"><statement id="fs-id1172053280404">
+    <para id="id340420">
+Let <m:math overflow="scroll"><m:mi>f</m:mi></m:math> be a continuous function on a piecewise smooth geometric set <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+and assume that <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is differentiable on the interior <m:math overflow="scroll"><m:msup><m:mi>S</m:mi><m:mn>0</m:mn></m:msup></m:math> of <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Suppose <m:math overflow="scroll"><m:mi>c</m:mi></m:math> is a point in <m:math overflow="scroll"><m:msup><m:mi>S</m:mi><m:mn>0</m:mn></m:msup></m:math> at which the real-valued function <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>f</m:mi><m:mo>|</m:mo></m:mrow></m:math> attains a local maximum.
+That is, there exists an <m:math overflow="scroll"><m:mrow><m:mi>ϵ</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn></m:mrow></m:math> such that <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo><m:mo>|</m:mo><m:mo>≥</m:mo><m:mo>|</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo><m:mo>|</m:mo></m:mrow></m:math> for all <m:math overflow="scroll"><m:mi>z</m:mi></m:math> satisfying <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>z</m:mi><m:mo>-</m:mo><m:mi>c</m:mi><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mi>ϵ</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Then <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is a constant function on <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>;</m:mo></m:mrow></m:math> i.e., <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow></m:math>
+for all <m:math overflow="scroll"><m:mrow><m:mi>z</m:mi><m:mo>∈</m:mo><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+In other words, the only differentiable functions of a complex variable,
+whose absolute value attains a local maximum on the interior of a geometric set, are constant functions on that set.</para>
+</statement>
+<proof id="fs-id1172060609301">
+    <para id="id340655">If <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> then <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>z</m:mi><m:mo>∈</m:mo><m:msub><m:mi>B</m:mi><m:mi>ϵ</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math> Hence, by the Identity Theorem
+(<link target-id="fs-id1853397" document="m36237"/>), <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow></m:math> would equal 0 for all <m:math overflow="scroll"><m:mrow><m:mi>z</m:mi><m:mo>∈</m:mo><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+so, we may as well assume that <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo><m:mo>≠</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math>
+Let <m:math overflow="scroll"><m:mi>r</m:mi></m:math> be any positive number for which the closed disk <m:math overflow="scroll"><m:mrow><m:msub><m:mover><m:mi>B</m:mi><m:mo>¯</m:mo></m:mover><m:mi>r</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> is contained in <m:math overflow="scroll"><m:mrow><m:msub><m:mi>B</m:mi><m:mi>ϵ</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math>
+We claim first that there exists a point <m:math overflow="scroll"><m:mi>z</m:mi></m:math> on the boundary <m:math overflow="scroll"><m:msub><m:mi>C</m:mi><m:mi>r</m:mi></m:msub></m:math>
+of the disk <m:math overflow="scroll"><m:mrow><m:msub><m:mover><m:mi>B</m:mi><m:mo>¯</m:mo></m:mover><m:mi>r</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> for which <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo><m:mo>|</m:mo><m:mo>=</m:mo><m:mo>|</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo><m:mo>|</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Of course, <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>|</m:mo><m:mo>≤</m:mo><m:mo>|</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo><m:mo>|</m:mo></m:mrow></m:math> for all <m:math overflow="scroll"><m:mi>z</m:mi></m:math> on this boundary by assumption.
+By way of contradiction, suppose that
+<m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>ζ</m:mi><m:mo>)</m:mo><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mo>|</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo><m:mo>|</m:mo></m:mrow></m:math> for all <m:math overflow="scroll"><m:mi>ζ</m:mi></m:math> on the boundary <m:math overflow="scroll"><m:msub><m:mi>C</m:mi><m:mi>r</m:mi></m:msub></m:math> of the disk.
+Write <m:math overflow="scroll"><m:mi>M</m:mi></m:math> for the maximum value of the function <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>f</m:mi><m:mo>|</m:mo></m:mrow></m:math> on the compact
+set <m:math overflow="scroll"><m:mrow><m:msub><m:mi>C</m:mi><m:mi>r</m:mi></m:msub><m:mo>.</m:mo></m:mrow></m:math> Then, by our assumption, <m:math overflow="scroll"><m:mrow><m:mi>M</m:mi><m:mo>&lt;</m:mo><m:mo>|</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo><m:mo>|</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Now, we use the Cauchy Integral Formula:</para>
+    <equation id="uid1">
+      <m:math overflow="scroll" mode="display">
+        <m:mtable displaystyle="true">
+          <m:mtr>
+            <m:mtd columnalign="right">
+              <m:mrow>
+                <m:mo>|</m:mo>
+                <m:mi>f</m:mi>
+                <m:mo>(</m:mo>
+                <m:mi>c</m:mi>
+                <m:mo>)</m:mo>
+                <m:mo>|</m:mo>
+              </m:mrow>
+            </m:mtd>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:mfrac>
+                  <m:mn>1</m:mn>
+                  <m:mrow>
+                    <m:mn>2</m:mn>
+                    <m:mi>π</m:mi>
+                    <m:mi>i</m:mi>
+                  </m:mrow>
+                </m:mfrac>
+                <m:msub>
+                  <m:mo>∫</m:mo>
+                  <m:msub>
+                    <m:mi>C</m:mi>
+                    <m:mi>r</m:mi>
+                  </m:msub>
+                </m:msub>
+                <m:mfrac>
+                  <m:mrow>
+                    <m:mi>f</m:mi>
+                    <m:mo>(</m:mo>
+                    <m:mi>ζ</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mrow>
+                    <m:mi>ζ</m:mi>
+                    <m:mo>-</m:mo>
+                    <m:mi>c</m:mi>
+                  </m:mrow>
+                </m:mfrac>
+                <m:mrow>
+                  <m:mspace width="0.166667em"/>
+                  <m:mi>d</m:mi>
+                  <m:mi>ζ</m:mi>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mfrac>
+                  <m:mn>1</m:mn>
+                  <m:mrow>
+                    <m:mn>2</m:mn>
+                    <m:mi>π</m:mi>
+                  </m:mrow>
+                </m:mfrac>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                  <m:msubsup>
+                    <m:mo>∫</m:mo>
+                    <m:mn>0</m:mn>
+                    <m:mrow>
+                      <m:mn>2</m:mn>
+                      <m:mi>π</m:mi>
+                    </m:mrow>
+                  </m:msubsup>
+                  <m:mfrac>
+                    <m:mrow>
+                      <m:mi>f</m:mi>
+                      <m:mo>(</m:mo>
+                      <m:mi>c</m:mi>
+                      <m:mo>+</m:mo>
+                      <m:mi>r</m:mi>
+                      <m:msup>
+                        <m:mi>e</m:mi>
+                        <m:mrow>
+                          <m:mi>i</m:mi>
+                          <m:mi>t</m:mi>
+                        </m:mrow>
+                      </m:msup>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                    <m:mrow>
+                      <m:mi>r</m:mi>
+                      <m:msup>
+                        <m:mi>e</m:mi>
+                        <m:mrow>
+                          <m:mi>i</m:mi>
+                          <m:mi>t</m:mi>
+                        </m:mrow>
+                      </m:msup>
+                    </m:mrow>
+                  </m:mfrac>
+                  <m:mi>i</m:mi>
+                  <m:mi>r</m:mi>
+                  <m:msup>
+                    <m:mi>e</m:mi>
+                    <m:mrow>
+                      <m:mi>i</m:mi>
+                      <m:mi>t</m:mi>
+                    </m:mrow>
+                  </m:msup>
+                  <m:mspace width="0.166667em"/>
+                  <m:mi>d</m:mi>
+                  <m:mi>t</m:mi>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>≤</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mfrac>
+                  <m:mn>1</m:mn>
+                  <m:mrow>
+                    <m:mn>2</m:mn>
+                    <m:mi>π</m:mi>
+                  </m:mrow>
+                </m:mfrac>
+                <m:msubsup>
+                  <m:mo>∫</m:mo>
+                  <m:mn>0</m:mn>
+                  <m:mrow>
+                    <m:mn>2</m:mn>
+                    <m:mi>π</m:mi>
+                  </m:mrow>
+                </m:msubsup>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                  <m:mi>f</m:mi>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>c</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mi>r</m:mi>
+                    <m:msup>
+                      <m:mi>e</m:mi>
+                      <m:mrow>
+                        <m:mi>i</m:mi>
+                        <m:mi>t</m:mi>
+                      </m:mrow>
+                    </m:msup>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:mspace width="0.166667em"/>
+                <m:mi>d</m:mi>
+                <m:mi>t</m:mi>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>≤</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mfrac>
+                  <m:mn>1</m:mn>
+                  <m:mrow>
+                    <m:mn>2</m:mn>
+                    <m:mi>π</m:mi>
+                  </m:mrow>
+                </m:mfrac>
+                <m:msubsup>
+                  <m:mo>∫</m:mo>
+                  <m:mn>0</m:mn>
+                  <m:mrow>
+                    <m:mn>2</m:mn>
+                    <m:mi>π</m:mi>
+                  </m:mrow>
+                </m:msubsup>
+                <m:mi>M</m:mi>
+                <m:mspace width="0.166667em"/>
+                <m:mi>d</m:mi>
+                <m:mi>t</m:mi>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mi>M</m:mi>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>&lt;</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mo>|</m:mo>
+                <m:mi>f</m:mi>
+                <m:mo>(</m:mo>
+                <m:mi>c</m:mi>
+                <m:mo>)</m:mo>
+                <m:mo>|</m:mo>
+                <m:mo>,</m:mo>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+        </m:mtable>
+      </m:math>
+    </equation>
+    <para id="id341616">and this is a contradiction.</para>
+    <para id="id341621">Now for each natural number <m:math overflow="scroll"><m:mi>n</m:mi></m:math> for which <m:math overflow="scroll"><m:mrow><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>n</m:mi><m:mo>&lt;</m:mo><m:mi>ϵ</m:mi><m:mo>,</m:mo></m:mrow></m:math> let <m:math overflow="scroll"><m:msub><m:mi>z</m:mi><m:mi>n</m:mi></m:msub></m:math> be a point
+for which <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msub><m:mi>z</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mo>-</m:mo><m:mi>c</m:mi><m:mo>|</m:mo><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>n</m:mi></m:mrow></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo><m:mi>f</m:mi></m:mrow><m:mrow><m:mo>(</m:mo><m:msub><m:mi>z</m:mi><m:mi>n</m:mi></m:msub><m:mo>)</m:mo></m:mrow><m:mrow><m:mo>|</m:mo><m:mo>=</m:mo><m:mo>|</m:mo><m:mi>f</m:mi></m:mrow><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mrow><m:mo>|</m:mo><m:mo>.</m:mo></m:mrow></m:mrow></m:math>
+We claim that the derivative <m:math overflow="scroll"><m:mrow><m:msup><m:mi>f</m:mi><m:mo>'</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:msub><m:mi>z</m:mi><m:mi>n</m:mi></m:msub><m:mo>)</m:mo></m:mrow></m:mrow></m:math> of <m:math overflow="scroll"><m:mi>f</m:mi></m:math> at <m:math overflow="scroll"><m:mrow><m:msub><m:mi>z</m:mi><m:mi>n</m:mi></m:msub><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+What we know is that the real-valued function
+<m:math overflow="scroll"><m:mrow><m:mi>F</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>,</m:mo><m:mi>y</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mrow><m:mo>|</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>+</m:mo><m:mi>i</m:mi><m:mi>y</m:mi><m:mo>)</m:mo></m:mrow><m:mo>|</m:mo></m:mrow><m:mn>2</m:mn></m:msup><m:msup><m:mrow><m:mo>=</m:mo><m:mo>(</m:mo><m:mi>u</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>,</m:mo><m:mi>y</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mrow><m:mo>(</m:mo><m:mi>v</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>,</m:mo><m:mi>y</m:mi><m:mo>)</m:mo></m:mrow><m:mo>)</m:mo></m:mrow><m:mn>2</m:mn></m:msup></m:mrow></m:math> attains a local maximum value at <m:math overflow="scroll"><m:mrow><m:msub><m:mi>z</m:mi><m:mi>n</m:mi></m:msub><m:mo>=</m:mo><m:mrow><m:mo>(</m:mo><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mo>,</m:mo><m:msub><m:mi>y</m:mi><m:mi>n</m:mi></m:msub><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math>
+Hence, by <link target-id="fs-id1166180514038" document="m36206"/>, both partial derivatives of <m:math overflow="scroll"><m:mi>F</m:mi></m:math> must be 0 at <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mo>,</m:mo><m:msub><m:mi>y</m:mi><m:mi>n</m:mi></m:msub><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math> That is</para>
+    <equation id="id341991">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mn>2</m:mn>
+          <m:mi>u</m:mi>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:msub>
+              <m:mi>x</m:mi>
+              <m:mi>n</m:mi>
+            </m:msub>
+            <m:mo>,</m:mo>
+            <m:msub>
+              <m:mi>y</m:mi>
+              <m:mi>n</m:mi>
+            </m:msub>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mfrac>
+            <m:mrow>
+              <m:mi>t</m:mi>
+              <m:mi>i</m:mi>
+              <m:mi>a</m:mi>
+              <m:mi>l</m:mi>
+              <m:mi>u</m:mi>
+            </m:mrow>
+            <m:mrow>
+              <m:mi>t</m:mi>
+              <m:mi>i</m:mi>
+              <m:mi>a</m:mi>
+              <m:mi>l</m:mi>
+              <m:mi>x</m:mi>
+            </m:mrow>
+          </m:mfrac>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:msub>
+              <m:mi>x</m:mi>
+              <m:mi>n</m:mi>
+            </m:msub>
+            <m:mo>,</m:mo>
+            <m:msub>
+              <m:mi>y</m:mi>
+              <m:mi>n</m:mi>
+            </m:msub>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>+</m:mo>
+          <m:mn>2</m:mn>
+          <m:mi>v</m:mi>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:msub>
+              <m:mi>x</m:mi>
+              <m:mi>n</m:mi>
+            </m:msub>
+            <m:mo>,</m:mo>
+            <m:msub>
+              <m:mi>y</m:mi>
+              <m:mi>n</m:mi>
+            </m:msub>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mfrac>
+            <m:mrow>
+              <m:mi>t</m:mi>
+              <m:mi>i</m:mi>
+              <m:mi>a</m:mi>
+              <m:mi>l</m:mi>
+              <m:mi>v</m:mi>
+            </m:mrow>
+            <m:mrow>
+              <m:mi>t</m:mi>
+              <m:mi>i</m:mi>
+              <m:mi>a</m:mi>
+              <m:mi>l</m:mi>
+              <m:mi>x</m:mi>
+            </m:mrow>
+          </m:mfrac>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:msub>
+              <m:mi>x</m:mi>
+              <m:mi>n</m:mi>
+            </m:msub>
+            <m:mo>,</m:mo>
+            <m:msub>
+              <m:mi>y</m:mi>
+              <m:mi>n</m:mi>
+            </m:msub>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>=</m:mo>
+          <m:mn>0</m:mn>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id342155">and</para>
+    <equation id="id342161">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mn>2</m:mn>
+          <m:mi>u</m:mi>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:msub>
+              <m:mi>x</m:mi>
+              <m:mi>n</m:mi>
+            </m:msub>
+            <m:mo>,</m:mo>
+            <m:msub>
+              <m:mi>y</m:mi>
+              <m:mi>n</m:mi>
+            </m:msub>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mfrac>
+            <m:mrow>
+              <m:mi>t</m:mi>
+              <m:mi>i</m:mi>
+              <m:mi>a</m:mi>
+              <m:mi>l</m:mi>
+              <m:mi>u</m:mi>
+            </m:mrow>
+            <m:mrow>
+              <m:mi>t</m:mi>
+              <m:mi>i</m:mi>
+              <m:mi>a</m:mi>
+              <m:mi>l</m:mi>
+              <m:mi>y</m:mi>
+            </m:mrow>
+          </m:mfrac>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:msub>
+              <m:mi>x</m:mi>
+              <m:mi>n</m:mi>
+            </m:msub>
+            <m:mo>,</m:mo>
+            <m:msub>
+              <m:mi>y</m:mi>
+              <m:mi>n</m:mi>
+            </m:msub>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>+</m:mo>
+          <m:mn>2</m:mn>
+          <m:mi>v</m:mi>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:msub>
+              <m:mi>x</m:mi>
+              <m:mi>n</m:mi>
+            </m:msub>
+            <m:mo>,</m:mo>
+            <m:msub>
+              <m:mi>y</m:mi>
+              <m:mi>n</m:mi>
+            </m:msub>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mfrac>
+            <m:mrow>
+              <m:mi>t</m:mi>
+              <m:mi>i</m:mi>
+              <m:mi>a</m:mi>
+              <m:mi>l</m:mi>
+              <m:mi>v</m:mi>
+            </m:mrow>
+            <m:mrow>
+              <m:mi>t</m:mi>
+              <m:mi>i</m:mi>
+              <m:mi>a</m:mi>
+              <m:mi>l</m:mi>
+              <m:mi>y</m:mi>
+            </m:mrow>
+          </m:mfrac>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:msub>
+              <m:mi>x</m:mi>
+              <m:mi>n</m:mi>
+            </m:msub>
+            <m:mo>,</m:mo>
+            <m:msub>
+              <m:mi>y</m:mi>
+              <m:mi>n</m:mi>
+            </m:msub>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>=</m:mo>
+          <m:mn>0</m:mn>
+          <m:mo>.</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id342327">Hence the two vectors</para>
+    <equation id="id342332">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:msub>
+            <m:mover accent="true">
+              <m:mi>V</m:mi>
+              <m:mo>→</m:mo>
+            </m:mover>
+            <m:mn>1</m:mn>
+          </m:msub>
+          <m:mo>=</m:mo>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mfrac>
+              <m:mrow>
+                <m:mi>t</m:mi>
+                <m:mi>i</m:mi>
+                <m:mi>a</m:mi>
+                <m:mi>l</m:mi>
+                <m:mi>u</m:mi>
+              </m:mrow>
+              <m:mrow>
+                <m:mi>t</m:mi>
+                <m:mi>i</m:mi>
+                <m:mi>a</m:mi>
+                <m:mi>l</m:mi>
+                <m:mi>x</m:mi>
+              </m:mrow>
+            </m:mfrac>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:msub>
+                <m:mi>x</m:mi>
+                <m:mi>n</m:mi>
+              </m:msub>
+              <m:mo>,</m:mo>
+              <m:msub>
+                <m:mi>y</m:mi>
+                <m:mi>n</m:mi>
+              </m:msub>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>,</m:mo>
+            <m:mfrac>
+              <m:mrow>
+                <m:mi>t</m:mi>
+                <m:mi>i</m:mi>
+                <m:mi>a</m:mi>
+                <m:mi>l</m:mi>
+                <m:mi>v</m:mi>
+              </m:mrow>
+              <m:mrow>
+                <m:mi>t</m:mi>
+                <m:mi>i</m:mi>
+                <m:mi>a</m:mi>
+                <m:mi>l</m:mi>
+                <m:mi>x</m:mi>
+              </m:mrow>
+            </m:mfrac>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:msub>
+                <m:mi>x</m:mi>
+                <m:mi>n</m:mi>
+              </m:msub>
+              <m:mo>,</m:mo>
+              <m:msub>
+                <m:mi>y</m:mi>
+                <m:mi>n</m:mi>
+              </m:msub>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>)</m:mo>
+          </m:mrow>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id342461">and</para>
+    <equation id="id342466">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:msub>
+            <m:mover accent="true">
+              <m:mi>V</m:mi>
+              <m:mo>→</m:mo>
+            </m:mover>
+            <m:mn>2</m:mn>
+          </m:msub>
+          <m:mo>=</m:mo>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mfrac>
+              <m:mrow>
+                <m:mi>t</m:mi>
+                <m:mi>i</m:mi>
+                <m:mi>a</m:mi>
+                <m:mi>l</m:mi>
+                <m:mi>u</m:mi>
+              </m:mrow>
+              <m:mrow>
+                <m:mi>t</m:mi>
+                <m:mi>i</m:mi>
+                <m:mi>a</m:mi>
+                <m:mi>l</m:mi>
+                <m:mi>y</m:mi>
+              </m:mrow>
+            </m:mfrac>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:msub>
+                <m:mi>x</m:mi>
+                <m:mi>n</m:mi>
+              </m:msub>
+              <m:mo>,</m:mo>
+              <m:msub>
+                <m:mi>y</m:mi>
+                <m:mi>n</m:mi>
+              </m:msub>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>,</m:mo>
+            <m:mfrac>
+              <m:mrow>
+                <m:mi>t</m:mi>
+                <m:mi>i</m:mi>
+                <m:mi>a</m:mi>
+                <m:mi>l</m:mi>
+                <m:mi>v</m:mi>
+              </m:mrow>
+              <m:mrow>
+                <m:mi>t</m:mi>
+                <m:mi>i</m:mi>
+                <m:mi>a</m:mi>
+                <m:mi>l</m:mi>
+                <m:mi>y</m:mi>
+              </m:mrow>
+            </m:mfrac>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:msub>
+                <m:mi>x</m:mi>
+                <m:mi>n</m:mi>
+              </m:msub>
+              <m:mo>,</m:mo>
+              <m:msub>
+                <m:mi>y</m:mi>
+                <m:mi>n</m:mi>
+              </m:msub>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>)</m:mo>
+          </m:mrow>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id342594">are both perpendicular to the vector <m:math overflow="scroll"><m:mrow><m:msub><m:mover accent="true"><m:mi>V</m:mi><m:mo>→</m:mo></m:mover><m:mn>3</m:mn></m:msub><m:mo>=</m:mo><m:mrow><m:mo>(</m:mo><m:mi>u</m:mi><m:mrow><m:mo>(</m:mo><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mo>,</m:mo><m:msub><m:mi>y</m:mi><m:mi>n</m:mi></m:msub><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo><m:mi>v</m:mi><m:mrow><m:mo>(</m:mo><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mo>,</m:mo><m:msub><m:mi>y</m:mi><m:mi>n</m:mi></m:msub><m:mo>)</m:mo></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math>
+But <m:math overflow="scroll"><m:mrow><m:msub><m:mover accent="true"><m:mi>V</m:mi><m:mo>→</m:mo></m:mover><m:mn>3</m:mn></m:msub><m:mo>≠</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> because <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>∥</m:mo></m:mrow><m:msub><m:mover accent="true"><m:mi>V</m:mi><m:mo>→</m:mo></m:mover><m:mn>3</m:mn></m:msub><m:mrow><m:mo>∥</m:mo><m:mo>=</m:mo><m:mo>|</m:mo><m:mi>f</m:mi></m:mrow><m:mrow><m:mo>(</m:mo><m:msub><m:mi>z</m:mi><m:mi>n</m:mi></m:msub><m:mo>)</m:mo></m:mrow><m:mrow><m:mo>|</m:mo><m:mo>=</m:mo><m:mo>|</m:mo><m:mi>f</m:mi></m:mrow><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mrow><m:mo>|</m:mo><m:mo>&gt;</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:mrow></m:math>
+and hence <m:math overflow="scroll"><m:msub><m:mover accent="true"><m:mi>V</m:mi><m:mo>→</m:mo></m:mover><m:mn>1</m:mn></m:msub></m:math> and <m:math overflow="scroll"><m:msub><m:mover accent="true"><m:mi>V</m:mi><m:mo>→</m:mo></m:mover><m:mn>2</m:mn></m:msub></m:math> are linearly dependent.
+But this implies that <m:math overflow="scroll"><m:mrow><m:msup><m:mi>f</m:mi><m:mo>'</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:msub><m:mi>z</m:mi><m:mi>n</m:mi></m:msub><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> according to <link target-id="fs-id1170810917477" document="m36235"/>.</para>
+    <para id="id342853">Since <m:math overflow="scroll"><m:mrow><m:mi>c</m:mi><m:mo>=</m:mo><m:mo movablelimits="true" form="prefix">lim</m:mo><m:msub><m:mi>z</m:mi><m:mi>n</m:mi></m:msub><m:mo>,</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:msup><m:mi>f</m:mi><m:mo>'</m:mo></m:msup></m:math> is
+analytic on <m:math overflow="scroll"><m:mrow><m:msup><m:mi>S</m:mi><m:mn>0</m:mn></m:msup><m:mo>,</m:mo></m:mrow></m:math>
+it follows from the Identity Theorem that there exists an <m:math overflow="scroll"><m:mrow><m:mi>r</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn></m:mrow></m:math> such that <m:math overflow="scroll"><m:mrow><m:msup><m:mi>f</m:mi><m:mo>'</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>z</m:mi><m:mo>∈</m:mo><m:msub><m:mi>B</m:mi><m:mi>r</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math>
+But this implies that <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is a constant <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>z</m:mi><m:mo>∈</m:mo><m:msub><m:mi>B</m:mi><m:mi>r</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math>
+And thenm, again using the Identity Theorem, this implies that <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>z</m:mi><m:mo>∈</m:mo><m:mi>S</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+which completes the proof.</para>
+</proof></rule>
+<rule id="fs-id1172060657612"><label/><statement id="fs-id1172062997377">
+    <para id="id343094"><emphasis effect="bold">REMARK</emphasis>
+Of course, the preceding proof contains in it the verification that if <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>f</m:mi><m:mo>|</m:mo></m:mrow></m:math> attains a
+maximum at a point <m:math overflow="scroll"><m:mi>c</m:mi></m:math> where it is differentiable, then <m:math overflow="scroll"><m:mrow><m:msup><m:mi>f</m:mi><m:mo>'</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math>
+This is the analog for functions of a complex variable of <link target-id="fs-id1169864141590" document="m36203"/>.
+But, <link target-id="fs-id1172058848159"/> certainly asserts a lot more than that.
+In fact, it says that it is impossible for the absolute value of a nonconstant differentiable function of a complex
+variable to attain a local maximum. Here is the coup d'grâs:</para>
+</statement></rule>
+<rule id="fs-id1172068491562" type="corollary"><title>Maximum Modulus Principle</title><statement id="fs-id1172081289451">
+    <para id="id343160">
+Let <m:math overflow="scroll"><m:mi>f</m:mi></m:math> be a continuous, nonconstant, complex-valued function on a piecewise smooth geometric set <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+and suppose that <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is differentiable on the interior <m:math overflow="scroll"><m:msup><m:mi>S</m:mi><m:mn>0</m:mn></m:msup></m:math> of <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Let <m:math overflow="scroll"><m:mi>M</m:mi></m:math> be the maximum value of the continuous, real-valued function
+<m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>f</m:mi><m:mo>|</m:mo></m:mrow></m:math> on <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>,</m:mo></m:mrow></m:math> and let <m:math overflow="scroll"><m:mi>z</m:mi></m:math> be a point in <m:math overflow="scroll"><m:mi>S</m:mi></m:math> for which <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo><m:mo>|</m:mo><m:mo>=</m:mo><m:mi>M</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Then, <m:math overflow="scroll"><m:mi>z</m:mi></m:math> does not belong to the interior <m:math overflow="scroll"><m:msup><m:mi>S</m:mi><m:mn>0</m:mn></m:msup></m:math> of <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>;</m:mo></m:mrow></m:math>
+it belongs to the boundary of <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+In other words, <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>f</m:mi><m:mo>|</m:mo></m:mrow></m:math> attains its maximum value only on the boundary of <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+</statement></rule>
+<exercise id="fs-id1172054230531"><problem id="fs-id1172061973186">
+
+    <list id="id343387" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid2"> Prove the preceding corollary.
+</item>
+      <item id="uid3"> Let <m:math overflow="scroll"><m:mi>f</m:mi></m:math> be an analytic function on an open set <m:math overflow="scroll"><m:mrow><m:mi>U</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+and let <m:math overflow="scroll"><m:mrow><m:mi>c</m:mi><m:mo>∈</m:mo><m:mi>U</m:mi></m:mrow></m:math> be a point at which <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>f</m:mi><m:mo>|</m:mo></m:mrow></m:math> achieves a local minimum;
+i.e., there exists an <m:math overflow="scroll"><m:mrow><m:mi>ϵ</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn></m:mrow></m:math> such that <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo><m:mo>|</m:mo><m:mo>≤</m:mo><m:mo>|</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo><m:mo>|</m:mo></m:mrow></m:math>
+for all <m:math overflow="scroll"><m:mrow><m:mi>z</m:mi><m:mo>∈</m:mo><m:msub><m:mi>B</m:mi><m:mi>ϵ</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math>
+Show that, if <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo><m:mo>≠</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> then <m:math overflow="scroll"><m:mi>f</m:mi></m:math>
+is constant on <m:math overflow="scroll"><m:mrow><m:msub><m:mi>B</m:mi><m:mi>ϵ</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math>
+Show by example that, if <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> then <m:math overflow="scroll"><m:mi>f</m:mi></m:math> need not be a constant on <m:math overflow="scroll"><m:mrow><m:msub><m:mi>B</m:mi><m:mi>ϵ</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid4"> Prove the “Minimum Modulus Principle:”
+Let <m:math overflow="scroll"><m:mi>f</m:mi></m:math> be a nonzero, continuous, nonconstant, function on a piecewise
+smooth geometric set <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>,</m:mo></m:mrow></m:math> and let <m:math overflow="scroll"><m:mi>m</m:mi></m:math> be the minimum value of the function <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>f</m:mi><m:mo>|</m:mo></m:mrow></m:math> on <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+If <m:math overflow="scroll"><m:mi>z</m:mi></m:math> is a point of <m:math overflow="scroll"><m:mi>S</m:mi></m:math> at which this minimum value is atgtained, then
+<m:math overflow="scroll"><m:mi>z</m:mi></m:math> belongs to the boundary <m:math overflow="scroll"><m:msub><m:mi>C</m:mi><m:mi>S</m:mi></m:msub></m:math> of <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+    </list>
+</problem></exercise>
+  </content>
+</document>

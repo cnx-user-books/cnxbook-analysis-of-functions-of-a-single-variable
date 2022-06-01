@@ -1,0 +1,2171 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML">
+  <title>Uniform Convergence</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m36178</md:content-id>
+  <md:title>Uniform Convergence</md:title>
+  <md:abstract>We introduce now two different notions of the limit of a sequence of functions. Some definitions cover uniform convergence and pointwise convergence. The Weierstrass M-Test is stated and proven, as well the theorem of Abel.</md:abstract>
+  <md:uuid>e2a746d9-444e-4b4e-8e1c-3d4a845d5489</md:uuid>
+</metadata>
+
+<content>
+    <para id="id62159">We introduce now two different notions of the limit of a sequence of functions.
+Let <m:math overflow="scroll"><m:mi>S</m:mi></m:math> be a set of complex numbers, and let
+<m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>f</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> be a sequence of complex-valued functions each having domain <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+<definition id="fs-id1167582102172"><term/><meaning id="fs-id1167594177885">
+    <para id="id62201">
+We say that the sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>f</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math><emphasis effect="italics">converges</emphasis> or
+<emphasis effect="italics">converges pointwise</emphasis> to a function <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>:</m:mo><m:mi>S</m:mi><m:mo>→</m:mo><m:mi>C</m:mi></m:mrow></m:math> if
+for every <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mi>S</m:mi></m:mrow></m:math> and every <m:math overflow="scroll"><m:mrow><m:mi>ϵ</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn></m:mrow></m:math> there exists a natural number <m:math overflow="scroll"><m:mrow><m:mi>N</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+depending on <m:math overflow="scroll"><m:mi>x</m:mi></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>ϵ</m:mi><m:mo>,</m:mo></m:mrow></m:math> such that for every
+<m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>≥</m:mo><m:mi>N</m:mi><m:mo>,</m:mo></m:mrow></m:math><m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msub><m:mi>f</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>-</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mi>ϵ</m:mi><m:mo>.</m:mo></m:mrow></m:mrow></m:math>
+That is, equivalently, <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>f</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> converges pointwise to <m:math overflow="scroll"><m:mi>f</m:mi></m:math> if for every
+<m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mi>S</m:mi></m:mrow></m:math> the sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>f</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>}</m:mo></m:mrow></m:math> of numbers converges to the number <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math></para>
+    <para id="id62980">We say that the sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>f</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math><emphasis effect="italics">converges uniformly</emphasis>
+to a function <m:math overflow="scroll"><m:mi>f</m:mi></m:math> if for every <m:math overflow="scroll"><m:mrow><m:mi>ϵ</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> there exists
+an <m:math overflow="scroll"><m:mrow><m:mi>N</m:mi><m:mo>,</m:mo></m:mrow></m:math> depending only on <m:math overflow="scroll"><m:mrow><m:mi>ϵ</m:mi><m:mo>,</m:mo></m:mrow></m:math> such that
+for every <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>≥</m:mo><m:mi>N</m:mi></m:mrow></m:math> and every <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mi>S</m:mi><m:mo>,</m:mo></m:mrow></m:math><m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msub><m:mi>f</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>-</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mi>ϵ</m:mi><m:mo>.</m:mo></m:mrow></m:mrow></m:math></para>
+    <para id="id63126">If <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>u</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> is a sequence of functions defined on <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+we say that the infinite series <m:math overflow="scroll"><m:mrow><m:mo>∑</m:mo><m:msub><m:mi>u</m:mi><m:mi>n</m:mi></m:msub></m:mrow></m:math><emphasis effect="italics">converges uniformly</emphasis> if the sequence
+<m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>S</m:mi><m:mi>N</m:mi></m:msub><m:mo>=</m:mo><m:msubsup><m:mo>∑</m:mo><m:mrow><m:mi>n</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow><m:mi>N</m:mi></m:msubsup><m:msub><m:mi>u</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> of partial sums converges uniformly.</para>
+</meaning></definition>
+    <para id="id63224">These two definitions of convergence of a sequence of functions
+differ in subtle ways. Study the word order in the
+definitions.</para>
+<exercise id="fs-id1167590429104"><problem id="fs-id1167594646621">
+    <list id="id63239" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid1"> Prove that if a sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>f</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> of functions
+converges uniformly on a set <m:math overflow="scroll"><m:mi>S</m:mi></m:math> to a function <m:math overflow="scroll"><m:mi>f</m:mi></m:math> then it converges
+pointwise to <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid2"> Let <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>=</m:mo><m:mo>(</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>1</m:mn><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math> and for each <m:math overflow="scroll"><m:mi>n</m:mi></m:math> define
+<m:math overflow="scroll"><m:mrow><m:msub><m:mi>f</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mi>n</m:mi></m:msup><m:mo>.</m:mo></m:mrow></m:math> Prove that <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>f</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> converges pointwise to the
+zero function, but that <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>f</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> does not converge uniformly to the zero function.
+Conclude that pointwise convergence does <emphasis effect="bold">not</emphasis> imply uniform convergence.
+HINT: Suppose the sequence does converge uniformly.
+Take <m:math overflow="scroll"><m:mrow><m:mi>ϵ</m:mi><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mn>2</m:mn><m:mo>,</m:mo></m:mrow></m:math> let <m:math overflow="scroll"><m:mi>N</m:mi></m:math> be a corresponding integer,
+and consider <m:math overflow="scroll"><m:mi>x</m:mi></m:math>'s of the form <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>-</m:mo><m:mi>h</m:mi></m:mrow></m:math> for tiny <m:math overflow="scroll"><m:mi>h</m:mi></m:math>'s.
+</item>
+      <item id="uid3"> Suppose the sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>f</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> converges uniformly to <m:math overflow="scroll"><m:mi>f</m:mi></m:math> on <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>,</m:mo></m:mrow></m:math> and
+the sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>g</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> converges uniformly to <m:math overflow="scroll"><m:mi>g</m:mi></m:math> on <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Prove that the sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>f</m:mi><m:mi>n</m:mi></m:msub><m:mo>+</m:mo><m:msub><m:mi>g</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> converges uniformly to <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>+</m:mo><m:mi>g</m:mi></m:mrow></m:math> on <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid4"> Suppose <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>f</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> converges uniformly to <m:math overflow="scroll"><m:mi>f</m:mi></m:math> on <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>,</m:mo></m:mrow></m:math> and let
+<m:math overflow="scroll"><m:mi>c</m:mi></m:math> be a constant. Show that <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:mi>c</m:mi><m:msub><m:mi>f</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> converges uniformly to <m:math overflow="scroll"><m:mrow><m:mi>c</m:mi><m:mi>f</m:mi></m:mrow></m:math> on <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid5"> Let <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>=</m:mo><m:mi>R</m:mi><m:mo>,</m:mo></m:mrow></m:math> and set <m:math overflow="scroll"><m:mrow><m:msub><m:mi>f</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>x</m:mi><m:mo>+</m:mo><m:mrow><m:mo>(</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>n</m:mi><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math>
+Does <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>f</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> converge uniformly on <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>?</m:mo></m:mrow></m:math>
+Does <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msubsup><m:mi>f</m:mi><m:mi>n</m:mi><m:mn>2</m:mn></m:msubsup><m:mo>}</m:mo></m:mrow></m:math> converge uniformly on <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>?</m:mo></m:mrow></m:math>
+What does this say about the limit of a product of uniformly convergent sequences versus the product of the limits?
+</item>
+      <item id="uid6"> Suppose <m:math overflow="scroll"><m:mi>a</m:mi></m:math> and <m:math overflow="scroll"><m:mi>b</m:mi></m:math> are nonnegative real numbers and that <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo><m:mi>a</m:mi><m:mo>-</m:mo><m:mi>b</m:mi><m:mo>|</m:mo><m:mo>&lt;</m:mo></m:mrow><m:msup><m:mi>ϵ</m:mi><m:mn>2</m:mn></m:msup><m:mo>.</m:mo></m:mrow></m:math>
+Prove that <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msqrt><m:mi>a</m:mi></m:msqrt><m:mo>-</m:mo><m:msqrt><m:mi>b</m:mi></m:msqrt><m:mrow><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mn>2</m:mn><m:mi>ϵ</m:mi><m:mo>.</m:mo></m:mrow></m:mrow></m:math>
+HINT: Break this into cases, the first one being when both <m:math overflow="scroll"><m:msqrt><m:mi>a</m:mi></m:msqrt></m:math> and <m:math overflow="scroll"><m:msqrt><m:mi>b</m:mi></m:msqrt></m:math> are less than <m:math overflow="scroll"><m:mrow><m:mi>ϵ</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid7"> Suppose <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>f</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> is a sequence of nonnegative real-valued functions that converges uniformly
+to <m:math overflow="scroll"><m:mi>f</m:mi></m:math> on <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Use part (f) to prove that the sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msqrt><m:msub><m:mi>f</m:mi><m:mi>n</m:mi></m:msub></m:msqrt><m:mo>}</m:mo></m:mrow></m:math> converges uniformly to <m:math overflow="scroll"><m:mrow><m:msqrt><m:mi>f</m:mi></m:msqrt><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid8"> For each positive integer <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>,</m:mo></m:mrow></m:math> define <m:math overflow="scroll"><m:msub><m:mi>f</m:mi><m:mi>n</m:mi></m:msub></m:math> on <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mo>-</m:mo><m:mn>1</m:mn><m:mo>,</m:mo><m:mn>1</m:mn><m:mo>)</m:mo></m:mrow></m:math> by
+<m:math overflow="scroll"><m:mrow><m:msub><m:mi>f</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mrow><m:mo>|</m:mo><m:mi>x</m:mi><m:mo>|</m:mo></m:mrow><m:mrow><m:mn>1</m:mn><m:mo>+</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>n</m:mi></m:mrow></m:msup><m:mo>.</m:mo></m:mrow></m:math> Prove that the sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>f</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> converges
+uniformly on <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mo>-</m:mo><m:mn>1</m:mn><m:mo>,</m:mo><m:mn>1</m:mn><m:mo>)</m:mo></m:mrow></m:math> to the function <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mo>|</m:mo><m:mi>x</m:mi><m:mo>|</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+HINT: Let <m:math overflow="scroll"><m:mrow><m:mi>ϵ</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn></m:mrow></m:math> be given. Consider <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>x</m:mi><m:mo>|</m:mo></m:mrow></m:math>'s that are <m:math overflow="scroll"><m:mrow><m:mo>&lt;</m:mo><m:mi>ϵ</m:mi></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>x</m:mi><m:mo>|</m:mo></m:mrow></m:math>'s that are <m:math overflow="scroll"><m:mrow><m:mo>≥</m:mo><m:mi>ϵ</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+For <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>x</m:mi><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mi>ϵ</m:mi><m:mo>,</m:mo></m:mrow></m:math> show that <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msub><m:mi>f</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>-</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mi>ϵ</m:mi></m:mrow></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+For <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>x</m:mi><m:mo>|</m:mo><m:mo>≥</m:mo><m:mi>ϵ</m:mi><m:mo>,</m:mo></m:mrow></m:math> choose <m:math overflow="scroll"><m:mi>N</m:mi></m:math> so that
+<m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msup><m:mi>ϵ</m:mi><m:mrow><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>n</m:mi></m:mrow></m:msup><m:mrow><m:mo>-</m:mo><m:mn>1</m:mn><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mi>ϵ</m:mi><m:mo>.</m:mo></m:mrow></m:mrow></m:math> How?
+</item>
+    </list>
+</problem></exercise>
+<exercise id="fs-id1167590259636"><problem id="fs-id1167601829757">
+    <para id="id64473"> Let <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>f</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> be a sequence of functions
+on a set <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>,</m:mo></m:mrow></m:math> let <m:math overflow="scroll"><m:mi>f</m:mi></m:math> be a function on <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+and suppose that for each <m:math overflow="scroll"><m:mi>n</m:mi></m:math> we have
+<m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>-</m:mo></m:mrow><m:msub><m:mi>f</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>n</m:mi></m:mrow></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Prove that the sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>f</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> converges uniformly to <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+</problem></exercise>
+    <para id="id64643">We give next four important theorems concerning uniform convergence.
+The first of these theorems is frequently used to prove that a given
+function is continuous. The theorem asserts that if <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is the uniform limit of a sequence of continuous
+functions, then <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is itself continuous.</para>
+<rule id="fs-id8597860" type="theorem"><title>The uniform limit of continuous functions is continuous.</title><statement id="fs-id2191491">
+    <para id="id64668">
+
+Suppose <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>f</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> is a sequence of continuous functions
+on a set <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>⊆</m:mo><m:mi>C</m:mi><m:mo>,</m:mo></m:mrow></m:math> and assume that
+the sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>f</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> converges uniformly to a function <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Then <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is continuous on <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+</statement>
+<proof id="fs-id1167579210925">
+    <para id="id64773">
+This proof is an example of what is called by mathematicians a
+“<m:math overflow="scroll"><m:mrow><m:mn>3</m:mn><m:mi>ϵ</m:mi></m:mrow></m:math> argument.”</para>
+    <para id="id64794">Fix an <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mi>S</m:mi></m:mrow></m:math> and an <m:math overflow="scroll"><m:mrow><m:mi>ϵ</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math>
+We wish to find a <m:math overflow="scroll"><m:mrow><m:mi>δ</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn></m:mrow></m:math> such that if <m:math overflow="scroll"><m:mrow><m:mi>y</m:mi><m:mo>∈</m:mo><m:mi>S</m:mi></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>y</m:mi><m:mo>-</m:mo><m:mi>x</m:mi><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mi>δ</m:mi></m:mrow></m:math>
+then <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>y</m:mi><m:mo>)</m:mo><m:mo>-</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mi>ϵ</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+    <para id="id64918">We use first the hypothesis that the sequence converges uniformly.
+Thus, given this <m:math overflow="scroll"><m:mrow><m:mi>ϵ</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math>
+there exists a natural number <m:math overflow="scroll"><m:mi>N</m:mi></m:math> such that if <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>≥</m:mo><m:mi>N</m:mi></m:mrow></m:math> then
+<m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>-</m:mo></m:mrow><m:msub><m:mi>f</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mi>ϵ</m:mi><m:mo>/</m:mo><m:mn>3</m:mn></m:mrow></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>z</m:mi><m:mo>∈</m:mo><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Now, because <m:math overflow="scroll"><m:msub><m:mi>f</m:mi><m:mi>N</m:mi></m:msub></m:math> is continuous at <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>,</m:mo></m:mrow></m:math> there exists a <m:math overflow="scroll"><m:mrow><m:mi>δ</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn></m:mrow></m:math>
+such that if <m:math overflow="scroll"><m:mrow><m:mi>y</m:mi><m:mo>∈</m:mo><m:mi>S</m:mi></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>y</m:mi><m:mo>-</m:mo><m:mi>x</m:mi><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mi>δ</m:mi></m:mrow></m:math> then
+<m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msub><m:mi>f</m:mi><m:mi>N</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>y</m:mi><m:mo>)</m:mo></m:mrow><m:mo>-</m:mo><m:msub><m:mi>f</m:mi><m:mi>N</m:mi></m:msub><m:mrow><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mi>ϵ</m:mi><m:mo>/</m:mo><m:mn>3</m:mn><m:mo>.</m:mo></m:mrow></m:mrow></m:math> So,
+if <m:math overflow="scroll"><m:mrow><m:mi>y</m:mi><m:mo>∈</m:mo><m:mi>S</m:mi></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>y</m:mi><m:mo>-</m:mo><m:mi>x</m:mi><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mi>δ</m:mi><m:mo>,</m:mo></m:mrow></m:math> then</para>
+    <equation id="uid9">
+      <m:math overflow="scroll" mode="display">
+        <m:mtable displaystyle="true">
+          <m:mtr>
+            <m:mtd columnalign="right">
+              <m:mrow>
+                <m:mo>|</m:mo>
+                <m:mi>f</m:mi>
+                <m:mo>(</m:mo>
+                <m:mi>y</m:mi>
+                <m:mo>)</m:mo>
+                <m:mo>-</m:mo>
+                <m:mi>f</m:mi>
+                <m:mo>(</m:mo>
+                <m:mi>x</m:mi>
+                <m:mo>)</m:mo>
+                <m:mo>|</m:mo>
+              </m:mrow>
+            </m:mtd>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                  <m:mi>f</m:mi>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>y</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>-</m:mo>
+                </m:mrow>
+                <m:msub>
+                  <m:mi>f</m:mi>
+                  <m:mi>N</m:mi>
+                </m:msub>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>y</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mo>+</m:mo>
+                <m:msub>
+                  <m:mi>f</m:mi>
+                  <m:mi>N</m:mi>
+                </m:msub>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>y</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mo>-</m:mo>
+                <m:msub>
+                  <m:mi>f</m:mi>
+                  <m:mi>N</m:mi>
+                </m:msub>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>x</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mo>+</m:mo>
+                <m:msub>
+                  <m:mi>f</m:mi>
+                  <m:mi>N</m:mi>
+                </m:msub>
+                <m:mrow>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>x</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>-</m:mo>
+                  <m:mi>f</m:mi>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>x</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>≤</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                  <m:mi>f</m:mi>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>y</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>-</m:mo>
+                </m:mrow>
+                <m:msub>
+                  <m:mi>f</m:mi>
+                  <m:mi>N</m:mi>
+                </m:msub>
+                <m:mrow>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>y</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>|</m:mo>
+                  <m:mo>+</m:mo>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:msub>
+                  <m:mi>f</m:mi>
+                  <m:mi>N</m:mi>
+                </m:msub>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>y</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mo>-</m:mo>
+                <m:msub>
+                  <m:mi>f</m:mi>
+                  <m:mi>N</m:mi>
+                </m:msub>
+                <m:mrow>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>x</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>|</m:mo>
+                  <m:mo>+</m:mo>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:msub>
+                  <m:mi>f</m:mi>
+                  <m:mi>N</m:mi>
+                </m:msub>
+                <m:mrow>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>x</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>-</m:mo>
+                  <m:mi>f</m:mi>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>x</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>&lt;</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mfrac>
+                  <m:mi>ϵ</m:mi>
+                  <m:mn>3</m:mn>
+                </m:mfrac>
+                <m:mo>+</m:mo>
+                <m:mfrac>
+                  <m:mi>ϵ</m:mi>
+                  <m:mn>3</m:mn>
+                </m:mfrac>
+                <m:mo>+</m:mo>
+                <m:mfrac>
+                  <m:mi>ϵ</m:mi>
+                  <m:mn>3</m:mn>
+                </m:mfrac>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mi>ϵ</m:mi>
+                <m:mo>.</m:mo>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+        </m:mtable>
+      </m:math>
+    </equation>
+    <para id="id65518">This completes the proof.</para>
+</proof></rule>
+<rule id="fs-id1167590459776"><label/><statement id="fs-id1167585426726">
+    <para id="id65524"><emphasis effect="bold">REMARK</emphasis>
+Many properties of functions are preserved under the taking of uniform limits,
+e.g., continuity, as we have just seen.
+However, not all properties are preserved under this limit process.
+Differentiability is not, integrability is sometimes, being a power series function is, and so on.
+We must be alert to be aware of when it works and when it does not.</para>
+</statement></rule>
+<rule id="fs-id2892663" type="theorem"><title>Weierstrass M-Test</title><statement id="fs-id1167588936813">
+    <para id="id65535">
+Let <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>u</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> be a sequence of complex-valued functions
+defined on a set <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>⊆</m:mo><m:mi>C</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Write <m:math overflow="scroll"><m:msub><m:mi>S</m:mi><m:mi>N</m:mi></m:msub></m:math> for the partial sum <m:math overflow="scroll"><m:mrow><m:msub><m:mi>S</m:mi><m:mi>N</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msubsup><m:mo>∑</m:mo><m:mrow><m:mi>n</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow><m:mi>N</m:mi></m:msubsup><m:msub><m:mi>u</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math>
+Suppose that, for each <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>,</m:mo></m:mrow></m:math> there exists an <m:math overflow="scroll"><m:mrow><m:msub><m:mi>M</m:mi><m:mi>n</m:mi></m:msub><m:mo>&gt;</m:mo><m:mn>0</m:mn></m:mrow></m:math>
+for which <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msub><m:mi>u</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>|</m:mo><m:mo>≤</m:mo></m:mrow><m:msub><m:mi>M</m:mi><m:mi>n</m:mi></m:msub></m:mrow></m:math>
+for all <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math> Then</para>
+    <list id="id65748" display="block" list-type="enumerated">
+      <item id="uid10">If <m:math overflow="scroll"><m:mrow><m:mo>∑</m:mo><m:msub><m:mi>M</m:mi><m:mi>n</m:mi></m:msub></m:mrow></m:math> converges, then the sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>S</m:mi><m:mi>N</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math>
+converges uniformly to a function <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+That is, the infinite series <m:math overflow="scroll"><m:mrow><m:mo>∑</m:mo><m:msub><m:mi>u</m:mi><m:mi>n</m:mi></m:msub></m:mrow></m:math> converges uniformly.
+</item>
+      <item id="uid11">If each function <m:math overflow="scroll"><m:msub><m:mi>u</m:mi><m:mi>n</m:mi></m:msub></m:math> is continuous, and
+<m:math overflow="scroll"><m:mrow><m:mo>∑</m:mo><m:msub><m:mi>M</m:mi><m:mi>n</m:mi></m:msub></m:mrow></m:math> converges, then the function <m:math overflow="scroll"><m:mi>S</m:mi></m:math> of part (1) is continuous.
+</item>
+    </list>
+</statement>
+<proof id="fs-id1167589253199">
+    <para id="id65886">
+Because <m:math overflow="scroll"><m:mrow><m:mo>∑</m:mo><m:msub><m:mi>M</m:mi><m:mi>n</m:mi></m:msub></m:mrow></m:math> is convergent, it follows from the Comparison Test that
+for each <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mi>S</m:mi></m:mrow></m:math> the infinite series <m:math overflow="scroll"><m:mrow><m:msubsup><m:mo>∑</m:mo><m:mrow><m:mi>n</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow><m:mi>∞</m:mi></m:msubsup><m:msub><m:mi>u</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> is absolutely convergent,
+hence convergent. Define a
+function <m:math overflow="scroll"><m:mi>S</m:mi></m:math> by <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msubsup><m:mo>∑</m:mo><m:mrow><m:mi>n</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow><m:mi>∞</m:mi></m:msubsup><m:msub><m:mi>u</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mo movablelimits="true" form="prefix">lim</m:mo><m:msub><m:mi>S</m:mi><m:mi>N</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></para>
+    <para id="id66049">To show that <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>S</m:mi><m:mi>N</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> converges uniformly to <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+let <m:math overflow="scroll"><m:mrow><m:mi>ϵ</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn></m:mrow></m:math> be given, and choose a natural number <m:math overflow="scroll"><m:mi>N</m:mi></m:math>
+such that <m:math overflow="scroll"><m:mrow><m:msubsup><m:mo>∑</m:mo><m:mrow><m:mi>n</m:mi><m:mo>=</m:mo><m:mi>N</m:mi><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow><m:mi>∞</m:mi></m:msubsup><m:msub><m:mi>M</m:mi><m:mi>n</m:mi></m:msub><m:mo>&lt;</m:mo><m:mi>ϵ</m:mi><m:mo>.</m:mo></m:mrow></m:math> This can be done because <m:math overflow="scroll"><m:mrow><m:mo>∑</m:mo><m:msub><m:mi>M</m:mi><m:mi>n</m:mi></m:msub></m:mrow></m:math> converges.
+Now, for any <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mi>S</m:mi></m:mrow></m:math> and any <m:math overflow="scroll"><m:mrow><m:mi>m</m:mi><m:mo>≥</m:mo><m:mi>N</m:mi><m:mo>,</m:mo></m:mrow></m:math> we have</para>
+    <equation id="uid12">
+      <m:math overflow="scroll" mode="display">
+        <m:mtable displaystyle="true">
+          <m:mtr>
+            <m:mtd columnalign="right">
+              <m:mrow>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                  <m:mi>S</m:mi>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>x</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>-</m:mo>
+                </m:mrow>
+                <m:msub>
+                  <m:mi>S</m:mi>
+                  <m:mi>m</m:mi>
+                </m:msub>
+                <m:mrow>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>x</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:munder>
+                  <m:mo movablelimits="true" form="prefix">lim</m:mo>
+                  <m:mrow>
+                    <m:mi>k</m:mi>
+                    <m:mo>→</m:mo>
+                    <m:mi>∞</m:mi>
+                  </m:mrow>
+                </m:munder>
+                <m:msub>
+                  <m:mi>S</m:mi>
+                  <m:mi>k</m:mi>
+                </m:msub>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>x</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mo>-</m:mo>
+                <m:msub>
+                  <m:mi>S</m:mi>
+                  <m:mi>m</m:mi>
+                </m:msub>
+                <m:mrow>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>x</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:munder>
+                  <m:mo movablelimits="true" form="prefix">lim</m:mo>
+                  <m:mrow>
+                    <m:mi>k</m:mi>
+                    <m:mo>→</m:mo>
+                    <m:mi>∞</m:mi>
+                  </m:mrow>
+                </m:munder>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:msub>
+                    <m:mi>S</m:mi>
+                    <m:mi>k</m:mi>
+                  </m:msub>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>x</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>-</m:mo>
+                  <m:msub>
+                    <m:mi>S</m:mi>
+                    <m:mi>m</m:mi>
+                  </m:msub>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>x</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:munder>
+                  <m:mo movablelimits="true" form="prefix">lim</m:mo>
+                  <m:mrow>
+                    <m:mi>k</m:mi>
+                    <m:mo>→</m:mo>
+                    <m:mi>∞</m:mi>
+                  </m:mrow>
+                </m:munder>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                  <m:msub>
+                    <m:mi>S</m:mi>
+                    <m:mi>k</m:mi>
+                  </m:msub>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>x</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>-</m:mo>
+                  <m:msub>
+                    <m:mi>S</m:mi>
+                    <m:mi>m</m:mi>
+                  </m:msub>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>x</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:munder>
+                  <m:mo movablelimits="true" form="prefix">lim</m:mo>
+                  <m:mrow>
+                    <m:mi>k</m:mi>
+                    <m:mo>→</m:mo>
+                    <m:mi>∞</m:mi>
+                  </m:mrow>
+                </m:munder>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                  <m:munderover>
+                    <m:mo>∑</m:mo>
+                    <m:mrow>
+                      <m:mi>n</m:mi>
+                      <m:mo>=</m:mo>
+                      <m:mi>m</m:mi>
+                      <m:mo>+</m:mo>
+                      <m:mn>1</m:mn>
+                    </m:mrow>
+                    <m:mi>k</m:mi>
+                  </m:munderover>
+                  <m:msub>
+                    <m:mi>u</m:mi>
+                    <m:mi>n</m:mi>
+                  </m:msub>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>x</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>≤</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:munder>
+                  <m:mo movablelimits="true" form="prefix">lim</m:mo>
+                  <m:mrow>
+                    <m:mi>k</m:mi>
+                    <m:mo>→</m:mo>
+                    <m:mi>∞</m:mi>
+                  </m:mrow>
+                </m:munder>
+                <m:munderover>
+                  <m:mo>∑</m:mo>
+                  <m:mrow>
+                    <m:mi>n</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mi>m</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                  <m:mi>k</m:mi>
+                </m:munderover>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                  <m:msub>
+                    <m:mi>u</m:mi>
+                    <m:mi>n</m:mi>
+                  </m:msub>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>x</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>≤</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:munder>
+                  <m:mo movablelimits="true" form="prefix">lim</m:mo>
+                  <m:mrow>
+                    <m:mi>k</m:mi>
+                    <m:mo>→</m:mo>
+                    <m:mi>∞</m:mi>
+                  </m:mrow>
+                </m:munder>
+                <m:munderover>
+                  <m:mo>∑</m:mo>
+                  <m:mrow>
+                    <m:mi>n</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mi>m</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                  <m:mi>k</m:mi>
+                </m:munderover>
+                <m:msub>
+                  <m:mi>M</m:mi>
+                  <m:mi>n</m:mi>
+                </m:msub>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:munderover>
+                  <m:mo>∑</m:mo>
+                  <m:mrow>
+                    <m:mi>n</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mi>m</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                  <m:mi>∞</m:mi>
+                </m:munderover>
+                <m:msub>
+                  <m:mi>M</m:mi>
+                  <m:mi>n</m:mi>
+                </m:msub>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>≤</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:munderover>
+                  <m:mo>∑</m:mo>
+                  <m:mrow>
+                    <m:mi>n</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mi>N</m:mi>
+                  </m:mrow>
+                  <m:mi>∞</m:mi>
+                </m:munderover>
+                <m:msub>
+                  <m:mi>M</m:mi>
+                  <m:mi>n</m:mi>
+                </m:msub>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>&lt;</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mi>ϵ</m:mi>
+                <m:mo>.</m:mo>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+        </m:mtable>
+      </m:math>
+    </equation>
+    <para id="id66736">This proves part (1).</para>
+    <para id="id66742">Part (2) now follows from part (1) and <link target-id="fs-id8597860"/>,
+since the <m:math overflow="scroll"><m:msub><m:mi>S</m:mi><m:mi>N</m:mi></m:msub></m:math>'s are continuous.</para>
+</proof></rule>
+<rule id="fs-id1167587257600" type="theorem"><statement id="fs-id1167579982846">
+    <para id="id66761">
+Let <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msubsup><m:mo>∑</m:mo><m:mrow><m:mi>n</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow><m:mi>∞</m:mi></m:msubsup><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:msup><m:mi>z</m:mi><m:mi>n</m:mi></m:msup></m:mrow></m:math> be a power series function with
+radius of convergence <m:math overflow="scroll"><m:mrow><m:mi>r</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math>
+and let <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>S</m:mi><m:mi>N</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>}</m:mo></m:mrow></m:math> denote the sequence of partial sums of this series:</para>
+    <equation id="id66864">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:msub>
+            <m:mi>S</m:mi>
+            <m:mi>N</m:mi>
+          </m:msub>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>z</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>=</m:mo>
+          <m:munderover>
+            <m:mo>∑</m:mo>
+            <m:mrow>
+              <m:mi>n</m:mi>
+              <m:mo>=</m:mo>
+              <m:mn>0</m:mn>
+            </m:mrow>
+            <m:mi>N</m:mi>
+          </m:munderover>
+          <m:msub>
+            <m:mi>a</m:mi>
+            <m:mi>n</m:mi>
+          </m:msub>
+          <m:msup>
+            <m:mi>z</m:mi>
+            <m:mi>n</m:mi>
+          </m:msup>
+          <m:mo>.</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id66925">If <m:math overflow="scroll"><m:mrow><m:mn>0</m:mn><m:mo>&lt;</m:mo><m:msup><m:mi>r</m:mi><m:mo>'</m:mo></m:msup><m:mo>&lt;</m:mo><m:mi>r</m:mi><m:mo>,</m:mo></m:mrow></m:math> then the sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>S</m:mi><m:mi>N</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> converges uniformly to <m:math overflow="scroll"><m:mi>f</m:mi></m:math> on the disk<m:math overflow="scroll"><m:mrow><m:msub><m:mi>B</m:mi><m:msup><m:mi>r</m:mi><m:mo>'</m:mo></m:msup></m:msub><m:mrow><m:mo>(</m:mo><m:mn>0</m:mn><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></para>
+</statement>
+<proof id="fs-id2377500">
+    <para id="id67015">
+Define a power series function <m:math overflow="scroll"><m:mi>g</m:mi></m:math> by
+<m:math overflow="scroll"><m:mrow><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msubsup><m:mo>∑</m:mo><m:mrow><m:mi>n</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow><m:mi>∞</m:mi></m:msubsup><m:mrow><m:mo>|</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>|</m:mo></m:mrow><m:msup><m:mi>z</m:mi><m:mi>n</m:mi></m:msup><m:mo>,</m:mo></m:mrow></m:math> and note that the radius of
+convergence for <m:math overflow="scroll"><m:mi>g</m:mi></m:math> is the same as that for <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>,</m:mo></m:mrow></m:math> i.e., <m:math overflow="scroll"><m:mrow><m:mi>r</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Choose <m:math overflow="scroll"><m:mi>t</m:mi></m:math> so that <m:math overflow="scroll"><m:mrow><m:msup><m:mi>r</m:mi><m:mo>'</m:mo></m:msup><m:mo>&lt;</m:mo><m:mi>t</m:mi><m:mo>&lt;</m:mo><m:mi>r</m:mi><m:mo>.</m:mo></m:mrow></m:math> Then, since <m:math overflow="scroll"><m:mi>t</m:mi></m:math> belongs
+to the disk of convergence of the power series function <m:math overflow="scroll"><m:mrow><m:mi>g</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+we know that <m:math overflow="scroll"><m:mrow><m:msubsup><m:mo>∑</m:mo><m:mrow><m:mi>n</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow><m:mi>∞</m:mi></m:msubsup><m:mrow><m:mo>|</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>|</m:mo></m:mrow><m:msup><m:mi>t</m:mi><m:mi>n</m:mi></m:msup></m:mrow></m:math> converges.
+Set <m:math overflow="scroll"><m:mrow><m:msub><m:mi>m</m:mi><m:mi>n</m:mi></m:msub><m:mo>=</m:mo><m:mrow><m:mo>|</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>|</m:mo></m:mrow><m:msup><m:mi>t</m:mi><m:mi>n</m:mi></m:msup><m:mo>,</m:mo></m:mrow></m:math> and note that <m:math overflow="scroll"><m:mrow><m:mo>∑</m:mo><m:msub><m:mi>m</m:mi><m:mi>n</m:mi></m:msub></m:mrow></m:math> converges.
+Now, for each <m:math overflow="scroll"><m:mrow><m:mi>z</m:mi><m:mo>∈</m:mo><m:msub><m:mi>B</m:mi><m:msup><m:mi>r</m:mi><m:mo>'</m:mo></m:msup></m:msub><m:mrow><m:mo>(</m:mo><m:mn>0</m:mn><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> we have that</para>
+    <equation id="id67317">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mrow>
+            <m:mo>|</m:mo>
+          </m:mrow>
+          <m:msub>
+            <m:mi>a</m:mi>
+            <m:mi>n</m:mi>
+          </m:msub>
+          <m:msup>
+            <m:mi>z</m:mi>
+            <m:mi>n</m:mi>
+          </m:msup>
+          <m:mrow>
+            <m:mo>|</m:mo>
+            <m:mo>≤</m:mo>
+            <m:mo>|</m:mo>
+          </m:mrow>
+          <m:msub>
+            <m:mi>a</m:mi>
+            <m:mi>n</m:mi>
+          </m:msub>
+          <m:mrow>
+            <m:mo>|</m:mo>
+          </m:mrow>
+          <m:msup>
+            <m:mrow>
+              <m:msup>
+                <m:mi>r</m:mi>
+                <m:mo>'</m:mo>
+              </m:msup>
+            </m:mrow>
+            <m:mi>n</m:mi>
+          </m:msup>
+          <m:mo>≤</m:mo>
+          <m:mrow>
+            <m:mo>|</m:mo>
+            <m:msub>
+              <m:mi>a</m:mi>
+              <m:mi>n</m:mi>
+            </m:msub>
+            <m:mo>|</m:mo>
+          </m:mrow>
+          <m:msup>
+            <m:mi>t</m:mi>
+            <m:mi>n</m:mi>
+          </m:msup>
+          <m:mo>=</m:mo>
+          <m:msub>
+            <m:mi>m</m:mi>
+            <m:mi>n</m:mi>
+          </m:msub>
+          <m:mo>,</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id67412">so that the infinite series
+<m:math overflow="scroll"><m:mrow><m:mo>∑</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:msup><m:mi>z</m:mi><m:mi>n</m:mi></m:msup></m:mrow></m:math> converges uniformly on <m:math overflow="scroll"><m:mrow><m:msub><m:mi>B</m:mi><m:msup><m:mi>r</m:mi><m:mo>'</m:mo></m:msup></m:msub><m:mrow><m:mo>(</m:mo><m:mn>0</m:mn><m:mo>)</m:mo></m:mrow></m:mrow></m:math> by the Weierstrass M-Test.</para>
+</proof></rule>
+<exercise id="fs-id1167595582558"><problem id="fs-id1167581225704">
+    <para id="id67472">
+Let <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msubsup><m:mo>∑</m:mo><m:mrow><m:mi>n</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow><m:mi>∞</m:mi></m:msubsup><m:msup><m:mi>z</m:mi><m:mi>n</m:mi></m:msup><m:mo>.</m:mo></m:mrow></m:math>
+Recall that the radius of convergence for <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is 1.
+Verify that the sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>S</m:mi><m:mi>N</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> of partial sums of this
+power series function fails to converge uniformly on the
+full open disk of convergence <m:math overflow="scroll"><m:mrow><m:msub><m:mi>B</m:mi><m:mn>1</m:mn></m:msub><m:mrow><m:mo>(</m:mo><m:mn>0</m:mn><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math>
+so that the requirement that <m:math overflow="scroll"><m:mrow><m:msup><m:mi>r</m:mi><m:mo>'</m:mo></m:msup><m:mo>&lt;</m:mo><m:mi>r</m:mi></m:mrow></m:math> is necessary in the preceding theorem.</para>
+</problem></exercise>
+    <para id="id67605">The next theorem shows that continuous, real-valued functions on closed bounded intervals
+are uniform limits of step functions.
+Step functions have not been mentioned lately, since they aren't continuous functions,
+but this next theorem will be crucial for us when we study integration in <link document="m36207"/>.</para>
+<rule id="fs-id1167583148827" type="theorem"><statement id="fs-id1167580401665">
+    <para id="id67613">
+Let <m:math overflow="scroll"><m:mi>f</m:mi></m:math> be a continuous real-valued function on the
+closed and bounded interval <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Then there exists a sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>h</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> of step functions
+on <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow></m:math> that converges uniformly to <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+</statement>
+<proof id="fs-id2004211">
+    <para id="id67701">We use the fact that a continuous function on a
+compact set is uniformly continuous (<link target-id="fs-id1169193164426" document="m36167"/>).</para>
+    <para id="id67709">For each positive integer <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>,</m:mo></m:mrow></m:math> let <m:math overflow="scroll"><m:msub><m:mi>δ</m:mi><m:mi>n</m:mi></m:msub></m:math> be a positive number
+satisfying <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>-</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>y</m:mi><m:mo>)</m:mo><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>n</m:mi></m:mrow></m:math> if <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo><m:mi>x</m:mi><m:mo>-</m:mo><m:mi>y</m:mi><m:mo>|</m:mo><m:mo>&lt;</m:mo></m:mrow><m:msub><m:mi>δ</m:mi><m:mi>n</m:mi></m:msub><m:mo>.</m:mo></m:mrow></m:math>
+Such a <m:math overflow="scroll"><m:msub><m:mi>δ</m:mi><m:mi>n</m:mi></m:msub></m:math> exists by the uniform continuity of <m:math overflow="scroll"><m:mi>f</m:mi></m:math> on <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Let <m:math overflow="scroll"><m:mrow><m:msub><m:mi>P</m:mi><m:mi>n</m:mi></m:msub><m:mo>=</m:mo><m:mrow><m:mo>{</m:mo><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub><m:mo>&lt;</m:mo><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>&lt;</m:mo><m:mo>...</m:mo><m:mo>&lt;</m:mo><m:msub><m:mi>x</m:mi><m:msub><m:mi>m</m:mi><m:mi>n</m:mi></m:msub></m:msub><m:mo>}</m:mo></m:mrow></m:mrow></m:math> be a partition
+of <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow></m:math> for which <m:math overflow="scroll"><m:mrow><m:msub><m:mi>x</m:mi><m:mi>i</m:mi></m:msub><m:mo>-</m:mo><m:msub><m:mi>x</m:mi><m:mrow><m:mi>i</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>&lt;</m:mo><m:msub><m:mi>δ</m:mi><m:mi>n</m:mi></m:msub></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mn>1</m:mn><m:mo>≤</m:mo><m:mi>i</m:mi><m:mo>≤</m:mo><m:msub><m:mi>m</m:mi><m:mi>n</m:mi></m:msub><m:mo>.</m:mo></m:mrow></m:math>
+Define a step function <m:math overflow="scroll"><m:msub><m:mi>h</m:mi><m:mi>n</m:mi></m:msub></m:math> on <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow></m:math> as follows:</para>
+    <para id="id68034">If <m:math overflow="scroll"><m:mrow><m:msub><m:mi>x</m:mi><m:mrow><m:mi>i</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>≤</m:mo><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:msub><m:mi>x</m:mi><m:mi>i</m:mi></m:msub><m:mo>,</m:mo></m:mrow></m:math> then <m:math overflow="scroll"><m:mrow><m:msub><m:mi>h</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:msub><m:mi>x</m:mi><m:mrow><m:mi>i</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math>
+This defines <m:math overflow="scroll"><m:mrow><m:msub><m:mi>h</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> for every <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math> and we complete the definition of
+<m:math overflow="scroll"><m:msub><m:mi>h</m:mi><m:mi>n</m:mi></m:msub></m:math> by setting <m:math overflow="scroll"><m:mrow><m:msub><m:mi>h</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>b</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>b</m:mi><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math>
+It follows immediately that <m:math overflow="scroll"><m:msub><m:mi>h</m:mi><m:mi>n</m:mi></m:msub></m:math> is a step function.</para>
+    <para id="id68234">Now, we claim that <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>-</m:mo></m:mrow><m:msub><m:mi>h</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>n</m:mi></m:mrow></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+This is clearly the case for <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mi>b</m:mi><m:mo>,</m:mo></m:mrow></m:math> since <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>b</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msub><m:mi>h</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>b</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+For any other <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>,</m:mo></m:mrow></m:math> let <m:math overflow="scroll"><m:mi>i</m:mi></m:math> be the unique index
+such that <m:math overflow="scroll"><m:mrow><m:msub><m:mi>x</m:mi><m:mrow><m:mi>i</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>≤</m:mo><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:msub><m:mi>x</m:mi><m:mi>i</m:mi></m:msub><m:mo>.</m:mo></m:mrow></m:math> Then</para>
+    <equation id="id68433">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mrow>
+            <m:mo>|</m:mo>
+            <m:mi>f</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>x</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>-</m:mo>
+          </m:mrow>
+          <m:msub>
+            <m:mi>h</m:mi>
+            <m:mi>n</m:mi>
+          </m:msub>
+          <m:mrow>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>x</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>|</m:mo>
+            <m:mo>=</m:mo>
+            <m:mo>|</m:mo>
+            <m:mi>f</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>x</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>-</m:mo>
+            <m:mi>f</m:mi>
+          </m:mrow>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:msub>
+              <m:mi>x</m:mi>
+              <m:mrow>
+                <m:mi>i</m:mi>
+                <m:mo>-</m:mo>
+                <m:mn>1</m:mn>
+              </m:mrow>
+            </m:msub>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mrow>
+            <m:mo>|</m:mo>
+            <m:mo>&lt;</m:mo>
+            <m:mn>1</m:mn>
+            <m:mo>/</m:mo>
+            <m:mi>n</m:mi>
+          </m:mrow>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id68524">because <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo><m:mi>x</m:mi><m:mo>-</m:mo></m:mrow><m:msub><m:mi>x</m:mi><m:mrow><m:mi>i</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mrow><m:mo>|</m:mo><m:mo>&lt;</m:mo></m:mrow><m:msub><m:mi>δ</m:mi><m:mi>n</m:mi></m:msub><m:mo>.</m:mo></m:mrow></m:math></para>
+    <para id="id68572">So, we have defined a sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>h</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> of step functions, and
+the sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>h</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> converges uniformly to <m:math overflow="scroll"><m:mi>f</m:mi></m:math>
+by <link target-id="fs-id1167590259636"/>.</para>
+</proof></rule>
+    <para id="id68625">We close this chapter with a famous theorem of Abel concerning
+the behavior of a power series function on the boundary of its disk of convergence.
+See the comments following <link target-id="fs-id1171771434001" document="m36165"/>.</para>
+<rule id="fs-id8568340" type="theorem"><title>Abel</title><statement id="fs-id2099621">
+    <para id="id68630">
+Suppose <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msubsup><m:mo>∑</m:mo><m:mrow><m:mi>n</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow><m:mi>∞</m:mi></m:msubsup><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:msup><m:mi>z</m:mi><m:mi>n</m:mi></m:msup></m:mrow></m:math> is a power series function having finite radius of convergence <m:math overflow="scroll"><m:mrow><m:mi>r</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math>
+and suppose there exists a point <m:math overflow="scroll"><m:msub><m:mi>z</m:mi><m:mn>0</m:mn></m:msub></m:math> on the boundary of <m:math overflow="scroll"><m:mrow><m:msub><m:mi>B</m:mi><m:mi>r</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mn>0</m:mn><m:mo>)</m:mo></m:mrow></m:mrow></m:math> that is in the domain of <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>;</m:mo></m:mrow></m:math>
+i.e., <m:math overflow="scroll"><m:mrow><m:mo>∑</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:msubsup><m:mi>z</m:mi><m:mn>0</m:mn><m:mi>n</m:mi></m:msubsup></m:mrow></m:math> converges to <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:msub><m:mi>z</m:mi><m:mn>0</m:mn></m:msub><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Suppose <m:math overflow="scroll"><m:mi>g</m:mi></m:math> is a continuous function whose domain contains the open disk <m:math overflow="scroll"><m:mrow><m:msub><m:mi>B</m:mi><m:mi>r</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mn>0</m:mn><m:mo>)</m:mo></m:mrow></m:mrow></m:math> as well as the point <m:math overflow="scroll"><m:mrow><m:msub><m:mi>z</m:mi><m:mn>0</m:mn></m:msub><m:mo>,</m:mo></m:mrow></m:math>
+and assume that <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mi>g</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow></m:math> for all <m:math overflow="scroll"><m:mi>z</m:mi></m:math> in the open disk <m:math overflow="scroll"><m:mrow><m:msub><m:mi>B</m:mi><m:mi>r</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mn>0</m:mn><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math>
+Then <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:msub><m:mi>z</m:mi><m:mn>0</m:mn></m:msub><m:mo>)</m:mo></m:mrow></m:math> must equal <m:math overflow="scroll"><m:mrow><m:mi>g</m:mi><m:mo>(</m:mo><m:msub><m:mi>z</m:mi><m:mn>0</m:mn></m:msub><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math></para>
+</statement>
+<proof id="fs-id1167588853591">
+    <para id="id68961">
+For simplicity, assume that <m:math overflow="scroll"><m:mrow><m:mi>r</m:mi><m:mo>=</m:mo><m:mn>1</m:mn></m:mrow></m:math> and that
+<m:math overflow="scroll"><m:mrow><m:msub><m:mi>z</m:mi><m:mn>0</m:mn></m:msub><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>.</m:mo></m:mrow></m:math> See the exercise that follows this proof.
+Write <m:math overflow="scroll"><m:msub><m:mi>S</m:mi><m:mi>n</m:mi></m:msub></m:math> for the partial sum of the <m:math overflow="scroll"><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub></m:math>'s: <m:math overflow="scroll"><m:mrow><m:msub><m:mi>S</m:mi><m:mi>n</m:mi></m:msub><m:mo>=</m:mo><m:msubsup><m:mo>∑</m:mo><m:mrow><m:mi>n</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow><m:mi>n</m:mi></m:msubsup><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>.</m:mo></m:mrow></m:math>
+In the following computation, we will use the Abel Summation Formula
+in the form</para>
+    <equation id="id69078">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:munderover>
+            <m:mo>∑</m:mo>
+            <m:mrow>
+              <m:mi>n</m:mi>
+              <m:mo>=</m:mo>
+              <m:mn>0</m:mn>
+            </m:mrow>
+            <m:mi>N</m:mi>
+          </m:munderover>
+          <m:msub>
+            <m:mi>a</m:mi>
+            <m:mi>n</m:mi>
+          </m:msub>
+          <m:msup>
+            <m:mi>z</m:mi>
+            <m:mi>n</m:mi>
+          </m:msup>
+          <m:mo>=</m:mo>
+          <m:msub>
+            <m:mi>S</m:mi>
+            <m:mi>N</m:mi>
+          </m:msub>
+          <m:msup>
+            <m:mi>z</m:mi>
+            <m:mi>N</m:mi>
+          </m:msup>
+          <m:mo>+</m:mo>
+          <m:munderover>
+            <m:mo>∑</m:mo>
+            <m:mrow>
+              <m:mi>n</m:mi>
+              <m:mo>=</m:mo>
+              <m:mn>0</m:mn>
+            </m:mrow>
+            <m:mrow>
+              <m:mi>N</m:mi>
+              <m:mo>-</m:mo>
+              <m:mn>1</m:mn>
+            </m:mrow>
+          </m:munderover>
+          <m:msub>
+            <m:mi>S</m:mi>
+            <m:mi>n</m:mi>
+          </m:msub>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:msup>
+              <m:mi>z</m:mi>
+              <m:mi>n</m:mi>
+            </m:msup>
+            <m:mo>-</m:mo>
+            <m:msup>
+              <m:mi>z</m:mi>
+              <m:mrow>
+                <m:mi>n</m:mi>
+                <m:mo>+</m:mo>
+                <m:mn>1</m:mn>
+              </m:mrow>
+            </m:msup>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>.</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id69196">See <link target-id="fs-id1172705600778" document="m36135"/>.
+Let <m:math overflow="scroll"><m:mi>ϵ</m:mi></m:math> be a positive number. Then, for any <m:math overflow="scroll"><m:mrow><m:mn>0</m:mn><m:mo>&lt;</m:mo><m:mi>t</m:mi><m:mo>&lt;</m:mo><m:mn>1</m:mn></m:mrow></m:math> and any positive integer <m:math overflow="scroll"><m:mrow><m:mi>N</m:mi><m:mo>,</m:mo></m:mrow></m:math> we have</para>
+    <equation id="uid13">
+      <m:math overflow="scroll" mode="display">
+        <m:mtable displaystyle="true">
+          <m:mtr>
+            <m:mtd columnalign="right">
+              <m:mrow>
+                <m:mo>|</m:mo>
+                <m:mi>g</m:mi>
+                <m:mo>(</m:mo>
+                <m:mn>1</m:mn>
+                <m:mo>)</m:mo>
+                <m:mo>-</m:mo>
+                <m:mi>f</m:mi>
+                <m:mo>(</m:mo>
+                <m:mn>1</m:mn>
+                <m:mo>)</m:mo>
+                <m:mo>|</m:mo>
+              </m:mrow>
+            </m:mtd>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                  <m:mi>g</m:mi>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mn>1</m:mn>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>-</m:mo>
+                  <m:mi>f</m:mi>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>t</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>+</m:mo>
+                  <m:mi>f</m:mi>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>t</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>-</m:mo>
+                </m:mrow>
+                <m:munderover>
+                  <m:mo>∑</m:mo>
+                  <m:mrow>
+                    <m:mi>n</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mn>0</m:mn>
+                  </m:mrow>
+                  <m:mi>N</m:mi>
+                </m:munderover>
+                <m:msub>
+                  <m:mi>a</m:mi>
+                  <m:mi>n</m:mi>
+                </m:msub>
+                <m:msup>
+                  <m:mi>t</m:mi>
+                  <m:mi>n</m:mi>
+                </m:msup>
+                <m:mo>+</m:mo>
+                <m:munderover>
+                  <m:mo>∑</m:mo>
+                  <m:mrow>
+                    <m:mi>n</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mn>0</m:mn>
+                  </m:mrow>
+                  <m:mi>N</m:mi>
+                </m:munderover>
+                <m:msub>
+                  <m:mi>a</m:mi>
+                  <m:mi>n</m:mi>
+                </m:msub>
+                <m:msup>
+                  <m:mi>t</m:mi>
+                  <m:mi>n</m:mi>
+                </m:msup>
+                <m:mrow>
+                  <m:mo>-</m:mo>
+                  <m:mi>f</m:mi>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mn>1</m:mn>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>≤</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                  <m:mi>g</m:mi>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mn>1</m:mn>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>-</m:mo>
+                  <m:mi>g</m:mi>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>t</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>|</m:mo>
+                  <m:mo>+</m:mo>
+                  <m:mo>|</m:mo>
+                  <m:mi>f</m:mi>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>t</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>-</m:mo>
+                </m:mrow>
+                <m:munderover>
+                  <m:mo>∑</m:mo>
+                  <m:mrow>
+                    <m:mi>n</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mn>0</m:mn>
+                  </m:mrow>
+                  <m:mi>N</m:mi>
+                </m:munderover>
+                <m:msub>
+                  <m:mi>a</m:mi>
+                  <m:mi>n</m:mi>
+                </m:msub>
+                <m:msup>
+                  <m:mi>t</m:mi>
+                  <m:mi>n</m:mi>
+                </m:msup>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                  <m:mo>+</m:mo>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:munderover>
+                  <m:mo>∑</m:mo>
+                  <m:mrow>
+                    <m:mi>n</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mn>0</m:mn>
+                  </m:mrow>
+                  <m:mi>N</m:mi>
+                </m:munderover>
+                <m:msub>
+                  <m:mi>a</m:mi>
+                  <m:mi>n</m:mi>
+                </m:msub>
+                <m:msup>
+                  <m:mi>t</m:mi>
+                  <m:mi>n</m:mi>
+                </m:msup>
+                <m:mrow>
+                  <m:mo>-</m:mo>
+                  <m:mi>f</m:mi>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mn>1</m:mn>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>≤</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                  <m:mi>g</m:mi>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mn>1</m:mn>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>-</m:mo>
+                  <m:mi>g</m:mi>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>t</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>|</m:mo>
+                  <m:mo>+</m:mo>
+                  <m:mo>|</m:mo>
+                  <m:mi>f</m:mi>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>t</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>-</m:mo>
+                </m:mrow>
+                <m:munderover>
+                  <m:mo>∑</m:mo>
+                  <m:mrow>
+                    <m:mi>n</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mn>0</m:mn>
+                  </m:mrow>
+                  <m:mi>N</m:mi>
+                </m:munderover>
+                <m:msub>
+                  <m:mi>a</m:mi>
+                  <m:mi>n</m:mi>
+                </m:msub>
+                <m:msup>
+                  <m:mi>t</m:mi>
+                  <m:mi>n</m:mi>
+                </m:msup>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd/>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mrow>
+                  <m:mspace width="1.em"/>
+                  <m:mspace width="1.em"/>
+                  <m:mo>+</m:mo>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:msub>
+                  <m:mi>S</m:mi>
+                  <m:mi>N</m:mi>
+                </m:msub>
+                <m:msup>
+                  <m:mi>t</m:mi>
+                  <m:mi>N</m:mi>
+                </m:msup>
+                <m:mo>+</m:mo>
+                <m:munderover>
+                  <m:mo>∑</m:mo>
+                  <m:mrow>
+                    <m:mi>n</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mn>0</m:mn>
+                  </m:mrow>
+                  <m:mrow>
+                    <m:mi>N</m:mi>
+                    <m:mo>-</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                </m:munderover>
+                <m:msub>
+                  <m:mi>S</m:mi>
+                  <m:mi>n</m:mi>
+                </m:msub>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:msup>
+                    <m:mi>t</m:mi>
+                    <m:mi>n</m:mi>
+                  </m:msup>
+                  <m:mo>-</m:mo>
+                  <m:msup>
+                    <m:mi>t</m:mi>
+                    <m:mrow>
+                      <m:mi>n</m:mi>
+                      <m:mo>+</m:mo>
+                      <m:mn>1</m:mn>
+                    </m:mrow>
+                  </m:msup>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mo>-</m:mo>
+                <m:mi>f</m:mi>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mn>1</m:mn>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                  <m:mi>g</m:mi>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mn>1</m:mn>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>-</m:mo>
+                  <m:mi>g</m:mi>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>t</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>|</m:mo>
+                  <m:mo>+</m:mo>
+                  <m:mo>|</m:mo>
+                  <m:mi>f</m:mi>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>t</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>-</m:mo>
+                </m:mrow>
+                <m:munderover>
+                  <m:mo>∑</m:mo>
+                  <m:mrow>
+                    <m:mi>n</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mn>0</m:mn>
+                  </m:mrow>
+                  <m:mi>N</m:mi>
+                </m:munderover>
+                <m:msub>
+                  <m:mi>a</m:mi>
+                  <m:mi>n</m:mi>
+                </m:msub>
+                <m:msup>
+                  <m:mi>t</m:mi>
+                  <m:mi>n</m:mi>
+                </m:msup>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd/>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mrow>
+                  <m:mspace width="1.em"/>
+                  <m:mspace width="1.em"/>
+                  <m:mo>+</m:mo>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:msub>
+                  <m:mi>S</m:mi>
+                  <m:mi>N</m:mi>
+                </m:msub>
+                <m:msup>
+                  <m:mi>t</m:mi>
+                  <m:mi>N</m:mi>
+                </m:msup>
+                <m:mo>+</m:mo>
+                <m:munderover>
+                  <m:mo>∑</m:mo>
+                  <m:mrow>
+                    <m:mi>n</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mn>0</m:mn>
+                  </m:mrow>
+                  <m:mrow>
+                    <m:mi>N</m:mi>
+                    <m:mo>-</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                </m:munderover>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:msub>
+                    <m:mi>S</m:mi>
+                    <m:mi>n</m:mi>
+                  </m:msub>
+                  <m:mo>-</m:mo>
+                  <m:msub>
+                    <m:mi>S</m:mi>
+                    <m:mi>N</m:mi>
+                  </m:msub>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:msup>
+                    <m:mi>t</m:mi>
+                    <m:mi>n</m:mi>
+                  </m:msup>
+                  <m:mo>-</m:mo>
+                  <m:msup>
+                    <m:mi>t</m:mi>
+                    <m:mrow>
+                      <m:mi>n</m:mi>
+                      <m:mo>+</m:mo>
+                      <m:mn>1</m:mn>
+                    </m:mrow>
+                  </m:msup>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mo>+</m:mo>
+                <m:msub>
+                  <m:mi>S</m:mi>
+                  <m:mi>N</m:mi>
+                </m:msub>
+                <m:munderover>
+                  <m:mo>∑</m:mo>
+                  <m:mrow>
+                    <m:mi>n</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mn>0</m:mn>
+                  </m:mrow>
+                  <m:mrow>
+                    <m:mi>N</m:mi>
+                    <m:mo>-</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                </m:munderover>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:msup>
+                    <m:mi>t</m:mi>
+                    <m:mi>n</m:mi>
+                  </m:msup>
+                  <m:mo>-</m:mo>
+                  <m:msup>
+                    <m:mi>t</m:mi>
+                    <m:mrow>
+                      <m:mi>n</m:mi>
+                      <m:mo>+</m:mo>
+                      <m:mn>1</m:mn>
+                    </m:mrow>
+                  </m:msup>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mo>-</m:mo>
+                <m:mi>f</m:mi>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mn>1</m:mn>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                  <m:mi>g</m:mi>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mn>1</m:mn>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>-</m:mo>
+                  <m:mi>g</m:mi>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>t</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>|</m:mo>
+                  <m:mo>+</m:mo>
+                  <m:mo>|</m:mo>
+                  <m:mi>f</m:mi>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>t</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>-</m:mo>
+                </m:mrow>
+                <m:munderover>
+                  <m:mo>∑</m:mo>
+                  <m:mrow>
+                    <m:mi>n</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mn>0</m:mn>
+                  </m:mrow>
+                  <m:mi>N</m:mi>
+                </m:munderover>
+                <m:msub>
+                  <m:mi>a</m:mi>
+                  <m:mi>n</m:mi>
+                </m:msub>
+                <m:msup>
+                  <m:mi>t</m:mi>
+                  <m:mi>n</m:mi>
+                </m:msup>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd/>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mrow>
+                  <m:mspace width="1.em"/>
+                  <m:mspace width="1.em"/>
+                  <m:mo>+</m:mo>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:munderover>
+                  <m:mo>∑</m:mo>
+                  <m:mrow>
+                    <m:mi>n</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mn>0</m:mn>
+                  </m:mrow>
+                  <m:mrow>
+                    <m:mi>N</m:mi>
+                    <m:mo>-</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                </m:munderover>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:msub>
+                    <m:mi>S</m:mi>
+                    <m:mi>n</m:mi>
+                  </m:msub>
+                  <m:mo>-</m:mo>
+                  <m:msub>
+                    <m:mi>S</m:mi>
+                    <m:mi>N</m:mi>
+                  </m:msub>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:msup>
+                    <m:mi>t</m:mi>
+                    <m:mi>n</m:mi>
+                  </m:msup>
+                  <m:mo>-</m:mo>
+                  <m:msup>
+                    <m:mi>t</m:mi>
+                    <m:mrow>
+                      <m:mi>n</m:mi>
+                      <m:mo>+</m:mo>
+                      <m:mn>1</m:mn>
+                    </m:mrow>
+                  </m:msup>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mo>+</m:mo>
+                <m:msub>
+                  <m:mi>S</m:mi>
+                  <m:mi>N</m:mi>
+                </m:msub>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:msup>
+                    <m:mi>t</m:mi>
+                    <m:mi>N</m:mi>
+                  </m:msup>
+                  <m:mo>+</m:mo>
+                  <m:munderover>
+                    <m:mo>∑</m:mo>
+                    <m:mrow>
+                      <m:mi>n</m:mi>
+                      <m:mo>=</m:mo>
+                      <m:mn>0</m:mn>
+                    </m:mrow>
+                    <m:mrow>
+                      <m:mi>N</m:mi>
+                      <m:mo>-</m:mo>
+                      <m:mn>1</m:mn>
+                    </m:mrow>
+                  </m:munderover>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:msup>
+                      <m:mi>t</m:mi>
+                      <m:mi>n</m:mi>
+                    </m:msup>
+                    <m:mo>-</m:mo>
+                    <m:msup>
+                      <m:mi>t</m:mi>
+                      <m:mrow>
+                        <m:mi>n</m:mi>
+                        <m:mo>+</m:mo>
+                        <m:mn>1</m:mn>
+                      </m:mrow>
+                    </m:msup>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mo>-</m:mo>
+                <m:mi>f</m:mi>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mn>1</m:mn>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>≤</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                  <m:mi>g</m:mi>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mn>1</m:mn>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>-</m:mo>
+                  <m:mi>g</m:mi>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>t</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>|</m:mo>
+                  <m:mo>+</m:mo>
+                  <m:mo>|</m:mo>
+                  <m:mi>f</m:mi>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>t</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>-</m:mo>
+                </m:mrow>
+                <m:munderover>
+                  <m:mo>∑</m:mo>
+                  <m:mrow>
+                    <m:mi>n</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mn>0</m:mn>
+                  </m:mrow>
+                  <m:mi>N</m:mi>
+                </m:munderover>
+                <m:msub>
+                  <m:mi>a</m:mi>
+                  <m:mi>n</m:mi>
+                </m:msub>
+                <m:msup>
+                  <m:mi>t</m:mi>
+                  <m:mi>n</m:mi>
+                </m:msup>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd/>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mrow>
+                  <m:mspace width="1.em"/>
+                  <m:mspace width="1.em"/>
+                  <m:mo>+</m:mo>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:munderover>
+                  <m:mo>∑</m:mo>
+                  <m:mrow>
+                    <m:mi>n</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mn>0</m:mn>
+                  </m:mrow>
+                  <m:mrow>
+                    <m:mi>N</m:mi>
+                    <m:mo>-</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                </m:munderover>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:msub>
+                    <m:mi>S</m:mi>
+                    <m:mi>n</m:mi>
+                  </m:msub>
+                  <m:mo>-</m:mo>
+                  <m:msub>
+                    <m:mi>S</m:mi>
+                    <m:mi>N</m:mi>
+                  </m:msub>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:msup>
+                    <m:mi>t</m:mi>
+                    <m:mi>n</m:mi>
+                  </m:msup>
+                  <m:mo>-</m:mo>
+                  <m:msup>
+                    <m:mi>t</m:mi>
+                    <m:mrow>
+                      <m:mi>n</m:mi>
+                      <m:mo>+</m:mo>
+                      <m:mn>1</m:mn>
+                    </m:mrow>
+                  </m:msup>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                  <m:mo>+</m:mo>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:msub>
+                  <m:mi>S</m:mi>
+                  <m:mi>N</m:mi>
+                </m:msub>
+                <m:mo>-</m:mo>
+                <m:mi>f</m:mi>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mn>1</m:mn>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>≤</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                  <m:mi>g</m:mi>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mn>1</m:mn>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>-</m:mo>
+                  <m:mi>g</m:mi>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>t</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>|</m:mo>
+                  <m:mo>+</m:mo>
+                  <m:mo>|</m:mo>
+                  <m:mi>f</m:mi>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>t</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>-</m:mo>
+                </m:mrow>
+                <m:munderover>
+                  <m:mo>∑</m:mo>
+                  <m:mrow>
+                    <m:mi>n</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mn>0</m:mn>
+                  </m:mrow>
+                  <m:mi>N</m:mi>
+                </m:munderover>
+                <m:msub>
+                  <m:mi>a</m:mi>
+                  <m:mi>n</m:mi>
+                </m:msub>
+                <m:msup>
+                  <m:mi>t</m:mi>
+                  <m:mi>n</m:mi>
+                </m:msup>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd/>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mrow>
+                  <m:mspace width="1.em"/>
+                  <m:mspace width="1.em"/>
+                  <m:mo>+</m:mo>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:munderover>
+                  <m:mo>∑</m:mo>
+                  <m:mrow>
+                    <m:mi>n</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mn>0</m:mn>
+                  </m:mrow>
+                  <m:mi>P</m:mi>
+                </m:munderover>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:msub>
+                    <m:mi>S</m:mi>
+                    <m:mi>n</m:mi>
+                  </m:msub>
+                  <m:mo>-</m:mo>
+                  <m:msub>
+                    <m:mi>S</m:mi>
+                    <m:mi>N</m:mi>
+                  </m:msub>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:msup>
+                    <m:mi>t</m:mi>
+                    <m:mi>n</m:mi>
+                  </m:msup>
+                  <m:mo>-</m:mo>
+                  <m:msup>
+                    <m:mi>t</m:mi>
+                    <m:mrow>
+                      <m:mi>n</m:mi>
+                      <m:mo>+</m:mo>
+                      <m:mn>1</m:mn>
+                    </m:mrow>
+                  </m:msup>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                  <m:mo>+</m:mo>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:munderover>
+                  <m:mo>∑</m:mo>
+                  <m:mrow>
+                    <m:mi>n</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mi>P</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                  <m:mrow>
+                    <m:mi>N</m:mi>
+                    <m:mo>-</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                </m:munderover>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:msub>
+                    <m:mi>S</m:mi>
+                    <m:mi>n</m:mi>
+                  </m:msub>
+                  <m:mo>-</m:mo>
+                  <m:msub>
+                    <m:mi>S</m:mi>
+                    <m:mi>N</m:mi>
+                  </m:msub>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:msup>
+                    <m:mi>t</m:mi>
+                    <m:mi>n</m:mi>
+                  </m:msup>
+                  <m:mo>-</m:mo>
+                  <m:msup>
+                    <m:mi>t</m:mi>
+                    <m:mrow>
+                      <m:mi>n</m:mi>
+                      <m:mo>+</m:mo>
+                      <m:mn>1</m:mn>
+                    </m:mrow>
+                  </m:msup>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                  <m:mo>+</m:mo>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:msub>
+                  <m:mi>S</m:mi>
+                  <m:mi>N</m:mi>
+                </m:msub>
+                <m:mo>-</m:mo>
+                <m:mi>f</m:mi>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mn>1</m:mn>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>≤</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                  <m:mi>g</m:mi>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mn>1</m:mn>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>-</m:mo>
+                  <m:mi>g</m:mi>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>t</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>|</m:mo>
+                  <m:mo>+</m:mo>
+                  <m:mo>|</m:mo>
+                  <m:mi>f</m:mi>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>t</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>-</m:mo>
+                </m:mrow>
+                <m:munderover>
+                  <m:mo>∑</m:mo>
+                  <m:mrow>
+                    <m:mi>n</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mn>0</m:mn>
+                  </m:mrow>
+                  <m:mi>N</m:mi>
+                </m:munderover>
+                <m:msub>
+                  <m:mi>a</m:mi>
+                  <m:mi>n</m:mi>
+                </m:msub>
+                <m:msup>
+                  <m:mi>t</m:mi>
+                  <m:mi>n</m:mi>
+                </m:msup>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd/>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mrow>
+                  <m:mspace width="1.em"/>
+                  <m:mspace width="1.em"/>
+                  <m:mo>+</m:mo>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:munderover>
+                  <m:mo>∑</m:mo>
+                  <m:mrow>
+                    <m:mi>n</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mn>0</m:mn>
+                  </m:mrow>
+                  <m:mi>P</m:mi>
+                </m:munderover>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:msub>
+                    <m:mi>S</m:mi>
+                    <m:mi>n</m:mi>
+                  </m:msub>
+                  <m:mo>-</m:mo>
+                  <m:msub>
+                    <m:mi>S</m:mi>
+                    <m:mi>N</m:mi>
+                  </m:msub>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:msup>
+                    <m:mi>t</m:mi>
+                    <m:mi>n</m:mi>
+                  </m:msup>
+                  <m:mo>-</m:mo>
+                  <m:msup>
+                    <m:mi>t</m:mi>
+                    <m:mrow>
+                      <m:mi>n</m:mi>
+                      <m:mo>+</m:mo>
+                      <m:mn>1</m:mn>
+                    </m:mrow>
+                  </m:msup>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                  <m:mo>+</m:mo>
+                </m:mrow>
+                <m:munderover>
+                  <m:mo>∑</m:mo>
+                  <m:mrow>
+                    <m:mi>n</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mi>P</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                  <m:mrow>
+                    <m:mi>N</m:mi>
+                    <m:mo>-</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                </m:munderover>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:msub>
+                  <m:mi>S</m:mi>
+                  <m:mi>n</m:mi>
+                </m:msub>
+                <m:mo>-</m:mo>
+                <m:msub>
+                  <m:mi>S</m:mi>
+                  <m:mi>N</m:mi>
+                </m:msub>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:msup>
+                    <m:mi>t</m:mi>
+                    <m:mi>n</m:mi>
+                  </m:msup>
+                  <m:mo>-</m:mo>
+                  <m:msup>
+                    <m:mi>t</m:mi>
+                    <m:mrow>
+                      <m:mi>n</m:mi>
+                      <m:mo>+</m:mo>
+                      <m:mn>1</m:mn>
+                    </m:mrow>
+                  </m:msup>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mo>+</m:mo>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                  <m:msub>
+                    <m:mi>S</m:mi>
+                    <m:mi>N</m:mi>
+                  </m:msub>
+                  <m:mo>-</m:mo>
+                  <m:mi>f</m:mi>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mn>1</m:mn>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:msub>
+                  <m:mi>t</m:mi>
+                  <m:mn>1</m:mn>
+                </m:msub>
+                <m:mo>+</m:mo>
+                <m:msub>
+                  <m:mi>t</m:mi>
+                  <m:mn>2</m:mn>
+                </m:msub>
+                <m:mo>+</m:mo>
+                <m:msub>
+                  <m:mi>t</m:mi>
+                  <m:mn>3</m:mn>
+                </m:msub>
+                <m:mo>+</m:mo>
+                <m:msub>
+                  <m:mi>t</m:mi>
+                  <m:mn>4</m:mn>
+                </m:msub>
+                <m:mo>+</m:mo>
+                <m:msub>
+                  <m:mi>t</m:mi>
+                  <m:mn>5</m:mn>
+                </m:msub>
+                <m:mo>.</m:mo>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+        </m:mtable>
+      </m:math>
+    </equation>
+    <para id="id71110">First, choose an integer <m:math overflow="scroll"><m:msub><m:mi>M</m:mi><m:mn>1</m:mn></m:msub></m:math> so that if <m:math overflow="scroll"><m:mi>P</m:mi></m:math> and <m:math overflow="scroll"><m:mi>N</m:mi></m:math> are both larger than <m:math overflow="scroll"><m:mrow><m:msub><m:mi>M</m:mi><m:mn>1</m:mn></m:msub><m:mo>,</m:mo></m:mrow></m:math> then <m:math overflow="scroll"><m:mrow><m:msub><m:mi>t</m:mi><m:mn>4</m:mn></m:msub><m:mo>&lt;</m:mo><m:mi>ϵ</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+(The sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>S</m:mi><m:mi>k</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> is a Cauchy sequence, and <m:math overflow="scroll"><m:mrow><m:mo>∑</m:mo><m:mo>(</m:mo><m:msup><m:mi>t</m:mi><m:mi>k</m:mi></m:msup><m:mo>-</m:mo><m:msup><m:mi>t</m:mi><m:mrow><m:mi>k</m:mi><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow></m:msup></m:mrow></m:math> is telescoping.)</para>
+    <para id="id71242">Fix such a <m:math overflow="scroll"><m:mrow><m:mi>P</m:mi><m:mo>&gt;</m:mo><m:msub><m:mi>M</m:mi><m:mn>1</m:mn></m:msub><m:mo>.</m:mo></m:mrow></m:math> Then choose a <m:math overflow="scroll"><m:mrow><m:mi>δ</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn></m:mrow></m:math> so that if <m:math overflow="scroll"><m:mrow><m:mn>1</m:mn><m:mo>&gt;</m:mo><m:mi>t</m:mi><m:mo>&gt;</m:mo><m:mn>1</m:mn><m:mo>-</m:mo><m:mi>δ</m:mi><m:mo>,</m:mo></m:mrow></m:math> then both <m:math overflow="scroll"><m:msub><m:mi>t</m:mi><m:mn>1</m:mn></m:msub></m:math> and <m:math overflow="scroll"><m:mrow><m:msub><m:mi>t</m:mi><m:mn>3</m:mn></m:msub><m:mo>&lt;</m:mo><m:mi>ϵ</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+How?</para>
+    <para id="id71344">Fix such a <m:math overflow="scroll"><m:mrow><m:mi>t</m:mi><m:mo>.</m:mo></m:mrow></m:math> Finally, choose a <m:math overflow="scroll"><m:mrow><m:mi>N</m:mi><m:mo>,</m:mo></m:mrow></m:math> greater than <m:math overflow="scroll"><m:mrow><m:msub><m:mi>M</m:mi><m:mn>1</m:mn></m:msub><m:mo>,</m:mo></m:mrow></m:math> and also
+large enough so that both <m:math overflow="scroll"><m:msub><m:mi>t</m:mi><m:mn>2</m:mn></m:msub></m:math> and <m:math overflow="scroll"><m:msub><m:mi>t</m:mi><m:mn>5</m:mn></m:msub></m:math> are less than <m:math overflow="scroll"><m:mrow><m:mi>ϵ</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+(How?)</para>
+    <para id="id71429">Now, <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>g</m:mi><m:mo>(</m:mo><m:mn>1</m:mn><m:mo>)</m:mo><m:mo>-</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:mn>1</m:mn><m:mo>)</m:mo><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mn>5</m:mn><m:mi>ϵ</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Since this is true for every <m:math overflow="scroll"><m:mrow><m:mi>ϵ</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> it follows that <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mn>1</m:mn><m:mo>)</m:mo><m:mo>=</m:mo><m:mi>g</m:mi><m:mo>(</m:mo><m:mn>1</m:mn><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math>
+and the theorem is proved.</para>
+</proof></rule>
+<exercise id="fs-id1167591866406"><problem id="fs-id1167596231342">
+    <para id="id71520">
+Let <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>,</m:mo><m:mi>g</m:mi><m:mo>,</m:mo><m:mi>r</m:mi><m:mo>,</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:msub><m:mi>z</m:mi><m:mn>0</m:mn></m:msub></m:math> be as in the statement of the preceding theorem.
+Define <m:math overflow="scroll"><m:mrow><m:mover accent="true"><m:mi>f</m:mi><m:mo>^</m:mo></m:mover><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:msub><m:mi>z</m:mi><m:mn>0</m:mn></m:msub><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mover accent="true"><m:mi>g</m:mi><m:mo>^</m:mo></m:mover><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:msub><m:mi>z</m:mi><m:mn>0</m:mn></m:msub><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></para>
+    <list id="id71654" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid14"> Prove that <m:math overflow="scroll"><m:mover accent="true"><m:mi>f</m:mi><m:mo>^</m:mo></m:mover></m:math> is a power series function
+<m:math overflow="scroll"><m:mrow><m:mover accent="true"><m:mi>f</m:mi><m:mo>^</m:mo></m:mover><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msubsup><m:mo>∑</m:mo><m:mrow><m:mi>n</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow><m:mi>∞</m:mi></m:msubsup><m:msub><m:mi>b</m:mi><m:mi>n</m:mi></m:msub><m:msup><m:mi>z</m:mi><m:mi>n</m:mi></m:msup><m:mo>,</m:mo></m:mrow></m:math>
+with radius of convergence equal to 1,
+and such that <m:math overflow="scroll"><m:mrow><m:msubsup><m:mo>∑</m:mo><m:mrow><m:mi>n</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow><m:mi>∞</m:mi></m:msubsup><m:msub><m:mi>b</m:mi><m:mi>n</m:mi></m:msub></m:mrow></m:math> converges to <m:math overflow="scroll"><m:mrow><m:mover accent="true"><m:mi>f</m:mi><m:mo>^</m:mo></m:mover><m:mrow><m:mo>(</m:mo><m:mn>1</m:mn><m:mo>)</m:mo></m:mrow><m:mo>;</m:mo></m:mrow></m:math> i.e., 1 is in the domain of <m:math overflow="scroll"><m:mrow><m:mover accent="true"><m:mi>f</m:mi><m:mo>^</m:mo></m:mover><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid15"> Show that <m:math overflow="scroll"><m:mover accent="true"><m:mi>g</m:mi><m:mo>^</m:mo></m:mover></m:math> is a continuous function whose domain contains the open disk <m:math overflow="scroll"><m:mrow><m:msub><m:mi>B</m:mi><m:mn>1</m:mn></m:msub><m:mrow><m:mo>(</m:mo><m:mn>0</m:mn><m:mo>)</m:mo></m:mrow></m:mrow></m:math> and the point <m:math overflow="scroll"><m:mrow><m:mi>z</m:mi><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid16"> Show that, if <m:math overflow="scroll"><m:mrow><m:mover accent="true"><m:mi>f</m:mi><m:mo>^</m:mo></m:mover><m:mrow><m:mo>(</m:mo><m:mn>1</m:mn><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mover accent="true"><m:mi>g</m:mi><m:mo>^</m:mo></m:mover><m:mrow><m:mo>(</m:mo><m:mn>1</m:mn><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> then <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:msub><m:mi>z</m:mi><m:mn>0</m:mn></m:msub><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:msub><m:mi>z</m:mi><m:mn>0</m:mn></m:msub><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math>
+Deduce that the simplification in the preceding proof is justified.
+</item>
+      <item id="uid17"> State and prove the generalization of Abel's Theorem to a function <m:math overflow="scroll"><m:mi>f</m:mi></m:math> that is expandable in a Taylor series around a point <m:math overflow="scroll"><m:mrow><m:mi>c</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+    </list>
+</problem></exercise>
+  </content>
+</document>

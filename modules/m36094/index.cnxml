@@ -1,0 +1,186 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML">
+  <title>Intervals and Approximation</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m36094</md:content-id>
+  <md:title>Intervals and Approximation</md:title>
+  <md:abstract>The absolute value is introduced, and open intervals and natural numbers are defined. Denseness of fields is discussed.</md:abstract>
+  <md:uuid>168fa5ca-82ae-4a5e-91b4-9654831050e7</md:uuid>
+</metadata>
+
+<content>
+    <para id="id278086">We introduce next into the set of real numbers some geometric
+concepts, namely, a notion of distance between numbers.
+Of course this had to happen, for geometry is the very basis of mathematics.
+</para>
+<definition id="fs-id1167351340718"><term/><meaning id="fs-id6809060"><para id="fs-id1167355182658"> The absolute value of a real number <m:math overflow="scroll"><m:mi>x</m:mi></m:math> is denoted by <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>x</m:mi><m:mo>|</m:mo></m:mrow></m:math> and is defined as follows:</para>
+    <list id="id278120" display="block" list-type="enumerated">
+      <item id="uid1">(i) <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mn>0</m:mn><m:mo>|</m:mo><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid2">(ii) If <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn></m:mrow></m:math> then <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>x</m:mi><m:mo>|</m:mo><m:mo>=</m:mo><m:mi>x</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid3">(iii) If <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mn>0</m:mn></m:mrow></m:math> (<m:math overflow="scroll"><m:mrow><m:mo>-</m:mo><m:mi>x</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn></m:mrow></m:math>) then <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>x</m:mi><m:mo>|</m:mo><m:mo>=</m:mo><m:mo>-</m:mo><m:mi>x</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+    </list>
+</meaning>
+</definition>
+    <para id="id278595">We define the <emphasis effect="italics">distance</emphasis><m:math overflow="scroll"><m:mrow><m:mi>d</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>,</m:mo><m:mi>y</m:mi><m:mo>)</m:mo></m:mrow></m:math> between two real numbers <m:math overflow="scroll"><m:mi>x</m:mi></m:math> and <m:math overflow="scroll"><m:mi>y</m:mi></m:math> by <m:math overflow="scroll"><m:mrow><m:mi>d</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>,</m:mo><m:mi>y</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mo>|</m:mo><m:mi>x</m:mi><m:mo>-</m:mo><m:mi>y</m:mi><m:mo>|</m:mo><m:mo>.</m:mo></m:mrow></m:math></para>
+    <para id="id278852">Obviously, such definitions of absolute value and distance can be made in any ordered field.</para>
+    
+    <exercise id="eip-120"><problem id="eip-837">
+  <para id="eip-174">Let <m:math overflow="scroll"><m:mi>x</m:mi></m:math> and <m:math overflow="scroll"><m:mi>y</m:mi></m:math> be real numbers.</para>
+<list id="eip-id1169191756891" list-type="enumerated" number-style="lower-alpha"><item id="uid4"> Show that <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>x</m:mi><m:mo>|</m:mo><m:mo>≥</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math>
+and that <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>≤</m:mo><m:mo>|</m:mo><m:mi>x</m:mi><m:mo>|</m:mo><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid5"> Prove the Triangle Inequality for absolute values.
+<equation id="id278947"><m:math overflow="scroll" mode="display"><m:mrow><m:mo>|</m:mo><m:mi>x</m:mi><m:mo>+</m:mo><m:mi>y</m:mi><m:mo>|</m:mo><m:mo>≤</m:mo><m:mo>|</m:mo><m:mi>x</m:mi><m:mo>|</m:mo><m:mo>+</m:mo><m:mo>|</m:mo><m:mi>y</m:mi><m:mo>|</m:mo><m:mo>.</m:mo></m:mrow></m:math></equation>
+HINT: Check the three cases <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>+</m:mo><m:mi>y</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math><m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>+</m:mo><m:mi>y</m:mi><m:mo>&lt;</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>+</m:mo><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid6"> Prove the so-called ` ` backward” triangle inequality.
+<equation id="id279061"><m:math overflow="scroll" mode="display"><m:mrow><m:mo>|</m:mo><m:mi>x</m:mi><m:mo>-</m:mo><m:mi>y</m:mi><m:mo>|</m:mo><m:mo>≥</m:mo><m:mo>|</m:mo><m:mo>|</m:mo><m:mi>x</m:mi><m:mo>|</m:mo><m:mo>-</m:mo><m:mo>|</m:mo><m:mi>y</m:mi><m:mo>|</m:mo><m:mo>|</m:mo><m:mo>.</m:mo></m:mrow></m:math></equation>
+HINT: Write <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>x</m:mi><m:mo>|</m:mo><m:mo>=</m:mo><m:mo>|</m:mo><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>-</m:mo><m:mi>y</m:mi><m:mo>)</m:mo><m:mo>+</m:mo><m:mi>y</m:mi><m:mo>|</m:mo><m:mo>,</m:mo></m:mrow></m:math> and use part (b).
+</item>
+      <item id="uid7"> Prove that <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>x</m:mi><m:mi>y</m:mi><m:mo>|</m:mo><m:mo>=</m:mo><m:mo>|</m:mo><m:mi>x</m:mi><m:mo>|</m:mo><m:mo>|</m:mo><m:mi>y</m:mi><m:mo>|</m:mo><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid8"> Prove that <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo><m:mi>x</m:mi><m:mo>|</m:mo></m:mrow><m:mo>=</m:mo><m:msqrt><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:msqrt></m:mrow></m:math> for all real numbers <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid9"> Prove the Triangle Inequality for the distance function. That is, show that
+<equation id="id279248"><m:math overflow="scroll" mode="display"><m:mrow><m:mi>d</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>,</m:mo><m:mi>y</m:mi><m:mo>)</m:mo><m:mo>≤</m:mo><m:mi>d</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>,</m:mo><m:mi>z</m:mi><m:mo>)</m:mo><m:mo>+</m:mo><m:mi>d</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>,</m:mo><m:mi>y</m:mi><m:mo>)</m:mo></m:mrow></m:math></equation>
+for all <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>,</m:mo><m:mi>y</m:mi><m:mo>,</m:mo><m:mi>z</m:mi><m:mo>∈</m:mo><m:mi>R</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+    </list>
+</problem>
+</exercise>
+    
+    <exercise id="eip-20"><problem id="eip-366">
+ <list id="eip-id1170697240363" list-type="enumerated" number-style="lower-alpha"><item id="uid10"> Prove that <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mi>y</m:mi></m:mrow></m:math> if <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>x</m:mi><m:mo>-</m:mo><m:mi>y</m:mi><m:mo>|</m:mo><m:mo>&lt;</m:mo>
+<m:mi>ϵ</m:mi></m:mrow></m:math> for every positive number <m:math overflow="scroll"><m:mrow><m:mi>ϵ</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+HINT: Argue by contradiction.
+Suppose <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>≠</m:mo><m:mi>y</m:mi><m:mo>,</m:mo></m:mrow></m:math> and take <m:math overflow="scroll"><m:mrow><m:mi>ϵ</m:mi><m:mo>=</m:mo><m:mo>|</m:mo><m:mi>x</m:mi><m:mo>-</m:mo><m:mi>y</m:mi><m:mo>|</m:mo><m:mo>/</m:mo><m:mn>2</m:mn><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid11"> Prove that <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mi>y</m:mi></m:mrow></m:math> if and only if <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>-</m:mo><m:mi>y</m:mi><m:mo>≤</m:mo><m:mi>ϵ</m:mi></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>y</m:mi><m:mo>-</m:mo><m:mi>x</m:mi><m:mo>≤</m:mo><m:mi>ϵ</m:mi></m:mrow></m:math> for every positive <m:math overflow="scroll"><m:mrow><m:mi>ϵ</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+    </list>
+</problem>
+</exercise>
+<definition id="fs-id1165802004080"><term/>
+<meaning id="fs-id1165815355027">
+    <para id="id279521"> Let <m:math overflow="scroll"><m:mi>a</m:mi></m:math> and <m:math overflow="scroll"><m:mi>b</m:mi></m:math> be real numbers for which <m:math overflow="scroll"><m:mrow><m:mi>a</m:mi><m:mo>&lt;</m:mo><m:mi>b</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+By the <emphasis effect="italics">open interval (a,b)</emphasis> we mean the
+set of all real numbers <m:math overflow="scroll"><m:mi>x</m:mi></m:math> for which <m:math overflow="scroll"><m:mrow><m:mi>a</m:mi><m:mo>&lt;</m:mo><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mi>b</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+and by the <emphasis effect="italics">closed interval [a,b]</emphasis> we mean
+the set of all real numbers <m:math overflow="scroll"><m:mi>x</m:mi></m:math> for which <m:math overflow="scroll"><m:mrow><m:mi>a</m:mi><m:mo>≤</m:mo><m:mi>x</m:mi><m:mo>≤</m:mo><m:mi>b</m:mi><m:mo>.</m:mo></m:mrow></m:math></para></meaning></definition>
+    <para id="id279624">By <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>∞</m:mi><m:mo>)</m:mo></m:mrow></m:math> we mean the set of all real numbers <m:math overflow="scroll"><m:mi>x</m:mi></m:math>
+for which <m:math overflow="scroll"><m:mrow><m:mi>a</m:mi><m:mo>&lt;</m:mo><m:mi>x</m:mi><m:mo>,</m:mo></m:mrow></m:math> and by <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>∞</m:mi><m:mo>)</m:mo></m:mrow></m:math>
+we mean the set of all real numbers <m:math overflow="scroll"><m:mi>x</m:mi></m:math> for which
+<m:math overflow="scroll"><m:mrow><m:mi>a</m:mi><m:mo>≤</m:mo><m:mi>x</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+    <para id="id279707">Analogously, we define <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mo>-</m:mo><m:mi>∞</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mo>-</m:mo><m:mi>∞</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow></m:math>
+to be respectively the set of all real numbers <m:math overflow="scroll"><m:mi>x</m:mi></m:math>
+for which <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mi>b</m:mi></m:mrow></m:math> and the set of all real numbers <m:math overflow="scroll"><m:mi>x</m:mi></m:math>
+for which <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>≤</m:mo><m:mi>b</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+
+<exercise id="fs-id1683882"><problem id="fs-id6189408">
+    <list id="id279804" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid12"> Show that the intersection of two open intervals either is the empty set or it is again an open interval.
+</item>
+      <item id="uid13"> Show that <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mo>(</m:mo><m:mo>-</m:mo><m:mi>∞</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo><m:mo>∩</m:mo><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>∞</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid14"> Let <m:math overflow="scroll"><m:mi>y</m:mi></m:math> be a fixed real number,
+and let <m:math overflow="scroll"><m:mi>ϵ</m:mi></m:math> be a positive number.
+Show that the inequality <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>x</m:mi><m:mo>-</m:mo><m:mi>y</m:mi><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mi>ϵ</m:mi></m:mrow></m:math> is equivalent to the pair of inequalities
+<equation id="id279927"><m:math overflow="scroll" mode="display"><m:mrow><m:mi>y</m:mi><m:mo>-</m:mo><m:mi>ϵ</m:mi><m:mo>&lt;</m:mo><m:mi>x</m:mi><m:mspace width="0.166667em"/><m:mtext>and</m:mtext><m:mspace width="0.166667em"/><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mi>y</m:mi><m:mo>+</m:mo><m:mi>ϵ</m:mi><m:mo>;</m:mo></m:mrow></m:math></equation>
+i.e., show that <m:math overflow="scroll"><m:mi>x</m:mi></m:math> satisfies the first inequality if and only
+if it satisfies the two latter ones.
+Deduce that <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>x</m:mi><m:mo>-</m:mo><m:mi>y</m:mi><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mi>ϵ</m:mi></m:mrow></m:math>
+if and only if <m:math overflow="scroll"><m:mi>x</m:mi></m:math> is in the open interval <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>y</m:mi><m:mo>-</m:mo><m:mi>ϵ</m:mi><m:mo>,</m:mo><m:mi>y</m:mi><m:mo>+</m:mo><m:mi>ϵ</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math></item>
+    </list>
+</problem></exercise>
+    <para id="id280043">Here is one of those assertions that seems like an obvious fact. However, it requires a proof which we only now can give,
+for it depends on the completeness axiom,
+and in fact is false in some ordered fields.</para>
+<rule id="fs-id2112743" type="theorem">
+<statement id="fs-id1165810346011">
+<para id="fs-id1165804918863"><emphasis effect="italics">Let <m:math overflow="scroll"><m:mi>N</m:mi></m:math> denote the set of natural Numbers, thought of as a subset
+of <m:math overflow="scroll"><m:mi>R</m:mi></m:math>. Then <m:math overflow="scroll"><m:mi>N</m:mi></m:math> is not bounded above.</emphasis></para>
+</statement>
+<proof id="fs-id1695008">
+    <para id="id280109">Suppose false. Let <m:math overflow="scroll"><m:mi>M</m:mi></m:math> be an upper bound for the nonempty set
+<m:math overflow="scroll"><m:mrow><m:mi>N</m:mi><m:mo>,</m:mo></m:mrow></m:math> and let <m:math overflow="scroll"><m:msub><m:mi>M</m:mi><m:mn>0</m:mn></m:msub></m:math> be the least upper
+bound for <m:math overflow="scroll"><m:mrow><m:mi>N</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Taking <m:math overflow="scroll"><m:mi>ϵ</m:mi></m:math> to be the positive number 1/2, and applying Theorem 1.5, we have that there exists
+an element <m:math overflow="scroll"><m:mi>k</m:mi></m:math> of <m:math overflow="scroll"><m:mi>N</m:mi></m:math> such that <m:math overflow="scroll"><m:mrow><m:msub><m:mi>M</m:mi><m:mn>0</m:mn></m:msub><m:mo>-</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mn>2</m:mn><m:mo>&lt;</m:mo><m:mi>k</m:mi><m:mo>.</m:mo></m:mrow></m:math> But then <m:math overflow="scroll"><m:mrow><m:msub><m:mi>M</m:mi><m:mn>0</m:mn></m:msub><m:mo>-</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mn>2</m:mn><m:mo>+</m:mo><m:mn>1</m:mn><m:mo>&lt;</m:mo><m:mi>k</m:mi><m:mo>+</m:mo><m:mn>1</m:mn><m:mo>,</m:mo></m:mrow></m:math> or, <m:math overflow="scroll"><m:mrow><m:msub><m:mi>M</m:mi><m:mn>0</m:mn></m:msub><m:mo>+</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mn>2</m:mn><m:mo>&lt;</m:mo><m:mi>k</m:mi><m:mo>+</m:mo><m:mn>1</m:mn><m:mo>.</m:mo></m:mrow></m:math> So <m:math overflow="scroll"><m:mrow><m:msub><m:mi>M</m:mi><m:mn>0</m:mn></m:msub><m:mo>&lt;</m:mo><m:mi>k</m:mi><m:mo>+</m:mo><m:mn>1</m:mn><m:mo>.</m:mo></m:mrow></m:math> But
+<m:math overflow="scroll"><m:mrow><m:msub><m:mi>M</m:mi><m:mn>0</m:mn></m:msub><m:mo>≥</m:mo><m:mi>k</m:mi><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow></m:math> because <m:math overflow="scroll"><m:msub><m:mi>M</m:mi><m:mn>0</m:mn></m:msub></m:math> is an upper bound for <m:math overflow="scroll"><m:mrow><m:mi>N</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+We have thus arrived at a contradiction, and the theorem is proved.</para>
+</proof></rule>
+<rule id="fs-id1165816371813"><label/>
+<statement id="fs-id1165814200116">
+    <para id="id280404"><emphasis effect="bold">REMARK</emphasis> As mentioned above, there do exist ordered fields <m:math overflow="scroll"><m:mi>F</m:mi></m:math> in which
+the subset <m:math overflow="scroll"><m:mi>N</m:mi></m:math><emphasis effect="bold">is</emphasis> bounded above.
+Such fields give rise to what is called “nonstandard analysis,”
+and they were first introduced by Abraham Robinson in 1966.
+The fact that <m:math overflow="scroll"><m:mi>R</m:mi></m:math> is a complete ordered field is apparently crucial
+to be able to conclude the intuitively clear fact that
+the natural numbers have no upper bound.</para>
+</statement></rule>
+    <para id="id280463"><link target-id="fs-id1324957"/> presents another intuitively obvious fact,
+and this one is in some real sense the basis for many of our upcoming arguments about limits.
+It relies on the preceding theorem, is in fact just a corollary, so it has to be considered as a rather deep property of the real numbers;
+it is not something that works in every ordered field.</para>
+<exercise id="fs-id1324957"><problem id="fs-id1451065">
+    <para id="id280470">Prove that if <m:math overflow="scroll"><m:mi>ϵ</m:mi></m:math> is a positive real number, then there exists a natural number <m:math overflow="scroll"><m:mi>N</m:mi></m:math> such that <m:math overflow="scroll"><m:mrow><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>N</m:mi><m:mo>&lt;</m:mo><m:mi>ϵ</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+</problem></exercise>
+    <para id="id280520"><link target-id="fs-id1167349626367"/> and <link target-id="fs-id1167356786329"/> show that the set <m:math overflow="scroll"><m:mi>Q</m:mi></m:math> of rational numbers is “everywhere dense”
+in the field <m:math overflow="scroll"><m:mrow><m:mi>R</m:mi><m:mo>.</m:mo></m:mrow></m:math> That is, every real number can
+be approximated arbitrarily closely by rational numbers.
+Again, we point out that this result holds in any complete ordered field,
+and it is the completeness that is critical.</para>
+    
+<rule id="fs-id1167349626367" type="theorem"><statement id="fs-id1167365596298">
+<para id="id280566">
+      
+      <emphasis effect="italics">Let <m:math overflow="scroll"><m:mrow><m:mi>a</m:mi><m:mo>&lt;</m:mo><m:mi>b</m:mi></m:mrow></m:math> be two real numbers. Then there exists a rational number <m:math overflow="scroll"><m:mrow><m:mi>r</m:mi><m:mo>=</m:mo><m:mi>p</m:mi><m:mo>/</m:mo><m:mi>q</m:mi></m:mrow></m:math> in the open interval <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math> In fact, there exist infinitely many rational numbers in the interval <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math></emphasis>
+    </para>
+</statement>
+<proof id="fs-id1167349622595">
+    <para id="id280651">
+If <m:math overflow="scroll"><m:mrow><m:mi>a</m:mi><m:mo>&lt;</m:mo><m:mn>0</m:mn></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>b</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> then taking <m:math overflow="scroll"><m:mrow><m:mi>r</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math> satisfies the first statement of the theorem.
+Assume first that <m:math overflow="scroll"><m:mrow><m:mi>a</m:mi><m:mo>≥</m:mo><m:mn>0</m:mn></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>b</m:mi><m:mo>&gt;</m:mo><m:mi>a</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Let <m:math overflow="scroll"><m:mi>n</m:mi></m:math> be a natural number for which <m:math overflow="scroll"><m:mrow><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>n</m:mi></m:mrow></m:math> is less than the positive number <m:math overflow="scroll"><m:mrow><m:mi>b</m:mi><m:mo>-</m:mo><m:mi>a</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+(Here, we are using the completeness of the field, because we
+are referring to Theorem 1.7, where completeness was vital.)
+If <m:math overflow="scroll"><m:mrow><m:mi>a</m:mi><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> then <m:math overflow="scroll"><m:mrow><m:mi>b</m:mi><m:mo>=</m:mo><m:mi>b</m:mi><m:mo>-</m:mo><m:mi>a</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Setting <m:math overflow="scroll"><m:mrow><m:mi>r</m:mi><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>n</m:mi><m:mo>,</m:mo></m:mrow></m:math> we would have that <m:math overflow="scroll"><m:mrow><m:mi>a</m:mi><m:mo>&lt;</m:mo><m:mi>r</m:mi><m:mo>&lt;</m:mo><m:mi>b</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+So, again, the first part of the theorem would be proved in that case.</para>
+    <para id="id280855">Suppose then that <m:math overflow="scroll"><m:mrow><m:mi>a</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> and choose the natural number <m:math overflow="scroll"><m:mi>q</m:mi></m:math> to be such that
+<m:math overflow="scroll"><m:mrow><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>q</m:mi></m:mrow></m:math> is less than the minimum of the two positive numbers <m:math overflow="scroll"><m:mi>a</m:mi></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>b</m:mi><m:mo>-</m:mo><m:mi>a</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Now, because the number <m:math overflow="scroll"><m:mrow><m:mi>a</m:mi><m:mi>q</m:mi></m:mrow></m:math> is not an upper bound for the set <m:math overflow="scroll"><m:mrow><m:mi>N</m:mi><m:mo>,</m:mo></m:mrow></m:math> we may let <m:math overflow="scroll"><m:mi>p</m:mi></m:math> be the smallest natural number
+that is larger than <m:math overflow="scroll"><m:mrow><m:mi>a</m:mi><m:mi>q</m:mi><m:mo>.</m:mo></m:mrow></m:math> Set <m:math overflow="scroll"><m:mrow><m:mi>r</m:mi><m:mo>=</m:mo><m:mi>p</m:mi><m:mo>/</m:mo><m:mi>q</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+    <para id="id280998">We have first that <m:math overflow="scroll"><m:mrow><m:mi>a</m:mi><m:mi>q</m:mi><m:mo>&lt;</m:mo><m:mi>p</m:mi><m:mo>,</m:mo></m:mrow></m:math> implying that <m:math overflow="scroll"><m:mrow><m:mi>a</m:mi><m:mo>&lt;</m:mo><m:mi>p</m:mi><m:mo>/</m:mo><m:mi>q</m:mi><m:mo>=</m:mo><m:mi>r</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Also, because <m:math overflow="scroll"><m:mi>p</m:mi></m:math> is the smallest natural number larger than <m:math overflow="scroll"><m:mrow><m:mi>a</m:mi><m:mi>q</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+we must have that <m:math overflow="scroll"><m:mrow><m:mi>p</m:mi><m:mo>-</m:mo><m:mn>1</m:mn><m:mo>≤</m:mo><m:mi>a</m:mi><m:mi>q</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Therefore,
+<m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>p</m:mi><m:mo>-</m:mo><m:mn>1</m:mn><m:mo>)</m:mo><m:mo>/</m:mo><m:mi>q</m:mi><m:mo>&lt;</m:mo><m:mi>a</m:mi><m:mo>,</m:mo></m:mrow></m:math> or <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>p</m:mi><m:mo>/</m:mo><m:mi>q</m:mi><m:mo>)</m:mo><m:mo>-</m:mo><m:mo>(</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>q</m:mi><m:mo>)</m:mo><m:mo>&lt;</m:mo><m:mi>a</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+implying that <m:math overflow="scroll"><m:mrow><m:mi>r</m:mi><m:mo>=</m:mo><m:mi>p</m:mi><m:mo>/</m:mo><m:mi>q</m:mi><m:mo>≤</m:mo><m:mi>a</m:mi><m:mo>+</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>q</m:mi><m:mo>&lt;</m:mo><m:mi>a</m:mi><m:mo>+</m:mo><m:mo>(</m:mo><m:mi>b</m:mi><m:mo>-</m:mo><m:mi>a</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mi>b</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Hence, <m:math overflow="scroll"><m:mrow><m:mi>a</m:mi><m:mo>&lt;</m:mo><m:mi>r</m:mi></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>r</m:mi><m:mo>&lt;</m:mo><m:mi>b</m:mi><m:mo>,</m:mo></m:mrow></m:math> and the
+first statement of the theorem is proved
+when both <m:math overflow="scroll"><m:mi>a</m:mi></m:math> and <m:math overflow="scroll"><m:mi>b</m:mi></m:math> are nonnegative.</para>
+    <para id="id281262">If both <m:math overflow="scroll"><m:mi>a</m:mi></m:math> and <m:math overflow="scroll"><m:mi>b</m:mi></m:math> are nonpositive, then both <m:math overflow="scroll"><m:mrow><m:mo>-</m:mo><m:mi>b</m:mi></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mo>-</m:mo><m:mi>a</m:mi></m:mrow></m:math> are nonnegative,
+and, using the first part of the proof, we can find a rational number <m:math overflow="scroll"><m:mi>r</m:mi></m:math> such that <m:math overflow="scroll"><m:mrow><m:mo>-</m:mo><m:mi>b</m:mi><m:mo>&lt;</m:mo><m:mi>r</m:mi><m:mo>&lt;</m:mo><m:mo>-</m:mo><m:mi>a</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+So, <m:math overflow="scroll"><m:mrow><m:mi>a</m:mi><m:mo>&lt;</m:mo><m:mo>-</m:mo><m:mi>r</m:mi><m:mo>&lt;</m:mo><m:mi>b</m:mi><m:mo>,</m:mo></m:mrow></m:math> and the first part of the theorem is proved in this case as well.</para>
+<para id="eip-id8092086">
+Clearly, we may replace <m:math overflow="scroll"><m:mi>b</m:mi></m:math> by <m:math overflow="scroll"><m:mi>r</m:mi></m:math> and repeat the argument to obtain another rational <m:math overflow="scroll"><m:msub><m:mi>r</m:mi><m:mn>1</m:mn></m:msub></m:math> such that
+<m:math overflow="scroll"><m:mrow><m:mi>a</m:mi><m:mo>&lt;</m:mo><m:msub><m:mi>r</m:mi><m:mn>1</m:mn></m:msub><m:mo>&lt;</m:mo><m:mi>r</m:mi><m:mo>&lt;</m:mo><m:mi>b</m:mi><m:mo>.</m:mo></m:mrow></m:math> Then, replacing <m:math overflow="scroll"><m:mi>b</m:mi></m:math> by <m:math overflow="scroll"><m:msub><m:mi>r</m:mi><m:mn>1</m:mn></m:msub></m:math> and repeating the argument, we get a third rational <m:math overflow="scroll"><m:msub><m:mi>r</m:mi><m:mn>2</m:mn></m:msub></m:math>
+such that <m:math overflow="scroll"><m:mrow><m:mi>a</m:mi><m:mo>&lt;</m:mo><m:msub><m:mi>r</m:mi><m:mn>2</m:mn></m:msub><m:mo>&lt;</m:mo><m:msub><m:mi>r</m:mi><m:mn>1</m:mn></m:msub><m:mo>&lt;</m:mo><m:mi>r</m:mi><m:mo>&lt;</m:mo><m:mi>b</m:mi><m:mo>.</m:mo></m:mrow></m:math> Continuing this procedure would lead to an infinite number of rationals, all between <m:math overflow="scroll"><m:mi>a</m:mi></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>b</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+This proves the second statement of the theorem.</para>
+</proof></rule>
+    
+   
+<exercise id="fs-id1167356786329"><problem id="fs-id1167367687142">
+    <list id="id281543" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid15"> Let <m:math overflow="scroll"><m:mrow><m:mi>ϵ</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn></m:mrow></m:math> be given, and let <m:math overflow="scroll"><m:mi>k</m:mi></m:math> be a nonnegative integer.
+Prove that there exists a rational number <m:math overflow="scroll"><m:mrow><m:mi>p</m:mi><m:mo>/</m:mo><m:mi>q</m:mi></m:mrow></m:math> such that
+<equation id="id281597"><m:math overflow="scroll" mode="display"><m:mrow><m:mi>k</m:mi><m:mi>ϵ</m:mi><m:mo>&lt;</m:mo><m:mi>p</m:mi><m:mo>/</m:mo><m:mi>q</m:mi><m:mo>&lt;</m:mo><m:mo>(</m:mo><m:mi>k</m:mi><m:mo>+</m:mo><m:mn>1</m:mn><m:mo>)</m:mo><m:mi>ϵ</m:mi><m:mo>.</m:mo></m:mrow></m:math></equation></item>
+      <item id="uid16"> Let <m:math overflow="scroll"><m:mi>x</m:mi></m:math> be a positive real number and let <m:math overflow="scroll"><m:mi>ϵ</m:mi></m:math> be a positive real number. Prove that there exists a rational number
+<m:math overflow="scroll"><m:mrow><m:mi>p</m:mi><m:mo>/</m:mo><m:mi>q</m:mi></m:mrow></m:math> such that <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>-</m:mo><m:mi>ϵ</m:mi><m:mo>&lt;</m:mo><m:mi>p</m:mi><m:mo>/</m:mo><m:mi>q</m:mi><m:mo>&lt;</m:mo><m:mi>x</m:mi><m:mo>.</m:mo></m:mrow></m:math> State and prove an analogous result for negative numbers <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+    </list>
+</problem></exercise>
+<exercise id="fs-id6123088"><problem id="fs-id1167352199332">
+   
+    <list id="id281733" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid17"> If <m:math overflow="scroll"><m:mi>a</m:mi></m:math> and <m:math overflow="scroll"><m:mi>b</m:mi></m:math> are real numbers with <m:math overflow="scroll"><m:mrow><m:mi>a</m:mi><m:mo>&lt;</m:mo><m:mi>b</m:mi><m:mo>,</m:mo></m:mrow></m:math> show that there is an irrational number <m:math overflow="scroll"><m:mi>x</m:mi></m:math> (not a rational number) between
+<m:math overflow="scroll"><m:mi>a</m:mi></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>b</m:mi><m:mo>,</m:mo></m:mrow></m:math> i.e., with <m:math overflow="scroll"><m:mrow><m:mi>a</m:mi><m:mo>&lt;</m:mo><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mi>b</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+HINT: Apply <link target-id="fs-id1167349626367"/> to the numbers <m:math overflow="scroll"><m:mrow><m:mi>a</m:mi><m:msqrt><m:mn>2</m:mn></m:msqrt></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>b</m:mi><m:msqrt><m:mn>2</m:mn></m:msqrt><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid18"> Conclude that within every open interval <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo></m:mrow></m:math> there is a rational number
+and an irrational number.
+Are there necessarily infinitely many rationals and irrationals in <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo><m:mo>?</m:mo></m:mrow></m:math></item>
+    </list>
+</problem></exercise>
+    <para id="id281918">The preceding exercise shows the “denseness” of the rationals and the irrationals in the reals. It is essentially clear from this that every real number is arbitrarily close to a rational number and an irrational one.</para>
+    <!--empty paragraphs get left behind.-->
+  </content>
+</document>

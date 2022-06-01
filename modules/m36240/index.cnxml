@@ -1,0 +1,1320 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML">
+  <title>The Open Mapping Theorem and the Inverse Function Theorem</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m36240</md:content-id>
+  <md:title>The Open Mapping Theorem and the Inverse Function Theorem</md:title>
+  <md:abstract>We turn next to a question about functions of a complex variable that is related to the
+Inverse Function Theorem.
+That result asserts, subject to a couple of hypotheses, that the inverse of a one-to-one differentiable function
+of a real variable is also differentiable.
+Since a function is only differentiable at points in the interior of its domain, it
+is necessary to verify that the point <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow></m:math> is in the interior of the domain <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>S</m:mi><m:mo>)</m:mo></m:mrow></m:math> of the inverse function <m:math overflow="scroll"><m:msup><m:mi>f</m:mi><m:mrow><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msup></m:math>
+before the question of differentiability at that point can be addressed.
+And, the peculiar thing is that it is this point about <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow></m:math> being in the interior of <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>S</m:mi><m:mo>)</m:mo></m:mrow></m:math> that is the subtle part.
+The fact that the inverse function is differentiable there, and
+has the prescribed form, is then only a careful <m:math overflow="scroll"><m:mrow><m:mi>ϵ</m:mi><m:mo>-</m:mo><m:mi>δ</m:mi></m:mrow></m:math> argument.
+For continuous real-valued functions of real variables, the fact that <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow></m:math> belongs to the interior of <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>S</m:mi><m:mo>)</m:mo></m:mrow></m:math> boils down
+to the fact that intervals get mapped onto intervals by continuous functions,
+which is basically a consequence of the Intermediate Value Theorem.
+However, for complex-valued functions of complex variables, the
+situation is much deeper. For instance, the continuous image of a disk
+is just not always another disk, and it may not even be an open set.
+Well, all is not lost; we just have to work a little harder.</md:abstract>
+  <md:uuid>568aaaf6-c81a-4bb9-95d0-a5de124f4509</md:uuid>
+</metadata>
+
+<content>
+    <para id="id306007">We turn next to a question about functions of a complex variable that is related to <link target-id="fs-id1169880924650" document="m36203"/>, the
+Inverse Function Theorem.
+That result asserts, subject to a couple of hypotheses, that the inverse of a one-to-one differentiable function
+of a real variable is also differentiable.
+Since a function is only differentiable at points in the interior of its domain, it
+is necessary to verify that the point <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow></m:math> is in the interior of the domain <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>S</m:mi><m:mo>)</m:mo></m:mrow></m:math> of the inverse function <m:math overflow="scroll"><m:msup><m:mi>f</m:mi><m:mrow><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msup></m:math>
+before the question of differentiability at that point can be addressed.
+And, the peculiar thing is that it is this point about <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow></m:math> being in the interior of <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>S</m:mi><m:mo>)</m:mo></m:mrow></m:math> that is the subtle part.
+The fact that the inverse function is differentiable there, and
+has the prescribed form, is then only a careful <m:math overflow="scroll"><m:mrow><m:mi>ϵ</m:mi><m:mo>-</m:mo><m:mi>δ</m:mi></m:mrow></m:math> argument.
+For continuous real-valued functions of real variables, the fact that <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow></m:math> belongs to the interior of <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>S</m:mi><m:mo>)</m:mo></m:mrow></m:math> boils down
+to the fact that intervals get mapped onto intervals by continuous functions,
+which is basically a consequence of the Intermediate Value Theorem.
+However, for complex-valued functions of complex variables, the
+situation is much deeper. For instance, the continuous image of a disk
+is just not always another disk, and it may not even be an open set.
+Well, all is not lost; we just have to work a little harder.</para>
+<rule id="fs-id1167524484222" type="theorem"><title>Open Mapping Theorem</title><statement id="fs-id1167525616799">
+    <para id="id306483">
+
+Let <m:math overflow="scroll"><m:mi>S</m:mi></m:math> be a piecewise smooth geometric set, and write <m:math overflow="scroll"><m:mi>U</m:mi></m:math>
+for the (open) interior <m:math overflow="scroll"><m:msup><m:mi>S</m:mi><m:mn>0</m:mn></m:msup></m:math> of <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Suppose <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is a nonconstant differentiable, complex-valued function on the set <m:math overflow="scroll"><m:mrow><m:mi>U</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Then the range <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>U</m:mi><m:mo>)</m:mo></m:mrow></m:math>of <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is an open subset of <m:math overflow="scroll"><m:mrow><m:mi>C</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+</statement>
+<proof id="fs-id1167524342926">
+    <para id="id306590">Let <m:math overflow="scroll"><m:mi>c</m:mi></m:math> be in <m:math overflow="scroll"><m:mrow><m:mi>U</m:mi><m:mo>.</m:mo></m:mrow></m:math> Because <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is not
+a constant function, there must exist an <m:math overflow="scroll"><m:mrow><m:mi>r</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn></m:mrow></m:math> such that <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo><m:mo>≠</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow></m:math> for all <m:math overflow="scroll"><m:mi>z</m:mi></m:math> on the boundary <m:math overflow="scroll"><m:msub><m:mi>C</m:mi><m:mi>r</m:mi></m:msub></m:math> of the disk <m:math overflow="scroll"><m:mrow><m:msub><m:mi>B</m:mi><m:mi>r</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math>
+See part (b) of <link target-id="fs-id4436138" document="m36237"/>.
+Let <m:math overflow="scroll"><m:msub><m:mi>z</m:mi><m:mn>0</m:mn></m:msub></m:math> be a point in the compact set <m:math overflow="scroll"><m:msub><m:mi>C</m:mi><m:mi>r</m:mi></m:msub></m:math> at which the continuous real-valued function <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo><m:mo>-</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo><m:mo>|</m:mo></m:mrow></m:math> attains its minimum value <m:math overflow="scroll"><m:mrow><m:mi>s</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Since <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo><m:mo>≠</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow></m:math> for any <m:math overflow="scroll"><m:mrow><m:mi>z</m:mi><m:mo>∈</m:mo><m:msub><m:mi>C</m:mi><m:mi>r</m:mi></m:msub><m:mo>,</m:mo></m:mrow></m:math> we must have that <m:math overflow="scroll"><m:mrow><m:mi>s</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math>
+We claim that the disk <m:math overflow="scroll"><m:mrow><m:msub><m:mi>B</m:mi><m:mrow><m:mi>s</m:mi><m:mo>/</m:mo><m:mn>2</m:mn></m:mrow></m:msub><m:mrow><m:mo>(</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> belongs to the range <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>U</m:mi><m:mo>)</m:mo></m:mrow></m:math> of <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+This will show that the point <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow></m:math> belongs to the ihnterior of the set <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>U</m:mi><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math>
+and that will finish the proof.</para>
+    <para id="id307112">By way of contradiction,
+suppose <m:math overflow="scroll"><m:mrow><m:msub><m:mi>B</m:mi><m:mrow><m:mi>s</m:mi><m:mo>/</m:mo><m:mn>2</m:mn></m:mrow></m:msub><m:mrow><m:mo>(</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:mrow></m:math> is not contained in <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>U</m:mi><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math>, and let <m:math overflow="scroll"><m:mrow><m:mi>w</m:mi><m:mo>∈</m:mo><m:msub><m:mi>B</m:mi><m:mrow><m:mi>s</m:mi><m:mo>/</m:mo><m:mn>2</m:mn></m:mrow></m:msub><m:mrow><m:mo>(</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> be a complex number that is not in <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>U</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+We have that <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>w</m:mi><m:mo>-</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mi>s</m:mi><m:mo>/</m:mo><m:mn>2</m:mn><m:mo>,</m:mo></m:mrow></m:math> which implies that <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>w</m:mi><m:mo>-</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo><m:mo>|</m:mo><m:mo>&gt;</m:mo><m:mi>s</m:mi><m:mo>/</m:mo><m:mn>2</m:mn></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>z</m:mi><m:mo>∈</m:mo><m:msub><m:mi>C</m:mi><m:mi>r</m:mi></m:msub><m:mo>.</m:mo></m:mrow></m:math>
+Consider the function <m:math overflow="scroll"><m:mi>g</m:mi></m:math> defined on the closed disk <m:math overflow="scroll"><m:mrow><m:msub><m:mover><m:mi>B</m:mi><m:mo>¯</m:mo></m:mover><m:mi>r</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> by <m:math overflow="scroll"><m:mrow><m:mi>g</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mo>(</m:mo><m:mi>w</m:mi><m:mo>-</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Then <m:math overflow="scroll"><m:mi>g</m:mi></m:math> is continuous on the closed disk <m:math overflow="scroll"><m:mrow><m:msub><m:mover><m:mi>B</m:mi><m:mo>¯</m:mo></m:mover><m:mi>r</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> and differentiable on <m:math overflow="scroll"><m:mrow><m:msub><m:mi>B</m:mi><m:mi>r</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math>
+Moreover, <m:math overflow="scroll"><m:mi>g</m:mi></m:math> is not a constant function, for if it were,
+<m:math overflow="scroll"><m:mi>f</m:mi></m:math> would also be a constant function on <m:math overflow="scroll"><m:mrow><m:msub><m:mi>B</m:mi><m:mi>r</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> and therefore, by the Identity Theorem, constant on all of <m:math overflow="scroll"><m:mrow><m:mi>U</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+whichg is not the case by hypothesis.
+Hence, by the Maximum Modulus Principle,
+the maximum value of <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>g</m:mi><m:mo>|</m:mo></m:mrow></m:math> only occurs on the boundary <m:math overflow="scroll"><m:msub><m:mi>C</m:mi><m:mi>r</m:mi></m:msub></m:math> of this disk. That is,
+there exists a point <m:math overflow="scroll"><m:mrow><m:msup><m:mi>z</m:mi><m:mo>'</m:mo></m:msup><m:mo>∈</m:mo><m:msub><m:mi>C</m:mi><m:mi>r</m:mi></m:msub></m:mrow></m:math> such that <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mo>|</m:mo><m:mi>g</m:mi></m:mrow><m:mrow><m:mo>(</m:mo><m:msup><m:mi>z</m:mi><m:mo>'</m:mo></m:msup><m:mo>)</m:mo></m:mrow><m:mrow><m:mo>|</m:mo></m:mrow></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>z</m:mi><m:mo>∈</m:mo><m:msub><m:mi>B</m:mi><m:mi>r</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math>
+But then</para>
+    <equation id="id307615">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mfrac>
+            <m:mn>2</m:mn>
+            <m:mi>s</m:mi>
+          </m:mfrac>
+          <m:mo>=</m:mo>
+          <m:mfrac>
+            <m:mn>1</m:mn>
+            <m:mrow>
+              <m:mi>s</m:mi>
+              <m:mo>/</m:mo>
+              <m:mn>2</m:mn>
+            </m:mrow>
+          </m:mfrac>
+          <m:mo>&lt;</m:mo>
+          <m:mfrac>
+            <m:mn>1</m:mn>
+            <m:mrow>
+              <m:mo>|</m:mo>
+              <m:mi>w</m:mi>
+              <m:mo>-</m:mo>
+              <m:mi>f</m:mi>
+              <m:mo>(</m:mo>
+              <m:mi>c</m:mi>
+              <m:mo>)</m:mo>
+              <m:mo>|</m:mo>
+            </m:mrow>
+          </m:mfrac>
+          <m:mo>&lt;</m:mo>
+          <m:mfrac>
+            <m:mn>1</m:mn>
+            <m:mrow>
+              <m:mo>|</m:mo>
+              <m:mi>w</m:mi>
+              <m:mo>-</m:mo>
+              <m:mi>f</m:mi>
+              <m:mo>(</m:mo>
+              <m:msup>
+                <m:mi>z</m:mi>
+                <m:mo>'</m:mo>
+              </m:msup>
+              <m:mo>)</m:mo>
+              <m:mo>|</m:mo>
+            </m:mrow>
+          </m:mfrac>
+          <m:mo>≤</m:mo>
+          <m:mfrac>
+            <m:mn>1</m:mn>
+            <m:mi>s</m:mi>
+          </m:mfrac>
+          <m:mo>,</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id307710">which gives the desired contradiction.
+Therefore, the entire disk <m:math overflow="scroll"><m:mrow><m:msub><m:mi>B</m:mi><m:mrow><m:mi>s</m:mi><m:mo>/</m:mo><m:mn>2</m:mn></m:mrow></m:msub><m:mrow><m:mo>(</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> belongs to <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>U</m:mi><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math> and hence the point <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow></m:math> belongs
+to the interior of the set <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>U</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math> Since this holds for any point <m:math overflow="scroll"><m:mrow><m:mi>c</m:mi><m:mo>∈</m:mo><m:mi>U</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+it follows that <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>U</m:mi><m:mo>)</m:mo></m:mrow></m:math> is open, as desired.</para>
+</proof></rule>
+    <para id="id307831">Now we can give the version of the Inverse Function Theorem for complex variables.</para>
+<rule id="fs-id1167524382662" type="theorem"><statement id="fs-id1167525602471">
+    <para id="id307835">
+Let <m:math overflow="scroll"><m:mi>S</m:mi></m:math> be a piecewise smooth geometric set, and
+suppose <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>:</m:mo><m:mi>S</m:mi><m:mo>→</m:mo><m:mi>C</m:mi></m:mrow></m:math> is continuously differentiable at a point <m:math overflow="scroll"><m:mrow><m:mi>c</m:mi><m:mo>=</m:mo><m:mi>a</m:mi><m:mo>+</m:mo><m:mi>b</m:mi><m:mi>i</m:mi><m:mo>,</m:mo></m:mrow></m:math> and assume that <m:math overflow="scroll"><m:mrow><m:msup><m:mi>f</m:mi><m:mo>'</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>≠</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math>
+Then:</para>
+    <list id="id307926" display="block" list-type="enumerated">
+      <item id="uid1">There exists an <m:math overflow="scroll"><m:mrow><m:mi>r</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> such that <m:math overflow="scroll"><m:mrow><m:msub><m:mover><m:mi>B</m:mi><m:mo>¯</m:mo></m:mover><m:mi>r</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>⊆</m:mo><m:mi>S</m:mi><m:mo>,</m:mo></m:mrow></m:math> for which
+<m:math overflow="scroll"><m:mi>f</m:mi></m:math> is one-to-one on <m:math overflow="scroll"><m:mrow><m:msub><m:mover><m:mi>B</m:mi><m:mo>¯</m:mo></m:mover><m:mi>r</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid2"> <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow></m:math> belongs to the interior of <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>S</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid3">If <m:math overflow="scroll"><m:mi>g</m:mi></m:math> denotes the restriction of the function <m:math overflow="scroll"><m:mi>f</m:mi></m:math> to <m:math overflow="scroll"><m:mrow><m:msub><m:mi>B</m:mi><m:mi>r</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> then
+<m:math overflow="scroll"><m:mi>g</m:mi></m:math> is one-to-one, <m:math overflow="scroll"><m:msup><m:mi>g</m:mi><m:mrow><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msup></m:math> is differentiable at
+the point <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:msup><m:mrow><m:msup><m:mi>g</m:mi><m:mrow><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msup></m:mrow><m:mo>'</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>/</m:mo></m:mrow><m:msup><m:mi>f</m:mi><m:mo>'</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></item>
+    </list>
+</statement>
+<proof id="fs-id1167524714060">
+    <para id="id308223">Arguing by contradiction, suppose that <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is not one-to-one on any disk <m:math overflow="scroll"><m:mrow><m:msub><m:mover><m:mi>B</m:mi><m:mo>¯</m:mo></m:mover><m:mi>r</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math>
+Then, for each natural number <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>,</m:mo></m:mrow></m:math> there must exist two points <m:math overflow="scroll"><m:mrow><m:msub><m:mi>z</m:mi><m:mi>n</m:mi></m:msub><m:mo>=</m:mo><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mo>+</m:mo><m:mi>i</m:mi><m:msub><m:mi>y</m:mi><m:mi>n</m:mi></m:msub></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:msubsup><m:mi>z</m:mi><m:mi>n</m:mi><m:mo>'</m:mo></m:msubsup><m:mo>=</m:mo><m:msubsup><m:mi>x</m:mi><m:mi>n</m:mi><m:mo>'</m:mo></m:msubsup><m:mo>+</m:mo><m:mi>i</m:mi><m:msubsup><m:mi>y</m:mi><m:mi>n</m:mi><m:mo>'</m:mo></m:msubsup></m:mrow></m:math> such that
+<m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msub><m:mi>z</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mo>-</m:mo><m:mi>c</m:mi><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>n</m:mi><m:mo>,</m:mo></m:mrow></m:mrow></m:math><m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msubsup><m:mi>z</m:mi><m:mi>n</m:mi><m:mo>'</m:mo></m:msubsup><m:mrow><m:mo>-</m:mo><m:mi>c</m:mi><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>n</m:mi><m:mo>,</m:mo></m:mrow></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:msub><m:mi>z</m:mi><m:mi>n</m:mi></m:msub><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:msubsup><m:mi>z</m:mi><m:mi>n</m:mi><m:mo>'</m:mo></m:msubsup><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math>
+If we write <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>=</m:mo><m:mi>u</m:mi><m:mo>+</m:mo><m:mi>i</m:mi><m:mi>v</m:mi><m:mo>,</m:mo></m:mrow></m:math> then we would have that
+<m:math overflow="scroll"><m:mrow><m:mi>u</m:mi><m:mrow><m:mo>(</m:mo><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mo>,</m:mo><m:msub><m:mi>y</m:mi><m:mi>n</m:mi></m:msub><m:mo>)</m:mo></m:mrow><m:mo>-</m:mo><m:mi>u</m:mi><m:mrow><m:mo>(</m:mo><m:msubsup><m:mi>x</m:mi><m:mi>n</m:mi><m:mo>'</m:mo></m:msubsup><m:mo>,</m:mo><m:msubsup><m:mi>y</m:mi><m:mi>n</m:mi><m:mo>'</m:mo></m:msubsup><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+So, by part (c) of <link target-id="fs-id1166169558623" document="m36206"/>,
+there must exist for each <m:math overflow="scroll"><m:mi>n</m:mi></m:math> a point <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:msub><m:mover accent="true"><m:mi>x</m:mi><m:mo>^</m:mo></m:mover><m:mi>n</m:mi></m:msub><m:mo>,</m:mo><m:msub><m:mover accent="true"><m:mi>y</m:mi><m:mo>^</m:mo></m:mover><m:mi>n</m:mi></m:msub><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math> such that <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:msub><m:mover accent="true"><m:mi>x</m:mi><m:mo>^</m:mo></m:mover><m:mi>n</m:mi></m:msub><m:mo>,</m:mo><m:msub><m:mover accent="true"><m:mi>y</m:mi><m:mo>^</m:mo></m:mover><m:mi>n</m:mi></m:msub><m:mo>)</m:mo></m:mrow></m:math> is on the line segment
+joining <m:math overflow="scroll"><m:msub><m:mi>z</m:mi><m:mi>n</m:mi></m:msub></m:math> and <m:math overflow="scroll"><m:mrow><m:msubsup><m:mi>z</m:mi><m:mi>n</m:mi><m:mo>'</m:mo></m:msubsup><m:mo>,</m:mo></m:mrow></m:math> and for which</para>
+    <equation id="id308724">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mn>0</m:mn>
+          <m:mo>=</m:mo>
+          <m:mi>u</m:mi>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:msub>
+              <m:mi>x</m:mi>
+              <m:mi>n</m:mi>
+            </m:msub>
+            <m:mo>,</m:mo>
+            <m:msub>
+              <m:mi>y</m:mi>
+              <m:mi>n</m:mi>
+            </m:msub>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>-</m:mo>
+          <m:mi>u</m:mi>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:msubsup>
+              <m:mi>x</m:mi>
+              <m:mi>n</m:mi>
+              <m:mo>'</m:mo>
+            </m:msubsup>
+            <m:mo>,</m:mo>
+            <m:msubsup>
+              <m:mi>y</m:mi>
+              <m:mi>n</m:mi>
+              <m:mo>'</m:mo>
+            </m:msubsup>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>=</m:mo>
+          <m:mfrac>
+            <m:mrow>
+              <m:mi>t</m:mi>
+              <m:mi>i</m:mi>
+              <m:mi>a</m:mi>
+              <m:mi>l</m:mi>
+              <m:mi>u</m:mi>
+            </m:mrow>
+            <m:mrow>
+              <m:mi>t</m:mi>
+              <m:mi>i</m:mi>
+              <m:mi>a</m:mi>
+              <m:mi>l</m:mi>
+              <m:mi>x</m:mi>
+            </m:mrow>
+          </m:mfrac>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:msub>
+              <m:mover accent="true">
+                <m:mi>x</m:mi>
+                <m:mo>^</m:mo>
+              </m:mover>
+              <m:mi>n</m:mi>
+            </m:msub>
+            <m:mo>,</m:mo>
+            <m:msub>
+              <m:mover accent="true">
+                <m:mi>y</m:mi>
+                <m:mo>^</m:mo>
+              </m:mover>
+              <m:mi>n</m:mi>
+            </m:msub>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:msub>
+              <m:mi>x</m:mi>
+              <m:mi>n</m:mi>
+            </m:msub>
+            <m:mo>-</m:mo>
+            <m:msubsup>
+              <m:mi>x</m:mi>
+              <m:mi>n</m:mi>
+              <m:mo>'</m:mo>
+            </m:msubsup>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>+</m:mo>
+          <m:mfrac>
+            <m:mrow>
+              <m:mi>t</m:mi>
+              <m:mi>i</m:mi>
+              <m:mi>a</m:mi>
+              <m:mi>l</m:mi>
+              <m:mi>u</m:mi>
+            </m:mrow>
+            <m:mrow>
+              <m:mi>t</m:mi>
+              <m:mi>i</m:mi>
+              <m:mi>a</m:mi>
+              <m:mi>l</m:mi>
+              <m:mi>y</m:mi>
+            </m:mrow>
+          </m:mfrac>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:msub>
+              <m:mover accent="true">
+                <m:mi>x</m:mi>
+                <m:mo>^</m:mo>
+              </m:mover>
+              <m:mi>n</m:mi>
+            </m:msub>
+            <m:mo>,</m:mo>
+            <m:msub>
+              <m:mover accent="true">
+                <m:mi>y</m:mi>
+                <m:mo>^</m:mo>
+              </m:mover>
+              <m:mi>n</m:mi>
+            </m:msub>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:msub>
+              <m:mi>y</m:mi>
+              <m:mi>n</m:mi>
+            </m:msub>
+            <m:mo>-</m:mo>
+            <m:msubsup>
+              <m:mi>y</m:mi>
+              <m:mi>n</m:mi>
+              <m:mo>'</m:mo>
+            </m:msubsup>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>.</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id308977">Similarly, applying the same kind of reasoning to <m:math overflow="scroll"><m:mrow><m:mi>v</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+there must exist points <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:msub><m:mover accent="true"><m:mi>x</m:mi><m:mo>˜</m:mo></m:mover><m:mi>n</m:mi></m:msub><m:mo>,</m:mo><m:msub><m:mover accent="true"><m:mi>y</m:mi><m:mo>˜</m:mo></m:mover><m:mi>n</m:mi></m:msub><m:mo>)</m:mo></m:mrow></m:math> on the segment joining <m:math overflow="scroll"><m:msub><m:mi>z</m:mi><m:mi>n</m:mi></m:msub></m:math> to <m:math overflow="scroll"><m:msubsup><m:mi>z</m:mi><m:mi>n</m:mi><m:mo>'</m:mo></m:msubsup></m:math> such that</para>
+    <equation id="id309070">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mn>0</m:mn>
+          <m:mo>=</m:mo>
+          <m:mfrac>
+            <m:mrow>
+              <m:mi>t</m:mi>
+              <m:mi>i</m:mi>
+              <m:mi>a</m:mi>
+              <m:mi>l</m:mi>
+              <m:mi>v</m:mi>
+            </m:mrow>
+            <m:mrow>
+              <m:mi>t</m:mi>
+              <m:mi>i</m:mi>
+              <m:mi>a</m:mi>
+              <m:mi>l</m:mi>
+              <m:mi>x</m:mi>
+            </m:mrow>
+          </m:mfrac>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:msub>
+              <m:mover accent="true">
+                <m:mi>x</m:mi>
+                <m:mo>˜</m:mo>
+              </m:mover>
+              <m:mi>n</m:mi>
+            </m:msub>
+            <m:mo>,</m:mo>
+            <m:msub>
+              <m:mover accent="true">
+                <m:mi>y</m:mi>
+                <m:mo>˜</m:mo>
+              </m:mover>
+              <m:mi>n</m:mi>
+            </m:msub>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:msub>
+              <m:mi>x</m:mi>
+              <m:mi>n</m:mi>
+            </m:msub>
+            <m:mo>-</m:mo>
+            <m:msubsup>
+              <m:mi>x</m:mi>
+              <m:mi>n</m:mi>
+              <m:mo>'</m:mo>
+            </m:msubsup>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>+</m:mo>
+          <m:mfrac>
+            <m:mrow>
+              <m:mi>t</m:mi>
+              <m:mi>i</m:mi>
+              <m:mi>a</m:mi>
+              <m:mi>l</m:mi>
+              <m:mi>v</m:mi>
+            </m:mrow>
+            <m:mrow>
+              <m:mi>t</m:mi>
+              <m:mi>i</m:mi>
+              <m:mi>a</m:mi>
+              <m:mi>l</m:mi>
+              <m:mi>y</m:mi>
+            </m:mrow>
+          </m:mfrac>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:msub>
+              <m:mover accent="true">
+                <m:mi>x</m:mi>
+                <m:mo>˜</m:mo>
+              </m:mover>
+              <m:mi>n</m:mi>
+            </m:msub>
+            <m:mo>,</m:mo>
+            <m:msub>
+              <m:mover accent="true">
+                <m:mi>y</m:mi>
+                <m:mo>˜</m:mo>
+              </m:mover>
+              <m:mi>n</m:mi>
+            </m:msub>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:msub>
+              <m:mi>y</m:mi>
+              <m:mi>n</m:mi>
+            </m:msub>
+            <m:mo>-</m:mo>
+            <m:msubsup>
+              <m:mi>y</m:mi>
+              <m:mi>n</m:mi>
+              <m:mo>'</m:mo>
+            </m:msubsup>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>.</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id309263">If we define vectors <m:math overflow="scroll"><m:msub><m:mover accent="true"><m:mi>U</m:mi><m:mo>→</m:mo></m:mover><m:mi>n</m:mi></m:msub></m:math> and <m:math overflow="scroll"><m:msub><m:mover accent="true"><m:mi>V</m:mi><m:mo>→</m:mo></m:mover><m:mi>n</m:mi></m:msub></m:math> by</para>
+    <equation id="id309311">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:msub>
+            <m:mover accent="true">
+              <m:mi>U</m:mi>
+              <m:mo>→</m:mo>
+            </m:mover>
+            <m:mi>n</m:mi>
+          </m:msub>
+          <m:mo>=</m:mo>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mfrac>
+              <m:mrow>
+                <m:mi>t</m:mi>
+                <m:mi>i</m:mi>
+                <m:mi>a</m:mi>
+                <m:mi>l</m:mi>
+                <m:mi>u</m:mi>
+              </m:mrow>
+              <m:mrow>
+                <m:mi>t</m:mi>
+                <m:mi>i</m:mi>
+                <m:mi>a</m:mi>
+                <m:mi>l</m:mi>
+                <m:mi>x</m:mi>
+              </m:mrow>
+            </m:mfrac>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:msub>
+                <m:mover accent="true">
+                  <m:mi>x</m:mi>
+                  <m:mo>^</m:mo>
+                </m:mover>
+                <m:mi>n</m:mi>
+              </m:msub>
+              <m:mo>,</m:mo>
+              <m:msub>
+                <m:mover accent="true">
+                  <m:mi>y</m:mi>
+                  <m:mo>^</m:mo>
+                </m:mover>
+                <m:mi>n</m:mi>
+              </m:msub>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>,</m:mo>
+            <m:mfrac>
+              <m:mrow>
+                <m:mi>t</m:mi>
+                <m:mi>i</m:mi>
+                <m:mi>a</m:mi>
+                <m:mi>l</m:mi>
+                <m:mi>u</m:mi>
+              </m:mrow>
+              <m:mrow>
+                <m:mi>t</m:mi>
+                <m:mi>i</m:mi>
+                <m:mi>a</m:mi>
+                <m:mi>l</m:mi>
+                <m:mi>y</m:mi>
+              </m:mrow>
+            </m:mfrac>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:msub>
+                <m:mover accent="true">
+                  <m:mi>x</m:mi>
+                  <m:mo>^</m:mo>
+                </m:mover>
+                <m:mi>n</m:mi>
+              </m:msub>
+              <m:mo>,</m:mo>
+              <m:msub>
+                <m:mover accent="true">
+                  <m:mi>y</m:mi>
+                  <m:mo>^</m:mo>
+                </m:mover>
+                <m:mi>n</m:mi>
+              </m:msub>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>)</m:mo>
+          </m:mrow>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id309467">and</para>
+    <equation id="id309473">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:msub>
+            <m:mover accent="true">
+              <m:mi>V</m:mi>
+              <m:mo>→</m:mo>
+            </m:mover>
+            <m:mi>n</m:mi>
+          </m:msub>
+          <m:mo>=</m:mo>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mfrac>
+              <m:mrow>
+                <m:mi>t</m:mi>
+                <m:mi>i</m:mi>
+                <m:mi>a</m:mi>
+                <m:mi>l</m:mi>
+                <m:mi>v</m:mi>
+              </m:mrow>
+              <m:mrow>
+                <m:mi>t</m:mi>
+                <m:mi>i</m:mi>
+                <m:mi>a</m:mi>
+                <m:mi>l</m:mi>
+                <m:mi>x</m:mi>
+              </m:mrow>
+            </m:mfrac>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:msub>
+                <m:mover accent="true">
+                  <m:mi>x</m:mi>
+                  <m:mo>˜</m:mo>
+                </m:mover>
+                <m:mi>n</m:mi>
+              </m:msub>
+              <m:mo>,</m:mo>
+              <m:msub>
+                <m:mover accent="true">
+                  <m:mi>y</m:mi>
+                  <m:mo>˜</m:mo>
+                </m:mover>
+                <m:mi>n</m:mi>
+              </m:msub>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>,</m:mo>
+            <m:mfrac>
+              <m:mrow>
+                <m:mi>t</m:mi>
+                <m:mi>i</m:mi>
+                <m:mi>a</m:mi>
+                <m:mi>l</m:mi>
+                <m:mi>v</m:mi>
+              </m:mrow>
+              <m:mrow>
+                <m:mi>t</m:mi>
+                <m:mi>i</m:mi>
+                <m:mi>a</m:mi>
+                <m:mi>l</m:mi>
+                <m:mi>y</m:mi>
+              </m:mrow>
+            </m:mfrac>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:msub>
+                <m:mover accent="true">
+                  <m:mi>x</m:mi>
+                  <m:mo>˜</m:mo>
+                </m:mover>
+                <m:mi>n</m:mi>
+              </m:msub>
+              <m:mo>,</m:mo>
+              <m:msub>
+                <m:mover accent="true">
+                  <m:mi>y</m:mi>
+                  <m:mo>˜</m:mo>
+                </m:mover>
+                <m:mi>n</m:mi>
+              </m:msub>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>,</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id309632">then we have that both <m:math overflow="scroll"><m:msub><m:mover accent="true"><m:mi>U</m:mi><m:mo>→</m:mo></m:mover><m:mi>n</m:mi></m:msub></m:math> and <m:math overflow="scroll"><m:msub><m:mover accent="true"><m:mi>V</m:mi><m:mo>→</m:mo></m:mover><m:mi>n</m:mi></m:msub></m:math> are perpendicular to the nonzero vector <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mrow><m:mo>(</m:mo><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mo>-</m:mo><m:msubsup><m:mi>x</m:mi><m:mi>n</m:mi><m:mo>'</m:mo></m:msubsup><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo><m:mrow><m:mo>(</m:mo><m:msub><m:mi>y</m:mi><m:mi>n</m:mi></m:msub><m:mo>-</m:mo><m:msubsup><m:mi>y</m:mi><m:mi>n</m:mi><m:mo>'</m:mo></m:msubsup><m:mo>)</m:mo></m:mrow><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Therefore, <m:math overflow="scroll"><m:msub><m:mover accent="true"><m:mi>U</m:mi><m:mo>→</m:mo></m:mover><m:mi>n</m:mi></m:msub></m:math> and <m:math overflow="scroll"><m:msub><m:mover accent="true"><m:mi>V</m:mi><m:mo>→</m:mo></m:mover><m:mi>n</m:mi></m:msub></m:math> are linearly dependent, whence</para>
+    <equation id="id309790">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mo movablelimits="true" form="prefix">det</m:mo>
+          <m:mo>(</m:mo>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mfrac>
+              <m:mrow>
+                <m:mi> tial </m:mi>
+                <m:mi mathvariant="normal">u</m:mi>
+              </m:mrow>
+              <m:mrow>
+                <m:mi> tial </m:mi>
+                <m:mi mathvariant="normal">x</m:mi>
+              </m:mrow>
+            </m:mfrac>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:msub>
+                  <m:mover accent="true">
+                    <m:mi mathvariant="normal">x</m:mi>
+                    <m:mo>^</m:mo>
+                  </m:mover>
+                  <m:mi mathvariant="normal">n</m:mi>
+                </m:msub>
+                <m:mo>,</m:mo>
+                <m:msub>
+                  <m:mover accent="true">
+                    <m:mi mathvariant="normal">y</m:mi>
+                    <m:mo>^</m:mo>
+                  </m:mover>
+                  <m:mi mathvariant="normal">n</m:mi>
+                </m:msub>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:mfrac>
+                <m:mrow>
+                  <m:mi> tial </m:mi>
+                  <m:mi mathvariant="normal">u</m:mi>
+                </m:mrow>
+                <m:mrow>
+                  <m:mi> tial </m:mi>
+                  <m:mi mathvariant="normal">y</m:mi>
+                </m:mrow>
+              </m:mfrac>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:msub>
+                  <m:mover accent="true">
+                    <m:mi mathvariant="normal">x</m:mi>
+                    <m:mo>^</m:mo>
+                  </m:mover>
+                  <m:mi mathvariant="normal">n</m:mi>
+                </m:msub>
+                <m:mo>,</m:mo>
+                <m:msub>
+                  <m:mover accent="true">
+                    <m:mi mathvariant="normal">y</m:mi>
+                    <m:mo>^</m:mo>
+                  </m:mover>
+                  <m:mi mathvariant="normal">n</m:mi>
+                </m:msub>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:mfrac>
+                <m:mrow>
+                  <m:mi> tial </m:mi>
+                  <m:mi mathvariant="normal">v</m:mi>
+                </m:mrow>
+                <m:mrow>
+                  <m:mi> tial </m:mi>
+                  <m:mi mathvariant="normal">x</m:mi>
+                </m:mrow>
+              </m:mfrac>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:msub>
+                  <m:mover accent="true">
+                    <m:mi mathvariant="normal">x</m:mi>
+                    <m:mo>˜</m:mo>
+                  </m:mover>
+                  <m:mi mathvariant="normal">n</m:mi>
+                </m:msub>
+                <m:mo>,</m:mo>
+                <m:msub>
+                  <m:mover accent="true">
+                    <m:mi mathvariant="normal">y</m:mi>
+                    <m:mo>˜</m:mo>
+                  </m:mover>
+                  <m:mi mathvariant="normal">n</m:mi>
+                </m:msub>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:mfrac>
+                <m:mrow>
+                  <m:mi> tial </m:mi>
+                  <m:mi mathvariant="normal">v</m:mi>
+                </m:mrow>
+                <m:mrow>
+                  <m:mi> tial </m:mi>
+                  <m:mi mathvariant="normal">y</m:mi>
+                </m:mrow>
+              </m:mfrac>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:msub>
+                  <m:mover accent="true">
+                    <m:mi mathvariant="normal">x</m:mi>
+                    <m:mo>˜</m:mo>
+                  </m:mover>
+                  <m:mi mathvariant="normal">n</m:mi>
+                </m:msub>
+                <m:mo>,</m:mo>
+                <m:msub>
+                  <m:mover accent="true">
+                    <m:mi mathvariant="normal">y</m:mi>
+                    <m:mo>˜</m:mo>
+                  </m:mover>
+                  <m:mi mathvariant="normal">n</m:mi>
+                </m:msub>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>=</m:mo>
+          <m:mn>0</m:mn>
+          <m:mo>.</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id310077">Now, since both <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mover accent="true"><m:mi>x</m:mi><m:mo>^</m:mo></m:mover><m:mi>n</m:mi></m:msub><m:mo>+</m:mo><m:mi>i</m:mi><m:msub><m:mover accent="true"><m:mi>y</m:mi><m:mo>^</m:mo></m:mover><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mover accent="true"><m:mi>x</m:mi><m:mo>˜</m:mo></m:mover><m:mi>n</m:mi></m:msub><m:mo>+</m:mo><m:mi>i</m:mi><m:msub><m:mover accent="true"><m:mi>y</m:mi><m:mo>˜</m:mo></m:mover><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> converge to the point <m:math overflow="scroll"><m:mrow><m:mi>c</m:mi><m:mo>=</m:mo><m:mi>a</m:mi><m:mo>+</m:mo><m:mi>i</m:mi><m:mi>b</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+and the partial derivatives of <m:math overflow="scroll"><m:mi>u</m:mi></m:math> and <m:math overflow="scroll"><m:mi>v</m:mi></m:math> are continuous at <m:math overflow="scroll"><m:mrow><m:mi>c</m:mi><m:mo>,</m:mo></m:mrow></m:math> we deduce that</para>
+    <equation id="id310227">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mo movablelimits="true" form="prefix">det</m:mo>
+          <m:mo>(</m:mo>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mfrac>
+              <m:mrow>
+                <m:mi> tial </m:mi>
+                <m:mi mathvariant="normal">u</m:mi>
+              </m:mrow>
+              <m:mrow>
+                <m:mi> tial </m:mi>
+                <m:mi mathvariant="normal">x</m:mi>
+              </m:mrow>
+            </m:mfrac>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi mathvariant="normal">a</m:mi>
+              <m:mo>,</m:mo>
+              <m:mi mathvariant="normal">b</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mfrac>
+              <m:mrow>
+                <m:mi> tial </m:mi>
+                <m:mi mathvariant="normal">u</m:mi>
+              </m:mrow>
+              <m:mrow>
+                <m:mi> tial </m:mi>
+                <m:mi mathvariant="normal">y</m:mi>
+              </m:mrow>
+            </m:mfrac>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi mathvariant="normal">a</m:mi>
+              <m:mo>,</m:mo>
+              <m:mi mathvariant="normal">b</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mfrac>
+              <m:mrow>
+                <m:mi> tial </m:mi>
+                <m:mi mathvariant="normal">v</m:mi>
+              </m:mrow>
+              <m:mrow>
+                <m:mi> tial </m:mi>
+                <m:mi mathvariant="normal">x</m:mi>
+              </m:mrow>
+            </m:mfrac>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi mathvariant="normal">a</m:mi>
+              <m:mo>,</m:mo>
+              <m:mi mathvariant="normal">b</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mfrac>
+              <m:mrow>
+                <m:mi> tial </m:mi>
+                <m:mi mathvariant="normal">v</m:mi>
+              </m:mrow>
+              <m:mrow>
+                <m:mi> tial </m:mi>
+                <m:mi mathvariant="normal">y</m:mi>
+              </m:mrow>
+            </m:mfrac>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi mathvariant="normal">a</m:mi>
+              <m:mo>,</m:mo>
+              <m:mi mathvariant="normal">b</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>)</m:mo>
+          <m:mo>=</m:mo>
+          <m:mn>0</m:mn>
+          <m:mo>.</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id310395">Now, from <link target-id="fs-id1170810917477" document="m36235"/>, this would imply that <m:math overflow="scroll"><m:mrow><m:msup><m:mi>f</m:mi><m:mo>'</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math>
+and this is a contradiction.
+Hence, there must exist an <m:math overflow="scroll"><m:mrow><m:mi>r</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn></m:mrow></m:math> for which <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is one-to-one on <m:math overflow="scroll"><m:mrow><m:msub><m:mover><m:mi>B</m:mi><m:mo>¯</m:mo></m:mover><m:mi>r</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math>
+and this proves part (1).</para>
+    <para id="id310484">Because <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is one-to-one on <m:math overflow="scroll"><m:mrow><m:msub><m:mi>B</m:mi><m:mi>r</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math><m:math overflow="scroll"><m:mi>f</m:mi></m:math> is obviously not a constant function. So, by the
+Open Mapping Theorem, the point <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow></m:math> belongs to the interior of the range of <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+and this proves part (2).</para>
+    <para id="id310559">Now write <m:math overflow="scroll"><m:mi>g</m:mi></m:math> for the restriction of <m:math overflow="scroll"><m:mi>f</m:mi></m:math> to the disk <m:math overflow="scroll"><m:mrow><m:msub><m:mi>B</m:mi><m:mi>r</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math>
+Then <m:math overflow="scroll"><m:mi>g</m:mi></m:math> is one-to-one.
+According to part (2) of <link target-id="fs-id1170287829005" document="m36186"/>,
+we can prove that <m:math overflow="scroll"><m:msup><m:mi>g</m:mi><m:mrow><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msup></m:math> is differentiable at <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow></m:math> by showing that</para>
+    <equation id="id310648">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:munder>
+            <m:mo movablelimits="true" form="prefix">lim</m:mo>
+            <m:mrow>
+              <m:mi>z</m:mi>
+              <m:mo>→</m:mo>
+              <m:mi>f</m:mi>
+              <m:mo>(</m:mo>
+              <m:mi>c</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+          </m:munder>
+          <m:mfrac>
+            <m:mrow>
+              <m:msup>
+                <m:mi>g</m:mi>
+                <m:mrow>
+                  <m:mo>-</m:mo>
+                  <m:mn>1</m:mn>
+                </m:mrow>
+              </m:msup>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>z</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:mo>-</m:mo>
+              <m:msup>
+                <m:mi>g</m:mi>
+                <m:mrow>
+                  <m:mo>-</m:mo>
+                  <m:mn>1</m:mn>
+                </m:mrow>
+              </m:msup>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>f</m:mi>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>c</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mo>)</m:mo>
+              </m:mrow>
+            </m:mrow>
+            <m:mrow>
+              <m:mi>z</m:mi>
+              <m:mo>-</m:mo>
+              <m:mi>f</m:mi>
+              <m:mo>(</m:mo>
+              <m:mi>c</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+          </m:mfrac>
+          <m:mo>=</m:mo>
+          <m:mfrac>
+            <m:mn>1</m:mn>
+            <m:mrow>
+              <m:msup>
+                <m:mi>f</m:mi>
+                <m:mo>'</m:mo>
+              </m:msup>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>c</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+            </m:mrow>
+          </m:mfrac>
+          <m:mo>.</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id310768">That is, we need to show that, given an <m:math overflow="scroll"><m:mrow><m:mi>ϵ</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math>
+there exists a <m:math overflow="scroll"><m:mrow><m:mi>δ</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn></m:mrow></m:math> such that if <m:math overflow="scroll"><m:mrow><m:mn>0</m:mn><m:mo>&lt;</m:mo><m:mo>|</m:mo><m:mi>z</m:mi><m:mo>-</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mi>δ</m:mi></m:mrow></m:math> then</para>
+    <equation id="id310840">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mrow>
+            <m:mo>|</m:mo>
+          </m:mrow>
+          <m:mfrac>
+            <m:mrow>
+              <m:msup>
+                <m:mi>g</m:mi>
+                <m:mrow>
+                  <m:mo>-</m:mo>
+                  <m:mn>1</m:mn>
+                </m:mrow>
+              </m:msup>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>z</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:mo>-</m:mo>
+              <m:msup>
+                <m:mi>g</m:mi>
+                <m:mrow>
+                  <m:mo>-</m:mo>
+                  <m:mn>1</m:mn>
+                </m:mrow>
+              </m:msup>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>f</m:mi>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>c</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mo>)</m:mo>
+              </m:mrow>
+            </m:mrow>
+            <m:mrow>
+              <m:mi>z</m:mi>
+              <m:mo>-</m:mo>
+              <m:mi>f</m:mi>
+              <m:mo>(</m:mo>
+              <m:mi>c</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+          </m:mfrac>
+          <m:mo>-</m:mo>
+          <m:mfrac>
+            <m:mn>1</m:mn>
+            <m:mrow>
+              <m:msup>
+                <m:mi>f</m:mi>
+                <m:mo>'</m:mo>
+              </m:msup>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>c</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+            </m:mrow>
+          </m:mfrac>
+          <m:mrow>
+            <m:mo>|</m:mo>
+            <m:mo>&lt;</m:mo>
+            <m:mi>ϵ</m:mi>
+            <m:mo>.</m:mo>
+          </m:mrow>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id310949">First of all, because the function
+<m:math overflow="scroll"><m:mrow><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>w</m:mi></m:mrow></m:math> is continuous at the point <m:math overflow="scroll"><m:mrow><m:msup><m:mi>f</m:mi><m:mo>'</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> there exists an <m:math overflow="scroll"><m:mrow><m:msup><m:mi>ϵ</m:mi><m:mo>'</m:mo></m:msup><m:mo>&gt;</m:mo><m:mn>0</m:mn></m:mrow></m:math> such that if
+<m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo><m:mi>w</m:mi><m:mo>-</m:mo></m:mrow><m:msup><m:mi>f</m:mi><m:mo>'</m:mo></m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>|</m:mo><m:mo>&lt;</m:mo></m:mrow><m:msup><m:mi>ϵ</m:mi><m:mo>'</m:mo></m:msup><m:mo>,</m:mo></m:mrow></m:math> then</para>
+    <equation id="id311060">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mrow>
+            <m:mo>|</m:mo>
+          </m:mrow>
+          <m:mfrac>
+            <m:mn>1</m:mn>
+            <m:mi>w</m:mi>
+          </m:mfrac>
+          <m:mo>-</m:mo>
+          <m:mfrac>
+            <m:mn>1</m:mn>
+            <m:mrow>
+              <m:msup>
+                <m:mi>f</m:mi>
+                <m:mo>'</m:mo>
+              </m:msup>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>c</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+            </m:mrow>
+          </m:mfrac>
+          <m:mrow>
+            <m:mo>|</m:mo>
+            <m:mo>&lt;</m:mo>
+            <m:mi>ϵ</m:mi>
+            <m:mo>.</m:mo>
+          </m:mrow>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id311112">Next, because <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is differentiable at <m:math overflow="scroll"><m:mrow><m:mi>c</m:mi><m:mo>,</m:mo></m:mrow></m:math> there exists
+a <m:math overflow="scroll"><m:mrow><m:msup><m:mi>δ</m:mi><m:mo>'</m:mo></m:msup><m:mo>&gt;</m:mo><m:mn>0</m:mn></m:mrow></m:math> such that if <m:math overflow="scroll"><m:mrow><m:mrow><m:mn>0</m:mn><m:mo>&lt;</m:mo><m:mo>|</m:mo><m:mi>y</m:mi><m:mo>-</m:mo><m:mi>c</m:mi><m:mo>|</m:mo><m:mo>&lt;</m:mo></m:mrow><m:msup><m:mi>δ</m:mi><m:mo>'</m:mo></m:msup></m:mrow></m:math> then</para>
+    <equation id="id311194">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mrow>
+            <m:mo>|</m:mo>
+          </m:mrow>
+          <m:mfrac>
+            <m:mrow>
+              <m:mi>f</m:mi>
+              <m:mo>(</m:mo>
+              <m:mi>y</m:mi>
+              <m:mo>)</m:mo>
+              <m:mo>-</m:mo>
+              <m:mi>f</m:mi>
+              <m:mo>(</m:mo>
+              <m:mi>c</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mrow>
+              <m:mi>y</m:mi>
+              <m:mo>-</m:mo>
+              <m:mi>c</m:mi>
+            </m:mrow>
+          </m:mfrac>
+          <m:mo>-</m:mo>
+          <m:msup>
+            <m:mi>f</m:mi>
+            <m:mo>'</m:mo>
+          </m:msup>
+          <m:mrow>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>c</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>|</m:mo>
+            <m:mo>&lt;</m:mo>
+          </m:mrow>
+          <m:msup>
+            <m:mi>ϵ</m:mi>
+            <m:mo>'</m:mo>
+          </m:msup>
+          <m:mo>.</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id311270">Now, by <link target-id="fs-id1169172121798" document="m36167"/>, <m:math overflow="scroll"><m:msup><m:mi>g</m:mi><m:mrow><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msup></m:math> is continuous at the point <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math>
+and therefore there exists a <m:math overflow="scroll"><m:mrow><m:mi>δ</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn></m:mrow></m:math> such that if <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>z</m:mi><m:mo>-</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mi>δ</m:mi></m:mrow></m:math>
+then</para>
+    <equation id="id311356">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mrow>
+            <m:mo>|</m:mo>
+          </m:mrow>
+          <m:msup>
+            <m:mi>g</m:mi>
+            <m:mrow>
+              <m:mo>-</m:mo>
+              <m:mn>1</m:mn>
+            </m:mrow>
+          </m:msup>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>z</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>-</m:mo>
+          <m:msup>
+            <m:mi>g</m:mi>
+            <m:mrow>
+              <m:mo>-</m:mo>
+              <m:mn>1</m:mn>
+            </m:mrow>
+          </m:msup>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>f</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>c</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>|</m:mo>
+          </m:mrow>
+          <m:mo>&lt;</m:mo>
+          <m:msup>
+            <m:mi>δ</m:mi>
+            <m:mo>'</m:mo>
+          </m:msup>
+          <m:mo>.</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id311427">So, if <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>z</m:mi><m:mo>-</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mi>δ</m:mi><m:mo>,</m:mo></m:mrow></m:math> then</para>
+    <equation id="id311465">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mrow>
+            <m:mo>|</m:mo>
+          </m:mrow>
+          <m:msup>
+            <m:mi>g</m:mi>
+            <m:mrow>
+              <m:mo>-</m:mo>
+              <m:mn>1</m:mn>
+            </m:mrow>
+          </m:msup>
+          <m:mrow>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>z</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>-</m:mo>
+            <m:mi>c</m:mi>
+            <m:mo>|</m:mo>
+            <m:mo>=</m:mo>
+            <m:mo>|</m:mo>
+          </m:mrow>
+          <m:msup>
+            <m:mi>g</m:mi>
+            <m:mrow>
+              <m:mo>-</m:mo>
+              <m:mn>1</m:mn>
+            </m:mrow>
+          </m:msup>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>z</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>-</m:mo>
+          <m:msup>
+            <m:mi>g</m:mi>
+            <m:mrow>
+              <m:mo>-</m:mo>
+              <m:mn>1</m:mn>
+            </m:mrow>
+          </m:msup>
+          <m:mrow>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>f</m:mi>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>c</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>|</m:mo>
+            <m:mo>&lt;</m:mo>
+          </m:mrow>
+          <m:msup>
+            <m:mi>δ</m:mi>
+            <m:mo>'</m:mo>
+          </m:msup>
+          <m:mo>.</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id311569">But then,</para>
+    <equation id="id311574">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mrow>
+            <m:mo>|</m:mo>
+          </m:mrow>
+          <m:mfrac>
+            <m:mrow>
+              <m:mi>f</m:mi>
+              <m:mo>(</m:mo>
+              <m:msup>
+                <m:mi>g</m:mi>
+                <m:mrow>
+                  <m:mo>-</m:mo>
+                  <m:mn>1</m:mn>
+                </m:mrow>
+              </m:msup>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>z</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:mo>)</m:mo>
+              <m:mo>-</m:mo>
+              <m:mi>f</m:mi>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>c</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+            </m:mrow>
+            <m:mrow>
+              <m:msup>
+                <m:mi>g</m:mi>
+                <m:mrow>
+                  <m:mo>-</m:mo>
+                  <m:mn>1</m:mn>
+                </m:mrow>
+              </m:msup>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>z</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:mo>-</m:mo>
+              <m:mi>c</m:mi>
+            </m:mrow>
+          </m:mfrac>
+          <m:mo>-</m:mo>
+          <m:msup>
+            <m:mi>f</m:mi>
+            <m:mo>'</m:mo>
+          </m:msup>
+          <m:mrow>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>c</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>|</m:mo>
+            <m:mo>&lt;</m:mo>
+          </m:mrow>
+          <m:msup>
+            <m:mi>ϵ</m:mi>
+            <m:mo>'</m:mo>
+          </m:msup>
+          <m:mo>,</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id311683">from which it follows that</para>
+    <equation id="id311689">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mrow>
+            <m:mo>|</m:mo>
+          </m:mrow>
+          <m:mfrac>
+            <m:mrow>
+              <m:msup>
+                <m:mi>g</m:mi>
+                <m:mrow>
+                  <m:mo>-</m:mo>
+                  <m:mn>1</m:mn>
+                </m:mrow>
+              </m:msup>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>z</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:mo>-</m:mo>
+              <m:msup>
+                <m:mi>g</m:mi>
+                <m:mrow>
+                  <m:mo>-</m:mo>
+                  <m:mn>1</m:mn>
+                </m:mrow>
+              </m:msup>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>f</m:mi>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>c</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mo>)</m:mo>
+              </m:mrow>
+            </m:mrow>
+            <m:mrow>
+              <m:mi>z</m:mi>
+              <m:mo>-</m:mo>
+              <m:mi>f</m:mi>
+              <m:mo>(</m:mo>
+              <m:mi>c</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+          </m:mfrac>
+          <m:mo>-</m:mo>
+          <m:mfrac>
+            <m:mn>1</m:mn>
+            <m:mrow>
+              <m:msup>
+                <m:mi>f</m:mi>
+                <m:mo>'</m:mo>
+              </m:msup>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>c</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+            </m:mrow>
+          </m:mfrac>
+          <m:mrow>
+            <m:mo>|</m:mo>
+            <m:mo>&lt;</m:mo>
+            <m:mi>ϵ</m:mi>
+            <m:mo>,</m:mo>
+          </m:mrow>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id311798">as desired.</para>
+</proof></rule>
+  </content>
+</document>

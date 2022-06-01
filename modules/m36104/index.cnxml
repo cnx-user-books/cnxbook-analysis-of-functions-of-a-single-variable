@@ -1,0 +1,2448 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML">
+  <title>The Geometric Progression and the Binomial Theorem</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m36104</md:content-id>
+  <md:title>The Geometric Progression and the Binomial Theorem</md:title>
+  <md:abstract>The binomial theorem is introduced, the existences of nth roots of real numbers is explored, the binomial coefficient is defined, and a theorem providing a formula for the sum of a geometric progression is included.</md:abstract>
+  <md:uuid>67bf69e9-0eee-42df-9905-513c0c3cca9e</md:uuid>
+</metadata>
+
+<content>
+    <para id="id114656">There are two special algebraic identities that hold in <m:math overflow="scroll"><m:mi>R</m:mi></m:math>
+(in fact in any field <m:math overflow="scroll"><m:mi>F</m:mi></m:math> whatsoever)
+that we emphasize. They are both
+proved by mathematical induction. The first is the
+formula for the sum of a geometric progression.</para>
+<rule id="fs-id1168615573590" type="theorem"><title>Geometric Progression</title><statement id="fs-id1168607399813">
+<para id="fs-id6405647">
+Let <m:math overflow="scroll"><m:mi>x</m:mi></m:math> be a real number, and let <m:math overflow="scroll"><m:mi>n</m:mi></m:math> be a natural number. Then,</para>
+    <list id="id115044" display="block" list-type="enumerated">
+      <item id="uid1">If <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>≠</m:mo><m:mn>1</m:mn><m:mo>,</m:mo></m:mrow></m:math> then
+<equation id="id115074"><m:math overflow="scroll" mode="display"><m:mrow><m:munderover><m:mo>∑</m:mo><m:mrow><m:mi>j</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow><m:mi>n</m:mi></m:munderover><m:msup><m:mi>x</m:mi><m:mi>j</m:mi></m:msup><m:mo>=</m:mo><m:mfrac><m:mrow><m:mn>1</m:mn><m:mo>-</m:mo><m:msup><m:mi>x</m:mi><m:mrow><m:mi>n</m:mi><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow></m:msup></m:mrow><m:mrow><m:mn>1</m:mn><m:mo>-</m:mo><m:mi>x</m:mi></m:mrow></m:mfrac><m:mo>.</m:mo></m:mrow></m:math></equation></item>
+      <item id="uid2">If <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>,</m:mo></m:mrow></m:math> then
+<equation id="id114622"><m:math overflow="scroll" mode="display"><m:mrow><m:munderover><m:mo>∑</m:mo><m:mrow><m:mi>j</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow><m:mi>n</m:mi></m:munderover><m:msup><m:mi>x</m:mi><m:mi>j</m:mi></m:msup><m:mo>=</m:mo><m:mi>n</m:mi><m:mo>+</m:mo><m:mn>1</m:mn><m:mo>.</m:mo></m:mrow></m:math></equation></item>
+    </list>
+</statement>
+<proof id="fs-id7730844">
+    <para id="id115391">The second claim is clear, since there are
+<m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow></m:math> summands and each is equal to 1.</para>
+    <para id="id115412">We prove the first claim by induction.
+Thus, if <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>,</m:mo></m:mrow></m:math> then the assertion is true,
+since</para>
+    <equation id="id115431">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:munderover>
+            <m:mo>∑</m:mo>
+            <m:mrow>
+              <m:mi>j</m:mi>
+              <m:mo>=</m:mo>
+              <m:mn>0</m:mn>
+            </m:mrow>
+            <m:mn>1</m:mn>
+          </m:munderover>
+          <m:msup>
+            <m:mi>x</m:mi>
+            <m:mi>j</m:mi>
+          </m:msup>
+          <m:mo>=</m:mo>
+          <m:msup>
+            <m:mi>x</m:mi>
+            <m:mn>0</m:mn>
+          </m:msup>
+          <m:mo>+</m:mo>
+          <m:msup>
+            <m:mi>x</m:mi>
+            <m:mn>1</m:mn>
+          </m:msup>
+          <m:mo>=</m:mo>
+          <m:mn>1</m:mn>
+          <m:mo>+</m:mo>
+          <m:mi>x</m:mi>
+          <m:mo>=</m:mo>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mn>1</m:mn>
+            <m:mo>+</m:mo>
+            <m:mi>x</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mfrac>
+            <m:mrow>
+              <m:mn>1</m:mn>
+              <m:mo>-</m:mo>
+              <m:mi>x</m:mi>
+            </m:mrow>
+            <m:mrow>
+              <m:mn>1</m:mn>
+              <m:mo>-</m:mo>
+              <m:mi>x</m:mi>
+            </m:mrow>
+          </m:mfrac>
+          <m:mo>=</m:mo>
+          <m:mfrac>
+            <m:mrow>
+              <m:mn>1</m:mn>
+              <m:mo>-</m:mo>
+              <m:msup>
+                <m:mi>x</m:mi>
+                <m:mn>2</m:mn>
+              </m:msup>
+            </m:mrow>
+            <m:mrow>
+              <m:mn>1</m:mn>
+              <m:mo>-</m:mo>
+              <m:mi>x</m:mi>
+            </m:mrow>
+          </m:mfrac>
+          <m:mo>.</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id115548">Now, supposing that the assertion is true for the natural number
+<m:math overflow="scroll"><m:mrow><m:mi>k</m:mi><m:mo>,</m:mo></m:mrow></m:math> i.e., that</para>
+    <equation id="id115565">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:munderover>
+            <m:mo>∑</m:mo>
+            <m:mrow>
+              <m:mi>j</m:mi>
+              <m:mo>=</m:mo>
+              <m:mn>0</m:mn>
+            </m:mrow>
+            <m:mi>k</m:mi>
+          </m:munderover>
+          <m:msup>
+            <m:mi>x</m:mi>
+            <m:mi>j</m:mi>
+          </m:msup>
+          <m:mo>=</m:mo>
+          <m:mfrac>
+            <m:mrow>
+              <m:mn>1</m:mn>
+              <m:mo>-</m:mo>
+              <m:msup>
+                <m:mi>x</m:mi>
+                <m:mrow>
+                  <m:mi>k</m:mi>
+                  <m:mo>+</m:mo>
+                  <m:mn>1</m:mn>
+                </m:mrow>
+              </m:msup>
+            </m:mrow>
+            <m:mrow>
+              <m:mn>1</m:mn>
+              <m:mo>-</m:mo>
+              <m:mi>x</m:mi>
+            </m:mrow>
+          </m:mfrac>
+          <m:mo>,</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id115630">let us show that the assertion holds for the natural number <m:math overflow="scroll"><m:mrow><m:mi>k</m:mi><m:mo>+</m:mo><m:mn>1</m:mn><m:mo>.</m:mo></m:mrow></m:math> Thus</para>
+    <equation id="uid3"><m:math overflow="scroll" mode="display">
+        <m:mtable displaystyle="true">
+          <m:mtr>
+            <m:mtd columnalign="right">
+              <m:mrow>
+                <m:munderover>
+                  <m:mo>∑</m:mo>
+                  <m:mrow>
+                    <m:mi>j</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mn>0</m:mn>
+                  </m:mrow>
+                  <m:mrow>
+                    <m:mi>k</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                </m:munderover>
+                <m:msup>
+                  <m:mi>x</m:mi>
+                  <m:mi>j</m:mi>
+                </m:msup>
+              </m:mrow>
+            </m:mtd>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:munderover>
+                  <m:mo>∑</m:mo>
+                  <m:mrow>
+                    <m:mi>j</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mn>0</m:mn>
+                  </m:mrow>
+                  <m:mi>k</m:mi>
+                </m:munderover>
+                <m:msup>
+                  <m:mi>x</m:mi>
+                  <m:mi>j</m:mi>
+                </m:msup>
+                <m:mo>+</m:mo>
+                <m:msup>
+                  <m:mi>x</m:mi>
+                  <m:mrow>
+                    <m:mi>k</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                </m:msup>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mfrac>
+                  <m:mrow>
+                    <m:mn>1</m:mn>
+                    <m:mo>-</m:mo>
+                    <m:msup>
+                      <m:mi>x</m:mi>
+                      <m:mrow>
+                        <m:mi>k</m:mi>
+                        <m:mo>+</m:mo>
+                        <m:mn>1</m:mn>
+                      </m:mrow>
+                    </m:msup>
+                  </m:mrow>
+                  <m:mrow>
+                    <m:mn>1</m:mn>
+                    <m:mo>-</m:mo>
+                    <m:mi>x</m:mi>
+                  </m:mrow>
+                </m:mfrac>
+                <m:mo>+</m:mo>
+                <m:msup>
+                  <m:mi>x</m:mi>
+                  <m:mrow>
+                    <m:mi>k</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                </m:msup>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mfrac>
+                <m:mrow>
+                  <m:mn>1</m:mn>
+                  <m:mo>-</m:mo>
+                  <m:msup>
+                    <m:mi>x</m:mi>
+                    <m:mrow>
+                      <m:mi>k</m:mi>
+                      <m:mo>+</m:mo>
+                      <m:mn>1</m:mn>
+                    </m:mrow>
+                  </m:msup>
+                  <m:mo>+</m:mo>
+                  <m:msup>
+                    <m:mi>x</m:mi>
+                    <m:mrow>
+                      <m:mi>k</m:mi>
+                      <m:mo>+</m:mo>
+                      <m:mn>1</m:mn>
+                    </m:mrow>
+                  </m:msup>
+                  <m:mo>-</m:mo>
+                  <m:msup>
+                    <m:mi>x</m:mi>
+                    <m:mrow>
+                      <m:mi>k</m:mi>
+                      <m:mo>+</m:mo>
+                      <m:mn>2</m:mn>
+                    </m:mrow>
+                  </m:msup>
+                </m:mrow>
+                <m:mrow>
+                  <m:mn>1</m:mn>
+                  <m:mo>-</m:mo>
+                  <m:mi>x</m:mi>
+                </m:mrow>
+              </m:mfrac>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mfrac>
+                  <m:mrow>
+                    <m:mn>1</m:mn>
+                    <m:mo>-</m:mo>
+                    <m:msup>
+                      <m:mi>x</m:mi>
+                      <m:mrow>
+                        <m:mi>k</m:mi>
+                        <m:mo>+</m:mo>
+                        <m:mn>1</m:mn>
+                        <m:mo>+</m:mo>
+                        <m:mn>1</m:mn>
+                      </m:mrow>
+                    </m:msup>
+                  </m:mrow>
+                  <m:mrow>
+                    <m:mn>1</m:mn>
+                    <m:mo>-</m:mo>
+                    <m:mi>x</m:mi>
+                  </m:mrow>
+                </m:mfrac>
+                <m:mo>,</m:mo>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+        </m:mtable>
+      </m:math>
+    </equation>
+    <para id="id115891">which completes the proof.</para>
+</proof></rule>
+    <para id="id115897">The second algebraic formula we wish to emphasize is the
+Binomial Theorem. Before stating it, we must introduce some useful notation.</para>
+<definition id="fs-id1171144359316"><term/><meaning id="fs-id1171124655010"><para id="fs-id1171129353126">
+Let <m:math overflow="scroll"><m:mi>n</m:mi></m:math> be a natural number.
+As earlier in this chapter, we define <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>!</m:mo></m:mrow></m:math> as follows:</para>
+    <equation id="id115926">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mi>n</m:mi>
+          <m:mo>!</m:mo>
+          <m:mo>=</m:mo>
+          <m:mi>n</m:mi>
+          <m:mo>×</m:mo>
+          <m:mo>(</m:mo>
+          <m:mi>n</m:mi>
+          <m:mo>-</m:mo>
+          <m:mn>1</m:mn>
+          <m:mo>)</m:mo>
+          <m:mo>×</m:mo>
+          <m:mo>(</m:mo>
+          <m:mi>n</m:mi>
+          <m:mo>-</m:mo>
+          <m:mn>2</m:mn>
+          <m:mo>)</m:mo>
+          <m:mo>×</m:mo>
+          <m:mo>...</m:mo>
+          <m:mo>×</m:mo>
+          <m:mn>2</m:mn>
+          <m:mo>×</m:mo>
+          <m:mn>1</m:mn>
+          <m:mo>.</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id115984">For later notational convenience, we also define <m:math overflow="scroll"><m:mrow><m:mn>0</m:mn><m:mo>!</m:mo></m:mrow></m:math> to be 1.</para>
+    <para id="id116000">If <m:math overflow="scroll"><m:mi>k</m:mi></m:math> is any integer for which <m:math overflow="scroll"><m:mrow><m:mn>0</m:mn><m:mo>≤</m:mo><m:mi>k</m:mi><m:mo>≤</m:mo><m:mi>n</m:mi><m:mo>,</m:mo></m:mrow></m:math> we
+define the <emphasis effect="italics">binomial coefficient</emphasis><m:math overflow="scroll"><m:mfenced separators="" open="(" close=")"><m:mfrac linethickness="0pt"><m:mi>n</m:mi><m:mi>k</m:mi></m:mfrac></m:mfenced></m:math> by</para>
+    <equation id="id116058">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mfenced separators="" open="(" close=")">
+            <m:mfrac linethickness="0pt">
+              <m:mi>n</m:mi>
+              <m:mi>k</m:mi>
+            </m:mfrac>
+          </m:mfenced>
+          <m:mo>=</m:mo>
+          <m:mfrac>
+            <m:mrow>
+              <m:mi>n</m:mi>
+              <m:mo>!</m:mo>
+            </m:mrow>
+            <m:mrow>
+              <m:mi>k</m:mi>
+              <m:mo>!</m:mo>
+              <m:mo>(</m:mo>
+              <m:mi>n</m:mi>
+              <m:mo>-</m:mo>
+              <m:mi>k</m:mi>
+              <m:mo>)</m:mo>
+              <m:mo>!</m:mo>
+            </m:mrow>
+          </m:mfrac>
+          <m:mo>=</m:mo>
+          <m:mfrac>
+            <m:mrow>
+              <m:mi>n</m:mi>
+              <m:mo>×</m:mo>
+              <m:mo>(</m:mo>
+              <m:mi>n</m:mi>
+              <m:mo>-</m:mo>
+              <m:mn>1</m:mn>
+              <m:mo>)</m:mo>
+              <m:mo>×</m:mo>
+              <m:mo>(</m:mo>
+              <m:mi>n</m:mi>
+              <m:mo>-</m:mo>
+              <m:mn>2</m:mn>
+              <m:mo>)</m:mo>
+              <m:mo>×</m:mo>
+              <m:mo>...</m:mo>
+              <m:mo>×</m:mo>
+              <m:mo>(</m:mo>
+              <m:mi>n</m:mi>
+              <m:mo>-</m:mo>
+              <m:mi>k</m:mi>
+              <m:mo>+</m:mo>
+              <m:mn>1</m:mn>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mrow>
+              <m:mi>k</m:mi>
+              <m:mo>!</m:mo>
+            </m:mrow>
+          </m:mfrac>
+          <m:mo>.</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+</meaning></definition>
+<exercise id="fs-id1170981779636"><problem id="fs-id1170980364288">
+    <list id="id116182" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid4"> Prove that <m:math overflow="scroll"><m:mrow><m:mfenced separators="" open="(" close=")"><m:mfrac linethickness="0pt"><m:mi>n</m:mi><m:mn>0</m:mn></m:mfrac></m:mfenced><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>,</m:mo><m:mspace width="0.166667em"/><m:mfenced separators="" open="(" close=")"><m:mfrac linethickness="0pt"><m:mi>n</m:mi><m:mn>1</m:mn></m:mfrac></m:mfenced><m:mo>=</m:mo><m:mi>n</m:mi><m:mspace width="0.166667em"/></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mfenced separators="" open="(" close=")"><m:mfrac linethickness="0pt"><m:mi>n</m:mi><m:mi>n</m:mi></m:mfrac></m:mfenced><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid5"> Prove that
+<equation id="id116290"><m:math overflow="scroll" mode="display"><m:mrow><m:mfenced separators="" open="(" close=")"><m:mfrac linethickness="0pt"><m:mi>n</m:mi><m:mi>k</m:mi></m:mfrac></m:mfenced><m:mo>≤</m:mo><m:mfrac><m:mrow><m:mn>2</m:mn><m:msup><m:mi>n</m:mi><m:mi>k</m:mi></m:msup></m:mrow><m:msup><m:mn>2</m:mn><m:mi>k</m:mi></m:msup></m:mfrac></m:mrow></m:math></equation>
+for all natural numbers <m:math overflow="scroll"><m:mi>n</m:mi></m:math> and all integers <m:math overflow="scroll"><m:mrow><m:mn>0</m:mn><m:mo>≤</m:mo><m:mi>k</m:mi><m:mo>≤</m:mo><m:mi>n</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid6"> Prove that
+<equation id="id116379"><m:math overflow="scroll" mode="display"><m:mrow><m:mfenced separators="" open="(" close=")"><m:mfrac linethickness="0pt"><m:mrow><m:mi>n</m:mi><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow><m:mi>k</m:mi></m:mfrac></m:mfenced><m:mo>=</m:mo><m:mfenced separators="" open="(" close=")"><m:mfrac linethickness="0pt"><m:mi>n</m:mi><m:mi>k</m:mi></m:mfrac></m:mfenced><m:mo>+</m:mo><m:mfenced separators="" open="(" close=")"><m:mfrac linethickness="0pt"><m:mi>n</m:mi><m:mrow><m:mi>k</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:mfrac></m:mfenced></m:mrow></m:math></equation>
+for all natural numbers <m:math overflow="scroll"><m:mi>n</m:mi></m:math> and all integers <m:math overflow="scroll"><m:mrow><m:mn>1</m:mn><m:mo>≤</m:mo><m:mi>k</m:mi><m:mo>≤</m:mo><m:mi>n</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+    </list>
+</problem></exercise>
+<rule id="fs-id1170975717247" type="theorem">
+<statement id="fs-id1170986553823">
+    <para id="id116482">If <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>,</m:mo><m:mi>y</m:mi><m:mo>∈</m:mo><m:mi>R</m:mi></m:mrow></m:math> and <m:math overflow="scroll"><m:mi>n</m:mi></m:math> is a natural number, then</para>
+    <equation id="id116522">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:msup>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>x</m:mi>
+              <m:mo>+</m:mo>
+              <m:mi>y</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mi>n</m:mi>
+          </m:msup>
+          <m:mo>=</m:mo>
+          <m:munderover>
+            <m:mo>∑</m:mo>
+            <m:mrow>
+              <m:mi>k</m:mi>
+              <m:mo>=</m:mo>
+              <m:mn>0</m:mn>
+            </m:mrow>
+            <m:mi>n</m:mi>
+          </m:munderover>
+          <m:mfenced separators="" open="(" close=")">
+            <m:mfrac linethickness="0pt">
+              <m:mi>n</m:mi>
+              <m:mi>k</m:mi>
+            </m:mfrac>
+          </m:mfenced>
+          <m:msup>
+            <m:mi>x</m:mi>
+            <m:mi>k</m:mi>
+          </m:msup>
+          <m:msup>
+            <m:mi>y</m:mi>
+            <m:mrow>
+              <m:mi>n</m:mi>
+              <m:mo>-</m:mo>
+              <m:mi>k</m:mi>
+            </m:mrow>
+          </m:msup>
+          <m:mo>.</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+</statement>
+<proof id="fs-id1170976320967">
+    <para id="id116604"> We shall prove this theorem by induction.
+If <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>,</m:mo></m:mrow></m:math> then the assertion is true, for
+<m:math overflow="scroll"><m:mrow><m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>+</m:mo><m:mi>y</m:mi><m:mo>)</m:mo></m:mrow><m:mn>1</m:mn></m:msup><m:mo>=</m:mo><m:mi>x</m:mi><m:mo>+</m:mo><m:mi>y</m:mi></m:mrow></m:math>
+and</para>
+    <equation id="id116659">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:munderover>
+            <m:mo>∑</m:mo>
+            <m:mrow>
+              <m:mi>k</m:mi>
+              <m:mo>=</m:mo>
+              <m:mn>0</m:mn>
+            </m:mrow>
+            <m:mn>1</m:mn>
+          </m:munderover>
+          <m:mfenced separators="" open="(" close=")">
+            <m:mfrac linethickness="0pt">
+              <m:mn>1</m:mn>
+              <m:mi>k</m:mi>
+            </m:mfrac>
+          </m:mfenced>
+          <m:msup>
+            <m:mi>x</m:mi>
+            <m:mi>k</m:mi>
+          </m:msup>
+          <m:msup>
+            <m:mi>y</m:mi>
+            <m:mrow>
+              <m:mn>1</m:mn>
+              <m:mo>-</m:mo>
+              <m:mi>k</m:mi>
+            </m:mrow>
+          </m:msup>
+          <m:mo>=</m:mo>
+          <m:mfenced separators="" open="(" close=")">
+            <m:mfrac linethickness="0pt">
+              <m:mn>1</m:mn>
+              <m:mn>0</m:mn>
+            </m:mfrac>
+          </m:mfenced>
+          <m:msup>
+            <m:mi>x</m:mi>
+            <m:mn>0</m:mn>
+          </m:msup>
+          <m:msup>
+            <m:mi>y</m:mi>
+            <m:mn>1</m:mn>
+          </m:msup>
+          <m:mo>+</m:mo>
+          <m:mfenced separators="" open="(" close=")">
+            <m:mfrac linethickness="0pt">
+              <m:mn>1</m:mn>
+              <m:mn>1</m:mn>
+            </m:mfrac>
+          </m:mfenced>
+          <m:msup>
+            <m:mi>x</m:mi>
+            <m:mn>1</m:mn>
+          </m:msup>
+          <m:msup>
+            <m:mi>y</m:mi>
+            <m:mn>0</m:mn>
+          </m:msup>
+          <m:mo>=</m:mo>
+          <m:mi>x</m:mi>
+          <m:mo>+</m:mo>
+          <m:mi>y</m:mi>
+          <m:mo>.</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id116795">Now, assume that the assertion holds for the natural number <m:math overflow="scroll"><m:mrow><m:mi>j</m:mi><m:mo>;</m:mo></m:mrow></m:math> i.e.,</para>
+    <equation id="id116810">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:msup>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>x</m:mi>
+              <m:mo>+</m:mo>
+              <m:mi>y</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mi>j</m:mi>
+          </m:msup>
+          <m:mo>=</m:mo>
+          <m:munderover>
+            <m:mo>∑</m:mo>
+            <m:mrow>
+              <m:mi>k</m:mi>
+              <m:mo>=</m:mo>
+              <m:mn>0</m:mn>
+            </m:mrow>
+            <m:mi>j</m:mi>
+          </m:munderover>
+          <m:mfenced separators="" open="(" close=")">
+            <m:mfrac linethickness="0pt">
+              <m:mi>j</m:mi>
+              <m:mi>k</m:mi>
+            </m:mfrac>
+          </m:mfenced>
+          <m:msup>
+            <m:mi>x</m:mi>
+            <m:mi>k</m:mi>
+          </m:msup>
+          <m:msup>
+            <m:mi>y</m:mi>
+            <m:mrow>
+              <m:mi>j</m:mi>
+              <m:mo>-</m:mo>
+              <m:mi>k</m:mi>
+            </m:mrow>
+          </m:msup>
+          <m:mo>,</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id116892">and let us prove that the assertion holds
+for the natural number <m:math overflow="scroll"><m:mrow><m:mi>j</m:mi><m:mo>+</m:mo><m:mn>1</m:mn><m:mo>.</m:mo></m:mrow></m:math> We will make
+use of part (c) of <link target-id="fs-id1170981779636"/>. We have that</para>
+    <equation id="uid7"><m:math overflow="scroll" mode="display">
+        <m:mtable displaystyle="true">
+          <m:mtr>
+            <m:mtd columnalign="right">
+              <m:msup>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>x</m:mi>
+                  <m:mo>+</m:mo>
+                  <m:mi>y</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mrow>
+                  <m:mi>j</m:mi>
+                  <m:mo>+</m:mo>
+                  <m:mn>1</m:mn>
+                </m:mrow>
+              </m:msup>
+            </m:mtd>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>x</m:mi>
+                  <m:mo>+</m:mo>
+                  <m:mi>y</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:msup>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>x</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mi>y</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mi>j</m:mi>
+                </m:msup>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>x</m:mi>
+                  <m:mo>+</m:mo>
+                  <m:mi>y</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:munderover>
+                  <m:mo>∑</m:mo>
+                  <m:mrow>
+                    <m:mi>k</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mn>0</m:mn>
+                  </m:mrow>
+                  <m:mi>j</m:mi>
+                </m:munderover>
+                <m:mfenced separators="" open="(" close=")">
+                  <m:mfrac linethickness="0pt">
+                    <m:mi>j</m:mi>
+                    <m:mi>k</m:mi>
+                  </m:mfrac>
+                </m:mfenced>
+                <m:msup>
+                  <m:mi>x</m:mi>
+                  <m:mi>k</m:mi>
+                </m:msup>
+                <m:msup>
+                  <m:mi>y</m:mi>
+                  <m:mrow>
+                    <m:mi>j</m:mi>
+                    <m:mo>-</m:mo>
+                    <m:mi>k</m:mi>
+                  </m:mrow>
+                </m:msup>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mi>x</m:mi>
+                <m:munderover>
+                  <m:mo>∑</m:mo>
+                  <m:mrow>
+                    <m:mi>k</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mn>0</m:mn>
+                  </m:mrow>
+                  <m:mi>j</m:mi>
+                </m:munderover>
+                <m:mfenced separators="" open="(" close=")">
+                  <m:mfrac linethickness="0pt">
+                    <m:mi>j</m:mi>
+                    <m:mi>k</m:mi>
+                  </m:mfrac>
+                </m:mfenced>
+                <m:msup>
+                  <m:mi>x</m:mi>
+                  <m:mi>k</m:mi>
+                </m:msup>
+                <m:msup>
+                  <m:mi>y</m:mi>
+                  <m:mrow>
+                    <m:mi>j</m:mi>
+                    <m:mo>-</m:mo>
+                    <m:mi>k</m:mi>
+                  </m:mrow>
+                </m:msup>
+                <m:mo>+</m:mo>
+                <m:mi>y</m:mi>
+                <m:munderover>
+                  <m:mo>∑</m:mo>
+                  <m:mrow>
+                    <m:mi>k</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mn>0</m:mn>
+                  </m:mrow>
+                  <m:mi>j</m:mi>
+                </m:munderover>
+                <m:mfenced separators="" open="(" close=")">
+                  <m:mfrac linethickness="0pt">
+                    <m:mi>j</m:mi>
+                    <m:mi>k</m:mi>
+                  </m:mfrac>
+                </m:mfenced>
+                <m:msup>
+                  <m:mi>x</m:mi>
+                  <m:mi>k</m:mi>
+                </m:msup>
+                <m:msup>
+                  <m:mi>y</m:mi>
+                  <m:mrow>
+                    <m:mi>j</m:mi>
+                    <m:mo>-</m:mo>
+                    <m:mi>k</m:mi>
+                  </m:mrow>
+                </m:msup>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:munderover>
+                  <m:mo>∑</m:mo>
+                  <m:mrow>
+                    <m:mi>k</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mn>0</m:mn>
+                  </m:mrow>
+                  <m:mi>j</m:mi>
+                </m:munderover>
+                <m:mfenced separators="" open="(" close=")">
+                  <m:mfrac linethickness="0pt">
+                    <m:mi>j</m:mi>
+                    <m:mi>k</m:mi>
+                  </m:mfrac>
+                </m:mfenced>
+                <m:msup>
+                  <m:mi>x</m:mi>
+                  <m:mrow>
+                    <m:mi>k</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                </m:msup>
+                <m:msup>
+                  <m:mi>y</m:mi>
+                  <m:mrow>
+                    <m:mi>j</m:mi>
+                    <m:mo>-</m:mo>
+                    <m:mi>k</m:mi>
+                  </m:mrow>
+                </m:msup>
+                <m:mo>+</m:mo>
+                <m:munderover>
+                  <m:mo>∑</m:mo>
+                  <m:mrow>
+                    <m:mi>k</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mn>0</m:mn>
+                  </m:mrow>
+                  <m:mi>j</m:mi>
+                </m:munderover>
+                <m:mfenced separators="" open="(" close=")">
+                  <m:mfrac linethickness="0pt">
+                    <m:mi>j</m:mi>
+                    <m:mi>k</m:mi>
+                  </m:mfrac>
+                </m:mfenced>
+                <m:msup>
+                  <m:mi>x</m:mi>
+                  <m:mi>k</m:mi>
+                </m:msup>
+                <m:msup>
+                  <m:mi>y</m:mi>
+                  <m:mrow>
+                    <m:mi>j</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mn>1</m:mn>
+                    <m:mo>-</m:mo>
+                    <m:mi>k</m:mi>
+                  </m:mrow>
+                </m:msup>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:munderover>
+                  <m:mo>∑</m:mo>
+                  <m:mrow>
+                    <m:mi>k</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mn>0</m:mn>
+                  </m:mrow>
+                  <m:mrow>
+                    <m:mi>j</m:mi>
+                    <m:mo>-</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                </m:munderover>
+                <m:mfenced separators="" open="(" close=")">
+                  <m:mfrac linethickness="0pt">
+                    <m:mi>j</m:mi>
+                    <m:mi>k</m:mi>
+                  </m:mfrac>
+                </m:mfenced>
+                <m:msup>
+                  <m:mi>x</m:mi>
+                  <m:mrow>
+                    <m:mi>k</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                </m:msup>
+                <m:msup>
+                  <m:mi>y</m:mi>
+                  <m:mrow>
+                    <m:mi>j</m:mi>
+                    <m:mo>-</m:mo>
+                    <m:mi>k</m:mi>
+                  </m:mrow>
+                </m:msup>
+                <m:mo>+</m:mo>
+                <m:mfenced separators="" open="(" close=")">
+                  <m:mfrac linethickness="0pt">
+                    <m:mi>j</m:mi>
+                    <m:mi>j</m:mi>
+                  </m:mfrac>
+                </m:mfenced>
+                <m:msup>
+                  <m:mi>x</m:mi>
+                  <m:mrow>
+                    <m:mi>j</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                </m:msup>
+                <m:msup>
+                  <m:mi>y</m:mi>
+                  <m:mn>0</m:mn>
+                </m:msup>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mrow>
+                <m:mspace width="1.em"/>
+                <m:mspace width="1.em"/>
+              </m:mrow>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mo>+</m:mo>
+                <m:munderover>
+                  <m:mo>∑</m:mo>
+                  <m:mrow>
+                    <m:mi>k</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                  <m:mi>j</m:mi>
+                </m:munderover>
+                <m:mfenced separators="" open="(" close=")">
+                  <m:mfrac linethickness="0pt">
+                    <m:mi>j</m:mi>
+                    <m:mi>k</m:mi>
+                  </m:mfrac>
+                </m:mfenced>
+                <m:msup>
+                  <m:mi>x</m:mi>
+                  <m:mi>k</m:mi>
+                </m:msup>
+                <m:msup>
+                  <m:mi>y</m:mi>
+                  <m:mrow>
+                    <m:mi>j</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mn>1</m:mn>
+                    <m:mo>-</m:mo>
+                    <m:mi>k</m:mi>
+                  </m:mrow>
+                </m:msup>
+                <m:mo>+</m:mo>
+                <m:mfenced separators="" open="(" close=")">
+                  <m:mfrac linethickness="0pt">
+                    <m:mi>j</m:mi>
+                    <m:mn>0</m:mn>
+                  </m:mfrac>
+                </m:mfenced>
+                <m:msup>
+                  <m:mi>x</m:mi>
+                  <m:mn>0</m:mn>
+                </m:msup>
+                <m:msup>
+                  <m:mi>y</m:mi>
+                  <m:mrow>
+                    <m:mi>j</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                </m:msup>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:msup>
+                  <m:mi>x</m:mi>
+                  <m:mrow>
+                    <m:mi>j</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                </m:msup>
+                <m:mo>+</m:mo>
+                <m:munderover>
+                  <m:mo>∑</m:mo>
+                  <m:mrow>
+                    <m:mi>k</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                  <m:mi>j</m:mi>
+                </m:munderover>
+                <m:mfenced separators="" open="(" close=")">
+                  <m:mfrac linethickness="0pt">
+                    <m:mi>j</m:mi>
+                    <m:mrow>
+                      <m:mi>k</m:mi>
+                      <m:mo>-</m:mo>
+                      <m:mn>1</m:mn>
+                    </m:mrow>
+                  </m:mfrac>
+                </m:mfenced>
+                <m:msup>
+                  <m:mi>x</m:mi>
+                  <m:mi>k</m:mi>
+                </m:msup>
+                <m:msup>
+                  <m:mi>y</m:mi>
+                  <m:mrow>
+                    <m:mi>j</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mn>1</m:mn>
+                    <m:mo>-</m:mo>
+                    <m:mi>k</m:mi>
+                  </m:mrow>
+                </m:msup>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mrow>
+                <m:mspace width="1.em"/>
+                <m:mspace width="1.em"/>
+              </m:mrow>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mo>+</m:mo>
+                <m:munderover>
+                  <m:mo>∑</m:mo>
+                  <m:mrow>
+                    <m:mi>k</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                  <m:mi>j</m:mi>
+                </m:munderover>
+                <m:mfenced separators="" open="(" close=")">
+                  <m:mfrac linethickness="0pt">
+                    <m:mi>j</m:mi>
+                    <m:mi>k</m:mi>
+                  </m:mfrac>
+                </m:mfenced>
+                <m:msup>
+                  <m:mi>x</m:mi>
+                  <m:mi>k</m:mi>
+                </m:msup>
+                <m:msup>
+                  <m:mi>y</m:mi>
+                  <m:mrow>
+                    <m:mi>j</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mn>1</m:mn>
+                    <m:mo>-</m:mo>
+                    <m:mi>k</m:mi>
+                  </m:mrow>
+                </m:msup>
+                <m:mo>+</m:mo>
+                <m:msup>
+                  <m:mi>y</m:mi>
+                  <m:mrow>
+                    <m:mi>j</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                </m:msup>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:msup>
+                  <m:mi>x</m:mi>
+                  <m:mrow>
+                    <m:mi>j</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                </m:msup>
+                <m:mo>+</m:mo>
+                <m:munderover>
+                  <m:mo>∑</m:mo>
+                  <m:mrow>
+                    <m:mi>k</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                  <m:mi>j</m:mi>
+                </m:munderover>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mfenced separators="" open="(" close=")">
+                    <m:mfrac linethickness="0pt">
+                      <m:mi>j</m:mi>
+                      <m:mrow>
+                        <m:mi>k</m:mi>
+                        <m:mo>-</m:mo>
+                        <m:mn>1</m:mn>
+                      </m:mrow>
+                    </m:mfrac>
+                  </m:mfenced>
+                  <m:mo>+</m:mo>
+                  <m:mfenced separators="" open="(" close=")">
+                    <m:mfrac linethickness="0pt">
+                      <m:mi>j</m:mi>
+                      <m:mi>k</m:mi>
+                    </m:mfrac>
+                  </m:mfenced>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:msup>
+                  <m:mi>x</m:mi>
+                  <m:mi>k</m:mi>
+                </m:msup>
+                <m:msup>
+                  <m:mi>y</m:mi>
+                  <m:mrow>
+                    <m:mi>j</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mn>1</m:mn>
+                    <m:mo>-</m:mo>
+                    <m:mi>k</m:mi>
+                  </m:mrow>
+                </m:msup>
+                <m:mo>+</m:mo>
+                <m:msup>
+                  <m:mi>y</m:mi>
+                  <m:mrow>
+                    <m:mi>j</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                </m:msup>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:msup>
+                  <m:mi>x</m:mi>
+                  <m:mrow>
+                    <m:mi>j</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                </m:msup>
+                <m:mo>+</m:mo>
+                <m:munderover>
+                  <m:mo>∑</m:mo>
+                  <m:mrow>
+                    <m:mi>k</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                  <m:mi>j</m:mi>
+                </m:munderover>
+                <m:mfenced separators="" open="(" close=")">
+                  <m:mfrac linethickness="0pt">
+                    <m:mrow>
+                      <m:mi>j</m:mi>
+                      <m:mo>+</m:mo>
+                      <m:mn>1</m:mn>
+                    </m:mrow>
+                    <m:mi>k</m:mi>
+                  </m:mfrac>
+                </m:mfenced>
+                <m:msup>
+                  <m:mi>x</m:mi>
+                  <m:mi>k</m:mi>
+                </m:msup>
+                <m:msup>
+                  <m:mi>y</m:mi>
+                  <m:mrow>
+                    <m:mi>j</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mn>1</m:mn>
+                    <m:mo>-</m:mo>
+                    <m:mi>k</m:mi>
+                  </m:mrow>
+                </m:msup>
+                <m:mo>+</m:mo>
+                <m:msup>
+                  <m:mi>y</m:mi>
+                  <m:mrow>
+                    <m:mi>j</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                </m:msup>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mfenced separators="" open="(" close=")">
+                  <m:mfrac linethickness="0pt">
+                    <m:mrow>
+                      <m:mi>j</m:mi>
+                      <m:mo>+</m:mo>
+                      <m:mn>1</m:mn>
+                    </m:mrow>
+                    <m:mrow>
+                      <m:mi>j</m:mi>
+                      <m:mo>+</m:mo>
+                      <m:mn>1</m:mn>
+                    </m:mrow>
+                  </m:mfrac>
+                </m:mfenced>
+                <m:msup>
+                  <m:mi>x</m:mi>
+                  <m:mrow>
+                    <m:mi>j</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                </m:msup>
+                <m:msup>
+                  <m:mi>y</m:mi>
+                  <m:mn>0</m:mn>
+                </m:msup>
+                <m:mo>+</m:mo>
+                <m:munderover>
+                  <m:mo>∑</m:mo>
+                  <m:mrow>
+                    <m:mi>k</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                  <m:mi>j</m:mi>
+                </m:munderover>
+                <m:mfenced separators="" open="(" close=")">
+                  <m:mfrac linethickness="0pt">
+                    <m:mrow>
+                      <m:mi>j</m:mi>
+                      <m:mo>+</m:mo>
+                      <m:mn>1</m:mn>
+                    </m:mrow>
+                    <m:mi>k</m:mi>
+                  </m:mfrac>
+                </m:mfenced>
+                <m:msup>
+                  <m:mi>x</m:mi>
+                  <m:mi>k</m:mi>
+                </m:msup>
+                <m:msup>
+                  <m:mi>y</m:mi>
+                  <m:mrow>
+                    <m:mi>j</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mn>1</m:mn>
+                    <m:mo>-</m:mo>
+                    <m:mi>k</m:mi>
+                  </m:mrow>
+                </m:msup>
+                <m:mo>+</m:mo>
+                <m:mfenced separators="" open="(" close=")">
+                  <m:mfrac linethickness="0pt">
+                    <m:mrow>
+                      <m:mi>j</m:mi>
+                      <m:mo>+</m:mo>
+                      <m:mn>1</m:mn>
+                    </m:mrow>
+                    <m:mn>0</m:mn>
+                  </m:mfrac>
+                </m:mfenced>
+                <m:msup>
+                  <m:mi>x</m:mi>
+                  <m:mn>0</m:mn>
+                </m:msup>
+                <m:msup>
+                  <m:mi>y</m:mi>
+                  <m:mrow>
+                    <m:mi>j</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                </m:msup>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:munderover>
+                  <m:mo>∑</m:mo>
+                  <m:mrow>
+                    <m:mi>k</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mn>0</m:mn>
+                  </m:mrow>
+                  <m:mrow>
+                    <m:mi>j</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                </m:munderover>
+                <m:mfenced separators="" open="(" close=")">
+                  <m:mfrac linethickness="0pt">
+                    <m:mrow>
+                      <m:mi>j</m:mi>
+                      <m:mo>+</m:mo>
+                      <m:mn>1</m:mn>
+                    </m:mrow>
+                    <m:mi>k</m:mi>
+                  </m:mfrac>
+                </m:mfenced>
+                <m:msup>
+                  <m:mi>x</m:mi>
+                  <m:mi>k</m:mi>
+                </m:msup>
+                <m:msup>
+                  <m:mi>y</m:mi>
+                  <m:mrow>
+                    <m:mi>j</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mn>1</m:mn>
+                    <m:mo>-</m:mo>
+                    <m:mi>k</m:mi>
+                  </m:mrow>
+                </m:msup>
+                <m:mo>,</m:mo>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+        </m:mtable>
+      </m:math>
+    </equation>
+    <para id="id118107">which shows that the assertion of the theorem holds for the
+natural number <m:math overflow="scroll"><m:mrow><m:mi>j</m:mi><m:mo>+</m:mo><m:mn>1</m:mn><m:mo>.</m:mo></m:mrow></m:math>
+This completes the proof.</para>
+</proof></rule>
+    <para id="id118126">The next exercise is valid in any ordered field,
+but, since we are mainly interested in the order field <m:math overflow="scroll"><m:mrow><m:mi>R</m:mi><m:mo>,</m:mo></m:mrow></m:math> we state everything in terms of that field.</para>
+<exercise id="fs-id1170978305094"><problem id="fs-id1170989714248">
+    <list id="id118159" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid8"> If <m:math overflow="scroll"><m:mi>x</m:mi></m:math> and <m:math overflow="scroll"><m:mi>y</m:mi></m:math> are positive real numbers, and if <m:math overflow="scroll"><m:mi>n</m:mi></m:math> and <m:math overflow="scroll"><m:mi>k</m:mi></m:math> are natural numbers with <m:math overflow="scroll"><m:mrow><m:mi>k</m:mi><m:mo>≤</m:mo><m:mi>n</m:mi><m:mo>,</m:mo></m:mrow></m:math> show that
+<m:math overflow="scroll"><m:mrow><m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>+</m:mo><m:mi>y</m:mi><m:mo>)</m:mo></m:mrow><m:mi>n</m:mi></m:msup><m:mo>≥</m:mo><m:mfenced separators="" open="(" close=")"><m:mfrac linethickness="0pt"><m:mi>n</m:mi><m:mi>k</m:mi></m:mfrac></m:mfenced><m:msup><m:mi>x</m:mi><m:mi>k</m:mi></m:msup><m:msup><m:mi>y</m:mi><m:mrow><m:mi>n</m:mi><m:mo>-</m:mo><m:mi>k</m:mi></m:mrow></m:msup><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid9"> For any positive real number <m:math overflow="scroll"><m:mi>x</m:mi></m:math> and natural number <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>,</m:mo></m:mrow></m:math> show that
+<m:math overflow="scroll"><m:mrow><m:msup><m:mrow><m:mo>(</m:mo><m:mn>1</m:mn><m:mo>+</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mi>n</m:mi></m:msup><m:mo>≥</m:mo><m:mn>1</m:mn><m:mo>+</m:mo><m:mi>n</m:mi><m:mi>x</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid10"> For any real number <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>&gt;</m:mo><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:math> and natural number <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>,</m:mo></m:mrow></m:math> prove that
+<m:math overflow="scroll"><m:mrow><m:msup><m:mrow><m:mo>(</m:mo><m:mn>1</m:mn><m:mo>+</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mi>n</m:mi></m:msup><m:mo>≥</m:mo><m:mn>1</m:mn><m:mo>+</m:mo><m:mi>n</m:mi><m:mi>x</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+HINT: Do not try to use the binomial theorem as in part (b); it won't work because the terms are not all positive;
+prove this directly by induction.
+</item>
+    </list>
+</problem></exercise>
+    <para id="id118432">There is one more important algebraic identity,
+which again can be proved by induction.
+It is actually just a corollary of the geometric progression formula.</para>
+<rule id="fs-id1170978519676" type="theorem"><statement id="fs-id1170980197519"><para id="fs-id1170995281292">
+If <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>,</m:mo><m:mi>y</m:mi><m:mo>∈</m:mo><m:mi>R</m:mi></m:mrow></m:math> and <m:math overflow="scroll"><m:mi>n</m:mi></m:math> is a natural number, then</para>
+    <equation id="id118477">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:msup>
+            <m:mi>x</m:mi>
+            <m:mi>n</m:mi>
+          </m:msup>
+          <m:mo>-</m:mo>
+          <m:msup>
+            <m:mi>y</m:mi>
+            <m:mi>n</m:mi>
+          </m:msup>
+          <m:mrow>
+            <m:mo>=</m:mo>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>x</m:mi>
+              <m:mo>-</m:mo>
+              <m:mi>y</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>(</m:mo>
+          </m:mrow>
+          <m:munderover>
+            <m:mo>∑</m:mo>
+            <m:mrow>
+              <m:mi>j</m:mi>
+              <m:mo>=</m:mo>
+              <m:mn>0</m:mn>
+            </m:mrow>
+            <m:mrow>
+              <m:mi>n</m:mi>
+              <m:mo>-</m:mo>
+              <m:mn>1</m:mn>
+            </m:mrow>
+          </m:munderover>
+          <m:msup>
+            <m:mi>x</m:mi>
+            <m:mi>j</m:mi>
+          </m:msup>
+          <m:msup>
+            <m:mi>y</m:mi>
+            <m:mrow>
+              <m:mi>n</m:mi>
+              <m:mo>-</m:mo>
+              <m:mn>1</m:mn>
+              <m:mo>-</m:mo>
+              <m:mi>j</m:mi>
+            </m:mrow>
+          </m:msup>
+          <m:mo>.</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+</statement>
+<proof id="fs-id1170974828456">
+    <para id="id118568">If <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>=</m:mo><m:mn>1</m:mn></m:mrow></m:math> the theorem is clear.
+Suppose it holds for a natural number <m:math overflow="scroll"><m:mrow><m:mi>k</m:mi><m:mo>,</m:mo></m:mrow></m:math> and let us
+prove the identity for the natural number <m:math overflow="scroll"><m:mrow><m:mi>k</m:mi><m:mo>+</m:mo><m:mn>1</m:mn><m:mo>.</m:mo></m:mrow></m:math> We have</para>
+    <equation id="uid11"><m:math overflow="scroll" mode="display">
+        <m:mtable displaystyle="true">
+          <m:mtr>
+            <m:mtd columnalign="right">
+              <m:mrow>
+                <m:msup>
+                  <m:mi>x</m:mi>
+                  <m:mrow>
+                    <m:mi>k</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                </m:msup>
+                <m:mo>-</m:mo>
+                <m:msup>
+                  <m:mi>y</m:mi>
+                  <m:mrow>
+                    <m:mi>k</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                </m:msup>
+              </m:mrow>
+            </m:mtd>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:msup>
+                  <m:mi>x</m:mi>
+                  <m:mrow>
+                    <m:mi>k</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                </m:msup>
+                <m:mo>-</m:mo>
+                <m:msup>
+                  <m:mi>x</m:mi>
+                  <m:mi>k</m:mi>
+                </m:msup>
+                <m:mi>y</m:mi>
+                <m:mo>+</m:mo>
+                <m:msup>
+                  <m:mi>x</m:mi>
+                  <m:mi>k</m:mi>
+                </m:msup>
+                <m:mi>y</m:mi>
+                <m:mo>-</m:mo>
+                <m:msup>
+                  <m:mi>y</m:mi>
+                  <m:mrow>
+                    <m:mi>k</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                </m:msup>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>x</m:mi>
+                  <m:mo>-</m:mo>
+                  <m:mi>y</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:msup>
+                  <m:mi>x</m:mi>
+                  <m:mi>k</m:mi>
+                </m:msup>
+                <m:mo>+</m:mo>
+                <m:mi>y</m:mi>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:msup>
+                    <m:mi>x</m:mi>
+                    <m:mi>k</m:mi>
+                  </m:msup>
+                  <m:mo>-</m:mo>
+                  <m:msup>
+                    <m:mi>y</m:mi>
+                    <m:mi>k</m:mi>
+                  </m:msup>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>x</m:mi>
+                  <m:mo>-</m:mo>
+                  <m:mi>y</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:msup>
+                  <m:mi>x</m:mi>
+                  <m:mi>k</m:mi>
+                </m:msup>
+                <m:mo>+</m:mo>
+                <m:mi>y</m:mi>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>x</m:mi>
+                  <m:mo>-</m:mo>
+                  <m:mi>y</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:munderover>
+                    <m:mo>∑</m:mo>
+                    <m:mrow>
+                      <m:mi>j</m:mi>
+                      <m:mo>=</m:mo>
+                      <m:mn>0</m:mn>
+                    </m:mrow>
+                    <m:mrow>
+                      <m:mi>k</m:mi>
+                      <m:mo>-</m:mo>
+                      <m:mn>1</m:mn>
+                    </m:mrow>
+                  </m:munderover>
+                  <m:msup>
+                    <m:mi>x</m:mi>
+                    <m:mi>j</m:mi>
+                  </m:msup>
+                  <m:msup>
+                    <m:mi>y</m:mi>
+                    <m:mrow>
+                      <m:mi>k</m:mi>
+                      <m:mo>-</m:mo>
+                      <m:mn>1</m:mn>
+                      <m:mo>-</m:mo>
+                      <m:mi>j</m:mi>
+                    </m:mrow>
+                  </m:msup>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>x</m:mi>
+                  <m:mo>-</m:mo>
+                  <m:mi>y</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:msup>
+                  <m:mi>x</m:mi>
+                  <m:mi>k</m:mi>
+                </m:msup>
+                <m:mrow>
+                  <m:mo>+</m:mo>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>x</m:mi>
+                    <m:mo>-</m:mo>
+                    <m:mi>y</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>(</m:mo>
+                </m:mrow>
+                <m:munderover>
+                  <m:mo>∑</m:mo>
+                  <m:mrow>
+                    <m:mi>j</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mn>0</m:mn>
+                  </m:mrow>
+                  <m:mrow>
+                    <m:mi>k</m:mi>
+                    <m:mo>-</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                </m:munderover>
+                <m:msup>
+                  <m:mi>x</m:mi>
+                  <m:mi>j</m:mi>
+                </m:msup>
+                <m:msup>
+                  <m:mi>y</m:mi>
+                  <m:mrow>
+                    <m:mi>k</m:mi>
+                    <m:mo>-</m:mo>
+                    <m:mi>j</m:mi>
+                  </m:mrow>
+                </m:msup>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>x</m:mi>
+                  <m:mo>-</m:mo>
+                  <m:mi>y</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:msup>
+                    <m:mi>x</m:mi>
+                    <m:mi>k</m:mi>
+                  </m:msup>
+                  <m:msup>
+                    <m:mi>y</m:mi>
+                    <m:mrow>
+                      <m:mi>k</m:mi>
+                      <m:mo>-</m:mo>
+                      <m:mi>k</m:mi>
+                    </m:mrow>
+                  </m:msup>
+                  <m:mo>+</m:mo>
+                  <m:munderover>
+                    <m:mo>∑</m:mo>
+                    <m:mrow>
+                      <m:mi>j</m:mi>
+                      <m:mo>=</m:mo>
+                      <m:mn>0</m:mn>
+                    </m:mrow>
+                    <m:mrow>
+                      <m:mi>k</m:mi>
+                      <m:mo>-</m:mo>
+                      <m:mn>1</m:mn>
+                    </m:mrow>
+                  </m:munderover>
+                  <m:msup>
+                    <m:mi>x</m:mi>
+                    <m:mi>j</m:mi>
+                  </m:msup>
+                  <m:msup>
+                    <m:mi>y</m:mi>
+                    <m:mrow>
+                      <m:mi>k</m:mi>
+                      <m:mo>-</m:mo>
+                      <m:mi>j</m:mi>
+                    </m:mrow>
+                  </m:msup>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>x</m:mi>
+                  <m:mo>-</m:mo>
+                  <m:mi>y</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:munderover>
+                    <m:mo>∑</m:mo>
+                    <m:mrow>
+                      <m:mi>j</m:mi>
+                      <m:mo>=</m:mo>
+                      <m:mn>0</m:mn>
+                    </m:mrow>
+                    <m:mi>k</m:mi>
+                  </m:munderover>
+                  <m:msup>
+                    <m:mi>x</m:mi>
+                    <m:mi>j</m:mi>
+                  </m:msup>
+                  <m:msup>
+                    <m:mi>y</m:mi>
+                    <m:mrow>
+                      <m:mi>k</m:mi>
+                      <m:mo>-</m:mo>
+                      <m:mi>j</m:mi>
+                    </m:mrow>
+                  </m:msup>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+        </m:mtable>
+      </m:math>
+    </equation>
+    <para id="id119090">,
+which shows that the assertion holds for the natural number <m:math overflow="scroll"><m:mrow><m:mi>k</m:mi><m:mo>+</m:mo><m:mn>1</m:mn><m:mo>.</m:mo></m:mrow></m:math>
+So, by induction, the theorem is proved.</para>
+</proof></rule>
+<exercise id="fs-id1170976403686"><problem id="fs-id1170979481473">
+    <para id="id119114"> Let <m:math overflow="scroll"><m:mi>x</m:mi></m:math> and <m:math overflow="scroll"><m:mi>y</m:mi></m:math> be real numbers.</para>
+    <list id="id119144" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid12"> Let <m:math overflow="scroll"><m:mi>n</m:mi></m:math> be an odd natural number; i.e.,
+<m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>=</m:mo><m:mn>2</m:mn><m:mi>k</m:mi><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow></m:math> for some natural number <m:math overflow="scroll"><m:mrow><m:mi>k</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Show that
+<equation id="id119201"><m:math overflow="scroll" mode="display"><m:mrow><m:msup><m:mi>x</m:mi><m:mi>n</m:mi></m:msup><m:mo>+</m:mo><m:msup><m:mi>y</m:mi><m:mi>n</m:mi></m:msup><m:mrow><m:mo>=</m:mo><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>+</m:mo><m:mi>y</m:mi><m:mo>)</m:mo></m:mrow><m:mo>(</m:mo></m:mrow><m:munderover><m:mo>∑</m:mo><m:mrow><m:mi>j</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow><m:mrow><m:mi>n</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:munderover><m:msup><m:mrow><m:mo>(</m:mo><m:mo>-</m:mo><m:mn>1</m:mn><m:mo>)</m:mo></m:mrow><m:mi>j</m:mi></m:msup><m:msup><m:mi>x</m:mi><m:mi>j</m:mi></m:msup><m:msup><m:mi>y</m:mi><m:mrow><m:mi>n</m:mi><m:mo>-</m:mo><m:mn>1</m:mn><m:mo>-</m:mo><m:mi>j</m:mi></m:mrow></m:msup><m:mo>.</m:mo></m:mrow></m:math></equation>
+HINT: Write <m:math overflow="scroll"><m:mrow><m:msup><m:mi>x</m:mi><m:mi>n</m:mi></m:msup><m:mo>+</m:mo><m:msup><m:mi>y</m:mi><m:mi>n</m:mi></m:msup><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mi>n</m:mi></m:msup><m:mo>-</m:mo><m:msup><m:mrow><m:mo>(</m:mo><m:mo>-</m:mo><m:mi>y</m:mi><m:mo>)</m:mo></m:mrow><m:mi>n</m:mi></m:msup><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid13"> Show that <m:math overflow="scroll"><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mi>y</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:math> can not be
+factored into a product of the form
+<m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mi>x</m:mi><m:mo>+</m:mo><m:mi>b</m:mi><m:mi>y</m:mi><m:mo>)</m:mo><m:mo>(</m:mo><m:mi>c</m:mi><m:mi>x</m:mi><m:mo>+</m:mo><m:mi>d</m:mi><m:mi>y</m:mi><m:mo>)</m:mo></m:mrow></m:math>
+for any choices of real numbers <m:math overflow="scroll"><m:mrow><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>,</m:mo><m:mi>c</m:mi><m:mo>,</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>d</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+    </list>
+</problem></exercise>
+    <para id="id119474">Using the Binomial Theorem together with the preceding theorem, we may
+now investigate the existence of <m:math overflow="scroll"><m:mi>n</m:mi></m:math>th roots of real numbers.
+This next theorem is definitely not valid in any ordered field, for
+it again depends on the completeness property.</para>
+<rule id="fs-id1170974799860" type="theorem"><statement id="fs-id1170978162275"><para id="fs-id1170997477964">
+ Let <m:math overflow="scroll"><m:mi>n</m:mi></m:math> be a natural number and let
+<m:math overflow="scroll"><m:mi>x</m:mi></m:math> be a positive real number. Then there exists
+a unique positive real number <m:math overflow="scroll"><m:mi>y</m:mi></m:math> such that <m:math overflow="scroll"><m:mrow><m:msup><m:mi>y</m:mi><m:mi>n</m:mi></m:msup><m:mo>=</m:mo><m:mi>x</m:mi><m:mo>;</m:mo></m:mrow></m:math>
+i.e., <m:math overflow="scroll"><m:mi>x</m:mi></m:math> has a unique positive <m:math overflow="scroll"><m:mi>n</m:mi></m:math>th root.</para>
+</statement>
+<proof id="fs-id1170980077419">
+    <para id="id119560">Note first that if <m:math overflow="scroll"><m:mrow><m:mn>0</m:mn><m:mo>≤</m:mo><m:mi>t</m:mi><m:mo>&lt;</m:mo><m:mi>s</m:mi><m:mo>,</m:mo></m:mrow></m:math> then <m:math overflow="scroll"><m:mrow><m:msup><m:mi>t</m:mi><m:mi>n</m:mi></m:msup><m:mo>&lt;</m:mo><m:msup><m:mi>s</m:mi><m:mi>n</m:mi></m:msup><m:mo>.</m:mo></m:mrow></m:math>
+(To see this, argue by induction, and use part (e) of <link target-id="fs-id1166093017647" document="m36069"/>.)
+Using this, we mimic the proof of <link document="m36085" target-id="fs-id1170178787854"/>.
+Thus, let <m:math overflow="scroll"><m:mi>S</m:mi></m:math> be the set of all positive real numbers <m:math overflow="scroll"><m:mi>t</m:mi></m:math>
+for which <m:math overflow="scroll"><m:mrow><m:msup><m:mi>t</m:mi><m:mi>n</m:mi></m:msup><m:mo>≤</m:mo><m:mi>x</m:mi><m:mo>.</m:mo></m:mrow></m:math> Then <m:math overflow="scroll"><m:mi>S</m:mi></m:math> is nonempty and bounded above.
+Indeed, if <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>≥</m:mo><m:mn>1</m:mn><m:mo>,</m:mo></m:mrow></m:math> then <m:math overflow="scroll"><m:mrow><m:mn>1</m:mn><m:mo>∈</m:mo><m:mi>S</m:mi><m:mo>,</m:mo></m:mrow></m:math> while
+if <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mn>1</m:mn><m:mo>,</m:mo></m:mrow></m:math> then <m:math overflow="scroll"><m:mi>x</m:mi></m:math> itself is in <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Therefore, <m:math overflow="scroll"><m:mi>S</m:mi></m:math> is nonempty.
+Also, using part (b) of <link target-id="fs-id1170978305094"/>, we see that
+<m:math overflow="scroll"><m:mrow><m:mn>1</m:mn><m:mo>+</m:mo><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>/</m:mo><m:mi>n</m:mi><m:mo>)</m:mo></m:mrow></m:math> is an upper bound for <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+For, if <m:math overflow="scroll"><m:mrow><m:mi>t</m:mi><m:mo>&gt;</m:mo><m:mn>1</m:mn><m:mo>+</m:mo><m:mi>x</m:mi><m:mo>/</m:mo><m:mi>n</m:mi><m:mo>,</m:mo></m:mrow></m:math> then</para>
+    <equation id="id119805">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:msup>
+            <m:mi>t</m:mi>
+            <m:mi>n</m:mi>
+          </m:msup>
+          <m:mo>&gt;</m:mo>
+          <m:msup>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mn>1</m:mn>
+              <m:mo>+</m:mo>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>x</m:mi>
+                <m:mo>/</m:mo>
+                <m:mi>n</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mi>n</m:mi>
+          </m:msup>
+          <m:mo>≥</m:mo>
+          <m:mn>1</m:mn>
+          <m:mo>+</m:mo>
+          <m:mi>n</m:mi>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>x</m:mi>
+            <m:mo>/</m:mo>
+            <m:mi>n</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>&gt;</m:mo>
+          <m:mi>x</m:mi>
+          <m:mo>.</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id119878">Now let <m:math overflow="scroll"><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mo movablelimits="true" form="prefix">sup</m:mo><m:mi>S</m:mi><m:mo>,</m:mo></m:mrow></m:math> and let us show that
+<m:math overflow="scroll"><m:mrow><m:msup><m:mi>y</m:mi><m:mi>n</m:mi></m:msup><m:mo>=</m:mo><m:mi>x</m:mi><m:mo>.</m:mo></m:mrow></m:math> We rule out the other two possibilities.
+First, if <m:math overflow="scroll"><m:mrow><m:msup><m:mi>y</m:mi><m:mi>n</m:mi></m:msup><m:mo>&gt;</m:mo><m:mi>x</m:mi><m:mo>,</m:mo></m:mrow></m:math> let <m:math overflow="scroll"><m:mi>ϵ</m:mi></m:math>
+be the positive number <m:math overflow="scroll"><m:mrow><m:msup><m:mi>y</m:mi><m:mi>n</m:mi></m:msup><m:mo>-</m:mo><m:mi>x</m:mi><m:mo>,</m:mo></m:mrow></m:math> and define <m:math overflow="scroll"><m:msup><m:mi>ϵ</m:mi><m:mo>'</m:mo></m:msup></m:math>
+to be the positive number <m:math overflow="scroll"><m:mrow><m:mi>ϵ</m:mi><m:mo>/</m:mo><m:mo>(</m:mo><m:mi>n</m:mi><m:msup><m:mi>y</m:mi><m:mrow><m:mi>n</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msup><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Then, using <link target-id="fs-id1170177642504" document="m36085"/>, choose <m:math overflow="scroll"><m:mrow><m:mi>t</m:mi><m:mo>∈</m:mo><m:mi>S</m:mi></m:mrow></m:math> so that <m:math overflow="scroll"><m:mrow><m:mi>y</m:mi><m:mo>-</m:mo><m:msup><m:mi>ϵ</m:mi><m:mo>'</m:mo></m:msup><m:mo>&lt;</m:mo><m:mi>t</m:mi><m:mo>≤</m:mo><m:mi>y</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+(<link target-id="fs-id1170177642504" document="m36085"/> is where the completeness of the ordered field <m:math overflow="scroll"><m:mi>R</m:mi></m:math> is crucial.)
+We have</para>
+    <equation id="uid14"><m:math overflow="scroll" mode="display">
+        <m:mtable displaystyle="true">
+          <m:mtr>
+            <m:mtd columnalign="right">
+              <m:mi>ϵ</m:mi>
+            </m:mtd>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:msup>
+                  <m:mi>y</m:mi>
+                  <m:mi>n</m:mi>
+                </m:msup>
+                <m:mo>-</m:mo>
+                <m:mi>x</m:mi>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:msup>
+                  <m:mi>y</m:mi>
+                  <m:mi>n</m:mi>
+                </m:msup>
+                <m:mo>-</m:mo>
+                <m:msup>
+                  <m:mi>t</m:mi>
+                  <m:mi>n</m:mi>
+                </m:msup>
+                <m:mo>+</m:mo>
+                <m:msup>
+                  <m:mi>t</m:mi>
+                  <m:mi>n</m:mi>
+                </m:msup>
+                <m:mo>-</m:mo>
+                <m:mi>x</m:mi>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>≤</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:msup>
+                  <m:mi>y</m:mi>
+                  <m:mi>n</m:mi>
+                </m:msup>
+                <m:mo>-</m:mo>
+                <m:msup>
+                  <m:mi>t</m:mi>
+                  <m:mi>n</m:mi>
+                </m:msup>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>y</m:mi>
+                  <m:mo>-</m:mo>
+                  <m:mi>t</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:munderover>
+                    <m:mo>∑</m:mo>
+                    <m:mrow>
+                      <m:mi>j</m:mi>
+                      <m:mo>=</m:mo>
+                      <m:mn>0</m:mn>
+                    </m:mrow>
+                    <m:mrow>
+                      <m:mi>n</m:mi>
+                      <m:mo>-</m:mo>
+                      <m:mn>1</m:mn>
+                    </m:mrow>
+                  </m:munderover>
+                  <m:msup>
+                    <m:mi>y</m:mi>
+                    <m:mi>j</m:mi>
+                  </m:msup>
+                  <m:msup>
+                    <m:mi>t</m:mi>
+                    <m:mrow>
+                      <m:mi>n</m:mi>
+                      <m:mo>-</m:mo>
+                      <m:mn>1</m:mn>
+                      <m:mo>-</m:mo>
+                      <m:mi>j</m:mi>
+                    </m:mrow>
+                  </m:msup>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>≤</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>y</m:mi>
+                  <m:mo>-</m:mo>
+                  <m:mi>t</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:munderover>
+                    <m:mo>∑</m:mo>
+                    <m:mrow>
+                      <m:mi>j</m:mi>
+                      <m:mo>=</m:mo>
+                      <m:mn>0</m:mn>
+                    </m:mrow>
+                    <m:mrow>
+                      <m:mi>n</m:mi>
+                      <m:mo>-</m:mo>
+                      <m:mn>1</m:mn>
+                    </m:mrow>
+                  </m:munderover>
+                  <m:msup>
+                    <m:mi>y</m:mi>
+                    <m:mi>j</m:mi>
+                  </m:msup>
+                  <m:msup>
+                    <m:mi>y</m:mi>
+                    <m:mrow>
+                      <m:mi>n</m:mi>
+                      <m:mo>-</m:mo>
+                      <m:mn>1</m:mn>
+                      <m:mo>-</m:mo>
+                      <m:mi>j</m:mi>
+                    </m:mrow>
+                  </m:msup>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>y</m:mi>
+                  <m:mo>-</m:mo>
+                  <m:mi>t</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mo>(</m:mo>
+                <m:munderover>
+                  <m:mo>∑</m:mo>
+                  <m:mrow>
+                    <m:mi>j</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mn>0</m:mn>
+                  </m:mrow>
+                  <m:mrow>
+                    <m:mi>n</m:mi>
+                    <m:mo>-</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                </m:munderover>
+                <m:msup>
+                  <m:mi>y</m:mi>
+                  <m:mrow>
+                    <m:mi>n</m:mi>
+                    <m:mo>-</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                </m:msup>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>&lt;</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:msup>
+                  <m:mi>ϵ</m:mi>
+                  <m:mo>'</m:mo>
+                </m:msup>
+                <m:mi>n</m:mi>
+                <m:msup>
+                  <m:mi>y</m:mi>
+                  <m:mrow>
+                    <m:mi>n</m:mi>
+                    <m:mo>-</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                </m:msup>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mi>ϵ</m:mi>
+                <m:mo>,</m:mo>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+        </m:mtable>
+      </m:math>
+    </equation>
+    <para id="id120413">and this is a contradiction. Therefore, <m:math overflow="scroll"><m:msup><m:mi>y</m:mi><m:mi>n</m:mi></m:msup></m:math> is not greater than <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+    <para id="id120444">Now, if <m:math overflow="scroll"><m:mrow><m:msup><m:mi>y</m:mi><m:mi>n</m:mi></m:msup><m:mo>&lt;</m:mo><m:mi>x</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+let <m:math overflow="scroll"><m:mi>ϵ</m:mi></m:math> be the positive number <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>-</m:mo><m:msup><m:mi>y</m:mi><m:mi>n</m:mi></m:msup><m:mo>,</m:mo></m:mrow></m:math> and choose a <m:math overflow="scroll"><m:mrow><m:mi>δ</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn></m:mrow></m:math>
+such that <m:math overflow="scroll"><m:mrow><m:mi>δ</m:mi><m:mo>&lt;</m:mo><m:mn>1</m:mn></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>δ</m:mi><m:mo>&lt;</m:mo><m:mi>ϵ</m:mi><m:mo>/</m:mo><m:msup><m:mrow><m:mo>(</m:mo><m:mi>y</m:mi><m:mo>+</m:mo><m:mn>1</m:mn><m:mo>)</m:mo></m:mrow><m:mi>n</m:mi></m:msup><m:mo>.</m:mo></m:mrow></m:math>
+Then, using the Binomial Theorem, we have that</para>
+    <equation id="uid15"><m:math overflow="scroll" mode="display">
+        <m:mtable displaystyle="true">
+          <m:mtr>
+            <m:mtd columnalign="right">
+              <m:msup>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>y</m:mi>
+                  <m:mo>+</m:mo>
+                  <m:mi>δ</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mi>n</m:mi>
+              </m:msup>
+            </m:mtd>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:munderover>
+                  <m:mo>∑</m:mo>
+                  <m:mrow>
+                    <m:mi>k</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mn>0</m:mn>
+                  </m:mrow>
+                  <m:mi>n</m:mi>
+                </m:munderover>
+                <m:mfenced separators="" open="(" close=")">
+                  <m:mfrac linethickness="0pt">
+                    <m:mi>n</m:mi>
+                    <m:mi>k</m:mi>
+                  </m:mfrac>
+                </m:mfenced>
+                <m:msup>
+                  <m:mi>y</m:mi>
+                  <m:mi>k</m:mi>
+                </m:msup>
+                <m:msup>
+                  <m:mi>δ</m:mi>
+                  <m:mrow>
+                    <m:mi>n</m:mi>
+                    <m:mo>-</m:mo>
+                    <m:mi>k</m:mi>
+                  </m:mrow>
+                </m:msup>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:msup>
+                  <m:mi>y</m:mi>
+                  <m:mi>n</m:mi>
+                </m:msup>
+                <m:mo>+</m:mo>
+                <m:munderover>
+                  <m:mo>∑</m:mo>
+                  <m:mrow>
+                    <m:mi>k</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mn>0</m:mn>
+                  </m:mrow>
+                  <m:mrow>
+                    <m:mi>n</m:mi>
+                    <m:mo>-</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                </m:munderover>
+                <m:mfenced separators="" open="(" close=")">
+                  <m:mfrac linethickness="0pt">
+                    <m:mi>n</m:mi>
+                    <m:mi>k</m:mi>
+                  </m:mfrac>
+                </m:mfenced>
+                <m:msup>
+                  <m:mi>y</m:mi>
+                  <m:mi>k</m:mi>
+                </m:msup>
+                <m:msup>
+                  <m:mi>δ</m:mi>
+                  <m:mrow>
+                    <m:mi>n</m:mi>
+                    <m:mo>-</m:mo>
+                    <m:mi>k</m:mi>
+                  </m:mrow>
+                </m:msup>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:msup>
+                  <m:mi>y</m:mi>
+                  <m:mi>n</m:mi>
+                </m:msup>
+                <m:mo>+</m:mo>
+                <m:mi>δ</m:mi>
+                <m:munderover>
+                  <m:mo>∑</m:mo>
+                  <m:mrow>
+                    <m:mi>k</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mn>0</m:mn>
+                  </m:mrow>
+                  <m:mrow>
+                    <m:mi>n</m:mi>
+                    <m:mo>-</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                </m:munderover>
+                <m:mfenced separators="" open="(" close=")">
+                  <m:mfrac linethickness="0pt">
+                    <m:mi>n</m:mi>
+                    <m:mi>k</m:mi>
+                  </m:mfrac>
+                </m:mfenced>
+                <m:msup>
+                  <m:mi>y</m:mi>
+                  <m:mi>k</m:mi>
+                </m:msup>
+                <m:msup>
+                  <m:mi>δ</m:mi>
+                  <m:mrow>
+                    <m:mi>n</m:mi>
+                    <m:mo>-</m:mo>
+                    <m:mn>1</m:mn>
+                    <m:mo>-</m:mo>
+                    <m:mi>k</m:mi>
+                  </m:mrow>
+                </m:msup>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>&lt;</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:msup>
+                  <m:mi>y</m:mi>
+                  <m:mi>n</m:mi>
+                </m:msup>
+                <m:mo>+</m:mo>
+                <m:mi>δ</m:mi>
+                <m:munderover>
+                  <m:mo>∑</m:mo>
+                  <m:mrow>
+                    <m:mi>k</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mn>0</m:mn>
+                  </m:mrow>
+                  <m:mi>n</m:mi>
+                </m:munderover>
+                <m:mfenced separators="" open="(" close=")">
+                  <m:mfrac linethickness="0pt">
+                    <m:mi>n</m:mi>
+                    <m:mi>k</m:mi>
+                  </m:mfrac>
+                </m:mfenced>
+                <m:msup>
+                  <m:mi>y</m:mi>
+                  <m:mi>k</m:mi>
+                </m:msup>
+                <m:msup>
+                  <m:mn>1</m:mn>
+                  <m:mrow>
+                    <m:mi>n</m:mi>
+                    <m:mo>-</m:mo>
+                    <m:mi>k</m:mi>
+                  </m:mrow>
+                </m:msup>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:msup>
+                  <m:mi>y</m:mi>
+                  <m:mi>n</m:mi>
+                </m:msup>
+                <m:mo>+</m:mo>
+                <m:mi>δ</m:mi>
+                <m:msup>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>y</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mn>1</m:mn>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mi>n</m:mi>
+                </m:msup>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mi>x</m:mi>
+                <m:mo>-</m:mo>
+                <m:mi>ϵ</m:mi>
+                <m:mo>+</m:mo>
+                <m:mi>δ</m:mi>
+                <m:msup>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>y</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mn>1</m:mn>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mi>n</m:mi>
+                </m:msup>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>&lt;</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mi>x</m:mi>
+                <m:mo>-</m:mo>
+                <m:mi>ϵ</m:mi>
+                <m:mo>+</m:mo>
+                <m:mi>ϵ</m:mi>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mi>x</m:mi>
+                <m:mo>,</m:mo>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+        </m:mtable>
+      </m:math>
+    </equation>
+    <para id="id120970">implying that <m:math overflow="scroll"><m:mrow><m:mi>y</m:mi><m:mo>+</m:mo><m:mi>δ</m:mi><m:mo>∈</m:mo><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math> But this is a contradiction,
+since <m:math overflow="scroll"><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mo movablelimits="true" form="prefix">sup</m:mo><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Therefore, <m:math overflow="scroll"><m:msup><m:mi>y</m:mi><m:mi>n</m:mi></m:msup></m:math> is not less than <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>,</m:mo></m:mrow></m:math> and so <m:math overflow="scroll"><m:mrow><m:msup><m:mi>y</m:mi><m:mi>n</m:mi></m:msup><m:mo>=</m:mo><m:mi>x</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+    <para id="id121068">We have shown the existence of a positive <m:math overflow="scroll"><m:mi>n</m:mi></m:math>th root of <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+To see the uniqueness, suppose <m:math overflow="scroll"><m:mi>y</m:mi></m:math> and <m:math overflow="scroll"><m:msup><m:mi>y</m:mi><m:mo>'</m:mo></m:msup></m:math> are two positive <m:math overflow="scroll"><m:mi>n</m:mi></m:math>th roots of <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Then</para>
+    <equation id="uid16"><m:math overflow="scroll" mode="display">
+        <m:mtable displaystyle="true">
+          <m:mtr>
+            <m:mtd columnalign="right">
+              <m:mn>0</m:mn>
+            </m:mtd>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:msup>
+                  <m:mi>y</m:mi>
+                  <m:mi>n</m:mi>
+                </m:msup>
+                <m:mo>-</m:mo>
+                <m:msup>
+                  <m:mrow>
+                    <m:msup>
+                      <m:mi>y</m:mi>
+                      <m:mo>'</m:mo>
+                    </m:msup>
+                  </m:mrow>
+                  <m:mi>n</m:mi>
+                </m:msup>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>y</m:mi>
+                  <m:mo>-</m:mo>
+                  <m:msup>
+                    <m:mi>y</m:mi>
+                    <m:mo>'</m:mo>
+                  </m:msup>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                </m:mrow>
+                <m:munderover>
+                  <m:mo>∑</m:mo>
+                  <m:mrow>
+                    <m:mi>j</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mn>0</m:mn>
+                  </m:mrow>
+                  <m:mrow>
+                    <m:mi>n</m:mi>
+                    <m:mo>-</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                </m:munderover>
+                <m:msup>
+                  <m:mi>y</m:mi>
+                  <m:mi>j</m:mi>
+                </m:msup>
+                <m:msup>
+                  <m:mrow>
+                    <m:msup>
+                      <m:mi>y</m:mi>
+                      <m:mo>'</m:mo>
+                    </m:msup>
+                  </m:mrow>
+                  <m:mrow>
+                    <m:mi>n</m:mi>
+                    <m:mo>-</m:mo>
+                    <m:mi>j</m:mi>
+                    <m:mo>-</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                </m:msup>
+                <m:mo>,</m:mo>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+        </m:mtable>
+      </m:math>
+    </equation>
+    <para id="id121268">which implies that either <m:math overflow="scroll"><m:mrow><m:mi>y</m:mi><m:mo>-</m:mo><m:msup><m:mi>y</m:mi><m:mo>'</m:mo></m:msup><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math> or
+<m:math overflow="scroll"><m:mrow><m:msubsup><m:mo>∑</m:mo><m:mrow><m:mi>j</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow><m:mrow><m:mi>n</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msubsup><m:msup><m:mi>y</m:mi><m:mi>j</m:mi></m:msup><m:msup><m:mrow><m:msup><m:mi>y</m:mi><m:mo>'</m:mo></m:msup></m:mrow><m:mrow><m:mi>n</m:mi><m:mo>-</m:mo><m:mi>j</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msup><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math>
+Since this latter sum consists of positive terms, it cannot be 0,
+whence <m:math overflow="scroll"><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:msup><m:mi>y</m:mi><m:mo>'</m:mo></m:msup><m:mo>.</m:mo></m:mrow></m:math>
+This shows that there is but one positive <m:math overflow="scroll"><m:mi>n</m:mi></m:math>th root of <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+and the theorem is proved.</para></proof></rule>
+<exercise id="fs-id1170974960075"><problem id="fs-id1170979233040">
+   
+    <list id="id121420" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid17"> Show that if <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>=</m:mo><m:mn>2</m:mn><m:mi>k</m:mi></m:mrow></m:math> is an even natural number,
+then every positive real number has exactly two distinct <m:math overflow="scroll"><m:mi>n</m:mi></m:math>th roots.
+</item>
+      <item id="uid18"> If <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>=</m:mo><m:mn>2</m:mn><m:mi>k</m:mi><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow></m:math> is an odd natural number,
+show that every real number has exactly one <m:math overflow="scroll"><m:mi>n</m:mi></m:math>th root.
+</item>
+      <item id="uid19"> If <m:math overflow="scroll"><m:mi>n</m:mi></m:math> is a natural number greater than 1,
+prove that there is no rational number whose <m:math overflow="scroll"><m:mi>n</m:mi></m:math>th power equals 2, i.e.,
+the <m:math overflow="scroll"><m:mi>n</m:mi></m:math>th root of 2 is not a rational number.
+</item>
+    </list>
+</problem></exercise>
+  </content>
+</document>

@@ -1,0 +1,1643 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML">
+  <title>Integration with Respect to Arc Length</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m36228</md:content-id>
+  <md:title>Integration with Respect to Arc Length</md:title>
+  <md:abstract>We introduce next what would appear to be the best
+parameterization of a piecewise smooth curve, i.e., a parameterization by arc length.
+We will then use this parameterization to define the integral of a function
+whose domain is the curve.</md:abstract>
+  <md:uuid>1c5fd4dd-c90b-4711-8181-8158b1b12819</md:uuid>
+</metadata>
+
+<content>
+    <para id="id189169">We introduce next what would appear to be the best
+parameterization of a piecewise smooth curve, i.e., a parameterization by arc length.
+We will then use this parameterization to define the integral of a function
+whose domain is the curve.</para>
+<rule id="fs-id1172340591187" type="theorem"><statement id="fs-id1172341375602">
+    <para id="id189176">
+Let <m:math overflow="scroll"><m:mi>C</m:mi></m:math> be a piecewise smooth curve of finite length <m:math overflow="scroll"><m:mi>L</m:mi></m:math> joining two distinct points <m:math overflow="scroll"><m:msub><m:mi>z</m:mi><m:mn>1</m:mn></m:msub></m:math> to <m:math overflow="scroll"><m:mrow><m:msub><m:mi>z</m:mi><m:mn>2</m:mn></m:msub><m:mo>.</m:mo></m:mrow></m:math>
+Then there exists a parameterization
+<m:math overflow="scroll"><m:mrow><m:mi>γ</m:mi><m:mo>:</m:mo><m:mo>[</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mi>L</m:mi><m:mo>]</m:mo><m:mo>→</m:mo><m:mi>C</m:mi></m:mrow></m:math> for which the arc length
+of the curve joining <m:math overflow="scroll"><m:mrow><m:mi>γ</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:math> to <m:math overflow="scroll"><m:mrow><m:mi>γ</m:mi><m:mo>(</m:mo><m:mi>u</m:mi><m:mo>)</m:mo></m:mrow></m:math> is equal to <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>u</m:mi><m:mo>-</m:mo><m:mi>t</m:mi><m:mo>|</m:mo></m:mrow></m:math> for
+all <m:math overflow="scroll"><m:mrow><m:mi>t</m:mi><m:mo>&lt;</m:mo><m:mi>u</m:mi><m:mo>∈</m:mo><m:mo>[</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mi>L</m:mi><m:mo>]</m:mo><m:mo>.</m:mo></m:mrow></m:math></para>
+</statement>
+<proof id="fs-id1172339414676">
+    <para id="id189848">
+Let <m:math overflow="scroll"><m:mrow><m:mi>φ</m:mi><m:mo>:</m:mo><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>→</m:mo><m:mi>C</m:mi></m:mrow></m:math> be a parameterization of <m:math overflow="scroll"><m:mrow><m:mi>C</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Define a function <m:math overflow="scroll"><m:mrow><m:mi>F</m:mi><m:mo>:</m:mo><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>→</m:mo><m:mo>[</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mi>L</m:mi><m:mo>]</m:mo></m:mrow></m:math> by</para>
+    <equation id="id189927">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mi>F</m:mi>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>t</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>=</m:mo>
+          <m:msubsup>
+            <m:mo>∫</m:mo>
+            <m:mi>a</m:mi>
+            <m:mi>t</m:mi>
+          </m:msubsup>
+          <m:mrow>
+            <m:mo>|</m:mo>
+            <m:msup>
+              <m:mi>φ</m:mi>
+              <m:mo>'</m:mo>
+            </m:msup>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>s</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>|</m:mo>
+          </m:mrow>
+          <m:mspace width="0.166667em"/>
+          <m:mi>d</m:mi>
+          <m:mi>s</m:mi>
+          <m:mo>.</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id189988">In other words, <m:math overflow="scroll"><m:mrow><m:mi>F</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:math> is the length of the portion of <m:math overflow="scroll"><m:mi>C</m:mi></m:math> that joins the points <m:math overflow="scroll"><m:mrow><m:msub><m:mi>z</m:mi><m:mn>1</m:mn></m:msub><m:mo>=</m:mo><m:mi>φ</m:mi><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>φ</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+By the Fundamental Theorem of Calculus, we know that the function <m:math overflow="scroll"><m:mi>F</m:mi></m:math>
+is continuous on the entire interval <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow></m:math>
+and is continuously differentiable on every subinterval <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:msub><m:mi>t</m:mi><m:mrow><m:mi>i</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>,</m:mo><m:msub><m:mi>t</m:mi><m:mi>i</m:mi></m:msub><m:mo>)</m:mo></m:mrow></m:math> of the partition
+<m:math overflow="scroll"><m:mi>P</m:mi></m:math> determined by the piecewise smooth parameterization <m:math overflow="scroll"><m:mrow><m:mi>φ</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Moreover, <m:math overflow="scroll"><m:mrow><m:msup><m:mi>F</m:mi><m:mo>'</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mrow><m:mo>|</m:mo><m:msup><m:mi>φ</m:mi><m:mo>'</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>|</m:mo></m:mrow><m:mo>&gt;</m:mo><m:mn>0</m:mn></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>t</m:mi><m:mo>∈</m:mo><m:mo>(</m:mo><m:msub><m:mi>t</m:mi><m:mrow><m:mi>i</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>,</m:mo><m:msub><m:mi>t</m:mi><m:mi>i</m:mi></m:msub><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math>
+implying that <m:math overflow="scroll"><m:mi>F</m:mi></m:math> is strictly increasing on these subintervals.
+Therefore, if we write <m:math overflow="scroll"><m:mrow><m:msub><m:mi>s</m:mi><m:mi>i</m:mi></m:msub><m:mo>=</m:mo><m:mi>F</m:mi><m:mrow><m:mo>(</m:mo><m:msub><m:mi>t</m:mi><m:mi>i</m:mi></m:msub><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> then the <m:math overflow="scroll"><m:msub><m:mi>s</m:mi><m:mi>i</m:mi></m:msub></m:math>'s
+form a partition of the interval <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mi>L</m:mi><m:mo>]</m:mo><m:mo>,</m:mo></m:mrow></m:math>
+and the function <m:math overflow="scroll"><m:mrow><m:mi>F</m:mi><m:mo>:</m:mo><m:mrow><m:mo>(</m:mo><m:msub><m:mi>t</m:mi><m:mrow><m:mi>i</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>,</m:mo><m:msub><m:mi>t</m:mi><m:mi>i</m:mi></m:msub><m:mo>)</m:mo></m:mrow><m:mo>→</m:mo><m:mrow><m:mo>(</m:mo><m:msub><m:mi>s</m:mi><m:mrow><m:mi>i</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>,</m:mo><m:msub><m:mi>s</m:mi><m:mi>i</m:mi></m:msub><m:mo>)</m:mo></m:mrow></m:mrow></m:math> is invertible, and its inverse <m:math overflow="scroll"><m:msup><m:mi>F</m:mi><m:mrow><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msup></m:math>
+is continuously differentiable.
+It follows then that <m:math overflow="scroll"><m:mrow><m:mi>γ</m:mi><m:mo>=</m:mo><m:mi>φ</m:mi><m:mo>∘</m:mo><m:msup><m:mi>F</m:mi><m:mrow><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msup><m:mo>:</m:mo><m:mrow><m:mo>[</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mi>L</m:mi><m:mo>]</m:mo></m:mrow><m:mo>→</m:mo><m:mi>C</m:mi></m:mrow></m:math> is a parameterization of <m:math overflow="scroll"><m:mrow><m:mi>C</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+The arc length between the points <m:math overflow="scroll"><m:mrow><m:mi>γ</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>γ</m:mi><m:mo>(</m:mo><m:mi>u</m:mi><m:mo>)</m:mo></m:mrow></m:math>
+is the arc length between <m:math overflow="scroll"><m:mrow><m:mi>φ</m:mi><m:mo>(</m:mo><m:msup><m:mi>F</m:mi><m:mrow><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msup><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>)</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>φ</m:mi><m:mo>(</m:mo><m:msup><m:mi>F</m:mi><m:mrow><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msup><m:mrow><m:mo>(</m:mo><m:mi>u</m:mi><m:mo>)</m:mo></m:mrow><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math>
+and this is given by the formula</para>
+    <equation id="uid1"><m:math overflow="scroll" mode="display">
+        <m:mtable displaystyle="true">
+          <m:mtr>
+            <m:mtd columnalign="right">
+              <m:mrow>
+                <m:msubsup>
+                  <m:mo>∫</m:mo>
+                  <m:mrow>
+                    <m:msup>
+                      <m:mi>F</m:mi>
+                      <m:mrow>
+                        <m:mo>-</m:mo>
+                        <m:mn>1</m:mn>
+                      </m:mrow>
+                    </m:msup>
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:mi>t</m:mi>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                  </m:mrow>
+                  <m:mrow>
+                    <m:msup>
+                      <m:mi>F</m:mi>
+                      <m:mrow>
+                        <m:mo>-</m:mo>
+                        <m:mn>1</m:mn>
+                      </m:mrow>
+                    </m:msup>
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:mi>u</m:mi>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                  </m:mrow>
+                </m:msubsup>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                  <m:msup>
+                    <m:mi>φ</m:mi>
+                    <m:mo>'</m:mo>
+                  </m:msup>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>s</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:mspace width="0.166667em"/>
+                <m:mi>d</m:mi>
+                <m:mi>s</m:mi>
+              </m:mrow>
+            </m:mtd>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:msubsup>
+                  <m:mo>∫</m:mo>
+                  <m:mi>a</m:mi>
+                  <m:mrow>
+                    <m:msup>
+                      <m:mi>F</m:mi>
+                      <m:mrow>
+                        <m:mo>-</m:mo>
+                        <m:mn>1</m:mn>
+                      </m:mrow>
+                    </m:msup>
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:mi>u</m:mi>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                  </m:mrow>
+                </m:msubsup>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:msup>
+                  <m:mi>φ</m:mi>
+                  <m:mo>'</m:mo>
+                </m:msup>
+                <m:mrow>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>s</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>|</m:mo>
+                  <m:mspace width="0.166667em"/>
+                  <m:mi>d</m:mi>
+                  <m:mi>s</m:mi>
+                  <m:mo>-</m:mo>
+                </m:mrow>
+                <m:msubsup>
+                  <m:mo>∫</m:mo>
+                  <m:mi>a</m:mi>
+                  <m:mrow>
+                    <m:msup>
+                      <m:mi>F</m:mi>
+                      <m:mrow>
+                        <m:mo>-</m:mo>
+                        <m:mn>1</m:mn>
+                      </m:mrow>
+                    </m:msup>
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:mi>t</m:mi>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                  </m:mrow>
+                </m:msubsup>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                  <m:msup>
+                    <m:mi>φ</m:mi>
+                    <m:mo>'</m:mo>
+                  </m:msup>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>s</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:mspace width="0.166667em"/>
+                <m:mi>d</m:mi>
+                <m:mi>s</m:mi>
+              </m:mrow>
+            </m:mtd>
+</m:mtr>
+<m:mtr>
+<m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mi>F</m:mi>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:msup>
+                    <m:mi>F</m:mi>
+                    <m:mrow>
+                      <m:mo>-</m:mo>
+                      <m:mn>1</m:mn>
+                    </m:mrow>
+                  </m:msup>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>u</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mo>-</m:mo>
+                <m:mi>F</m:mi>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:msup>
+                    <m:mi>F</m:mi>
+                    <m:mrow>
+                      <m:mo>-</m:mo>
+                      <m:mn>1</m:mn>
+                    </m:mrow>
+                  </m:msup>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>t</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+</m:mtr>
+<m:mtr>
+<m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mi>u</m:mi>
+                <m:mo>-</m:mo>
+                <m:mi>t</m:mi>
+                <m:mo>,</m:mo>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+        </m:mtable>
+      </m:math>
+    </equation>
+    <para id="id190828">which completes the proof.</para>
+</proof></rule>
+<rule id="fs-id1172340191008" type="corollary"><statement id="fs-id1172343417318">
+    <para id="id190833">
+If <m:math overflow="scroll"><m:mi>γ</m:mi></m:math> is the parameterization by arc length of the preceding theorem,
+then, for all <m:math overflow="scroll"><m:mrow><m:mi>t</m:mi><m:mo>∈</m:mo><m:mo>(</m:mo><m:msub><m:mi>s</m:mi><m:mrow><m:mi>i</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>,</m:mo><m:msub><m:mi>s</m:mi><m:mi>i</m:mi></m:msub><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math> we have <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msup><m:mi>γ</m:mi><m:mo>'</m:mo></m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mi>s</m:mi><m:mo>)</m:mo></m:mrow><m:mo>|</m:mo><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>.</m:mo></m:mrow></m:mrow></m:math></para>
+</statement>
+<proof id="fs-id1172348765613">
+    <para id="id190922">We just compute</para>
+    <equation id="uid2"><m:math overflow="scroll" mode="display">
+        <m:mtable displaystyle="true">
+          <m:mtr>
+            <m:mtd columnalign="right">
+              <m:mrow>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:msup>
+                  <m:mi>γ</m:mi>
+                  <m:mo>'</m:mo>
+                </m:msup>
+                <m:mrow>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>s</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:msup>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>φ</m:mi>
+                    <m:mo>∘</m:mo>
+                    <m:msup>
+                      <m:mi>F</m:mi>
+                      <m:mrow>
+                        <m:mo>-</m:mo>
+                        <m:mn>1</m:mn>
+                      </m:mrow>
+                    </m:msup>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>'</m:mo>
+                </m:msup>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>s</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+</m:mtr>
+<m:mtr>
+<m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:msup>
+                  <m:mi>φ</m:mi>
+                  <m:mo>'</m:mo>
+                </m:msup>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:msup>
+                    <m:mi>F</m:mi>
+                    <m:mrow>
+                      <m:mo>-</m:mo>
+                      <m:mn>1</m:mn>
+                    </m:mrow>
+                  </m:msup>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>s</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:msup>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:msup>
+                      <m:mi>F</m:mi>
+                      <m:mrow>
+                        <m:mo>-</m:mo>
+                        <m:mn>1</m:mn>
+                      </m:mrow>
+                    </m:msup>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>'</m:mo>
+                </m:msup>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>s</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+</m:mtr>
+<m:mtr>
+<m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:msup>
+                  <m:mi>φ</m:mi>
+                  <m:mo>'</m:mo>
+                </m:msup>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                </m:mrow>
+                <m:msup>
+                  <m:mi>F</m:mi>
+                  <m:mrow>
+                    <m:mo>-</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                </m:msup>
+                <m:mrow>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>s</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>|</m:mo>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:mfrac>
+                  <m:mn>1</m:mn>
+                  <m:mrow>
+                    <m:msup>
+                      <m:mi>F</m:mi>
+                      <m:mo>'</m:mo>
+                    </m:msup>
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:msup>
+                        <m:mi>F</m:mi>
+                        <m:mrow>
+                          <m:mo>-</m:mo>
+                          <m:mn>1</m:mn>
+                        </m:mrow>
+                      </m:msup>
+                      <m:mrow>
+                        <m:mo>(</m:mo>
+                        <m:mi>s</m:mi>
+                        <m:mo>)</m:mo>
+                      </m:mrow>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                  </m:mrow>
+                </m:mfrac>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+</m:mtr>
+<m:mtr>
+<m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:msup>
+                  <m:mi>φ</m:mi>
+                  <m:mo>'</m:mo>
+                </m:msup>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:msup>
+                    <m:mi>f</m:mi>
+                    <m:mrow>
+                      <m:mo>-</m:mo>
+                      <m:mn>1</m:mn>
+                    </m:mrow>
+                  </m:msup>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>s</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:mfrac>
+                  <m:mn>1</m:mn>
+                  <m:mrow>
+                    <m:mrow>
+                      <m:mo>|</m:mo>
+                    </m:mrow>
+                    <m:msup>
+                      <m:mi>φ</m:mi>
+                      <m:mo>'</m:mo>
+                    </m:msup>
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:msup>
+                        <m:mi>f</m:mi>
+                        <m:mrow>
+                          <m:mo>-</m:mo>
+                          <m:mn>1</m:mn>
+                        </m:mrow>
+                      </m:msup>
+                      <m:mrow>
+                        <m:mo>(</m:mo>
+                        <m:mi>s</m:mi>
+                        <m:mo>)</m:mo>
+                      </m:mrow>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                    <m:mrow>
+                      <m:mo>|</m:mo>
+                    </m:mrow>
+                  </m:mrow>
+                </m:mfrac>
+              </m:mrow>
+            </m:mtd>
+</m:mtr>
+<m:mtr>
+<m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mn>1</m:mn>
+                <m:mo>,</m:mo>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+        </m:mtable>
+      </m:math>
+    </equation>
+    <para id="id191266">as desired.</para>
+</proof></rule>
+    <para id="id191271">We are now ready to make the first of our three definitions of integral over a curve.
+This first one is pretty easy.</para>
+    <para id="id191275">Suppose <m:math overflow="scroll"><m:mi>C</m:mi></m:math> is a piecewise smooth curve joining <m:math overflow="scroll"><m:msub><m:mi>z</m:mi><m:mn>1</m:mn></m:msub></m:math> to <m:math overflow="scroll"><m:msub><m:mi>z</m:mi><m:mn>2</m:mn></m:msub></m:math> of finite length <m:math overflow="scroll"><m:mrow><m:mi>L</m:mi><m:mo>,</m:mo></m:mrow></m:math> parameterized by arc length.
+Recall that this means that there is a 1-1 function <m:math overflow="scroll"><m:mi>γ</m:mi></m:math> from the interval <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mi>L</m:mi><m:mo>]</m:mo></m:mrow></m:math> onto <m:math overflow="scroll"><m:mi>C</m:mi></m:math>
+that satisfies the condidition that the arc length betweenthe two points <m:math overflow="scroll"><m:mrow><m:mi>γ</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>γ</m:mi><m:mo>(</m:mo><m:mi>s</m:mi><m:mo>)</m:mo></m:mrow></m:math>
+is exactly the distance between the points <m:math overflow="scroll"><m:mi>t</m:mi></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>s</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+We can just identify the curve <m:math overflow="scroll"><m:mi>C</m:mi></m:math> with the interval <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mi>L</m:mi><m:mo>]</m:mo><m:mo>,</m:mo></m:mrow></m:math> and relative distances will correspond perfectly.
+A partition of the curve <m:math overflow="scroll"><m:mi>C</m:mi></m:math> will correspond naturally to a partition of the interval <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mi>L</m:mi><m:mo>]</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+A step function on the dcurve will correspond in an obvious way
+to a step function on the interval <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mi>L</m:mi><m:mo>]</m:mo><m:mo>,</m:mo></m:mrow></m:math>
+and the formula for the integral
+of a step function on the curve is analogous to what it is on the interval.
+Here are the formal definitions:</para>
+<definition id="fs-id1172341223475"><term/><meaning id="fs-id1172344546492">
+    <para id="id191487">
+Let <m:math overflow="scroll"><m:mi>C</m:mi></m:math> be a piecewise smooth curve of finite length <m:math overflow="scroll"><m:mi>L</m:mi></m:math> joining distinct points,
+and let <m:math overflow="scroll"><m:mrow><m:mi>γ</m:mi><m:mo>:</m:mo><m:mo>[</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mi>L</m:mi><m:mo>]</m:mo><m:mo>→</m:mo><m:mi>C</m:mi></m:mrow></m:math> be a parameterization of <m:math overflow="scroll"><m:mi>C</m:mi></m:math> by arc length.
+By a <emphasis effect="italics">partition</emphasis> of <m:math overflow="scroll"><m:mi>C</m:mi></m:math> we mean a set <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>z</m:mi><m:mn>0</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>z</m:mi><m:mn>1</m:mn></m:msub><m:mo>,</m:mo><m:mo>...</m:mo><m:mo>,</m:mo><m:msub><m:mi>z</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> of points on <m:math overflow="scroll"><m:mi>C</m:mi></m:math>
+such that <m:math overflow="scroll"><m:mrow><m:msub><m:mi>z</m:mi><m:mi>j</m:mi></m:msub><m:mo>=</m:mo><m:mi>γ</m:mi><m:mrow><m:mo>(</m:mo><m:msub><m:mi>t</m:mi><m:mi>j</m:mi></m:msub><m:mo>)</m:mo></m:mrow></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>j</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+where the points <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>t</m:mi><m:mn>0</m:mn></m:msub><m:mo>&lt;</m:mo><m:msub><m:mi>t</m:mi><m:mn>1</m:mn></m:msub><m:mo>&lt;</m:mo><m:mo>...</m:mo><m:mo>&lt;</m:mo><m:msub><m:mi>t</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> form a partition of the interval <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mi>L</m:mi><m:mo>]</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+The portions of the curve between the points <m:math overflow="scroll"><m:msub><m:mi>z</m:mi><m:mrow><m:mi>j</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msub></m:math> and <m:math overflow="scroll"><m:mrow><m:msub><m:mi>z</m:mi><m:mi>j</m:mi></m:msub><m:mo>,</m:mo></m:mrow></m:math> i.e., the
+set <m:math overflow="scroll"><m:mrow><m:mi>γ</m:mi><m:mo>(</m:mo><m:msub><m:mi>t</m:mi><m:mrow><m:mi>j</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>,</m:mo><m:msub><m:mi>t</m:mi><m:mi>j</m:mi></m:msub><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math> are called the <emphasis effect="italics">elements</emphasis> of the partition.</para>
+    <para id="id191796">A <emphasis effect="italics">step fucntion</emphasis> on <m:math overflow="scroll"><m:mi>C</m:mi></m:math> is a real-valued function <m:math overflow="scroll"><m:mi>h</m:mi></m:math> on <m:math overflow="scroll"><m:mi>C</m:mi></m:math>
+for which there exists a partition <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>z</m:mi><m:mn>0</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>z</m:mi><m:mn>1</m:mn></m:msub><m:mo>,</m:mo><m:mo>...</m:mo><m:mo>,</m:mo><m:msub><m:mi>z</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> of <m:math overflow="scroll"><m:mi>C</m:mi></m:math> such that
+<m:math overflow="scroll"><m:mrow><m:mi>h</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow></m:math> is a constant <m:math overflow="scroll"><m:msub><m:mi>a</m:mi><m:mi>j</m:mi></m:msub></m:math> on the portion of the curve between <m:math overflow="scroll"><m:msub><m:mi>z</m:mi><m:mrow><m:mi>j</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msub></m:math> and <m:math overflow="scroll"><m:mrow><m:msub><m:mi>z</m:mi><m:mi>j</m:mi></m:msub><m:mo>.</m:mo></m:mrow></m:math></para>
+</meaning></definition>
+    <para id="id191950">Before defining the integral of a step function on a curve, we need to establish the usual consistency
+result, encountered in the previous cases of
+integration on intervals and integration over geometric sets,
+the proof of which this time we put in an exercise.</para>
+<exercise id="fs-id1172341181686"><problem id="fs-id1172344684286">
+    <para id="id191956">
+Suppose <m:math overflow="scroll"><m:mi>h</m:mi></m:math> is a function on a piecewise smooth curve of finite length <m:math overflow="scroll"><m:mrow><m:mi>L</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+and assume that there exist two partitions <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>z</m:mi><m:mn>0</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>z</m:mi><m:mn>1</m:mn></m:msub><m:mo>,</m:mo><m:mo>...</m:mo><m:mo>,</m:mo><m:msub><m:mi>z</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>w</m:mi><m:mn>0</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>w</m:mi><m:mn>1</m:mn></m:msub><m:mo>,</m:mo><m:mo>...</m:mo><m:mo>,</m:mo><m:msub><m:mi>w</m:mi><m:mi>m</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> of <m:math overflow="scroll"><m:mi>C</m:mi></m:math> such that
+<m:math overflow="scroll"><m:mrow><m:mi>h</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow></m:math> is a constant <m:math overflow="scroll"><m:msub><m:mi>a</m:mi><m:mi>k</m:mi></m:msub></m:math> on the portion of the curve between <m:math overflow="scroll"><m:msub><m:mi>z</m:mi><m:mrow><m:mi>k</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msub></m:math> and <m:math overflow="scroll"><m:mrow><m:msub><m:mi>z</m:mi><m:mi>k</m:mi></m:msub><m:mo>,</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>h</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow></m:math> is a constant <m:math overflow="scroll"><m:msub><m:mi>b</m:mi><m:mi>j</m:mi></m:msub></m:math>
+on the portion of the curve between <m:math overflow="scroll"><m:msub><m:mi>w</m:mi><m:mrow><m:mi>j</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msub></m:math> and <m:math overflow="scroll"><m:mrow><m:msub><m:mi>w</m:mi><m:mi>j</m:mi></m:msub><m:mo>.</m:mo></m:mrow></m:math>
+Show that</para>
+    <equation id="id192220">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:munderover>
+            <m:mo>∑</m:mo>
+            <m:mrow>
+              <m:mi>k</m:mi>
+              <m:mo>=</m:mo>
+              <m:mn>1</m:mn>
+            </m:mrow>
+            <m:mi>n</m:mi>
+          </m:munderover>
+          <m:msub>
+            <m:mi>a</m:mi>
+            <m:mi>k</m:mi>
+          </m:msub>
+          <m:mi>L</m:mi>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:msub>
+              <m:mi>z</m:mi>
+              <m:mrow>
+                <m:mi>k</m:mi>
+                <m:mo>-</m:mo>
+                <m:mn>1</m:mn>
+              </m:mrow>
+            </m:msub>
+            <m:mo>,</m:mo>
+            <m:msub>
+              <m:mi>z</m:mi>
+              <m:mi>k</m:mi>
+            </m:msub>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>=</m:mo>
+          <m:munderover>
+            <m:mo>∑</m:mo>
+            <m:mrow>
+              <m:mi>j</m:mi>
+              <m:mo>=</m:mo>
+              <m:mn>1</m:mn>
+            </m:mrow>
+            <m:mi>m</m:mi>
+          </m:munderover>
+          <m:msub>
+            <m:mi>b</m:mi>
+            <m:mi>j</m:mi>
+          </m:msub>
+          <m:mi>L</m:mi>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:msub>
+              <m:mi>w</m:mi>
+              <m:mrow>
+                <m:mi>j</m:mi>
+                <m:mo>-</m:mo>
+                <m:mn>1</m:mn>
+              </m:mrow>
+            </m:msub>
+            <m:mo>,</m:mo>
+            <m:msub>
+              <m:mi>w</m:mi>
+              <m:mi>j</m:mi>
+            </m:msub>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>.</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id192341">HINT: Make use of the fact that <m:math overflow="scroll"><m:mrow><m:mi>h</m:mi><m:mo>∘</m:mo><m:mi>γ</m:mi></m:mrow></m:math> is a step function on the interval <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mi>L</m:mi><m:mo>]</m:mo><m:mo>.</m:mo></m:mrow></m:math></para>
+</problem></exercise>
+    <para id="id192382">Now we can make the definition of the integral of a step function on a curve.</para>
+<definition id="fs-id1172344134189"><term/><meaning id="fs-id1172343254711">
+    <para id="id192388">
+Let <m:math overflow="scroll"><m:mi>h</m:mi></m:math> be a step function on a piecewise smooth curve <m:math overflow="scroll"><m:mi>C</m:mi></m:math> of finite length <m:math overflow="scroll"><m:mrow><m:mi>L</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+The <emphasis effect="italics">integral, with respect to arc length</emphasis> of <m:math overflow="scroll"><m:mi>h</m:mi></m:math> over <m:math overflow="scroll"><m:mi>C</m:mi></m:math> is denoted by
+<m:math overflow="scroll"><m:mrow><m:msub><m:mo>∫</m:mo><m:mi>C</m:mi></m:msub><m:mi>h</m:mi><m:mrow><m:mo>(</m:mo><m:mi>s</m:mi><m:mo>)</m:mo></m:mrow><m:mspace width="0.166667em"/><m:mi>d</m:mi><m:mi>s</m:mi><m:mo>,</m:mo></m:mrow></m:math> and is defined by</para>
+    <equation id="id192484">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:msub>
+            <m:mo>∫</m:mo>
+            <m:mi>C</m:mi>
+          </m:msub>
+          <m:mi>h</m:mi>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>s</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mspace width="0.166667em"/>
+          <m:mi>d</m:mi>
+          <m:mi>s</m:mi>
+          <m:mo>=</m:mo>
+          <m:munderover>
+            <m:mo>∑</m:mo>
+            <m:mrow>
+              <m:mi>j</m:mi>
+              <m:mo>=</m:mo>
+              <m:mn>1</m:mn>
+            </m:mrow>
+            <m:mi>n</m:mi>
+          </m:munderover>
+          <m:msub>
+            <m:mi>a</m:mi>
+            <m:mi>j</m:mi>
+          </m:msub>
+          <m:mi>L</m:mi>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:msub>
+              <m:mi>z</m:mi>
+              <m:mrow>
+                <m:mi>j</m:mi>
+                <m:mo>-</m:mo>
+                <m:mn>1</m:mn>
+              </m:mrow>
+            </m:msub>
+            <m:mo>,</m:mo>
+            <m:msub>
+              <m:mi>z</m:mi>
+              <m:mi>j</m:mi>
+            </m:msub>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>,</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id192576">where <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>z</m:mi><m:mn>0</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>z</m:mi><m:mn>1</m:mn></m:msub><m:mo>,</m:mo><m:mo>...</m:mo><m:mo>,</m:mo><m:msub><m:mi>z</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> is a partition of <m:math overflow="scroll"><m:mi>C</m:mi></m:math> for which <m:math overflow="scroll"><m:mrow><m:mi>h</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow></m:math> is
+the constant <m:math overflow="scroll"><m:msub><m:mi>a</m:mi><m:mi>j</m:mi></m:msub></m:math> on the portion of <m:math overflow="scroll"><m:mi>C</m:mi></m:math> between <m:math overflow="scroll"><m:msub><m:mi>z</m:mi><m:mrow><m:mi>j</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msub></m:math> and <m:math overflow="scroll"><m:mrow><m:msub><m:mi>z</m:mi><m:mi>j</m:mi></m:msub><m:mo>.</m:mo></m:mrow></m:math></para>
+</meaning></definition>
+    <para id="id192710">Of course, integrable functions on <m:math overflow="scroll"><m:mi>C</m:mi></m:math> with respect to arc length will
+be defined to be functions that are uniform limits of step functions.
+Again, there is the consistency issue in the definition of the integral of an integrable function.</para>
+<exercise id="fs-id1172346852434"><problem id="fs-id1172345194712">
+    <list id="id192734" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid3"> Suppose <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>h</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> is a sequence of step functions
+on a piecewise smooth curve <m:math overflow="scroll"><m:mi>C</m:mi></m:math> of finite length, and assume that
+the sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>h</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> converges uniformly to a function <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Prove that the sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mo>∫</m:mo><m:mi>C</m:mi></m:msub><m:msub><m:mi>h</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>s</m:mi><m:mo>)</m:mo></m:mrow><m:mspace width="0.166667em"/><m:mi>d</m:mi><m:mi>s</m:mi><m:mo>}</m:mo></m:mrow></m:math> is a convergent sequence of real numbers.
+</item>
+      <item id="uid4"> Suppose <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>h</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>k</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> are two sequences of step functions on a
+piecewise smooth curve <m:math overflow="scroll"><m:mi>C</m:mi></m:math> of finite length <m:math overflow="scroll"><m:mrow><m:mi>l</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+and that both sequences converge uniformly to the same function <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Prove that
+<equation id="id192941"><m:math overflow="scroll" mode="display"><m:mrow><m:mo movablelimits="true" form="prefix">lim</m:mo><m:msub><m:mo>∫</m:mo><m:mi>C</m:mi></m:msub><m:msub><m:mi>h</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>s</m:mi><m:mo>)</m:mo></m:mrow><m:mspace width="0.166667em"/><m:mi>d</m:mi><m:mi>s</m:mi><m:mo>=</m:mo><m:mo movablelimits="true" form="prefix">lim</m:mo><m:msub><m:mo>∫</m:mo><m:mi>C</m:mi></m:msub><m:msub><m:mi>k</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>s</m:mi><m:mo>)</m:mo></m:mrow><m:mspace width="0.166667em"/><m:mi>d</m:mi><m:mi>s</m:mi><m:mo>.</m:mo></m:mrow></m:math></equation></item>
+    </list>
+</problem></exercise>
+<definition id="fs-id1172343217548"><term/><meaning id="fs-id1172344869730">
+    <para id="id193029">
+Let <m:math overflow="scroll"><m:mi>C</m:mi></m:math> be a piecewise smooth curve of finite length <m:math overflow="scroll"><m:mrow><m:mi>L</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+A function <m:math overflow="scroll"><m:mi>f</m:mi></m:math> with domain <m:math overflow="scroll"><m:mi>C</m:mi></m:math> is called <emphasis effect="italics">integrable with respect to arc length</emphasis> on <m:math overflow="scroll"><m:mi>C</m:mi></m:math> if
+it is the uniform limit of step functions on <m:math overflow="scroll"><m:mrow><m:mi>C</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+    <para id="id193103">The <emphasis effect="italics">integral with respect to arc length</emphasis> of an integrable function <m:math overflow="scroll"><m:mi>f</m:mi></m:math> on <m:math overflow="scroll"><m:mi>C</m:mi></m:math>
+is again denoted by <m:math overflow="scroll"><m:mrow><m:msub><m:mo>∫</m:mo><m:mi>C</m:mi></m:msub><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>s</m:mi><m:mo>)</m:mo></m:mrow><m:mspace width="0.166667em"/><m:mi>d</m:mi><m:mi>s</m:mi><m:mo>,</m:mo></m:mrow></m:math> and
+is defined by</para>
+    <equation id="id193164">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:msub>
+            <m:mo>∫</m:mo>
+            <m:mi>C</m:mi>
+          </m:msub>
+          <m:mi>f</m:mi>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>s</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mspace width="0.166667em"/>
+          <m:mi>d</m:mi>
+          <m:mi>s</m:mi>
+          <m:mo>=</m:mo>
+          <m:mo movablelimits="true" form="prefix">lim</m:mo>
+          <m:msub>
+            <m:mo>∫</m:mo>
+            <m:mi>C</m:mi>
+          </m:msub>
+          <m:msub>
+            <m:mi>h</m:mi>
+            <m:mi>n</m:mi>
+          </m:msub>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>s</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mspace width="0.166667em"/>
+          <m:mi>d</m:mi>
+          <m:mi>s</m:mi>
+          <m:mo>,</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id193240">where <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>h</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> is a sequence of step functions that converges uniformly to <m:math overflow="scroll"><m:mi>f</m:mi></m:math> on <m:math overflow="scroll"><m:mrow><m:mi>C</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+</meaning></definition>
+    <para id="id193287">In a sense, we are simply identifying the curve <m:math overflow="scroll"><m:mi>C</m:mi></m:math> with the interval <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mi>L</m:mi><m:mo>]</m:mo></m:mrow></m:math> by means
+of the 1-1 parameterizing function <m:math overflow="scroll"><m:mrow><m:mi>γ</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+The next theorem makes this quite plain.</para>
+<rule id="fs-id1172344782730" type="theorem"><statement id="fs-id1172339471387">
+    <para id="id193329">
+Let <m:math overflow="scroll"><m:mi>C</m:mi></m:math> be a piecewise smooth curve of finite length <m:math overflow="scroll"><m:mrow><m:mi>L</m:mi><m:mo>,</m:mo></m:mrow></m:math> and let <m:math overflow="scroll"><m:mi>γ</m:mi></m:math> be a parameterization of <m:math overflow="scroll"><m:mi>C</m:mi></m:math> by arc length.
+If <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is an integrable function on <m:math overflow="scroll"><m:mrow><m:mi>C</m:mi><m:mo>,</m:mo></m:mrow></m:math> then</para>
+    <equation id="id193398">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:msub>
+            <m:mo>∫</m:mo>
+            <m:mi>C</m:mi>
+          </m:msub>
+          <m:mi>f</m:mi>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>s</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mspace width="0.166667em"/>
+          <m:mi>d</m:mi>
+          <m:mi>s</m:mi>
+          <m:mo>=</m:mo>
+          <m:msubsup>
+            <m:mo>∫</m:mo>
+            <m:mn>0</m:mn>
+            <m:mi>L</m:mi>
+          </m:msubsup>
+          <m:mi>f</m:mi>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>γ</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>t</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mspace width="0.166667em"/>
+          <m:mi>d</m:mi>
+          <m:mi>t</m:mi>
+          <m:mo>.</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+</statement>
+<proof id="fs-id6832367">
+    <para id="id193472">
+First, if <m:math overflow="scroll"><m:mi>h</m:mi></m:math> is a step function on <m:math overflow="scroll"><m:mrow><m:mi>C</m:mi><m:mo>,</m:mo></m:mrow></m:math> let
+<m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>z</m:mi><m:mi>j</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> be a partition of <m:math overflow="scroll"><m:mi>C</m:mi></m:math> for which
+<m:math overflow="scroll"><m:mrow><m:mi>h</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow></m:math> is a constant <m:math overflow="scroll"><m:msub><m:mi>a</m:mi><m:mi>j</m:mi></m:msub></m:math> on the portion of the curve between <m:math overflow="scroll"><m:msub><m:mi>z</m:mi><m:mrow><m:mi>j</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msub></m:math> and <m:math overflow="scroll"><m:mrow><m:msub><m:mi>z</m:mi><m:mi>j</m:mi></m:msub><m:mo>.</m:mo></m:mrow></m:math>
+Let <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>t</m:mi><m:mi>j</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> be the partition of <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mi>L</m:mi><m:mo>]</m:mo></m:mrow></m:math> for which <m:math overflow="scroll"><m:mrow><m:msub><m:mi>z</m:mi><m:mi>j</m:mi></m:msub><m:mo>=</m:mo><m:mi>γ</m:mi><m:mrow><m:mo>(</m:mo><m:msub><m:mi>t</m:mi><m:mi>j</m:mi></m:msub><m:mo>)</m:mo></m:mrow></m:mrow></m:math> for every <m:math overflow="scroll"><m:mrow><m:mi>j</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Note that <m:math overflow="scroll"><m:mrow><m:mi>h</m:mi><m:mo>∘</m:mo><m:mi>γ</m:mi></m:mrow></m:math> is a step function on <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mi>L</m:mi><m:mo>]</m:mo><m:mo>,</m:mo></m:mrow></m:math> and that <m:math overflow="scroll"><m:mrow><m:mi>h</m:mi><m:mo>∘</m:mo><m:mi>γ</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msub><m:mi>a</m:mi><m:mi>j</m:mi></m:msub></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>t</m:mi><m:mo>∈</m:mo><m:mo>(</m:mo><m:msub><m:mi>t</m:mi><m:mrow><m:mi>j</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>,</m:mo><m:msub><m:mi>t</m:mi><m:mi>j</m:mi></m:msub><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Then,</para>
+    <equation id="uid5"><m:math overflow="scroll" mode="display">
+        <m:mtable displaystyle="true">
+          <m:mtr>
+            <m:mtd columnalign="right">
+              <m:mrow>
+                <m:msub>
+                  <m:mo>∫</m:mo>
+                  <m:mi>C</m:mi>
+                </m:msub>
+                <m:mi>h</m:mi>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>s</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mspace width="0.166667em"/>
+                <m:mi>d</m:mi>
+                <m:mi>s</m:mi>
+              </m:mrow>
+            </m:mtd>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:munderover>
+                  <m:mo>∑</m:mo>
+                  <m:mrow>
+                    <m:mi>j</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                  <m:mi>N</m:mi>
+                </m:munderover>
+                <m:msub>
+                  <m:mi>a</m:mi>
+                  <m:mi>j</m:mi>
+                </m:msub>
+                <m:mi>L</m:mi>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:msub>
+                    <m:mi>z</m:mi>
+                    <m:mrow>
+                      <m:mi>j</m:mi>
+                      <m:mo>-</m:mo>
+                      <m:mn>1</m:mn>
+                    </m:mrow>
+                  </m:msub>
+                  <m:mo>,</m:mo>
+                  <m:msub>
+                    <m:mi>z</m:mi>
+                    <m:mi>j</m:mi>
+                  </m:msub>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+</m:mtr>
+<m:mtr>
+<m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:munderover>
+                  <m:mo>∑</m:mo>
+                  <m:mrow>
+                    <m:mi>j</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                  <m:mi>n</m:mi>
+                </m:munderover>
+                <m:msub>
+                  <m:mi>a</m:mi>
+                  <m:mi>j</m:mi>
+                </m:msub>
+                <m:mi>L</m:mi>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>γ</m:mi>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:msub>
+                      <m:mi>t</m:mi>
+                      <m:mrow>
+                        <m:mi>j</m:mi>
+                        <m:mo>-</m:mo>
+                        <m:mn>1</m:mn>
+                      </m:mrow>
+                    </m:msub>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>,</m:mo>
+                  <m:mi>γ</m:mi>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:msub>
+                      <m:mi>t</m:mi>
+                      <m:mi>j</m:mi>
+                    </m:msub>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+</m:mtr>
+<m:mtr>
+<m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:munderover>
+                  <m:mo>∑</m:mo>
+                  <m:mrow>
+                    <m:mi>j</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                  <m:mi>n</m:mi>
+                </m:munderover>
+                <m:msub>
+                  <m:mi>a</m:mi>
+                  <m:mi>j</m:mi>
+                </m:msub>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:msub>
+                    <m:mi>t</m:mi>
+                    <m:mi>j</m:mi>
+                  </m:msub>
+                  <m:mo>-</m:mo>
+                  <m:msub>
+                    <m:mi>t</m:mi>
+                    <m:mrow>
+                      <m:mi>j</m:mi>
+                      <m:mo>-</m:mo>
+                      <m:mn>1</m:mn>
+                    </m:mrow>
+                  </m:msub>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+</m:mtr>
+<m:mtr>
+<m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:msubsup>
+                  <m:mo>∫</m:mo>
+                  <m:mn>0</m:mn>
+                  <m:mi>L</m:mi>
+                </m:msubsup>
+                <m:mi>h</m:mi>
+                <m:mo>∘</m:mo>
+                <m:mi>γ</m:mi>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>t</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mspace width="0.166667em"/>
+                <m:mi>d</m:mi>
+                <m:mi>t</m:mi>
+                <m:mo>,</m:mo>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+        </m:mtable>
+      </m:math>
+    </equation>
+    <para id="id194068">which proves the theorem for step functions.</para>
+</proof></rule>
+    <para id="id194074">Finally, if <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>=</m:mo><m:mo movablelimits="true" form="prefix">lim</m:mo><m:msub><m:mi>h</m:mi><m:mi>n</m:mi></m:msub></m:mrow></m:math> is an integrable function on <m:math overflow="scroll"><m:mrow><m:mi>C</m:mi><m:mo>,</m:mo></m:mrow></m:math> then
+the sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>h</m:mi><m:mi>n</m:mi></m:msub><m:mo>∘</m:mo><m:mi>γ</m:mi><m:mo>}</m:mo></m:mrow></m:math> converges uniformly to <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>∘</m:mo><m:mi>γ</m:mi></m:mrow></m:math> on <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mi>L</m:mi><m:mo>]</m:mo><m:mo>,</m:mo></m:mrow></m:math> and so</para>
+    <equation id="uid6"><m:math overflow="scroll" mode="display">
+        <m:mtable displaystyle="true">
+          <m:mtr>
+            <m:mtd columnalign="right">
+              <m:mrow>
+                <m:msub>
+                  <m:mo>∫</m:mo>
+                  <m:mi>C</m:mi>
+                </m:msub>
+                <m:mi>f</m:mi>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>s</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mspace width="0.166667em"/>
+                <m:mi>d</m:mi>
+                <m:mi>s</m:mi>
+              </m:mrow>
+            </m:mtd>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mo movablelimits="true" form="prefix">lim</m:mo>
+                <m:msub>
+                  <m:mo>∫</m:mo>
+                  <m:mi>C</m:mi>
+                </m:msub>
+                <m:msub>
+                  <m:mi>h</m:mi>
+                  <m:mi>n</m:mi>
+                </m:msub>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>s</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mspace width="0.166667em"/>
+                <m:mi>d</m:mi>
+                <m:mi>s</m:mi>
+              </m:mrow>
+            </m:mtd>
+</m:mtr>
+<m:mtr>
+<m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mo movablelimits="true" form="prefix">lim</m:mo>
+                <m:msubsup>
+                  <m:mo>∫</m:mo>
+                  <m:mn>0</m:mn>
+                  <m:mi>L</m:mi>
+                </m:msubsup>
+                <m:msub>
+                  <m:mi>h</m:mi>
+                  <m:mi>n</m:mi>
+                </m:msub>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>γ</m:mi>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>t</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mspace width="0.166667em"/>
+                <m:mi>d</m:mi>
+                <m:mi>t</m:mi>
+              </m:mrow>
+            </m:mtd>
+</m:mtr>
+<m:mtr>
+<m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:msubsup>
+                  <m:mo>∫</m:mo>
+                  <m:mn>0</m:mn>
+                  <m:mi>l</m:mi>
+                </m:msubsup>
+                <m:mi>f</m:mi>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>γ</m:mi>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>t</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mspace width="0.166667em"/>
+                <m:mi>d</m:mi>
+                <m:mi>t</m:mi>
+                <m:mo>,</m:mo>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+        </m:mtable>
+      </m:math>
+    
+</equation>
+    <para id="id194364">where the final equality follows from <link target-id="fs-id1170767945547" document="m36209"/>.
+Hence, <link target-id="fs-id1172344782730"/> is proved.</para>
+    <para id="id194370">Although the basic definitions of integrable and integral, with respect to arc length,
+are made in terms of the particular parameterization <m:math overflow="scroll"><m:mi>γ</m:mi></m:math> of the curve,
+for computational purposes we need to know how to evaluate these integrals using
+different parameterizations.
+Here is the result:</para>
+<rule id="fs-id1172345584782" type="theorem"><statement id="fs-id1172341124398">
+    <para id="id194385">
+Let <m:math overflow="scroll"><m:mi>C</m:mi></m:math> be a piecewise smooth curve of finite length <m:math overflow="scroll"><m:mrow><m:mi>L</m:mi><m:mo>,</m:mo></m:mrow></m:math> and
+let <m:math overflow="scroll"><m:mrow><m:mi>φ</m:mi><m:mo>:</m:mo><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>→</m:mo><m:mi>C</m:mi></m:mrow></m:math> be a parameterization of <m:math overflow="scroll"><m:mrow><m:mi>C</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+If <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is an integrable function on <m:math overflow="scroll"><m:mrow><m:mi>C</m:mi><m:mo>.</m:mo></m:mrow></m:math> Then</para>
+    <equation id="id194475">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:msub>
+            <m:mo>∫</m:mo>
+            <m:mi>C</m:mi>
+          </m:msub>
+          <m:mi>f</m:mi>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>s</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mspace width="0.166667em"/>
+          <m:mi>d</m:mi>
+          <m:mi>s</m:mi>
+          <m:mo>=</m:mo>
+          <m:msubsup>
+            <m:mo>∫</m:mo>
+            <m:mi>a</m:mi>
+            <m:mi>b</m:mi>
+          </m:msubsup>
+          <m:mi>f</m:mi>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>φ</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>t</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mrow>
+            <m:mo>|</m:mo>
+            <m:msup>
+              <m:mi>φ</m:mi>
+              <m:mo>'</m:mo>
+            </m:msup>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>t</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>|</m:mo>
+          </m:mrow>
+          <m:mspace width="0.166667em"/>
+          <m:mi>d</m:mi>
+          <m:mi>t</m:mi>
+          <m:mo>.</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+</statement>
+<proof id="fs-id1172341016660">
+    <para id="id194570">Write <m:math overflow="scroll"><m:mrow><m:mi>γ</m:mi><m:mo>:</m:mo><m:mo>[</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mi>L</m:mi><m:mo>]</m:mo><m:mo>→</m:mo><m:mi>C</m:mi></m:mrow></m:math> for a parameterization of <m:math overflow="scroll"><m:mi>C</m:mi></m:math> by arc length.
+As in the proof to <link target-id="fs-id1172344782730"/>,
+we write <m:math overflow="scroll"><m:mrow><m:mi>g</m:mi><m:mo>:</m:mo><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>→</m:mo><m:mo>[</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mi>L</m:mi><m:mo>]</m:mo></m:mrow></m:math> for <m:math overflow="scroll"><m:mrow><m:msup><m:mi>γ</m:mi><m:mrow><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msup><m:mo>∘</m:mo><m:mi>φ</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Just as in that proof, we know that <m:math overflow="scroll"><m:mi>g</m:mi></m:math> is a piecewise smooth function on the interval <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Hence, recalling that <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msup><m:mi>γ</m:mi><m:mo>'</m:mo></m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>|</m:mo><m:mo>=</m:mo><m:mn>1</m:mn></m:mrow></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:msup><m:mi>g</m:mi><m:mo>'</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>&gt;</m:mo><m:mn>0</m:mn></m:mrow></m:math> for all but a finite number of points, the following calculation is justified:</para>
+    <equation id="uid7"><m:math overflow="scroll" mode="display">
+        <m:mtable displaystyle="true">
+          <m:mtr>
+            <m:mtd columnalign="right">
+              <m:mrow>
+                <m:msub>
+                  <m:mo>∫</m:mo>
+                  <m:mi>C</m:mi>
+                </m:msub>
+                <m:mi>f</m:mi>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>s</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mspace width="0.166667em"/>
+                <m:mi>d</m:mi>
+                <m:mi>s</m:mi>
+              </m:mrow>
+            </m:mtd>
+
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:msubsup>
+                  <m:mo>∫</m:mo>
+                  <m:mn>0</m:mn>
+                  <m:mi>L</m:mi>
+                </m:msubsup>
+                <m:mi>f</m:mi>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>γ</m:mi>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>t</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mspace width="0.166667em"/>
+                <m:mi>d</m:mi>
+                <m:mi>t</m:mi>
+              </m:mrow>
+            </m:mtd>
+</m:mtr>
+<m:mtr>
+<m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:msubsup>
+                  <m:mo>∫</m:mo>
+                  <m:mn>0</m:mn>
+                  <m:mi>L</m:mi>
+                </m:msubsup>
+                <m:mi>f</m:mi>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>γ</m:mi>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>t</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                  <m:msup>
+                    <m:mi>γ</m:mi>
+                    <m:mo>'</m:mo>
+                  </m:msup>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>t</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:mspace width="0.166667em"/>
+                <m:mi>d</m:mi>
+                <m:mi>t</m:mi>
+              </m:mrow>
+            </m:mtd>
+</m:mtr>
+<m:mtr>
+<m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:msubsup>
+                  <m:mo>∫</m:mo>
+                  <m:mi>a</m:mi>
+                  <m:mi>b</m:mi>
+                </m:msubsup>
+                <m:mi>f</m:mi>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>γ</m:mi>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>g</m:mi>
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:mi>u</m:mi>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                  <m:msup>
+                    <m:mi>γ</m:mi>
+                    <m:mo>'</m:mo>
+                  </m:msup>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>g</m:mi>
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:mi>u</m:mi>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:msup>
+                  <m:mi>g</m:mi>
+                  <m:mo>'</m:mo>
+                </m:msup>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>u</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mspace width="0.166667em"/>
+                <m:mi>d</m:mi>
+                <m:mi>u</m:mi>
+              </m:mrow>
+            </m:mtd>
+</m:mtr>
+<m:mtr>
+<m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:msubsup>
+                  <m:mo>∫</m:mo>
+                  <m:mi>a</m:mi>
+                  <m:mi>b</m:mi>
+                </m:msubsup>
+                <m:mrow>
+                  <m:mi>f</m:mi>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>γ</m:mi>
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:mi>g</m:mi>
+                      <m:mrow>
+                        <m:mo>(</m:mo>
+                        <m:mi>u</m:mi>
+                        <m:mo>)</m:mo>
+                      </m:mrow>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:msup>
+                  <m:mi>γ</m:mi>
+                  <m:mo>'</m:mo>
+                </m:msup>
+                <m:mrow>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>g</m:mi>
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:mi>u</m:mi>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>|</m:mo>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:msup>
+                  <m:mi>g</m:mi>
+                  <m:mo>'</m:mo>
+                </m:msup>
+                <m:mrow>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>u</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>|</m:mo>
+                  <m:mspace width="0.166667em"/>
+                  <m:mi>d</m:mi>
+                  <m:mi>u</m:mi>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+</m:mtr>
+<m:mtr>
+<m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:msubsup>
+                  <m:mo>∫</m:mo>
+                  <m:mi>a</m:mi>
+                  <m:mi>b</m:mi>
+                </m:msubsup>
+                <m:mi>f</m:mi>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>φ</m:mi>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>u</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                  <m:msup>
+                    <m:mi>γ</m:mi>
+                    <m:mo>'</m:mo>
+                  </m:msup>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>g</m:mi>
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:mi>u</m:mi>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:msup>
+                    <m:mi>g</m:mi>
+                    <m:mo>'</m:mo>
+                  </m:msup>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>u</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:mspace width="0.166667em"/>
+                <m:mi>d</m:mi>
+                <m:mi>u</m:mi>
+              </m:mrow>
+            </m:mtd>
+</m:mtr>
+<m:mtr>
+<m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:msubsup>
+                  <m:mo>∫</m:mo>
+                  <m:mi>a</m:mi>
+                  <m:mi>b</m:mi>
+                </m:msubsup>
+                <m:mi>f</m:mi>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>φ</m:mi>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>u</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                  <m:msup>
+                    <m:mrow>
+                      <m:msup>
+                        <m:mo>(</m:mo>
+                        <m:mo>'</m:mo>
+                      </m:msup>
+                      <m:mi>g</m:mi>
+                      <m:mi>a</m:mi>
+                      <m:mi>m</m:mi>
+                      <m:mi>m</m:mi>
+                      <m:mi>a</m:mi>
+                      <m:mo>∘</m:mo>
+                      <m:mi>g</m:mi>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                    <m:mo>'</m:mo>
+                  </m:msup>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>u</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:mspace width="0.166667em"/>
+                <m:mi>d</m:mi>
+                <m:mi>u</m:mi>
+              </m:mrow>
+            </m:mtd>
+</m:mtr>
+<m:mtr>
+<m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:msubsup>
+                  <m:mo>∫</m:mo>
+                  <m:mi>a</m:mi>
+                  <m:mi>b</m:mi>
+                </m:msubsup>
+                <m:mi>f</m:mi>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>φ</m:mi>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>u</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                  <m:msup>
+                    <m:mi>φ</m:mi>
+                    <m:mo>'</m:mo>
+                  </m:msup>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>u</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:mspace width="0.166667em"/>
+                <m:mi>d</m:mi>
+                <m:mi>u</m:mi>
+                <m:mo>,</m:mo>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+        </m:mtable>
+      </m:math>
+    </equation>
+    <para id="id195345">as desired.</para>
+</proof></rule>
+<exercise id="fs-id1172347971947"><problem id="fs-id1172347565400">
+    <para id="id195351">
+Let <m:math overflow="scroll"><m:mi>C</m:mi></m:math> be the straight line joining the points <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>1</m:mn><m:mo>)</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mn>1</m:mn><m:mo>,</m:mo><m:mn>2</m:mn><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math></para>
+    <list id="id195412" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid8"> Find the arc length parameterization <m:math overflow="scroll"><m:mrow><m:mi>γ</m:mi><m:mo>:</m:mo><m:mo>[</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:msqrt><m:mn>2</m:mn></m:msqrt><m:mo>]</m:mo><m:mo>→</m:mo><m:mi>C</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid9"> Let <m:math overflow="scroll"><m:mi>f</m:mi></m:math> be the function on this curve given by <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>,</m:mo><m:mi>y</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mi>y</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Compute <m:math overflow="scroll"><m:mrow><m:msub><m:mo>∫</m:mo><m:mi>C</m:mi></m:msub><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>s</m:mi><m:mo>)</m:mo></m:mrow><m:mspace width="0.166667em"/><m:mi>d</m:mi><m:mi>s</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid10"> Let <m:math overflow="scroll"><m:mi>f</m:mi></m:math> be the function on this curve that is defined by
+<m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>,</m:mo><m:mi>y</m:mi><m:mo>)</m:mo></m:mrow></m:math> is the distance from <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>,</m:mo><m:mi>y</m:mi><m:mo>)</m:mo></m:mrow></m:math> to the point <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>3</m:mn><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Compute <m:math overflow="scroll"><m:mrow><m:msub><m:mo>∫</m:mo><m:mi>c</m:mi></m:msub><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>s</m:mi><m:mo>)</m:mo></m:mrow><m:mspace width="0.166667em"/><m:mi>d</m:mi><m:mi>s</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+    </list>
+</problem></exercise>
+    <para id="id195662">The final theorem of this section sums up the properties of
+integrals with respect to arc length. There are no surprises here.</para>
+<rule id="fs-id5078775" type="theorem"><statement id="fs-id1172344142077">
+    <para id="id195666">
+Let <m:math overflow="scroll"><m:mi>C</m:mi></m:math> be a piecewise smooth curve of finite length <m:math overflow="scroll"><m:mrow><m:mi>L</m:mi><m:mo>,</m:mo></m:mrow></m:math> and write
+<m:math overflow="scroll"><m:mrow><m:mi>I</m:mi><m:mo>(</m:mo><m:mi>C</m:mi><m:mo>)</m:mo></m:mrow></m:math> for the set of all functions that are integrable with respect
+to arc length on <m:math overflow="scroll"><m:mrow><m:mi>C</m:mi><m:mo>.</m:mo></m:mrow></m:math> Then:</para>
+    <list id="id195725" display="block" list-type="enumerated">
+      <item id="uid11"> <m:math overflow="scroll"><m:mrow><m:mi>I</m:mi><m:mo>(</m:mo><m:mi>C</m:mi><m:mo>)</m:mo></m:mrow></m:math> is a vector space ovr the real numbers, and
+<equation id="id195757"><m:math overflow="scroll" mode="display"><m:mrow><m:msub><m:mo>∫</m:mo><m:mi>C</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>s</m:mi><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mi>b</m:mi><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>s</m:mi><m:mo>)</m:mo></m:mrow><m:mo>)</m:mo></m:mrow><m:mspace width="0.166667em"/><m:mi>d</m:mi><m:mi>s</m:mi><m:mo>=</m:mo><m:mi>a</m:mi><m:msub><m:mo>∫</m:mo><m:mi>C</m:mi></m:msub><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>s</m:mi><m:mo>)</m:mo></m:mrow><m:mspace width="0.166667em"/><m:mi>d</m:mi><m:mi>s</m:mi><m:mo>+</m:mo><m:mi>b</m:mi><m:msub><m:mo>∫</m:mo><m:mi>C</m:mi></m:msub><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>s</m:mi><m:mo>)</m:mo></m:mrow><m:mspace width="0.166667em"/><m:mi>d</m:mi><m:mi>s</m:mi></m:mrow></m:math></equation>
+for all <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>,</m:mo><m:mi>g</m:mi><m:mo>∈</m:mo><m:mi>I</m:mi><m:mo>(</m:mo><m:mi>C</m:mi><m:mo>)</m:mo></m:mrow></m:math> and all <m:math overflow="scroll"><m:mrow><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>∈</m:mo><m:mi>R</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid12"> (Positivity) If <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo><m:mo>≥</m:mo><m:mn>0</m:mn></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>z</m:mi><m:mo>∈</m:mo><m:mi>C</m:mi><m:mo>,</m:mo></m:mrow></m:math> then <m:math overflow="scroll"><m:mrow><m:msub><m:mo>∫</m:mo><m:mi>C</m:mi></m:msub><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>s</m:mi><m:mo>)</m:mo></m:mrow><m:mspace width="0.166667em"/><m:mi>d</m:mi><m:mi>s</m:mi><m:mo>≥</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid13">If <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>∈</m:mo><m:mi>I</m:mi><m:mo>(</m:mo><m:mi>C</m:mi><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math> then so is <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>f</m:mi><m:mo>|</m:mo><m:mo>,</m:mo></m:mrow></m:math>
+and <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msub><m:mo>∫</m:mo><m:mi>C</m:mi></m:msub><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>s</m:mi><m:mo>)</m:mo></m:mrow><m:mspace width="0.166667em"/><m:mi>d</m:mi><m:mi>s</m:mi><m:mo>|</m:mo><m:mo>≤</m:mo></m:mrow><m:msub><m:mo>∫</m:mo><m:mi>C</m:mi></m:msub><m:mrow><m:mo>|</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>s</m:mi><m:mo>)</m:mo></m:mrow><m:mo>|</m:mo></m:mrow><m:mspace width="0.166667em"/><m:mi>d</m:mi><m:mi>s</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid14">If <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is the uniform limit of functions <m:math overflow="scroll"><m:mrow><m:msub><m:mi>f</m:mi><m:mi>n</m:mi></m:msub><m:mo>,</m:mo></m:mrow></m:math>
+each of which is in <m:math overflow="scroll"><m:mrow><m:mi>I</m:mi><m:mo>(</m:mo><m:mi>C</m:mi><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math> then <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>∈</m:mo><m:mi>I</m:mi><m:mo>(</m:mo><m:mi>C</m:mi><m:mo>)</m:mo></m:mrow></m:math>
+and <m:math overflow="scroll"><m:mrow><m:msub><m:mo>∫</m:mo><m:mi>C</m:mi></m:msub><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>s</m:mi><m:mo>)</m:mo></m:mrow><m:mspace width="0.166667em"/><m:mi>d</m:mi><m:mi>s</m:mi><m:mo>=</m:mo><m:mo movablelimits="true" form="prefix">lim</m:mo><m:msub><m:mo>∫</m:mo><m:mi>C</m:mi></m:msub><m:msub><m:mi>f</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>s</m:mi><m:mo>)</m:mo></m:mrow><m:mspace width="0.166667em"/><m:mi>d</m:mi><m:mi>s</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid15">Let <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>u</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> be a sequence of functions in <m:math overflow="scroll"><m:mrow><m:mi>I</m:mi><m:mo>(</m:mo><m:mi>C</m:mi><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math>
+and suppose that for each <m:math overflow="scroll"><m:mi>n</m:mi></m:math> there is a number
+<m:math overflow="scroll"><m:mrow><m:msub><m:mi>m</m:mi><m:mi>n</m:mi></m:msub><m:mo>,</m:mo></m:mrow></m:math> for which <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msub><m:mi>u</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>|</m:mo><m:mo>≤</m:mo></m:mrow><m:msub><m:mi>m</m:mi><m:mi>n</m:mi></m:msub></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>z</m:mi><m:mo>∈</m:mo><m:mi>C</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+and such that the infinite series <m:math overflow="scroll"><m:mrow><m:mo>∑</m:mo><m:msub><m:mi>m</m:mi><m:mi>n</m:mi></m:msub></m:mrow></m:math> converges.
+Then the infinite series <m:math overflow="scroll"><m:mrow><m:mo>∑</m:mo><m:msub><m:mi>u</m:mi><m:mi>n</m:mi></m:msub></m:mrow></m:math> converges uniformly to an integrable function,
+and <m:math overflow="scroll"><m:mrow><m:msub><m:mo>∫</m:mo><m:mi>C</m:mi></m:msub><m:mo>∑</m:mo><m:msub><m:mi>u</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>s</m:mi><m:mo>)</m:mo></m:mrow><m:mspace width="0.166667em"/><m:mi>d</m:mi><m:mi>s</m:mi><m:mo>=</m:mo><m:mo>∑</m:mo><m:msub><m:mo>∫</m:mo><m:mi>C</m:mi></m:msub><m:msub><m:mi>u</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>s</m:mi><m:mo>)</m:mo></m:mrow><m:mspace width="0.166667em"/><m:mi>d</m:mi><m:mi>s</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+    </list>
+</statement></rule>
+<exercise id="fs-id1172356403832"><problem id="fs-id1172344114930">
+    <list id="id196547" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid16"> Prove the preceding theorem.
+Everything is easy if we compose all functions on <m:math overflow="scroll"><m:mi>C</m:mi></m:math> with the parameterization <m:math overflow="scroll"><m:mrow><m:mi>γ</m:mi><m:mo>,</m:mo></m:mrow></m:math> obtaining functions on <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mi>L</m:mi><m:mo>]</m:mo><m:mo>,</m:mo></m:mrow></m:math>
+and then use <link target-id="fs-id1170767945547" document="m36209"/>.
+</item>
+      <item id="uid17"> Suppose <m:math overflow="scroll"><m:mi>C</m:mi></m:math> is a piecewise smooth curve of finite length joining <m:math overflow="scroll"><m:msub><m:mi>z</m:mi><m:mn>1</m:mn></m:msub></m:math> and <m:math overflow="scroll"><m:mrow><m:msub><m:mi>z</m:mi><m:mn>2</m:mn></m:msub><m:mo>.</m:mo></m:mrow></m:math>
+Show that the integral with respect to arc length of a function
+<m:math overflow="scroll"><m:mi>f</m:mi></m:math>
+over <m:math overflow="scroll"><m:mi>C</m:mi></m:math> is the same whether we think of <m:math overflow="scroll"><m:mi>C</m:mi></m:math> as being a curve from <m:math overflow="scroll"><m:msub><m:mi>z</m:mi><m:mn>1</m:mn></m:msub></m:math> to <m:math overflow="scroll"><m:msub><m:mi>z</m:mi><m:mn>2</m:mn></m:msub></m:math> or, the other way around,
+a curve from <m:math overflow="scroll"><m:msub><m:mi>z</m:mi><m:mn>2</m:mn></m:msub></m:math> to <m:math overflow="scroll"><m:mrow><m:msub><m:mi>z</m:mi><m:mn>1</m:mn></m:msub><m:mo>.</m:mo></m:mrow></m:math></item>
+    </list>
+</problem></exercise>
+<rule id="fs-id1172344676870"><label/><statement id="fs-id1172345652480">
+    <para id="id196745"><emphasis effect="bold">REMARK</emphasis>
+Because of the result in part (b) of the preceding exercise,
+we speak of “integrating over <m:math overflow="scroll"><m:mi>C</m:mi></m:math>” when we are integrating
+with respect to arc length. We do not speak of “integrating from <m:math overflow="scroll"><m:msub><m:mi>z</m:mi><m:mn>1</m:mn></m:msub></m:math> to <m:math overflow="scroll"><m:mrow><m:msub><m:mi>z</m:mi><m:mn>2</m:mn></m:msub><m:mo>,</m:mo></m:mrow></m:math>” since the direction
+doesn't matter. This is in marked contrast to the next two kinds of
+integrals over curves that we will discuss.</para>
+    <para id="id196797">here is one final bit of notation.
+Often, the curves of interest to us are graphs of real-valued functions.
+If <m:math overflow="scroll"><m:mrow><m:mi>g</m:mi><m:mo>:</m:mo><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>→</m:mo><m:mi>R</m:mi></m:mrow></m:math> is a piecewise smooth function, then its graph <m:math overflow="scroll"><m:mi>C</m:mi></m:math> is a piecewise
+smooth curve, and we write <m:math overflow="scroll"><m:mrow><m:msub><m:mo>∫</m:mo><m:mrow><m:mtext>graph</m:mtext><m:mo>(</m:mo><m:mi>g</m:mi><m:mo>)</m:mo></m:mrow></m:msub><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>s</m:mi><m:mo>)</m:mo></m:mrow><m:mspace width="0.166667em"/><m:mi>d</m:mi><m:mi>s</m:mi></m:mrow></m:math>
+for the integral with respect to arc length of <m:math overflow="scroll"><m:mi>f</m:mi></m:math> over <m:math overflow="scroll"><m:mrow><m:mi>C</m:mi><m:mo>=</m:mo><m:mtext>graph</m:mtext><m:mo>(</m:mo><m:mi>g</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math></para>
+</statement></rule>
+    <!--empty paragraphs get left behind.-->
+  </content>
+</document>

@@ -1,0 +1,959 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML">
+  <title>Properties of Convergent Sequences</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m36126</md:content-id>
+  <md:title>Properties of Convergent Sequences</md:title>
+  <md:abstract>A discussion of the properties of convergent sequences, such as when they form a bounded set, the squeeze theorem, and the properties of convergence when sequences are combined algebraically.</md:abstract>
+  <md:uuid>534db740-cc70-45e5-97df-62c7b38ff479</md:uuid>
+</metadata>
+
+<content>
+    <para id="id62159">Often, our goal is to show that a given sequence is convergent.
+However, as we study convergent sequences, we would like
+to establish various properties that they have in common.
+The first theorem of this section is just such a result.</para>
+<rule id="fs-id1164146425836" type="theorem"><statement id="fs-id1164154184970">
+    <para id="id62166">Suppose <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> is a convergent sequence of real or complex numbers.
+Then the sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> forms a bounded set.</para>
+</statement>
+<proof id="fs-id1164148048792">
+    <para id="id62550"> Write <m:math overflow="scroll"><m:mrow><m:mi>L</m:mi><m:mo>=</m:mo><m:mo movablelimits="true" form="prefix">lim</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>.</m:mo></m:mrow></m:math>
+Let <m:math overflow="scroll"><m:mi>ϵ</m:mi></m:math> be the positive number <m:math overflow="scroll"><m:mrow><m:mn>1</m:mn><m:mo>.</m:mo></m:mrow></m:math>
+Then, there exists a natural number <m:math overflow="scroll"><m:mi>N</m:mi></m:math> such that
+<m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mo>-</m:mo><m:mi>L</m:mi><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mn>1</m:mn></m:mrow></m:mrow></m:math>
+for all <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>≥</m:mo><m:mi>N</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+By the backward triangle inequality,
+this implies that <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo><m:mo>|</m:mo></m:mrow><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mo>|</m:mo><m:mo>-</m:mo><m:mo>|</m:mo><m:mi>L</m:mi><m:mo>|</m:mo><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mn>1</m:mn></m:mrow></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>≥</m:mo><m:mi>N</m:mi><m:mo>,</m:mo></m:mrow></m:math> which implies that
+<m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mo>|</m:mo><m:mo>≤</m:mo><m:mo>|</m:mo><m:mi>L</m:mi><m:mo>|</m:mo><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>≥</m:mo><m:mi>N</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+This shows that at least the tail of the sequence is bounded by the constant <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>L</m:mi><m:mo>|</m:mo><m:mo>+</m:mo><m:mn>1</m:mn><m:mo>.</m:mo></m:mrow></m:math></para>
+    <para id="id62776">Next, let <m:math overflow="scroll"><m:mi>K</m:mi></m:math> be a number larger than the finitely many numbers <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msub><m:mi>a</m:mi><m:mn>1</m:mn></m:msub><m:mrow><m:mo>|</m:mo><m:mo>,</m:mo><m:mo>...</m:mo><m:mo>,</m:mo><m:mo>|</m:mo></m:mrow><m:msub><m:mi>a</m:mi><m:mrow><m:mi>N</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mrow><m:mo>|</m:mo><m:mo>.</m:mo></m:mrow></m:mrow></m:math>
+Then, for any <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>,</m:mo></m:mrow></m:math><m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mo>|</m:mo></m:mrow></m:mrow></m:math> is either less than <m:math overflow="scroll"><m:mi>K</m:mi></m:math> or <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>L</m:mi><m:mo>|</m:mo><m:mo>+</m:mo><m:mn>1</m:mn><m:mo>.</m:mo></m:mrow></m:math>
+Let <m:math overflow="scroll"><m:mi>M</m:mi></m:math> be the larger of the two numbers <m:math overflow="scroll"><m:mi>K</m:mi></m:math> and <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>L</m:mi><m:mo>|</m:mo><m:mo>+</m:mo><m:mn>1</m:mn><m:mo>.</m:mo></m:mrow></m:math>
+Then <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mi>M</m:mi></m:mrow></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Hence, the sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> is bounded.</para>
+</proof></rule>
+    <para id="id62984">Note that the preceding theorem is a partial converse
+to <link target-id="fs-id1170684226813" document="m36120"/>; i.e., a convergent sequence is necessarily bounded.
+Of course, not every convergent sequence must be
+either nondecreasing or nonincreasing, so that a full converse to
+<link target-id="fs-id1170684226813" document="m36120"/> is not true.
+For instance, take <m:math overflow="scroll"><m:mrow><m:mi>z</m:mi><m:mo>=</m:mo><m:mo>-</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mn>2</m:mn></m:mrow></m:math> in part (1) of <link target-id="fs-id1169173140996" document="m36120"/>.
+It converges to 0 all right, but it is neither nondecreasing nor nonincreasing.</para>
+<exercise id="fs-id1164165956145"><problem id="fs-id7821349">
+    <list id="id63021" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid1"> Suppose <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> is a sequence of real numbers that converges to a number <m:math overflow="scroll"><m:mrow><m:mi>a</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+and assume that <m:math overflow="scroll"><m:mrow><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>≥</m:mo><m:mi>c</m:mi></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Prove that <m:math overflow="scroll"><m:mrow><m:mi>a</m:mi><m:mo>≥</m:mo><m:mi>c</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+HINT: Suppose not, and let <m:math overflow="scroll"><m:mi>ϵ</m:mi></m:math> be the positive number <m:math overflow="scroll"><m:mrow><m:mi>c</m:mi><m:mo>-</m:mo><m:mi>a</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Let <m:math overflow="scroll"><m:mi>N</m:mi></m:math> be a natural number corresponding to this choice of <m:math overflow="scroll"><m:mrow><m:mi>ϵ</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+and derive a contradiction.
+</item>
+      <item id="uid2"> If <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> is a sequence of real numbers for which <m:math overflow="scroll"><m:mrow><m:mo movablelimits="true" form="prefix">lim</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>=</m:mo><m:mi>a</m:mi><m:mo>,</m:mo></m:mrow></m:math> and if <m:math overflow="scroll"><m:mrow><m:mi>a</m:mi><m:mo>≠</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> then prove that <m:math overflow="scroll"><m:mrow><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>≠</m:mo><m:mn>0</m:mn></m:mrow></m:math> for all large enough
+<m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Show in fact that there exists an <m:math overflow="scroll"><m:mi>N</m:mi></m:math> such that
+<m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mo>|</m:mo><m:mo>&gt;</m:mo><m:mo>|</m:mo><m:mi>a</m:mi><m:mo>|</m:mo></m:mrow><m:mo>/</m:mo><m:mn>2</m:mn></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>≥</m:mo><m:mi>N</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+HINT:
+Make use of the positive number <m:math overflow="scroll"><m:mrow><m:mi>ϵ</m:mi><m:mo>=</m:mo><m:mo>|</m:mo><m:mi>a</m:mi><m:mo>|</m:mo><m:mo>/</m:mo><m:mn>2</m:mn><m:mo>.</m:mo></m:mrow></m:math></item>
+    </list>
+</problem></exercise>
+<exercise id="fs-id1164145165058"><problem id="fs-id1164161143814">
+    <list id="id63352" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid3"> If <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> is a sequence of positive real numbers for which <m:math overflow="scroll"><m:mrow><m:mo movablelimits="true" form="prefix">lim</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>=</m:mo><m:mi>a</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math>
+prove that <m:math overflow="scroll"><m:mrow><m:mo movablelimits="true" form="prefix">lim</m:mo><m:msqrt><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub></m:msqrt><m:mo>=</m:mo><m:msqrt><m:mi>a</m:mi></m:msqrt><m:mo>.</m:mo></m:mrow></m:math>
+HINT: Multiply the expression <m:math overflow="scroll"><m:mrow><m:msqrt><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub></m:msqrt><m:mo>-</m:mo><m:msqrt><m:mi>a</m:mi></m:msqrt></m:mrow></m:math> above and below by
+<m:math overflow="scroll"><m:mrow><m:msqrt><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub></m:msqrt><m:mo>+</m:mo><m:msqrt><m:mi>a</m:mi></m:msqrt><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid4"> If <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> is a sequence of complex numbers, and
+<m:math overflow="scroll"><m:mrow><m:mo movablelimits="true" form="prefix">lim</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>=</m:mo><m:mi>a</m:mi><m:mo>,</m:mo></m:mrow></m:math> prove that
+<m:math overflow="scroll"><m:mrow><m:mrow><m:mo movablelimits="true" form="prefix">lim</m:mo><m:mo>|</m:mo></m:mrow><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mo>|</m:mo><m:mo>=</m:mo><m:mo>|</m:mo><m:mi>a</m:mi><m:mo>|</m:mo><m:mo>.</m:mo></m:mrow></m:mrow></m:math>
+HINT: Use the backward triangle inequality.
+</item>
+    </list>
+</problem></exercise>
+<exercise id="fs-id1164143565247"><problem id="fs-id1164146201966">
+    <para id="id63601">Suppose <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> is a sequence of real numbers and that <m:math overflow="scroll"><m:mrow><m:mi>L</m:mi><m:mo>=</m:mo><m:mo movablelimits="true" form="prefix">lim</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>.</m:mo></m:mrow></m:math>
+Let <m:math overflow="scroll"><m:msub><m:mi>M</m:mi><m:mn>1</m:mn></m:msub></m:math> and <m:math overflow="scroll"><m:msub><m:mi>M</m:mi><m:mn>2</m:mn></m:msub></m:math> be real numbers such that
+<m:math overflow="scroll"><m:mrow><m:msub><m:mi>M</m:mi><m:mn>1</m:mn></m:msub><m:mo>≤</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>≤</m:mo><m:msub><m:mi>M</m:mi><m:mn>2</m:mn></m:msub></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Prove that <m:math overflow="scroll"><m:mrow><m:msub><m:mi>M</m:mi><m:mn>1</m:mn></m:msub><m:mo>≤</m:mo><m:mi>L</m:mi><m:mo>≤</m:mo><m:msub><m:mi>M</m:mi><m:mn>2</m:mn></m:msub><m:mo>.</m:mo></m:mrow></m:math></para>
+    <para id="id63751">HINT: Suppose, for instance, that <m:math overflow="scroll"><m:mrow><m:mi>L</m:mi><m:mo>&gt;</m:mo><m:msub><m:mi>M</m:mi><m:mn>2</m:mn></m:msub><m:mo>.</m:mo></m:mrow></m:math>
+Make use of the positive number <m:math overflow="scroll"><m:mrow><m:mi>L</m:mi><m:mo>-</m:mo><m:msub><m:mi>M</m:mi><m:mn>2</m:mn></m:msub></m:mrow></m:math> to derive a contradiction.</para>
+</problem></exercise>
+    <para id="id63798">We are often able to show that a sequence converges by comparing it
+to another sequence that we already know converges.
+The following exercise demonstrates some of these techniques.</para>
+<exercise id="fs-id1164160558043"><problem id="fs-id1164168739432">
+    <para id="id63804">
+Let <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> be a sequence of complex numbers.</para>
+    <list id="id63834" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid5"> Suppose that, for each <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>,</m:mo></m:mrow></m:math><m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>n</m:mi><m:mo>.</m:mo></m:mrow></m:mrow></m:math>
+Prove that <m:math overflow="scroll"><m:mrow><m:mn>0</m:mn><m:mo>=</m:mo><m:mo movablelimits="true" form="prefix">lim</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid6"> Suppose <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>b</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> is a sequence that converges to <m:math overflow="scroll"><m:mrow><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> and suppose that, for each <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>,</m:mo></m:mrow></m:math><m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mo>|</m:mo></m:mrow><m:msub><m:mi>b</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mo>|</m:mo><m:mo>.</m:mo></m:mrow></m:mrow></m:math>
+Prove that
+<m:math overflow="scroll"><m:mrow><m:mn>0</m:mn><m:mo>=</m:mo><m:mo movablelimits="true" form="prefix">lim</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>.</m:mo></m:mrow></m:math></item>
+    </list>
+</problem></exercise>
+    <para id="id64217">The next result is perhaps the most powerful technique
+we have for showing that a given sequence converges to a given number.</para>
+    
+<rule id="fs-id1164168890640" type="theorem"><title>Squeeze Theorem</title><statement id="fs-id1164171131674">
+<para id="id64221">
+ Suppose that <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> is a sequence of real numbers and that <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>b</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>c</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> are two sequences
+of
+real numbers for which
+<m:math overflow="scroll"><m:mrow><m:msub><m:mi>b</m:mi><m:mi>n</m:mi></m:msub><m:mo>≤</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>≤</m:mo><m:msub><m:mi>c</m:mi><m:mi>n</m:mi></m:msub></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Suppose further that <m:math overflow="scroll"><m:mrow><m:mo movablelimits="true" form="prefix">lim</m:mo><m:msub><m:mi>b</m:mi><m:mi>n</m:mi></m:msub><m:mo>=</m:mo><m:mo movablelimits="true" form="prefix">lim</m:mo><m:msub><m:mi>c</m:mi><m:mi>n</m:mi></m:msub><m:mo>=</m:mo><m:mi>L</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Then the sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> also converges to <m:math overflow="scroll"><m:mrow><m:mi>L</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+</statement>
+<proof id="fs-id1164165059591">
+    <para id="id64412">
+We examine the quantity <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mo>-</m:mo><m:mi>L</m:mi><m:mo>,</m:mo><m:mo>|</m:mo></m:mrow></m:mrow></m:math> employ some add and subtract tricks, and make the following computations:</para>
+    <equation id="uid7">
+      <m:math overflow="scroll" mode="display">
+        <m:mtable displaystyle="true">
+          <m:mtr>
+            <m:mtd columnalign="right">
+              <m:mrow>
+                <m:mrow>
+                  <m:mrow>
+                    <m:mi>r</m:mi>
+                    <m:mi>c</m:mi>
+                    <m:mi>l</m:mi>
+                  </m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:msub>
+                  <m:mi>a</m:mi>
+                  <m:mi>n</m:mi>
+                </m:msub>
+                <m:mrow>
+                  <m:mo>-</m:mo>
+                  <m:mi>L</m:mi>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+            <m:mtd>
+              <m:mo>≤</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:msub>
+                  <m:mi>a</m:mi>
+                  <m:mi>n</m:mi>
+                </m:msub>
+                <m:mo>-</m:mo>
+                <m:msub>
+                  <m:mi>b</m:mi>
+                  <m:mi>n</m:mi>
+                </m:msub>
+                <m:mo>+</m:mo>
+                <m:msub>
+                  <m:mi>b</m:mi>
+                  <m:mi>n</m:mi>
+                </m:msub>
+                <m:mrow>
+                  <m:mo>-</m:mo>
+                  <m:mi>L</m:mi>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>≤</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:msub>
+                  <m:mi>a</m:mi>
+                  <m:mi>n</m:mi>
+                </m:msub>
+                <m:mo>-</m:mo>
+                <m:msub>
+                  <m:mi>b</m:mi>
+                  <m:mi>n</m:mi>
+                </m:msub>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                  <m:mo>+</m:mo>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:msub>
+                  <m:mi>b</m:mi>
+                  <m:mi>n</m:mi>
+                </m:msub>
+                <m:mrow>
+                  <m:mo>-</m:mo>
+                  <m:mi>L</m:mi>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:msub>
+                  <m:mi>a</m:mi>
+                  <m:mi>n</m:mi>
+                </m:msub>
+                <m:mo>-</m:mo>
+                <m:msub>
+                  <m:mi>b</m:mi>
+                  <m:mi>n</m:mi>
+                </m:msub>
+                <m:mo>+</m:mo>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                  <m:msub>
+                    <m:mi>b</m:mi>
+                    <m:mi>n</m:mi>
+                  </m:msub>
+                  <m:mo>-</m:mo>
+                  <m:mi>L</m:mi>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>≤</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:msub>
+                  <m:mi>c</m:mi>
+                  <m:mi>n</m:mi>
+                </m:msub>
+                <m:mo>-</m:mo>
+                <m:msub>
+                  <m:mi>b</m:mi>
+                  <m:mi>n</m:mi>
+                </m:msub>
+                <m:mo>+</m:mo>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                  <m:msub>
+                    <m:mi>b</m:mi>
+                    <m:mi>n</m:mi>
+                  </m:msub>
+                  <m:mo>-</m:mo>
+                  <m:mi>L</m:mi>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:msub>
+                  <m:mi>c</m:mi>
+                  <m:mi>n</m:mi>
+                </m:msub>
+                <m:mo>-</m:mo>
+                <m:msub>
+                  <m:mi>b</m:mi>
+                  <m:mi>n</m:mi>
+                </m:msub>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                  <m:mo>+</m:mo>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:msub>
+                  <m:mi>b</m:mi>
+                  <m:mi>n</m:mi>
+                </m:msub>
+                <m:mrow>
+                  <m:mo>-</m:mo>
+                  <m:mi>L</m:mi>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>≤</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:msub>
+                  <m:mi>c</m:mi>
+                  <m:mi>n</m:mi>
+                </m:msub>
+                <m:mrow>
+                  <m:mo>-</m:mo>
+                  <m:mi>L</m:mi>
+                  <m:mo>|</m:mo>
+                  <m:mo>+</m:mo>
+                  <m:mo>|</m:mo>
+                  <m:mi>L</m:mi>
+                  <m:mo>-</m:mo>
+                </m:mrow>
+                <m:msub>
+                  <m:mi>b</m:mi>
+                  <m:mi>n</m:mi>
+                </m:msub>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                  <m:mo>+</m:mo>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:msub>
+                  <m:mi>b</m:mi>
+                  <m:mi>n</m:mi>
+                </m:msub>
+                <m:mrow>
+                  <m:mo>-</m:mo>
+                  <m:mi>L</m:mi>
+                  <m:mo>|</m:mo>
+                  <m:mo>.</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+        </m:mtable>
+      </m:math>
+    </equation>
+    <para id="id64807">So, we can make <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mo>-</m:mo><m:mi>L</m:mi><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mi>ϵ</m:mi></m:mrow></m:mrow></m:math> by making <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msub><m:mi>c</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mo>-</m:mo><m:mi>L</m:mi><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mi>ϵ</m:mi><m:mo>/</m:mo><m:mn>3</m:mn></m:mrow></m:mrow></m:math> and
+<m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msub><m:mi>b</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mo>-</m:mo><m:mi>L</m:mi><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mi>ϵ</m:mi><m:mo>/</m:mo><m:mn>3</m:mn><m:mo>.</m:mo></m:mrow></m:mrow></m:math>
+So, let <m:math overflow="scroll"><m:msub><m:mi>N</m:mi><m:mn>1</m:mn></m:msub></m:math> be a positive integer such that <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msub><m:mi>c</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mo>-</m:mo><m:mi>L</m:mi><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mi>ϵ</m:mi><m:mo>/</m:mo><m:mn>3</m:mn></m:mrow></m:mrow></m:math> if <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>≥</m:mo><m:msub><m:mi>N</m:mi><m:mn>1</m:mn></m:msub><m:mo>,</m:mo></m:mrow></m:math>
+and let <m:math overflow="scroll"><m:msub><m:mi>N</m:mi><m:mn>2</m:mn></m:msub></m:math> be a positive integer so that <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msub><m:mi>b</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mo>-</m:mo><m:mi>L</m:mi><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mi>ϵ</m:mi><m:mo>/</m:mo><m:mn>3</m:mn></m:mrow></m:mrow></m:math> if <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>≥</m:mo><m:msub><m:mi>N</m:mi><m:mn>2</m:mn></m:msub><m:mo>.</m:mo></m:mrow></m:math>
+Then set <m:math overflow="scroll"><m:mrow><m:mi>N</m:mi><m:mo>=</m:mo><m:mo movablelimits="true" form="prefix">max</m:mo><m:mo>(</m:mo><m:msub><m:mi>N</m:mi><m:mn>1</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>N</m:mi><m:mn>2</m:mn></m:msub><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Clearly, if <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>≥</m:mo><m:mi>N</m:mi><m:mo>,</m:mo></m:mrow></m:math> then both inequalities <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msub><m:mi>c</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mo>-</m:mo><m:mi>L</m:mi><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mi>ϵ</m:mi><m:mo>/</m:mo><m:mn>3</m:mn></m:mrow></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msub><m:mi>b</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mo>-</m:mo><m:mi>L</m:mi><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mi>ϵ</m:mi><m:mo>/</m:mo><m:mn>3</m:mn><m:mo>,</m:mo></m:mrow></m:mrow></m:math> and hence
+<m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mo>-</m:mo><m:mi>L</m:mi><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mi>ϵ</m:mi><m:mo>.</m:mo></m:mrow></m:mrow></m:math>
+This finishes the proof.</para>
+</proof></rule>
+    <para id="id65221">The next result establishes what are frequently called the “limit theorems.”
+Basically, these results show how convergence
+interacts with algebraic operations.</para>
+<rule id="fs-id7660171" type="theorem"><statement id="fs-id1164161276566">
+    <para id="id65228">
+Let <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>b</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> be two sequences of complex numbers with <m:math overflow="scroll"><m:mrow><m:mi>a</m:mi><m:mo>=</m:mo><m:mo movablelimits="true" form="prefix">lim</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>b</m:mi><m:mo>=</m:mo><m:mo movablelimits="true" form="prefix">lim</m:mo><m:msub><m:mi>b</m:mi><m:mi>n</m:mi></m:msub><m:mo>.</m:mo></m:mrow></m:math>
+Then</para>
+    <list id="id65330" display="block" list-type="enumerated">
+      <item id="uid8">The sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>+</m:mo><m:msub><m:mi>b</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> converges, and
+<equation id="id65375"><m:math overflow="scroll" mode="display"><m:mrow><m:mo movablelimits="true" form="prefix">lim</m:mo><m:mrow><m:mo>(</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>+</m:mo><m:msub><m:mi>b</m:mi><m:mi>n</m:mi></m:msub><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mo movablelimits="true" form="prefix">lim</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>+</m:mo><m:mo movablelimits="true" form="prefix">lim</m:mo><m:msub><m:mi>b</m:mi><m:mi>n</m:mi></m:msub><m:mo>=</m:mo><m:mi>a</m:mi><m:mo>+</m:mo><m:mi>b</m:mi><m:mo>.</m:mo></m:mrow></m:math></equation></item>
+      <item id="uid9">The sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:msub><m:mi>b</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> is convergent, and
+<equation id="id65497"><m:math overflow="scroll" mode="display"><m:mrow><m:mo movablelimits="true" form="prefix">lim</m:mo><m:mrow><m:mo>(</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:msub><m:mi>b</m:mi><m:mi>n</m:mi></m:msub><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mo movablelimits="true" form="prefix">lim</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo movablelimits="true" form="prefix">lim</m:mo><m:msub><m:mi>b</m:mi><m:mi>n</m:mi></m:msub><m:mo>=</m:mo><m:mi>a</m:mi><m:mi>b</m:mi><m:mo>.</m:mo></m:mrow></m:math></equation></item>
+      <item id="uid10">If all the <m:math overflow="scroll"><m:msub><m:mi>b</m:mi><m:mi>n</m:mi></m:msub></m:math>'s as well as <m:math overflow="scroll"><m:mi>b</m:mi></m:math> are nonzero, then the sequence
+<m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>/</m:mo><m:msub><m:mi>b</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> is convergent, and
+<equation id="id65637"><m:math overflow="scroll" mode="display"><m:mrow><m:mo movablelimits="true" form="prefix">lim</m:mo><m:mo>(</m:mo><m:mfrac><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:msub><m:mi>b</m:mi><m:mi>n</m:mi></m:msub></m:mfrac><m:mo>=</m:mo><m:mfrac><m:mrow><m:mo movablelimits="true" form="prefix">lim</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub></m:mrow><m:mrow><m:mo movablelimits="true" form="prefix">lim</m:mo><m:msub><m:mi>b</m:mi><m:mi>n</m:mi></m:msub></m:mrow></m:mfrac><m:mo>=</m:mo><m:mfrac><m:mi>a</m:mi><m:mi>b</m:mi></m:mfrac><m:mo>.</m:mo></m:mrow></m:math></equation></item>
+    </list>
+</statement>
+<proof id="fs-id1164179415898">
+    <para id="id65719">Part (1) is exactly the same as <link target-id="fs-id1170697316930" document="m36120"/>.
+Let us prove part (2).</para>
+    <para id="id65727">By <link target-id="fs-id1164146425836"/>, both sequences <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>b</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> are bounded.
+Therefore, let <m:math overflow="scroll"><m:mi>M</m:mi></m:math> be a number such that <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mo>|</m:mo><m:mo>≤</m:mo><m:mi>M</m:mi></m:mrow></m:mrow></m:math>
+and <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msub><m:mi>b</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mo>|</m:mo><m:mo>≤</m:mo><m:mi>M</m:mi></m:mrow></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Now, let <m:math overflow="scroll"><m:mrow><m:mi>ϵ</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn></m:mrow></m:math> be given. There exists an <m:math overflow="scroll"><m:msub><m:mi>N</m:mi><m:mn>1</m:mn></m:msub></m:math> such that
+<m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mo>-</m:mo><m:mi>a</m:mi><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mi>ϵ</m:mi><m:mo>/</m:mo><m:mrow><m:mo>(</m:mo><m:mn>2</m:mn><m:mi>M</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:mrow></m:math> whenever <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>≥</m:mo><m:msub><m:mi>N</m:mi><m:mn>1</m:mn></m:msub><m:mo>,</m:mo></m:mrow></m:math>
+and there exists an <m:math overflow="scroll"><m:msub><m:mi>N</m:mi><m:mn>2</m:mn></m:msub></m:math> such that <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msub><m:mi>b</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mo>-</m:mo><m:mi>b</m:mi><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mi>ϵ</m:mi><m:mo>/</m:mo><m:mrow><m:mo>(</m:mo><m:mn>2</m:mn><m:mi>M</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:mrow></m:math>
+whenever <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>≥</m:mo><m:msub><m:mi>N</m:mi><m:mn>2</m:mn></m:msub><m:mo>.</m:mo></m:mrow></m:math>
+Let <m:math overflow="scroll"><m:mi>N</m:mi></m:math> be the maximum of <m:math overflow="scroll"><m:msub><m:mi>N</m:mi><m:mn>1</m:mn></m:msub></m:math> and <m:math overflow="scroll"><m:mrow><m:msub><m:mi>N</m:mi><m:mn>2</m:mn></m:msub><m:mo>.</m:mo></m:mrow></m:math>
+Here comes the add and subtract trick again.</para>
+    <equation id="uid11">
+      <m:math overflow="scroll" mode="display">
+        <m:mtable displaystyle="true">
+          <m:mtr>
+            <m:mtd columnalign="right">
+              <m:mrow>
+                <m:mrow>
+                  <m:mrow>
+                    <m:mi>r</m:mi>
+                    <m:mi>c</m:mi>
+                    <m:mi>l</m:mi>
+                  </m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:msub>
+                  <m:mi>a</m:mi>
+                  <m:mi>n</m:mi>
+                </m:msub>
+                <m:msub>
+                  <m:mi>b</m:mi>
+                  <m:mi>n</m:mi>
+                </m:msub>
+                <m:mrow>
+                  <m:mo>-</m:mo>
+                  <m:mi>a</m:mi>
+                  <m:mi>b</m:mi>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:msub>
+                  <m:mi>a</m:mi>
+                  <m:mi>n</m:mi>
+                </m:msub>
+                <m:msub>
+                  <m:mi>b</m:mi>
+                  <m:mi>n</m:mi>
+                </m:msub>
+                <m:mo>-</m:mo>
+                <m:mi>a</m:mi>
+                <m:msub>
+                  <m:mi>b</m:mi>
+                  <m:mi>n</m:mi>
+                </m:msub>
+                <m:mo>+</m:mo>
+                <m:mi>a</m:mi>
+                <m:msub>
+                  <m:mi>b</m:mi>
+                  <m:mi>n</m:mi>
+                </m:msub>
+                <m:mrow>
+                  <m:mo>-</m:mo>
+                  <m:mi>a</m:mi>
+                  <m:mi>b</m:mi>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>≤</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:msub>
+                  <m:mi>a</m:mi>
+                  <m:mi>n</m:mi>
+                </m:msub>
+                <m:msub>
+                  <m:mi>b</m:mi>
+                  <m:mi>n</m:mi>
+                </m:msub>
+                <m:mo>-</m:mo>
+                <m:mi>a</m:mi>
+                <m:msub>
+                  <m:mi>b</m:mi>
+                  <m:mi>n</m:mi>
+                </m:msub>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                  <m:mo>+</m:mo>
+                  <m:mo>|</m:mo>
+                  <m:mi>a</m:mi>
+                </m:mrow>
+                <m:msub>
+                  <m:mi>b</m:mi>
+                  <m:mi>n</m:mi>
+                </m:msub>
+                <m:mrow>
+                  <m:mo>-</m:mo>
+                  <m:mi>a</m:mi>
+                  <m:mi>b</m:mi>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:msub>
+                  <m:mi>a</m:mi>
+                  <m:mi>n</m:mi>
+                </m:msub>
+                <m:mo>-</m:mo>
+                <m:mrow>
+                  <m:mi>a</m:mi>
+                  <m:mo>|</m:mo>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:msub>
+                  <m:mi>b</m:mi>
+                  <m:mi>n</m:mi>
+                </m:msub>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                  <m:mo>+</m:mo>
+                  <m:mo>|</m:mo>
+                  <m:mi>a</m:mi>
+                  <m:mo>|</m:mo>
+                  <m:mo>|</m:mo>
+                  <m:mi>b</m:mi>
+                  <m:mo>-</m:mo>
+                </m:mrow>
+                <m:msub>
+                  <m:mi>b</m:mi>
+                  <m:mi>n</m:mi>
+                </m:msub>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>≤</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:msub>
+                  <m:mi>a</m:mi>
+                  <m:mi>n</m:mi>
+                </m:msub>
+                <m:mrow>
+                  <m:mo>-</m:mo>
+                  <m:mi>a</m:mi>
+                  <m:mo>|</m:mo>
+                  <m:mi>M</m:mi>
+                  <m:mo>+</m:mo>
+                  <m:mi>M</m:mi>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:msub>
+                  <m:mi>b</m:mi>
+                  <m:mi>n</m:mi>
+                </m:msub>
+                <m:mrow>
+                  <m:mo>-</m:mo>
+                  <m:mi>b</m:mi>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>&lt;</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mi>ϵ</m:mi>
+            </m:mtd>
+          </m:mtr>
+        </m:mtable>
+      </m:math>
+    </equation>
+    <para id="id66368">if <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>≥</m:mo><m:mi>N</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+which shows that <m:math overflow="scroll"><m:mrow><m:mo movablelimits="true" form="prefix">lim</m:mo><m:mo>(</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:msub><m:mi>b</m:mi><m:mi>n</m:mi></m:msub><m:mo>)</m:mo><m:mo>=</m:mo><m:mi>a</m:mi><m:mi>b</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+    <para id="id66431">To prove part (3), let <m:math overflow="scroll"><m:mi>M</m:mi></m:math> be as in the previous paragraph, and let
+<m:math overflow="scroll"><m:mrow><m:mi>ϵ</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn></m:mrow></m:math> be given. There exists an <m:math overflow="scroll"><m:msub><m:mi>N</m:mi><m:mn>1</m:mn></m:msub></m:math>
+such that <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>-</m:mo><m:msup><m:mrow><m:mi>a</m:mi><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mo>(</m:mo><m:mi>ϵ</m:mi><m:mo>|</m:mo><m:mi>b</m:mi><m:mo>|</m:mo></m:mrow><m:mn>2</m:mn></m:msup><m:mrow><m:mo>)</m:mo><m:mo>/</m:mo><m:mrow><m:mo>(</m:mo><m:mn>4</m:mn><m:mi>M</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:mrow></m:math> whenever <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>≥</m:mo><m:msub><m:mi>N</m:mi><m:mn>1</m:mn></m:msub><m:mo>;</m:mo></m:mrow></m:math>
+there also exists an <m:math overflow="scroll"><m:msub><m:mi>N</m:mi><m:mn>2</m:mn></m:msub></m:math> such that <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msub><m:mi>b</m:mi><m:mi>n</m:mi></m:msub><m:mo>-</m:mo><m:msup><m:mrow><m:mi>b</m:mi><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mo>(</m:mo><m:mi>ϵ</m:mi><m:mo>|</m:mo><m:mi>b</m:mi><m:mo>|</m:mo></m:mrow><m:mn>2</m:mn></m:msup><m:mrow><m:mo>)</m:mo><m:mo>/</m:mo><m:mrow><m:mo>(</m:mo><m:mn>4</m:mn><m:mi>M</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:mrow></m:math> whenever
+<m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>≥</m:mo><m:msub><m:mi>N</m:mi><m:mn>2</m:mn></m:msub><m:mo>;</m:mo></m:mrow></m:math> and there exists an
+<m:math overflow="scroll"><m:msub><m:mi>N</m:mi><m:mn>3</m:mn></m:msub></m:math> such that <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msub><m:mi>b</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mo>|</m:mo><m:mo>&gt;</m:mo><m:mo>|</m:mo><m:mi>b</m:mi><m:mo>|</m:mo></m:mrow><m:mo>/</m:mo><m:mn>2</m:mn></m:mrow></m:math> whenever <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>≥</m:mo><m:msub><m:mi>N</m:mi><m:mn>3</m:mn></m:msub><m:mo>.</m:mo></m:mrow></m:math>
+(See <link target-id="fs-id1164165956145"/>.)
+Let <m:math overflow="scroll"><m:mi>N</m:mi></m:math> be the maximum of the three numbers <m:math overflow="scroll"><m:mrow><m:msub><m:mi>N</m:mi><m:mn>1</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>N</m:mi><m:mn>2</m:mn></m:msub></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:msub><m:mi>N</m:mi><m:mn>3</m:mn></m:msub><m:mo>.</m:mo></m:mrow></m:math> Then:</para>
+    <equation id="uid12">
+      <m:math overflow="scroll" mode="display">
+        <m:mtable displaystyle="true">
+          <m:mtr>
+            <m:mtd columnalign="right">
+              <m:mrow>
+                <m:mrow>
+                  <m:mrow>
+                    <m:mi>r</m:mi>
+                    <m:mi>c</m:mi>
+                    <m:mi>l</m:mi>
+                  </m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:mfrac>
+                  <m:msub>
+                    <m:mi>a</m:mi>
+                    <m:mi>n</m:mi>
+                  </m:msub>
+                  <m:msub>
+                    <m:mi>b</m:mi>
+                    <m:mi>n</m:mi>
+                  </m:msub>
+                </m:mfrac>
+                <m:mo>-</m:mo>
+                <m:mfrac>
+                  <m:mi>a</m:mi>
+                  <m:mi>b</m:mi>
+                </m:mfrac>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:mfrac>
+                  <m:mrow>
+                    <m:msub>
+                      <m:mi>a</m:mi>
+                      <m:mi>n</m:mi>
+                    </m:msub>
+                    <m:mi>b</m:mi>
+                    <m:mo>-</m:mo>
+                    <m:msub>
+                      <m:mi>b</m:mi>
+                      <m:mi>n</m:mi>
+                    </m:msub>
+                    <m:mi>a</m:mi>
+                  </m:mrow>
+                  <m:mrow>
+                    <m:msub>
+                      <m:mi>b</m:mi>
+                      <m:mi>n</m:mi>
+                    </m:msub>
+                    <m:mi>b</m:mi>
+                  </m:mrow>
+                </m:mfrac>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:msub>
+                  <m:mi>a</m:mi>
+                  <m:mi>n</m:mi>
+                </m:msub>
+                <m:mi>b</m:mi>
+                <m:mo>-</m:mo>
+                <m:msub>
+                  <m:mi>b</m:mi>
+                  <m:mi>n</m:mi>
+                </m:msub>
+                <m:mrow>
+                  <m:mi>a</m:mi>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:mfrac>
+                  <m:mn>1</m:mn>
+                  <m:mrow>
+                    <m:mrow>
+                      <m:mo>|</m:mo>
+                    </m:mrow>
+                    <m:msub>
+                      <m:mi>b</m:mi>
+                      <m:mi>n</m:mi>
+                    </m:msub>
+                    <m:mrow>
+                      <m:mi>b</m:mi>
+                      <m:mo>|</m:mo>
+                    </m:mrow>
+                  </m:mrow>
+                </m:mfrac>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>&lt;</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:msub>
+                  <m:mi>a</m:mi>
+                  <m:mi>n</m:mi>
+                </m:msub>
+                <m:mi>b</m:mi>
+                <m:mo>-</m:mo>
+                <m:msub>
+                  <m:mi>b</m:mi>
+                  <m:mi>n</m:mi>
+                </m:msub>
+                <m:mrow>
+                  <m:mi>a</m:mi>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:mfrac>
+                  <m:mn>1</m:mn>
+                  <m:mrow>
+                    <m:msup>
+                      <m:mrow>
+                        <m:mo>|</m:mo>
+                        <m:mi>b</m:mi>
+                        <m:mo>|</m:mo>
+                      </m:mrow>
+                      <m:mn>2</m:mn>
+                    </m:msup>
+                    <m:mo>/</m:mo>
+                    <m:mn>2</m:mn>
+                  </m:mrow>
+                </m:mfrac>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>≤</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:msub>
+                  <m:mi>a</m:mi>
+                  <m:mi>n</m:mi>
+                </m:msub>
+                <m:mo>-</m:mo>
+                <m:mrow>
+                  <m:mi>a</m:mi>
+                  <m:mo>|</m:mo>
+                  <m:mo>|</m:mo>
+                  <m:mi>b</m:mi>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:mo>+</m:mo>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                  <m:mi>a</m:mi>
+                  <m:mo>|</m:mo>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:msub>
+                  <m:mi>b</m:mi>
+                  <m:mi>n</m:mi>
+                </m:msub>
+                <m:mo>-</m:mo>
+                <m:mi>b</m:mi>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mfrac>
+                  <m:mn>2</m:mn>
+                  <m:msup>
+                    <m:mrow>
+                      <m:mo>|</m:mo>
+                      <m:mi>b</m:mi>
+                      <m:mo>|</m:mo>
+                    </m:mrow>
+                    <m:mn>2</m:mn>
+                  </m:msup>
+                </m:mfrac>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>&lt;</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>M</m:mi>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:msub>
+                  <m:mi>a</m:mi>
+                  <m:mi>n</m:mi>
+                </m:msub>
+                <m:mrow>
+                  <m:mo>-</m:mo>
+                  <m:mi>a</m:mi>
+                  <m:mo>|</m:mo>
+                  <m:mo>+</m:mo>
+                  <m:mi>M</m:mi>
+                  <m:mo>|</m:mo>
+                </m:mrow>
+                <m:msub>
+                  <m:mi>b</m:mi>
+                  <m:mi>n</m:mi>
+                </m:msub>
+                <m:mo>-</m:mo>
+                <m:mi>b</m:mi>
+                <m:mrow>
+                  <m:mo>|</m:mo>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mfrac>
+                  <m:mn>2</m:mn>
+                  <m:msup>
+                    <m:mrow>
+                      <m:mo>|</m:mo>
+                      <m:mi>b</m:mi>
+                      <m:mo>|</m:mo>
+                    </m:mrow>
+                    <m:mn>2</m:mn>
+                  </m:msup>
+                </m:mfrac>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>&lt;</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mi>ϵ</m:mi>
+            </m:mtd>
+          </m:mtr>
+        </m:mtable>
+      </m:math>
+    </equation>
+    <para id="id67168">if <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>≥</m:mo><m:mi>N</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+This completes the proof.</para>
+</proof></rule>
+<rule id="fs-id1164170005785"><label/><statement id="fs-id1164161011820">
+    <para id="id67191"><emphasis effect="bold">REMARK</emphasis>
+The proof of part (3) of the preceding theorem may look mysterious.
+Where, for instance, does this number <m:math overflow="scroll"><m:mrow><m:msup><m:mrow><m:mi>ϵ</m:mi><m:mo>|</m:mo><m:mi>b</m:mi><m:mo>|</m:mo></m:mrow><m:mn>2</m:mn></m:msup><m:mo>/</m:mo><m:mn>4</m:mn><m:mi>M</m:mi></m:mrow></m:math> come from?
+The answer is that one begins such a proof by examining the quantity
+<m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>/</m:mo><m:msub><m:mi>b</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mo>-</m:mo><m:mi>a</m:mi><m:mo>/</m:mo><m:mi>b</m:mi><m:mo>|</m:mo></m:mrow></m:mrow></m:math> to see if by some algebraic manipulation one can discover
+how to control its size by using the quantities <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mo>-</m:mo><m:mi>a</m:mi><m:mo>|</m:mo></m:mrow></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msub><m:mi>b</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mo>-</m:mo><m:mi>b</m:mi><m:mo>|</m:mo><m:mo>.</m:mo></m:mrow></m:mrow></m:math>
+The assumption that <m:math overflow="scroll"><m:mrow><m:mi>a</m:mi><m:mo>=</m:mo><m:mo movablelimits="true" form="prefix">lim</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>b</m:mi><m:mo>=</m:mo><m:mo movablelimits="true" form="prefix">lim</m:mo><m:msub><m:mi>b</m:mi><m:mi>n</m:mi></m:msub></m:mrow></m:math>
+mean exactly that the quantities <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mo>-</m:mo><m:mi>a</m:mi><m:mo>|</m:mo></m:mrow></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msub><m:mi>b</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mo>-</m:mo><m:mi>b</m:mi><m:mo>|</m:mo></m:mrow></m:mrow></m:math> can be controlled by requiring
+<m:math overflow="scroll"><m:mi>n</m:mi></m:math> to be large enough.
+The algebraic computation in the proof above shows that</para>
+    <equation id="id67438">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mrow>
+            <m:mo>|</m:mo>
+          </m:mrow>
+          <m:mfrac>
+            <m:msub>
+              <m:mi>a</m:mi>
+              <m:mi>n</m:mi>
+            </m:msub>
+            <m:msub>
+              <m:mi>b</m:mi>
+              <m:mi>n</m:mi>
+            </m:msub>
+          </m:mfrac>
+          <m:mo>-</m:mo>
+          <m:mfrac>
+            <m:mi>a</m:mi>
+            <m:mi>b</m:mi>
+          </m:mfrac>
+          <m:mrow>
+            <m:mo>|</m:mo>
+            <m:mo>≤</m:mo>
+            <m:mo>(</m:mo>
+            <m:mi>M</m:mi>
+            <m:mo>|</m:mo>
+          </m:mrow>
+          <m:msub>
+            <m:mi>a</m:mi>
+            <m:mi>n</m:mi>
+          </m:msub>
+          <m:mrow>
+            <m:mo>-</m:mo>
+            <m:mi>a</m:mi>
+            <m:mo>|</m:mo>
+            <m:mo>+</m:mo>
+            <m:mi>M</m:mi>
+            <m:mo>|</m:mo>
+          </m:mrow>
+          <m:msub>
+            <m:mi>b</m:mi>
+            <m:mi>n</m:mi>
+          </m:msub>
+          <m:mo>-</m:mo>
+          <m:mi>b</m:mi>
+          <m:mrow>
+            <m:mo>|</m:mo>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mfrac>
+            <m:mn>2</m:mn>
+            <m:msup>
+              <m:mrow>
+                <m:mo>|</m:mo>
+                <m:mi>b</m:mi>
+                <m:mo>|</m:mo>
+              </m:mrow>
+              <m:mn>2</m:mn>
+            </m:msup>
+          </m:mfrac>
+          <m:mo>,</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id67546">and one can then see exactly how small to make <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mo>-</m:mo><m:mi>a</m:mi><m:mo>|</m:mo></m:mrow></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msub><m:mi>b</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mo>-</m:mo><m:mi>b</m:mi><m:mo>|</m:mo></m:mrow></m:mrow></m:math> so that <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>/</m:mo><m:msub><m:mi>b</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mo>-</m:mo><m:mi>a</m:mi><m:mo>/</m:mo><m:mi>b</m:mi><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mi>ϵ</m:mi><m:mo>.</m:mo></m:mrow></m:mrow></m:math>
+Indeed, this is the way most limit proofs work.</para>
+</statement></rule>
+<exercise id="fs-id1164148134582"><problem id="fs-id1164174547862">
+    <para id="id67651">If possible, determine the limits of the following sequences
+by using <link target-id="fs-id1169173140996" document="m36120"/>, <link target-id="fs-id1171134940519" document="m36124"/>, <link target-id="fs-id7660171"/>, and the squeeze theorem <link target-id="fs-id1164168890640"/>.</para>
+    <list id="id67664" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid13"> <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msup><m:mi>n</m:mi><m:mrow><m:mn>1</m:mn><m:mo>/</m:mo><m:msup><m:mi>n</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:msup><m:mo>}</m:mo><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid14"> <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msup><m:mrow><m:mo>(</m:mo><m:msup><m:mi>n</m:mi><m:mn>2</m:mn></m:msup><m:mo>)</m:mo></m:mrow><m:mrow><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>n</m:mi></m:mrow></m:msup><m:mo>}</m:mo><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid15"> <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msup><m:mrow><m:mo>(</m:mo><m:mn>1</m:mn><m:mo>+</m:mo><m:mi>n</m:mi><m:mo>)</m:mo></m:mrow><m:mrow><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>n</m:mi></m:mrow></m:msup><m:mo>}</m:mo><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid16"> <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msup><m:mrow><m:mo>(</m:mo><m:mn>1</m:mn><m:mo>+</m:mo><m:msup><m:mi>n</m:mi><m:mn>2</m:mn></m:msup><m:mo>)</m:mo></m:mrow><m:mrow><m:mn>1</m:mn><m:mo>/</m:mo><m:msup><m:mi>n</m:mi><m:mn>3</m:mn></m:msup></m:mrow></m:msup><m:mo>}</m:mo><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid17"> <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msup><m:mrow><m:mo>(</m:mo><m:mn>1</m:mn><m:mo>+</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>n</m:mi><m:mo>)</m:mo></m:mrow><m:mrow><m:mn>2</m:mn><m:mo>/</m:mo><m:mi>n</m:mi></m:mrow></m:msup><m:mo>}</m:mo><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid18"> <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msup><m:mrow><m:mo>(</m:mo><m:mn>1</m:mn><m:mo>+</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>n</m:mi><m:mo>)</m:mo></m:mrow><m:mrow><m:mn>2</m:mn><m:mi>n</m:mi></m:mrow></m:msup><m:mo>}</m:mo><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid19"> <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msup><m:mrow><m:mo>(</m:mo><m:mn>1</m:mn><m:mo>+</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>n</m:mi><m:mo>)</m:mo></m:mrow><m:msup><m:mi>n</m:mi><m:mn>2</m:mn></m:msup></m:msup><m:mo>}</m:mo><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid20"> <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msup><m:mrow><m:mo>(</m:mo><m:mn>1</m:mn><m:mo>-</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>n</m:mi><m:mo>)</m:mo></m:mrow><m:mi>n</m:mi></m:msup><m:mo>}</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+HINT: Note that
+<equation id="id68073"><m:math overflow="scroll" mode="display"><m:mrow><m:mn>1</m:mn><m:mo>-</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>n</m:mi><m:mo>=</m:mo><m:mfrac><m:mrow><m:mi>n</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow><m:mi>n</m:mi></m:mfrac><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mfrac><m:mi>n</m:mi><m:mrow><m:mi>n</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:mfrac></m:mfrac><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mfrac><m:mrow><m:mi>n</m:mi><m:mo>-</m:mo><m:mn>1</m:mn><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow><m:mrow><m:mi>n</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:mfrac></m:mfrac><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mrow><m:mn>1</m:mn><m:mo>+</m:mo><m:mfrac><m:mn>1</m:mn><m:mrow><m:mi>n</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:mfrac></m:mrow></m:mfrac><m:mo>.</m:mo></m:mrow></m:math></equation></item>
+      <item id="uid21"> <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msup><m:mrow><m:mo>(</m:mo><m:mn>1</m:mn><m:mo>-</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mrow><m:mo>(</m:mo><m:mn>2</m:mn><m:mi>n</m:mi><m:mo>)</m:mo></m:mrow><m:mo>)</m:mo></m:mrow><m:mrow><m:mn>3</m:mn><m:mi>n</m:mi></m:mrow></m:msup><m:mo>}</m:mo><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid22"> <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msup><m:mrow><m:mo>(</m:mo><m:mi>n</m:mi><m:mo>!</m:mo><m:mo>)</m:mo></m:mrow><m:mrow><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>n</m:mi></m:mrow></m:msup><m:mo>}</m:mo><m:mo>.</m:mo></m:mrow></m:math></item>
+    </list>
+</problem></exercise>
+  </content>
+</document>

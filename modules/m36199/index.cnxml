@@ -1,0 +1,601 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML">
+  <title>The Exponential and Logarithm Functions</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m36199</md:content-id>
+  <md:title>The Exponential and Logarithm Functions</md:title>
+  <md:abstract>We derive next the elementary properties of the exponential and
+logarithmic functions. Of course, by “exponential function,” we mean the power series function <m:math overflow="scroll"><m:mrow><m:mo form="prefix">exp</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+And, as yet, we have not even defined a logarithm function.</md:abstract>
+  <md:uuid>9fe92257-8832-4b9a-84bc-5519cb9eed00</md:uuid>
+</metadata>
+
+<content>
+    <para id="id225316">We derive next the elementary properties of the exponential and
+logarithmic functions. Of course, by “exponential function,” we mean the power series function <m:math overflow="scroll"><m:mrow><m:mo form="prefix">exp</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+And, as yet, we have not even defined a logarithm function.</para>
+<exercise id="fs-id1172705368648"><problem id="fs-id1172688775726">
+    <list id="id225348" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid1"> Define a complex-valued function <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>:</m:mo><m:mi>C</m:mi><m:mo>→</m:mo><m:mi>C</m:mi></m:mrow></m:math> by
+<m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mo form="prefix">exp</m:mo><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo><m:mo form="prefix">exp</m:mo><m:mo>(</m:mo><m:mo>-</m:mo><m:mi>z</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Prove that <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mn>1</m:mn></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>z</m:mi><m:mo>∈</m:mo><m:mi>C</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid2"> Conclude from part (a) that the exponential function is never 0, and
+that <m:math overflow="scroll"><m:mrow><m:mo form="prefix">exp</m:mo><m:mo>(</m:mo><m:mo>-</m:mo><m:mi>z</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mo form="prefix">exp</m:mo><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid3"> Show that the exponential function is always positive on <m:math overflow="scroll"><m:mrow><m:mi>R</m:mi><m:mo>,</m:mo></m:mrow></m:math> and
+that <m:math overflow="scroll"><m:mrow><m:msub><m:mo movablelimits="true" form="prefix">lim</m:mo><m:mrow><m:mi>x</m:mi><m:mo>→</m:mo><m:mo>-</m:mo><m:mi>∞</m:mi></m:mrow></m:msub><m:mo form="prefix">exp</m:mo><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid4"> Prove that <m:math overflow="scroll"><m:mo form="prefix">exp</m:mo></m:math> is continuous and 1-1 from <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mo>-</m:mo><m:mi>∞</m:mi><m:mo>,</m:mo><m:mi>∞</m:mi><m:mo>)</m:mo></m:mrow></m:math>
+onto <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mi>∞</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid5"> Show that the exponential function is <emphasis effect="bold">not</emphasis> 1-1
+on <m:math overflow="scroll"><m:mrow><m:mi>C</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid6"> Use parts b and e to show that the Mean Value Theorem is not in any way valid
+for complex-valued functions of a complex variable.
+</item>
+    </list>
+</problem></exercise>
+    <para id="id226230">Using part (d) of the preceding exercise, we make the following important definition.</para>
+<definition id="fs-id7134534"><term/><meaning id="fs-id1172674663070">
+    <para id="id226234">
+We call the inverse <m:math overflow="scroll"><m:msup><m:mo form="prefix">exp</m:mo><m:mrow><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msup></m:math> of the restriction of the
+exponential function to <m:math overflow="scroll"><m:mi>R</m:mi></m:math> the
+(natural) <emphasis effect="italics">logarithm function,</emphasis> and we denote this function by <m:math overflow="scroll"><m:mrow><m:mo form="prefix">ln</m:mo><m:mo>.</m:mo></m:mrow></m:math></para>
+</meaning></definition>
+    <para id="id226293">The properties of the exponential and logarithm functions are
+strongly tied to the simplest
+kinds of differential equations. The connection is suggested
+by the fact, we have already observed, that <m:math overflow="scroll"><m:mrow><m:msup><m:mo form="prefix">exp</m:mo><m:mo>'</m:mo></m:msup><m:mo>=</m:mo><m:mo form="prefix">exp</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+The next theorem, corollary, and exercises make these remarks more precise.</para>
+<rule id="fs-id1172687566400" type="theorem"><statement id="fs-id1172693445756">
+    <para id="id226323">
+Suppose <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>:</m:mo><m:mi>C</m:mi><m:mo>→</m:mo><m:mi>C</m:mi></m:mrow></m:math> is differentiable
+everywhere and satisfies the
+differential equation <m:math overflow="scroll"><m:mrow><m:msup><m:mi>f</m:mi><m:mo>'</m:mo></m:msup><m:mo>=</m:mo><m:mi>a</m:mi><m:mi>f</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+where <m:math overflow="scroll"><m:mi>a</m:mi></m:math> is a complex number. Then
+<m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mi>c</m:mi><m:mo form="prefix">exp</m:mo><m:mo>(</m:mo><m:mi>a</m:mi><m:mi>z</m:mi><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math> where <m:math overflow="scroll"><m:mrow><m:mi>c</m:mi><m:mo>=</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:mn>0</m:mn><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math></para>
+</statement>
+<proof id="fs-id1698582">
+    <para id="id226448">
+Consider the function <m:math overflow="scroll"><m:mrow><m:mi>h</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo><m:mo>/</m:mo><m:mo form="prefix">exp</m:mo><m:mo>(</m:mo><m:mi>a</m:mi><m:mi>z</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Using the Quotient Formula, we have that</para>
+    <equation id="id226499">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:msup>
+            <m:mi>h</m:mi>
+            <m:mo>'</m:mo>
+          </m:msup>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>z</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>=</m:mo>
+          <m:mfrac>
+            <m:mrow>
+              <m:mo form="prefix">exp</m:mo>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>a</m:mi>
+                <m:mi>z</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:msup>
+                <m:mi>f</m:mi>
+                <m:mo>'</m:mo>
+              </m:msup>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>z</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:mo>-</m:mo>
+              <m:mi>a</m:mi>
+              <m:mo form="prefix">exp</m:mo>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>a</m:mi>
+                <m:mi>z</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:mi>f</m:mi>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>z</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+            </m:mrow>
+            <m:msup>
+              <m:mrow>
+                <m:mo>[</m:mo>
+                <m:mo form="prefix">exp</m:mo>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>a</m:mi>
+                  <m:mi>z</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mo>]</m:mo>
+              </m:mrow>
+              <m:mn>2</m:mn>
+            </m:msup>
+          </m:mfrac>
+          <m:mo>=</m:mo>
+          <m:mfrac>
+            <m:mrow>
+              <m:mo form="prefix">exp</m:mo>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>a</m:mi>
+                <m:mi>z</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:mo>(</m:mo>
+              <m:msup>
+                <m:mi>f</m:mi>
+                <m:mo>'</m:mo>
+              </m:msup>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>z</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:mo>-</m:mo>
+              <m:mi>a</m:mi>
+              <m:mi>f</m:mi>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>z</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:msup>
+              <m:mrow>
+                <m:mo>[</m:mo>
+                <m:mo form="prefix">exp</m:mo>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>z</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mo>]</m:mo>
+              </m:mrow>
+              <m:mn>2</m:mn>
+            </m:msup>
+          </m:mfrac>
+          <m:mo>=</m:mo>
+          <m:mn>0</m:mn>
+          <m:mo>.</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id226690">Hence,
+there exists a complex number <m:math overflow="scroll"><m:mi>c</m:mi></m:math> such that <m:math overflow="scroll"><m:mrow><m:mi>h</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mi>c</m:mi></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>z</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Therefore, <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mi>c</m:mi><m:mo form="prefix">exp</m:mo><m:mo>(</m:mo><m:mi>a</m:mi><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>z</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Setting <m:math overflow="scroll"><m:mrow><m:mi>z</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math> gives <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mn>0</m:mn><m:mo>)</m:mo><m:mo>=</m:mo><m:mi>c</m:mi><m:mo>,</m:mo></m:mrow></m:math> as desired.</para>
+</proof></rule>
+<rule id="fs-id1172686487677" type="corollary"><title>Law of Exponents</title><statement id="fs-id1172679885981">
+    <para id="id226812">
+For all complex numbers <m:math overflow="scroll"><m:mi>z</m:mi></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>w</m:mi><m:mo>,</m:mo></m:mrow></m:math><m:math overflow="scroll"><m:mrow><m:mo form="prefix">exp</m:mo><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>+</m:mo><m:mi>w</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mo form="prefix">exp</m:mo><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo><m:mo form="prefix">exp</m:mo><m:mo>(</m:mo><m:mi>w</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math></para>
+</statement>
+<proof id="fs-id1172697299636">
+    <para id="id226884">Fix <m:math overflow="scroll"><m:mrow><m:mi>w</m:mi><m:mo>,</m:mo></m:mrow></m:math> define <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mo form="prefix">exp</m:mo><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>+</m:mo><m:mi>w</m:mi><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math> and apply the preceding theorem.
+We have <m:math overflow="scroll"><m:mrow><m:msup><m:mi>f</m:mi><m:mo>'</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mo form="prefix">exp</m:mo><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>+</m:mo><m:mi>w</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math>
+so we get</para>
+    <equation id="id226991">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mo form="prefix">exp</m:mo>
+          <m:mo>(</m:mo>
+          <m:mi>z</m:mi>
+          <m:mo>+</m:mo>
+          <m:mi>w</m:mi>
+          <m:mo>)</m:mo>
+          <m:mo>=</m:mo>
+          <m:mi>f</m:mi>
+          <m:mo>(</m:mo>
+          <m:mi>z</m:mi>
+          <m:mo>)</m:mo>
+          <m:mo>=</m:mo>
+          <m:mi>f</m:mi>
+          <m:mo>(</m:mo>
+          <m:mn>0</m:mn>
+          <m:mo>)</m:mo>
+          <m:mo form="prefix">exp</m:mo>
+          <m:mo>(</m:mo>
+          <m:mi>z</m:mi>
+          <m:mo>)</m:mo>
+          <m:mo>=</m:mo>
+          <m:mo form="prefix">exp</m:mo>
+          <m:mo>(</m:mo>
+          <m:mi>w</m:mi>
+          <m:mo>)</m:mo>
+          <m:mo form="prefix">exp</m:mo>
+          <m:mo>(</m:mo>
+          <m:mi>z</m:mi>
+          <m:mo>)</m:mo>
+          <m:mo>.</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+</proof></rule>
+<exercise id="fs-id4763897"><problem id="fs-id2056192">
+    <list id="id227082" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid7"> If <m:math overflow="scroll"><m:mi>n</m:mi></m:math> is a positive integer and <m:math overflow="scroll"><m:mi>z</m:mi></m:math> is any complex number,
+show that <m:math overflow="scroll"><m:mrow><m:mo form="prefix">exp</m:mo><m:mrow><m:mo>(</m:mo><m:mi>n</m:mi><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mrow><m:mo>(</m:mo><m:mo form="prefix">exp</m:mo><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>)</m:mo></m:mrow><m:mi>n</m:mi></m:msup><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid8"> If <m:math overflow="scroll"><m:mi>r</m:mi></m:math> is a rational number and <m:math overflow="scroll"><m:mi>x</m:mi></m:math> is any real number,
+show that <m:math overflow="scroll"><m:mrow><m:mo form="prefix">exp</m:mo><m:mrow><m:mo>(</m:mo><m:mi>r</m:mi><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mrow><m:mo>(</m:mo><m:mo form="prefix">exp</m:mo><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>)</m:mo></m:mrow><m:mi>r</m:mi></m:msup><m:mo>.</m:mo></m:mrow></m:math></item>
+    </list>
+</problem></exercise>
+<exercise id="fs-id1172705605692"><problem id="fs-id2939455">
+    <list id="id227242" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid9"> Show that <m:math overflow="scroll"><m:mo form="prefix">ln</m:mo></m:math> is continuous and 1-1 from <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mi>∞</m:mi><m:mo>)</m:mo></m:mrow></m:math> onto <m:math overflow="scroll"><m:mrow><m:mi>R</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid10"> Prove that the logarithm function <m:math overflow="scroll"><m:mo form="prefix">ln</m:mo></m:math> is differentiable
+at each point <m:math overflow="scroll"><m:mrow><m:mi>y</m:mi><m:mo>∈</m:mo><m:mo>(</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mi>∞</m:mi><m:mo>)</m:mo></m:mrow></m:math> and that
+<m:math overflow="scroll"><m:mrow><m:msup><m:mo form="prefix">ln</m:mo><m:mo>'</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>y</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>y</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+HINT: Write <m:math overflow="scroll"><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mo form="prefix">exp</m:mo><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow></m:math> and use Theorem 4.10.
+</item>
+      <item id="uid11"> Derive the first law of logarithms: <m:math overflow="scroll"><m:mrow><m:mo form="prefix">ln</m:mo><m:mo>(</m:mo><m:mi>x</m:mi><m:mi>y</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mo form="prefix">ln</m:mo><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>+</m:mo><m:mo form="prefix">ln</m:mo><m:mo>(</m:mo><m:mi>y</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid12"> Derive the second law of logarithms:
+That is, if <m:math overflow="scroll"><m:mi>r</m:mi></m:math> is a rational number and <m:math overflow="scroll"><m:mi>x</m:mi></m:math>
+is a positive real number, show that <m:math overflow="scroll"><m:mrow><m:mo form="prefix">ln</m:mo><m:mrow><m:mo>(</m:mo><m:msup><m:mi>x</m:mi><m:mi>r</m:mi></m:msup><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>r</m:mi><m:mo form="prefix">ln</m:mo><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></item>
+    </list>
+</problem></exercise>
+    <para id="id227534">We are about to make the connection between the number <m:math overflow="scroll"><m:mi>e</m:mi></m:math>
+and the exponential function. The next theorem is the first step.</para>
+<rule id="fs-id1172688353114" type="theorem"><statement id="fs-id1172705376774">
+    <para id="id227548"><m:math overflow="scroll"><m:mrow><m:mo form="prefix">ln</m:mo><m:mo>(</m:mo><m:mn>1</m:mn><m:mo>)</m:mo><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mo form="prefix">ln</m:mo><m:mo>(</m:mo><m:mi>e</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>.</m:mo></m:mrow></m:math></para>
+</statement>
+<proof id="fs-id1582918">
+    <para id="id227602">If we write <m:math overflow="scroll"><m:mrow><m:mn>1</m:mn><m:mo>=</m:mo><m:mo form="prefix">exp</m:mo><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math> then <m:math overflow="scroll"><m:mrow><m:mi>t</m:mi><m:mo>=</m:mo><m:mo form="prefix">ln</m:mo><m:mo>(</m:mo><m:mn>1</m:mn><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+But <m:math overflow="scroll"><m:mrow><m:mo form="prefix">exp</m:mo><m:mo>(</m:mo><m:mn>0</m:mn><m:mo>)</m:mo><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>,</m:mo></m:mrow></m:math> so that <m:math overflow="scroll"><m:mrow><m:mo form="prefix">ln</m:mo><m:mo>(</m:mo><m:mn>1</m:mn><m:mo>)</m:mo><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math>
+which establishes the first assertion.</para>
+    <para id="id227710">Recall that</para>
+    <equation id="id227713">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mi>e</m:mi>
+          <m:mo>=</m:mo>
+          <m:munder>
+            <m:mo movablelimits="true" form="prefix">lim</m:mo>
+            <m:mi>n</m:mi>
+          </m:munder>
+          <m:msup>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mn>1</m:mn>
+              <m:mo>+</m:mo>
+              <m:mfrac>
+                <m:mn>1</m:mn>
+                <m:mi>n</m:mi>
+              </m:mfrac>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mi>n</m:mi>
+          </m:msup>
+          <m:mo>.</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id227762">Therefore,</para>
+    <equation id="uid13">
+      <m:math overflow="scroll" mode="display">
+        <m:mtable displaystyle="true">
+          <m:mtr>
+            <m:mtd columnalign="right">
+              <m:mrow>
+                <m:mo form="prefix">ln</m:mo>
+                <m:mo>(</m:mo>
+                <m:mi>e</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+            </m:mtd>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mo form="prefix">ln</m:mo>
+                <m:mo>(</m:mo>
+                <m:munder>
+                  <m:mo movablelimits="true" form="prefix">lim</m:mo>
+                  <m:mi>n</m:mi>
+                </m:munder>
+                <m:msup>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mn>1</m:mn>
+                    <m:mo>+</m:mo>
+                    <m:mfrac>
+                      <m:mn>1</m:mn>
+                      <m:mi>n</m:mi>
+                    </m:mfrac>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mi>n</m:mi>
+                </m:msup>
+                <m:mo>)</m:mo>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:munder>
+                  <m:mo movablelimits="true" form="prefix">lim</m:mo>
+                  <m:mi>n</m:mi>
+                </m:munder>
+                <m:mo form="prefix">ln</m:mo>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:msup>
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:mn>1</m:mn>
+                      <m:mo>+</m:mo>
+                      <m:mfrac>
+                        <m:mn>1</m:mn>
+                        <m:mi>n</m:mi>
+                      </m:mfrac>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                    <m:mi>n</m:mi>
+                  </m:msup>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:munder>
+                  <m:mo movablelimits="true" form="prefix">lim</m:mo>
+                  <m:mi>n</m:mi>
+                </m:munder>
+                <m:mi>n</m:mi>
+                <m:mo form="prefix">ln</m:mo>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mn>1</m:mn>
+                  <m:mo>+</m:mo>
+                  <m:mfrac>
+                    <m:mn>1</m:mn>
+                    <m:mi>n</m:mi>
+                  </m:mfrac>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:munder>
+                  <m:mo movablelimits="true" form="prefix">lim</m:mo>
+                  <m:mi>n</m:mi>
+                </m:munder>
+                <m:mfrac>
+                  <m:mrow>
+                    <m:mo form="prefix">ln</m:mo>
+                    <m:mo>(</m:mo>
+                    <m:mn>1</m:mn>
+                    <m:mo>+</m:mo>
+                    <m:mfrac>
+                      <m:mn>1</m:mn>
+                      <m:mi>n</m:mi>
+                    </m:mfrac>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mfrac>
+                    <m:mn>1</m:mn>
+                    <m:mi>n</m:mi>
+                  </m:mfrac>
+                </m:mfrac>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:munder>
+                  <m:mo movablelimits="true" form="prefix">lim</m:mo>
+                  <m:mi>n</m:mi>
+                </m:munder>
+                <m:mfrac>
+                  <m:mrow>
+                    <m:mo form="prefix">ln</m:mo>
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:mn>1</m:mn>
+                      <m:mo>+</m:mo>
+                      <m:mfrac>
+                        <m:mn>1</m:mn>
+                        <m:mi>n</m:mi>
+                      </m:mfrac>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                    <m:mo>-</m:mo>
+                    <m:mo form="prefix">ln</m:mo>
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:mn>1</m:mn>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                  </m:mrow>
+                  <m:mfrac>
+                    <m:mn>1</m:mn>
+                    <m:mi>n</m:mi>
+                  </m:mfrac>
+                </m:mfrac>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:msup>
+                  <m:mo form="prefix">ln</m:mo>
+                  <m:mo>'</m:mo>
+                </m:msup>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mn>1</m:mn>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mn>1</m:mn>
+                <m:mo>/</m:mo>
+                <m:mn>1</m:mn>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mn>1</m:mn>
+                <m:mo>.</m:mo>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+        </m:mtable>
+      </m:math>
+    </equation>
+    <para id="id228121">This establishes the second assertion of the theorem.</para>
+</proof></rule>
+<exercise id="fs-id1172705645638"><problem id="fs-id1172691450686">
+    <list id="id228138" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid14"> Prove that
+<equation id="id228153"><m:math overflow="scroll" mode="display"><m:mrow><m:mi>e</m:mi><m:mo>=</m:mo><m:munderover><m:mo>∑</m:mo><m:mrow><m:mi>n</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow><m:mi>∞</m:mi></m:munderover><m:mfrac><m:mn>1</m:mn><m:mrow><m:mi>n</m:mi><m:mo>!</m:mo></m:mrow></m:mfrac><m:mo>.</m:mo></m:mrow></m:math></equation>
+HINT: Use the fact that the logarithm function is 1-1.
+</item>
+      <item id="uid15"> For <m:math overflow="scroll"><m:mi>r</m:mi></m:math> a rational number,
+show that <m:math overflow="scroll"><m:mrow><m:mo form="prefix">exp</m:mo><m:mrow><m:mo>(</m:mo><m:mi>r</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>e</m:mi><m:mi>r</m:mi></m:msup><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid16"> If <m:math overflow="scroll"><m:mi>a</m:mi></m:math> is a positive number and <m:math overflow="scroll"><m:mrow><m:mi>r</m:mi><m:mo>=</m:mo><m:mi>p</m:mi><m:mo>/</m:mo><m:mi>q</m:mi></m:mrow></m:math> is a rational number,
+show that
+<equation id="id228293"><m:math overflow="scroll" mode="display"><m:mrow><m:msup><m:mi>a</m:mi><m:mi>r</m:mi></m:msup><m:mo>=</m:mo><m:mo form="prefix">exp</m:mo><m:mrow><m:mo>(</m:mo><m:mi>r</m:mi><m:mo form="prefix">ln</m:mo><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></equation></item>
+      <item id="uid17"> Prove that <m:math overflow="scroll"><m:mi>e</m:mi></m:math> is irrational.
+HINT: Let <m:math overflow="scroll"><m:mrow><m:msub><m:mi>p</m:mi><m:mi>n</m:mi></m:msub><m:mo>/</m:mo><m:msub><m:mi>q</m:mi><m:mi>n</m:mi></m:msub></m:mrow></m:math> be the <m:math overflow="scroll"><m:mi>n</m:mi></m:math>th partial sum of the
+series in part (a). Show that <m:math overflow="scroll"><m:mrow><m:msub><m:mi>q</m:mi><m:mi>n</m:mi></m:msub><m:mo>≤</m:mo><m:mi>n</m:mi><m:mo>!</m:mo><m:mo>,</m:mo></m:mrow></m:math>
+and that <m:math overflow="scroll"><m:mrow><m:mo movablelimits="true" form="prefix">lim</m:mo><m:msub><m:mi>q</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>e</m:mi><m:mo>-</m:mo><m:msub><m:mi>p</m:mi><m:mi>n</m:mi></m:msub><m:mo>/</m:mo><m:msub><m:mi>q</m:mi><m:mi>n</m:mi></m:msub><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math>
+Then use <link target-id="fs-id1172710768945" document="m36135"/>.
+</item>
+    </list>
+</problem></exercise>
+    <para id="id228479">We have finally reached a point in our development
+where we can make sense of raising any positive number to an arbitrary complex exponent.
+Of course this includes raising positive numbers to irrational powers.
+We make our general definition based on part (c) of the preceding exercise.</para>
+<definition id="fs-id1172712881170"><term/><meaning id="fs-id1172670157392">
+    <para id="id228485">
+For <m:math overflow="scroll"><m:mi>a</m:mi></m:math> a positive real number and <m:math overflow="scroll"><m:mi>z</m:mi></m:math> an arbitrary complex number,
+define <m:math overflow="scroll"><m:msup><m:mi>a</m:mi><m:mi>z</m:mi></m:msup></m:math> by</para>
+    <equation id="id228525">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:msup>
+            <m:mi>a</m:mi>
+            <m:mi>z</m:mi>
+          </m:msup>
+          <m:mo>=</m:mo>
+          <m:mo form="prefix">exp</m:mo>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mrow>
+              <m:mi>z</m:mi>
+              <m:mo form="prefix">ln</m:mo>
+              <m:mo>(</m:mo>
+              <m:mi>a</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>.</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+</meaning></definition>
+<rule id="fs-id4987745"><label/><statement id="fs-id1684892">
+    <para id="id228569"><emphasis effect="bold">REMARK</emphasis>
+The point is that our old understanding of what <m:math overflow="scroll"><m:msup><m:mi>a</m:mi><m:mi>r</m:mi></m:msup></m:math> means,
+where <m:math overflow="scroll"><m:mrow><m:mi>a</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn></m:mrow></m:math> and <m:math overflow="scroll"><m:mi>r</m:mi></m:math> is a rational number, coincides with the function <m:math overflow="scroll"><m:mrow><m:mo form="prefix">exp</m:mo><m:mo>(</m:mo><m:mi>r</m:mi><m:mo form="prefix">ln</m:mo><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+So, this new definition of <m:math overflow="scroll"><m:msup><m:mi>a</m:mi><m:mi>z</m:mi></m:msup></m:math> coincides and is consistent with our old definition.
+And, it now allows us to raies a positive number <m:math overflow="scroll"><m:mi>a</m:mi></m:math> to an arbitrary complex exponent.</para>
+</statement></rule>
+<rule id="fs-id1172664026622"><label/><statement id="fs-id1172676144168">
+    <para id="id228671"><emphasis effect="bold">REMARK</emphasis>
+Let the bugles sound!!
+Now, having made all the appropriate definitions and derived all the
+relevant theorems, we can finally prove that <m:math overflow="scroll"><m:mrow><m:msup><m:mi>e</m:mi><m:mrow><m:mi>i</m:mi><m:mi>π</m:mi></m:mrow></m:msup><m:mo>=</m:mo><m:mo>-</m:mo><m:mn>1</m:mn><m:mo>.</m:mo></m:mrow></m:math>
+From the definition above, we see that if <m:math overflow="scroll"><m:mrow><m:mi>a</m:mi><m:mo>=</m:mo><m:mi>e</m:mi><m:mo>,</m:mo></m:mrow></m:math> then we have
+<m:math overflow="scroll"><m:mrow><m:msup><m:mi>e</m:mi><m:mi>z</m:mi></m:msup><m:mo>=</m:mo><m:mo form="prefix">exp</m:mo><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math>
+Then, from part (c) of <link target-id="fs-id1169864786397" document="m36203"/>, we have what we want:</para>
+    <equation id="id228756">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:msup>
+            <m:mi>e</m:mi>
+            <m:mrow>
+              <m:mi>i</m:mi>
+              <m:mi>π</m:mi>
+            </m:mrow>
+          </m:msup>
+          <m:mo>=</m:mo>
+          <m:mo>-</m:mo>
+          <m:mn>1</m:mn>
+          <m:mo>.</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+</statement></rule>
+<exercise id="fs-id1172698250226"><problem id="fs-id2156257">
+    <list id="id228796" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid18"> Prove that, for all complex numbers <m:math overflow="scroll"><m:mi>z</m:mi></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>w</m:mi><m:mo>,</m:mo></m:mrow></m:math><m:math overflow="scroll"><m:mrow><m:msup><m:mi>e</m:mi><m:mrow><m:mi>z</m:mi><m:mo>+</m:mo><m:mi>w</m:mi></m:mrow></m:msup><m:mo>=</m:mo><m:msup><m:mi>e</m:mi><m:mi>z</m:mi></m:msup><m:msup><m:mi>e</m:mi><m:mi>w</m:mi></m:msup><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid19"> If <m:math overflow="scroll"><m:mi>x</m:mi></m:math> is a real number and <m:math overflow="scroll"><m:mi>z</m:mi></m:math> is any complex number, show that
+<equation id="id228902"><m:math overflow="scroll" mode="display"><m:mrow><m:msup><m:mrow><m:mo>(</m:mo><m:msup><m:mi>e</m:mi><m:mi>x</m:mi></m:msup><m:mo>)</m:mo></m:mrow><m:mi>z</m:mi></m:msup><m:mo>=</m:mo><m:msup><m:mi>e</m:mi><m:mrow><m:mi>x</m:mi><m:mi>z</m:mi></m:mrow></m:msup><m:mo>.</m:mo></m:mrow></m:math></equation></item>
+      <item id="uid20"> Let <m:math overflow="scroll"><m:mi>a</m:mi></m:math> be a fixed positive number, and define a function <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>:</m:mo><m:mi>C</m:mi><m:mo>→</m:mo><m:mi>C</m:mi></m:mrow></m:math>
+by <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>a</m:mi><m:mi>z</m:mi></m:msup><m:mo>.</m:mo></m:mrow></m:math> Show that <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is differentiable at every
+<m:math overflow="scroll"><m:mrow><m:mi>z</m:mi><m:mo>∈</m:mo><m:mi>C</m:mi></m:mrow></m:math> and that <m:math overflow="scroll"><m:mrow><m:msup><m:mi>f</m:mi><m:mo>'</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mo form="prefix">ln</m:mo><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow><m:msup><m:mi>a</m:mi><m:mi>z</m:mi></m:msup><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid21"> Prove the general laws of exponents:
+If <m:math overflow="scroll"><m:mi>a</m:mi></m:math> and <m:math overflow="scroll"><m:mi>b</m:mi></m:math> are positive real numbers and <m:math overflow="scroll"><m:mi>z</m:mi></m:math> and <m:math overflow="scroll"><m:mi>w</m:mi></m:math> are complex numbers,
+<equation id="id229152"><m:math overflow="scroll" mode="display"><m:mrow><m:msup><m:mi>a</m:mi><m:mrow><m:mi>z</m:mi><m:mo>+</m:mo><m:mi>w</m:mi></m:mrow></m:msup><m:mo>=</m:mo><m:msup><m:mi>a</m:mi><m:mi>z</m:mi></m:msup><m:msup><m:mi>a</m:mi><m:mi>w</m:mi></m:msup><m:mo>,</m:mo></m:mrow></m:math></equation><equation id="id229194"><m:math overflow="scroll" mode="display"><m:mrow><m:msup><m:mi>a</m:mi><m:mi>z</m:mi></m:msup><m:msup><m:mi>b</m:mi><m:mi>z</m:mi></m:msup><m:mo>=</m:mo><m:msup><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mi>b</m:mi><m:mo>)</m:mo></m:mrow><m:mi>z</m:mi></m:msup><m:mo>,</m:mo></m:mrow></m:math></equation>
+and, if <m:math overflow="scroll"><m:mi>x</m:mi></m:math> is real,
+<equation id="id229252"><m:math overflow="scroll" mode="display"><m:mrow><m:msup><m:mi>a</m:mi><m:mrow><m:mi>x</m:mi><m:mi>w</m:mi></m:mrow></m:msup><m:mo>=</m:mo><m:msup><m:mrow><m:mo>(</m:mo><m:msup><m:mi>a</m:mi><m:mi>x</m:mi></m:msup><m:mo>)</m:mo></m:mrow><m:mi>w</m:mi></m:msup><m:mo>.</m:mo></m:mrow></m:math></equation></item>
+      <item id="uid22"> If <m:math overflow="scroll"><m:mi>y</m:mi></m:math> is a real number, show that <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msup><m:mi>e</m:mi><m:mrow><m:mi>i</m:mi><m:mi>y</m:mi></m:mrow></m:msup><m:mrow><m:mo>|</m:mo><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>.</m:mo></m:mrow></m:mrow></m:math>
+If <m:math overflow="scroll"><m:mrow><m:mi>z</m:mi><m:mo>=</m:mo><m:mi>x</m:mi><m:mo>+</m:mo><m:mi>i</m:mi><m:mi>y</m:mi></m:mrow></m:math> is a complex number, show that <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msup><m:mi>e</m:mi><m:mi>z</m:mi></m:msup><m:mrow><m:mo>|</m:mo><m:mo>=</m:mo></m:mrow><m:msup><m:mi>e</m:mi><m:mi>x</m:mi></m:msup><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid23"> Let <m:math overflow="scroll"><m:mrow><m:mi>α</m:mi><m:mo>=</m:mo><m:mi>a</m:mi><m:mo>+</m:mo><m:mi>b</m:mi><m:mi>i</m:mi></m:mrow></m:math> be a complex number, and define a
+function <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>:</m:mo><m:mo>(</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mi>∞</m:mi><m:mo>)</m:mo><m:mo>→</m:mo><m:mi>C</m:mi></m:mrow></m:math> by <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mi>α</m:mi></m:msup><m:mo>=</m:mo><m:msup><m:mi>e</m:mi><m:mrow><m:mi>α</m:mi><m:mo form="prefix">ln</m:mo><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:msup><m:mo>.</m:mo></m:mrow></m:math>
+Prove that <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is differentiable at each point <m:math overflow="scroll"><m:mi>x</m:mi></m:math> of <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mi>∞</m:mi><m:mo>)</m:mo></m:mrow></m:math> and that
+<m:math overflow="scroll"><m:mrow><m:msup><m:mi>f</m:mi><m:mo>'</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>α</m:mi><m:msup><m:mi>x</m:mi><m:mrow><m:mi>α</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msup><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid24"> Let <m:math overflow="scroll"><m:mrow><m:mi>α</m:mi><m:mo>=</m:mo><m:mi>a</m:mi><m:mo>+</m:mo><m:mi>b</m:mi><m:mi>i</m:mi></m:mrow></m:math> be as in part (f).
+For <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> show that <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msup><m:mi>x</m:mi><m:mi>α</m:mi></m:msup><m:mrow><m:mo>|</m:mo><m:mo>=</m:mo></m:mrow><m:msup><m:mi>x</m:mi><m:mi>a</m:mi></m:msup><m:mo>.</m:mo></m:mrow></m:math></item>
+    </list>
+</problem></exercise>
+  </content>
+</document>

@@ -1,0 +1,266 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML">
+  <title>Preface to Analysis of Functions of a Single Variable: A Detailed Development</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m36084</md:content-id>
+  <md:title>Preface to Analysis of Functions of a Single Variable: A Detailed Development</md:title>
+  <md:abstract>This is the preface to Lawrence Baggett's book, Analysis of Functions of a Single Variable, a Detailed Development. It provides a brief overview, including links, of the material covered in the book.</md:abstract>
+  <md:uuid>e0a0f5ab-2baf-4016-a1c2-69ea1701adde</md:uuid>
+</metadata>
+
+<content>
+    <para id="id339215">For Christy 
+My Light</para>
+    <para id="id339218">I have written this book primarily for serious and talented mathematics scholars,
+seniors or first-year graduate students, who
+by the time they finish their schooling
+should have had the opportunity to study in some detail
+the great discoveries of our subject.
+What did we know and how and when did we know it?
+I hope this book is useful toward that goal, especially
+when it comes to the great achievements of that part of mathematics known as analysis.
+I have tried to write a complete and thorough account
+of the elementary theories of functions of a single real variable
+and functions of a single complex variable.
+Separating these two subjects does not at all jive with their development historically,
+and to me it seems unnecessary and potentially confusing to do so.
+On the other hand, functions of several variables seems to me
+to be a very different kettle of fish, so I have decided to limit this
+book by concentrating on one variable at a time.</para>
+    <para id="id339230">Everyone is taught (told) in school that the area of a circle
+is given by the formula <m:math overflow="scroll"><m:mrow><m:mi>A</m:mi><m:mo>=</m:mo><m:mi>π</m:mi><m:msup><m:mi>r</m:mi><m:mn>2</m:mn></m:msup><m:mo>.</m:mo></m:mrow></m:math>
+We are also told that the product of two negatives is a positive,
+that you cant trisect an angle, and that the square root of 2 is irrational.
+Students of natural sciences learn that <m:math overflow="scroll"><m:mrow><m:msup><m:mi>e</m:mi><m:mrow><m:mi>i</m:mi><m:mi>π</m:mi></m:mrow></m:msup><m:mo>=</m:mo><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:math> and that
+<m:math overflow="scroll"><m:mrow><m:msup><m:mo form="prefix">sin</m:mo><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mo form="prefix">cos</m:mo><m:mn>2</m:mn></m:msup><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>.</m:mo></m:mrow></m:math>
+More sophisticated students are taught the Fundamental Theorem
+of calculus and the Fundamental Theorem
+of Algebra.
+Some are also told that it is impossible to solve a general fifth degree polynomial equation
+by radicals.
+On the other hand, very few people indeed have the opportunity
+to find out precisely why these things are really true, and at the
+same time to realize just how intellectually deep and profound these “facts” are.
+Indeed, we mathematicians believe that these facts are
+among the most marvelous accomplishments of the human mind.
+Engineers and scientists can and do
+commit such mathematical facts to memory, and quite often combine them to useful purposes.
+However, it is left to us mathematicians to share the basic knowledge
+of why and how,
+and happily to us this is more a privilege than a chore.
+A large part of what makes the verification of such simple sounding and
+elementary truths so difficult is that we of necessity must
+spend quite a lot of energy determining what the relevant words themselves really mean.
+That is, to be quite careful about studying mathematics, we need to ask very basic questions:
+What is a circle? What are numbers?
+What is the definition of the area of a set in the Euclidean plane?
+What is the precise definition of numbers like <m:math overflow="scroll"><m:mrow><m:mi>π</m:mi><m:mo>,</m:mo></m:mrow></m:math><m:math overflow="scroll"><m:mrow><m:mi>i</m:mi><m:mo>,</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>e</m:mi><m:mo>?</m:mo></m:mrow></m:math>
+We surely cannot prove that <m:math overflow="scroll"><m:mrow><m:msup><m:mi>e</m:mi><m:mrow><m:mi>i</m:mi><m:mi>π</m:mi></m:mrow></m:msup><m:mo>=</m:mo><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:math> without a clear definition of these particular numbers.
+The mathematical analysis story is a long one, beginning with the early civilizations, and in some sense only coming to a satisfactory completion in the
+late nineteenth century.
+It is a story of ideas, well worth learning.</para>
+    <para id="id339730">There are many many fantastic mathematical truths (facts),
+and it seems to me that some of them are so beautiful and
+fundamental to human intellectual development,
+that a student who wants to be called a mathematician,
+ought to know how to explain them,
+or at the very least should have known how to
+explain them at some point.
+Each professor might make up a slightly different list of such truths.
+Here is mine:</para>
+    <list id="id339737" display="block" list-type="enumerated">
+      <item id="uid1">The square root of 2 is a real number but is not a rational number.
+</item>
+      <item id="uid2">The formula for the area of a circle of radius <m:math overflow="scroll"><m:mi>r</m:mi></m:math> is <m:math overflow="scroll"><m:mrow><m:mi>A</m:mi><m:mo>=</m:mo><m:mi>π</m:mi><m:msup><m:mi>r</m:mi><m:mn>2</m:mn></m:msup><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid3">The formula for the circumference of a circle of radius <m:math overflow="scroll"><m:mi>r</m:mi></m:math> is <m:math overflow="scroll"><m:mrow><m:mi>C</m:mi><m:mo>=</m:mo><m:mn>2</m:mn><m:mi>π</m:mi><m:mi>r</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid4"> <m:math overflow="scroll"><m:mrow><m:msup><m:mi>e</m:mi><m:mrow><m:mi>i</m:mi><m:mi>π</m:mi></m:mrow></m:msup><m:mo>=</m:mo><m:mo>-</m:mo><m:mn>1</m:mn><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid5">The Fundamental Theorem of Calculus, <m:math overflow="scroll"><m:mrow><m:msubsup><m:mo>∫</m:mo><m:mi>a</m:mi><m:mi>b</m:mi></m:msubsup><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mspace width="0.166667em"/><m:mi>d</m:mi><m:mi>t</m:mi><m:mo>=</m:mo><m:mi>F</m:mi><m:mrow><m:mo>(</m:mo><m:mi>b</m:mi><m:mo>)</m:mo></m:mrow><m:mo>-</m:mo><m:mi>F</m:mi><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid6">The Fundamental Theorem of Algebra, every nonconstant polynomial has at least one root in the complex numbers.
+</item>
+      <item id="uid7">It is impossible to trisect an arbitrary angle using only a compass
+and straight edge.
+</item>
+    </list>
+    <para id="id340143">Other mathematical marvels, such as the
+fact that there are more real numbers than there are rationals, the set of all sets is not a set,
+an arbitrary fifth degree polynomial equation can not be solved
+in terms of radicals, a simple closed curve divides
+the plain into exactly two components, there are an infinite
+number of primes, etc.,
+are clearly wonderful results, but the seven in the list above are really of a more primary nature to me, an analyst,
+for they stem from the work of ancient mathematicians and except for number 7,
+which continues to this day to evoke so-called disproofs,
+have been accepted as true by most people even in the absence of precise “arguments”
+for hundreds if not thousands of years.
+Perhaps one should ruminate on why it took so long for us to formulate
+precise definitions of things like numbers and areas?</para>
+    <para id="id340161">Only with the advent of calculus in the seventeenth century, together with the
+contributions of people like Euler, Cauchy, and Weierstrass during
+the next two hundred years, were
+the first six items above really proved, and only with the contributions of
+Galois in the early nineteenth century was the last one truly understood.</para>
+    <para id="id340167">This text, while including a traditional treatment of
+introductory analysis,
+specifically addresses, as kinds of milestones, the first six of these
+truths and gives careful derivations of them.
+The seventh, which looks like an assertion from geometry, turns out to be an algebraic result that is not appropriate for this course in analysis, but
+in my opinion it should definitely be presented in an undergraduate algebra course.
+As for the first six, I insist here
+on developing precise mathematical definitions of all the relevant notions,
+and moving step by step through their derivations.
+Specifically, what are the definitions of
+<m:math overflow="scroll"><m:mrow><m:msqrt><m:mn>2</m:mn></m:msqrt><m:mo>,</m:mo><m:mi>A</m:mi><m:mo>,</m:mo><m:mi>π</m:mi><m:mo>,</m:mo><m:mi>r</m:mi><m:mo>,</m:mo><m:msup><m:mi>r</m:mi><m:mn>2</m:mn></m:msup><m:mo>,</m:mo><m:mi>C</m:mi><m:mo>,</m:mo><m:mn>2</m:mn><m:mo>,</m:mo><m:mi>e</m:mi><m:mo>,</m:mo><m:mi>i</m:mi><m:mo>,</m:mo><m:mo>,</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mo>-</m:mo><m:mn>1</m:mn><m:mo>?</m:mo></m:mrow></m:math>
+My feeling is that mathematicians should understand exactly where these concepts come from
+in precise mathematical terms, why it took so long
+to discover these definitions,
+and why the various relations among them hold.</para>
+    <para id="id340269">The numbers <m:math overflow="scroll"><m:mrow><m:mo>-</m:mo><m:mn>1</m:mn><m:mo>,</m:mo><m:mn>2</m:mn><m:mo>,</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mi>i</m:mi></m:math> can be disposed of
+fairly quickly by a discussion of what exactly
+is meant by the real and complex number systems.
+Of course, this is in fact no trivial matter,
+having had to wait until the end of the nineteenth century for a clear explanation, and in fact I
+leave the actual proof of the existence of the real numbers to an appendix.
+However, a complete mathematics education ought to include
+a study of this proof, and if one finds the time in this
+analysis course, it really should be included here.
+Having a definition of the real numbers to work with, i.e., having
+introduced the notion of least upper bound, one can
+relatively easily prove that there is a real number whose square is 2,
+and that this number can not be a rational number,
+thereby disposing of the first of our goals.
+All this is done in <link document="m36082"/>.
+Maintaining the attitude that we should not
+distinguish between functions of a real variable and functions
+of a complex variable,
+at least at the beginning of the development,  <link document="m36082"/>
+concludes with a careful introduction of the basic properties of the field of complex numbers.</para>
+    <para id="id340307">unlike the elementary numbers <m:math overflow="scroll"><m:mrow><m:mo>-</m:mo><m:mn>1</m:mn><m:mo>,</m:mo><m:mn>2</m:mn><m:mo>,</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>i</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+the definitions of the real numbers <m:math overflow="scroll"><m:mi>e</m:mi></m:math> and <m:math overflow="scroll"><m:mi>π</m:mi></m:math> are quite a different story.
+In fact, one cannot make sense of either <m:math overflow="scroll"><m:mi>e</m:mi></m:math> or <m:math overflow="scroll"><m:mi>π</m:mi></m:math> until a substantial amount of analysis has been developed,
+for they both are necessarily defined somehow in terms of a limit process.
+I have chosen to define <m:math overflow="scroll"><m:mi>e</m:mi></m:math> here as the limit of the
+rather intriguing sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msup><m:mrow><m:mo>(</m:mo><m:mn>1</m:mn><m:mo>+</m:mo><m:mfrac><m:mn>1</m:mn><m:mi>n</m:mi></m:mfrac><m:mo>)</m:mo></m:mrow><m:mi>n</m:mi></m:msup><m:mo>}</m:mo><m:mo>,</m:mo></m:mrow></m:math>
+in some ways the first nontrivial example of a convergent sequence,
+and this is presented in <link document="m36117"/>.
+Its relation to logarithms and exponentials, whatever they are, has to be postponed to <link document="m36173"/>.
+<link document="m36117"/> also contains a section on the elementary topological properties
+(compactness, limit points, etc.)
+of the real and complex numbers as well as a thorough development of infinite series.</para>
+    <para id="id340419">To define <m:math overflow="scroll"><m:mi>π</m:mi></m:math> as the ratio of the circumference of a circle to its diameter is attractive,
+indeed was quite acceptable to Euclid, but is dangerously imprecise unless we
+have at the outset a clear
+definition of what is meant by the length of a curve, e.g., the circumference of a circle.
+That notion is by no means trivial, and in fact
+it only can be carefully treated in a development of analysis well after other concepts.
+Rather, I have chosen to define <m:math overflow="scroll"><m:mi>π</m:mi></m:math> here as the smallest positive zero of the sine function.
+Of course, I have to define the sine function first, and this is itself quite deep.
+I do it using power series functions, choosing to avoid the common
+definition of the trigonometric functions in terms of “ wrapping” the real line around a circle,
+for that notion again requires a precise definition of arc length before it
+would make sense.
+I get to arc length eventually, but not until  <link document="m36224"/>.</para>
+    <para id="id340449">In <link document="m36131"/> I introduce power series functions as generalizations of polynomials,
+specifically the three power series functions that turn out to be
+the exponential, sine, and cosine functions.
+From these definitions it follows directly that
+<m:math overflow="scroll"><m:mrow><m:mo form="prefix">exp</m:mo><m:mrow><m:mi>i</m:mi><m:mi>z</m:mi></m:mrow><m:mo>=</m:mo><m:mo form="prefix">cos</m:mo><m:mi>z</m:mi><m:mo>+</m:mo><m:mi>i</m:mi><m:mo form="prefix">sin</m:mo><m:mi>z</m:mi></m:mrow></m:math>
+for every complex number <m:math overflow="scroll"><m:mrow><m:mi>z</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Here is a place where allowing the variable to be complex is critical, and it has cost
+us nothing.
+However, even after establishing that there is in fact a smallest positive zero
+of the sine function (which we decide to call <m:math overflow="scroll"><m:mi>π</m:mi></m:math>,
+since we know how we want things to work out),
+one cannot at this point deduce that
+<m:math overflow="scroll"><m:mrow><m:mo form="prefix">cos</m:mo><m:mi>π</m:mi><m:mo>=</m:mo><m:mo>-</m:mo><m:mn>1</m:mn><m:mo>,</m:mo></m:mrow></m:math> so that the equality <m:math overflow="scroll"><m:mrow><m:msup><m:mi>e</m:mi><m:mrow><m:mi>i</m:mi><m:mi>π</m:mi></m:mrow></m:msup><m:mo>=</m:mo><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:math> also has to wait for its
+derivation until <link document="m36173"/>.
+In fact, more serious, we have no knowledge at all at this point of the function
+<m:math overflow="scroll"><m:msup><m:mi>e</m:mi><m:mi>z</m:mi></m:msup></m:math> for a complex exponent <m:math overflow="scroll"><m:mrow><m:mi>z</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+What does it mean to raise a real number, or even
+an integer, to a complex exponent?
+The very definition of such a function has to wait.</para>
+    <para id="id340584"><link document="m36131"/> also contains all the standard theorems
+about continuous functions, culminating with a lengthy section on
+uniform convergence, and finally Abel's fantastic theorem on the
+continuity of a power series function on the boundary of its disk of convergence.</para>
+    <para id="id340592">The fourth chapter begins with all the usual theorems from calculus, Mean Value Theorem, Chain Rule, First Derivative Test, and so on.
+Power series functions are shown to be differentiable, from which the law of exponents
+emerges for the power series function exp.
+Immediately then, all of the trigonometric and exponential identities are
+also derived.
+We observe that <m:math overflow="scroll"><m:mrow><m:msup><m:mi>e</m:mi><m:mi>r</m:mi></m:msup><m:mo>=</m:mo><m:mo form="prefix">exp</m:mo><m:mrow><m:mo>(</m:mo><m:mi>r</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> for every rational number <m:math overflow="scroll"><m:mrow><m:mi>r</m:mi><m:mo>,</m:mo></m:mrow></m:math> and we
+at last can define consistently <m:math overflow="scroll"><m:msup><m:mi>e</m:mi><m:mi>z</m:mi></m:msup></m:math> to be the value of the power series function <m:math overflow="scroll"><m:mrow><m:mo form="prefix">exp</m:mo><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow></m:math> for any complex number <m:math overflow="scroll"><m:mrow><m:mi>z</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+From that, we establish the equation <m:math overflow="scroll"><m:mrow><m:msup><m:mi>e</m:mi><m:mrow><m:mi>i</m:mi><m:mi>π</m:mi></m:mrow></m:msup><m:mo>=</m:mo><m:mo>-</m:mo><m:mn>1</m:mn><m:mo>.</m:mo></m:mrow></m:math>
+Careful proofs of Taylor's Remainder Theorem and L'Hopital's Rule are given, as well as an initial approach
+to the general Binomial Theorem for non-integer exponents.</para>
+    <para id="id340707">It is in <link document="m36173"/> that the first glimpse of a difference between functions of a real variable
+and functions of a complex variable emerges.
+For example, one of the results in this
+chapter is that every differentiable, real-valued function of a complex variable must be a constant function,
+something that is certainly not true for functions of a real variable.
+At the end of this chapter, I briefly slip into the realm
+of real-valued functions of two real variables.
+I introduce the definition of differentiability
+of such a function of two real variables, and then derive the initial relationships
+among the partial derivatives of such a function and the derivative of that function thought of as a function of a complex variable. This is obviously done
+in preparation for Chapter VII where holomorphic functions are central.</para>
+    <para id="id340718">Perhaps most well-understood by math majors is that
+computing the area under a curve
+requires Newton's calculus, i.e., integration theory.
+What is often overlooked by students is that the very definition of the
+concept of area is intimately tied up with this integration theory.
+My treatment here of integration differs from most others in that
+the class of functions defined as integrable are those that are
+uniform limits of step functions.
+This is a smaller collection of functions than those that
+are Riemann-integrable, but they suffice for my purposes,
+and this approach serves to emphasize the importance of uniform convergence.
+In particular, I include careful proofs of the Fundamental Theorem of Calculus,
+the integration by substitution theorem, the integral form of Taylor's Remainder Theorem,
+and the complete proof of the general Binomial Theorem.</para>
+    <para id="id340728">Not wishing to delve into the set-theoretic complications of measure theory,
+I have chosen only to define the area for certain “geometric” subsets of the plane.
+These are those subsets bounded above and below by graphs of continuous functions.
+Of course these suffice for most purposes, and in particular
+circles are examples of such geometric sets, so that
+the formula <m:math overflow="scroll"><m:mrow><m:mi>A</m:mi><m:mo>=</m:mo><m:mi>π</m:mi><m:msup><m:mi>r</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:math> can be established for the
+area of a circle of radius <m:math overflow="scroll"><m:mrow><m:mi>r</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+<link document="m36207"/> concludes with a development of integration over geometric subsets of the plane. Once again,
+anticipating later needs, we have again strayed into
+some investigations of functions of two real variables.</para>
+    <para id="id340772">Having developed the notions of arc length in the early part of <link document="m36224"/>, including the
+derivation of the formula for the circumference of a circle, I introduce the
+idea of a contour integral, i.e., integrating a function around a curve in the complex plane.
+The Fundamental Theorem of Calculus has generalizations to higher dimensions,
+and it becomes Green's Theorem in 2 dimensions.
+I give a careful proof in <link document="m36224"/>, just over geometric sets, of this rather complicated theorem.</para>
+    <para id="id340779">Perhaps the main application of Green's Theorem is
+the Cauchy Integral Theorem, a result about complex-valued
+functions of a complex variable, that is often called
+the Fundamental Theorem of Analysis.
+I prove this theorem in <link document="m36234"/>.
+From this Cauchy theorem one can
+deduce the usual marvelous theorems of a first course in complex variables,
+e.g.,
+the Identity Theorem,
+Liouville's Theorem,
+the Maximum Modulus Principle,
+the Open Mapping Theorem,
+the Residue Theorem,
+and last but not least our mathematical truth number 6, the Fundamental
+Theorem of Algebra.
+That so much mathematical analysis is used to prove the
+fundamental theorem of algebra does make me smile.
+I will leave it to my algebraist colleagues to point out how some
+of the fundamental
+results in analysis require substantial algebraic arguments.</para>
+    <para id="id340789">The overriding philosophical point of this book is that
+many analytic assertions in mathematics are intellectually very deep;
+they require years of study for most people to understand; they
+demonstrate how intricate mathematical thought is and how far it has come
+over the years. Graduates in mathematics should be
+proud of the degree they have earned, and they should be
+proud of the depth of their understanding and the extremes to which they
+have pushed their own intellect.
+I love teaching these students, that is to say,
+I love sharing this marvelous material with them.</para>
+  </content>
+</document>

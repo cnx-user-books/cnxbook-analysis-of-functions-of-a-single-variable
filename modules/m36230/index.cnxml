@@ -1,0 +1,178 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML">
+  <title>Contour Integrals</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m36230</md:content-id>
+  <md:title>Contour Integrals</md:title>
+  <md:abstract>We discuss next what appears to be a simpler notion
+of integral over a curve.
+In this one, we really do regard the curve <m:math overflow="scroll"><m:mi>C</m:mi></m:math> as a subset of the complex plane as opposed to two-dimensional real space;
+we will be integrating complex-valued functions; and we explicitly think of the
+parameterizations of the curve as complex-valued functions on an interval <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Also, in this definition, a curve <m:math overflow="scroll"><m:mi>C</m:mi></m:math> from <m:math overflow="scroll"><m:msub><m:mi>z</m:mi><m:mn>1</m:mn></m:msub></m:math> to <m:math overflow="scroll"><m:msub><m:mi>z</m:mi><m:mn>2</m:mn></m:msub></m:math> will be distinguished
+from its reverse, i.e., the same set <m:math overflow="scroll"><m:mi>C</m:mi></m:math> thought of as a curve from <m:math overflow="scroll"><m:msub><m:mi>z</m:mi><m:mn>2</m:mn></m:msub></m:math> to <m:math overflow="scroll"><m:mrow><m:msub><m:mi>z</m:mi><m:mn>1</m:mn></m:msub><m:mo>.</m:mo></m:mrow></m:math></md:abstract>
+  <md:uuid>4e23b6fa-ec90-4f87-9137-c7f61bc94af5</md:uuid>
+</metadata>
+
+<content>
+    <para id="id62159">We discuss next what appears to be a simpler notion
+of integral over a curve.
+In this one, we really do regard the curve <m:math overflow="scroll"><m:mi>C</m:mi></m:math> as a subset of the complex plane as opposed to two-dimensional real space;
+we will be integrating complex-valued functions; and we explicitly think of the
+parameterizations of the curve as complex-valued functions on an interval <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Also, in this definition, a curve <m:math overflow="scroll"><m:mi>C</m:mi></m:math> from <m:math overflow="scroll"><m:msub><m:mi>z</m:mi><m:mn>1</m:mn></m:msub></m:math> to <m:math overflow="scroll"><m:msub><m:mi>z</m:mi><m:mn>2</m:mn></m:msub></m:math> will be distinguished
+from its reverse, i.e., the same set <m:math overflow="scroll"><m:mi>C</m:mi></m:math> thought of as a curve from <m:math overflow="scroll"><m:msub><m:mi>z</m:mi><m:mn>2</m:mn></m:msub></m:math> to <m:math overflow="scroll"><m:mrow><m:msub><m:mi>z</m:mi><m:mn>1</m:mn></m:msub><m:mo>.</m:mo></m:mrow></m:math></para>
+<definition id="fs-id1168534543990"><term/><meaning id="fs-id1168536892663">
+    <para id="id62604">
+Let <m:math overflow="scroll"><m:mi>C</m:mi></m:math> be a piecewise smooth curve from <m:math overflow="scroll"><m:msub><m:mi>z</m:mi><m:mn>1</m:mn></m:msub></m:math> to <m:math overflow="scroll"><m:msub><m:mi>z</m:mi><m:mn>2</m:mn></m:msub></m:math> in the plane <m:math overflow="scroll"><m:mrow><m:mi>C</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+parameterized by a (complex-valued) function <m:math overflow="scroll"><m:mrow><m:mi>φ</m:mi><m:mo>:</m:mo><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>→</m:mo><m:mi>C</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+If <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is a continuous, complex-valued function on <m:math overflow="scroll"><m:mrow><m:mi>C</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+The <emphasis effect="italics">contour integral of f from <m:math overflow="scroll"><m:msub><m:mi>z</m:mi><m:mn>1</m:mn></m:msub></m:math> to <m:math overflow="scroll"><m:msub><m:mi>z</m:mi><m:mn>2</m:mn></m:msub></m:math> along <m:math overflow="scroll"><m:mi>C</m:mi></m:math></emphasis> will be denoted by
+<m:math overflow="scroll"><m:mrow><m:msub><m:mo>∫</m:mo><m:mi>C</m:mi></m:msub><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>ζ</m:mi><m:mo>)</m:mo></m:mrow><m:mspace width="0.166667em"/><m:mi>d</m:mi><m:mi>ζ</m:mi></m:mrow></m:math> or more precisely
+by <m:math overflow="scroll"><m:mrow><m:msubsup><m:mrow><m:msub><m:mo>∫</m:mo><m:mi>C</m:mi></m:msub></m:mrow><m:mrow><m:msub><m:mi>z</m:mi><m:mn>1</m:mn></m:msub></m:mrow><m:msub><m:mi>z</m:mi><m:mn>2</m:mn></m:msub></m:msubsup><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>ζ</m:mi><m:mo>)</m:mo></m:mrow><m:mspace width="0.166667em"/><m:mi>d</m:mi><m:mi>ζ</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+and is defindd by</para>
+    <equation id="id63015">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:msubsup>
+            <m:mrow>
+              <m:msub>
+                <m:mo>∫</m:mo>
+                <m:mi>C</m:mi>
+              </m:msub>
+            </m:mrow>
+            <m:mrow>
+              <m:msub>
+                <m:mi>z</m:mi>
+                <m:mn>1</m:mn>
+              </m:msub>
+            </m:mrow>
+            <m:msub>
+              <m:mi>z</m:mi>
+              <m:mn>2</m:mn>
+            </m:msub>
+          </m:msubsup>
+          <m:mi>f</m:mi>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>ζ</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mspace width="0.166667em"/>
+          <m:mi>d</m:mi>
+          <m:mi>ζ</m:mi>
+          <m:mo>=</m:mo>
+          <m:msubsup>
+            <m:mo>∫</m:mo>
+            <m:mi>a</m:mi>
+            <m:mi>b</m:mi>
+          </m:msubsup>
+          <m:mi>f</m:mi>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>φ</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>t</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:msup>
+            <m:mi>φ</m:mi>
+            <m:mo>'</m:mo>
+          </m:msup>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>t</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mspace width="0.166667em"/>
+          <m:mi>d</m:mi>
+          <m:mi>t</m:mi>
+          <m:mo>.</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+</meaning></definition>
+<rule id="fs-id1168533404967"><label/><statement id="fs-id1168530579291">
+    <para id="id63124"><emphasis effect="bold">REMARK</emphasis>
+There is, as usual, the question about whether this definition depends on the parameterization.
+Again, it does not.
+See the next exercise.</para>
+    <para id="id63133">The definition of a contour integral looks very like a
+change of variables formula for integrals.
+See <link target-id="fs-id1164787816970" document="m36211"/> and part (e) of <link target-id="fs-id1164267204474" document="m36222"/>.
+This is an example of how mathematicians often use
+a true formula from one context to make a new definition in another context.</para>
+    <para id="id63138">Notice that the only difference between the computation of a contour integral and an
+integral with respect to arc length on the curve is the absence of the absolute value bars around the factor <m:math overflow="scroll"><m:mrow><m:msup><m:mi>φ</m:mi><m:mo>'</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math>
+This will make contour integrals more subtle than integrals with
+respect to arc length, just as conditionally convergent infinite series
+are more subtle than absolutely convergent ones.</para>
+    <para id="id63169">Note also that there is no question about the integrability of <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>φ</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>)</m:mo></m:mrow><m:msup><m:mi>φ</m:mi><m:mo>'</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> because
+of <link target-id="fs-id1164267204474" document="m36222"/>.
+<m:math overflow="scroll"><m:mi>f</m:mi></m:math> is bounded, <m:math overflow="scroll"><m:msup><m:mi>φ</m:mi><m:mo>'</m:mo></m:msup></m:math> is improperly-integrable on <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math> and therefore so is their product.</para>
+</statement></rule>
+<exercise id="fs-id1168534710445"><problem id="fs-id1168529485220">
+    <list id="id63265" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid1"> State and prove the “independence of parameterization”
+result for contour integrals.
+</item>
+      <item id="uid2"> Prove that
+<equation id="id63292"><m:math overflow="scroll" mode="display"><m:mrow><m:msubsup><m:mrow><m:msub><m:mo>∫</m:mo><m:mi>C</m:mi></m:msub></m:mrow><m:mrow><m:msub><m:mi>z</m:mi><m:mn>1</m:mn></m:msub></m:mrow><m:msub><m:mi>z</m:mi><m:mn>2</m:mn></m:msub></m:msubsup><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>ζ</m:mi><m:mo>)</m:mo></m:mrow><m:mspace width="0.166667em"/><m:mi>d</m:mi><m:mi>ζ</m:mi><m:mo>=</m:mo><m:mo>-</m:mo><m:msubsup><m:mrow><m:msub><m:mo>∫</m:mo><m:mi>C</m:mi></m:msub></m:mrow><m:mrow><m:msub><m:mi>z</m:mi><m:mn>2</m:mn></m:msub></m:mrow><m:msub><m:mi>z</m:mi><m:mn>1</m:mn></m:msub></m:msubsup><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>ζ</m:mi><m:mo>)</m:mo></m:mrow><m:mspace width="0.166667em"/><m:mi>d</m:mi><m:mi>ζ</m:mi><m:mo>.</m:mo></m:mrow></m:math></equation>
+Just remember how to parameterize the curve in the opposite direction.
+</item>
+      <item id="uid3"> Establish the following relation between the absolute value of a contour integral and
+a corresponding integral with respect to arc length.
+<equation id="id63418"><m:math overflow="scroll" mode="display"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msub><m:mo>∫</m:mo><m:mi>C</m:mi></m:msub><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>ζ</m:mi><m:mo>)</m:mo></m:mrow><m:mspace width="0.166667em"/><m:mi>d</m:mi><m:mi>ζ</m:mi><m:mo>|</m:mo><m:mo>≤</m:mo></m:mrow><m:msub><m:mo>∫</m:mo><m:mi>C</m:mi></m:msub><m:mrow><m:mo>|</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>s</m:mi><m:mo>)</m:mo></m:mrow><m:mo>|</m:mo></m:mrow><m:mspace width="0.166667em"/><m:mi>d</m:mi><m:mi>s</m:mi><m:mo>.</m:mo></m:mrow></m:math></equation></item>
+    </list>
+</problem></exercise>
+    <para id="id63493">Not all the usual properties hold for contour integrals,
+e.g., like those in <link target-id="fs-id5078775" document="m36228"/> above.
+The functions here, and the values of their contour integrals, are
+complex numbers, so all the properties of integrals having to do with positivity and inequalities,
+except for the one in part (c) of <link target-id="fs-id1168534710445"/>, no longer make any sense.
+However, we do have the following results for contour integrals,
+the verification of which is just as it was for <link target-id="fs-id5078775" document="m36228"/>.</para>
+<rule id="fs-id1168532562203" type="theorem"><statement id="fs-id1168534720480">
+    <para id="id63500">
+Let <m:math overflow="scroll"><m:mi>C</m:mi></m:math> be a piecewise smooth curve of finite length joining <m:math overflow="scroll"><m:msub><m:mi>z</m:mi><m:mn>1</m:mn></m:msub></m:math> to <m:math overflow="scroll"><m:mrow><m:msub><m:mi>z</m:mi><m:mn>2</m:mn></m:msub><m:mo>.</m:mo></m:mrow></m:math>
+Then the contour integrals of continuous functions on <m:math overflow="scroll"><m:mi>C</m:mi></m:math> have the following properties.</para>
+    <list id="id63554" display="block" list-type="enumerated">
+      <item id="uid4">If <m:math overflow="scroll"><m:mi>f</m:mi></m:math> and <m:math overflow="scroll"><m:mi>g</m:mi></m:math> are any two continuous functions on <m:math overflow="scroll"><m:mrow><m:mi>C</m:mi><m:mo>,</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mi>a</m:mi></m:math> and <m:math overflow="scroll"><m:mi>b</m:mi></m:math> are any two complex numbers, then
+<equation id="id63611"><m:math overflow="scroll" mode="display"><m:mrow><m:msub><m:mo>∫</m:mo><m:mi>C</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>ζ</m:mi><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mi>b</m:mi><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>ζ</m:mi><m:mo>)</m:mo></m:mrow><m:mo>)</m:mo></m:mrow><m:mspace width="0.166667em"/><m:mi>d</m:mi><m:mi>ζ</m:mi><m:mo>=</m:mo><m:mi>a</m:mi><m:msub><m:mo>∫</m:mo><m:mi>C</m:mi></m:msub><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>ζ</m:mi><m:mo>)</m:mo></m:mrow><m:mspace width="0.166667em"/><m:mi>d</m:mi><m:mi>ζ</m:mi><m:mo>+</m:mo><m:mi>b</m:mi><m:msub><m:mo>∫</m:mo><m:mi>C</m:mi></m:msub><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>ζ</m:mi><m:mo>)</m:mo></m:mrow><m:mspace width="0.166667em"/><m:mi>d</m:mi><m:mi>ζ</m:mi><m:mo>.</m:mo></m:mrow></m:math></equation></item>
+      <item id="uid5">If <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is the uniform limit on <m:math overflow="scroll"><m:mi>C</m:mi></m:math> of a sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>f</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> of continuous functions,
+then <m:math overflow="scroll"><m:mrow><m:msub><m:mo>∫</m:mo><m:mi>C</m:mi></m:msub><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>ζ</m:mi><m:mo>)</m:mo></m:mrow><m:mspace width="0.166667em"/><m:mi>d</m:mi><m:mi>ζ</m:mi><m:mo>=</m:mo><m:mo movablelimits="true" form="prefix">lim</m:mo><m:msub><m:mo>∫</m:mo><m:mi>C</m:mi></m:msub><m:msub><m:mi>f</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>ζ</m:mi><m:mo>)</m:mo></m:mrow><m:mspace width="0.166667em"/><m:mi>d</m:mi><m:mi>ζ</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid6">Let <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>u</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> be a sequence of continuous functions on <m:math overflow="scroll"><m:mrow><m:mi>C</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+and suppose that for each <m:math overflow="scroll"><m:mi>n</m:mi></m:math> there is a number
+<m:math overflow="scroll"><m:mrow><m:msub><m:mi>m</m:mi><m:mi>n</m:mi></m:msub><m:mo>,</m:mo></m:mrow></m:math> for which <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msub><m:mi>u</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>|</m:mo><m:mo>≤</m:mo></m:mrow><m:msub><m:mi>m</m:mi><m:mi>n</m:mi></m:msub></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>z</m:mi><m:mo>∈</m:mo><m:mi>C</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+and such that the infinite series <m:math overflow="scroll"><m:mrow><m:mo>∑</m:mo><m:msub><m:mi>m</m:mi><m:mi>n</m:mi></m:msub></m:mrow></m:math> converges.
+Then the infinite series <m:math overflow="scroll"><m:mrow><m:mo>∑</m:mo><m:msub><m:mi>u</m:mi><m:mi>n</m:mi></m:msub></m:mrow></m:math> converges uniformly to a continuous function,
+and <m:math overflow="scroll"><m:mrow><m:msub><m:mo>∫</m:mo><m:mi>C</m:mi></m:msub><m:mo>∑</m:mo><m:msub><m:mi>u</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>ζ</m:mi><m:mo>)</m:mo></m:mrow><m:mspace width="0.166667em"/><m:mi>d</m:mi><m:mi>ζ</m:mi><m:mo>=</m:mo><m:mo>∑</m:mo><m:msub><m:mo>∫</m:mo><m:mi>C</m:mi></m:msub><m:msub><m:mi>u</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>ζ</m:mi><m:mo>)</m:mo></m:mrow><m:mspace width="0.166667em"/><m:mi>d</m:mi><m:mi>ζ</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+    </list>
+</statement></rule>
+    <para id="id64068">In the next exercise, we give some important contour integrals,
+which will be referred to several times in the sequel.
+Make sure you understand them.</para>
+<exercise id="fs-id1168528394716"><problem id="fs-id1168530552466">
+    <para id="id64072">
+Let <m:math overflow="scroll"><m:mi>c</m:mi></m:math> be a point in the complex plane, and let <m:math overflow="scroll"><m:mi>r</m:mi></m:math> be a positive number.
+Let <m:math overflow="scroll"><m:mi>C</m:mi></m:math> be the curve parameterized by <m:math overflow="scroll"><m:mrow><m:mi>φ</m:mi><m:mo>:</m:mo><m:mo>[</m:mo><m:mo>-</m:mo><m:mi>π</m:mi><m:mo>,</m:mo><m:mi>π</m:mi><m:mo>-</m:mo><m:mi>ϵ</m:mi><m:mo>]</m:mo><m:mo>:</m:mo><m:mi>C</m:mi></m:mrow></m:math> defined by <m:math overflow="scroll"><m:mrow><m:mi>φ</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>c</m:mi><m:mo>+</m:mo><m:mi>r</m:mi><m:msup><m:mi>e</m:mi><m:mrow><m:mi>i</m:mi><m:mi>t</m:mi></m:mrow></m:msup><m:mo>=</m:mo><m:mi>c</m:mi><m:mo>+</m:mo><m:mi>r</m:mi><m:mo form="prefix">cos</m:mo><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mi>i</m:mi><m:mi>r</m:mi><m:mo form="prefix">sin</m:mo><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math>
+For each integer <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>∈</m:mo><m:mi>Z</m:mi><m:mo>,</m:mo></m:mrow></m:math> define <m:math overflow="scroll"><m:mrow><m:msub><m:mi>f</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>-</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mi>n</m:mi></m:msup><m:mo>.</m:mo></m:mrow></m:math></para>
+    <list id="id64283" display="block" list-type="enumerated"><item id="uid7"> What two points <m:math overflow="scroll"><m:msub><m:mi>z</m:mi><m:mn>1</m:mn></m:msub></m:math> and <m:math overflow="scroll"><m:msub><m:mi>z</m:mi><m:mn>2</m:mn></m:msub></m:math> does <m:math overflow="scroll"><m:mi>C</m:mi></m:math> join,
+and what happens to <m:math overflow="scroll"><m:msub><m:mi>z</m:mi><m:mn>2</m:mn></m:msub></m:math> as <m:math overflow="scroll"><m:mi>ϵ</m:mi></m:math> approaches 0?
+</item>
+      <item id="uid8"> Compute <m:math overflow="scroll"><m:mrow><m:msub><m:mo>∫</m:mo><m:mi>C</m:mi></m:msub><m:msub><m:mi>f</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>ζ</m:mi><m:mo>)</m:mo></m:mrow><m:mspace width="0.166667em"/><m:mi>d</m:mi><m:mi>ζ</m:mi></m:mrow></m:math>
+for all integers <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>,</m:mo></m:mrow></m:math> positive and negative.
+</item>
+      <item id="uid9"> What happens to the integrals computed in part (b) when <m:math overflow="scroll"><m:mi>ϵ</m:mi></m:math> approaches 0?
+</item>
+      <item id="uid10"> Set <m:math overflow="scroll"><m:mrow><m:mi>ϵ</m:mi><m:mo>=</m:mo><m:mi>π</m:mi><m:mo>,</m:mo></m:mrow></m:math> and compute
+<m:math overflow="scroll"><m:mrow><m:msub><m:mo>∫</m:mo><m:mi>C</m:mi></m:msub><m:msub><m:mi>f</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>ζ</m:mi><m:mo>)</m:mo></m:mrow><m:mspace width="0.166667em"/><m:mi>d</m:mi><m:mi>ζ</m:mi></m:mrow></m:math> for all integers <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid11"> Again, set <m:math overflow="scroll"><m:mrow><m:mi>ϵ</m:mi><m:mo>=</m:mo><m:mi>π</m:mi><m:mo>.</m:mo></m:mrow></m:math> Evaluate
+<equation id="id64550"><m:math overflow="scroll" mode="display"><m:mrow><m:msub><m:mo>∫</m:mo><m:mi>C</m:mi></m:msub><m:mfrac><m:mrow><m:mo form="prefix">cos</m:mo><m:mo>(</m:mo><m:mi>ζ</m:mi><m:mo>-</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mrow><m:mi>ζ</m:mi><m:mo>-</m:mo><m:mi>c</m:mi></m:mrow></m:mfrac><m:mspace width="0.166667em"/><m:mi>d</m:mi><m:mi>ζ</m:mi><m:mspace width="4.pt"/><m:mtext>and</m:mtext><m:mspace width="4.pt"/><m:msub><m:mo>∫</m:mo><m:mi>C</m:mi></m:msub><m:mfrac><m:mrow><m:mo form="prefix">sin</m:mo><m:mo>(</m:mo><m:mi>ζ</m:mi><m:mo>-</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mrow><m:mi>ζ</m:mi><m:mo>-</m:mo><m:mi>c</m:mi></m:mrow></m:mfrac><m:mspace width="0.166667em"/><m:mi>d</m:mi><m:mi>ζ</m:mi><m:mo>.</m:mo></m:mrow></m:math></equation>
+HINT: Make use of the infinite series representations of the trigonometric functions.
+</item>
+    </list>
+</problem></exercise>
+  </content>
+</document>

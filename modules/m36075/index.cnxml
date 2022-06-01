@@ -1,0 +1,180 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML">
+  <title>The Natural Numbers and the Integers</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m36075</md:content-id>
+  <md:title>The Natural Numbers and the Integers</md:title>
+  <md:abstract>Algebraic relations include commutativity, associativity, and distributivity. The axiom of mathematical induction is stated and employed as a method of proof. A generalized version of the axiom is also mentioned, along with an explanation of negative numbers and integers.</md:abstract>
+  <md:uuid>1eddcaeb-7988-4ce9-a4a3-88b96b2def65</md:uuid>
+</metadata>
+
+<content>
+    <para id="id216608">We will take for granted that we understand the existence of what we call the <emphasis effect="italics">natural numbers,</emphasis> i.e., the set <m:math overflow="scroll"><m:mi>N</m:mi></m:math> whose elements are the numbers <m:math overflow="scroll"><m:mrow><m:mn>1</m:mn><m:mo>,</m:mo><m:mn>2</m:mn><m:mo>,</m:mo><m:mn>3</m:mn><m:mo>,</m:mo><m:mn>4</m:mn><m:mo>,</m:mo><m:mo>...</m:mo><m:mo>.</m:mo></m:mrow></m:math> Indeed, the two salient properties of this set are that (a) there is a frist element (the natural number 1), and (b) for each element <m:math overflow="scroll"><m:mi>n</m:mi></m:math> of this set there is a “very next” one, i.e., an immediate successor. We assume that the algebraic notions of sum and product of natural numbers is well-defined and familiar. These operations satisfy three basic relations:</para>
+    <para id="id217016">
+      <emphasis effect="bold">Basic Algebraic Relations.</emphasis>
+    </para>
+    <list id="id217022" display="block" list-type="enumerated">
+      <item id="uid1">(Commutativity) <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>+</m:mo><m:mi>m</m:mi><m:mo>=</m:mo><m:mi>m</m:mi><m:mo>+</m:mo><m:mi>n</m:mi></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>×</m:mo><m:mi>m</m:mi><m:mo>=</m:mo><m:mi>m</m:mi><m:mo>×</m:mo><m:mi>n</m:mi></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>,</m:mo><m:mi>m</m:mi><m:mo>∈</m:mo><m:mi>N</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid2">(Associativity) <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>+</m:mo><m:mo>(</m:mo><m:mi>m</m:mi><m:mo>+</m:mo><m:mi>k</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mo>(</m:mo><m:mi>n</m:mi><m:mo>+</m:mo><m:mi>m</m:mi><m:mo>)</m:mo><m:mo>+</m:mo><m:mi>k</m:mi></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>×</m:mo><m:mo>(</m:mo><m:mi>m</m:mi><m:mo>×</m:mo><m:mi>k</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mo>(</m:mo><m:mi>n</m:mi><m:mo>×</m:mo><m:mi>m</m:mi><m:mo>)</m:mo><m:mo>×</m:mo><m:mi>k</m:mi></m:mrow></m:math>
+for all <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>,</m:mo><m:mi>m</m:mi><m:mo>,</m:mo><m:mi>k</m:mi><m:mo>∈</m:mo><m:mi>N</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid3">(Distributivity) <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>×</m:mo><m:mo>(</m:mo><m:mi>m</m:mi><m:mo>+</m:mo><m:mi>k</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mi>n</m:mi><m:mo>×</m:mo><m:mi>m</m:mi><m:mo>+</m:mo><m:mi>n</m:mi><m:mo>×</m:mo><m:mi>k</m:mi></m:mrow></m:math>
+for all <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>,</m:mo><m:mi>m</m:mi><m:mo>,</m:mo><m:mi>k</m:mi><m:mo>∈</m:mo><m:mi>N</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+    </list>
+    <para id="id217305">We also take as given the notion of one natural number being larger than another one.
+<m:math overflow="scroll"><m:mrow><m:mn>2</m:mn><m:mo>&gt;</m:mo><m:mn>1</m:mn><m:mo>,</m:mo></m:mrow></m:math><m:math overflow="scroll"><m:mrow><m:mn>5</m:mn><m:mo>&gt;</m:mo><m:mn>3</m:mn><m:mo>,</m:mo></m:mrow></m:math><m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>+</m:mo><m:mn>1</m:mn><m:mo>&gt;</m:mo><m:mi>n</m:mi><m:mo>,</m:mo></m:mrow></m:math> etc.
+We will accept as true the <emphasis effect="bold">axiom of mathematical induction,</emphasis> that is, the following statement:</para>
+    <rule id="fs-id8560698"><label/><statement id="fs-id1165527734544"><para id="fs-id1165528432058"><emphasis effect="bold">AXIOM OF MATHEMATICAL INDUCTION.</emphasis>
+      <emphasis effect="italics">Let <m:math overflow="scroll"><m:mi>S</m:mi></m:math> be a subset of the set <m:math overflow="scroll"><m:mi>N</m:mi></m:math> of natural numbers. Suppose that</emphasis>
+   </para>
+<list id="id217399" display="block" list-type="enumerated">
+      <item id="uid4">
+        <emphasis effect="italics"> <m:math overflow="scroll"><m:mrow><m:mn>1</m:mn><m:mo>∈</m:mo><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math></emphasis>
+      </item>
+      <item id="uid5">
+        <emphasis effect="italics">If a natural number <m:math overflow="scroll"><m:mi>k</m:mi></m:math> is in <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>,</m:mo></m:mrow></m:math> then the natural number <m:math overflow="scroll"><m:mrow><m:mi>k</m:mi><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow></m:math> also is in <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math></emphasis>
+      </item>
+    </list>
+<para id="id217488">
+      <emphasis effect="italics">Then <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>=</m:mo><m:mi>N</m:mi><m:mo>.</m:mo></m:mrow></m:math></emphasis>
+    </para>
+</statement></rule>
+
+    
+
+    
+    <para id="id217516">That is, every natural number <m:math overflow="scroll"><m:mi>n</m:mi></m:math> belongs to <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+<rule id="fs-id1172018615359"><label/>
+<statement id="fs-id1172024218137">
+    <para id="id217537"><emphasis effect="bold">REMARK</emphasis> The axiom of mathematical induction is for our purposes frequently employed as a
+method of proof. That is, if we wish to show that a certain proposition holds for all
+natural numbers, then we let <m:math overflow="scroll"><m:mi>S</m:mi></m:math> denote the set of numbers
+for which the proposition is true, and then, using the axiom
+of mathematical induction, we verify that <m:math overflow="scroll"><m:mi>S</m:mi></m:math> is all of <m:math overflow="scroll"><m:mi>N</m:mi></m:math>
+by showing that <m:math overflow="scroll"><m:mi>S</m:mi></m:math> satisfies both of the above conditions. Mathematical induction can also be used as a method of definition. That is, using it, we can define an infinite number of objects <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>O</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> that are indexed by the natural numbers. Think of <m:math overflow="scroll"><m:mi>S</m:mi></m:math> as the set of natural numbers for which the object <m:math overflow="scroll"><m:msub><m:mi>O</m:mi><m:mi>n</m:mi></m:msub></m:math> is defined. We check first to see that the object <m:math overflow="scroll"><m:msub><m:mi>O</m:mi><m:mn>1</m:mn></m:msub></m:math> is defined. We check next that, if the object <m:math overflow="scroll"><m:msub><m:mi>O</m:mi><m:mi>k</m:mi></m:msub></m:math> is defined for a natural number <m:math overflow="scroll"><m:mrow><m:mi>k</m:mi><m:mo>,</m:mo></m:mrow></m:math> then there is a prescribed procedure for defining the object <m:math overflow="scroll"><m:mrow><m:msub><m:mi>O</m:mi><m:mrow><m:mi>k</m:mi><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>.</m:mo></m:mrow></m:math> So, by the axiom of mathematical induction, the object is defined for all natural numbers. This method of defining an infinite set of objects is often referred to as sl recursive definition, or <emphasis effect="italics">definition by recursion.</emphasis></para>
+</statement></rule>
+    <para id="id217694">As an example of recursive definition, let us carefully define <emphasis effect="italics">exponentiation.</emphasis></para>
+<definition id="fs-id1170512707557"><term/><meaning id="fs-id1170489237519"><para id="id217702">Let <m:math overflow="scroll"><m:mi>a</m:mi></m:math> be a natural number. We define inductively natural numbers <m:math overflow="scroll"><m:msup><m:mi>a</m:mi><m:mi>n</m:mi></m:msup></m:math> as follows: <m:math overflow="scroll"><m:mrow><m:msup><m:mi>a</m:mi><m:mn>1</m:mn></m:msup><m:mo>=</m:mo><m:mi>a</m:mi><m:mo>,</m:mo></m:mrow></m:math> and, whenever <m:math overflow="scroll"><m:msup><m:mi>a</m:mi><m:mi>k</m:mi></m:msup></m:math> is defined, then <m:math overflow="scroll"><m:msup><m:mi>a</m:mi><m:mrow><m:mi>k</m:mi><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow></m:msup></m:math> is defined to be <m:math overflow="scroll"><m:mrow><m:mi>a</m:mi><m:mo>×</m:mo><m:msup><m:mi>a</m:mi><m:mi>k</m:mi></m:msup><m:mo>.</m:mo></m:mrow></m:math></para></meaning></definition>
+    <para id="id217804">The set <m:math overflow="scroll"><m:mi>S</m:mi></m:math> of all natural numbers for which <m:math overflow="scroll"><m:msup><m:mi>a</m:mi><m:mi>n</m:mi></m:msup></m:math> is defined is therefore all of <m:math overflow="scroll"><m:mrow><m:mi>N</m:mi><m:mo>.</m:mo></m:mrow></m:math> For, <m:math overflow="scroll"><m:msup><m:mi>a</m:mi><m:mn>1</m:mn></m:msup></m:math> is defined, and if <m:math overflow="scroll"><m:msup><m:mi>a</m:mi><m:mi>k</m:mi></m:msup></m:math> is defined there is a prescription for defining <m:math overflow="scroll"><m:mrow><m:msup><m:mi>a</m:mi><m:mrow><m:mi>k</m:mi><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow></m:msup><m:mo>.</m:mo></m:mrow></m:math> This “careful” definition of <m:math overflow="scroll"><m:msup><m:mi>a</m:mi><m:mi>n</m:mi></m:msup></m:math> may seem unnecessarily detailed. Why not simply define <m:math overflow="scroll"><m:msup><m:mi>a</m:mi><m:mi>n</m:mi></m:msup></m:math> as <m:math overflow="scroll"><m:mrow><m:mi>a</m:mi><m:mo>×</m:mo><m:mi>a</m:mi><m:mo>×</m:mo><m:mi>a</m:mi><m:mo>×</m:mo><m:mi>a</m:mi><m:mo>...</m:mo><m:mo>×</m:mo><m:mi>a</m:mi></m:mrow></m:math><m:math overflow="scroll"><m:mi>n</m:mi></m:math> times? The answer is that the <m:math overflow="scroll"><m:mrow><m:mo>...</m:mo><m:mo>,</m:mo></m:mrow></m:math> though suggestive enough, is just not mathematically precise. After all, how would you explain what <m:math overflow="scroll"><m:mo>...</m:mo></m:math> means? The answer to that is that you invent a recursive definition to make the intuitive meaning of the <m:math overflow="scroll"><m:mo>...</m:mo></m:math> mathematically precise. We will of course use the symbol <m:math overflow="scroll"><m:mo>...</m:mo></m:math> to simplify and shorten our notation, but keep in mind that, if pressed, we should be able to provide a careful definition.</para>
+    
+    <exercise id="eip-608"><problem id="eip-515">
+  <para id="eip-702">
+    <list id="id218003" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid6"> Derive the three laws of exponents for the natural numbers:
+<m:math overflow="scroll"><m:mrow><m:msup><m:mi>a</m:mi><m:mrow><m:mi>n</m:mi><m:mo>+</m:mo><m:mi>m</m:mi></m:mrow></m:msup><m:mo>=</m:mo><m:msup><m:mi>a</m:mi><m:mi>n</m:mi></m:msup><m:mo>×</m:mo><m:msup><m:mi>a</m:mi><m:mi>m</m:mi></m:msup><m:mo>.</m:mo></m:mrow></m:math>
+HINT: Fix <m:math overflow="scroll"><m:mi>a</m:mi></m:math> and <m:math overflow="scroll"><m:mi>m</m:mi></m:math> and use the axiom of mathematical induction.
+<m:math overflow="scroll"><m:mrow><m:msup><m:mi>a</m:mi><m:mrow><m:mi>n</m:mi><m:mo>×</m:mo><m:mi>m</m:mi></m:mrow></m:msup><m:mo>=</m:mo><m:msup><m:mrow><m:mo>(</m:mo><m:msup><m:mi>a</m:mi><m:mi>m</m:mi></m:msup><m:mo>)</m:mo></m:mrow><m:mi>n</m:mi></m:msup><m:mo>.</m:mo></m:mrow></m:math>
+HINT: Fix <m:math overflow="scroll"><m:mi>a</m:mi></m:math> and <m:math overflow="scroll"><m:mi>m</m:mi></m:math> and use the axiom of mathematical induction.
+<m:math overflow="scroll"><m:mrow><m:msup><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>×</m:mo><m:mi>b</m:mi><m:mo>)</m:mo></m:mrow><m:mi>n</m:mi></m:msup><m:mo>=</m:mo><m:msup><m:mi>a</m:mi><m:mi>n</m:mi></m:msup><m:mo>×</m:mo><m:msup><m:mi>b</m:mi><m:mi>n</m:mi></m:msup><m:mo>.</m:mo></m:mrow></m:math>
+HINT: Fix <m:math overflow="scroll"><m:mi>a</m:mi></m:math> and <m:math overflow="scroll"><m:mi>b</m:mi></m:math> and use the axiom of mathematical induction.
+</item>
+      <item id="uid7"> Define inductively numbers <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>S</m:mi><m:mi>i</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> as follows:
+<m:math overflow="scroll"><m:mrow><m:msub><m:mi>S</m:mi><m:mn>1</m:mn></m:msub><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>,</m:mo></m:mrow></m:math> and if <m:math overflow="scroll"><m:msub><m:mi>S</m:mi><m:mi>k</m:mi></m:msub></m:math> is defined, then <m:math overflow="scroll"><m:msub><m:mi>S</m:mi><m:mrow><m:mi>k</m:mi><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow></m:msub></m:math> is defined to be <m:math overflow="scroll"><m:mrow><m:msub><m:mi>S</m:mi><m:mi>k</m:mi></m:msub><m:mo>+</m:mo><m:mi>k</m:mi><m:mo>+</m:mo><m:mn>1</m:mn><m:mo>.</m:mo></m:mrow></m:math>
+Prove, by induction, that
+<m:math overflow="scroll"><m:mrow><m:msub><m:mi>S</m:mi><m:mi>n</m:mi></m:msub><m:mo>=</m:mo><m:mi>n</m:mi><m:mrow><m:mo>(</m:mo><m:mi>n</m:mi><m:mo>+</m:mo><m:mn>1</m:mn><m:mo>)</m:mo></m:mrow><m:mo>/</m:mo><m:mn>2</m:mn><m:mo>.</m:mo></m:mrow></m:math>
+Note that we could have defined <m:math overflow="scroll"><m:msub><m:mi>S</m:mi><m:mi>n</m:mi></m:msub></m:math> using the <m:math overflow="scroll"><m:mo>...</m:mo></m:math> notation by <m:math overflow="scroll"><m:mrow><m:msub><m:mi>S</m:mi><m:mi>n</m:mi></m:msub><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>+</m:mo><m:mn>2</m:mn><m:mo>+</m:mo><m:mn>3</m:mn><m:mo>+</m:mo><m:mo>...</m:mo><m:mo>+</m:mo><m:mi>n</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid8"> Prove that
+<equation id="id218611"><m:math overflow="scroll" mode="display"><m:mrow><m:mn>1</m:mn><m:mo>+</m:mo><m:mn>4</m:mn><m:mo>+</m:mo><m:mn>9</m:mn><m:mo>+</m:mo><m:mn>16</m:mn><m:mo>+</m:mo><m:mo>...</m:mo><m:mo>+</m:mo><m:msup><m:mi>n</m:mi><m:mn>2</m:mn></m:msup><m:mo>=</m:mo><m:mfrac><m:mrow><m:mi>n</m:mi><m:mo>(</m:mo><m:mi>n</m:mi><m:mo>+</m:mo><m:mn>1</m:mn><m:mo>)</m:mo><m:mo>(</m:mo><m:mn>2</m:mn><m:mi>n</m:mi><m:mo>+</m:mo><m:mn>1</m:mn><m:mo>)</m:mo></m:mrow><m:mn>6</m:mn></m:mfrac><m:mo>.</m:mo></m:mrow></m:math></equation></item>
+      <item id="uid9"> Make a recursive definition of <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>!</m:mo><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>×</m:mo><m:mn>2</m:mn><m:mo>×</m:mo><m:mn>3</m:mn><m:mo>×</m:mo><m:mo>...</m:mo><m:mo>×</m:mo><m:mi>n</m:mi><m:mo>.</m:mo></m:mrow></m:math><m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>!</m:mo></m:mrow></m:math> is called <m:math overflow="scroll"><m:mi>n</m:mi></m:math> factorial.
+</item>
+    </list>
+  </para>
+</problem>
+</exercise>
+    <para id="id218750">There is a slightly more general statement of the axiom of mathematical
+induction, which is sometimes of use.</para>
+
+<rule id="fs-id1166088213714"><label/>
+<statement id="fs-id1166093131192">
+    <para id="id218756">
+      <emphasis effect="bold">GENERAL AXIOM OF MATHEMATICAL INDUCTION</emphasis>
+      <emphasis effect="italics">Let <m:math overflow="scroll"><m:mi>S</m:mi></m:math> be a subset of the set <m:math overflow="scroll"><m:mi>N</m:mi></m:math> of natural numbers, and suppose that
+<m:math overflow="scroll"><m:mi>S</m:mi></m:math> satisfies the following conditions</emphasis>
+    </para>
+    <list id="id218803" display="block" list-type="enumerated">
+      <item id="uid10">
+        <emphasis effect="italics">There exists a natural number <m:math overflow="scroll"><m:msub><m:mi>k</m:mi><m:mn>0</m:mn></m:msub></m:math>
+such that <m:math overflow="scroll"><m:mrow><m:msub><m:mi>k</m:mi><m:mn>0</m:mn></m:msub><m:mo>∈</m:mo><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math></emphasis>
+      </item>
+      <item id="uid11">
+        <emphasis effect="italics">If <m:math overflow="scroll"><m:mi>S</m:mi></m:math> contains a natural number <m:math overflow="scroll"><m:mrow><m:mi>k</m:mi><m:mo>,</m:mo></m:mrow></m:math> then <m:math overflow="scroll"><m:mi>S</m:mi></m:math> contains the
+natural number <m:math overflow="scroll"><m:mrow><m:mi>k</m:mi><m:mo>+</m:mo><m:mn>1</m:mn><m:mo>.</m:mo></m:mrow></m:math></emphasis>
+      </item>
+    </list>
+    <para id="id218917">
+      <emphasis effect="italics">Then <m:math overflow="scroll"><m:mi>S</m:mi></m:math> contains every natural number <m:math overflow="scroll"><m:mi>n</m:mi></m:math> that is larger than or equal to <m:math overflow="scroll"><m:mrow><m:msub><m:mi>k</m:mi><m:mn>0</m:mn></m:msub><m:mo>.</m:mo></m:mrow></m:math></emphasis>
+    </para>
+</statement></rule>
+    <para id="id218958">From the fundamental set <m:math overflow="scroll"><m:mi>N</m:mi></m:math> of natural numbers, we construct
+the set <m:math overflow="scroll"><m:mi>Z</m:mi></m:math> of all integers.
+First, we simply create an additional number called 0 that satisfies
+the equations <m:math overflow="scroll"><m:mrow><m:mn>0</m:mn><m:mo>+</m:mo><m:mi>n</m:mi><m:mo>=</m:mo><m:mi>n</m:mi></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>∈</m:mo><m:mi>N</m:mi></m:mrow></m:math> and
+<m:math overflow="scroll"><m:mrow><m:mn>0</m:mn><m:mo>×</m:mo><m:mi>n</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>∈</m:mo><m:mi>N</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+The word “create” is, for some mathematicians,
+a little unsettling. In fact, the idea of zero did not appear in mathematics
+until around the year 900.
+It is easy to see how the so-called natural numbers came by their
+name. Fingers, toes, trees, fish, etc., can all be counted,
+and the very concept of counting is what the natural numbers are about.
+On the other hand, one never needed to count zero fingers or fish, so that the notion of zero as a number easily could have
+only come into mathematics at a later time, a time when arithmetic was becoming more sophisticated.
+In any case, from our twenty-first century viewpoint, 0 seems very understandable,
+and we won't belabor the fundamental question of its existence any further here.</para>
+    <para id="id219091">Next, we introduce the so-called <emphasis effect="italics">negative numbers</emphasis>.
+This is again quite reasonable from our point of view.
+For every natural number <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>,</m:mo></m:mrow></m:math> we let <m:math overflow="scroll"><m:mrow><m:mo>-</m:mo><m:mi>n</m:mi></m:mrow></m:math> be a number which, when added to
+<m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>,</m:mo></m:mrow></m:math> give 0.
+Again, the question of whether or not such negative numbers exist
+will not concern us here.
+We simply create them.</para>
+    <para id="id219139">In short, we will take as given the existence of a
+set <m:math overflow="scroll"><m:mrow><m:mi>Z</m:mi><m:mo>,</m:mo></m:mrow></m:math> called the <emphasis effect="italics">integers</emphasis>,
+which comprises the set <m:math overflow="scroll"><m:mi>N</m:mi></m:math>
+of natural numbers, the additional number <m:math overflow="scroll"><m:mrow><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> and the set <m:math overflow="scroll"><m:mrow><m:mo>-</m:mo><m:mi>N</m:mi></m:mrow></m:math> of all negative numbers.
+We assume that addition and multiplication of integers satisfy the three
+basic algebraic relations of commutativity, associativity, and distributivity stated above.
+We also assume that the following additional relations hold:</para>
+    <equation id="id219219">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mo>(</m:mo>
+          <m:mo>-</m:mo>
+          <m:mi>n</m:mi>
+          <m:mo>)</m:mo>
+          <m:mo>×</m:mo>
+          <m:mo>(</m:mo>
+          <m:mo>-</m:mo>
+          <m:mi>k</m:mi>
+          <m:mo>)</m:mo>
+          <m:mo>=</m:mo>
+          <m:mi>n</m:mi>
+          <m:mo>×</m:mo>
+          <m:mi>k</m:mi>
+          <m:mo>,</m:mo>
+          <m:mspace width="4.pt"/>
+          <m:mtext>and</m:mtext>
+          <m:mspace width="4.pt"/>
+          <m:mo>(</m:mo>
+          <m:mo>-</m:mo>
+          <m:mi>n</m:mi>
+          <m:mo>)</m:mo>
+          <m:mo>×</m:mo>
+          <m:mi>k</m:mi>
+          <m:mo>=</m:mo>
+          <m:mi>n</m:mi>
+          <m:mo>×</m:mo>
+          <m:mo>(</m:mo>
+          <m:mo>-</m:mo>
+          <m:mi>k</m:mi>
+          <m:mo>)</m:mo>
+          <m:mo>=</m:mo>
+          <m:mo>-</m:mo>
+          <m:mo>(</m:mo>
+          <m:mi>n</m:mi>
+          <m:mo>×</m:mo>
+          <m:mi>k</m:mi>
+          <m:mo>)</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id219310">for all natural numbers <m:math overflow="scroll"><m:mi>n</m:mi></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>k</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+    <!--empty paragraphs get left behind.-->
+  </content>
+</document>

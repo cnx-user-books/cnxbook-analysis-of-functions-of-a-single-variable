@@ -1,0 +1,1547 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML">
+  <title>Area of Regions in the Plane</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m36212</md:content-id>
+  <md:title>Area of Regions in the Plane</md:title>
+  <md:abstract>This module contains an axiom of choice and also includes various theorems and exercises related to the usage of integrals in finding the area of regions in the plane.</md:abstract>
+  <md:uuid>b70eeab5-a921-426e-87b5-14f86df25efb</md:uuid>
+</metadata>
+
+<content>
+    <para id="id62159">It would be desirable to be able to assign to each subset <m:math overflow="scroll"><m:mi>S</m:mi></m:math> of the
+Cartesian plane <m:math overflow="scroll"><m:msup><m:mrow><m:mi>R</m:mi></m:mrow><m:mn>2</m:mn></m:msup></m:math> a nonnegative real number <m:math overflow="scroll"><m:mrow><m:mi>A</m:mi><m:mo>(</m:mo><m:mi>S</m:mi><m:mo>)</m:mo></m:mrow></m:math> called its area.
+We would insist based on our intuition that (i) if <m:math overflow="scroll"><m:mi>S</m:mi></m:math> is a rectangle with sides of length <m:math overflow="scroll"><m:mi>L</m:mi></m:math> and <m:math overflow="scroll"><m:mi>W</m:mi></m:math> then the
+number <m:math overflow="scroll"><m:mrow><m:mi>A</m:mi><m:mo>(</m:mo><m:mi>S</m:mi><m:mo>)</m:mo></m:mrow></m:math> should be <m:math overflow="scroll"><m:mrow><m:mi>L</m:mi><m:mi>W</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+so that this abstract notion of area would generalize our intuitively fundamental one.
+We would also insist that (ii) if <m:math overflow="scroll"><m:mi>S</m:mi></m:math> were the union of two disjoint parts, <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>=</m:mo><m:msub><m:mi>S</m:mi><m:mn>1</m:mn></m:msub><m:mo>∪</m:mo><m:msub><m:mi>S</m:mi><m:mn>2</m:mn></m:msub><m:mo>,</m:mo></m:mrow></m:math>
+then <m:math overflow="scroll"><m:mrow><m:mi>A</m:mi><m:mo>(</m:mo><m:mi>S</m:mi><m:mo>)</m:mo></m:mrow></m:math> should be <m:math overflow="scroll"><m:mrow><m:mi>A</m:mi><m:mrow><m:mo>(</m:mo><m:msub><m:mi>S</m:mi><m:mn>1</m:mn></m:msub><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mi>A</m:mi><m:mrow><m:mo>(</m:mo><m:msub><m:mi>S</m:mi><m:mn>2</m:mn></m:msub><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math>
+(We were taught in high school plane geometry that the whole is the sum of its parts.)
+In fact, even if <m:math overflow="scroll"><m:mi>S</m:mi></m:math> were the union of an infinite number of disjoint parts,
+<m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>=</m:mo><m:msubsup><m:mo>∪</m:mo><m:mrow><m:mi>n</m:mi><m:mo>=</m:mo><m:mn>1</m:mn></m:mrow><m:mi>∞</m:mi></m:msubsup><m:msub><m:mi>S</m:mi><m:mi>n</m:mi></m:msub></m:mrow></m:math> with <m:math overflow="scroll"><m:mrow><m:msub><m:mi>S</m:mi><m:mi>i</m:mi></m:msub><m:mo>∩</m:mo><m:msub><m:mi>S</m:mi><m:mi>j</m:mi></m:msub><m:mo>=</m:mo><m:mi>∅</m:mi></m:mrow></m:math>
+if <m:math overflow="scroll"><m:mrow><m:mi>i</m:mi><m:mo>≠</m:mo><m:mi>j</m:mi><m:mo>,</m:mo></m:mrow></m:math> we would insist that (iii)
+<m:math overflow="scroll"><m:mrow><m:mi>A</m:mi><m:mrow><m:mo>(</m:mo><m:mi>S</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msubsup><m:mo>∑</m:mo><m:mrow><m:mi>n</m:mi><m:mo>=</m:mo><m:mn>1</m:mn></m:mrow><m:mi>∞</m:mi></m:msubsup><m:mi>A</m:mi><m:mrow><m:mo>(</m:mo><m:msub><m:mi>S</m:mi><m:mi>n</m:mi></m:msub><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></para>
+    <para id="id62833">The search for such a definition of area for every subset of <m:math overflow="scroll"><m:msup><m:mrow><m:mi>R</m:mi></m:mrow><m:mn>2</m:mn></m:msup></m:math> motivated much of modern mathematics.
+Whether or not such an assignment exists is intimately related to subtle questions in basic set theory,
+e.g., the <emphasis effect="italics">Axiom of Choice</emphasis> and the <emphasis effect="italics">Continuum Hypothesis</emphasis>.
+Most mathematical analysts assume that the Axiom of Choice holds, and as a result of that assumption,
+it has been shown that there can be no assignment <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>→</m:mo><m:mi>A</m:mi><m:mo>(</m:mo><m:mi>S</m:mi><m:mo>)</m:mo></m:mrow></m:math> satisfying the above three requirements.
+Conversely, if one does not assume that the Axiom of Choice
+holds, then it has also been shown that it is perfectly consistent
+to assume as a basic axiom that such an assignment <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>→</m:mo><m:mi>A</m:mi><m:mo>(</m:mo><m:mi>S</m:mi><m:mo>)</m:mo></m:mrow></m:math> does exist.
+We will not pursue these subtle points here, leaving them to a course in Set Theory or Measure Theory.
+However, Here's a statement of the Axiom of Choice, and we invite the reader
+to think about how reasonable it seems.</para>
+<rule id="fs-id1171185642151"><label/><statement id="fs-id1171192761024">
+    <para id="id62915"><emphasis effect="bold">AXIOM OF CHOICE</emphasis>
+Let <m:math overflow="scroll"><m:mi mathvariant="script">S</m:mi></m:math> be a collection of sets. Then there exists a set
+<m:math overflow="scroll"><m:mi>A</m:mi></m:math> that contains exactly one element out of each of the sets <m:math overflow="scroll"><m:mi>S</m:mi></m:math> in <m:math overflow="scroll"><m:mrow><m:mi mathvariant="script">S</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+</statement></rule>
+    <para id="id62961">The difficulty mathematicians encountered in trying to define area
+turned out to be involved with
+defining <m:math overflow="scroll"><m:mrow><m:mi>A</m:mi><m:mo>(</m:mo><m:mi>S</m:mi><m:mo>)</m:mo></m:mrow></m:math> for <emphasis effect="bold">every</emphasis> subset <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>∈</m:mo><m:msup><m:mrow><m:mi>R</m:mi></m:mrow><m:mn>2</m:mn></m:msup><m:mo>.</m:mo></m:mrow></m:math>
+To avoid this difficulty, we will
+restrict our attention here to certain “ reasonable” subsets <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Of course, we certainly want these sets to include the rectangles and all
+other common geometric sets.</para>
+<definition id="fs-id1171185600576"><term/><meaning id="fs-id1171185792875">
+    <para id="id63029"> By a (open) <emphasis effect="italics">rectangle</emphasis> we will mean a set <m:math overflow="scroll"><m:mrow><m:mi>R</m:mi><m:mo>=</m:mo><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo><m:mo>×</m:mo><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>,</m:mo><m:mi>d</m:mi><m:mo>)</m:mo></m:mrow></m:math>
+in <m:math overflow="scroll"><m:mrow><m:msup><m:mrow><m:mi>R</m:mi></m:mrow><m:mn>2</m:mn></m:msup><m:mo>.</m:mo></m:mrow></m:math> That is, <m:math overflow="scroll"><m:mrow><m:mi>R</m:mi><m:mo>=</m:mo><m:mo>{</m:mo><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>,</m:mo><m:mi>y</m:mi><m:mo>)</m:mo><m:mo>:</m:mo><m:mi>a</m:mi><m:mo>&lt;</m:mo><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mi>b</m:mi><m:mspace width="4.pt"/><m:mtext>and</m:mtext><m:mspace width="4.pt"/><m:mi>c</m:mi><m:mo>&lt;</m:mo><m:mi>y</m:mi><m:mo>&lt;</m:mo><m:mi>d</m:mi><m:mo>}</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+The analogous definition of a <emphasis effect="italics">closed rectangle</emphasis><m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>×</m:mo><m:mo>[</m:mo><m:mi>c</m:mi><m:mo>,</m:mo><m:mi>d</m:mi><m:mo>]</m:mo></m:mrow></m:math> should be clear:
+<m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>×</m:mo><m:mo>[</m:mo><m:mi>c</m:mi><m:mo>,</m:mo><m:mi>d</m:mi><m:mo>]</m:mo><m:mo>=</m:mo><m:mo>{</m:mo><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>,</m:mo><m:mi>y</m:mi><m:mo>)</m:mo><m:mo>:</m:mo><m:mi>a</m:mi><m:mo>≤</m:mo><m:mi>x</m:mi><m:mo>≤</m:mo><m:mi>b</m:mi><m:mo>,</m:mo><m:mspace width="0.166667em"/><m:mi>c</m:mi><m:mo>≤</m:mo><m:mi>y</m:mi><m:mo>≤</m:mo><m:mi>d</m:mi><m:mo>}</m:mo><m:mo>.</m:mo></m:mrow></m:math></para>
+    <para id="id63452">By the <emphasis effect="italics">area</emphasis> of a (open or closed) rectangle <m:math overflow="scroll"><m:mrow><m:mi>R</m:mi><m:mo>=</m:mo><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo><m:mo>×</m:mo><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>,</m:mo><m:mi>d</m:mi><m:mo>)</m:mo></m:mrow></m:math>
+or <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>×</m:mo><m:mo>[</m:mo><m:mi>c</m:mi><m:mo>,</m:mo><m:mi>d</m:mi><m:mo>]</m:mo></m:mrow></m:math> we mean
+the number <m:math overflow="scroll"><m:mrow><m:mi>A</m:mi><m:mo>(</m:mo><m:mi>R</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mo>(</m:mo><m:mi>b</m:mi><m:mo>-</m:mo><m:mi>a</m:mi><m:mo>)</m:mo><m:mo>(</m:mo><m:mi>d</m:mi><m:mo>-</m:mo><m:mi>c</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+.</para>
+</meaning></definition>
+<para id="fs-id1171191729653">
+The fundamental notion behind our definition of the area of a set
+<m:math overflow="scroll"><m:mi>S</m:mi></m:math> is this.
+If an open rectangle <m:math overflow="scroll"><m:mrow><m:mi>R</m:mi><m:mo>=</m:mo><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo><m:mo>×</m:mo><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>,</m:mo><m:mi>d</m:mi><m:mo>)</m:mo></m:mrow></m:math> is a subset of <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>,</m:mo></m:mrow></m:math> then the area <m:math overflow="scroll"><m:mrow><m:mi>A</m:mi><m:mo>(</m:mo><m:mi>S</m:mi><m:mo>)</m:mo></m:mrow></m:math>
+surely should be greater than or equal to
+<m:math overflow="scroll"><m:mrow><m:mi>A</m:mi><m:mo>(</m:mo><m:mi>R</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mo>(</m:mo><m:mi>b</m:mi><m:mo>-</m:mo><m:mi>a</m:mi><m:mo>)</m:mo><m:mo>(</m:mo><m:mi>d</m:mi><m:mo>-</m:mo><m:mi>c</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+And, if <m:math overflow="scroll"><m:mi>S</m:mi></m:math> contains the disjoint union of several open rectangles, then the
+area of <m:math overflow="scroll"><m:mi>S</m:mi></m:math> should be greater than or equal to the sum of their areas.</para>
+    <para id="id63694">We now specify precisely for which sets we will define the area.
+Let <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow></m:math> be a fixed closed bounded interval in <m:math overflow="scroll"><m:mi>R</m:mi></m:math>
+and let <m:math overflow="scroll"><m:mi>l</m:mi></m:math> and <m:math overflow="scroll"><m:mi>u</m:mi></m:math> be two continuous real-valued functions on <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow></m:math>
+for which <m:math overflow="scroll"><m:mrow><m:mi>l</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>&lt;</m:mo><m:mi>u</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math></para>
+<definition id="fs-id1171203509686"><term/><meaning id="fs-id1171192324460">
+    <para id="id63813"> Given <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>,</m:mo><m:mi>l</m:mi><m:mo>,</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mi>u</m:mi></m:math> as in the above,
+let <m:math overflow="scroll"><m:mi>S</m:mi></m:math> be the set of all pairs <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>,</m:mo><m:mi>y</m:mi><m:mo>)</m:mo></m:mrow><m:mo>∈</m:mo><m:msup><m:mrow><m:mi>R</m:mi></m:mrow><m:mn>2</m:mn></m:msup><m:mo>,</m:mo></m:mrow></m:math> for which <m:math overflow="scroll"><m:mrow><m:mi>a</m:mi><m:mo>&lt;</m:mo><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mi>b</m:mi></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>l</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>&lt;</m:mo><m:mi>y</m:mi><m:mo>&lt;</m:mo><m:mi>u</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Then <m:math overflow="scroll"><m:mi>S</m:mi></m:math> is called an <emphasis effect="italics">open geometric set.</emphasis>
+If we replace the <m:math overflow="scroll"><m:mo>&lt;</m:mo></m:math> signs with <m:math overflow="scroll"><m:mo>≤</m:mo></m:math> signs, i.e., if
+<m:math overflow="scroll"><m:mi>S</m:mi></m:math> is the set of all <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>,</m:mo><m:mi>y</m:mi><m:mo>)</m:mo></m:mrow></m:math> such that <m:math overflow="scroll"><m:mrow><m:mi>a</m:mi><m:mo>≤</m:mo><m:mi>x</m:mi><m:mo>≤</m:mo><m:mi>b</m:mi><m:mo>,</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>l</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>≤</m:mo><m:mi>y</m:mi><m:mo>≤</m:mo><m:mi>u</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math>
+then <m:math overflow="scroll"><m:mi>S</m:mi></m:math> is called a <emphasis effect="italics">closed geometric set.</emphasis>
+In either case, we say that <m:math overflow="scroll"><m:mi>S</m:mi></m:math> is
+bounded on the left and right by the vertical line segments
+<m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>y</m:mi><m:mo>)</m:mo><m:mo>:</m:mo><m:mi>l</m:mi><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo><m:mo>≤</m:mo><m:mi>y</m:mi><m:mo>≤</m:mo><m:mi>u</m:mi><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo><m:mo>}</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:mo>(</m:mo><m:mi>b</m:mi><m:mo>,</m:mo><m:mi>y</m:mi><m:mo>)</m:mo><m:mo>:</m:mo><m:mi>l</m:mi><m:mo>(</m:mo><m:mi>b</m:mi><m:mo>)</m:mo><m:mo>≤</m:mo><m:mi>y</m:mi><m:mo>≤</m:mo><m:mi>u</m:mi><m:mo>(</m:mo><m:mi>b</m:mi><m:mo>)</m:mo><m:mo>}</m:mo><m:mo>,</m:mo></m:mrow></m:math>
+and it is bounded below by the graph of the function
+<m:math overflow="scroll"><m:mi>l</m:mi></m:math> and bounded above by the graph of the function <m:math overflow="scroll"><m:mrow><m:mi>u</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+We call the union of these four bounding curves the <emphasis effect="italics">boundary</emphasis> of <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+and denote it by <m:math overflow="scroll"><m:mrow><m:msub><m:mi>C</m:mi><m:mi>S</m:mi></m:msub><m:mo>.</m:mo></m:mrow></m:math></para>
+    <para id="id64227">If the bounding functions <m:math overflow="scroll"><m:mi>u</m:mi></m:math> and <m:math overflow="scroll"><m:mi>l</m:mi></m:math> of a geometric set <m:math overflow="scroll"><m:mi>S</m:mi></m:math> are smooth or piecewise smooth functions, we will
+call <m:math overflow="scroll"><m:mi>S</m:mi></m:math> a <emphasis effect="italics">smooth</emphasis> or <emphasis effect="italics">piecewise smooth</emphasis> geometric set.</para>
+</meaning></definition>
+    <para id="id64278">If <m:math overflow="scroll"><m:mi>S</m:mi></m:math> is a closed geometric set, we will indicate the
+corresponding open geometric set by the symbol <m:math overflow="scroll"><m:mrow><m:msup><m:mi>S</m:mi><m:mn>0</m:mn></m:msup><m:mo>.</m:mo></m:mrow></m:math></para>
+    <para id="id64306">The symbol <m:math overflow="scroll"><m:msup><m:mi>S</m:mi><m:mn>0</m:mn></m:msup></m:math> we have introduced for the open geometric set corresponding to a closed one
+is the same symbol that we have used previously for the interior of a set.
+Study the exercise that follows to see that the two uses of this notation agree.</para>
+<exercise id="fs-id1171200272049"><problem id="fs-id1171201137233">
+    <list id="id64337" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid1"> Show that rectangles, triangles, and circles are geometric sets.
+What in fact is the definition of a circle?
+</item>
+      <item id="uid2"> Find some examples of sets that are <emphasis effect="bold">not</emphasis> geometric sets.
+Think about a horseshoe on its side, or a heart on its side.
+</item>
+      <item id="uid3"> Let <m:math overflow="scroll"><m:mi>f</m:mi></m:math> be a continuous, nonnegative function on <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Show that the “region” under the graph of <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is a geometric set.
+</item>
+      <item id="uid4"> Show that the intersection of two geometric sets is a geometric set.
+Describe the left, right, upper, and lower boundaries of the intersection.
+Prove that the interior <m:math overflow="scroll"><m:msup><m:mrow><m:mo>(</m:mo><m:msub><m:mi>S</m:mi><m:mn>1</m:mn></m:msub><m:mo>∩</m:mo><m:msub><m:mi>S</m:mi><m:mn>2</m:mn></m:msub><m:mo>)</m:mo></m:mrow><m:mn>0</m:mn></m:msup></m:math> of the intersection
+of two geometric sets <m:math overflow="scroll"><m:msub><m:mi>S</m:mi><m:mn>1</m:mn></m:msub></m:math> and <m:math overflow="scroll"><m:msub><m:mi>S</m:mi><m:mn>2</m:mn></m:msub></m:math> coincides with the intersection <m:math overflow="scroll"><m:mrow><m:msubsup><m:mi>S</m:mi><m:mn>1</m:mn><m:mn>0</m:mn></m:msubsup><m:mo>∩</m:mo><m:msubsup><m:mi>S</m:mi><m:mn>2</m:mn><m:mn>0</m:mn></m:msubsup></m:mrow></m:math> of their two interiors.
+</item>
+      <item id="uid5"> Give an example to show that the union of two geometric sets need not be a geometric set.
+</item>
+      <item id="uid6"> Show that every closed geometric set is compact.
+</item>
+      <item id="uid7"> Let <m:math overflow="scroll"><m:mi>S</m:mi></m:math> be a closed geometric set.
+Show that the corresponding open geometric set <m:math overflow="scroll"><m:msup><m:mi>S</m:mi><m:mn>0</m:mn></m:msup></m:math> coincides
+with the interior of <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+i.e., the set of all points in the interior of <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+HINT: Suppose <m:math overflow="scroll"><m:mrow><m:mi>a</m:mi><m:mo>&lt;</m:mo><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mi>b</m:mi></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>l</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>&lt;</m:mo><m:mi>y</m:mi><m:mo>&lt;</m:mo><m:mi>u</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Begin by showing that, because both <m:math overflow="scroll"><m:mi>l</m:mi></m:math> and <m:math overflow="scroll"><m:mi>u</m:mi></m:math> are continuous,
+there must exist an <m:math overflow="scroll"><m:mrow><m:mi>ϵ</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn></m:mrow></m:math> and a <m:math overflow="scroll"><m:mrow><m:mi>δ</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn></m:mrow></m:math> such that
+<m:math overflow="scroll"><m:mrow><m:mi>a</m:mi><m:mo>&lt;</m:mo><m:mi>x</m:mi><m:mo>-</m:mo><m:mi>δ</m:mi><m:mo>&lt;</m:mo><m:mi>x</m:mi><m:mo>+</m:mo><m:mi>δ</m:mi><m:mo>&lt;</m:mo><m:mi>b</m:mi></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>l</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>&lt;</m:mo><m:mi>y</m:mi><m:mo>-</m:mo><m:mi>ϵ</m:mi><m:mo>&lt;</m:mo><m:mi>y</m:mi><m:mo>+</m:mo><m:mi>ϵ</m:mi><m:mo>&lt;</m:mo><m:mi>u</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math></item>
+    </list>
+</problem></exercise>
+    <para id="id64802">Now, given a geometric set <m:math overflow="scroll"><m:mi>S</m:mi></m:math> (either open or closed),
+that is determined by an interval <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow></m:math> and two bounding functions <m:math overflow="scroll"><m:mi>u</m:mi></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>l</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+let <m:math overflow="scroll"><m:mrow><m:mi>P</m:mi><m:mo>=</m:mo><m:mo>{</m:mo><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub><m:mo>&lt;</m:mo><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>&lt;</m:mo><m:mo>...</m:mo><m:mo>&lt;</m:mo><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> be a partition of <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+For each <m:math overflow="scroll"><m:mrow><m:mn>1</m:mn><m:mo>≤</m:mo><m:mi>i</m:mi><m:mo>≤</m:mo><m:mi>n</m:mi><m:mo>,</m:mo></m:mrow></m:math> define numbers <m:math overflow="scroll"><m:msub><m:mi>c</m:mi><m:mi>i</m:mi></m:msub></m:math> and <m:math overflow="scroll"><m:msub><m:mi>d</m:mi><m:mi>i</m:mi></m:msub></m:math> as follows:</para>
+    <equation id="id64974">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:msub>
+            <m:mi>c</m:mi>
+            <m:mi>i</m:mi>
+          </m:msub>
+          <m:mo>=</m:mo>
+          <m:munder>
+            <m:mo movablelimits="true" form="prefix">sup</m:mo>
+            <m:mrow>
+              <m:msub>
+                <m:mi>x</m:mi>
+                <m:mrow>
+                  <m:mi>i</m:mi>
+                  <m:mo>-</m:mo>
+                  <m:mn>1</m:mn>
+                </m:mrow>
+              </m:msub>
+              <m:mo>&lt;</m:mo>
+              <m:mi>x</m:mi>
+              <m:mo>&lt;</m:mo>
+              <m:msub>
+                <m:mi>x</m:mi>
+                <m:mi>i</m:mi>
+              </m:msub>
+            </m:mrow>
+          </m:munder>
+          <m:mi>l</m:mi>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>x</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>,</m:mo>
+          <m:mspace width="4.pt"/>
+          <m:mtext>and</m:mtext>
+          <m:mspace width="4.pt"/>
+          <m:msub>
+            <m:mi>d</m:mi>
+            <m:mi>i</m:mi>
+          </m:msub>
+          <m:mo>=</m:mo>
+          <m:munder>
+            <m:mo movablelimits="true" form="prefix">inf</m:mo>
+            <m:mrow>
+              <m:msub>
+                <m:mi>x</m:mi>
+                <m:mrow>
+                  <m:mi>i</m:mi>
+                  <m:mo>-</m:mo>
+                  <m:mn>1</m:mn>
+                </m:mrow>
+              </m:msub>
+              <m:mo>&lt;</m:mo>
+              <m:mi>x</m:mi>
+              <m:mo>&lt;</m:mo>
+              <m:msub>
+                <m:mi>x</m:mi>
+                <m:mi>i</m:mi>
+              </m:msub>
+            </m:mrow>
+          </m:munder>
+          <m:mi>u</m:mi>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>x</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>.</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id65111">Because the functions <m:math overflow="scroll"><m:mi>l</m:mi></m:math> and <m:math overflow="scroll"><m:mi>u</m:mi></m:math> are continuous, they are
+necessarily bounded, so that the supremum and infimum above are real numbers.
+For each <m:math overflow="scroll"><m:mrow><m:mn>1</m:mn><m:mo>≤</m:mo><m:mi>i</m:mi><m:mo>≤</m:mo><m:mi>n</m:mi></m:mrow></m:math> define <m:math overflow="scroll"><m:msub><m:mi>R</m:mi><m:mi>i</m:mi></m:msub></m:math> to be the open rectangle <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>(</m:mo><m:msub><m:mi>x</m:mi><m:mrow><m:mi>i</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mi>i</m:mi></m:msub><m:mo>)</m:mo></m:mrow><m:mo>×</m:mo><m:mrow><m:mo>(</m:mo><m:msub><m:mi>c</m:mi><m:mi>i</m:mi></m:msub><m:mo>,</m:mo><m:msub><m:mi>d</m:mi><m:mi>i</m:mi></m:msub><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math>
+Of course, <m:math overflow="scroll"><m:msub><m:mi>d</m:mi><m:mi>i</m:mi></m:msub></m:math> may be <m:math overflow="scroll"><m:mrow><m:mo>&lt;</m:mo><m:msub><m:mi>c</m:mi><m:mi>i</m:mi></m:msub><m:mo>,</m:mo></m:mrow></m:math> in which case
+the rectangle <m:math overflow="scroll"><m:msub><m:mi>R</m:mi><m:mi>i</m:mi></m:msub></m:math> is the empty set.
+In any event, we see that the partition <m:math overflow="scroll"><m:mi>P</m:mi></m:math> determines a finite set of (possibly empty) rectangles <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>R</m:mi><m:mi>i</m:mi></m:msub><m:mo>}</m:mo><m:mo>,</m:mo></m:mrow></m:math>
+and we denote the union of these rectangles by the symbol <m:math overflow="scroll"><m:mrow><m:msub><m:mi mathvariant="script">C</m:mi><m:mi>P</m:mi></m:msub><m:mo>.</m:mo><m:mo>=</m:mo><m:msubsup><m:mo>∪</m:mo><m:mrow><m:mi>i</m:mi><m:mo>=</m:mo><m:mn>1</m:mn></m:mrow><m:mi>n</m:mi></m:msubsup><m:mrow><m:mo>(</m:mo><m:msub><m:mi>x</m:mi><m:mrow><m:mi>i</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mi>i</m:mi></m:msub><m:mo>)</m:mo></m:mrow><m:mo>×</m:mo><m:mrow><m:mo>(</m:mo><m:msub><m:mi>c</m:mi><m:mi>i</m:mi></m:msub><m:mo>,</m:mo><m:msub><m:mi>d</m:mi><m:mi>i</m:mi></m:msub><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></para>
+    <para id="id65403">The area of the rectangle <m:math overflow="scroll"><m:msub><m:mi>R</m:mi><m:mi>i</m:mi></m:msub></m:math> is <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>(</m:mo><m:msub><m:mi>x</m:mi><m:mi>i</m:mi></m:msub><m:mo>-</m:mo><m:msub><m:mi>x</m:mi><m:mrow><m:mi>i</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>)</m:mo></m:mrow><m:mrow><m:mo>(</m:mo><m:msub><m:mi>d</m:mi><m:mi>i</m:mi></m:msub><m:mo>-</m:mo><m:msub><m:mi>c</m:mi><m:mi>i</m:mi></m:msub><m:mo>)</m:mo></m:mrow></m:mrow></m:math> if <m:math overflow="scroll"><m:mrow><m:msub><m:mi>c</m:mi><m:mi>i</m:mi></m:msub><m:mo>&lt;</m:mo><m:msub><m:mi>d</m:mi><m:mi>i</m:mi></m:msub></m:mrow></m:math> and 0 otherwise.
+We may write in general that <m:math overflow="scroll"><m:mrow><m:mi>A</m:mi><m:mrow><m:mo>(</m:mo><m:msub><m:mi>R</m:mi><m:mi>i</m:mi></m:msub><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mrow><m:mo>(</m:mo><m:msub><m:mi>x</m:mi><m:mi>i</m:mi></m:msub><m:mo>-</m:mo><m:msub><m:mi>x</m:mi><m:mrow><m:mi>i</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>)</m:mo></m:mrow><m:mo movablelimits="true" form="prefix">max</m:mo><m:mrow><m:mo>(</m:mo><m:mrow><m:mo>(</m:mo><m:msub><m:mi>d</m:mi><m:mi>i</m:mi></m:msub><m:mo>-</m:mo><m:msub><m:mi>c</m:mi><m:mi>i</m:mi></m:msub><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo><m:mn>0</m:mn><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math>
+Define the number <m:math overflow="scroll"><m:msub><m:mi>A</m:mi><m:mi>P</m:mi></m:msub></m:math> by</para>
+    <equation id="id65612">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:msub>
+            <m:mi>A</m:mi>
+            <m:mi>P</m:mi>
+          </m:msub>
+          <m:mo>=</m:mo>
+          <m:munderover>
+            <m:mo>∑</m:mo>
+            <m:mrow>
+              <m:mi>i</m:mi>
+              <m:mo>=</m:mo>
+              <m:mn>1</m:mn>
+            </m:mrow>
+            <m:mi>n</m:mi>
+          </m:munderover>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:msub>
+              <m:mi>x</m:mi>
+              <m:mi>i</m:mi>
+            </m:msub>
+            <m:mo>-</m:mo>
+            <m:msub>
+              <m:mi>x</m:mi>
+              <m:mrow>
+                <m:mi>i</m:mi>
+                <m:mo>-</m:mo>
+                <m:mn>1</m:mn>
+              </m:mrow>
+            </m:msub>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:msub>
+              <m:mi>d</m:mi>
+              <m:mi>i</m:mi>
+            </m:msub>
+            <m:mo>-</m:mo>
+            <m:msub>
+              <m:mi>c</m:mi>
+              <m:mi>i</m:mi>
+            </m:msub>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>.</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id65699">Note that <m:math overflow="scroll"><m:msub><m:mi>A</m:mi><m:mi>P</m:mi></m:msub></m:math> is not exactly the sum of the areas of the rectangles determined by <m:math overflow="scroll"><m:mi>P</m:mi></m:math>
+because it may happen that <m:math overflow="scroll"><m:mrow><m:msub><m:mi>d</m:mi><m:mi>i</m:mi></m:msub><m:mo>&lt;</m:mo><m:msub><m:mi>c</m:mi><m:mi>i</m:mi></m:msub></m:mrow></m:math> for some <m:math overflow="scroll"><m:mi>i</m:mi></m:math>'s, so that those terms in the sum would be negative.
+In any case, it is clear that <m:math overflow="scroll"><m:msub><m:mi>A</m:mi><m:mi>P</m:mi></m:msub></m:math> is less than or equal to the sum of the areas of the rectangles,
+and this notation simplifies matters later.</para>
+    <para id="id65778">For any partition <m:math overflow="scroll"><m:mrow><m:mi>P</m:mi><m:mo>,</m:mo></m:mrow></m:math> we have
+<m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>⊇</m:mo><m:msub><m:mi mathvariant="script">C</m:mi><m:mi>P</m:mi></m:msub><m:mo>,</m:mo></m:mrow></m:math>
+so that, if <m:math overflow="scroll"><m:mrow><m:mi>A</m:mi><m:mo>(</m:mo><m:mi>S</m:mi><m:mo>)</m:mo></m:mrow></m:math> is to denote the area of <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>,</m:mo></m:mrow></m:math> we want to have</para>
+    <equation id="uid8">
+      <m:math overflow="scroll" mode="display">
+        <m:mtable displaystyle="true">
+          <m:mtr>
+            <m:mtd columnalign="right">
+              <m:mrow>
+                <m:mi>A</m:mi>
+                <m:mo>(</m:mo>
+                <m:mi>S</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+            </m:mtd>
+            <m:mtd>
+              <m:mo>≥</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:munderover>
+                  <m:mo>∑</m:mo>
+                  <m:mrow>
+                    <m:mi>i</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                  <m:mi>n</m:mi>
+                </m:munderover>
+                <m:mi>A</m:mi>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:msub>
+                    <m:mi>R</m:mi>
+                    <m:mi>i</m:mi>
+                  </m:msub>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:munderover>
+                  <m:mo>∑</m:mo>
+                  <m:mrow>
+                    <m:mi>i</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                  <m:mi>n</m:mi>
+                </m:munderover>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:msub>
+                    <m:mi>x</m:mi>
+                    <m:mi>i</m:mi>
+                  </m:msub>
+                  <m:mo>-</m:mo>
+                  <m:msub>
+                    <m:mi>x</m:mi>
+                    <m:mrow>
+                      <m:mi>i</m:mi>
+                      <m:mo>-</m:mo>
+                      <m:mn>1</m:mn>
+                    </m:mrow>
+                  </m:msub>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mo movablelimits="true" form="prefix">max</m:mo>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:msub>
+                      <m:mi>d</m:mi>
+                      <m:mi>i</m:mi>
+                    </m:msub>
+                    <m:mo>-</m:mo>
+                    <m:msub>
+                      <m:mi>c</m:mi>
+                      <m:mi>i</m:mi>
+                    </m:msub>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>,</m:mo>
+                  <m:mn>0</m:mn>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>≥</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:munderover>
+                  <m:mo>∑</m:mo>
+                  <m:mrow>
+                    <m:mi>i</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                  <m:mi>n</m:mi>
+                </m:munderover>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:msub>
+                    <m:mi>x</m:mi>
+                    <m:mi>i</m:mi>
+                  </m:msub>
+                  <m:mo>-</m:mo>
+                  <m:msub>
+                    <m:mi>x</m:mi>
+                    <m:mrow>
+                      <m:mi>i</m:mi>
+                      <m:mo>-</m:mo>
+                      <m:mn>1</m:mn>
+                    </m:mrow>
+                  </m:msub>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:msub>
+                    <m:mi>d</m:mi>
+                    <m:mi>i</m:mi>
+                  </m:msub>
+                  <m:mo>-</m:mo>
+                  <m:msub>
+                    <m:mi>c</m:mi>
+                    <m:mi>i</m:mi>
+                  </m:msub>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:msub>
+                  <m:mi>A</m:mi>
+                  <m:mi>P</m:mi>
+                </m:msub>
+                <m:mo>.</m:mo>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+        </m:mtable>
+      </m:math>
+    </equation>
+<definition id="fs-id1171186110276"><term/><meaning id="fs-id8524778">
+    <para id="id66104">
+Let <m:math overflow="scroll"><m:mi>S</m:mi></m:math> be a geometric set (either open or closed),
+bounded on the left by <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mi>a</m:mi><m:mo>,</m:mo></m:mrow></m:math> on the right by <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mi>b</m:mi><m:mo>,</m:mo></m:mrow></m:math> below by the graph of <m:math overflow="scroll"><m:mrow><m:mi>l</m:mi><m:mo>,</m:mo></m:mrow></m:math> and above by the graph of <m:math overflow="scroll"><m:mrow><m:mi>u</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Define the <emphasis effect="italics">area</emphasis><m:math overflow="scroll"><m:mrow><m:mi>A</m:mi><m:mo>(</m:mo><m:mi>S</m:mi><m:mo>)</m:mo></m:mrow></m:math> of <m:math overflow="scroll"><m:mi>S</m:mi></m:math> by</para>
+    <equation id="id66209">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mi>A</m:mi>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>S</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>=</m:mo>
+          <m:munder>
+            <m:mo movablelimits="true" form="prefix">sup</m:mo>
+            <m:mi>P</m:mi>
+          </m:munder>
+          <m:msub>
+            <m:mi>A</m:mi>
+            <m:mi>P</m:mi>
+          </m:msub>
+          <m:mo>=</m:mo>
+          <m:munder>
+            <m:mo movablelimits="true" form="prefix">sup</m:mo>
+            <m:mrow>
+              <m:mi>P</m:mi>
+              <m:mo>=</m:mo>
+              <m:mo>{</m:mo>
+              <m:msub>
+                <m:mi>x</m:mi>
+                <m:mn>0</m:mn>
+              </m:msub>
+              <m:mo>&lt;</m:mo>
+              <m:msub>
+                <m:mi>x</m:mi>
+                <m:mn>1</m:mn>
+              </m:msub>
+              <m:mo>&lt;</m:mo>
+              <m:mo>...</m:mo>
+              <m:mo>&lt;</m:mo>
+              <m:msub>
+                <m:mi>x</m:mi>
+                <m:mi>n</m:mi>
+              </m:msub>
+              <m:mo>}</m:mo>
+            </m:mrow>
+          </m:munder>
+          <m:munderover>
+            <m:mo>∑</m:mo>
+            <m:mrow>
+              <m:mi>i</m:mi>
+              <m:mo>=</m:mo>
+              <m:mn>1</m:mn>
+            </m:mrow>
+            <m:mi>n</m:mi>
+          </m:munderover>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:msub>
+              <m:mi>x</m:mi>
+              <m:mi>i</m:mi>
+            </m:msub>
+            <m:mo>-</m:mo>
+            <m:msub>
+              <m:mi>x</m:mi>
+              <m:mrow>
+                <m:mi>i</m:mi>
+                <m:mo>-</m:mo>
+                <m:mn>1</m:mn>
+              </m:mrow>
+            </m:msub>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:msub>
+              <m:mi>d</m:mi>
+              <m:mi>i</m:mi>
+            </m:msub>
+            <m:mo>-</m:mo>
+            <m:msub>
+              <m:mi>c</m:mi>
+              <m:mi>i</m:mi>
+            </m:msub>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>,</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id66372">where the supremum is taken over all partitions <m:math overflow="scroll"><m:mi>P</m:mi></m:math> of <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>,</m:mo></m:mrow></m:math>
+and where the numbers <m:math overflow="scroll"><m:msub><m:mi>c</m:mi><m:mi>i</m:mi></m:msub></m:math> and <m:math overflow="scroll"><m:msub><m:mi>d</m:mi><m:mi>i</m:mi></m:msub></m:math> are as defined above.</para>
+</meaning></definition>
+<exercise id="fs-id7329930"><problem id="fs-id1171194153564">
+    <list id="id66447" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid9"> Using the notation of the preceding paragraphs, show that
+each rectangle <m:math overflow="scroll"><m:msub><m:mi>R</m:mi><m:mi>i</m:mi></m:msub></m:math> is a subset of the set <m:math overflow="scroll"><m:mi>S</m:mi></m:math>
+and that <m:math overflow="scroll"><m:mrow><m:msub><m:mi>R</m:mi><m:mi>i</m:mi></m:msub><m:mo>∩</m:mo><m:msub><m:mi>R</m:mi><m:mi>j</m:mi></m:msub><m:mo>=</m:mo><m:mi>∅</m:mi></m:mrow></m:math> if <m:math overflow="scroll"><m:mrow><m:mi>i</m:mi><m:mo>≠</m:mo><m:mi>j</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+It may help to draw a picture of the set <m:math overflow="scroll"><m:mi>S</m:mi></m:math> and the rectangles <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>R</m:mi><m:mi>i</m:mi></m:msub><m:mo>}</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Can you draw one so that <m:math overflow="scroll"><m:mrow><m:msub><m:mi>d</m:mi><m:mi>i</m:mi></m:msub><m:mo>&lt;</m:mo><m:msub><m:mi>c</m:mi><m:mi>i</m:mi></m:msub><m:mo>?</m:mo></m:mrow></m:math></item>
+      <item id="uid10"> Suppose <m:math overflow="scroll"><m:msub><m:mi>S</m:mi><m:mn>1</m:mn></m:msub></m:math> is a geometric set and that <m:math overflow="scroll"><m:msub><m:mi>S</m:mi><m:mn>2</m:mn></m:msub></m:math>
+is another geometric set that is contained in <m:math overflow="scroll"><m:mrow><m:msub><m:mi>S</m:mi><m:mn>1</m:mn></m:msub><m:mo>.</m:mo></m:mrow></m:math>
+Prove that <m:math overflow="scroll"><m:mrow><m:mi>A</m:mi><m:mrow><m:mo>(</m:mo><m:msub><m:mi>S</m:mi><m:mn>2</m:mn></m:msub><m:mo>)</m:mo></m:mrow><m:mo>≤</m:mo><m:mi>A</m:mi><m:mrow><m:mo>(</m:mo><m:msub><m:mi>S</m:mi><m:mn>1</m:mn></m:msub><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math>
+HINT: For each partition <m:math overflow="scroll"><m:mrow><m:mi>P</m:mi><m:mo>,</m:mo></m:mrow></m:math> compare the two <m:math overflow="scroll"><m:msub><m:mi>A</m:mi><m:mi>P</m:mi></m:msub></m:math>'s.
+
+</item>
+    </list>
+</problem></exercise>
+<exercise id="fs-id1171201916628"><problem id="fs-id1171192581151">
+    <para id="id66728"> Let <m:math overflow="scroll"><m:mi>T</m:mi></m:math> be the triangle in the plane with
+vertices at the three points
+<m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>0</m:mn><m:mo>)</m:mo><m:mo>,</m:mo><m:mo>(</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mi>H</m:mi><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>B</m:mi><m:mo>,</m:mo><m:mn>0</m:mn><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Show that the area <m:math overflow="scroll"><m:mrow><m:mi>A</m:mi><m:mo>(</m:mo><m:mi>T</m:mi><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math> as defined above, agrees with the formula <m:math overflow="scroll"><m:mrow><m:mi>A</m:mi><m:mo>=</m:mo><m:mo>(</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mn>2</m:mn><m:mo>)</m:mo><m:mi>B</m:mi><m:mi>H</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+where <m:math overflow="scroll"><m:mi>B</m:mi></m:math> is the base and <m:math overflow="scroll"><m:mi>H</m:mi></m:math> is the height.</para>
+</problem></exercise>
+    <para id="id66866">The next theorem gives the connection between area (geometry)
+and integration (analysis).
+In fact, this theorem is what most calculus students think integration is all about.</para>
+<rule id="fs-id1171200752882" type="theorem"><statement id="fs-id1171189383598">
+    <para id="id66872">
+Let <m:math overflow="scroll"><m:mi>S</m:mi></m:math> be a geometric set, i.e., a subset of <m:math overflow="scroll"><m:msup><m:mrow><m:mi>R</m:mi></m:mrow><m:mn>2</m:mn></m:msup></m:math> that is determined in the above manner by
+a closed bounded interval <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow></m:math> and two bounding functions <m:math overflow="scroll"><m:mi>l</m:mi></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>u</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Then</para>
+    <equation id="id66952">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mi>A</m:mi>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>S</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>=</m:mo>
+          <m:msubsup>
+            <m:mo>∫</m:mo>
+            <m:mi>a</m:mi>
+            <m:mi>b</m:mi>
+          </m:msubsup>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>u</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>x</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>-</m:mo>
+            <m:mi>l</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>x</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mspace width="0.166667em"/>
+          <m:mi>d</m:mi>
+          <m:mi>x</m:mi>
+          <m:mo>.</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+</statement>
+<proof id="fs-id1171191299307">
+    <para id="id67020">
+Let <m:math overflow="scroll"><m:mrow><m:mi>P</m:mi><m:mo>=</m:mo><m:mo>{</m:mo><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub><m:mo>&lt;</m:mo><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>&lt;</m:mo><m:mo>...</m:mo><m:mo>&lt;</m:mo><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> be a partition of <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>,</m:mo></m:mrow></m:math>
+and let <m:math overflow="scroll"><m:msub><m:mi>c</m:mi><m:mi>i</m:mi></m:msub></m:math> and <m:math overflow="scroll"><m:msub><m:mi>d</m:mi><m:mi>i</m:mi></m:msub></m:math> be defined as above.
+Let <m:math overflow="scroll"><m:mi>h</m:mi></m:math> be a step function that equals <m:math overflow="scroll"><m:msub><m:mi>d</m:mi><m:mi>i</m:mi></m:msub></m:math> on the open interval
+<m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:msub><m:mi>x</m:mi><m:mrow><m:mi>i</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mi>i</m:mi></m:msub><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math> and let <m:math overflow="scroll"><m:mi>k</m:mi></m:math> be a step function that equals
+<m:math overflow="scroll"><m:msub><m:mi>c</m:mi><m:mi>i</m:mi></m:msub></m:math> on the open interval <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:msub><m:mi>x</m:mi><m:mrow><m:mi>i</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mi>i</m:mi></m:msub><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Then on each open interval <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:msub><m:mi>x</m:mi><m:mrow><m:mi>i</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mi>i</m:mi></m:msub><m:mo>)</m:mo></m:mrow></m:math> we have <m:math overflow="scroll"><m:mrow><m:mi>h</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>≤</m:mo><m:mi>u</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:math>
+and <m:math overflow="scroll"><m:mrow><m:mi>k</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>≥</m:mo><m:mi>l</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Complete the definitions of <m:math overflow="scroll"><m:mi>h</m:mi></m:math> and <m:math overflow="scroll"><m:mi>k</m:mi></m:math> by defining them at the partition points
+so that <m:math overflow="scroll"><m:mrow><m:mi>h</m:mi><m:mrow><m:mo>(</m:mo><m:msub><m:mi>x</m:mi><m:mi>i</m:mi></m:msub><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>k</m:mi><m:mrow><m:mo>(</m:mo><m:msub><m:mi>x</m:mi><m:mi>i</m:mi></m:msub><m:mo>)</m:mo></m:mrow></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>i</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Then we have that <m:math overflow="scroll"><m:mrow><m:mi>h</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>-</m:mo><m:mi>k</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>≤</m:mo><m:mi>u</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>-</m:mo><m:mi>l</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Hence,</para>
+    <equation id="id67480">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:msub>
+            <m:mi>A</m:mi>
+            <m:mi>P</m:mi>
+          </m:msub>
+          <m:mo>=</m:mo>
+          <m:munderover>
+            <m:mo>∑</m:mo>
+            <m:mrow>
+              <m:mi>i</m:mi>
+              <m:mo>=</m:mo>
+              <m:mn>1</m:mn>
+            </m:mrow>
+            <m:mi>n</m:mi>
+          </m:munderover>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:msub>
+              <m:mi>x</m:mi>
+              <m:mi>i</m:mi>
+            </m:msub>
+            <m:mo>-</m:mo>
+            <m:msub>
+              <m:mi>x</m:mi>
+              <m:mrow>
+                <m:mi>i</m:mi>
+                <m:mo>-</m:mo>
+                <m:mn>1</m:mn>
+              </m:mrow>
+            </m:msub>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:msub>
+              <m:mi>d</m:mi>
+              <m:mi>i</m:mi>
+            </m:msub>
+            <m:mo>-</m:mo>
+            <m:msub>
+              <m:mi>c</m:mi>
+              <m:mi>i</m:mi>
+            </m:msub>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>=</m:mo>
+          <m:msubsup>
+            <m:mo>∫</m:mo>
+            <m:mi>a</m:mi>
+            <m:mi>b</m:mi>
+          </m:msubsup>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>h</m:mi>
+            <m:mo>-</m:mo>
+            <m:mi>k</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>≤</m:mo>
+          <m:msubsup>
+            <m:mo>∫</m:mo>
+            <m:mi>a</m:mi>
+            <m:mi>b</m:mi>
+          </m:msubsup>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>u</m:mi>
+            <m:mo>-</m:mo>
+            <m:mi>l</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>.</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id67618">Since this is true for every partition <m:math overflow="scroll"><m:mi>P</m:mi></m:math> of <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>,</m:mo></m:mrow></m:math>
+it follows by taking the supremum over all partitions <m:math overflow="scroll"><m:mi>P</m:mi></m:math> that</para>
+    <equation id="id67662">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mi>A</m:mi>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>S</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>=</m:mo>
+          <m:munder>
+            <m:mo movablelimits="true" form="prefix">sup</m:mo>
+            <m:mi>P</m:mi>
+          </m:munder>
+          <m:msub>
+            <m:mi>A</m:mi>
+            <m:mi>P</m:mi>
+          </m:msub>
+          <m:mo>≤</m:mo>
+          <m:msubsup>
+            <m:mo>∫</m:mo>
+            <m:mi>a</m:mi>
+            <m:mi>b</m:mi>
+          </m:msubsup>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>u</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>x</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>-</m:mo>
+            <m:mi>l</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>x</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mspace width="0.166667em"/>
+          <m:mi>d</m:mi>
+          <m:mi>x</m:mi>
+          <m:mo>,</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id67753">which proves half of the theorem;
+i.e., that <m:math overflow="scroll"><m:mrow><m:mi>A</m:mi><m:mrow><m:mo>(</m:mo><m:mi>S</m:mi><m:mo>)</m:mo></m:mrow><m:mo>≤</m:mo><m:msubsup><m:mo>∫</m:mo><m:mi>a</m:mi><m:mi>b</m:mi></m:msubsup><m:mi>u</m:mi><m:mo>-</m:mo><m:mi>l</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+    <para id="id67797">To see the other inequality, let <m:math overflow="scroll"><m:mi>h</m:mi></m:math> be any step function on <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow></m:math> for which <m:math overflow="scroll"><m:mrow><m:mi>h</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>≤</m:mo><m:mi>u</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+and let <m:math overflow="scroll"><m:mi>k</m:mi></m:math> be any step function for which <m:math overflow="scroll"><m:mrow><m:mi>k</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>≥</m:mo><m:mi>l</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Let <m:math overflow="scroll"><m:mrow><m:mi>P</m:mi><m:mo>=</m:mo><m:mo>{</m:mo><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub><m:mo>&lt;</m:mo><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>&lt;</m:mo><m:mo>...</m:mo><m:mo>&lt;</m:mo><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> be a partition of <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow></m:math> for which both <m:math overflow="scroll"><m:mi>h</m:mi></m:math> and <m:math overflow="scroll"><m:mi>k</m:mi></m:math> are constant on the open subintervals
+<m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:msub><m:mi>x</m:mi><m:mrow><m:mi>i</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mi>i</m:mi></m:msub><m:mo>)</m:mo></m:mrow></m:math> of <m:math overflow="scroll"><m:mrow><m:mi>P</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Let <m:math overflow="scroll"><m:mrow><m:msub><m:mi>a</m:mi><m:mn>1</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>a</m:mi><m:mn>2</m:mn></m:msub><m:mo>,</m:mo><m:mo>...</m:mo><m:mo>,</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:msub><m:mi>b</m:mi><m:mn>1</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>b</m:mi><m:mn>2</m:mn></m:msub><m:mo>,</m:mo><m:mo>...</m:mo><m:mo>,</m:mo><m:msub><m:mi>b</m:mi><m:mi>n</m:mi></m:msub></m:mrow></m:math>
+be the numbers such that
+<m:math overflow="scroll"><m:mrow><m:mi>h</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msub><m:mi>a</m:mi><m:mi>i</m:mi></m:msub></m:mrow></m:math> on <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:msub><m:mi>x</m:mi><m:mrow><m:mi>i</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mi>i</m:mi></m:msub><m:mo>)</m:mo></m:mrow></m:math>
+and <m:math overflow="scroll"><m:mrow><m:mi>k</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msub><m:mi>b</m:mi><m:mi>i</m:mi></m:msub></m:mrow></m:math> on <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:msub><m:mi>x</m:mi><m:mrow><m:mi>i</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mi>i</m:mi></m:msub><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+It follows, since <m:math overflow="scroll"><m:mrow><m:mi>h</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>≤</m:mo><m:mi>u</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>,</m:mo></m:mrow></m:math> that
+<m:math overflow="scroll"><m:mrow><m:msub><m:mi>a</m:mi><m:mi>i</m:mi></m:msub><m:mo>≤</m:mo><m:msub><m:mi>d</m:mi><m:mi>i</m:mi></m:msub><m:mo>.</m:mo></m:mrow></m:math> Also, it follows that <m:math overflow="scroll"><m:mrow><m:msub><m:mi>b</m:mi><m:mi>i</m:mi></m:msub><m:mo>≥</m:mo><m:msub><m:mi>c</m:mi><m:mi>i</m:mi></m:msub><m:mo>.</m:mo></m:mrow></m:math> Therefore,</para>
+    <equation id="id68342">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:msubsup>
+            <m:mo>∫</m:mo>
+            <m:mi>a</m:mi>
+            <m:mi>b</m:mi>
+          </m:msubsup>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>h</m:mi>
+            <m:mo>-</m:mo>
+            <m:mi>k</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>=</m:mo>
+          <m:munderover>
+            <m:mo>∑</m:mo>
+            <m:mrow>
+              <m:mi>i</m:mi>
+              <m:mo>=</m:mo>
+              <m:mn>1</m:mn>
+            </m:mrow>
+            <m:mi>n</m:mi>
+          </m:munderover>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:msub>
+              <m:mi>a</m:mi>
+              <m:mi>i</m:mi>
+            </m:msub>
+            <m:mo>-</m:mo>
+            <m:msub>
+              <m:mi>b</m:mi>
+              <m:mi>i</m:mi>
+            </m:msub>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:msub>
+              <m:mi>x</m:mi>
+              <m:mi>i</m:mi>
+            </m:msub>
+            <m:mo>-</m:mo>
+            <m:msub>
+              <m:mi>x</m:mi>
+              <m:mrow>
+                <m:mi>i</m:mi>
+                <m:mo>-</m:mo>
+                <m:mn>1</m:mn>
+              </m:mrow>
+            </m:msub>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>≤</m:mo>
+          <m:munderover>
+            <m:mo>∑</m:mo>
+            <m:mrow>
+              <m:mi>i</m:mi>
+              <m:mo>=</m:mo>
+              <m:mn>1</m:mn>
+            </m:mrow>
+            <m:mi>n</m:mi>
+          </m:munderover>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:msub>
+              <m:mi>x</m:mi>
+              <m:mi>i</m:mi>
+            </m:msub>
+            <m:mo>-</m:mo>
+            <m:msub>
+              <m:mi>x</m:mi>
+              <m:mrow>
+                <m:mi>i</m:mi>
+                <m:mo>-</m:mo>
+                <m:mn>1</m:mn>
+              </m:mrow>
+            </m:msub>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:msub>
+              <m:mi>d</m:mi>
+              <m:mi>i</m:mi>
+            </m:msub>
+            <m:mo>-</m:mo>
+            <m:msub>
+              <m:mi>c</m:mi>
+              <m:mi>i</m:mi>
+            </m:msub>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>=</m:mo>
+          <m:msub>
+            <m:mi>A</m:mi>
+            <m:mi>P</m:mi>
+          </m:msub>
+          <m:mo>≤</m:mo>
+          <m:mi>A</m:mi>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>S</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>.</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id68535">Finally, let <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>h</m:mi><m:mi>m</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> be a nondecreasing sequence of step functions that converges uniformly to <m:math overflow="scroll"><m:mrow><m:mi>u</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+and let <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>k</m:mi><m:mi>m</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> be a nonincreasing sequence of step functions that converges
+uniformly to <m:math overflow="scroll"><m:mrow><m:mi>l</m:mi><m:mo>.</m:mo></m:mrow></m:math> See part (d) of <link target-id="fs-id1170766144622" document="m36209"/>.
+Then</para>
+    <equation id="id68607">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:msubsup>
+            <m:mo>∫</m:mo>
+            <m:mi>a</m:mi>
+            <m:mi>b</m:mi>
+          </m:msubsup>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>u</m:mi>
+            <m:mo>-</m:mo>
+            <m:mi>l</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>=</m:mo>
+          <m:munder>
+            <m:mo movablelimits="true" form="prefix">lim</m:mo>
+            <m:mi>m</m:mi>
+          </m:munder>
+          <m:msubsup>
+            <m:mo>∫</m:mo>
+            <m:mi>a</m:mi>
+            <m:mi>b</m:mi>
+          </m:msubsup>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:msub>
+              <m:mi>h</m:mi>
+              <m:mi>m</m:mi>
+            </m:msub>
+            <m:mo>-</m:mo>
+            <m:msub>
+              <m:mi>k</m:mi>
+              <m:mi>m</m:mi>
+            </m:msub>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>≤</m:mo>
+          <m:mi>A</m:mi>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>S</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>,</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id68700">which proves the other half of the theorem.</para>
+</proof></rule>
+    <para id="id68706">OK! Trumpet fanfares, please!</para>
+<rule id="fs-id8011063" type="theorem"><statement id="fs-id1171192843608">
+    <para id="id68710"> (<m:math overflow="scroll"><m:mrow><m:mi>A</m:mi><m:mo>=</m:mo><m:mi>π</m:mi><m:msup><m:mi>r</m:mi><m:mn>2</m:mn></m:msup><m:mo>.</m:mo></m:mrow></m:math>)
+If <m:math overflow="scroll"><m:mi>S</m:mi></m:math> is a circle in the plane
+having radius <m:math overflow="scroll"><m:mrow><m:mi>r</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+then the area <m:math overflow="scroll"><m:mrow><m:mi>A</m:mi><m:mo>(</m:mo><m:mi>S</m:mi><m:mo>)</m:mo></m:mrow></m:math> of <m:math overflow="scroll"><m:mi>S</m:mi></m:math> is <m:math overflow="scroll"><m:mrow><m:mi>π</m:mi><m:msup><m:mi>r</m:mi><m:mn>2</m:mn></m:msup><m:mo>.</m:mo></m:mrow></m:math></para></statement>
+<proof id="fs-id1171188851210">
+    <para id="id68807">
+Suppose the center of the circle <m:math overflow="scroll"><m:mi>S</m:mi></m:math> is the point <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>h</m:mi><m:mo>,</m:mo><m:mi>k</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+This circle is a geometric set.
+In fact, we may describe the circle with center <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>h</m:mi><m:mo>,</m:mo><m:mi>k</m:mi><m:mo>)</m:mo></m:mrow></m:math> and radius <m:math overflow="scroll"><m:mi>r</m:mi></m:math>
+as the subset <m:math overflow="scroll"><m:mi>S</m:mi></m:math> of <m:math overflow="scroll"><m:msup><m:mrow><m:mi>R</m:mi></m:mrow><m:mn>2</m:mn></m:msup></m:math> determined by the closed
+bounded interval <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>h</m:mi><m:mo>-</m:mo><m:mi>r</m:mi><m:mo>,</m:mo><m:mi>h</m:mi><m:mo>+</m:mo><m:mi>r</m:mi><m:mo>]</m:mo></m:mrow></m:math> and the functions</para>
+    <equation id="id68931">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mi>u</m:mi>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>x</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>=</m:mo>
+          <m:mi>k</m:mi>
+          <m:mo>+</m:mo>
+          <m:msqrt>
+            <m:mrow>
+              <m:msup>
+                <m:mi>r</m:mi>
+                <m:mn>2</m:mn>
+              </m:msup>
+              <m:mo>-</m:mo>
+              <m:msup>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>x</m:mi>
+                  <m:mo>-</m:mo>
+                  <m:mi>h</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mn>2</m:mn>
+              </m:msup>
+            </m:mrow>
+          </m:msqrt>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id68986">and</para>
+    <equation id="id68991">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mi>l</m:mi>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>x</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>=</m:mo>
+          <m:mi>k</m:mi>
+          <m:mo>-</m:mo>
+          <m:msqrt>
+            <m:mrow>
+              <m:msup>
+                <m:mi>r</m:mi>
+                <m:mn>2</m:mn>
+              </m:msup>
+              <m:mo>-</m:mo>
+              <m:msup>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>x</m:mi>
+                  <m:mo>-</m:mo>
+                  <m:mi>h</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mn>2</m:mn>
+              </m:msup>
+            </m:mrow>
+          </m:msqrt>
+          <m:mo>.</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id69048">By the preceding theorem, we then have that</para>
+    <equation id="id69054">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mi>A</m:mi>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>S</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>=</m:mo>
+          <m:msubsup>
+            <m:mo>∫</m:mo>
+            <m:mrow>
+              <m:mi>h</m:mi>
+              <m:mo>-</m:mo>
+              <m:mi>r</m:mi>
+            </m:mrow>
+            <m:mrow>
+              <m:mi>h</m:mi>
+              <m:mo>+</m:mo>
+              <m:mi>r</m:mi>
+            </m:mrow>
+          </m:msubsup>
+          <m:mn>2</m:mn>
+          <m:msqrt>
+            <m:mrow>
+              <m:msup>
+                <m:mi>r</m:mi>
+                <m:mn>2</m:mn>
+              </m:msup>
+              <m:mo>-</m:mo>
+              <m:msup>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>x</m:mi>
+                  <m:mo>-</m:mo>
+                  <m:mi>h</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mn>2</m:mn>
+              </m:msup>
+            </m:mrow>
+          </m:msqrt>
+          <m:mspace width="0.166667em"/>
+          <m:mi>d</m:mi>
+          <m:mi>x</m:mi>
+          <m:mo>=</m:mo>
+          <m:mi>π</m:mi>
+          <m:msup>
+            <m:mi>r</m:mi>
+            <m:mn>2</m:mn>
+          </m:msup>
+          <m:mo>.</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id69149">We leave the verification of the last equality to the following exercise.</para>
+</proof></rule>
+<exercise id="fs-id1171192041142"><problem id="fs-id1171194961928">
+    <para id="id69155"> Evaluate the integral in the
+above proof:</para>
+    <equation id="id69168">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:msubsup>
+            <m:mo>∫</m:mo>
+            <m:mrow>
+              <m:mi>h</m:mi>
+              <m:mo>-</m:mo>
+              <m:mi>r</m:mi>
+            </m:mrow>
+            <m:mrow>
+              <m:mi>h</m:mi>
+              <m:mo>+</m:mo>
+              <m:mi>r</m:mi>
+            </m:mrow>
+          </m:msubsup>
+          <m:mn>2</m:mn>
+          <m:msqrt>
+            <m:mrow>
+              <m:msup>
+                <m:mi>r</m:mi>
+                <m:mn>2</m:mn>
+              </m:msup>
+              <m:mo>-</m:mo>
+              <m:msup>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>x</m:mi>
+                  <m:mo>-</m:mo>
+                  <m:mi>h</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mn>2</m:mn>
+              </m:msup>
+            </m:mrow>
+          </m:msqrt>
+          <m:mspace width="0.166667em"/>
+          <m:mi>d</m:mi>
+          <m:mi>x</m:mi>
+          <m:mo>.</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id69241">Be careful to explain each step by referring to
+theorems and exercises in this book.
+It may seem like an elementary calculus exercise, but we are justifying each step here.</para>
+</problem></exercise>
+<rule id="fs-id5652354"><label/><statement id="fs-id1171200880785">
+    <para id="id69247"><emphasis effect="bold">REMARK</emphasis>
+There is another formula for the area of a geometric set that
+is sometimes very useful. This formula gives the area in terms of a “double integral.”
+There is really nothing new to this formula; it simply
+makes use of the fact that the number (length) <m:math overflow="scroll"><m:mrow><m:mi>u</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>-</m:mo><m:mi>l</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:math>
+can be represented as the integral from <m:math overflow="scroll"><m:mrow><m:mi>l</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:math> to <m:math overflow="scroll"><m:mrow><m:mi>u</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:math> of the constant 1.
+Here's the formula:</para>
+    <equation id="id69321">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mi>A</m:mi>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>S</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>=</m:mo>
+          <m:msubsup>
+            <m:mo>∫</m:mo>
+            <m:mi>a</m:mi>
+            <m:mi>b</m:mi>
+          </m:msubsup>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:msubsup>
+              <m:mo>∫</m:mo>
+              <m:mrow>
+                <m:mi>l</m:mi>
+                <m:mo>(</m:mo>
+                <m:mi>x</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:mrow>
+                <m:mi>u</m:mi>
+                <m:mo>(</m:mo>
+                <m:mi>x</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+            </m:msubsup>
+            <m:mn>1</m:mn>
+            <m:mspace width="0.166667em"/>
+            <m:mi>d</m:mi>
+            <m:mi>y</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mspace width="0.166667em"/>
+          <m:mi>d</m:mi>
+          <m:mi>x</m:mi>
+          <m:mo>.</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+</statement></rule>
+    <para id="id69403">The next theorem is a result that justifies our definition of area by verifying that the whole is equal to the sum of its parts,
+something that any good definition of area should satisfy.</para>
+<rule id="fs-id1171193243390" type="theorem"><statement id="fs-id1171189035378">
+    <para id="id69408">
+Let <m:math overflow="scroll"><m:mi>S</m:mi></m:math> be a closed geometric set, and suppose
+<m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>=</m:mo><m:msubsup><m:mo>∪</m:mo><m:mrow><m:mi>i</m:mi><m:mo>=</m:mo><m:mn>1</m:mn></m:mrow><m:mi>n</m:mi></m:msubsup><m:msub><m:mi>S</m:mi><m:mi>i</m:mi></m:msub><m:mo>,</m:mo></m:mrow></m:math> where the sets <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>S</m:mi><m:mi>i</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> are closed geometric sets for which
+<m:math overflow="scroll"><m:mrow><m:msubsup><m:mi>S</m:mi><m:mi>i</m:mi><m:mn>0</m:mn></m:msubsup><m:mo>∩</m:mo><m:msubsup><m:mi>S</m:mi><m:mi>j</m:mi><m:mn>0</m:mn></m:msubsup><m:mo>=</m:mo><m:mi>∅</m:mi></m:mrow></m:math> if <m:math overflow="scroll"><m:mrow><m:mi>i</m:mi><m:mo>≠</m:mo><m:mi>j</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Then</para>
+    <equation id="id69536">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mi>A</m:mi>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>S</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>=</m:mo>
+          <m:munderover>
+            <m:mo>∑</m:mo>
+            <m:mrow>
+              <m:mi>i</m:mi>
+              <m:mo>=</m:mo>
+              <m:mn>1</m:mn>
+            </m:mrow>
+            <m:mi>n</m:mi>
+          </m:munderover>
+          <m:mi>A</m:mi>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:msub>
+              <m:mi>S</m:mi>
+              <m:mi>i</m:mi>
+            </m:msub>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>.</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+</statement>
+<proof id="fs-id1171186227774">
+    <para id="id69591">
+Suppose <m:math overflow="scroll"><m:mi>S</m:mi></m:math> is determined by the interval <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow></m:math> and the
+two bounding functions <m:math overflow="scroll"><m:mi>l</m:mi></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>u</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+and suppose <m:math overflow="scroll"><m:msub><m:mi>S</m:mi><m:mi>i</m:mi></m:msub></m:math> is determined by the interval <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:msub><m:mi>a</m:mi><m:mi>i</m:mi></m:msub><m:mo>,</m:mo><m:msub><m:mi>b</m:mi><m:mi>i</m:mi></m:msub><m:mo>]</m:mo></m:mrow></m:math> and the two bounding
+functions <m:math overflow="scroll"><m:msub><m:mi>l</m:mi><m:mi>i</m:mi></m:msub></m:math> and <m:math overflow="scroll"><m:mrow><m:msub><m:mi>u</m:mi><m:mi>i</m:mi></m:msub><m:mo>.</m:mo></m:mrow></m:math>
+Because <m:math overflow="scroll"><m:mrow><m:msub><m:mi>S</m:mi><m:mi>i</m:mi></m:msub><m:mo>⊆</m:mo><m:mi>S</m:mi><m:mo>,</m:mo></m:mrow></m:math> it must be that the interval <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:msub><m:mi>a</m:mi><m:mi>i</m:mi></m:msub><m:mo>,</m:mo><m:msub><m:mi>b</m:mi><m:mi>i</m:mi></m:msub><m:mo>]</m:mo></m:mrow></m:math> is contained in the interval <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Initially, the bounding functions <m:math overflow="scroll"><m:msub><m:mi>l</m:mi><m:mi>i</m:mi></m:msub></m:math> and <m:math overflow="scroll"><m:msub><m:mi>u</m:mi><m:mi>i</m:mi></m:msub></m:math> are defined and continuous on <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:msub><m:mi>a</m:mi><m:mi>i</m:mi></m:msub><m:mo>,</m:mo><m:msub><m:mi>b</m:mi><m:mi>i</m:mi></m:msub><m:mo>]</m:mo><m:mo>,</m:mo></m:mrow></m:math> and we
+extend their domain to all of <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow></m:math> by defining <m:math overflow="scroll"><m:mrow><m:msub><m:mi>l</m:mi><m:mi>i</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msub><m:mi>u</m:mi><m:mi>i</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo></m:mrow></m:math> that are not in <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:msub><m:mi>a</m:mi><m:mi>i</m:mi></m:msub><m:mo>,</m:mo><m:msub><m:mi>b</m:mi><m:mi>i</m:mi></m:msub><m:mo>]</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+The extended functions <m:math overflow="scroll"><m:msub><m:mi>l</m:mi><m:mi>i</m:mi></m:msub></m:math> and <m:math overflow="scroll"><m:msub><m:mi>u</m:mi><m:mi>i</m:mi></m:msub></m:math> may not be continuous on all of <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>,</m:mo></m:mrow></m:math> but they are still integrable on <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+(Why?)
+Notice that we now have the formula</para>
+    <equation id="id70041">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mi>A</m:mi>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:msub>
+              <m:mi>S</m:mi>
+              <m:mi>i</m:mi>
+            </m:msub>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>=</m:mo>
+          <m:msubsup>
+            <m:mo>∫</m:mo>
+            <m:mrow>
+              <m:msub>
+                <m:mi>a</m:mi>
+                <m:mi>i</m:mi>
+              </m:msub>
+            </m:mrow>
+            <m:msub>
+              <m:mi>b</m:mi>
+              <m:mi>i</m:mi>
+            </m:msub>
+          </m:msubsup>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:msub>
+              <m:mi>u</m:mi>
+              <m:mi>i</m:mi>
+            </m:msub>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>x</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>-</m:mo>
+            <m:msub>
+              <m:mi>l</m:mi>
+              <m:mi>i</m:mi>
+            </m:msub>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>x</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mspace width="0.166667em"/>
+          <m:mi>d</m:mi>
+          <m:mi>x</m:mi>
+          <m:mo>=</m:mo>
+          <m:msubsup>
+            <m:mo>∫</m:mo>
+            <m:mi>a</m:mi>
+            <m:mi>b</m:mi>
+          </m:msubsup>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:msub>
+              <m:mi>u</m:mi>
+              <m:mi>i</m:mi>
+            </m:msub>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>x</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>-</m:mo>
+            <m:msub>
+              <m:mi>l</m:mi>
+              <m:mi>i</m:mi>
+            </m:msub>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>x</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mspace width="0.166667em"/>
+          <m:mi>d</m:mi>
+          <m:mi>x</m:mi>
+          <m:mo>.</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id70194">Next, fix an <m:math overflow="scroll"><m:mi>x</m:mi></m:math> in the open interval <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math> We must have that the
+vertical intervals <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:msub><m:mi>l</m:mi><m:mi>i</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo><m:msub><m:mi>u</m:mi><m:mi>i</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>)</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:msub><m:mi>l</m:mi><m:mi>j</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo><m:msub><m:mi>u</m:mi><m:mi>j</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>)</m:mo></m:mrow></m:math> are disjoint if <m:math overflow="scroll"><m:mrow><m:mi>i</m:mi><m:mo>≠</m:mo><m:mi>j</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Otherwise, there would exist a point <m:math overflow="scroll"><m:mi>y</m:mi></m:math> in both intervals,
+and this would mean that the point <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>,</m:mo><m:mi>y</m:mi><m:mo>)</m:mo></m:mrow></m:math> would belong to both <m:math overflow="scroll"><m:msubsup><m:mi>S</m:mi><m:mi>i</m:mi><m:mn>0</m:mn></m:msubsup></m:math> and <m:math overflow="scroll"><m:mrow><m:msubsup><m:mi>S</m:mi><m:mi>j</m:mi><m:mn>0</m:mn></m:msubsup><m:mo>,</m:mo></m:mrow></m:math>
+which is impossible by hypothesis.
+Therefore, for each <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math> the intervals <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:mrow><m:mo>(</m:mo><m:msub><m:mi>l</m:mi><m:mi>i</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mo>)</m:mo></m:mrow><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo><m:msub><m:mi>u</m:mi><m:mi>i</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>)</m:mo><m:mo>}</m:mo></m:mrow></m:math> are pairwise disjoint
+open intervals, and they are all contained in the interval <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>l</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>,</m:mo><m:mi>u</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>)</m:mo><m:mo>,</m:mo></m:mrow></m:math> because the <m:math overflow="scroll"><m:msub><m:mi>S</m:mi><m:mi>i</m:mi></m:msub></m:math>'s are subsets of <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Hence, the sum of the lengths of the open intervals <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:mrow><m:mo>(</m:mo><m:msub><m:mi>l</m:mi><m:mi>i</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo><m:msub><m:mi>u</m:mi><m:mi>i</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>}</m:mo></m:mrow></m:math> is less than or equal to the length of <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>l</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>,</m:mo><m:mi>u</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Also, for any point <m:math overflow="scroll"><m:mi>y</m:mi></m:math> in the closed interval <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>l</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>,</m:mo><m:mi>u</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>]</m:mo><m:mo>,</m:mo></m:mrow></m:math> the point <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>,</m:mo><m:mi>y</m:mi><m:mo>)</m:mo></m:mrow></m:math> must belong to one of the
+<m:math overflow="scroll"><m:msub><m:mi>S</m:mi><m:mi>i</m:mi></m:msub></m:math>'s, implying that <m:math overflow="scroll"><m:mi>y</m:mi></m:math> is in the closed interval <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:msub><m:mi>l</m:mi><m:mi>i</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo><m:msub><m:mi>u</m:mi><m:mi>i</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>]</m:mo></m:mrow></m:math> for some <m:math overflow="scroll"><m:mrow><m:mi>i</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+But this means that the sum of the lengths of the closed intervals <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:msub><m:mi>l</m:mi><m:mi>i</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo><m:msub><m:mi>u</m:mi><m:mi>i</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>]</m:mo></m:mrow></m:math> is greater than or equal to the length of the interval <m:math overflow="scroll"><m:mrow><m:mo>[</m:mo><m:mi>l</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>,</m:mo><m:mi>u</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>]</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Since open intervals and closed intervals have the same length, we then
+see that <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>u</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>-</m:mo><m:mi>l</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msubsup><m:mo>∑</m:mo><m:mrow><m:mi>i</m:mi><m:mo>=</m:mo><m:mn>1</m:mn></m:mrow><m:mi>n</m:mi></m:msubsup><m:mrow><m:mo>(</m:mo><m:msub><m:mi>u</m:mi><m:mi>i</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>-</m:mo><m:msub><m:mi>l</m:mi><m:mi>i</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></para>
+    <para id="id70925">We now have the following calculation:</para>
+    <equation id="uid11">
+      <m:math overflow="scroll" mode="display">
+        <m:mtable displaystyle="true">
+          <m:mtr>
+            <m:mtd columnalign="right">
+              <m:mrow>
+                <m:munderover>
+                  <m:mo>∑</m:mo>
+                  <m:mrow>
+                    <m:mi>i</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                  <m:mi>n</m:mi>
+                </m:munderover>
+                <m:mi>A</m:mi>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:msub>
+                    <m:mi>S</m:mi>
+                    <m:mi>i</m:mi>
+                  </m:msub>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mtd>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:munderover>
+                  <m:mo>∑</m:mo>
+                  <m:mrow>
+                    <m:mi>i</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                  <m:mi>n</m:mi>
+                </m:munderover>
+                <m:msubsup>
+                  <m:mo>∫</m:mo>
+                  <m:mrow>
+                    <m:msub>
+                      <m:mi>a</m:mi>
+                      <m:mi>i</m:mi>
+                    </m:msub>
+                  </m:mrow>
+                  <m:msub>
+                    <m:mi>b</m:mi>
+                    <m:mi>i</m:mi>
+                  </m:msub>
+                </m:msubsup>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:msub>
+                    <m:mi>u</m:mi>
+                    <m:mi>i</m:mi>
+                  </m:msub>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>x</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>-</m:mo>
+                  <m:msub>
+                    <m:mi>l</m:mi>
+                    <m:mi>i</m:mi>
+                  </m:msub>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>x</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mspace width="0.166667em"/>
+                <m:mi>d</m:mi>
+                <m:mi>x</m:mi>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:munderover>
+                  <m:mo>∑</m:mo>
+                  <m:mrow>
+                    <m:mi>i</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                  <m:mi>n</m:mi>
+                </m:munderover>
+                <m:msubsup>
+                  <m:mo>∫</m:mo>
+                  <m:mi>a</m:mi>
+                  <m:mi>b</m:mi>
+                </m:msubsup>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:msub>
+                    <m:mi>u</m:mi>
+                    <m:mi>i</m:mi>
+                  </m:msub>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>x</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>-</m:mo>
+                  <m:msub>
+                    <m:mi>l</m:mi>
+                    <m:mi>i</m:mi>
+                  </m:msub>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>x</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mspace width="0.166667em"/>
+                <m:mi>d</m:mi>
+                <m:mi>x</m:mi>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:msubsup>
+                  <m:mo>∫</m:mo>
+                  <m:mi>a</m:mi>
+                  <m:mi>b</m:mi>
+                </m:msubsup>
+                <m:munderover>
+                  <m:mo>∑</m:mo>
+                  <m:mrow>
+                    <m:mi>i</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                  <m:mi>n</m:mi>
+                </m:munderover>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:msub>
+                    <m:mi>u</m:mi>
+                    <m:mi>i</m:mi>
+                  </m:msub>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>x</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>-</m:mo>
+                  <m:msub>
+                    <m:mi>l</m:mi>
+                    <m:mi>i</m:mi>
+                  </m:msub>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>x</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mspace width="0.166667em"/>
+                <m:mi>d</m:mi>
+                <m:mi>x</m:mi>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:msubsup>
+                  <m:mo>∫</m:mo>
+                  <m:mi>a</m:mi>
+                  <m:mi>b</m:mi>
+                </m:msubsup>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>u</m:mi>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>x</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>-</m:mo>
+                  <m:mi>l</m:mi>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>x</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mspace width="0.166667em"/>
+                <m:mi>d</m:mi>
+                <m:mi>x</m:mi>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mi>A</m:mi>
+                <m:mo>(</m:mo>
+                <m:mi>S</m:mi>
+                <m:mo>)</m:mo>
+                <m:mo>,</m:mo>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+        </m:mtable>
+      </m:math>
+    </equation>
+    <para id="id71312">which completes the proof.</para>
+</proof></rule>
+    <!--empty paragraphs get left behind.-->
+  </content>
+</document>

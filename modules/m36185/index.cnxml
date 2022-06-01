@@ -1,0 +1,316 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML">
+  <title>The Limit of a Function</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m36185</md:content-id>
+  <md:title>The Limit of a Function</md:title>
+  <md:abstract>The concept of the derivative of a function
+is what most people think of as the beginning of calculus.
+However, before we can even define the derivative we must introduce a kind of generalization of the notion of continuity.
+That is, we must begin
+with the definition of the limit of a function.</md:abstract>
+  <md:uuid>88d3f17e-4a27-4607-a092-978a718906f1</md:uuid>
+</metadata>
+
+<content>
+    <para id="id62159">The concept of the derivative of a function
+is what most people think of as the beginning of calculus.
+However, before we can even define the derivative we must introduce a kind of generalization of the notion of continuity.
+That is, we must begin
+with the definition of the limit of a function.</para>
+<definition id="fs-id1171011346434"><term/><meaning id="fs-id1171031795393">
+    <para id="id62166">
+Let <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>:</m:mo><m:mi>S</m:mi><m:mo>→</m:mo><m:mi>C</m:mi></m:mrow></m:math> be a function, where <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>⊆</m:mo><m:mi>C</m:mi><m:mo>,</m:mo></m:mrow></m:math> and let <m:math overflow="scroll"><m:mi>c</m:mi></m:math> be a limit point of <m:math overflow="scroll"><m:mi>S</m:mi></m:math>
+that is not necessarily an element of <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+We say that
+<m:math overflow="scroll"><m:mi>f</m:mi></m:math><emphasis effect="italics">has a limit L as z approaches c,</emphasis> and we write</para>
+    <equation id="id62599">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:munder>
+            <m:mo movablelimits="true" form="prefix">lim</m:mo>
+            <m:mrow>
+              <m:mi>z</m:mi>
+              <m:mo>→</m:mo>
+              <m:mi>c</m:mi>
+            </m:mrow>
+          </m:munder>
+          <m:mi>f</m:mi>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>z</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>=</m:mo>
+          <m:mi>L</m:mi>
+          <m:mo>,</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id62640">if for every <m:math overflow="scroll"><m:mrow><m:mi>ϵ</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn></m:mrow></m:math> there exists a <m:math overflow="scroll"><m:mrow><m:mi>δ</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn></m:mrow></m:math>
+such that
+if <m:math overflow="scroll"><m:mrow><m:mi>z</m:mi><m:mo>∈</m:mo><m:mi>S</m:mi></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mn>0</m:mn><m:mo>&lt;</m:mo><m:mo>|</m:mo><m:mi>z</m:mi><m:mo>-</m:mo><m:mi>c</m:mi><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mi>δ</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+then <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo><m:mo>-</m:mo><m:mi>L</m:mi><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mi>ϵ</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+    <para id="id62922">If the domain <m:math overflow="scroll"><m:mi>S</m:mi></m:math> is unbounded, we say that
+<emphasis effect="italics">f has a limit L as z approaches</emphasis><m:math overflow="scroll"><m:mrow><m:mi>∞</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+and we write</para>
+    <equation id="id62949">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mi>L</m:mi>
+          <m:mo>=</m:mo>
+          <m:munder>
+            <m:mo movablelimits="true" form="prefix">lim</m:mo>
+            <m:mrow>
+              <m:mi>z</m:mi>
+              <m:mo>→</m:mo>
+              <m:mi>∞</m:mi>
+            </m:mrow>
+          </m:munder>
+          <m:mi>f</m:mi>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>z</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>,</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id62990">if for every <m:math overflow="scroll"><m:mrow><m:mi>ϵ</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn></m:mrow></m:math> there exists a positive number <m:math overflow="scroll"><m:mi>B</m:mi></m:math> such that
+if <m:math overflow="scroll"><m:mrow><m:mi>z</m:mi><m:mo>∈</m:mo><m:mi>S</m:mi></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>z</m:mi><m:mo>|</m:mo><m:mo>≥</m:mo><m:mi>B</m:mi><m:mo>,</m:mo></m:mrow></m:math> then <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo><m:mo>-</m:mo><m:mi>L</m:mi><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mi>ϵ</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+    <para id="id63079">Analogously, if <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>⊆</m:mo><m:mi>R</m:mi><m:mo>,</m:mo></m:mrow></m:math> we say <m:math overflow="scroll"><m:mrow><m:msub><m:mo movablelimits="true" form="prefix">lim</m:mo><m:mrow><m:mi>x</m:mi><m:mo>→</m:mo><m:mi>∞</m:mi></m:mrow></m:msub><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>L</m:mi></m:mrow></m:math> if for every
+<m:math overflow="scroll"><m:mrow><m:mi>ϵ</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn></m:mrow></m:math> there exists a real number <m:math overflow="scroll"><m:mi>B</m:mi></m:math> such that
+if <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mi>S</m:mi></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>≥</m:mo><m:mi>B</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+then <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>-</m:mo><m:mi>L</m:mi><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mi>ϵ</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+And we say that <m:math overflow="scroll"><m:mrow><m:msub><m:mo movablelimits="true" form="prefix">lim</m:mo><m:mrow><m:mi>x</m:mi><m:mo>→</m:mo><m:mo>-</m:mo><m:mi>∞</m:mi></m:mrow></m:msub><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>L</m:mi></m:mrow></m:math> if for every <m:math overflow="scroll"><m:mrow><m:mi>ϵ</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn></m:mrow></m:math>
+there exists a real number <m:math overflow="scroll"><m:mi>B</m:mi></m:math> such that
+if <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mi>S</m:mi></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>≤</m:mo><m:mi>B</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+then <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>-</m:mo><m:mi>L</m:mi><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mi>ϵ</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+    <para id="id63340">Finally, for <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>:</m:mo><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo><m:mo>→</m:mo><m:mi>C</m:mi></m:mrow></m:math> a function of a real variable,
+and for <m:math overflow="scroll"><m:mrow><m:mi>c</m:mi><m:mo>∈</m:mo><m:mo>[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>]</m:mo><m:mo>,</m:mo></m:mrow></m:math> we define
+the <emphasis effect="italics">one-sided</emphasis> (left and right) limits of <m:math overflow="scroll"><m:mi>f</m:mi></m:math> at <m:math overflow="scroll"><m:mrow><m:mi>c</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+We say that <m:math overflow="scroll"><m:mi>f</m:mi></m:math> has a <emphasis effect="italics">left hand limit</emphasis> of <m:math overflow="scroll"><m:mi>L</m:mi></m:math> at <m:math overflow="scroll"><m:mrow><m:mi>c</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+and we write <m:math overflow="scroll"><m:mrow><m:mi>L</m:mi><m:mo>=</m:mo><m:msub><m:mo movablelimits="true" form="prefix">lim</m:mo><m:mrow><m:mi>x</m:mi><m:mo>→</m:mo><m:mi>c</m:mi><m:mo>-</m:mo><m:mn>0</m:mn></m:mrow></m:msub><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> if for every
+<m:math overflow="scroll"><m:mrow><m:mi>ϵ</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn></m:mrow></m:math> there exists a <m:math overflow="scroll"><m:mrow><m:mi>δ</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn></m:mrow></m:math> such that if
+<m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mn>0</m:mn><m:mo>&lt;</m:mo><m:mi>c</m:mi><m:mo>-</m:mo><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mi>δ</m:mi></m:mrow></m:math> then <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>-</m:mo><m:mi>L</m:mi><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mi>ϵ</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+We say that <m:math overflow="scroll"><m:mi>f</m:mi></m:math> has a <emphasis effect="italics">right hand limit</emphasis> of <m:math overflow="scroll"><m:mi>L</m:mi></m:math> at <m:math overflow="scroll"><m:mrow><m:mi>c</m:mi><m:mo>,</m:mo></m:mrow></m:math> and write
+<m:math overflow="scroll"><m:mrow><m:mi>L</m:mi><m:mo>=</m:mo><m:msub><m:mo movablelimits="true" form="prefix">lim</m:mo><m:mrow><m:mi>x</m:mi><m:mo>→</m:mo><m:mi>c</m:mi><m:mo>+</m:mo><m:mn>0</m:mn></m:mrow></m:msub><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> if for every <m:math overflow="scroll"><m:mrow><m:mi>ϵ</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn></m:mrow></m:math>
+there exists a <m:math overflow="scroll"><m:mrow><m:mi>δ</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn></m:mrow></m:math> such that if <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mi>S</m:mi></m:mrow></m:math>
+and <m:math overflow="scroll"><m:mrow><m:mn>0</m:mn><m:mo>&lt;</m:mo><m:mi>x</m:mi><m:mo>-</m:mo><m:mi>c</m:mi><m:mo>&lt;</m:mo><m:mi>δ</m:mi></m:mrow></m:math> then <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>-</m:mo><m:mi>L</m:mi><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mi>ϵ</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+</meaning></definition>
+    <para id="id63770">The first few results about limits of functions are not surprising.
+The analogy between functions having limits and functions being continuous is very close,
+so that for every elementary result about continuous functions
+there will be a companion result about limits of functions.</para>
+<rule id="fs-id1171015671709" type="theorem"><statement id="fs-id1171010679872">
+    <para id="id63776">Let <m:math overflow="scroll"><m:mi>c</m:mi></m:math> be a complex number.
+Let <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>:</m:mo><m:mi>S</m:mi><m:mo>→</m:mo><m:mi>C</m:mi></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>g</m:mi><m:mo>:</m:mo><m:mi>S</m:mi><m:mo>→</m:mo><m:mi>C</m:mi></m:mrow></m:math> be functions. Assume that both <m:math overflow="scroll"><m:mi>f</m:mi></m:math>and <m:math overflow="scroll"><m:mi>g</m:mi></m:math> have limits as <m:math overflow="scroll"><m:mi>x</m:mi></m:math> approaches <m:math overflow="scroll"><m:mrow><m:mi>c</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Then:</para>
+    <list id="id63881" display="block" list-type="enumerated">
+      <item id="uid1">There exists a <m:math overflow="scroll"><m:mrow><m:mi>δ</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn></m:mrow></m:math> and a positive number <m:math overflow="scroll"><m:mi>M</m:mi></m:math> such that
+if <m:math overflow="scroll"><m:mrow><m:mi>z</m:mi><m:mo>∈</m:mo><m:mi>S</m:mi></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mn>0</m:mn><m:mo>&lt;</m:mo><m:mo>|</m:mo><m:mi>z</m:mi><m:mo>-</m:mo><m:mi>c</m:mi><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mi>δ</m:mi></m:mrow></m:math> then <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo><m:mo>|</m:mo><m:mo>&lt;</m:mo><m:mi>M</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+That is, if <m:math overflow="scroll"><m:mi>f</m:mi></m:math> has a limit as <m:math overflow="scroll"><m:mi>z</m:mi></m:math> approaches <m:math overflow="scroll"><m:mrow><m:mi>c</m:mi><m:mo>,</m:mo></m:mrow></m:math> then <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is bounded near <m:math overflow="scroll"><m:mrow><m:mi>c</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid2">
+        <equation id="id64040">
+          <m:math overflow="scroll" mode="display">
+            <m:mrow>
+              <m:munder>
+                <m:mo movablelimits="true" form="prefix">lim</m:mo>
+                <m:mrow>
+                  <m:mi>z</m:mi>
+                  <m:mo>→</m:mo>
+                  <m:mi>c</m:mi>
+                </m:mrow>
+              </m:munder>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>f</m:mi>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>z</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mo>+</m:mo>
+                <m:mi>g</m:mi>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>z</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:mo>=</m:mo>
+              <m:munder>
+                <m:mo movablelimits="true" form="prefix">lim</m:mo>
+                <m:mrow>
+                  <m:mi>z</m:mi>
+                  <m:mo>→</m:mo>
+                  <m:mi>c</m:mi>
+                </m:mrow>
+              </m:munder>
+              <m:mi>f</m:mi>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>z</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:mo>+</m:mo>
+              <m:munder>
+                <m:mo movablelimits="true" form="prefix">lim</m:mo>
+                <m:mrow>
+                  <m:mi>z</m:mi>
+                  <m:mo>→</m:mo>
+                  <m:mi>c</m:mi>
+                </m:mrow>
+              </m:munder>
+              <m:mi>g</m:mi>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>z</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:mo>.</m:mo>
+            </m:mrow>
+          </m:math>
+        </equation>
+      </item>
+      <item id="uid3">
+        <equation id="id64162">
+          <m:math overflow="scroll" mode="display">
+            <m:mrow>
+              <m:munder>
+                <m:mo movablelimits="true" form="prefix">lim</m:mo>
+                <m:mrow>
+                  <m:mi>z</m:mi>
+                  <m:mo>→</m:mo>
+                  <m:mi>c</m:mi>
+                </m:mrow>
+              </m:munder>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>f</m:mi>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>z</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mi>g</m:mi>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>z</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:mo>=</m:mo>
+              <m:munder>
+                <m:mo movablelimits="true" form="prefix">lim</m:mo>
+                <m:mrow>
+                  <m:mi>z</m:mi>
+                  <m:mo>→</m:mo>
+                  <m:mi>c</m:mi>
+                </m:mrow>
+              </m:munder>
+              <m:mi>f</m:mi>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>z</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:munder>
+                <m:mo movablelimits="true" form="prefix">lim</m:mo>
+                <m:mrow>
+                  <m:mi>z</m:mi>
+                  <m:mo>→</m:mo>
+                  <m:mi>c</m:mi>
+                </m:mrow>
+              </m:munder>
+              <m:mi>g</m:mi>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>z</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:mo>.</m:mo>
+            </m:mrow>
+          </m:math>
+        </equation>
+      </item>
+      <item id="uid4">If <m:math overflow="scroll"><m:mrow><m:msub><m:mo movablelimits="true" form="prefix">lim</m:mo><m:mrow><m:mi>z</m:mi><m:mo>→</m:mo><m:mi>c</m:mi></m:mrow></m:msub><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>≠</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> then
+<equation id="id64327"><m:math overflow="scroll" mode="display"><m:mrow><m:munder><m:mo movablelimits="true" form="prefix">lim</m:mo><m:mrow><m:mi>z</m:mi><m:mo>→</m:mo><m:mi>c</m:mi></m:mrow></m:munder><m:mfrac><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mrow><m:mi>g</m:mi><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow></m:mfrac><m:mo>=</m:mo><m:mfrac><m:mrow><m:msub><m:mo movablelimits="true" form="prefix">lim</m:mo><m:mrow><m:mi>z</m:mi><m:mo>→</m:mo><m:mi>c</m:mi></m:mrow></m:msub><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mrow><m:msub><m:mo movablelimits="true" form="prefix">lim</m:mo><m:mrow><m:mi>z</m:mi><m:mo>→</m:mo><m:mi>c</m:mi></m:mrow></m:msub><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:mfrac><m:mo>,</m:mo></m:mrow></m:math></equation></item>
+      <item id="uid5">If <m:math overflow="scroll"><m:mi>u</m:mi></m:math> and <m:math overflow="scroll"><m:mi>v</m:mi></m:math> are the real and imaginary parts
+of a complex-valued function <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>,</m:mo></m:mrow></m:math> then <m:math overflow="scroll"><m:mi>u</m:mi></m:math> and <m:math overflow="scroll"><m:mi>v</m:mi></m:math> have limits as <m:math overflow="scroll"><m:mi>z</m:mi></m:math> approaches <m:math overflow="scroll"><m:mi>c</m:mi></m:math> if and only if
+<m:math overflow="scroll"><m:mi>f</m:mi></m:math> has a limit as <m:math overflow="scroll"><m:mi>z</m:mi></m:math> approaches <m:math overflow="scroll"><m:mrow><m:mi>c</m:mi><m:mo>.</m:mo></m:mrow></m:math> And,
+<equation id="id64547"><m:math overflow="scroll" mode="display"><m:mrow><m:munder><m:mo movablelimits="true" form="prefix">lim</m:mo><m:mrow><m:mi>z</m:mi><m:mo>→</m:mo><m:mi>c</m:mi></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:munder><m:mo movablelimits="true" form="prefix">lim</m:mo><m:mrow><m:mi>z</m:mi><m:mo>→</m:mo><m:mi>c</m:mi></m:mrow></m:munder><m:mi>u</m:mi><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mi>i</m:mi><m:munder><m:mo movablelimits="true" form="prefix">lim</m:mo><m:mrow><m:mi>z</m:mi><m:mo>→</m:mo><m:mi>c</m:mi></m:mrow></m:munder><m:mi>v</m:mi><m:mrow><m:mo>(</m:mo><m:mi>z</m:mi><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></equation></item>
+    </list>
+</statement></rule>
+<exercise id="fs-id1171025927485"><problem id="fs-id1171017044417">
+    <list id="id64659" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid6"> Prove <link target-id="fs-id1171015671709"/>.
+HINT: Compare with <link target-id="fs-id1166339138340" document="m36150"/>.
+</item>
+      <item id="uid7"> Prove that <m:math overflow="scroll"><m:mrow><m:msub><m:mo movablelimits="true" form="prefix">lim</m:mo><m:mrow><m:mi>x</m:mi><m:mo>→</m:mo><m:mi>c</m:mi></m:mrow></m:msub><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>L</m:mi></m:mrow></m:math> if and only if, for every sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> of elements of <m:math overflow="scroll"><m:mi>S</m:mi></m:math> that converges to <m:math overflow="scroll"><m:mrow><m:mi>c</m:mi><m:mo>,</m:mo></m:mrow></m:math> we have <m:math overflow="scroll"><m:mrow><m:mo movablelimits="true" form="prefix">lim</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mo>)</m:mo><m:mo>=</m:mo><m:mi>L</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+HINT: Compare with <link target-id="fs-id1166304708413" document="m36150"/>.
+</item>
+      <item id="uid8"> Prove the analog of <link target-id="fs-id1171015671709"/>
+replacing the limit as <m:math overflow="scroll"><m:mi>z</m:mi></m:math> approaches <m:math overflow="scroll"><m:mi>c</m:mi></m:math> by
+the limit as <m:math overflow="scroll"><m:mi>z</m:mi></m:math> approaches <m:math overflow="scroll"><m:mrow><m:mi>∞</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+    </list>
+</problem></exercise>
+<exercise id="fs-id2136164"><problem id="fs-id1171011613837">
+    <list id="id64871" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid9"> Prove that a function <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>:</m:mo><m:mi>S</m:mi><m:mo>→</m:mo><m:mi>C</m:mi></m:mrow></m:math> is continuous at a point <m:math overflow="scroll"><m:mi>c</m:mi></m:math> of <m:math overflow="scroll"><m:mi>S</m:mi></m:math> if and only if <m:math overflow="scroll"><m:mrow><m:msub><m:mo movablelimits="true" form="prefix">lim</m:mo><m:mrow><m:mi>x</m:mi><m:mo>→</m:mo><m:mi>c</m:mi></m:mrow></m:msub><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math>
+HINT: Carefully write down both definitions, and observe that
+they are verbetim the same.
+</item>
+      <item id="uid10"> Let <m:math overflow="scroll"><m:mi>f</m:mi></m:math> be a function with domain <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>,</m:mo></m:mrow></m:math> and let <m:math overflow="scroll"><m:mi>c</m:mi></m:math> be a limit point of <m:math overflow="scroll"><m:mi>S</m:mi></m:math> that is not in <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Suppose <m:math overflow="scroll"><m:mi>g</m:mi></m:math> is a function with domain <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>∪</m:mo><m:mo>{</m:mo><m:mi>c</m:mi><m:mo>}</m:mo><m:mo>,</m:mo></m:mrow></m:math>
+that <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mi>g</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:math> for all <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mi>S</m:mi><m:mo>,</m:mo></m:mrow></m:math>
+and that <m:math overflow="scroll"><m:mi>g</m:mi></m:math> is continuous at <m:math overflow="scroll"><m:mrow><m:mi>c</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Prove that <m:math overflow="scroll"><m:mrow><m:msub><m:mo movablelimits="true" form="prefix">lim</m:mo><m:mrow><m:mi>x</m:mi><m:mo>→</m:mo><m:mi>c</m:mi></m:mrow></m:msub><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></item>
+    </list>
+</problem></exercise>
+<exercise id="fs-id1171010679978"><problem id="fs-id1171009780920">
+    <para id="id65191">Prove that the following functions <m:math overflow="scroll"><m:mi>f</m:mi></m:math> have the specified limits <m:math overflow="scroll"><m:mi>L</m:mi></m:math> at the given points <m:math overflow="scroll"><m:mrow><m:mi>c</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+    <list id="id65231" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid11"> <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mrow><m:mo>(</m:mo><m:msup><m:mi>x</m:mi><m:mn>3</m:mn></m:msup><m:mo>-</m:mo><m:mn>8</m:mn><m:mo>)</m:mo></m:mrow><m:mo>/</m:mo><m:mrow><m:mo>(</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>-</m:mo><m:mn>4</m:mn><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo><m:mspace width="0.166667em"/><m:mi>c</m:mi><m:mo>=</m:mo><m:mn>2</m:mn><m:mo>,</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>L</m:mi><m:mo>=</m:mo><m:mn>3</m:mn><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid12"> <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mrow><m:mo>(</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mn>1</m:mn><m:mo>)</m:mo></m:mrow><m:mo>/</m:mo><m:mrow><m:mo>(</m:mo><m:msup><m:mi>x</m:mi><m:mn>3</m:mn></m:msup><m:mo>+</m:mo><m:mn>1</m:mn><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo><m:mspace width="0.166667em"/><m:mi>c</m:mi><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>,</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>L</m:mi><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid13"> <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mrow><m:mo>(</m:mo><m:msup><m:mi>x</m:mi><m:mn>8</m:mn></m:msup><m:mo>-</m:mo><m:mn>1</m:mn><m:mo>)</m:mo></m:mrow><m:mo>/</m:mo><m:mrow><m:mo>(</m:mo><m:msup><m:mi>x</m:mi><m:mn>6</m:mn></m:msup><m:mo>+</m:mo><m:mn>1</m:mn><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo><m:mspace width="0.166667em"/><m:mi>c</m:mi><m:mo>=</m:mo><m:mi>i</m:mi><m:mo>,</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>L</m:mi><m:mo>=</m:mo><m:mo>-</m:mo><m:mn>4</m:mn><m:mo>/</m:mo><m:mn>3</m:mn><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid14"> <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mrow><m:mo>(</m:mo><m:mo form="prefix">sin</m:mo><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mo form="prefix">cos</m:mo><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>-</m:mo><m:mo form="prefix">exp</m:mo><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>/</m:mo><m:mrow><m:mo>(</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>)</m:mo></m:mrow><m:mspace width="0.166667em"/><m:mo>,</m:mo><m:mi>c</m:mi><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>L</m:mi><m:mo>=</m:mo><m:mo>-</m:mo><m:mn>1</m:mn><m:mo>.</m:mo></m:mrow></m:math></item>
+    </list>
+</problem></exercise>
+<exercise id="fs-id1171031598380"><problem id="fs-id1171022851181">
+    <para id="id65655">
+Define <m:math overflow="scroll"><m:mi>f</m:mi></m:math> on the set <m:math overflow="scroll"><m:mi>S</m:mi></m:math> of all nonzero real numbers by <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mi>c</m:mi></m:mrow></m:math> if <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mn>0</m:mn></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mi>d</m:mi></m:mrow></m:math> if <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math> Show that <m:math overflow="scroll"><m:mrow><m:msub><m:mo movablelimits="true" form="prefix">lim</m:mo><m:mrow><m:mi>x</m:mi><m:mo>→</m:mo><m:mn>0</m:mn></m:mrow></m:msub><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math>
+exists if and only if <m:math overflow="scroll"><m:mrow><m:mi>c</m:mi><m:mo>=</m:mo><m:mi>d</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+    <para id="id65805">(b) Let <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>:</m:mo><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo><m:mo>→</m:mo><m:mi>C</m:mi></m:mrow></m:math> be a complex-valued function on
+the open interval <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Suppose <m:math overflow="scroll"><m:mi>c</m:mi></m:math> is a point of <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math>
+Prove that <m:math overflow="scroll"><m:mrow><m:msub><m:mo movablelimits="true" form="prefix">lim</m:mo><m:mrow><m:mi>x</m:mi><m:mo>→</m:mo><m:mi>c</m:mi></m:mrow></m:msub><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> exists if and only if the two
+one-sided limits <m:math overflow="scroll"><m:mrow><m:msub><m:mo movablelimits="true" form="prefix">lim</m:mo><m:mrow><m:mi>x</m:mi><m:mo>→</m:mo><m:mi>c</m:mi><m:mo>-</m:mo><m:mn>0</m:mn></m:mrow></m:msub><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:msub><m:mo movablelimits="true" form="prefix">lim</m:mo><m:mrow><m:mi>x</m:mi><m:mo>→</m:mo><m:mi>c</m:mi><m:mo>+</m:mo><m:mn>0</m:mn></m:mrow></m:msub><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> exist
+and are equal.</para>
+</problem></exercise>
+<exercise id="fs-id1171023038207"><title>Change of variable in a limit</title><problem id="fs-id1171012875309">
+    <para id="id66006">
+Suppose <m:math overflow="scroll"><m:mrow><m:mi>f</m:mi><m:mo>:</m:mo><m:mi>S</m:mi><m:mo>→</m:mo><m:mi>C</m:mi></m:mrow></m:math> is a function,
+and that <m:math overflow="scroll"><m:mrow><m:msub><m:mo movablelimits="true" form="prefix">lim</m:mo><m:mrow><m:mi>x</m:mi><m:mo>→</m:mo><m:mi>c</m:mi></m:mrow></m:msub><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>L</m:mi><m:mo>.</m:mo></m:mrow></m:math> Define a function <m:math overflow="scroll"><m:mi>g</m:mi></m:math> by <m:math overflow="scroll"><m:mrow><m:mi>g</m:mi><m:mo>(</m:mo><m:mi>y</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>y</m:mi><m:mo>+</m:mo><m:mi>c</m:mi><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:math></para>
+    <list id="id66129" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid15"> What is the domain of <m:math overflow="scroll"><m:mrow><m:mi>g</m:mi><m:mo>?</m:mo></m:mrow></m:math></item>
+      <item id="uid16"> Show that 0 is a limit point of the domain of <m:math overflow="scroll"><m:mi>g</m:mi></m:math> and that
+<m:math overflow="scroll"><m:mrow><m:msub><m:mo movablelimits="true" form="prefix">lim</m:mo><m:mrow><m:mi>y</m:mi><m:mo>→</m:mo><m:mn>0</m:mn></m:mrow></m:msub><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>y</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msub><m:mo movablelimits="true" form="prefix">lim</m:mo><m:mrow><m:mi>x</m:mi><m:mo>→</m:mo><m:mi>c</m:mi></m:mrow></m:msub><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></item>
+      <item id="uid17"> Suppose <m:math overflow="scroll"><m:mrow><m:mi>T</m:mi><m:mo>⊆</m:mo><m:mi>C</m:mi><m:mo>,</m:mo></m:mrow></m:math> that <m:math overflow="scroll"><m:mrow><m:mi>h</m:mi><m:mo>:</m:mo><m:mi>T</m:mi><m:mo>→</m:mo><m:mi>S</m:mi><m:mo>,</m:mo></m:mrow></m:math> and that
+<m:math overflow="scroll"><m:mrow><m:msub><m:mo movablelimits="true" form="prefix">lim</m:mo><m:mrow><m:mi>y</m:mi><m:mo>→</m:mo><m:mi>d</m:mi></m:mrow></m:msub><m:mi>h</m:mi><m:mrow><m:mo>(</m:mo><m:mi>y</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>c</m:mi><m:mo>.</m:mo></m:mrow></m:math> Prove that
+<equation id="id66340"><m:math overflow="scroll" mode="display"><m:mrow><m:munder><m:mo movablelimits="true" form="prefix">lim</m:mo><m:mrow><m:mi>y</m:mi><m:mo>→</m:mo><m:mi>d</m:mi></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>h</m:mi><m:mrow><m:mo>(</m:mo><m:mi>y</m:mi><m:mo>)</m:mo></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:munder><m:mo movablelimits="true" form="prefix">lim</m:mo><m:mrow><m:mi>x</m:mi><m:mo>→</m:mo><m:mi>c</m:mi></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>L</m:mi><m:mo>.</m:mo></m:mrow></m:math></equation></item>
+    </list>
+</problem></exercise>
+<rule id="fs-id1171011631259"><label/><statement id="fs-id1171026724212">
+    <para id="id66421"><emphasis effect="bold">REMARK</emphasis>
+When we use the word “ interior” in connection with a set <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>,</m:mo></m:mrow></m:math> it is obviously
+important to understand the context; i.e., is <m:math overflow="scroll"><m:mi>S</m:mi></m:math> being
+thought of as a set of real numbers or as a set of complex numbers.
+A point <m:math overflow="scroll"><m:mi>c</m:mi></m:math> is in the interior of a set <m:math overflow="scroll"><m:mi>S</m:mi></m:math> of complex numbers if
+the entire disk <m:math overflow="scroll"><m:mrow><m:msub><m:mi>B</m:mi><m:mi>ϵ</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> of radius <m:math overflow="scroll"><m:mi>ϵ</m:mi></m:math> around <m:math overflow="scroll"><m:mi>c</m:mi></m:math> is contained in <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+While, a point <m:math overflow="scroll"><m:mi>c</m:mi></m:math> belongs to the interior of a set <m:math overflow="scroll"><m:mi>S</m:mi></m:math> of real numbers
+if the entire interval <m:math overflow="scroll"><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>-</m:mo><m:mi>ϵ</m:mi><m:mo>,</m:mo><m:mi>c</m:mi><m:mo>+</m:mo><m:mi>ϵ</m:mi><m:mo>)</m:mo></m:mrow></m:math> is contained in <m:math overflow="scroll"><m:mrow><m:mi>S</m:mi><m:mo>.</m:mo></m:mrow></m:math>
+Hence, in the following definition, we will be careful
+to distinguish between the cases that <m:math overflow="scroll"><m:mi>f</m:mi></m:math> is a function of
+a real variable or is a function of a complex variable.</para>
+</statement></rule>
+  </content>
+</document>
