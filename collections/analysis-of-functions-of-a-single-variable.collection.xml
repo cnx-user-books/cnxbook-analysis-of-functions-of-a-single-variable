@@ -1,3 +1,110 @@
-<col:collection xmlns="http://cnx.rice.edu/collxml" xmlns:md="http://cnx.rice.edu/mdml" xmlns:col="http://cnx.rice.edu/collxml" xml:lang="en" type="Textbook">  <metadata xmlns:md="http://cnx.rice.edu/mdml" mdml-version="0.5">  <md:content-id>col11249</md:content-id>  <md:title>Analysis of Functions of a Single Variable</md:title>      <md:license url="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution License 3.0</md:license>  <md:language>en</md:language>              <md:uuid>c4c857f9-231b-4869-8839-ccde5cda239e</md:uuid>
-<md:slug>analysis-of-functions-of-a-single-variable</md:slug>
-</metadata>  <col:content>          <col:module document="m36084"/>                                          <col:subcollection>        <md:title>The Real and Complex Numbers</md:title>                                <col:content>                    <col:module document="m36082"/>                            <col:module document="m36075"/>                            <col:module document="m36061"/>                            <col:module document="m36069"/>                            <col:module document="m36085"/>                            <col:module document="m36094"/>                            <col:module document="m36104"/>                            <col:module document="m36113"/>                          </col:content>      </col:subcollection>                            <col:subcollection>        <md:title>The Limit of a Sequence of Numbers</md:title>                                <col:content>                    <col:module document="m36117"/>                            <col:module document="m36118"/>                            <col:module document="m36120"/>                            <col:module document="m36124"/>                            <col:module document="m36126"/>                            <col:module document="m36129"/>                            <col:module document="m36157"/>                            <col:module document="m36135"/>                          </col:content>      </col:subcollection>                            <col:subcollection>        <md:title>Functions and Continuity</md:title>                                <col:content>                    <col:module document="m36131"/>                            <col:module document="m36141"/>                            <col:module document="m36147"/>                            <col:module document="m36150"/>                            <col:module document="m36152"/>                            <col:module document="m36167"/>                            <col:module document="m36165"/>                            <col:module document="m36160"/>                            <col:module document="m36168"/>                            <col:module document="m36178"/>                          </col:content>      </col:subcollection>                            <col:subcollection>        <md:title>Differentiation, Local Behavior</md:title>                                <col:content>                    <col:module document="m36173"/>                            <col:module document="m36185"/>                            <col:module document="m36186"/>                            <col:module document="m36203"/>                            <col:module document="m36199"/>                            <col:module document="m36196"/>                            <col:module document="m36201"/>                            <col:module document="m36192"/>                            <col:module document="m36204"/>                            <col:module document="m36205"/>                            <col:module document="m36206"/>                          </col:content>      </col:subcollection>                            <col:subcollection>        <md:title>Integration, Average Behavior</md:title>                                <col:content>                    <col:module document="m36207"/>                            <col:module document="m36208"/>                            <col:module document="m36209"/>                            <col:module document="m36210"/>                            <col:module document="m36211"/>                            <col:module document="m36212"/>                            <col:module document="m36222"/>                            <col:module document="m36223"/>                          </col:content>      </col:subcollection>                            <col:subcollection>        <md:title>Integration over Smooth Curves in the Plane</md:title>                                <col:content>                    <col:module document="m36224"/>                            <col:module document="m36225"/>                            <col:module document="m36226"/>                            <col:module document="m36228"/>                            <col:module document="m36230"/>                            <col:module document="m36232"/>                            <col:module document="m36233"/>                          </col:content>      </col:subcollection>                            <col:subcollection>        <md:title>The Fundamental Theorem of Algebra, and The Fundamental Theorem of Analysis</md:title>                                <col:content>                    <col:module document="m36234"/>                            <col:module document="m36235"/>                            <col:module document="m36237"/>                            <col:module document="m36238"/>                            <col:module document="m36239"/>                            <col:module document="m36240"/>                            <col:module document="m36241"/>                            <col:module document="m36242"/>                          </col:content>      </col:subcollection>              <col:module document="m36243"/>                    </col:content></col:collection>
+<?xml version="1.0"?>
+<col:collection xmlns="http://cnx.rice.edu/collxml" xmlns:md="http://cnx.rice.edu/mdml" xmlns:col="http://cnx.rice.edu/collxml" xml:lang="en" type="Textbook" authors="Lawrence Baggett">
+  <metadata xmlns:md="http://cnx.rice.edu/mdml" mdml-version="0.5">
+    <md:content-id>col11249</md:content-id>
+    <md:title>Analysis of Functions of a Single Variable</md:title>
+    <md:license url="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution License 3.0</md:license>
+    <md:language>en</md:language>
+    <md:uuid>c4c857f9-231b-4869-8839-ccde5cda239e</md:uuid>
+    <md:slug>analysis-of-functions-of-a-single-variable</md:slug>
+  </metadata>
+  <col:content>
+    <col:module document="m36084"/>
+    <col:subcollection>
+      <md:title>The Real and Complex Numbers</md:title>
+      <col:content>
+        <col:module document="m36082"/>
+        <col:module document="m36075"/>
+        <col:module document="m36061"/>
+        <col:module document="m36069"/>
+        <col:module document="m36085"/>
+        <col:module document="m36094"/>
+        <col:module document="m36104"/>
+        <col:module document="m36113"/>
+      </col:content>
+    </col:subcollection>
+    <col:subcollection>
+      <md:title>The Limit of a Sequence of Numbers</md:title>
+      <col:content>
+        <col:module document="m36117"/>
+        <col:module document="m36118"/>
+        <col:module document="m36120"/>
+        <col:module document="m36124"/>
+        <col:module document="m36126"/>
+        <col:module document="m36129"/>
+        <col:module document="m36157"/>
+        <col:module document="m36135"/>
+      </col:content>
+    </col:subcollection>
+    <col:subcollection>
+      <md:title>Functions and Continuity</md:title>
+      <col:content>
+        <col:module document="m36131"/>
+        <col:module document="m36141"/>
+        <col:module document="m36147"/>
+        <col:module document="m36150"/>
+        <col:module document="m36152"/>
+        <col:module document="m36167"/>
+        <col:module document="m36165"/>
+        <col:module document="m36160"/>
+        <col:module document="m36168"/>
+        <col:module document="m36178"/>
+      </col:content>
+    </col:subcollection>
+    <col:subcollection>
+      <md:title>Differentiation, Local Behavior</md:title>
+      <col:content>
+        <col:module document="m36173"/>
+        <col:module document="m36185"/>
+        <col:module document="m36186"/>
+        <col:module document="m36203"/>
+        <col:module document="m36199"/>
+        <col:module document="m36196"/>
+        <col:module document="m36201"/>
+        <col:module document="m36192"/>
+        <col:module document="m36204"/>
+        <col:module document="m36205"/>
+        <col:module document="m36206"/>
+      </col:content>
+    </col:subcollection>
+    <col:subcollection>
+      <md:title>Integration, Average Behavior</md:title>
+      <col:content>
+        <col:module document="m36207"/>
+        <col:module document="m36208"/>
+        <col:module document="m36209"/>
+        <col:module document="m36210"/>
+        <col:module document="m36211"/>
+        <col:module document="m36212"/>
+        <col:module document="m36222"/>
+        <col:module document="m36223"/>
+      </col:content>
+    </col:subcollection>
+    <col:subcollection>
+      <md:title>Integration over Smooth Curves in the Plane</md:title>
+      <col:content>
+        <col:module document="m36224"/>
+        <col:module document="m36225"/>
+        <col:module document="m36226"/>
+        <col:module document="m36228"/>
+        <col:module document="m36230"/>
+        <col:module document="m36232"/>
+        <col:module document="m36233"/>
+      </col:content>
+    </col:subcollection>
+    <col:subcollection>
+      <md:title>The Fundamental Theorem of Algebra, and The Fundamental Theorem of Analysis</md:title>
+      <col:content>
+        <col:module document="m36234"/>
+        <col:module document="m36235"/>
+        <col:module document="m36237"/>
+        <col:module document="m36238"/>
+        <col:module document="m36239"/>
+        <col:module document="m36240"/>
+        <col:module document="m36241"/>
+        <col:module document="m36242"/>
+      </col:content>
+    </col:subcollection>
+    <col:module document="m36243"/>
+  </col:content>
+</col:collection>
