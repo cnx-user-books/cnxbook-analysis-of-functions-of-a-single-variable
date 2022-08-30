@@ -36,7 +36,7 @@ On the other hand the exponents are blowing up, so that
 one might think that the whole sequence should blow up as well.
 Again, there are lots of examples, and they don't all work the same way.
 Here is perhaps the most famous such example.</para>
-<rule id="fs-id1171134940519" type="theorem"><title>Definition of <m:math overflow="scroll"><m:mstyle mathvariant="script"><m:mstyle mathvariant="italics"><m:mi>e</m:mi></m:mstyle></m:mstyle></m:math>.</title><statement id="fs-id1171118565476">
+<rule id="fs-id1171134940519" type="theorem"><title>Definition of <m:math overflow="scroll"><m:mstyle mathvariant="script"><m:mstyle mathvariant="italic"><m:mi>e</m:mi></m:mstyle></m:mstyle></m:math>.</title><statement id="fs-id1171118565476">
     <para id="id229686">
 For <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:mo>≥</m:mo><m:mn>1</m:mn><m:mo>,</m:mo></m:mrow></m:math> define <m:math overflow="scroll"><m:mrow><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>=</m:mo><m:msup><m:mrow><m:mo>(</m:mo><m:mn>1</m:mn><m:mo>+</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>n</m:mi><m:mo>)</m:mo></m:mrow><m:mi>n</m:mi></m:msup><m:mo>.</m:mo></m:mrow></m:math>
 Then the sequence <m:math overflow="scroll"><m:mrow><m:mo>{</m:mo><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo></m:mrow></m:math> is nondecreasing and bounded
